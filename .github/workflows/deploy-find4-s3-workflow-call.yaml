@@ -1,0 +1,72 @@
+name: Deploy find4 webapp to S3 - workflow call
+
+on:
+  push:
+    branches:
+      - feature-secrets-games-prod
+    paths:
+      - "skills/find4/webapp/**"
+  workflow_dispatch:
+  # This enables the file to be called directly by other workflows
+  workflow_call:
+    secrets:
+      AWS_ACCESS_KEY_ID:
+        required: true
+      AWS_SECRET_ACCESS_KEY:
+        required: true
+      CLOUDFRONT_DISTRIBUTION_ID:
+        required: true
+
+jobs:
+  deploy:
+    name: Build and deploy to S3
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: skills/find4
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: find4-prod
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: "npm"
+          cache-dependency-path: "skills/find4/package-lock.json"
+
+      - name: Install Node dependencies
+        run: npm ci
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Python dependencies
+        run: |
+          python -m venv .venv
+          .venv/bin/pip install --quiet -e ".[dev]"
+
+      - name: Build webapp (make deploy-webapp)
+        run: make deploy-webapp
+
+      - name: Sync to S3
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: us-east-1
+        run: |
+          aws s3 sync webapp/ s3://find4-webapp/find4-webapp --delete
+
+      - name: Invalidate CloudFront cache
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          CLOUDFRONT_DISTRIBUTION_ID: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
+          AWS_DEFAULT_REGION: us-east-1
+        run: |
+          aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"

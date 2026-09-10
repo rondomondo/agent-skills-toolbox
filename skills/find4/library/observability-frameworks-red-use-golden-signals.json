@@ -1,0 +1,372 @@
+{
+  "metadata": {
+    "generated_at": "2026-09-07T00:00:00Z",
+    "source": "stdin",
+    "suggested_name": "observability-frameworks-red-use-golden-signals.json",
+    "modified_at": "2026-09-07T15:46:32.793527",
+    "source_id": "stdin",
+    "step": "finalize_metadata",
+    "id_registry": {
+      "group_set_ids": [
+        "8dd506",
+        "a3f656",
+        "f06dc5",
+        "e36bf3"
+      ],
+      "game_set_ids": [
+        "37605f",
+        "05f422"
+      ],
+      "group_item_ids": [
+        "2cc254",
+        "1c3762",
+        "b31e77",
+        "6a2bc6",
+        "e943b2",
+        "2bfd97",
+        "8e725e",
+        "8d1d97",
+        "506860",
+        "d16c86",
+        "ef7198",
+        "780002",
+        "c4c374",
+        "e2b3ff",
+        "8a0b3f",
+        "2259cf"
+      ]
+    },
+    "id": "eFgKfSpSOvmyiuUW",
+    "split_info": {
+      "role": "combined",
+      "split_at": "2026-09-07T15:46:37.753128+00:00",
+      "source_file": "/home/claude/output/games/observability-frameworks-red-use-golden-signals.json"
+    }
+  },
+  "game_sets": [
+    {
+      "theme": "Observability Frameworks: RED, USE & Four Golden Signals",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "RATE",
+              "ERRORS",
+              "DURATION",
+              "THROUGHPUT"
+            ],
+            "category": "RED Method Metrics",
+            "color": "red",
+            "url": "https://www.weave.works/blog/the-red-method-key-metrics-for-microservices-architecture/",
+            "description": "The three core signals of the RED method — with Throughput as a common alias for Rate — used to monitor request-driven microservices",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://grafana.com/blog/2018/08/02/the-red-method-how-to-instrument-your-services/"
+            ],
+            "theme": "Observability Frameworks: RED, USE & Four Golden Signals",
+            "group_item_id": "2cc254",
+            "group_set_id": "8dd506"
+          },
+          {
+            "words": [
+              "UTILIZATION",
+              "SATURATION",
+              "CAPACITY",
+              "RESOURCE"
+            ],
+            "category": "USE Method Concepts",
+            "color": "blue",
+            "url": "https://www.brendangregg.com/usemethod.html",
+            "description": "Brendan Gregg's USE method asks these questions of every system resource to surface infrastructure bottlenecks",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://pagertree.com/learn/devops/what-is-observability/use-and-red-method"
+            ],
+            "theme": "Observability Frameworks: RED, USE & Four Golden Signals",
+            "group_item_id": "1c3762",
+            "group_set_id": "8dd506"
+          },
+          {
+            "words": [
+              "LATENCY",
+              "TRAFFIC",
+              "SATURATION",
+              "GOLDEN"
+            ],
+            "category": "Four Golden Signals",
+            "color": "yellow",
+            "url": "https://sre.google/sre-book/monitoring-distributed-systems/",
+            "description": "Google's SRE book Four Golden Signals — the umbrella monitoring framework that sits above both RED and USE",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://cloud.google.com/blog/products/devops-sre/how-to-use-googles-four-golden-signals"
+            ],
+            "theme": "Observability Frameworks: RED, USE & Four Golden Signals",
+            "group_item_id": "b31e77",
+            "group_set_id": "8dd506"
+          },
+          {
+            "words": [
+              "MICROSERVICES",
+              "INFRASTRUCTURE",
+              "USER",
+              "SYSTEM"
+            ],
+            "category": "Framework Scope Targets",
+            "color": "green",
+            "url": "https://clickhouse.com/resources/engineering/red-use-methods",
+            "description": "What each framework is scoped to observe — RED targets user-facing microservices, USE targets system infrastructure",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://pagertree.com/learn/devops/what-is-observability/use-and-red-method"
+            ],
+            "theme": "Observability Frameworks: RED, USE & Four Golden Signals",
+            "group_item_id": "6a2bc6",
+            "group_set_id": "8dd506"
+          }
+        ],
+        [
+          {
+            "words": [
+              "CPU",
+              "MEMORY",
+              "DISK",
+              "NETWORK"
+            ],
+            "category": "USE Method Resources",
+            "color": "purple",
+            "url": "https://www.brendangregg.com/usemethod.html",
+            "description": "The canonical hardware resources interrogated by the USE method — each checked for utilization, saturation, and errors",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://ww.connected.app/library/use-method-sv42wsv"
+            ],
+            "theme": "Observability Frameworks: RED, USE & Four Golden Signals",
+            "group_item_id": "e943b2",
+            "group_set_id": "a3f656"
+          },
+          {
+            "words": [
+              "WILKIE",
+              "GREGG",
+              "GOOGLE",
+              "WEAVEWORKS"
+            ],
+            "category": "Framework Origins",
+            "color": "indigo",
+            "url": "https://clickhouse.com/resources/engineering/red-use-methods",
+            "description": "Tom Wilkie at Weaveworks created RED, Brendan Gregg created USE, Google's SRE book defined the Four Golden Signals",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://grafana.com/blog/2018/08/02/the-red-method-how-to-instrument-your-services/"
+            ],
+            "theme": "Observability Frameworks: RED, USE & Four Golden Signals",
+            "group_item_id": "2bfd97",
+            "group_set_id": "a3f656"
+          },
+          {
+            "words": [
+              "SLO",
+              "SLI",
+              "ERROR_BUDGET",
+              "BURN_RATE"
+            ],
+            "category": "SRE Reliability Targets",
+            "color": "teal",
+            "url": "https://sre.google/sre-book/service-level-objectives/",
+            "description": "The SRE constructs that translate raw observability signals into actionable reliability commitments and alerting thresholds",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://sre.google/workbook/alerting-on-slos/"
+            ],
+            "theme": "Observability Frameworks: RED, USE & Four Golden Signals",
+            "group_item_id": "8e725e",
+            "group_set_id": "a3f656"
+          },
+          {
+            "words": [
+              "SYMPTOM",
+              "CAUSE",
+              "WHITEBOX",
+              "BLACKBOX"
+            ],
+            "category": "Monitoring Philosophy",
+            "color": "orange",
+            "url": "https://sre.google/sre-book/monitoring-distributed-systems/",
+            "description": "Core monitoring distinctions from the Google SRE book — alert on symptoms not causes, understand when to use whitebox vs blackbox monitoring",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://sre.google/workbook/alerting-on-slos/"
+            ],
+            "theme": "Observability Frameworks: RED, USE & Four Golden Signals",
+            "group_item_id": "8d1d97",
+            "group_set_id": "a3f656"
+          }
+        ]
+      ],
+      "game_set_id": "37605f"
+    },
+    {
+      "theme": "Observability Frameworks: RED, USE & Four Golden Signals",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "P50",
+              "P95",
+              "P99",
+              "HISTOGRAM"
+            ],
+            "category": "Latency Measurement",
+            "color": "blue",
+            "url": "https://sre.google/sre-book/monitoring-distributed-systems/",
+            "description": "Percentile distributions and histograms used to measure latency properly — averages mask tail latency that real users experience",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://grafana.com/blog/2018/08/02/the-red-method-how-to-instrument-your-services/"
+            ],
+            "theme": "Observability Frameworks: RED, USE & Four Golden Signals",
+            "group_item_id": "506860",
+            "group_set_id": "f06dc5"
+          },
+          {
+            "words": [
+              "METRICS",
+              "LOGS",
+              "TRACES",
+              "EVENTS"
+            ],
+            "category": "Observability Pillars",
+            "color": "green",
+            "url": "https://opentelemetry.io/docs/concepts/observability-primer/",
+            "description": "The four telemetry signal types that feed all observability frameworks — together they provide the full picture of system behaviour",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://www.squadcast.com/blog/how-important-is-observability-for-sre"
+            ],
+            "theme": "Observability Frameworks: RED, USE & Four Golden Signals",
+            "group_item_id": "d16c86",
+            "group_set_id": "f06dc5"
+          },
+          {
+            "words": [
+              "PROMETHEUS",
+              "GRAFANA",
+              "DATADOG",
+              "OTEL"
+            ],
+            "category": "Observability Tooling",
+            "color": "teal",
+            "url": "https://opentelemetry.io/",
+            "description": "The dominant tools used to collect, store, and visualise the signals defined by RED, USE, and the Golden Signals frameworks",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://grafana.com/blog/2018/08/02/the-red-method-how-to-instrument-your-services/"
+            ],
+            "theme": "Observability Frameworks: RED, USE & Four Golden Signals",
+            "group_item_id": "ef7198",
+            "group_set_id": "f06dc5"
+          },
+          {
+            "words": [
+              "COUNTER",
+              "GAUGE",
+              "HISTOGRAM",
+              "SUMMARY"
+            ],
+            "category": "Prometheus Metric Types",
+            "color": "orange",
+            "url": "https://prometheus.io/docs/concepts/metric_types/",
+            "description": "The four Prometheus metric types — each suited to a different kind of signal when instrumenting services for RED and USE",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://grafana.com/blog/2018/08/02/the-red-method-how-to-instrument-your-services/"
+            ],
+            "theme": "Observability Frameworks: RED, USE & Four Golden Signals",
+            "group_item_id": "780002",
+            "group_set_id": "f06dc5"
+          }
+        ],
+        [
+          {
+            "words": [
+              "ALERT",
+              "DASHBOARD",
+              "ONCALL",
+              "POSTMORTEM"
+            ],
+            "category": "Observability Outputs",
+            "color": "red",
+            "url": "https://sre.google/sre-book/monitoring-distributed-systems/",
+            "description": "The operational artefacts that observability frameworks drive — actionable signals rather than noise, enabling sustainable on-call",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.squadcast.com/blog/how-important-is-observability-for-sre"
+            ],
+            "theme": "Observability Frameworks: RED, USE & Four Golden Signals",
+            "group_item_id": "c4c374",
+            "group_set_id": "e36bf3"
+          },
+          {
+            "words": [
+              "UPSTREAM",
+              "DOWNSTREAM",
+              "DEPENDENCY",
+              "FANOUT"
+            ],
+            "category": "Distributed Service Topology",
+            "color": "purple",
+            "url": "https://sre.google/sre-book/monitoring-distributed-systems/",
+            "description": "Concepts describing how services relate in a call graph — critical when applying RED to identify where degradation originates",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://opentelemetry.io/docs/concepts/observability-primer/"
+            ],
+            "theme": "Observability Frameworks: RED, USE & Four Golden Signals",
+            "group_item_id": "e2b3ff",
+            "group_set_id": "e36bf3"
+          },
+          {
+            "words": [
+              "MTTR",
+              "MTTD",
+              "MTBF",
+              "TOIL"
+            ],
+            "category": "SRE Reliability Metrics",
+            "color": "yellow",
+            "url": "https://sre.google/sre-book/introduction/",
+            "description": "Time-based reliability measures that good observability directly improves — faster detection and recovery, less repetitive operational work",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.squadcast.com/blog/how-important-is-observability-for-sre"
+            ],
+            "theme": "Observability Frameworks: RED, USE & Four Golden Signals",
+            "group_item_id": "8a0b3f",
+            "group_set_id": "e36bf3"
+          },
+          {
+            "words": [
+              "QUEUE",
+              "BUSY",
+              "BACKLOG",
+              "HEADROOM"
+            ],
+            "category": "Saturation Signals",
+            "color": "indigo",
+            "url": "https://www.brendangregg.com/usemethod.html",
+            "description": "Indicators that a resource is saturated — work is queuing beyond capacity, the key leading indicator of degradation in USE",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://lantern.splunk.com/Observability/Product_Tips/Observability_Cloud/Adopting_monitoring_frameworks_-_RED_and_USE"
+            ],
+            "theme": "Observability Frameworks: RED, USE & Four Golden Signals",
+            "group_item_id": "2259cf",
+            "group_set_id": "e36bf3"
+          }
+        ]
+      ],
+      "game_set_id": "05f422"
+    }
+  ]
+}

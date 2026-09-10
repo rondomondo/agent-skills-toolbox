@@ -1,0 +1,186 @@
+{
+  "metadata": {
+    "generated_at": "2026-09-07T10:00:00Z",
+    "source": "https://opentelemetry.io/docs/specs/otel/common/",
+    "suggested_name": "opentelemetry-common-spec.json",
+    "modified_at": "2026-09-07T19:00:43.402779",
+    "source_id": "https://opentelemetry.io/docs/specs/otel/common/",
+    "step": "finalize_metadata",
+    "id_registry": {
+      "game_set_ids": [
+        "1d4d39"
+      ],
+      "group_set_ids": [
+        "2d2c5e",
+        "3377ec"
+      ],
+      "group_item_ids": [
+        "896b75",
+        "739f32",
+        "990703",
+        "4eae79",
+        "615f21",
+        "091f27",
+        "d719ef",
+        "1ee1c0"
+      ]
+    },
+    "id": "dhmAb4oSQxONAE0M",
+    "split_info": {
+      "role": "split",
+      "split_at": "2026-09-07T19:00:52.535638+00:00",
+      "parent_id": "dhmAb4oSQxONAE0M",
+      "parent_file": "/output/games/opentelemetry-common-spec.json",
+      "theme": "OpenTelemetry Data Types and Attribute Rules",
+      "slug": "opentelemetry-data-types-and-attribute-rules"
+    }
+  },
+  "game_sets": [
+    {
+      "theme": "OpenTelemetry Data Types and Attribute Rules",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "ARRAY",
+              "MAP",
+              "BYTEARAY",
+              "ANYVALUE"
+            ],
+            "category": "Composite AnyValue Types",
+            "color": "blue",
+            "url": "https://opentelemetry.io/docs/specs/otel/common/",
+            "description": "Non-primitive AnyValue types that allow nested and structured data",
+            "skill_level": "Beginner",
+            "additional_sources": [],
+            "theme": "OpenTelemetry Data Types and Attribute Rules",
+            "group_item_id": "896b75",
+            "group_set_id": "2d2c5e"
+          },
+          {
+            "words": [
+              "CASESENSITIVE",
+              "UNIQUE",
+              "NONULL",
+              "NONEMPTY"
+            ],
+            "category": "Attribute Key Requirements",
+            "color": "green",
+            "url": "https://opentelemetry.io/docs/specs/otel/common/",
+            "description": "Mandatory properties that attribute keys must satisfy in OTel",
+            "skill_level": "Beginner",
+            "additional_sources": [],
+            "theme": "OpenTelemetry Data Types and Attribute Rules",
+            "group_item_id": "739f32",
+            "group_set_id": "2d2c5e"
+          },
+          {
+            "words": [
+              "SPANEVENT",
+              "SPANLINK",
+              "SCOPE",
+              "METRICPOINT"
+            ],
+            "category": "Entities Carrying Attribute Collections",
+            "color": "orange",
+            "url": "https://opentelemetry.io/docs/specs/otel/common/",
+            "description": "OTel signal sub-elements that hold their own attribute collections",
+            "skill_level": "Intermediate",
+            "additional_sources": [],
+            "theme": "OpenTelemetry Data Types and Attribute Rules",
+            "group_item_id": "990703",
+            "group_set_id": "2d2c5e"
+          },
+          {
+            "words": [
+              "RESOURCE",
+              "METRICS",
+              "IMMUTABLE",
+              "EXEMPT"
+            ],
+            "category": "Entities Exempt from Attribute Limits",
+            "color": "yellow",
+            "url": "https://opentelemetry.io/docs/specs/otel/common/",
+            "description": "OTel data entities explicitly excluded from standard attribute count/size limits",
+            "skill_level": "Advanced",
+            "additional_sources": [],
+            "theme": "OpenTelemetry Data Types and Attribute Rules",
+            "group_item_id": "4eae79",
+            "group_set_id": "2d2c5e"
+          }
+        ],
+        [
+          {
+            "words": [
+              "KEY",
+              "VALUE",
+              "PAIR",
+              "ATTRIBUTE"
+            ],
+            "category": "Attribute Structure Fundamentals",
+            "color": "red",
+            "url": "https://opentelemetry.io/docs/specs/otel/common/",
+            "description": "Core components making up an OTel Attribute definition",
+            "skill_level": "Beginner",
+            "additional_sources": [],
+            "theme": "OpenTelemetry Data Types and Attribute Rules",
+            "group_item_id": "615f21",
+            "group_set_id": "3377ec"
+          },
+          {
+            "words": [
+              "HOMOGENEOUS",
+              "NESTING",
+              "ORDERING",
+              "UNORDERED"
+            ],
+            "category": "OTel Collection Equality and Structure Rules",
+            "color": "teal",
+            "url": "https://opentelemetry.io/docs/specs/otel/common/",
+            "description": "Structural constraints and equality semantics for arrays and maps in OTel",
+            "skill_level": "Intermediate",
+            "additional_sources": [],
+            "theme": "OpenTelemetry Data Types and Attribute Rules",
+            "group_item_id": "091f27",
+            "group_set_id": "3377ec"
+          },
+          {
+            "words": [
+              "OTLP",
+              "EXPORTER",
+              "PROCESSOR",
+              "RECEIVER"
+            ],
+            "category": "OTel Pipeline Components",
+            "color": "indigo",
+            "url": "https://opentelemetry.io/docs/specs/otel/common/",
+            "description": "Components in the OTel data pipeline that handle attribute collections",
+            "skill_level": "Intermediate",
+            "additional_sources": [],
+            "theme": "OpenTelemetry Data Types and Attribute Rules",
+            "group_item_id": "d719ef",
+            "group_set_id": "3377ec"
+          },
+          {
+            "words": [
+              "TRACERPROVIDER",
+              "SPANATTRIBUTECOUNTLIMIT",
+              "LOGRECORDATTRIBUTECOUNTLIMIT",
+              "MODELSPECIFIC"
+            ],
+            "category": "SDK Model-Specific Limit Hierarchy",
+            "color": "purple",
+            "url": "https://opentelemetry.io/docs/specs/otel/common/",
+            "description": "How OTel SDKs resolve model-specific vs general attribute limits at runtime",
+            "skill_level": "Expert",
+            "additional_sources": [],
+            "theme": "OpenTelemetry Data Types and Attribute Rules",
+            "group_item_id": "1ee1c0",
+            "group_set_id": "3377ec"
+          }
+        ]
+      ],
+      "game_set_id": "1d4d39"
+    }
+  ]
+}

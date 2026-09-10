@@ -1,0 +1,174 @@
+name: Publish find4 games to github
+
+on:
+  push:
+    branches:
+      - feature-secrets-games
+    paths:
+      - "skills/find4/results/output/**"
+  workflow_dispatch:
+    inputs:
+      branch_prod:
+        description: "Prod branch name"
+        required: false
+        default: "feature-secrets-games-prod"
+      branch_test:
+        description: "Test branch name"
+        required: false
+        default: "feature-secrets-games-test"
+      branch_dev:
+        description: "Dev branch name"
+        required: false
+        default: "feature-secrets-games-dev"
+      branch_dave:
+        description: "Dave branch name"
+        required: false
+        default: "feature-secrets-games-dave"
+
+jobs:
+  publish:
+    name: Publish new/changed Find4 games to Github
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    defaults:
+      run:
+        working-directory: skills/find4
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          python -m venv .venv
+          .venv/bin/pip install --quiet aiobotocore
+
+      - name: Guarantee directories
+        run: |
+          mkdir -p logs games library json webapp config || true
+
+      - name: Looking for new stuff in results/output/
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: us-east-1
+          FIND4_BASE_URL: https://find4.org
+        run: |
+          bash scripts/publish-games.sh \
+            --src results/output \
+            --dst . \
+            --remove-src \
+            2>&1 | tee logs/publish-games-${{ github.run_id }}.log
+
+      - name: Regenerate library
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: us-east-1
+          FIND4_BASE_URL: https://find4.org
+        run: |
+          .venv/bin/python scripts/generate_library.py \
+            --games-dir games \
+            --force \
+            --output-dir config \
+            --config-dir config \
+            2>&1 | tee logs/generate-library-${{ github.run_id }}.log
+      - name: Write publish manifest
+        run: |
+          timestamp=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+          python3 -c "
+          import json, os
+          manifest = {
+              'timestamp': '$timestamp',
+              'commit': '${{ github.sha }}',
+              'run_id': '${{ github.run_id }}',
+              'triggered_by': '${{ github.actor }}',
+          }
+          path = 'logs/publish-${{ github.run_id }}.json'
+          with open(path, 'w', encoding='utf-8') as f:
+              json.dump(manifest, f, indent=2, ensure_ascii=False)
+          print(f'manifest written to {path}')
+          "
+
+      - name: Commit games, library, config + logs back to branch
+        run: |
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "dave@abcdef.ai[bot]"
+          git add games/ library/ logs/ config/themes.json
+          git rm -rf --cached --ignore-unmatch results/output
+          git diff --cached --quiet || git commit -m "chore(find4): regenerate library + publish manifest [skip ci]"
+          git push origin feature-secrets-games
+
+      - name: Merge published assets to target branches and main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH_PROD: ${{ inputs.branch_prod || secrets.GITHUB_BRANCH_GAMES_PROD || 'feature-secrets-games-prod' }}
+          BRANCH_TEST: ${{ inputs.branch_test || secrets.GITHUB_BRANCH_GAMES_TEST || 'feature-secrets-games-test' }}
+          BRANCH_DEV: ${{ inputs.branch_dev  || secrets.GITHUB_BRANCH_GAMES_DEV  || 'feature-secrets-games-dev' }}
+          BRANCH_DAVE: ${{ inputs.branch_dave || secrets.GITHUB_BRANCH_GAMES_DAVE || 'feature-secrets-games-dave' }}
+          SOURCE_BRANCH: feature-secrets-games
+        run: |
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "dave@abcdef.ai[bot]"
+
+          merge_into() {
+            local target="$1"
+            if [ -z "$target" ]; then
+              echo "Skipping empty branch name" >&2
+              return 0
+            fi
+            echo "Merging ${SOURCE_BRANCH} -> ${target}"
+            git fetch origin "${target}" || git checkout -b "${target}"
+            git checkout "${target}" 2>/dev/null || git checkout -b "${target}"
+            git merge --no-edit "origin/${SOURCE_BRANCH}" -m "chore(find4): merge published assets from ${SOURCE_BRANCH} [skip ci]"
+            git push origin "${target}"
+            git checkout "${SOURCE_BRANCH}"
+          }
+
+          git fetch origin
+
+          merge_into "${BRANCH_PROD}"
+          merge_into "${BRANCH_TEST}"
+          merge_into "${BRANCH_DEV}"
+          merge_into "${BRANCH_DAVE}"
+
+          if [ -n "${BRANCH_DEV}" ]; then
+            echo "Merging ${BRANCH_DEV} -> main"
+            git checkout main
+            git merge --no-edit "origin/${BRANCH_DEV}" -m "chore(find4): merge dev branch into main [skip ci]"
+            git push origin main
+          else
+            echo "BRANCH_DEV is empty, skipping merge to main" >&2
+          fi
+
+          if [ -n "${BRANCH_PROD}" ]; then
+            echo "Pushing latest-publish.log to ${BRANCH_PROD} to trigger S3 deploy"
+            git checkout "${BRANCH_PROD}"
+            latest=$(ls -t logs/publish-games-*.log 2>/dev/null | head -1)
+            if [ -n "$latest" ]; then
+              cp "$latest" webapp/latest-publish.log
+              git add webapp/latest-publish.log
+              git diff --cached --quiet || git commit -m "chore(find4): trigger S3 deploy via latest-publish.log [skip ci]"
+              git push origin "${BRANCH_PROD}"
+            fi
+          else
+            echo "BRANCH_PROD is empty, skipping S3 deploy trigger" >&2
+          fi
+          git checkout "${SOURCE_BRANCH}"
+
+          echo "Resetting ${SOURCE_BRANCH} to empty state"
+          git checkout "${SOURCE_BRANCH}"
+          git checkout --orphan _tmp_empty
+          git rm -rf . --quiet
+          git commit --allow-empty -m "chore(find4): reset ${SOURCE_BRANCH} after publish [skip ci]"
+          git branch -D "${SOURCE_BRANCH}"
+          git branch -m "${SOURCE_BRANCH}"
+          git push origin "${SOURCE_BRANCH}" --force

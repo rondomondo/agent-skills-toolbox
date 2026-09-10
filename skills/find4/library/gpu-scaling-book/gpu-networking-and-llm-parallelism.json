@@ -1,0 +1,186 @@
+{
+  "metadata": {
+    "generated_at": "2026-09-07T12:00:00Z",
+    "source": "https://jax-ml.github.io/scaling-book/gpus/",
+    "suggested_name": "gpu-scaling-book.json",
+    "modified_at": "2026-09-07T21:13:58.983682",
+    "source_id": "https://jax-ml.github.io/scaling-book/gpus/",
+    "step": "finalize_metadata",
+    "id_registry": {
+      "game_set_ids": [
+        "171586"
+      ],
+      "group_set_ids": [
+        "c0926f",
+        "4fae3c"
+      ],
+      "group_item_ids": [
+        "b38a68",
+        "8c41bb",
+        "67fa67",
+        "541c64",
+        "552dd2",
+        "3e56bc",
+        "2d7ee6",
+        "0f7952"
+      ]
+    },
+    "id": "gj7cz7i48Waas1YU",
+    "split_info": {
+      "role": "split",
+      "split_at": "2026-09-07T21:14:07.526749+00:00",
+      "parent_id": "gj7cz7i48Waas1YU",
+      "parent_file": "/home/claude/output/games/gpu-scaling-book.json",
+      "theme": "GPU Networking and LLM Parallelism",
+      "slug": "gpu-networking-and-llm-parallelism"
+    }
+  },
+  "game_sets": [
+    {
+      "theme": "GPU Networking and LLM Parallelism",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "NVLINK",
+              "INFINIBAND",
+              "NVSWITCH",
+              "SHARP"
+            ],
+            "category": "GPU Interconnect Technologies",
+            "color": "green",
+            "url": "https://jax-ml.github.io/scaling-book/gpus/",
+            "description": "The four key networking technologies in GPU clusters: NVLink (intra-node high-bandwidth), InfiniBand (inter-node fabric), NVSwitch (intra-node switching chip), and SHARP (in-network reductions).",
+            "skill_level": "Intermediate",
+            "additional_sources": [],
+            "theme": "GPU Networking and LLM Parallelism",
+            "group_item_id": "b38a68",
+            "group_set_id": "c0926f"
+          },
+          {
+            "words": [
+              "ALLGATHER",
+              "REDUCESCATTER",
+              "ALLREDUCE",
+              "ALLTOALL"
+            ],
+            "category": "Distributed Collective Operations",
+            "color": "red",
+            "url": "https://jax-ml.github.io/scaling-book/gpus/",
+            "description": "The four collective communication primitives used in distributed LLM training: AllGather and ReduceScatter are halves of an AllReduce; AllToAll is used in MoE expert routing.",
+            "skill_level": "Intermediate",
+            "additional_sources": [],
+            "theme": "GPU Networking and LLM Parallelism",
+            "group_item_id": "8c41bb",
+            "group_set_id": "c0926f"
+          },
+          {
+            "words": [
+              "NODE",
+              "SU",
+              "SUPERPOD",
+              "SPINE"
+            ],
+            "category": "DGX H100 Network Hierarchy Levels",
+            "color": "blue",
+            "url": "https://jax-ml.github.io/scaling-book/gpus/",
+            "description": "The four-level hierarchy in an NVIDIA DGX H100 SuperPod: 8-GPU NVLink node, 256-GPU Scalable Unit (leaf switches), 1024-GPU SuperPod (spine switches).",
+            "skill_level": "Advanced",
+            "additional_sources": [],
+            "theme": "GPU Networking and LLM Parallelism",
+            "group_item_id": "67fa67",
+            "group_set_id": "c0926f"
+          },
+          {
+            "words": [
+              "TP",
+              "DP",
+              "PP",
+              "EP"
+            ],
+            "category": "LLM Parallelism Strategies",
+            "color": "yellow",
+            "url": "https://jax-ml.github.io/scaling-book/gpus/",
+            "description": "The four main parallelism dimensions for large model training: Tensor (shard weight matrices), Data (replicate model), Pipeline (shard layers), Expert (shard MoE experts).",
+            "skill_level": "Intermediate",
+            "additional_sources": [],
+            "theme": "GPU Networking and LLM Parallelism",
+            "group_item_id": "541c64",
+            "group_set_id": "c0926f"
+          }
+        ],
+        [
+          {
+            "words": [
+              "NCCL",
+              "ZERO",
+              "FSDP",
+              "GSPMD"
+            ],
+            "category": "Distributed Training Libraries and Systems",
+            "color": "purple",
+            "url": "https://jax-ml.github.io/scaling-book/gpus/",
+            "description": "Software frameworks underpinning GPU-scale LLM training: NCCL (NVIDIA's collective library), ZeRO (optimizer state sharding), FSDP (fully sharded data parallelism), GSPMD (XLA's automatic parallelism).",
+            "skill_level": "Advanced",
+            "additional_sources": [],
+            "theme": "GPU Networking and LLM Parallelism",
+            "group_item_id": "552dd2",
+            "group_set_id": "4fae3c"
+          },
+          {
+            "words": [
+              "BISECTION",
+              "FATTREE",
+              "OVERSUBSCRIBED",
+              "NDR"
+            ],
+            "category": "Data-Centre Network Topology Terms",
+            "color": "teal",
+            "url": "https://jax-ml.github.io/scaling-book/gpus/",
+            "description": "Network design concepts relevant to GPU superpods: bisection bandwidth (bandwidth across any even partition), fat tree (guarantees full bisection), oversubscription (links cheaper but shared), NDR (400Gbps InfiniBand generation).",
+            "skill_level": "Expert",
+            "additional_sources": [],
+            "theme": "GPU Networking and LLM Parallelism",
+            "group_item_id": "3e56bc",
+            "group_set_id": "4fae3c"
+          },
+          {
+            "words": [
+              "BUBBLE",
+              "MICROBATCH",
+              "ZEROBUBBLE",
+              "INTERLEAVE"
+            ],
+            "category": "Pipeline Parallelism Scheduling Concepts",
+            "color": "orange",
+            "url": "https://jax-ml.github.io/scaling-book/gpus/",
+            "description": "Terms specific to pipeline parallelism scheduling: pipeline bubbles (idle compute), microbatches (subdivided batch to fill pipeline), zero-bubble scheduling (avoids idle stages), interleaved forward/backward passes.",
+            "skill_level": "Expert",
+            "additional_sources": [],
+            "theme": "GPU Networking and LLM Parallelism",
+            "group_item_id": "2d7ee6",
+            "group_set_id": "4fae3c"
+          },
+          {
+            "words": [
+              "MFU",
+              "DEEPSEEK",
+              "LLAMA",
+              "MEGATRON"
+            ],
+            "category": "Real-World LLM Training Examples",
+            "color": "indigo",
+            "url": "https://jax-ml.github.io/scaling-book/gpus/",
+            "description": "Concrete large-scale training examples from the chapter: MFU (metric for GPU utilisation), DeepSeek V3 (64-way EP + 16-way PP), LLaMA-3 (8-way TP + 16-way PP), and Megatron-LM (NVIDIA's training framework).",
+            "skill_level": "Intermediate",
+            "additional_sources": [],
+            "theme": "GPU Networking and LLM Parallelism",
+            "group_item_id": "0f7952",
+            "group_set_id": "4fae3c"
+          }
+        ]
+      ],
+      "game_set_id": "171586"
+    }
+  ]
+}

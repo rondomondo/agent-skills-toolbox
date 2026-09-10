@@ -1,0 +1,372 @@
+{
+  "metadata": {
+    "generated_at": "2026-09-07T10:00:00Z",
+    "source": "https://opentelemetry.io/docs/specs/otel/overview/",
+    "suggested_name": "opentelemetry-overview.json",
+    "modified_at": "2026-09-07T18:48:01.304975",
+    "source_id": "https://opentelemetry.io/docs/specs/otel/overview/",
+    "step": "finalize_metadata",
+    "id_registry": {
+      "group_set_ids": [
+        "f1a883",
+        "54c282",
+        "6d2ee3",
+        "434ea6"
+      ],
+      "game_set_ids": [
+        "b79f5a",
+        "b92538"
+      ],
+      "group_item_ids": [
+        "464d51",
+        "a5c2a6",
+        "1ab25a",
+        "a13d29",
+        "560bb4",
+        "41b81c",
+        "fdaf1b",
+        "4dd73d",
+        "00d28d",
+        "493740",
+        "bc7dea",
+        "18b699",
+        "fa61b8",
+        "425a43",
+        "c5ad7d",
+        "0241dd"
+      ]
+    },
+    "id": "mKQDBj9VzRKTG6xJ",
+    "split_info": {
+      "role": "combined",
+      "split_at": "2026-09-07T18:48:09.774265+00:00",
+      "source_file": "/output/games/opentelemetry-overview.json"
+    }
+  },
+  "game_sets": [
+    {
+      "theme": "OpenTelemetry Architecture & Signals",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "TRACES",
+              "METRICS",
+              "LOGS",
+              "BAGGAGE"
+            ],
+            "category": "OTel Signals",
+            "color": "blue",
+            "url": "https://opentelemetry.io/docs/specs/otel/overview/",
+            "description": "The four primary observability signals defined by OpenTelemetry — each provides a distinct form of telemetry about a running system.",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://opentelemetry.io/docs/concepts/signals/"
+            ],
+            "theme": "OpenTelemetry Architecture & Signals",
+            "group_item_id": "464d51",
+            "group_set_id": "f1a883"
+          },
+          {
+            "words": [
+              "SPANID",
+              "TRACEID",
+              "TRACEFLAGS",
+              "TRACESTATE"
+            ],
+            "category": "SpanContext Fields",
+            "color": "green",
+            "url": "https://opentelemetry.io/docs/specs/otel/overview/",
+            "description": "The four fields that make up a SpanContext — the propagated identity of a span across process and network boundaries.",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://opentelemetry.io/docs/specs/otel/trace/api/"
+            ],
+            "theme": "OpenTelemetry Architecture & Signals",
+            "group_item_id": "a5c2a6",
+            "group_set_id": "f1a883"
+          },
+          {
+            "words": [
+              "API",
+              "SDK",
+              "CONTRIB",
+              "CONVENTIONS"
+            ],
+            "category": "OTel Client Package Types",
+            "color": "orange",
+            "url": "https://opentelemetry.io/docs/specs/otel/overview/",
+            "description": "The four categories of packages that make up an OpenTelemetry language client: API (cross-cutting interfaces), SDK (implementation), Contrib (optional integrations), and Semantic Conventions.",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://opentelemetry.io/docs/concepts/components/"
+            ],
+            "theme": "OpenTelemetry Architecture & Signals",
+            "group_item_id": "1ab25a",
+            "group_set_id": "f1a883"
+          },
+          {
+            "words": [
+              "COUNTER",
+              "GAUGE",
+              "HISTOGRAM",
+              "MEASUREMENT"
+            ],
+            "category": "Metric Instrument Types",
+            "color": "purple",
+            "url": "https://opentelemetry.io/docs/specs/otel/overview/",
+            "description": "Instrument abstractions used in the OTel Metrics signal — counters increment, gauges capture current values, histograms record distributions, and measurements are the raw recorded values.",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://opentelemetry.io/docs/specs/otel/metrics/api/"
+            ],
+            "theme": "OpenTelemetry Architecture & Signals",
+            "group_item_id": "a13d29",
+            "group_set_id": "f1a883"
+          }
+        ],
+        [
+          {
+            "words": [
+              "SPAN",
+              "TRACE",
+              "EVENT",
+              "LINK"
+            ],
+            "category": "Tracing Primitives",
+            "color": "teal",
+            "url": "https://opentelemetry.io/docs/specs/otel/overview/",
+            "description": "Core building blocks of the OTel tracing signal — spans represent operations, traces are DAGs of spans, events are timestamped annotations, and links connect causally related spans.",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://opentelemetry.io/docs/specs/otel/trace/api/"
+            ],
+            "theme": "OpenTelemetry Architecture & Signals",
+            "group_item_id": "560bb4",
+            "group_set_id": "54c282"
+          },
+          {
+            "words": [
+              "PROPAGATOR",
+              "CONTEXT",
+              "CARRIER",
+              "TEXTMAP"
+            ],
+            "category": "Context Propagation Components",
+            "color": "red",
+            "url": "https://opentelemetry.io/docs/specs/otel/overview/",
+            "description": "Components involved in propagating cross-cutting concerns across process boundaries — the Propagator API injects/extracts state using a TextMapPropagator into carriers via a shared Context.",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://opentelemetry.io/docs/specs/otel/context/api-propagators/"
+            ],
+            "theme": "OpenTelemetry Architecture & Signals",
+            "group_item_id": "41b81c",
+            "group_set_id": "54c282"
+          },
+          {
+            "words": [
+              "METER",
+              "INSTRUMENT",
+              "METERPROVIDER",
+              "VIEW"
+            ],
+            "category": "Metrics API Components",
+            "color": "yellow",
+            "url": "https://opentelemetry.io/docs/specs/otel/overview/",
+            "description": "The object hierarchy for the OTel Metrics API — a MeterProvider creates Meters, Meters create Instruments, and Views configure how instrument data is aggregated and exported.",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://opentelemetry.io/docs/specs/otel/metrics/api/"
+            ],
+            "theme": "OpenTelemetry Architecture & Signals",
+            "group_item_id": "fdaf1b",
+            "group_set_id": "54c282"
+          },
+          {
+            "words": [
+              "AGENT",
+              "COLLECTOR",
+              "EXPORTER",
+              "SAMPLER"
+            ],
+            "category": "OTel Collector Roles",
+            "color": "indigo",
+            "url": "https://opentelemetry.io/docs/specs/otel/overview/",
+            "description": "Operational components in the OTel pipeline — the Collector runs as an Agent (sidecar) or standalone service, receives telemetry, applies sampling, and forwards to backends via Exporters.",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://opentelemetry.io/docs/collector/"
+            ],
+            "theme": "OpenTelemetry Architecture & Signals",
+            "group_item_id": "4dd73d",
+            "group_set_id": "54c282"
+          }
+        ]
+      ],
+      "game_set_id": "b79f5a"
+    },
+    {
+      "theme": "OpenTelemetry Concepts Deep Dive",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "RESOURCE",
+              "CLUSTER",
+              "NAMESPACE",
+              "POD"
+            ],
+            "category": "Resource Entity Hierarchy",
+            "color": "green",
+            "url": "https://opentelemetry.io/docs/specs/otel/overview/",
+            "description": "A Resource describes the entity producing telemetry — in a Kubernetes environment this hierarchy (cluster → namespace → pod) is captured as resource attributes on all emitted signals.",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://opentelemetry.io/docs/specs/otel/resource/sdk/"
+            ],
+            "theme": "OpenTelemetry Concepts Deep Dive",
+            "group_item_id": "00d28d",
+            "group_set_id": "6d2ee3"
+          },
+          {
+            "words": [
+              "INSTRUMENTATION",
+              "WRAPPING",
+              "CALLBACKS",
+              "MIDDLEWARE"
+            ],
+            "category": "Instrumentation Library Techniques",
+            "color": "blue",
+            "url": "https://opentelemetry.io/docs/specs/otel/overview/",
+            "description": "Mechanisms used by OTel Instrumentation Libraries to add observability to third-party code without modifying it — wrapping interfaces, subscribing to callbacks, or acting as middleware.",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://opentelemetry.io/docs/specs/otel/glossary/"
+            ],
+            "theme": "OpenTelemetry Concepts Deep Dive",
+            "group_item_id": "493740",
+            "group_set_id": "6d2ee3"
+          },
+          {
+            "words": [
+              "SCATTER",
+              "GATHER",
+              "FORK",
+              "JOIN"
+            ],
+            "category": "Span Link Patterns",
+            "color": "orange",
+            "url": "https://opentelemetry.io/docs/specs/otel/overview/",
+            "description": "Distributed execution patterns where OTel Links (rather than parent-child relationships) are used — scatter/gather and fork/join involve multiple upstream spans feeding a single aggregating span.",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://opentelemetry.io/docs/specs/otel/trace/api/"
+            ],
+            "theme": "OpenTelemetry Concepts Deep Dive",
+            "group_item_id": "bc7dea",
+            "group_set_id": "6d2ee3"
+          },
+          {
+            "words": [
+              "SYNCHRONOUS",
+              "ASYNCHRONOUS",
+              "CALLBACK",
+              "OBSERVABLE"
+            ],
+            "category": "Instrument Invocation Modes",
+            "color": "red",
+            "url": "https://opentelemetry.io/docs/specs/otel/overview/",
+            "description": "OTel instruments are either synchronous (called inline by application code at measurement time) or asynchronous/observable (SDK invokes a registered callback on demand).",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://opentelemetry.io/docs/specs/otel/metrics/api/"
+            ],
+            "theme": "OpenTelemetry Concepts Deep Dive",
+            "group_item_id": "18b699",
+            "group_set_id": "6d2ee3"
+          }
+        ],
+        [
+          {
+            "words": [
+              "OTLP",
+              "JAEGER",
+              "PROMETHEUS",
+              "ZIPKIN"
+            ],
+            "category": "Telemetry Export Formats",
+            "color": "purple",
+            "url": "https://opentelemetry.io/docs/specs/otel/overview/",
+            "description": "Backends and wire formats the OTel Collector can receive from or export to — OTLP is OTel's native protocol; Jaeger, Prometheus, and Zipkin are legacy systems with Collector support.",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://opentelemetry.io/docs/collector/configuration/"
+            ],
+            "theme": "OpenTelemetry Concepts Deep Dive",
+            "group_item_id": "fa61b8",
+            "group_set_id": "434ea6"
+          },
+          {
+            "words": [
+              "TIMESERIES",
+              "INFLIGHT",
+              "EVENTMODEL",
+              "PRODUCER"
+            ],
+            "category": "Metrics Data Model Semantics",
+            "color": "teal",
+            "url": "https://opentelemetry.io/docs/specs/otel/overview/",
+            "description": "The three semantic layers of the OTel Metrics data model — an Event model (API), an in-flight model (SDK/OTLP transport), and a TimeSeries model (exporter interpretation) — bridged by the Metric Producer interface.",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://opentelemetry.io/docs/specs/otel/metrics/data-model/"
+            ],
+            "theme": "OpenTelemetry Concepts Deep Dive",
+            "group_item_id": "425a43",
+            "group_set_id": "434ea6"
+          },
+          {
+            "words": [
+              "DAG",
+              "ROOT",
+              "PARENT",
+              "CHILD"
+            ],
+            "category": "Trace Graph Relationships",
+            "color": "indigo",
+            "url": "https://opentelemetry.io/docs/specs/otel/overview/",
+            "description": "A Trace in OTel is a Directed Acyclic Graph (DAG) of Spans — every span has at most one parent (except the root), forming a tree that represents the causal execution chain.",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://opentelemetry.io/docs/specs/otel/trace/api/"
+            ],
+            "theme": "OpenTelemetry Concepts Deep Dive",
+            "group_item_id": "c5ad7d",
+            "group_set_id": "434ea6"
+          },
+          {
+            "words": [
+              "STABLE",
+              "BACKWARDS",
+              "VERSIONING",
+              "COMPATIBILITY"
+            ],
+            "category": "OTel Stability Guarantees",
+            "color": "yellow",
+            "url": "https://opentelemetry.io/docs/specs/otel/overview/",
+            "description": "Core principles of the OTel specification — once marked stable, APIs and SDKs guarantee backwards compatibility across versions, protecting instrumented libraries from breaking changes.",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://opentelemetry.io/docs/specs/otel/versioning-and-stability/"
+            ],
+            "theme": "OpenTelemetry Concepts Deep Dive",
+            "group_item_id": "0241dd",
+            "group_set_id": "434ea6"
+          }
+        ]
+      ],
+      "game_set_id": "b92538"
+    }
+  ]
+}

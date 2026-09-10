@@ -1,0 +1,202 @@
+{
+  "metadata": {
+    "generated_at": "2026-09-10T12:00:00Z",
+    "source": "https://www.brendangregg.com/ebpf.html",
+    "suggested_name": "ebpf-tracing-tools-brendan-gregg.json",
+    "modified_at": "2026-09-10T16:49:01.127199",
+    "source_id": "https://www.brendangregg.com/ebpf.html",
+    "step": "finalize_metadata",
+    "id_registry": {
+      "game_set_ids": [
+        "8ea23b"
+      ],
+      "group_set_ids": [
+        "fc1338",
+        "345499"
+      ],
+      "group_item_ids": [
+        "9d9baa",
+        "a07d7c",
+        "c3c2f9",
+        "ff72c0",
+        "493e7c",
+        "3b57db",
+        "0f6483",
+        "3652e6"
+      ]
+    },
+    "id": "ny1IRkxOCNb7SVu8",
+    "split_info": {
+      "role": "split",
+      "split_at": "2026-09-10T16:49:09.384997+00:00",
+      "parent_id": "ny1IRkxOCNb7SVu8",
+      "parent_file": "/home/claude/output/games/ebpf-tracing-tools-brendan-gregg.json",
+      "theme": "eBPF Tracing Tools and Concepts",
+      "slug": "ebpf-tracing-tools-and-concepts"
+    }
+  },
+  "game_sets": [
+    {
+      "theme": "eBPF Tracing Tools and Concepts",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "KPROBES",
+              "UPROBES",
+              "TRACEPOINTS",
+              "PERF_EVENTS"
+            ],
+            "category": "eBPF Event Sources",
+            "color": "blue",
+            "url": "https://www.brendangregg.com/ebpf.html",
+            "description": "The four types of event sources that eBPF programs can attach to for kernel and user-space instrumentation",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://github.com/iovisor/bcc"
+            ],
+            "theme": "eBPF Tracing Tools and Concepts",
+            "group_item_id": "9d9baa",
+            "group_set_id": "fc1338"
+          },
+          {
+            "words": [
+              "EXECSNOOP",
+              "OPENSNOOP",
+              "BIOLATENCY",
+              "TCPCONNECT"
+            ],
+            "category": "BCC Single-Purpose Tools",
+            "color": "green",
+            "url": "https://www.brendangregg.com/ebpf.html",
+            "description": "Single-purpose bcc tools that each do one thing well — tracing execs, file opens, block I/O latency, and TCP connections",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://github.com/iovisor/bcc"
+            ],
+            "theme": "eBPF Tracing Tools and Concepts",
+            "group_item_id": "a07d7c",
+            "group_set_id": "fc1338"
+          },
+          {
+            "words": [
+              "TRACE",
+              "ARGDIST",
+              "FUNCCOUNT",
+              "STACKCOUNT"
+            ],
+            "category": "BCC Multi-Tools",
+            "color": "orange",
+            "url": "https://www.brendangregg.com/ebpf.html",
+            "description": "Powerful bcc multi-tools that can do many things depending on arguments — trace, argument distribution, function counting, and stack counting",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://github.com/iovisor/bcc"
+            ],
+            "theme": "eBPF Tracing Tools and Concepts",
+            "group_item_id": "c3c2f9",
+            "group_set_id": "fc1338"
+          },
+          {
+            "words": [
+              "BPF_HISTOGRAM",
+              "BPF_PERF_OUTPUT",
+              "BPF_HASH",
+              "BPF_MAP"
+            ],
+            "category": "eBPF Kernel Data Structures",
+            "color": "purple",
+            "url": "https://www.brendangregg.com/ebpf.html",
+            "description": "BPF kernel-side constructs for storing and passing data from kernel to user space — maps, histograms, and per-event outputs",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://github.com/iovisor/bcc"
+            ],
+            "theme": "eBPF Tracing Tools and Concepts",
+            "group_item_id": "ff72c0",
+            "group_set_id": "fc1338"
+          }
+        ],
+        [
+          {
+            "words": [
+              "BCC",
+              "BPFTRACE",
+              "PLY",
+              "PERF"
+            ],
+            "category": "eBPF Front-End Tools",
+            "color": "teal",
+            "url": "https://www.brendangregg.com/ebpf.html",
+            "description": "The main front-end interfaces for writing and running eBPF programs — from complex daemons (BCC) to powerful one-liners (bpftrace)",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://github.com/iovisor/bpftrace"
+            ],
+            "theme": "eBPF Tracing Tools and Concepts",
+            "group_item_id": "493e7c",
+            "group_set_id": "345499"
+          },
+          {
+            "words": [
+              "BIOSNOOP",
+              "CACHESTAT",
+              "RUNQLAT",
+              "GETHOSTLATENCY"
+            ],
+            "category": "System Observability Tools",
+            "color": "red",
+            "url": "https://www.brendangregg.com/ebpf.html",
+            "description": "bcc tools for observing system-level behaviour: disk I/O events, page cache hit rates, scheduler run-queue latency, and DNS lookup times",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://github.com/iovisor/bcc"
+            ],
+            "theme": "eBPF Tracing Tools and Concepts",
+            "group_item_id": "3b57db",
+            "group_set_id": "345499"
+          },
+          {
+            "words": [
+              "COMM",
+              "RETVAL",
+              "KSTACK",
+              "NSECS"
+            ],
+            "category": "bpftrace Builtin Variables",
+            "color": "indigo",
+            "url": "https://www.brendangregg.com/ebpf.html",
+            "description": "Built-in bpftrace variables available within probe actions — process name, return value, kernel stack trace, and current timestamp in nanoseconds",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://github.com/iovisor/bpftrace"
+            ],
+            "theme": "eBPF Tracing Tools and Concepts",
+            "group_item_id": "0f6483",
+            "group_set_id": "345499"
+          },
+          {
+            "words": [
+              "VERIFIER",
+              "BYTECODE",
+              "CO-RE",
+              "BTF"
+            ],
+            "category": "eBPF Runtime Internals",
+            "color": "yellow",
+            "url": "https://www.brendangregg.com/ebpf.html",
+            "description": "Internal eBPF runtime components: the kernel verifier that rejects unsafe programs, BPF bytecode, Compile Once Run Everywhere portability, and BPF Type Format",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://ebpf.io"
+            ],
+            "theme": "eBPF Tracing Tools and Concepts",
+            "group_item_id": "3652e6",
+            "group_set_id": "345499"
+          }
+        ]
+      ],
+      "game_set_id": "8ea23b"
+    }
+  ]
+}

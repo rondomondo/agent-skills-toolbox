@@ -1,0 +1,367 @@
+{
+  "metadata": {
+    "generated_at": "2026-05-20T00:00:00Z",
+    "source": "KubernetesOperatorsEbookOReilly.pdf",
+    "suggested_name": "kubernetes-operators.json",
+    "modified_at": "2026-05-20T09:37:02.294472",
+    "source_id": "KubernetesOperatorsEbookOReilly.pdf",
+    "step": "finalize_metadata",
+    "id_registry": {
+      "group_set_ids": [
+        "6cdec3",
+        "e780fd",
+        "ba509c",
+        "27d5a7"
+      ],
+      "game_set_ids": [
+        "75c0d7",
+        "a3c370"
+      ],
+      "group_item_ids": [
+        "b4c2ba",
+        "7d5544",
+        "107ff5",
+        "5a75be",
+        "d790be",
+        "82a1c1",
+        "f62ae5",
+        "554319",
+        "29463d",
+        "b87249",
+        "07c311",
+        "58ea89",
+        "a90666",
+        "7cfc34",
+        "b7c8bd",
+        "a42788"
+      ]
+    },
+    "id": "RrglDXIlldYnrAsj"
+  },
+  "game_sets": [
+    {
+      "theme": "Kubernetes Operators: Core Concepts",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "CRD",
+              "CR",
+              "CUSTOM CONTROLLER",
+              "OPERAND"
+            ],
+            "category": "The Operator Building Blocks",
+            "color": "blue",
+            "url": "https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/",
+            "description": "The four primitives an Operator is built from: a CRD (CustomResourceDefinition) registers the new API type, a CR (Custom Resource) is an instance of it, the custom controller watches CRs and acts, and the operand is the application being managed",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://kubernetes.io/docs/concepts/extend-kubernetes/operator/"
+            ],
+            "theme": "Kubernetes Operators: Core Concepts",
+            "group_item_id": "b4c2ba",
+            "group_set_id": "6cdec3"
+          },
+          {
+            "words": [
+              "RECONCILE LOOP",
+              "DESIRED STATE",
+              "OBSERVED STATE",
+              "LEVEL TRIGGERING"
+            ],
+            "category": "The Control Loop Model",
+            "color": "green",
+            "url": "https://kubernetes.io/docs/concepts/architecture/controller/",
+            "description": "How Operator controllers work: the reconcile loop continuously compares desired state (spec) against observed state (status) and takes action to converge them; level-triggering means the controller reacts to the current state rather than the event that caused it, making it naturally idempotent",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://book.kubebuilder.io/architecture/controller-runtime.html"
+            ],
+            "theme": "Kubernetes Operators: Core Concepts",
+            "group_item_id": "7d5544",
+            "group_set_id": "6cdec3"
+          },
+          {
+            "words": [
+              "SERVICE ACCOUNT",
+              "ROLE",
+              "ROLEBINDING",
+              "CLUSTERROLE"
+            ],
+            "category": "Operator RBAC Primitives",
+            "color": "red",
+            "url": "https://kubernetes.io/docs/reference/access-authn-authz/rbac/",
+            "description": "RBAC resources that grant an Operator its permissions: a ServiceAccount identifies the Operator pod, a Role defines allowed API verbs in a namespace, a RoleBinding binds the Role to the ServiceAccount, a ClusterRole and ClusterRoleBinding extend this cluster-wide",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/"
+            ],
+            "theme": "Kubernetes Operators: Core Concepts",
+            "group_item_id": "107ff5",
+            "group_set_id": "6cdec3"
+          },
+          {
+            "words": [
+              "INSTALL",
+              "UPGRADE",
+              "BACKUP",
+              "AUTOPILOT"
+            ],
+            "category": "Operator Maturity Model Phases",
+            "color": "purple",
+            "url": "https://operatorframework.io/operator-capabilities/",
+            "description": "The five capability levels of the Operator Maturity Model: Phase 1 (Basic Install) automates deployment, Phase 2 (Seamless Upgrades) handles version changes, Phase 3 (Full Lifecycle) adds backup/restore, Phase 4 (Deep Insights) exposes metrics/alerts, Phase 5 (Auto Pilot) handles auto-scaling and tuning",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://sdk.operatorframework.io/docs/overview/operator-capabilities/"
+            ],
+            "theme": "Kubernetes Operators: Core Concepts",
+            "group_item_id": "5a75be",
+            "group_set_id": "6cdec3"
+          }
+        ],
+        [
+          {
+            "words": [
+              "NAMESPACE SCOPE",
+              "CLUSTER SCOPE",
+              "OPERATORGROUP",
+              "WATCHNAMESPACE"
+            ],
+            "category": "Operator Scope & Tenancy",
+            "color": "teal",
+            "url": "https://olm.operatorframework.io/docs/advanced-topics/operator-scoping-with-operatorgroups/",
+            "description": "How Operator visibility is controlled: namespace-scoped Operators only manage resources in one namespace, cluster-scoped Operators watch the entire cluster, OperatorGroup (an OLM resource) defines which namespaces an Operator covers, WATCHNAMESPACE env var configures scope at runtime",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://sdk.operatorframework.io/docs/building-operators/golang/operator-scope/"
+            ],
+            "theme": "Kubernetes Operators: Core Concepts",
+            "group_item_id": "d790be",
+            "group_set_id": "e780fd"
+          },
+          {
+            "words": [
+              "SPEC",
+              "STATUS",
+              "PHASE",
+              "CONDITIONS"
+            ],
+            "category": "CR Anatomy",
+            "color": "orange",
+            "url": "https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/",
+            "description": "Standard fields in a Custom Resource: spec holds the desired configuration authored by users, status holds the observed state written by the controller, phase is a simple high-level summary string (e.g. Running/Failed), conditions provide structured per-reason status entries with timestamps",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#pod-conditions"
+            ],
+            "theme": "Kubernetes Operators: Core Concepts",
+            "group_item_id": "82a1c1",
+            "group_set_id": "e780fd"
+          },
+          {
+            "words": [
+              "ETCD OPERATOR",
+              "VISITORS SITE",
+              "HELM OPERATOR",
+              "ANSIBLE OPERATOR"
+            ],
+            "category": "Operator Examples in the Book",
+            "color": "indigo",
+            "url": "https://github.com/operator-framework/operator-sdk",
+            "description": "Concrete Operators used as examples throughout the book: the etcd Operator (the canonical first example \u2014 manages etcd cluster lifecycle), the Visitors Site app (a three-tier app used to demonstrate Go/Helm/Ansible approaches), Helm Operator (wraps a Helm chart), Ansible Operator (drives an Ansible playbook)",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://operatorhub.io/operator/etcd"
+            ],
+            "theme": "Kubernetes Operators: Core Concepts",
+            "group_item_id": "f62ae5",
+            "group_set_id": "e780fd"
+          },
+          {
+            "words": [
+              "FINALIZER",
+              "OWNER REFERENCE",
+              "GENERATION",
+              "RESOURCE VERSION"
+            ],
+            "category": "Advanced CR Metadata",
+            "color": "yellow",
+            "url": "https://kubernetes.io/docs/concepts/workloads/controllers/garbage-collection/",
+            "description": "Metadata fields that control object lifecycle: finalizers block deletion until cleanup logic completes, ownerReferences express parent-child relationships so garbage collection cascades, generation increments on every spec change letting controllers detect drift, resourceVersion is an etcd revision token used for optimistic concurrency",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://kubernetes.io/docs/concepts/overview/working-with-objects/finalizers/"
+            ],
+            "theme": "Kubernetes Operators: Core Concepts",
+            "group_item_id": "554319",
+            "group_set_id": "e780fd"
+          }
+        ]
+      ],
+      "game_set_id": "75c0d7"
+    },
+    {
+      "theme": "Kubernetes Operators: Framework & Lifecycle",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "OPERATOR SDK",
+              "KUBEBUILDER",
+              "CONTROLLER-RUNTIME",
+              "OPERATOR FRAMEWORK"
+            ],
+            "category": "Operator Toolchain",
+            "color": "blue",
+            "url": "https://sdk.operatorframework.io/",
+            "description": "The key libraries and tools: Operator Framework is the umbrella project (Red Hat/community), Operator SDK scaffolds and builds Operators using Go/Helm/Ansible, kubebuilder is the upstream SDK the Operator SDK now aligns with, controller-runtime is the shared Go library providing the Manager, Client, and Reconciler interfaces",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://github.com/kubernetes-sigs/controller-runtime"
+            ],
+            "theme": "Kubernetes Operators: Framework & Lifecycle",
+            "group_item_id": "29463d",
+            "group_set_id": "ba509c"
+          },
+          {
+            "words": [
+              "OLM",
+              "CATALOGSOURCE",
+              "SUBSCRIPTION",
+              "INSTALLPLAN"
+            ],
+            "category": "OLM Installation Flow",
+            "color": "teal",
+            "url": "https://olm.operatorframework.io/",
+            "description": "How OLM (Operator Lifecycle Manager) installs Operators: a CatalogSource points to a registry of available Operators, a Subscription declares which Operator and channel you want, OLM generates an InstallPlan listing the resources to create, and finally the Operator CSV (ClusterServiceVersion) is applied",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://olm.operatorframework.io/docs/concepts/crds/subscription/"
+            ],
+            "theme": "Kubernetes Operators: Framework & Lifecycle",
+            "group_item_id": "b87249",
+            "group_set_id": "ba509c"
+          },
+          {
+            "words": [
+              "CSV",
+              "BUNDLE",
+              "CHANNEL",
+              "OPERATORHUB"
+            ],
+            "category": "OLM Packaging Concepts",
+            "color": "purple",
+            "url": "https://olm.operatorframework.io/docs/concepts/crds/clusterserviceversion/",
+            "description": "OLM packaging model: a ClusterServiceVersion (CSV) is the package manifest describing an Operator version \u2014 its CRDs, RBAC, and deployment; a Bundle is a directory of CSVs + CRDs for one version; a Channel (e.g. stable/alpha) sequences upgrades; OperatorHub.io is the public catalogue of community and vendor Operators",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://operatorhub.io/"
+            ],
+            "theme": "Kubernetes Operators: Framework & Lifecycle",
+            "group_item_id": "07c311",
+            "group_set_id": "ba509c"
+          },
+          {
+            "words": [
+              "INFORMER",
+              "WORKQUEUE",
+              "WATCH",
+              "EVENT HANDLER"
+            ],
+            "category": "Controller Internals",
+            "color": "red",
+            "url": "https://pkg.go.dev/k8s.io/client-go/informers",
+            "description": "The machinery inside a Kubernetes controller: an Informer caches API objects and fires callbacks on changes, callbacks enqueue keys onto a Workqueue, the reconcile loop dequeues and processes them, Watch is the underlying API server streaming mechanism that feeds the Informer \u2014 this is the client-go shared informer pattern",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://github.com/kubernetes/sample-controller/blob/master/docs/controller-client-go.md"
+            ],
+            "theme": "Kubernetes Operators: Framework & Lifecycle",
+            "group_item_id": "58ea89",
+            "group_set_id": "ba509c"
+          }
+        ],
+        [
+          {
+            "words": [
+              "HELM CHART",
+              "VALUES.YAML",
+              "RELEASE",
+              "WATCHES.YAML"
+            ],
+            "category": "Helm Operator Concepts",
+            "color": "orange",
+            "url": "https://sdk.operatorframework.io/docs/building-operators/helm/",
+            "description": "How the Helm Operator adapter works: a Helm chart packages Kubernetes manifests with templating, values.yaml provides defaults that map to the CR spec, a Release is a deployed chart instance, watches.yaml tells the Operator SDK which CR group/version/kind maps to which chart \u2014 enabling a chart to be driven by a CR without writing Go",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://helm.sh/docs/chart_template_guide/values_files/"
+            ],
+            "theme": "Kubernetes Operators: Framework & Lifecycle",
+            "group_item_id": "a90666",
+            "group_set_id": "27d5a7"
+          },
+          {
+            "words": [
+              "PLAYBOOK",
+              "ROLE",
+              "TASK",
+              "MOLECULE"
+            ],
+            "category": "Ansible Operator Concepts",
+            "color": "green",
+            "url": "https://sdk.operatorframework.io/docs/building-operators/ansible/",
+            "description": "Ansible Operator building blocks: an Ansible Playbook is the top-level automation script mapped to reconciliation, a Role is a reusable unit of Ansible tasks, Tasks are the individual actions (create deployment, patch service), Molecule is the testing framework used to test Ansible Operator logic",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://molecule.readthedocs.io/"
+            ],
+            "theme": "Kubernetes Operators: Framework & Lifecycle",
+            "group_item_id": "7cfc34",
+            "group_set_id": "27d5a7"
+          },
+          {
+            "words": [
+              "STATELESS",
+              "STATEFUL",
+              "SOFTWARE SRE",
+              "DAY 2 OPERATIONS"
+            ],
+            "category": "Why Operators Exist",
+            "color": "yellow",
+            "url": "https://kubernetes.io/docs/concepts/extend-kubernetes/operator/",
+            "description": "The problem Operators solve: Kubernetes handles stateless workloads well but stateful apps (databases, message queues) require domain knowledge \u2014 Operators encode that knowledge as code (the 'Software SRE' pattern), automating Day 2 operations like backup, failover, scaling, and upgrades that would otherwise require a human expert",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://www.redhat.com/en/topics/containers/what-is-a-kubernetes-operator"
+            ],
+            "theme": "Kubernetes Operators: Framework & Lifecycle",
+            "group_item_id": "b7c8bd",
+            "group_set_id": "27d5a7"
+          },
+          {
+            "words": [
+              "ADMISSION WEBHOOK",
+              "CONVERSION WEBHOOK",
+              "DEFAULTING",
+              "VALIDATION"
+            ],
+            "category": "Webhook Extension Points",
+            "color": "indigo",
+            "url": "https://kubernetes.io/docs/reference/access-authn-authz/extensible-admission-controllers/",
+            "description": "Kubernetes webhook mechanisms Operators can use: an Admission Webhook intercepts API requests before persistence, a Conversion Webhook translates CRs between API versions, Defaulting webhooks fill in omitted spec fields, Validation webhooks reject invalid CR configurations \u2014 all implemented as HTTP endpoints in the Operator pod",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://book.kubebuilder.io/reference/webhook-overview.html"
+            ],
+            "theme": "Kubernetes Operators: Framework & Lifecycle",
+            "group_item_id": "a42788",
+            "group_set_id": "27d5a7"
+          }
+        ]
+      ],
+      "game_set_id": "a3c370"
+    }
+  ]
+}

@@ -1,0 +1,203 @@
+{
+  "metadata": {
+    "generated_at": "2026-09-08T00:00:00Z",
+    "source": "stdin",
+    "suggested_name": "construction-management-competencies.json",
+    "modified_at": "2026-09-08T16:35:00.907062",
+    "source_id": "stdin",
+    "step": "finalize_metadata",
+    "id_registry": {
+      "game_set_ids": [
+        "6bbf13"
+      ],
+      "group_set_ids": [
+        "341543",
+        "5b0b4f"
+      ],
+      "group_item_ids": [
+        "d0bca8",
+        "06dd57",
+        "720ef1",
+        "87021d",
+        "40f41b",
+        "f9424e",
+        "272ae9",
+        "0a3e38"
+      ]
+    },
+    "id": "HOenmQxoxuq6DXeg",
+    "split_info": {
+      "role": "split",
+      "split_at": "2026-09-08T16:35:07.695838+00:00",
+      "parent_id": "HOenmQxoxuq6DXeg",
+      "parent_file": "/output/games/construction-management-competencies.json",
+      "theme": "Construction Management Core Competencies",
+      "slug": "construction-management-core-competencies"
+    }
+  },
+  "game_sets": [
+    {
+      "theme": "Construction Management Core Competencies",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "CPM",
+              "FLOAT",
+              "CRASHING",
+              "FAST-TRACKING"
+            ],
+            "category": "Schedule Control Techniques",
+            "color": "blue",
+            "url": "https://www.pmi.org/learning/library/schedule-compression-techniques-9927",
+            "description": "Methods used to manage and compress construction project schedules",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.projectmanagement.com/articles/scheduling"
+            ],
+            "theme": "Construction Management Core Competencies",
+            "group_item_id": "d0bca8",
+            "group_set_id": "341543"
+          },
+          {
+            "words": [
+              "EVM",
+              "CPI",
+              "BAC",
+              "EAC"
+            ],
+            "category": "Earned Value Metrics",
+            "color": "green",
+            "url": "https://www.pmi.org/learning/library/earned-value-management-6001",
+            "description": "Key performance indicators used in earned value management to track cost and schedule",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://www.projectmanagement.com/articles/evm"
+            ],
+            "theme": "Construction Management Core Competencies",
+            "group_item_id": "06dd57",
+            "group_set_id": "341543"
+          },
+          {
+            "words": [
+              "NCR",
+              "ITP",
+              "HOLD POINT",
+              "PUNCH LIST"
+            ],
+            "category": "Quality Control Tools",
+            "color": "orange",
+            "url": "https://www.iso.org/standard/62085.html",
+            "description": "Quality management instruments used to track and resolve defects on construction sites",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.constructionqualityassociation.com"
+            ],
+            "theme": "Construction Management Core Competencies",
+            "group_item_id": "720ef1",
+            "group_set_id": "341543"
+          },
+          {
+            "words": [
+              "RAMS",
+              "PTW",
+              "LOTO",
+              "RIDDOR"
+            ],
+            "category": "Site Safety Documents & Regulations",
+            "color": "red",
+            "url": "https://www.hse.gov.uk/construction/",
+            "description": "Formal safety instruments and legal frameworks governing hazard control on construction sites",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://www.hse.gov.uk/riddor/"
+            ],
+            "theme": "Construction Management Core Competencies",
+            "group_item_id": "87021d",
+            "group_set_id": "341543"
+          }
+        ],
+        [
+          {
+            "words": [
+              "GMP",
+              "RETAINAGE",
+              "FIDIC",
+              "LIQUIDATED DAMAGES"
+            ],
+            "category": "Contract Administration Terms",
+            "color": "purple",
+            "url": "https://www.fidic.org/node/26",
+            "description": "Key contractual concepts in construction project delivery and dispute resolution",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://www.nec.uk.com/",
+              "https://constructionblog.autodesk.com"
+            ],
+            "theme": "Construction Management Core Competencies",
+            "group_item_id": "40f41b",
+            "group_set_id": "5b0b4f"
+          },
+          {
+            "words": [
+              "PROCORE",
+              "ACONEX",
+              "PRIMAVERA P6",
+              "NAVISWORKS"
+            ],
+            "category": "Construction Software Platforms",
+            "color": "teal",
+            "url": "https://construction.autodesk.com/solutions/construction-software/",
+            "description": "Digital tools widely used by construction managers for scheduling, document control, and BIM coordination",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.oracle.com/construction-engineering/primavera-p6/"
+            ],
+            "theme": "Construction Management Core Competencies",
+            "group_item_id": "f9424e",
+            "group_set_id": "5b0b4f"
+          },
+          {
+            "words": [
+              "MONTE CARLO",
+              "RISK REGISTER",
+              "MITIGATION",
+              "CONTINGENCY"
+            ],
+            "category": "Risk Management Techniques",
+            "color": "indigo",
+            "url": "https://www.pmi.org/learning/library/risk-management-techniques-9932",
+            "description": "Structured approaches to identifying, quantifying and responding to construction project risks",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://www.riba.org/"
+            ],
+            "theme": "Construction Management Core Competencies",
+            "group_item_id": "272ae9",
+            "group_set_id": "5b0b4f"
+          },
+          {
+            "words": [
+              "DEWATERING",
+              "FALSEWORK",
+              "SHORING",
+              "PILING"
+            ],
+            "category": "Temporary Works & Ground Engineering",
+            "color": "yellow",
+            "url": "https://www.ciria.org/Resources/Free_publications/Temporary_works.aspx",
+            "description": "Temporary works and geotechnical methods used to enable safe construction below or at ground level",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://www.ice.org.uk/"
+            ],
+            "theme": "Construction Management Core Competencies",
+            "group_item_id": "0a3e38",
+            "group_set_id": "5b0b4f"
+          }
+        ]
+      ],
+      "game_set_id": "6bbf13"
+    }
+  ]
+}

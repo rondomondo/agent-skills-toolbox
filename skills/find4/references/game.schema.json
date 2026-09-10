@@ -1,0 +1,56 @@
+{
+    "metadata": {
+        "generated_at": "<ISO_TIMESTAMP>",
+        "source": "<source_identifier>",
+        "suggested_name": "<slug-based-filename>.json"
+    },
+    "game_sets": [
+        {
+            "theme": "Overall theme describing the analyzed content",
+            "group_sets": [
+                [
+                    {
+                        "words": ["WORD1", "WORD2", "WORD3", "WORD4"],
+                        "category": "Category Name",
+                        "color": "red",
+                        "url": "https://relevant-url.example.com",
+                        "description": "Brief description of what connects these words",
+                        "skill_level": "<skill_level>",
+                        "additional_sources": ["https://source1.example.com", "https://source2.example.com"],
+                        "theme": "Overall theme (same as parent game_set.theme)"
+                    },
+                    {
+                        "words": ["WORD5", "WORD6", "WORD7", "WORD8"],
+                        "category": "Category Name",
+                        "color": "blue",
+                        "url": "https://relevant-url.example.com",
+                        "description": "Brief description of what connects these words",
+                        "skill_level": "<skill_level>",
+                        "additional_sources": ["https://source1.example.com", "https://source2.example.com"],
+                        "theme": "Overall theme (same as parent game_set.theme)"
+                    },
+                    {
+                        "words": ["WORD9", "WORD10", "WORD11", "WORD12"],
+                        "category": "Category Name",
+                        "color": "green",
+                        "url": "https://relevant-url.example.com",
+                        "description": "Brief description of what connects these words",
+                        "skill_level": "<skill_level>",
+                        "additional_sources": ["https://source1.example.com", "https://source2.example.com"],
+                        "theme": "Overall theme (same as parent game_set.theme)"
+                    },
+                    {
+                        "words": ["WORD13", "WORD14", "WORD15", "WORD16"],
+                        "category": "Category Name",
+                        "color": "yellow",
+                        "url": "https://relevant-url.example.com",
+                        "description": "Brief description of what connects these words",
+                        "skill_level": "<skill_level>",
+                        "additional_sources": ["https://source1.example.com", "https://source2.example.com"],
+                        "theme": "Overall theme (same as parent game_set.theme)"
+                    }
+                ]
+            ]
+        }
+    ]
+}

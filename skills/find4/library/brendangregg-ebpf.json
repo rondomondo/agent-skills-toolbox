@@ -1,0 +1,372 @@
+{
+  "metadata": {
+    "generated_at": "2026-09-10T00:00:00Z",
+    "source": "https://www.brendangregg.com/ebpf.html",
+    "suggested_name": "brendangregg-ebpf.json",
+    "modified_at": "2026-09-10T16:52:04.078784",
+    "source_id": "https://www.brendangregg.com/ebpf.html",
+    "step": "finalize_metadata",
+    "id_registry": {
+      "group_set_ids": [
+        "81f000",
+        "95f90d",
+        "9cf538",
+        "dd42ce"
+      ],
+      "game_set_ids": [
+        "d8ab0f",
+        "51cbe0"
+      ],
+      "group_item_ids": [
+        "610064",
+        "a96732",
+        "a1ac9e",
+        "53038c",
+        "469a78",
+        "7db949",
+        "7b3173",
+        "f9fcd5",
+        "ea6ca6",
+        "3de338",
+        "5d369a",
+        "adde70",
+        "3af8b3",
+        "a23d7a",
+        "a298ac",
+        "618f93"
+      ]
+    },
+    "id": "GlbEbQy4rUrnkW_k",
+    "split_info": {
+      "role": "combined",
+      "split_at": "2026-09-10T16:52:10.994136+00:00",
+      "source_file": "/home/claude/output/games/brendangregg-ebpf.json"
+    }
+  },
+  "game_sets": [
+    {
+      "theme": "eBPF Tracing Tools and Concepts",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "execsnoop",
+              "opensnoop",
+              "biolatency",
+              "tcpconnect"
+            ],
+            "category": "BCC Tracing Tools",
+            "color": "blue",
+            "url": "https://www.brendangregg.com/ebpf.html",
+            "description": "Command-line tools from the BCC toolkit that trace kernel and user-space events using eBPF programs",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://github.com/iovisor/bcc"
+            ],
+            "theme": "eBPF Tracing Tools and Concepts",
+            "group_item_id": "610064",
+            "group_set_id": "81f000"
+          },
+          {
+            "words": [
+              "kprobes",
+              "uprobes",
+              "tracepoints",
+              "USDT"
+            ],
+            "category": "eBPF Attachment Types",
+            "color": "red",
+            "url": "https://www.brendangregg.com/ebpf.html",
+            "description": "Kernel and user-space instrumentation mechanisms that eBPF programs can attach to for dynamic tracing",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://www.kernel.org/doc/html/latest/trace/kprobes.html"
+            ],
+            "theme": "eBPF Tracing Tools and Concepts",
+            "group_item_id": "a96732",
+            "group_set_id": "81f000"
+          },
+          {
+            "words": [
+              "bpftrace",
+              "BCC",
+              "ply",
+              "libbpf"
+            ],
+            "category": "eBPF Programming Frameworks",
+            "color": "green",
+            "url": "https://www.brendangregg.com/ebpf.html",
+            "description": "High-level frameworks and libraries used to write, compile and load eBPF programs without raw kernel API access",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://github.com/iovisor/bpftrace"
+            ],
+            "theme": "eBPF Tracing Tools and Concepts",
+            "group_item_id": "a1ac9e",
+            "group_set_id": "81f000"
+          },
+          {
+            "words": [
+              "maps",
+              "perf_events",
+              "ringbuf",
+              "arrays"
+            ],
+            "category": "eBPF Data Structures",
+            "color": "yellow",
+            "url": "https://www.brendangregg.com/ebpf.html",
+            "description": "Kernel-side data structures that eBPF programs use to store, aggregate and communicate results to user space",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://docs.kernel.org/bpf/maps.html"
+            ],
+            "theme": "eBPF Tracing Tools and Concepts",
+            "group_item_id": "53038c",
+            "group_set_id": "81f000"
+          }
+        ],
+        [
+          {
+            "words": [
+              "CPU",
+              "memory",
+              "disk",
+              "network"
+            ],
+            "category": "Performance Resource Categories",
+            "color": "teal",
+            "url": "https://www.brendangregg.com/ebpf.html",
+            "description": "The four primary system resource domains that eBPF-based performance tools observe and measure",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://www.brendangregg.com/usemethod.html"
+            ],
+            "theme": "eBPF Tracing Tools and Concepts",
+            "group_item_id": "469a78",
+            "group_set_id": "95f90d"
+          },
+          {
+            "words": [
+              "flame graphs",
+              "heat maps",
+              "latency histograms",
+              "frequency trails"
+            ],
+            "category": "Performance Visualisation Techniques",
+            "color": "orange",
+            "url": "https://www.brendangregg.com/ebpf.html",
+            "description": "Visualisation methods used with eBPF-captured profiling and tracing data to identify bottlenecks",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.brendangregg.com/flamegraphs.html"
+            ],
+            "theme": "eBPF Tracing Tools and Concepts",
+            "group_item_id": "7db949",
+            "group_set_id": "95f90d"
+          },
+          {
+            "words": [
+              "verifier",
+              "JIT",
+              "BTF",
+              "CO-RE"
+            ],
+            "category": "eBPF Runtime Components",
+            "color": "purple",
+            "url": "https://www.brendangregg.com/ebpf.html",
+            "description": "Kernel subsystems that validate, compile and enable portable eBPF programs to run safely at near-native speed",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://docs.kernel.org/bpf/verifier.html"
+            ],
+            "theme": "eBPF Tracing Tools and Concepts",
+            "group_item_id": "7b3173",
+            "group_set_id": "95f90d"
+          },
+          {
+            "words": [
+              "syscalls",
+              "scheduler",
+              "TCP",
+              "block I/O"
+            ],
+            "category": "Kernel Subsystems Traceable with eBPF",
+            "color": "indigo",
+            "url": "https://www.brendangregg.com/ebpf.html",
+            "description": "Core kernel subsystems that eBPF tracing tools instrument to diagnose latency, errors and resource contention",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://www.brendangregg.com/ebpf.html"
+            ],
+            "theme": "eBPF Tracing Tools and Concepts",
+            "group_item_id": "f9fcd5",
+            "group_set_id": "95f90d"
+          }
+        ]
+      ],
+      "game_set_id": "d8ab0f"
+    },
+    {
+      "theme": "eBPF Architecture and Observability",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "runqlat",
+              "cpudist",
+              "offcputime",
+              "profile"
+            ],
+            "category": "CPU Performance Tools",
+            "color": "red",
+            "url": "https://www.brendangregg.com/ebpf.html",
+            "description": "BCC/bpftrace tools that measure CPU scheduler latency, on-CPU time distribution and off-CPU blocking",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://github.com/iovisor/bcc/blob/master/tools/runqlat.py"
+            ],
+            "theme": "eBPF Architecture and Observability",
+            "group_item_id": "ea6ca6",
+            "group_set_id": "9cf538"
+          },
+          {
+            "words": [
+              "biosnoop",
+              "biotop",
+              "bitesize",
+              "blk_account_io"
+            ],
+            "category": "Block I/O Tracing Tools",
+            "color": "blue",
+            "url": "https://www.brendangregg.com/ebpf.html",
+            "description": "eBPF-based tools and tracepoints for observing disk I/O latency, size distributions and per-process activity",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://github.com/iovisor/bcc/blob/master/tools/biosnoop.py"
+            ],
+            "theme": "eBPF Architecture and Observability",
+            "group_item_id": "3de338",
+            "group_set_id": "9cf538"
+          },
+          {
+            "words": [
+              "tcplife",
+              "tcpretrans",
+              "tcptop",
+              "tcpaccept"
+            ],
+            "category": "Network TCP Observability Tools",
+            "color": "green",
+            "url": "https://www.brendangregg.com/ebpf.html",
+            "description": "eBPF tools that trace TCP connection lifecycle, retransmits, throughput and accept events",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://github.com/iovisor/bcc/blob/master/tools/tcplife.py"
+            ],
+            "theme": "eBPF Architecture and Observability",
+            "group_item_id": "5d369a",
+            "group_set_id": "9cf538"
+          },
+          {
+            "words": [
+              "memleak",
+              "slabtop",
+              "oomkill",
+              "shmsnoop"
+            ],
+            "category": "Memory Analysis Tools",
+            "color": "yellow",
+            "url": "https://www.brendangregg.com/ebpf.html",
+            "description": "eBPF tools that detect memory leaks, slab allocations, OOM kill events and shared memory access",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://github.com/iovisor/bcc/blob/master/tools/memleak.py"
+            ],
+            "theme": "eBPF Architecture and Observability",
+            "group_item_id": "adde70",
+            "group_set_id": "9cf538"
+          }
+        ],
+        [
+          {
+            "words": [
+              "XDP",
+              "tc",
+              "sockmap",
+              "cgroup"
+            ],
+            "category": "eBPF Networking Hook Points",
+            "color": "purple",
+            "url": "https://www.brendangregg.com/ebpf.html",
+            "description": "Kernel network hook types where eBPF programs can intercept, filter and redirect packets at different layers",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://docs.cilium.io/en/stable/reference/bpf/"
+            ],
+            "theme": "eBPF Architecture and Observability",
+            "group_item_id": "3af8b3",
+            "group_set_id": "dd42ce"
+          },
+          {
+            "words": [
+              "safety",
+              "sandboxed",
+              "no kernel crash",
+              "bytecode"
+            ],
+            "category": "eBPF Safety Properties",
+            "color": "teal",
+            "url": "https://www.brendangregg.com/ebpf.html",
+            "description": "Key properties that make eBPF safe to run in production - programs are verified before loading and cannot crash the kernel",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://ebpf.io/what-is-ebpf/"
+            ],
+            "theme": "eBPF Architecture and Observability",
+            "group_item_id": "a23d7a",
+            "group_set_id": "dd42ce"
+          },
+          {
+            "words": [
+              "bpf_probe_read",
+              "bpf_map_lookup_elem",
+              "bpf_ktime_get_ns",
+              "bpf_trace_printk"
+            ],
+            "category": "eBPF Helper Functions",
+            "color": "orange",
+            "url": "https://www.brendangregg.com/ebpf.html",
+            "description": "Kernel helper functions callable from eBPF programs to read memory safely, access maps and emit trace output",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://man7.org/linux/man-pages/man7/bpf-helpers.7.html"
+            ],
+            "theme": "eBPF Architecture and Observability",
+            "group_item_id": "a298ac",
+            "group_set_id": "dd42ce"
+          },
+          {
+            "words": [
+              "DTrace",
+              "SystemTap",
+              "perf",
+              "ftrace"
+            ],
+            "category": "Pre-eBPF Tracing Predecessors",
+            "color": "indigo",
+            "url": "https://www.brendangregg.com/ebpf.html",
+            "description": "Earlier dynamic tracing systems that eBPF superseded or complemented - each had significant limitations in safety or portability",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.brendangregg.com/dtrace.html"
+            ],
+            "theme": "eBPF Architecture and Observability",
+            "group_item_id": "618f93",
+            "group_set_id": "dd42ce"
+          }
+        ]
+      ],
+      "game_set_id": "51cbe0"
+    }
+  ]
+}

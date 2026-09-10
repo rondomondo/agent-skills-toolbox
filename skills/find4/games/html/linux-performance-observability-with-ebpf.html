@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find4 &mdash; Linux Performance Observability with eBPF</title>
+
+    <meta name="description" content="A Advanced-level Find4 word-grouping game on &#x27;Linux Performance Observability with eBPF&#x27;. 2 rounds, 32 words. Find the hidden connections between groups of 4.">
+    <meta name="keywords" content="Linux Performance Observability with eBPF, TCP Network Tracing Tools, bpftrace Map Functions, Kernel Dynamic Probe Types, Latency &amp; Profiling Tools, eBPF Helper Functions, User-Space Tracing Probes, eBPF Build &amp; Runtime Requirements, Non-Observability eBPF Uses">
+    <meta name="author" content="Find4">
+    <meta name="theme-color" content="#0f6e56">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://find4.org/#game=zVhhbyI3EP0rFh-qVmVDILkQ-EaA3KFwgIC0d9dGyLvrXVy8tmt7k9BT_ntnvAshuUTKHUitFAWza4_H897MG_O1kjFHY-popf21kjLJDHUsXlBXaVcax42z4LgV1I_n9Ub7-Bj-vlSqFatyEzF4v3RO23atdnd3dxQaJmMqU8PS9ChSWY2FOjlaukzgijxNmUW7kma4El8GztCIyzRwSgkblAaCwsJfVklYmKmYJ_wlf87ap632cf2o3mjWW62tVwsef5djjmmYn3BJBf-HLbbBqFZ4vIAl3Dqz9qEBxxeWOdjAVtp_VBgLT-pJ5aZaSY3K9e6r5lkYNd-BCXZCT9-dPs7hjmWbSccn7-IY_a5H56fnIQximrCTMxyErXoLXYiazaiJc2gEliIYNFrnZ8k5DE5aYZOxys0DOgonkOv6YLq6H3dHYXP2W45TrBYcfJKJQv-NEhh4_3D78pWoto5Ozk9breavHnKYrSkE0S1e26l8nXC_RW2pMlaLBM1jVlO507mrYfRs7a2ouyXzLBlymd-TCTOJMhmVESPj0DJzS0MO3q_JHXdLwi4ml3ggkaewROCSQD8uCdTukgCXBOhH5QFCtwEVEfn6Q9tuwUcTYONOmQLfeXcy7c-nndEMZsGXTrfbn8yL8XBw2S9Gvel4gvyIIOlShUzDp2TEHBhakXkRKzLHWCEhlFAG5oQiZ_A1N-J7yB4zGxmuHYcgg40oIh4DkqgotywmShK32RCciJSULMLZRPCERetIMMJuAWlL_swbx_VTYhgskDbjzlaJptbyW0ZoFDGND54ZsBqmVgmVMYmN0hp21DRaYegAvhUXYiHAPB5pIB0zGYs5hAXpH8cczVCxKLLcR3hz7hTgyEN_Wq5uuVWmBmfDqP44oGWmwtptnu6mOTwvk_yhuoP5h8EMER6Wn93x9Qg_Z_POfPYMZYAFY83IR6rJZS59mHYhBgiZ3BvjzS4Z1YFWOhfUIbxhzgUMSLLZGDhgiM2zjBpucQYWwTbR6o6ZQCVBgyyhEqrU0KwKYEpGze4TzwrAO5euANg62Mg6Hlnyc8ZlLaP3NXqb_vIN0p34FgGJfwjl8nSHgnpbid8A9dVkOr7AJL6CLN-OL69H3fKZHz7F_IoZyQTprUEEeUQmRoWMzNea7eJufCwOg7r2OzjcwQNMnaPREuF1iqwKbzYUIICgWXvwIKtzIzc5DlDCxiYmK2_O-ikQbiIZkINAKIOQYvlYoSlyCwyi8oWc7t9DVXb_B5y3QvsGnAHay8EQwUVAh515f9T9DN8uBvP-bPAFX_Q_zU9nw_Hv_ekzvIcwlNGa_IRQgzi-VMkV1M_0oLXckIxRmxvcTZQeIGR640ObdCfXJBGgfQTSVy-JpZnGN9VHNpQrqyQUKlqRQW1MLDRIJMaGiIc5TipTXag7gtJv19BNZURpbCH5o5h8w4QLaKtAGcx_XNm3bdYrNLip7uo52Fj4PF9M-50eMgAeXM0HH_uL9_35wss8PhqO3zeG5Rjkv9uHVYPR_OoZN9An8oEJCNaL5V_nRou9eVFUnMDymGGikmWx4WPZ97qPQQIx8C4BS7Ck2zaQIgHdYBn4CxWBxiDdkkplGcg6FAAODZ0D3sBjodIGSApKOZIOKbjVho3gszBPwTiX7iVG7FEbDseHbbf9jA9lF_-kLFzPeqjs15vKf72jAhed2QfkyHAw6j9D_Rp8CWYaa_OmtfMqsIu8Y1Tsi_tkp_Bj-Cmge49JznyZ8BBtWr0cfbLep0jFrF1od0SFWANscDMChmzmagUAAqRxKWFPxaNWCkehEwXwIA1LsAuNhYxfLQh7NQGHI8D2lvUGAgwHF4WRYhDMx-MhloDZVX_oW7_R5eD9AovA7POs2xkOX8r_C2jDYpCHKfRNkE9kyv7OuYGDFPq5YQSXMU_Vvpzoqkwr6bt3U-wTYxsQeh-87OeSwH0bSkZRCrygtL3UCx6CXdLFgaEGZMGumGAOkF9CaWDGku1PByQxKvPVRoV_QftfEgHNlC0HFJCEpyAUJXVo6KURl4CGIPPsQShSeF1-HIok2xv4G0jSHQwH1x9h7qfeBLnRG8H_Xm_8_DIwUjJ46oEHAKrFLg3WTIDU7ksDb5lq0PuIFhoQsrV6TE7oDsCFPPM1ojMZBPQObvfQ7PkbqW8S2CdtmLWkB3cEMqEQq6Lkp8vdi3d5ucNqABBZv9KqxKG5YFNYds0iS-BeAWWnXIm3RG-611MzApdMnnqX97suRv54R1wdihHlTzGvMuLmprr76xG-KX47erh5-Bc=">
+    <meta property="og:title" content="Linux Performance Observability with eBPF">
+    <meta property="og:description" content="Test your knowledge on Linux Performance Observability with eBPF. 2 rounds, 32 words.">
+    <meta property="og:image" content="https://find4.org/preview-image.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Linux Performance Observability with eBPF">
+    <meta name="twitter:description" content="Advanced-level challenge covering Linux Performance Observability with eBPF.">
+    <meta name="twitter:image" content="https://find4.org/preview-image.png">
+
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "EducationalOccupationalCredential",
+  "name": "Linux Performance Observability with eBPF",
+  "educationalLevel": "Advanced",
+  "abstract": "Covers concepts including: TCP Network Tracing Tools, bpftrace Map Functions, Kernel Dynamic Probe Types, Latency & Profiling Tools."
+}
+    </script>
+
+    <style>
+        body{font-family:system-ui,-apple-system,sans-serif;max-width:720px;margin:2rem auto;padding:0 1rem;background:#f5f5f3;color:#111;}
+        .f4-game{background:#fff;border:0.5px solid rgba(0,0,0,0.15);border-radius:12px;padding:1rem 1.25rem;margin-bottom:48px;box-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1);}
+        .f4-game-header{display:flex;align-items:center;gap:10px;margin-bottom:1rem;flex-wrap:wrap;}
+        .f4-game-icon{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:20px;}
+        .f4-game-title-block{flex:1;min-width:0;}
+        .f4-game-title{font-size:15px;font-weight:500;margin:0;color:#111;}
+        .f4-game-meta{font-size:12px;color:#666;margin:0;}
+        .play-btn{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;background:#0f6e56;color:#fff;border-radius:10px;text-decoration:none;font-size:13px;font-weight:500;margin-left:auto;transition:background 0.2s;}
+        .play-btn:hover{background:#085041;}
+        .f4-groups{display:flex;flex-direction:column;gap:5px;}
+        .f4-round{font-size:11px;font-weight:500;color:#888;padding:8px 0 3px;text-transform:uppercase;letter-spacing:0.05em;}
+        .f4-group{display:grid;grid-template-columns:13px 1fr 90px 2fr;align-items:start;gap:8px;padding:8px 10px;border-radius:8px;border:0.5px solid #e0e0de;background:#fafaf9;}
+        .f4-dot{width:11px;height:11px;border-radius:50%;flex-shrink:0;margin-top:3px;}
+        .f4-cat{font-size:13px;font-weight:500;line-height:1.3;}
+        .f4-skill{font-size:11px;padding:2px 7px;border-radius:20px;text-align:center;white-space:nowrap;}
+        .f4-words{font-size:11px;color:#666;line-height:1.5;word-break:break-word;}
+        .sk-b{background:#e1f5ee;color:#085041;}.sk-i{background:#e6f1fb;color:#0c447c;}.sk-a{background:#faeeda;color:#633806;}.sk-e{background:#fcebeb;color:#791f1f;}
+        .dot-red{background:#e24b4a;}.dot-green{background:#639922;}.dot-blue{background:#378add;}.dot-yellow{background:#ba7517;}
+        .dot-purple{background:#7f77dd;}.dot-teal{background:#1d9e75;}.dot-orange{background:#d85a30;}.dot-indigo{background:#534ab7;}
+        @media(prefers-color-scheme:dark){
+          body{background:#1a1a18;color:#e8e6e1;}
+          .f4-game{background:#2c2c2a;border-color:rgba(255,255,255,0.1);box-shadow:0 4px 6px -1px rgb(0 0 0 / 0.4);}
+          .f4-game-title{color:#e8e6e1;}
+          .f4-game-meta{color:#888780;}
+          .f4-round{color:#888780;}
+          .f4-group{background:#222220;border-color:#3a3a38;}
+          .f4-cat{color:#e8e6e1;}
+          .f4-words{color:#888780;}
+          .sk-b{background:#04342c;color:#9fe1cb;}.sk-i{background:#042c53;color:#b5d4f4;}.sk-a{background:#412402;color:#fac775;}.sk-e{background:#501313;color:#f7c1c1;}
+        }
+    </style>
+</head>
+<body>
+<div class="f4-game f4-capture">
+  <div class="f4-game-header">
+    <div class="f4-game-icon" style="background:#eeedfe;" aria-hidden="true">&#x1F9E9;</div>
+    <div class="f4-game-title-block">
+      <h1 class="f4-game-title">Linux Performance Observability with eBPF</h1>
+      <p class="f4-game-meta">2 rounds &middot; 32 words &middot; Advanced level</p>
+    </div>
+    <a class="play-btn" href="https://find4.org/#game=zVhhbyI3EP0rFh-qVmVDILkQ-EaA3KFwgIC0d9dGyLvrXVy8tmt7k9BT_ntnvAshuUTKHUitFAWza4_H897MG_O1kjFHY-popf21kjLJDHUsXlBXaVcax42z4LgV1I_n9Ub7-Bj-vlSqFatyEzF4v3RO23atdnd3dxQaJmMqU8PS9ChSWY2FOjlaukzgijxNmUW7kma4El8GztCIyzRwSgkblAaCwsJfVklYmKmYJ_wlf87ap632cf2o3mjWW62tVwsef5djjmmYn3BJBf-HLbbBqFZ4vIAl3Dqz9qEBxxeWOdjAVtp_VBgLT-pJ5aZaSY3K9e6r5lkYNd-BCXZCT9-dPs7hjmWbSccn7-IY_a5H56fnIQximrCTMxyErXoLXYiazaiJc2gEliIYNFrnZ8k5DE5aYZOxys0DOgonkOv6YLq6H3dHYXP2W45TrBYcfJKJQv-NEhh4_3D78pWoto5Ozk9breavHnKYrSkE0S1e26l8nXC_RW2pMlaLBM1jVlO507mrYfRs7a2ouyXzLBlymd-TCTOJMhmVESPj0DJzS0MO3q_JHXdLwi4ml3ggkaewROCSQD8uCdTukgCXBOhH5QFCtwEVEfn6Q9tuwUcTYONOmQLfeXcy7c-nndEMZsGXTrfbn8yL8XBw2S9Gvel4gvyIIOlShUzDp2TEHBhakXkRKzLHWCEhlFAG5oQiZ_A1N-J7yB4zGxmuHYcgg40oIh4DkqgotywmShK32RCciJSULMLZRPCERetIMMJuAWlL_swbx_VTYhgskDbjzlaJptbyW0ZoFDGND54ZsBqmVgmVMYmN0hp21DRaYegAvhUXYiHAPB5pIB0zGYs5hAXpH8cczVCxKLLcR3hz7hTgyEN_Wq5uuVWmBmfDqP44oGWmwtptnu6mOTwvk_yhuoP5h8EMER6Wn93x9Qg_Z_POfPYMZYAFY83IR6rJZS59mHYhBgiZ3BvjzS4Z1YFWOhfUIbxhzgUMSLLZGDhgiM2zjBpucQYWwTbR6o6ZQCVBgyyhEqrU0KwKYEpGze4TzwrAO5euANg62Mg6Hlnyc8ZlLaP3NXqb_vIN0p34FgGJfwjl8nSHgnpbid8A9dVkOr7AJL6CLN-OL69H3fKZHz7F_IoZyQTprUEEeUQmRoWMzNea7eJufCwOg7r2OzjcwQNMnaPREuF1iqwKbzYUIICgWXvwIKtzIzc5DlDCxiYmK2_O-ikQbiIZkINAKIOQYvlYoSlyCwyi8oWc7t9DVXb_B5y3QvsGnAHay8EQwUVAh515f9T9DN8uBvP-bPAFX_Q_zU9nw_Hv_ekzvIcwlNGa_IRQgzi-VMkV1M_0oLXckIxRmxvcTZQeIGR640ObdCfXJBGgfQTSVy-JpZnGN9VHNpQrqyQUKlqRQW1MLDRIJMaGiIc5TipTXag7gtJv19BNZURpbCH5o5h8w4QLaKtAGcx_XNm3bdYrNLip7uo52Fj4PF9M-50eMgAeXM0HH_uL9_35wss8PhqO3zeG5Rjkv9uHVYPR_OoZN9An8oEJCNaL5V_nRou9eVFUnMDymGGikmWx4WPZ97qPQQIx8C4BS7Ck2zaQIgHdYBn4CxWBxiDdkkplGcg6FAAODZ0D3sBjodIGSApKOZIOKbjVho3gszBPwTiX7iVG7FEbDseHbbf9jA9lF_-kLFzPeqjs15vKf72jAhed2QfkyHAw6j9D_Rp8CWYaa_OmtfMqsIu8Y1Tsi_tkp_Bj-Cmge49JznyZ8BBtWr0cfbLep0jFrF1od0SFWANscDMChmzmagUAAqRxKWFPxaNWCkehEwXwIA1LsAuNhYxfLQh7NQGHI8D2lvUGAgwHF4WRYhDMx-MhloDZVX_oW7_R5eD9AovA7POs2xkOX8r_C2jDYpCHKfRNkE9kyv7OuYGDFPq5YQSXMU_Vvpzoqkwr6bt3U-wTYxsQeh-87OeSwH0bSkZRCrygtL3UCx6CXdLFgaEGZMGumGAOkF9CaWDGku1PByQxKvPVRoV_QftfEgHNlC0HFJCEpyAUJXVo6KURl4CGIPPsQShSeF1-HIok2xv4G0jSHQwH1x9h7qfeBLnRG8H_Xm_8_DIwUjJ46oEHAKrFLg3WTIDU7ksDb5lq0PuIFhoQsrV6TE7oDsCFPPM1ojMZBPQObvfQ7PkbqW8S2CdtmLWkB3cEMqEQq6Lkp8vdi3d5ucNqABBZv9KqxKG5YFNYds0iS-BeAWWnXIm3RG-611MzApdMnnqX97suRv54R1wdihHlTzGvMuLmprr76xG-KX47erh5-Bc=" target="_blank" rel="noopener"><span>&#9654;</span> Play on find4.org</a>
+  </div>
+
+  <div class="f4-groups">
+    <h2 class="f4-round">Round 1</h2>
+    <div class="f4-group">
+        <div class="f4-dot dot-blue" role="img" aria-label="Intermediate Level Category"></div>
+        <div class="f4-cat">TCP Network Tracing Tools</div>
+        <span class="f4-skill sk-i">Intermediate</span>
+        <div class="f4-words">TCPRETRANS &middot; TCPACCEPT &middot; TCPLIFE &middot; TCPDROP</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-green" role="img" aria-label="Advanced Level Category"></div>
+        <div class="f4-cat">bpftrace Map Functions</div>
+        <span class="f4-skill sk-a">Advanced</span>
+        <div class="f4-words">HIST &middot; LHIST &middot; COUNT &middot; STATS</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-red" role="img" aria-label="Expert Level Category"></div>
+        <div class="f4-cat">Kernel Dynamic Probe Types</div>
+        <span class="f4-skill sk-e">Expert</span>
+        <div class="f4-words">KPROBE &middot; KRETPROBE &middot; KFUNC &middot; KRETFUNC</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-orange" role="img" aria-label="Beginner Level Category"></div>
+        <div class="f4-cat">Latency &amp; Profiling Tools</div>
+        <span class="f4-skill sk-b">Beginner</span>
+        <div class="f4-words">PROFILE &middot; FUNCLATENCY &middot; BITESIZE &middot; EXT4SLOWER</div>
+    </div>
+    <h2 class="f4-round">Round 2</h2>
+    <div class="f4-group">
+        <div class="f4-dot dot-purple" role="img" aria-label="Expert Level Category"></div>
+        <div class="f4-cat">eBPF Helper Functions</div>
+        <span class="f4-skill sk-e">Expert</span>
+        <div class="f4-words">BPF_PROBE_READ &middot; BPF_KTIME_GET_NS &middot; BPF_LOG2L &middot; BPF_TRACE_PRINTK</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-teal" role="img" aria-label="Advanced Level Category"></div>
+        <div class="f4-cat">User-Space Tracing Probes</div>
+        <span class="f4-skill sk-a">Advanced</span>
+        <div class="f4-words">USDT &middot; UPROBE &middot; URETPROBE &middot; BASHREADLINE</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-indigo" role="img" aria-label="Advanced Level Category"></div>
+        <div class="f4-cat">eBPF Build &amp; Runtime Requirements</div>
+        <span class="f4-skill sk-a">Advanced</span>
+        <div class="f4-words">LIBBPF &middot; LIBBPF-TOOLS &middot; SKEL &middot; CONFIG_BPF_SYSCALL</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-yellow" role="img" aria-label="Intermediate Level Category"></div>
+        <div class="f4-cat">Non-Observability eBPF Uses</div>
+        <span class="f4-skill sk-i">Intermediate</span>
+        <div class="f4-words">CILIUM &middot; XDP &middot; SDN &middot; DDOS</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

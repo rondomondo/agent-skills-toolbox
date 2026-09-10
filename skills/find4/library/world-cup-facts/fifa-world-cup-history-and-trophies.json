@@ -1,0 +1,202 @@
+{
+  "metadata": {
+    "generated_at": "2026-09-07T10:00:00Z",
+    "source": "stdin",
+    "suggested_name": "world-cup-facts.json",
+    "modified_at": "2026-09-07T19:18:59.291266",
+    "source_id": "stdin",
+    "step": "finalize_metadata",
+    "id_registry": {
+      "game_set_ids": [
+        "e19f5f"
+      ],
+      "group_set_ids": [
+        "eef14a",
+        "de5671"
+      ],
+      "group_item_ids": [
+        "2c968a",
+        "363562",
+        "afdba5",
+        "d78e7a",
+        "386413",
+        "83f77c",
+        "0c492d",
+        "920bdb"
+      ]
+    },
+    "id": "TDyThGvzLwY5Febq",
+    "split_info": {
+      "role": "split",
+      "split_at": "2026-09-07T19:19:08.429206+00:00",
+      "parent_id": "TDyThGvzLwY5Febq",
+      "parent_file": "/output/games/world-cup-facts.json",
+      "theme": "FIFA World Cup History and Trophies",
+      "slug": "fifa-world-cup-history-and-trophies"
+    }
+  },
+  "game_sets": [
+    {
+      "theme": "FIFA World Cup History and Trophies",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "LINEKER",
+              "SCHILLACI",
+              "MBAPPE",
+              "RONALDO"
+            ],
+            "category": "Golden Boot Winners",
+            "color": "yellow",
+            "url": "https://www.fifa.com/fifaplus/en/articles/world-cup-golden-boot-winners",
+            "description": "Gary Lineker (1986, 6 goals), Salvatore Schillaci (1990), Kylian Mbappe (2022, 8 goals), Ronaldo (2002) — the top scorers of their tournaments",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/FIFA_World_Cup_Golden_Boot"
+            ],
+            "theme": "FIFA World Cup History and Trophies",
+            "group_item_id": "2c968a",
+            "group_set_id": "eef14a"
+          },
+          {
+            "words": [
+              "GAZZANIGA",
+              "JULES_RIMET",
+              "NIKE_GODDESS",
+              "SIX_KILOGRAMS"
+            ],
+            "category": "The World Cup Trophy",
+            "color": "red",
+            "url": "https://www.fifa.com/fifaplus/en/articles/fifa-world-cup-trophy",
+            "description": "Silvio Gazzaniga designed the current trophy, Jules Rimet was the original trophy, Nike (Greek goddess) was depicted on it, current trophy weighs 6.1 kg",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/FIFA_World_Cup_Trophy"
+            ],
+            "theme": "FIFA World Cup History and Trophies",
+            "group_item_id": "363562",
+            "group_set_id": "eef14a"
+          },
+          {
+            "words": [
+              "DESCHAMPS",
+              "BECKENBAUER",
+              "CAFU",
+              "MALDINI"
+            ],
+            "category": "Players Who Won as Both Player and Manager / Unique Achievements",
+            "color": "blue",
+            "url": "https://www.fifa.com/fifaplus/en/articles/world-cup-managers",
+            "description": "Didier Deschamps and Franz Beckenbauer won as player and manager; Cafu appeared in three consecutive finals; Maldini's World Cup career spanned decades",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/Franz_Beckenbauer"
+            ],
+            "theme": "FIFA World Cup History and Trophies",
+            "group_item_id": "afdba5",
+            "group_set_id": "eef14a"
+          },
+          {
+            "words": [
+              "VUVUZELA",
+              "AZTECA",
+              "MARACANA",
+              "SEVEN_ONE"
+            ],
+            "category": "Iconic World Cup Moments and Venues",
+            "color": "green",
+            "url": "https://www.fifa.com/fifaplus/en/articles/world-cup-memorable-moments",
+            "description": "The vuvuzela horn of 2010 South Africa, Azteca hosted two finals, Maracana hosted the 1950 final, Germany's 7-1 demolition of Brazil in 2014",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_semi-finals"
+            ],
+            "theme": "FIFA World Cup History and Trophies",
+            "group_item_id": "d78e7a",
+            "group_set_id": "eef14a"
+          }
+        ],
+        [
+          {
+            "words": [
+              "USA_BEAT_ENGLAND",
+              "NORTH_KOREA_1966",
+              "SENEGAL_2002",
+              "ALGERIA_1982"
+            ],
+            "category": "Greatest World Cup Upsets",
+            "color": "purple",
+            "url": "https://www.fifa.com/fifaplus/en/articles/world-cup-upsets",
+            "description": "USA 1-0 England (1950), North Korea beat Italy (1966 group stage), Senegal reached 2002 quarterfinals, Algeria beat West Germany 2-1 (1982)",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/1950_FIFA_World_Cup_Group_2"
+            ],
+            "theme": "FIFA World Cup History and Trophies",
+            "group_item_id": "386413",
+            "group_set_id": "de5671"
+          },
+          {
+            "words": [
+              "PELE_1958",
+              "WHITESIDE_1982",
+              "FABREGAS_2006",
+              "ETO_O_1998"
+            ],
+            "category": "Teenage World Cup Stars",
+            "color": "teal",
+            "url": "https://www.fifa.com/fifaplus/en/articles/youngest-world-cup-players",
+            "description": "Pelé (17 years, 1958 winner), Norman Whiteside (youngest ever at 17y 41d), Cesc Fabregas (youngest in Spain squad), Samuel Eto'o debuted at 17",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/Norman_Whiteside"
+            ],
+            "theme": "FIFA World Cup History and Trophies",
+            "group_item_id": "83f77c",
+            "group_set_id": "de5671"
+          },
+          {
+            "words": [
+              "WEST_GERMANY_1982",
+              "ITALY_2006",
+              "FRANCE_2006",
+              "ARGENTINA_1994"
+            ],
+            "category": "World Cup Finals Decided by Penalties",
+            "color": "orange",
+            "url": "https://www.fifa.com/fifaplus/en/articles/world-cup-penalty-shootouts",
+            "description": "First World Cup shootout (West Germany vs France 1982 semi-final), Italy beat France on pens in 2006 final, France lost 2006, Argentina lost 1990 and 1994 finals on pens",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/FIFA_World_Cup_penalty_shootouts"
+            ],
+            "theme": "FIFA World Cup History and Trophies",
+            "group_item_id": "0c492d",
+            "group_set_id": "de5671"
+          },
+          {
+            "words": [
+              "ROGER_MILLA",
+              "INIESTA",
+              "MATTHAUS",
+              "CARBAJAL"
+            ],
+            "category": "Enduring World Cup Legends",
+            "color": "indigo",
+            "url": "https://www.fifa.com/fifaplus/en/articles/world-cup-legends",
+            "description": "Roger Milla's corner-flag dances (1990), Andres Iniesta scored the 2010 final winner, Lothar Matthaus played 25 World Cup matches, Antonio Carbajal played 5 consecutive World Cups",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/Andres_Iniesta"
+            ],
+            "theme": "FIFA World Cup History and Trophies",
+            "group_item_id": "920bdb",
+            "group_set_id": "de5671"
+          }
+        ]
+      ],
+      "game_set_id": "e19f5f"
+    }
+  ]
+}

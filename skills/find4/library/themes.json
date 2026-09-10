@@ -1,0 +1,918 @@
+[
+  {
+    "game_set_id": "6bbf13",
+    "theme": "Construction Management Core Competencies",
+    "short_path": "games/construction-management-core-competencies.json",
+    "short_link": "ff-ee240d72",
+    "games_file": "construction-management-core-competencies.json",
+    "config_file": "library/construction-management-competencies/construction-management-core-competencies.json",
+    "last_modified": "2026-09-10T17:05:14.004181",
+    "content_hash": "4261c3099fa1af07d605b9fb02ccccec1edc6a29e9aa277afbcab75378f50488",
+    "total_words": 32,
+    "categories": [
+      "Construction Software Platforms",
+      "Contract Administration Terms",
+      "Earned Value Metrics",
+      "Quality Control Tools",
+      "Risk Management Techniques",
+      "Schedule Control Techniques",
+      "Site Safety Documents & Regulations",
+      "Temporary Works & Ground Engineering"
+    ],
+    "skill_levels": [
+      "Advanced",
+      "Beginner",
+      "Expert",
+      "Intermediate"
+    ],
+    "colors": [
+      "blue",
+      "green",
+      "indigo",
+      "orange",
+      "purple",
+      "red",
+      "teal",
+      "yellow"
+    ],
+    "group_sets_count": 2,
+    "total_groups": 8,
+    "versions_found": 1,
+    "is_latest": true,
+    "metadata": {
+      "generated_at": "2026-09-08T00:00:00Z",
+      "source": "stdin",
+      "suggested_name": "construction-management-competencies.json"
+    }
+  },
+  {
+    "game_set_id": "3bb628",
+    "theme": "Construction Management: Procurement, Leadership & Compliance",
+    "short_path": "games/construction-management-procurement-leadership-and-compliance.json",
+    "short_link": "ff-31f758c1",
+    "games_file": "construction-management-procurement-leadership-and-compliance.json",
+    "config_file": "library/construction-management-competencies/construction-management-procurement-leadership-and-compliance.json",
+    "last_modified": "2026-09-10T17:05:14.004181",
+    "content_hash": "65c77bdad58794c5d91fe5bb6a7074c833d8ca65f0a73ca83e3a7a980609dbde",
+    "total_words": 32,
+    "categories": [
+      "Cost Estimating Methods",
+      "Emerging Digital Construction Tech",
+      "Leadership Behaviours",
+      "Planning & Scheduling Artefacts",
+      "Procurement Process Steps",
+      "Project Closeout Activities",
+      "Regulatory & Legal Compliance",
+      "Stakeholder Management Tools"
+    ],
+    "skill_levels": [
+      "Advanced",
+      "Beginner",
+      "Expert",
+      "Intermediate"
+    ],
+    "colors": [
+      "blue",
+      "green",
+      "indigo",
+      "orange",
+      "purple",
+      "red",
+      "teal",
+      "yellow"
+    ],
+    "group_sets_count": 2,
+    "total_groups": 8,
+    "versions_found": 1,
+    "is_latest": true,
+    "metadata": {
+      "generated_at": "2026-09-08T00:00:00Z",
+      "source": "stdin",
+      "suggested_name": "construction-management-competencies.json"
+    }
+  },
+  {
+    "game_set_id": "e425e9",
+    "theme": "Equine Vet Strengths: Clinical & Emergency",
+    "short_path": "games/equine-vet-strengths-clinical-and-emergency.json",
+    "short_link": "ff-257383cf",
+    "games_file": "equine-vet-strengths-clinical-and-emergency.json",
+    "config_file": "library/equine-vet-strengths/equine-vet-strengths-clinical-and-emergency.json",
+    "last_modified": "2026-09-10T17:05:14.004181",
+    "content_hash": "8f6f39d993d68d63478e5869b68bbe86ad88f0f02f8de1694c9652a38ab001de",
+    "total_words": 32,
+    "categories": [
+      "Diagnostic Tools",
+      "Difficult Client Conversations",
+      "Equine Dentistry",
+      "Equine Emergencies",
+      "Equine Reproduction",
+      "Physical & Personal Attributes",
+      "Physical Examination Techniques",
+      "Veterinary Technology Skills"
+    ],
+    "skill_levels": [
+      "Advanced",
+      "Beginner",
+      "Expert",
+      "Intermediate"
+    ],
+    "colors": [
+      "blue",
+      "green",
+      "indigo",
+      "orange",
+      "purple",
+      "red",
+      "teal",
+      "yellow"
+    ],
+    "group_sets_count": 2,
+    "total_groups": 8,
+    "versions_found": 1,
+    "is_latest": true,
+    "metadata": {
+      "generated_at": "2026-09-08T10:00:00Z",
+      "source": "stdin",
+      "suggested_name": "equine-vet-strengths.json"
+    }
+  },
+  {
+    "game_set_id": "8f0a6d",
+    "theme": "Equine Vet Strengths: Knowledge & Professionalism",
+    "short_path": "games/equine-vet-strengths-knowledge-and-professionalism.json",
+    "short_link": "ff-71805d3d",
+    "games_file": "equine-vet-strengths-knowledge-and-professionalism.json",
+    "config_file": "library/equine-vet-strengths/equine-vet-strengths-knowledge-and-professionalism.json",
+    "last_modified": "2026-09-10T17:05:14.004181",
+    "content_hash": "0210572c66d2de501ba2eb934179267298fd0b3c394bc714f689ddb66c5d3318",
+    "total_words": 32,
+    "categories": [
+      "Breed-Specific Knowledge",
+      "Diagnostic Reasoning",
+      "Equine Disciplines",
+      "Equine Nutrition",
+      "Field Surgical Procedures",
+      "Musculoskeletal & Hoof Health",
+      "Parasite Management",
+      "Professional Responsibilities"
+    ],
+    "skill_levels": [
+      "Advanced",
+      "Beginner",
+      "Expert",
+      "Intermediate"
+    ],
+    "colors": [
+      "blue",
+      "green",
+      "indigo",
+      "orange",
+      "purple",
+      "red",
+      "teal",
+      "yellow"
+    ],
+    "group_sets_count": 2,
+    "total_groups": 8,
+    "versions_found": 1,
+    "is_latest": true,
+    "metadata": {
+      "generated_at": "2026-09-08T10:00:00Z",
+      "source": "stdin",
+      "suggested_name": "equine-vet-strengths.json"
+    }
+  },
+  {
+    "game_set_id": "28f7dd",
+    "theme": "Etsy: The Human Marketplace",
+    "short_path": "games/etsy-the-human-marketplace.json",
+    "short_link": "ff-dad8ec9c",
+    "games_file": "etsy-the-human-marketplace.json",
+    "config_file": "library/etsy-marketplace-concepts/etsy-the-human-marketplace.json",
+    "last_modified": "2026-09-10T17:05:14.004181",
+    "content_hash": "88eb8088efc900b6457ccfd5817d207bced7b2ab0978a02ffc7eb5b91793627c",
+    "total_words": 32,
+    "categories": [
+      "Etsy Brand Values",
+      "Etsy Buyer Features",
+      "Etsy Corporate Sections",
+      "Etsy Ecosystem Roles",
+      "Etsy Guiding Principles",
+      "Etsy Item Types",
+      "Etsy Seller Support",
+      "Etsy Social Channels"
+    ],
+    "skill_levels": [
+      "Advanced",
+      "Beginner",
+      "Expert",
+      "Intermediate"
+    ],
+    "colors": [
+      "blue",
+      "green",
+      "indigo",
+      "orange",
+      "purple",
+      "red",
+      "teal",
+      "yellow"
+    ],
+    "group_sets_count": 2,
+    "total_groups": 8,
+    "versions_found": 1,
+    "is_latest": true,
+    "metadata": {
+      "generated_at": "2026-09-07T00:00:00Z",
+      "source": "https://www.etsy.com/ie/about",
+      "suggested_name": "etsy-marketplace-concepts.json"
+    }
+  },
+  {
+    "game_set_id": "a87d52",
+    "theme": "Event-Driven Architecture",
+    "short_path": "games/event-driven-architecture.json",
+    "short_link": "ff-fd940460",
+    "games_file": "event-driven-architecture.json",
+    "config_file": "library/event-driven-architecture/event-driven-architecture.json",
+    "last_modified": "2026-09-10T17:05:14.004181",
+    "content_hash": "d2a10673bd5166a7d9d101ac030cdc49c76494661a568d20dd4b5bcd7b758af0",
+    "total_words": 32,
+    "categories": [
+      "Alternatives to EDA",
+      "E-Commerce Service Example",
+      "EDA Case Studies",
+      "EDA Reliability Properties",
+      "EDA Use Case Domains",
+      "Event Schema Management",
+      "Kafka Consumer Mechanics",
+      "Real-Time Streaming Concepts"
+    ],
+    "skill_levels": [
+      "Advanced",
+      "Beginner",
+      "Expert",
+      "Intermediate"
+    ],
+    "colors": [
+      "blue",
+      "green",
+      "indigo",
+      "orange",
+      "purple",
+      "red",
+      "teal",
+      "yellow"
+    ],
+    "group_sets_count": 2,
+    "total_groups": 8,
+    "versions_found": 1,
+    "is_latest": true,
+    "metadata": {
+      "generated_at": "2026-09-07T00:00:00Z",
+      "source": "https://www.hellointerview.com/blog/event-driven-architecture",
+      "suggested_name": "event-driven-architecture.json"
+    }
+  },
+  {
+    "game_set_id": "24e8d0",
+    "theme": "FIFA World Cup Records and Legends",
+    "short_path": "games/fifa-world-cup-records-and-legends.json",
+    "short_link": "ff-6232afa3",
+    "games_file": "fifa-world-cup-records-and-legends.json",
+    "config_file": "library/world-cup-facts/fifa-world-cup-records-and-legends.json",
+    "last_modified": "2026-09-10T17:05:14.004181",
+    "content_hash": "00ebc72cbf8b96cdff73c9d897fa104d568f1cb0eaeeb8a5ed0a09e60d4d5501",
+    "total_words": 32,
+    "categories": [
+      "All-Time World Cup Top Scorers",
+      "England's 1966 World Cup Heroes",
+      "Famous World Cup Controversies",
+      "Golden Ball Winners",
+      "Historic Host Nations",
+      "Legendary World Cup Goalkeepers",
+      "Multi-Time World Cup Winners",
+      "Obscure World Cup Record Holders"
+    ],
+    "skill_levels": [
+      "Advanced",
+      "Beginner",
+      "Expert",
+      "Intermediate"
+    ],
+    "colors": [
+      "blue",
+      "green",
+      "indigo",
+      "orange",
+      "purple",
+      "red",
+      "teal",
+      "yellow"
+    ],
+    "group_sets_count": 2,
+    "total_groups": 8,
+    "versions_found": 1,
+    "is_latest": true,
+    "metadata": {
+      "generated_at": "2026-09-07T10:00:00Z",
+      "source": "stdin",
+      "suggested_name": "world-cup-facts.json"
+    }
+  },
+  {
+    "game_set_id": "171586",
+    "theme": "GPU Networking and LLM Parallelism",
+    "short_path": "games/gpu-networking-and-llm-parallelism.json",
+    "short_link": "ff-dd50da29",
+    "games_file": "gpu-networking-and-llm-parallelism.json",
+    "config_file": "library/gpu-scaling-book/gpu-networking-and-llm-parallelism.json",
+    "last_modified": "2026-09-10T17:05:14.004181",
+    "content_hash": "02e241504a47265f3942b9d963dd91f361d10725fe43d9280b39cd3984835c93",
+    "total_words": 32,
+    "categories": [
+      "DGX H100 Network Hierarchy Levels",
+      "Data-Centre Network Topology Terms",
+      "Distributed Collective Operations",
+      "Distributed Training Libraries and Systems",
+      "GPU Interconnect Technologies",
+      "LLM Parallelism Strategies",
+      "Pipeline Parallelism Scheduling Concepts",
+      "Real-World LLM Training Examples"
+    ],
+    "skill_levels": [
+      "Advanced",
+      "Expert",
+      "Intermediate"
+    ],
+    "colors": [
+      "blue",
+      "green",
+      "indigo",
+      "orange",
+      "purple",
+      "red",
+      "teal",
+      "yellow"
+    ],
+    "group_sets_count": 2,
+    "total_groups": 8,
+    "versions_found": 1,
+    "is_latest": true,
+    "metadata": {
+      "generated_at": "2026-09-07T12:00:00Z",
+      "source": "https://jax-ml.github.io/scaling-book/gpus/",
+      "suggested_name": "gpu-scaling-book.json"
+    }
+  },
+  {
+    "game_set_id": "788fe7",
+    "theme": "LLM Evaluation: Types and Methods",
+    "short_path": "games/llm-evaluation-types-and-methods.json",
+    "short_link": "ff-5f4f034e",
+    "games_file": "llm-evaluation-types-and-methods.json",
+    "config_file": "library/llm-evaluation-types-and-evals/llm-evaluation-types-and-methods.json",
+    "last_modified": "2026-09-10T17:05:14.009217",
+    "content_hash": "7d8604a84e19c9fc8e241774f033c631883405c43a1815d91351c2d4e3f318a8",
+    "total_words": 32,
+    "categories": [
+      "Agent Evaluation Signals",
+      "Eval Frameworks & Tools",
+      "Eval Quality Assurance",
+      "Eval Testing Strategies",
+      "Production Eval Signals",
+      "Prompting Eval Techniques",
+      "RAG-Specific Evals",
+      "Scoring Method Types"
+    ],
+    "skill_levels": [
+      "Advanced",
+      "Beginner",
+      "Expert",
+      "Intermediate"
+    ],
+    "colors": [
+      "blue",
+      "green",
+      "indigo",
+      "orange",
+      "purple",
+      "red",
+      "teal",
+      "yellow"
+    ],
+    "group_sets_count": 2,
+    "total_groups": 8,
+    "versions_found": 1,
+    "is_latest": true,
+    "metadata": {
+      "generated_at": "2026-09-07T00:00:00Z",
+      "source": "stdin",
+      "suggested_name": "llm-evaluation-types-and-evals.json"
+    }
+  },
+  {
+    "game_set_id": "7a8f2f",
+    "theme": "LLM Hardware and Architecture Deep Dive",
+    "short_path": "games/llm-hardware-and-architecture-deep-dive.json",
+    "short_link": "ff-f26f9c3d",
+    "games_file": "llm-hardware-and-architecture-deep-dive.json",
+    "config_file": "library/jax-scaling-book-llm-systems/llm-hardware-and-architecture-deep-dive.json",
+    "last_modified": "2026-09-10T17:05:14.009217",
+    "content_hash": "20d31035fb1dc66c0390c6bba45e7af29971b11b1f70a7b6bd2c5f7274e6fbba",
+    "total_words": 32,
+    "categories": [
+      "Chip Interconnect Technologies",
+      "Hardware Binding Regimes",
+      "Inference Optimisation Methods",
+      "JAX Compilation Abstractions",
+      "Large Language Model Families",
+      "TPU Compute Architecture",
+      "Training State Components",
+      "Transformer Elementwise Ops"
+    ],
+    "skill_levels": [
+      "Advanced",
+      "Beginner",
+      "Expert",
+      "Intermediate"
+    ],
+    "colors": [
+      "blue",
+      "green",
+      "indigo",
+      "orange",
+      "purple",
+      "red",
+      "teal",
+      "yellow"
+    ],
+    "group_sets_count": 2,
+    "total_groups": 8,
+    "versions_found": 1,
+    "is_latest": true,
+    "metadata": {
+      "generated_at": "2025-09-07T20:30:00Z",
+      "source": "https://jax-ml.github.io/scaling-book/#high-level-outline",
+      "suggested_name": "jax-scaling-book-llm-systems.json"
+    }
+  },
+  {
+    "game_set_id": "eeb31f",
+    "theme": "Linux Performance Observability with eBPF",
+    "short_path": "games/linux-performance-observability-with-ebpf.json",
+    "short_link": "ff-8f573843",
+    "games_file": "linux-performance-observability-with-ebpf.json",
+    "config_file": "library/ebpf-tracing-tools-brendan-gregg/linux-performance-observability-with-ebpf.json",
+    "last_modified": "2026-09-10T17:05:14.241850",
+    "content_hash": "944c7b60d99e2bef644950080340f5d8d38951861d660a1299b8b61e0b33398e",
+    "total_words": 32,
+    "categories": [
+      "Kernel Dynamic Probe Types",
+      "Latency & Profiling Tools",
+      "Non-Observability eBPF Uses",
+      "TCP Network Tracing Tools",
+      "User-Space Tracing Probes",
+      "bpftrace Map Functions",
+      "eBPF Build & Runtime Requirements",
+      "eBPF Helper Functions"
+    ],
+    "skill_levels": [
+      "Advanced",
+      "Beginner",
+      "Expert",
+      "Intermediate"
+    ],
+    "colors": [
+      "blue",
+      "green",
+      "indigo",
+      "orange",
+      "purple",
+      "red",
+      "teal",
+      "yellow"
+    ],
+    "group_sets_count": 2,
+    "total_groups": 8,
+    "versions_found": 1,
+    "is_latest": true,
+    "metadata": {
+      "generated_at": "2026-09-10T12:00:00Z",
+      "source": "https://www.brendangregg.com/ebpf.html",
+      "suggested_name": "ebpf-tracing-tools-brendan-gregg.json"
+    }
+  },
+  {
+    "game_set_id": "9da791",
+    "theme": "Linux Process Memory Metrics",
+    "short_path": "games/linux-process-memory-metrics.json",
+    "short_link": "ff-b50c3ef5",
+    "games_file": "linux-process-memory-metrics.json",
+    "config_file": "library/linux-memory-metrics-vsz-rss-pss/linux-process-memory-metrics.json",
+    "last_modified": "2026-09-10T17:05:14.009217",
+    "content_hash": "cedc93290a0ab8e73c5667a1c7359eb168bf2885b50173a6f563f80bdcff7c1f",
+    "total_words": 32,
+    "categories": [
+      "Accurate Accounting Tools",
+      "Modern Memory Complexity",
+      "PSS History Milestones",
+      "Physical Memory Consumers",
+      "Physical RAM Occupancy",
+      "Shared Library & Mapping Mechanics",
+      "Virtual Memory Concepts",
+      "smaps Page Categories"
+    ],
+    "skill_levels": [
+      "Advanced",
+      "Beginner",
+      "Expert",
+      "Intermediate"
+    ],
+    "colors": [
+      "blue",
+      "green",
+      "indigo",
+      "orange",
+      "purple",
+      "red",
+      "teal",
+      "yellow"
+    ],
+    "group_sets_count": 2,
+    "total_groups": 8,
+    "versions_found": 1,
+    "is_latest": true,
+    "metadata": {
+      "generated_at": "2026-09-07T00:00:00Z",
+      "source": "https://kernel-internals.org/mm/virtual-physical-resident/",
+      "suggested_name": "linux-memory-metrics-vsz-rss-pss.json"
+    }
+  },
+  {
+    "game_set_id": "05f422",
+    "theme": "Observability Frameworks: RED, USE & Four Golden Signals",
+    "short_path": "games/observability-frameworks-red-use-and-four-golden-signals.json",
+    "short_link": "ff-155d0fed",
+    "games_file": "observability-frameworks-red-use-and-four-golden-signals.json",
+    "config_file": "library/observability-frameworks-red-use-golden-signals/observability-frameworks-red-use-and-four-golden-signals.json",
+    "last_modified": "2026-09-10T17:05:14.009217",
+    "content_hash": "256a05fea1fb52ce75cba851e6470f58bfa57de3073fd34a0d05dfaa76f1715a",
+    "total_words": 32,
+    "categories": [
+      "Distributed Service Topology",
+      "Latency Measurement",
+      "Observability Outputs",
+      "Observability Pillars",
+      "Observability Tooling",
+      "Prometheus Metric Types",
+      "SRE Reliability Metrics",
+      "Saturation Signals"
+    ],
+    "skill_levels": [
+      "Advanced",
+      "Beginner",
+      "Intermediate"
+    ],
+    "colors": [
+      "blue",
+      "green",
+      "indigo",
+      "orange",
+      "purple",
+      "red",
+      "teal",
+      "yellow"
+    ],
+    "group_sets_count": 2,
+    "total_groups": 8,
+    "versions_found": 1,
+    "is_latest": true,
+    "metadata": {
+      "generated_at": "2026-09-07T00:00:00Z",
+      "source": "stdin",
+      "suggested_name": "observability-frameworks-red-use-golden-signals.json"
+    }
+  },
+  {
+    "game_set_id": "da75bc",
+    "theme": "Scaling LLMs on Hardware: Systems Concepts",
+    "short_path": "games/scaling-llms-on-hardware-systems-concepts.json",
+    "short_link": "ff-54c6a4cd",
+    "games_file": "scaling-llms-on-hardware-systems-concepts.json",
+    "config_file": "library/jax-scaling-book-llm-systems/scaling-llms-on-hardware-systems-concepts.json",
+    "last_modified": "2026-09-10T17:05:14.009217",
+    "content_hash": "b848a5aed3dde0c481d74171bf5161d9e8618f057a16d861c0c47572277cb62a",
+    "total_words": 32,
+    "categories": [
+      "Collective Communication Ops",
+      "LLM Inference Phases",
+      "Memory Hierarchy Levels",
+      "Parallelism Strategies",
+      "Performance Analysis Terms",
+      "Performance Metrics",
+      "Tensor Distribution Techniques",
+      "Transformer Sub-Layers"
+    ],
+    "skill_levels": [
+      "Advanced",
+      "Beginner",
+      "Intermediate"
+    ],
+    "colors": [
+      "blue",
+      "green",
+      "indigo",
+      "orange",
+      "purple",
+      "red",
+      "teal",
+      "yellow"
+    ],
+    "group_sets_count": 2,
+    "total_groups": 8,
+    "versions_found": 1,
+    "is_latest": true,
+    "metadata": {
+      "generated_at": "2025-09-07T20:30:00Z",
+      "source": "https://jax-ml.github.io/scaling-book/#high-level-outline",
+      "suggested_name": "jax-scaling-book-llm-systems.json"
+    }
+  },
+  {
+    "game_set_id": "0254e3",
+    "theme": "Transformer Architecture and FLOP Counting",
+    "short_path": "games/transformer-architecture-and-flop-counting.json",
+    "short_link": "ff-14d5ac48",
+    "games_file": "transformer-architecture-and-flop-counting.json",
+    "config_file": "library/transformer-math-scaling/transformer-architecture-and-flop-counting.json",
+    "last_modified": "2026-09-10T17:05:14.021217",
+    "content_hash": "25920f6f66798627e907b76fb327c963c7dd831b5be38d35afb0c711d7b675db",
+    "total_words": 32,
+    "categories": [
+      "Attention head variants",
+      "Flash Attention mechanisms",
+      "Gradient checkpointing strategies",
+      "LLM inference phases and structures",
+      "Matmul dimension types",
+      "Mixture-of-Experts components",
+      "Training pass components",
+      "Transformer normalisation patterns"
+    ],
+    "skill_levels": [
+      "Advanced",
+      "Beginner",
+      "Expert",
+      "Intermediate"
+    ],
+    "colors": [
+      "blue",
+      "green",
+      "indigo",
+      "orange",
+      "purple",
+      "red",
+      "teal",
+      "yellow"
+    ],
+    "group_sets_count": 2,
+    "total_groups": 8,
+    "versions_found": 1,
+    "is_latest": true,
+    "metadata": {
+      "generated_at": "2026-09-07T00:00:00Z",
+      "source": "https://jax-ml.github.io/scaling-book/transformers/",
+      "suggested_name": "transformer-math-scaling.json"
+    }
+  },
+  {
+    "game_set_id": "6c0ac0",
+    "theme": "Transformer Parameters, Arithmetic and Scaling Laws",
+    "short_path": "games/transformer-parameters-arithmetic-and-scaling-laws.json",
+    "short_link": "ff-229bdf94",
+    "games_file": "transformer-parameters-arithmetic-and-scaling-laws.json",
+    "config_file": "library/transformer-math-scaling/transformer-parameters-arithmetic-and-scaling-laws.json",
+    "last_modified": "2026-09-10T17:05:14.021217",
+    "content_hash": "0ccdcd771e917f674d930826fdfa6456027c46d825bf1a46703929effdc6bf9f",
+    "total_words": 32,
+    "categories": [
+      "Attention masking approaches",
+      "Attention projection matrices",
+      "Hardware performance model terms",
+      "MoE collective communication ops",
+      "Numeric precision formats in LLM training",
+      "Output layer components",
+      "Rematerialisation checkpointing strategies",
+      "Scaling law quantities"
+    ],
+    "skill_levels": [
+      "Advanced",
+      "Beginner",
+      "Expert",
+      "Intermediate"
+    ],
+    "colors": [
+      "blue",
+      "green",
+      "indigo",
+      "orange",
+      "purple",
+      "red",
+      "teal",
+      "yellow"
+    ],
+    "group_sets_count": 2,
+    "total_groups": 8,
+    "versions_found": 1,
+    "is_latest": true,
+    "metadata": {
+      "generated_at": "2026-09-07T00:00:00Z",
+      "source": "https://jax-ml.github.io/scaling-book/transformers/",
+      "suggested_name": "transformer-math-scaling.json"
+    }
+  },
+  {
+    "game_set_id": "51cbe0",
+    "theme": "eBPF Architecture and Observability",
+    "short_path": "games/ebpf-architecture-and-observability.json",
+    "short_link": "ff-93cf4694",
+    "games_file": "ebpf-architecture-and-observability.json",
+    "config_file": "library/brendangregg-ebpf/ebpf-architecture-and-observability.json",
+    "last_modified": "2026-09-10T17:05:14.159430",
+    "content_hash": "7692844fd0a82f3c49373eef768bf6b4521a8eb49ccb7d6136674b1838f21937",
+    "total_words": 32,
+    "categories": [
+      "Block I/O Tracing Tools",
+      "CPU Performance Tools",
+      "Memory Analysis Tools",
+      "Network TCP Observability Tools",
+      "Pre-eBPF Tracing Predecessors",
+      "eBPF Helper Functions",
+      "eBPF Networking Hook Points",
+      "eBPF Safety Properties"
+    ],
+    "skill_levels": [
+      "Advanced",
+      "Beginner",
+      "Expert",
+      "Intermediate"
+    ],
+    "colors": [
+      "blue",
+      "green",
+      "indigo",
+      "orange",
+      "purple",
+      "red",
+      "teal",
+      "yellow"
+    ],
+    "group_sets_count": 2,
+    "total_groups": 8,
+    "versions_found": 1,
+    "is_latest": true,
+    "metadata": {
+      "generated_at": "2026-09-10T00:00:00Z",
+      "source": "https://www.brendangregg.com/ebpf.html",
+      "suggested_name": "brendangregg-ebpf.json"
+    }
+  },
+  {
+    "game_set_id": "8ea23b",
+    "theme": "eBPF Tracing Tools and Concepts",
+    "short_path": "games/ebpf-tracing-tools-and-concepts.json",
+    "short_link": "ff-73fc156f",
+    "games_file": "ebpf-tracing-tools-and-concepts.json",
+    "config_file": "library/ebpf-tracing-tools-brendan-gregg/ebpf-tracing-tools-and-concepts.json",
+    "last_modified": "2026-09-10T17:05:14.215664",
+    "content_hash": "9a58e5e93a4e60017fa59f676a26603270c79bdc18042ff3158d186b8d9a0eae",
+    "total_words": 32,
+    "categories": [
+      "BCC Multi-Tools",
+      "BCC Single-Purpose Tools",
+      "System Observability Tools",
+      "bpftrace Builtin Variables",
+      "eBPF Event Sources",
+      "eBPF Front-End Tools",
+      "eBPF Kernel Data Structures",
+      "eBPF Runtime Internals"
+    ],
+    "skill_levels": [
+      "Advanced",
+      "Beginner",
+      "Expert",
+      "Intermediate"
+    ],
+    "colors": [
+      "blue",
+      "green",
+      "indigo",
+      "orange",
+      "purple",
+      "red",
+      "teal",
+      "yellow"
+    ],
+    "group_sets_count": 2,
+    "total_groups": 8,
+    "versions_found": 1,
+    "is_latest": true,
+    "metadata": {
+      "generated_at": "2026-09-10T12:00:00Z",
+      "source": "https://www.brendangregg.com/ebpf.html",
+      "suggested_name": "ebpf-tracing-tools-brendan-gregg.json"
+    }
+  },
+  {
+    "game_set_id": "016e3d",
+    "theme": "vLLM Architecture & Production AI Inference",
+    "short_path": "games/vllm-architecture-and-production-ai-inference.json",
+    "short_link": "ff-6b72bef9",
+    "games_file": "vllm-architecture-and-production-ai-inference.json",
+    "config_file": "library/vllm-inference-serving/vllm-architecture-and-production-ai-inference.json",
+    "last_modified": "2026-09-10T17:05:14.021217",
+    "content_hash": "37c89f750241e5f28a62bb8e80f7cc314ed1e0cfaa844d9f4e32bd524ca77d36",
+    "total_words": 32,
+    "categories": [
+      "Consumers of LLM Serving Infrastructure",
+      "GPU Memory Concepts in LLM Serving",
+      "LLM Inference Internals",
+      "LLM Inference Serving Frameworks",
+      "LLM Runtime Terminology",
+      "Scaling LLM Inference Beyond One GPU",
+      "vLLM Benchmark Results",
+      "vLLM Open Source Provenance"
+    ],
+    "skill_levels": [
+      "Advanced",
+      "Beginner",
+      "Expert",
+      "Intermediate"
+    ],
+    "colors": [
+      "blue",
+      "green",
+      "indigo",
+      "orange",
+      "purple",
+      "red",
+      "teal",
+      "yellow"
+    ],
+    "group_sets_count": 2,
+    "total_groups": 8,
+    "versions_found": 1,
+    "is_latest": true,
+    "metadata": {
+      "generated_at": "2026-09-07T10:00:00Z",
+      "source": "https://www.redhat.com/en/blog/meet-vllm-faster-more-efficient-llm-inference-and-serving",
+      "suggested_name": "vllm-inference-serving.json"
+    }
+  },
+  {
+    "game_set_id": "f2ed89",
+    "theme": "vLLM: Faster LLM Inference & Serving",
+    "short_path": "games/vllm-faster-llm-inference-and-serving.json",
+    "short_link": "ff-589d65f1",
+    "games_file": "vllm-faster-llm-inference-and-serving.json",
+    "config_file": "library/vllm-inference-serving/vllm-faster-llm-inference-and-serving.json",
+    "last_modified": "2026-09-10T17:05:14.021217",
+    "content_hash": "0d4476d490725c00b5391d01894c2b99b76350f16948a4d1583c220338f6ee6c",
+    "total_words": 32,
+    "categories": [
+      "Batching Strategies in LLM Serving",
+      "Getting Started with vLLM",
+      "Hardware Optimization Techniques",
+      "LLM Architectures Supported by vLLM",
+      "LLM Serving Performance Metrics",
+      "Traditional LLM Serving Challenges",
+      "vLLM Deployment & Integration Frameworks",
+      "vLLM Memory Management Concepts"
+    ],
+    "skill_levels": [
+      "Advanced",
+      "Beginner",
+      "Intermediate"
+    ],
+    "colors": [
+      "blue",
+      "green",
+      "indigo",
+      "orange",
+      "purple",
+      "red",
+      "teal",
+      "yellow"
+    ],
+    "group_sets_count": 2,
+    "total_groups": 8,
+    "versions_found": 1,
+    "is_latest": true,
+    "metadata": {
+      "generated_at": "2026-09-07T10:00:00Z",
+      "source": "https://www.redhat.com/en/blog/meet-vllm-faster-more-efficient-llm-inference-and-serving",
+      "suggested_name": "vllm-inference-serving.json"
+    }
+  }
+]

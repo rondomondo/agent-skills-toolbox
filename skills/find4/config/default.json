@@ -1,0 +1,1001 @@
+{
+  "metadata": {
+    "generated_at": "2026-09-08T14:18:04",
+    "library_version": "2026-09-08T14:18:04",
+    "trigger": "manual",
+    "source": "yy/themes.json",
+    "game_set_count": 6,
+    "missing_count": 0,
+    "source_hashes": {
+      "28f7dd": "88eb8088efc900b6457ccfd5817d207bced7b2ab0978a02ffc7eb5b91793627c",
+      "24e8d0": "00ebc72cbf8b96cdff73c9d897fa104d568f1cb0eaeeb8a5ed0a09e60d4d5501",
+      "788fe7": "7d8604a84e19c9fc8e241774f033c631883405c43a1815d91351c2d4e3f318a8",
+      "9da791": "cedc93290a0ab8e73c5667a1c7359eb168bf2885b50173a6f563f80bdcff7c1f",
+      "05f422": "256a05fea1fb52ce75cba851e6470f58bfa57de3073fd34a0d05dfaa76f1715a",
+      "016e3d": "37c89f750241e5f28a62bb8e80f7cc314ed1e0cfaa844d9f4e32bd524ca77d36"
+    },
+    "content_hash": "92aed2d9bef5d1b8f0a88eced6d5efb3bebf0e737802da9e04fa72b0a27d7e23",
+    "metadata_fingerprint": "1e59baa837f62950"
+  },
+  "game_sets": [
+    {
+      "theme": "Etsy: The Human Marketplace",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "HANDMADE",
+              "VINTAGE",
+              "UNIQUE",
+              "ARTISAN"
+            ],
+            "category": "Etsy Item Types",
+            "color": "orange",
+            "url": "https://www.etsy.com/ie/about",
+            "description": "The four types of goods that define what's sold on Etsy — all centred on human creativity and curation",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://www.etsy.com/ie/sell"
+            ],
+            "theme": "Etsy: The Human Marketplace",
+            "group_item_id": "48abe1",
+            "group_set_id": "f923bf"
+          },
+          {
+            "words": [
+              "CRAFT",
+              "OPTIMISM",
+              "CURIOSITY",
+              "SUSTAINABILITY"
+            ],
+            "category": "Etsy Guiding Principles",
+            "color": "teal",
+            "url": "https://www.etsy.com/ie/about",
+            "description": "Core values that Etsy commits to: craft, minimising waste (sustainability), embracing differences (curiosity), and leading with optimism",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.etsy.com/ie/impact"
+            ],
+            "theme": "Etsy: The Human Marketplace",
+            "group_item_id": "9fb301",
+            "group_set_id": "f923bf"
+          },
+          {
+            "words": [
+              "SELLERS",
+              "BUYERS",
+              "COMMUNITY",
+              "MARKETPLACE"
+            ],
+            "category": "Etsy Ecosystem Roles",
+            "color": "blue",
+            "url": "https://www.etsy.com/ie/about",
+            "description": "The four pillars of the Etsy ecosystem — creative sellers, shoppers, their collective community, and the platform itself",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://www.etsy.com/ie/sell"
+            ],
+            "theme": "Etsy: The Human Marketplace",
+            "group_item_id": "f78043",
+            "group_set_id": "f923bf"
+          },
+          {
+            "words": [
+              "JOURNAL",
+              "REGISTRY",
+              "EDITORS",
+              "GIFTCARDS"
+            ],
+            "category": "Etsy Buyer Features",
+            "color": "purple",
+            "url": "https://www.etsy.com/ie/about",
+            "description": "Tools and content features Etsy provides to help buyers discover, plan, and gift — from curated editorial to wish lists",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://blog.etsy.com/en/",
+              "https://www.etsy.com/ie/registry"
+            ],
+            "theme": "Etsy: The Human Marketplace",
+            "group_item_id": "54926e",
+            "group_set_id": "f923bf"
+          }
+        ],
+        [
+          {
+            "words": [
+              "IMAGINATION",
+              "CONNECTION",
+              "CREATIVITY",
+              "PASSION"
+            ],
+            "category": "Etsy Brand Values",
+            "color": "yellow",
+            "url": "https://www.etsy.com/ie/about",
+            "description": "The human qualities Etsy places at the heart of its mission — keeping commerce personal and driven by people",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://www.etsy.com/ie/about"
+            ],
+            "theme": "Etsy: The Human Marketplace",
+            "group_item_id": "1f977a",
+            "group_set_id": "e507bb"
+          },
+          {
+            "words": [
+              "FORUMS",
+              "TEAMS",
+              "AFFILIATES",
+              "EDUCATION"
+            ],
+            "category": "Etsy Seller Support",
+            "color": "green",
+            "url": "https://www.etsy.com/ie/about",
+            "description": "The resources and programmes Etsy provides to help sellers grow — from peer communities to educational tools and partnerships",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.etsy.com/ie/sell"
+            ],
+            "theme": "Etsy: The Human Marketplace",
+            "group_item_id": "c175c4",
+            "group_set_id": "e507bb"
+          },
+          {
+            "words": [
+              "INVESTORS",
+              "CAREERS",
+              "PRESS",
+              "IMPACT"
+            ],
+            "category": "Etsy Corporate Sections",
+            "color": "indigo",
+            "url": "https://www.etsy.com/ie/about",
+            "description": "The four main corporate information areas linked from Etsy's About page — covering financials, jobs, media, and social responsibility",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://investors.etsy.com",
+              "https://careers.etsy.com"
+            ],
+            "theme": "Etsy: The Human Marketplace",
+            "group_item_id": "31fd75",
+            "group_set_id": "e507bb"
+          },
+          {
+            "words": [
+              "INSTAGRAM",
+              "FACEBOOK",
+              "PINTEREST",
+              "YOUTUBE"
+            ],
+            "category": "Etsy Social Channels",
+            "color": "red",
+            "url": "https://www.etsy.com/ie/about",
+            "description": "The four social media platforms where Etsy maintains an official presence, as listed on its About page",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://www.etsy.com/ie/about"
+            ],
+            "theme": "Etsy: The Human Marketplace",
+            "group_item_id": "bff639",
+            "group_set_id": "e507bb"
+          }
+        ]
+      ],
+      "game_set_id": "28f7dd"
+    },
+    {
+      "theme": "FIFA World Cup Records and Legends",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "BRAZIL",
+              "GERMANY",
+              "ITALY",
+              "ARGENTINA"
+            ],
+            "category": "Multi-Time World Cup Winners",
+            "color": "yellow",
+            "url": "https://www.fifa.com/fifaplus/en/articles/world-cup-winners-list",
+            "description": "Nations that have won the FIFA World Cup more than once — Brazil (5), Germany (4), Italy (4), Argentina (3)",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/FIFA_World_Cup"
+            ],
+            "theme": "FIFA World Cup Records and Legends",
+            "group_item_id": "02cea0",
+            "group_set_id": "9ff67f"
+          },
+          {
+            "words": [
+              "KLOSE",
+              "FONTAINE",
+              "RONALDO",
+              "MULLER"
+            ],
+            "category": "All-Time World Cup Top Scorers",
+            "color": "red",
+            "url": "https://www.fifa.com/fifaplus/en/articles/all-time-world-cup-top-scorers",
+            "description": "Miroslav Klose (16), Just Fontaine (13), Ronaldo (15), Gerd Muller (14) — the greatest goal scorers in World Cup history",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/FIFA_World_Cup_all-time_top_scorers"
+            ],
+            "theme": "FIFA World Cup Records and Legends",
+            "group_item_id": "f43678",
+            "group_set_id": "9ff67f"
+          },
+          {
+            "words": [
+              "PICKLES",
+              "HAND_OF_GOD",
+              "ZIDANE_HEADBUTT",
+              "BAGGIO_PENALTY"
+            ],
+            "category": "Famous World Cup Controversies",
+            "color": "purple",
+            "url": "https://www.theguardian.com/football/world-cup",
+            "description": "The dog who found the Jules Rimet Trophy, Maradona's handball, Zidane's red card in the 2006 final, Baggio's missed penalty in 1994",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/1986_FIFA_World_Cup_quarter-final"
+            ],
+            "theme": "FIFA World Cup Records and Legends",
+            "group_item_id": "7c2dc3",
+            "group_set_id": "9ff67f"
+          },
+          {
+            "words": [
+              "PELE",
+              "MARADONA",
+              "BECKENBAUER",
+              "ZIDANE"
+            ],
+            "category": "Golden Ball Winners",
+            "color": "blue",
+            "url": "https://www.fifa.com/fifaplus/en/articles/world-cup-golden-ball-winners",
+            "description": "Legendary players awarded the Golden Ball as the tournament's best player — each defined their era of World Cup football",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/FIFA_World_Cup_awards"
+            ],
+            "theme": "FIFA World Cup Records and Legends",
+            "group_item_id": "38aa58",
+            "group_set_id": "9ff67f"
+          }
+        ],
+        [
+          {
+            "words": [
+              "URUGUAY",
+              "SOUTH_AFRICA",
+              "QATAR",
+              "JAPAN_KOREA"
+            ],
+            "category": "Historic Host Nations",
+            "color": "green",
+            "url": "https://www.fifa.com/fifaplus/en/articles/world-cup-hosts-history",
+            "description": "Uruguay hosted the first tournament (1930), South Africa first African host (2010), Qatar first Middle Eastern host (2022), Japan/Korea first co-hosts (2002)",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/FIFA_World_Cup_hosts"
+            ],
+            "theme": "FIFA World Cup Records and Legends",
+            "group_item_id": "232687",
+            "group_set_id": "0ce5fe"
+          },
+          {
+            "words": [
+              "HURST",
+              "MOORE",
+              "BANKS",
+              "CHARLTON"
+            ],
+            "category": "England's 1966 World Cup Heroes",
+            "color": "teal",
+            "url": "https://en.wikipedia.org/wiki/1966_FIFA_World_Cup_final",
+            "description": "Geoff Hurst (hat trick in the final), Bobby Moore (captain), Gordon Banks (goalkeeper), Bobby Charlton — the core of England's only World Cup win",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.bbc.co.uk/sport/football/world-cup"
+            ],
+            "theme": "FIFA World Cup Records and Legends",
+            "group_item_id": "7ff126",
+            "group_set_id": "0ce5fe"
+          },
+          {
+            "words": [
+              "SUKUR",
+              "FERREYRA",
+              "WHITESIDE",
+              "SALENKO"
+            ],
+            "category": "Obscure World Cup Record Holders",
+            "color": "orange",
+            "url": "https://www.fifa.com/fifaplus/en/articles/world-cup-records",
+            "description": "Hakan Sukur fastest goal (11 seconds), Bernabe Ferreyra fastest hat trick, Norman Whiteside youngest player, Oleg Salenko 5 goals in one game",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/FIFA_World_Cup_records_and_statistics"
+            ],
+            "theme": "FIFA World Cup Records and Legends",
+            "group_item_id": "3c306b",
+            "group_set_id": "0ce5fe"
+          },
+          {
+            "words": [
+              "BUFFON",
+              "KAHN",
+              "ZOFF",
+              "CASILLAS"
+            ],
+            "category": "Legendary World Cup Goalkeepers",
+            "color": "indigo",
+            "url": "https://www.fifa.com/fifaplus/en/articles/world-cup-goalkeepers",
+            "description": "Gianluigi Buffon (176 Italy caps), Oliver Kahn (2002 Golden Ball), Dino Zoff (1982 winner at age 40), Iker Casillas — the greatest keepers in World Cup history",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/FIFA_World_Cup_Golden_Glove"
+            ],
+            "theme": "FIFA World Cup Records and Legends",
+            "group_item_id": "cb6b8f",
+            "group_set_id": "0ce5fe"
+          }
+        ]
+      ],
+      "game_set_id": "24e8d0"
+    },
+    {
+      "theme": "LLM Evaluation: Types and Methods",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "TRAJECTORY",
+              "TOOL_CALL",
+              "OUTCOME",
+              "STEP_EFFICIENCY"
+            ],
+            "category": "Agent Evaluation Signals",
+            "color": "orange",
+            "url": "https://futureagi.com/glossary/llm-as-a-judge",
+            "description": "Evaluation signals specific to agentic systems — assessing not just the final answer but whether the agent took the right steps to get there",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://aiagentrank.io/glossary/llm-as-a-judge"
+            ],
+            "theme": "LLM Evaluation: Types and Methods",
+            "group_item_id": "3b91a6",
+            "group_set_id": "ae2d63"
+          },
+          {
+            "words": [
+              "REGRESSION",
+              "A_B_TEST",
+              "CANARY",
+              "BASELINE"
+            ],
+            "category": "Eval Testing Strategies",
+            "color": "blue",
+            "url": "https://inblog.ai/glossary/llm-as-judge",
+            "description": "Strategies for detecting quality changes — running evals after every prompt change, comparing variants, and always measuring against a known baseline",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://aiagentrank.io/glossary/llm-as-a-judge"
+            ],
+            "theme": "LLM Evaluation: Types and Methods",
+            "group_item_id": "91eae5",
+            "group_set_id": "ae2d63"
+          },
+          {
+            "words": [
+              "FEW_SHOT",
+              "ZERO_SHOT",
+              "CHAIN_OF_THOUGHT",
+              "SELF_CONSISTENCY"
+            ],
+            "category": "Prompting Eval Techniques",
+            "color": "green",
+            "url": "https://futureagi.com/blog/llm-evaluation-frameworks-metrics-best-practices",
+            "description": "Prompting strategies that affect how a model is evaluated and how a judge model is prompted — few-shot calibration examples improve judge reliability",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://www.promptlayer.com/glossary/llm-as-a-judge"
+            ],
+            "theme": "LLM Evaluation: Types and Methods",
+            "group_item_id": "d7c3e5",
+            "group_set_id": "ae2d63"
+          },
+          {
+            "words": [
+              "SPOT_CHECK",
+              "KAPPA",
+              "CORRELATION",
+              "INTER_RATER"
+            ],
+            "category": "Eval Quality Assurance",
+            "color": "purple",
+            "url": "https://futureagi.com/glossary/llm-as-a-judge",
+            "description": "Methods for validating that your evals are themselves trustworthy — human spot-checks, Cohen's kappa, and correlation against expert annotations",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://memx.app/glossary/llm-as-a-judge/"
+            ],
+            "theme": "LLM Evaluation: Types and Methods",
+            "group_item_id": "231e21",
+            "group_set_id": "ae2d63"
+          }
+        ],
+        [
+          {
+            "words": [
+              "DETERMINISTIC",
+              "SEMANTIC",
+              "CLASSIFIER",
+              "NEURAL"
+            ],
+            "category": "Scoring Method Types",
+            "color": "teal",
+            "url": "https://interviewkickstart.com/ai-glossary/evals-llm-evaluation",
+            "description": "The spectrum of automated scoring approaches — from exact string matching at one end to neural semantic similarity and classifier-based grading at the other",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://futureagi.com/blogs/build-llm-evaluation-framework-2025"
+            ],
+            "theme": "LLM Evaluation: Types and Methods",
+            "group_item_id": "3bffc1",
+            "group_set_id": "f87da9"
+          },
+          {
+            "words": [
+              "RAG_FAITHFULNESS",
+              "CONTEXT_RECALL",
+              "ANSWER_RELEVANCY",
+              "CONTEXT_PRECISION"
+            ],
+            "category": "RAG-Specific Evals",
+            "color": "red",
+            "url": "https://futureagi.com/glossary/llm-as-a-judge",
+            "description": "Eval metrics specific to Retrieval-Augmented Generation pipelines — checking that answers are faithful to retrieved context and that retrieval itself is relevant and precise",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://arxiv.org/html/2602.18823"
+            ],
+            "theme": "LLM Evaluation: Types and Methods",
+            "group_item_id": "c5ecb5",
+            "group_set_id": "f87da9"
+          },
+          {
+            "words": [
+              "DEEPEVAL",
+              "RAGAS",
+              "LANGSMITH",
+              "BRAINTRUST"
+            ],
+            "category": "Eval Frameworks & Tools",
+            "color": "yellow",
+            "url": "https://dataaspirant.com/llm-evaluation-tools/",
+            "description": "The leading open-source and commercial toolkits for running LLM evals — each with built-in judge patterns, metric libraries, and production monitoring",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://aiagentrank.io/glossary/llm-as-a-judge"
+            ],
+            "theme": "LLM Evaluation: Types and Methods",
+            "group_item_id": "2d7f1b",
+            "group_set_id": "f87da9"
+          },
+          {
+            "words": [
+              "DRIFT",
+              "LATENCY",
+              "COST",
+              "THROUGHPUT"
+            ],
+            "category": "Production Eval Signals",
+            "color": "indigo",
+            "url": "https://interviewkickstart.com/ai-glossary/evals-llm-evaluation",
+            "description": "Operational signals monitored alongside quality evals in production — detecting model drift, regression in response time, and cost-per-query changes over time",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://dataaspirant.com/llm-evaluation-tools/"
+            ],
+            "theme": "LLM Evaluation: Types and Methods",
+            "group_item_id": "b55102",
+            "group_set_id": "f87da9"
+          }
+        ]
+      ],
+      "game_set_id": "788fe7"
+    },
+    {
+      "theme": "Linux Process Memory Metrics",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "VSZ",
+              "VIRT",
+              "MMAP",
+              "OVERCOMMIT"
+            ],
+            "category": "Virtual Memory Concepts",
+            "color": "blue",
+            "url": "https://kernel-internals.org/mm/virtual-physical-resident/",
+            "description": "Terms related to virtual address space — what a process has mapped, not what it uses in RAM",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://man7.org/linux/man-pages/man5/proc.5.html"
+            ],
+            "theme": "Linux Process Memory Metrics",
+            "group_item_id": "e0eeb6",
+            "group_set_id": "9818c4"
+          },
+          {
+            "words": [
+              "RSS",
+              "RES",
+              "RESIDENT",
+              "DEMAND-PAGING"
+            ],
+            "category": "Physical RAM Occupancy",
+            "color": "green",
+            "url": "https://kernel-internals.org/mm/virtual-physical-resident/",
+            "description": "Terms describing which virtual pages are currently backed by physical RAM",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://man7.org/linux/man-pages/man1/ps.1.html"
+            ],
+            "theme": "Linux Process Memory Metrics",
+            "group_item_id": "8e0f22",
+            "group_set_id": "9818c4"
+          },
+          {
+            "words": [
+              "PSS",
+              "USS",
+              "SMAPS",
+              "SMAPS_ROLLUP"
+            ],
+            "category": "Accurate Accounting Tools",
+            "color": "orange",
+            "url": "https://kernel-internals.org/mm/virtual-physical-resident/",
+            "description": "Metrics and /proc files that give fair, shared-aware memory accounting beyond simple RSS",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://lkml.iu.edu/hypermail/linux/kernel/0710.3/1565.html"
+            ],
+            "theme": "Linux Process Memory Metrics",
+            "group_item_id": "2599b9",
+            "group_set_id": "9818c4"
+          },
+          {
+            "words": [
+              "KSM",
+              "THP",
+              "CGROUP",
+              "SWAP"
+            ],
+            "category": "Modern Memory Complexity",
+            "color": "purple",
+            "url": "https://kernel-internals.org/mm/virtual-physical-resident/",
+            "description": "Kernel features that further complicate simple memory accounting: page merging, huge pages, limits, and swap",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://kernel-internals.org/mm/ksm/",
+              "https://kernel-internals.org/mm/thp/"
+            ],
+            "theme": "Linux Process Memory Metrics",
+            "group_item_id": "0e979a",
+            "group_set_id": "9818c4"
+          }
+        ],
+        [
+          {
+            "words": [
+              "PRIVATE_CLEAN",
+              "PRIVATE_DIRTY",
+              "SHARED_CLEAN",
+              "SHARED_DIRTY"
+            ],
+            "category": "smaps Page Categories",
+            "color": "teal",
+            "url": "https://kernel-internals.org/mm/virtual-physical-resident/",
+            "description": "The four page-state fields in /proc/pid/smaps used to compute USS and PSS",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://man7.org/linux/man-pages/man5/proc.5.html"
+            ],
+            "theme": "Linux Process Memory Metrics",
+            "group_item_id": "2d00f9",
+            "group_set_id": "91431b"
+          },
+          {
+            "words": [
+              "SLAB",
+              "PAGE-CACHE",
+              "BUFF/CACHE",
+              "AVAILABLE"
+            ],
+            "category": "Physical Memory Consumers",
+            "color": "yellow",
+            "url": "https://kernel-internals.org/mm/virtual-physical-resident/",
+            "description": "The main categories shown in `free` output that consume physical RAM outside process RSS",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://kernel-internals.org/mm/slab/",
+              "https://kernel-internals.org/mm/page-cache/"
+            ],
+            "theme": "Linux Process Memory Metrics",
+            "group_item_id": "91f9f1",
+            "group_set_id": "91431b"
+          },
+          {
+            "words": [
+              "COW",
+              "LIBC",
+              "MAP_NORESERVE",
+              "PMAP"
+            ],
+            "category": "Shared Library & Mapping Mechanics",
+            "color": "red",
+            "url": "https://kernel-internals.org/mm/virtual-physical-resident/",
+            "description": "Mechanisms and tools central to understanding how shared pages work and how to inspect mappings",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://kernel-internals.org/mm/cow/",
+              "https://man7.org/linux/man-pages/man1/pmap.1.html"
+            ],
+            "theme": "Linux Process Memory Metrics",
+            "group_item_id": "5bca10",
+            "group_set_id": "91431b"
+          },
+          {
+            "words": [
+              "2.6.14",
+              "2.6.25",
+              "4.14",
+              "MATT-MACKALL"
+            ],
+            "category": "PSS History Milestones",
+            "color": "indigo",
+            "url": "https://kernel-internals.org/mm/virtual-physical-resident/",
+            "description": "Kernel versions and the key contributor behind the introduction of smaps and PSS accounting",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://lwn.net/Articles/230975/"
+            ],
+            "theme": "Linux Process Memory Metrics",
+            "group_item_id": "5b063d",
+            "group_set_id": "91431b"
+          }
+        ]
+      ],
+      "game_set_id": "9da791"
+    },
+    {
+      "theme": "Observability Frameworks: RED, USE & Four Golden Signals",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "P50",
+              "P95",
+              "P99",
+              "HISTOGRAM"
+            ],
+            "category": "Latency Measurement",
+            "color": "blue",
+            "url": "https://sre.google/sre-book/monitoring-distributed-systems/",
+            "description": "Percentile distributions and histograms used to measure latency properly — averages mask tail latency that real users experience",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://grafana.com/blog/2018/08/02/the-red-method-how-to-instrument-your-services/"
+            ],
+            "theme": "Observability Frameworks: RED, USE & Four Golden Signals",
+            "group_item_id": "506860",
+            "group_set_id": "f06dc5"
+          },
+          {
+            "words": [
+              "METRICS",
+              "LOGS",
+              "TRACES",
+              "EVENTS"
+            ],
+            "category": "Observability Pillars",
+            "color": "green",
+            "url": "https://opentelemetry.io/docs/concepts/observability-primer/",
+            "description": "The four telemetry signal types that feed all observability frameworks — together they provide the full picture of system behaviour",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://www.squadcast.com/blog/how-important-is-observability-for-sre"
+            ],
+            "theme": "Observability Frameworks: RED, USE & Four Golden Signals",
+            "group_item_id": "d16c86",
+            "group_set_id": "f06dc5"
+          },
+          {
+            "words": [
+              "PROMETHEUS",
+              "GRAFANA",
+              "DATADOG",
+              "OTEL"
+            ],
+            "category": "Observability Tooling",
+            "color": "teal",
+            "url": "https://opentelemetry.io/",
+            "description": "The dominant tools used to collect, store, and visualise the signals defined by RED, USE, and the Golden Signals frameworks",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://grafana.com/blog/2018/08/02/the-red-method-how-to-instrument-your-services/"
+            ],
+            "theme": "Observability Frameworks: RED, USE & Four Golden Signals",
+            "group_item_id": "ef7198",
+            "group_set_id": "f06dc5"
+          },
+          {
+            "words": [
+              "COUNTER",
+              "GAUGE",
+              "HISTOGRAM",
+              "SUMMARY"
+            ],
+            "category": "Prometheus Metric Types",
+            "color": "orange",
+            "url": "https://prometheus.io/docs/concepts/metric_types/",
+            "description": "The four Prometheus metric types — each suited to a different kind of signal when instrumenting services for RED and USE",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://grafana.com/blog/2018/08/02/the-red-method-how-to-instrument-your-services/"
+            ],
+            "theme": "Observability Frameworks: RED, USE & Four Golden Signals",
+            "group_item_id": "780002",
+            "group_set_id": "f06dc5"
+          }
+        ],
+        [
+          {
+            "words": [
+              "ALERT",
+              "DASHBOARD",
+              "ONCALL",
+              "POSTMORTEM"
+            ],
+            "category": "Observability Outputs",
+            "color": "red",
+            "url": "https://sre.google/sre-book/monitoring-distributed-systems/",
+            "description": "The operational artefacts that observability frameworks drive — actionable signals rather than noise, enabling sustainable on-call",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.squadcast.com/blog/how-important-is-observability-for-sre"
+            ],
+            "theme": "Observability Frameworks: RED, USE & Four Golden Signals",
+            "group_item_id": "c4c374",
+            "group_set_id": "e36bf3"
+          },
+          {
+            "words": [
+              "UPSTREAM",
+              "DOWNSTREAM",
+              "DEPENDENCY",
+              "FANOUT"
+            ],
+            "category": "Distributed Service Topology",
+            "color": "purple",
+            "url": "https://sre.google/sre-book/monitoring-distributed-systems/",
+            "description": "Concepts describing how services relate in a call graph — critical when applying RED to identify where degradation originates",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://opentelemetry.io/docs/concepts/observability-primer/"
+            ],
+            "theme": "Observability Frameworks: RED, USE & Four Golden Signals",
+            "group_item_id": "e2b3ff",
+            "group_set_id": "e36bf3"
+          },
+          {
+            "words": [
+              "MTTR",
+              "MTTD",
+              "MTBF",
+              "TOIL"
+            ],
+            "category": "SRE Reliability Metrics",
+            "color": "yellow",
+            "url": "https://sre.google/sre-book/introduction/",
+            "description": "Time-based reliability measures that good observability directly improves — faster detection and recovery, less repetitive operational work",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.squadcast.com/blog/how-important-is-observability-for-sre"
+            ],
+            "theme": "Observability Frameworks: RED, USE & Four Golden Signals",
+            "group_item_id": "8a0b3f",
+            "group_set_id": "e36bf3"
+          },
+          {
+            "words": [
+              "QUEUE",
+              "BUSY",
+              "BACKLOG",
+              "HEADROOM"
+            ],
+            "category": "Saturation Signals",
+            "color": "indigo",
+            "url": "https://www.brendangregg.com/usemethod.html",
+            "description": "Indicators that a resource is saturated — work is queuing beyond capacity, the key leading indicator of degradation in USE",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://lantern.splunk.com/Observability/Product_Tips/Observability_Cloud/Adopting_monitoring_frameworks_-_RED_and_USE"
+            ],
+            "theme": "Observability Frameworks: RED, USE & Four Golden Signals",
+            "group_item_id": "2259cf",
+            "group_set_id": "e36bf3"
+          }
+        ]
+      ],
+      "game_set_id": "05f422"
+    },
+    {
+      "theme": "vLLM Architecture & Production AI Inference",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "UC BERKELEY",
+              "APACHE 2.0",
+              "GITHUB",
+              "HUGGING FACE"
+            ],
+            "category": "vLLM Open Source Provenance",
+            "color": "green",
+            "url": "https://www.redhat.com/en/blog/meet-vllm-faster-more-efficient-llm-inference-and-serving",
+            "description": "vLLM originated at UC Berkeley, is Apache 2.0-licensed, hosted on GitHub with 40k+ stars, and integrates with Hugging Face model hub.",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://github.com/vllm-project/vllm"
+            ],
+            "theme": "vLLM Architecture & Production AI Inference",
+            "group_item_id": "4802a6",
+            "group_set_id": "17551d"
+          },
+          {
+            "words": [
+              "TOKENS",
+              "ATTENTION",
+              "KEYS",
+              "VALUES"
+            ],
+            "category": "LLM Inference Internals",
+            "color": "blue",
+            "url": "https://www.redhat.com/en/blog/meet-vllm-faster-more-efficient-llm-inference-and-serving",
+            "description": "The core internals of transformer-based inference: attention keys and values stored in the KV cache are used to generate next tokens in autoregressive decoding.",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://arxiv.org/abs/2309.06180",
+              "https://docs.vllm.ai/en/latest/design/kernel/paged_attention.html"
+            ],
+            "theme": "vLLM Architecture & Production AI Inference",
+            "group_item_id": "6b2e0f",
+            "group_set_id": "17551d"
+          },
+          {
+            "words": [
+              "24X",
+              "99%",
+              "3.5X",
+              "2.4X"
+            ],
+            "category": "vLLM Benchmark Results",
+            "color": "red",
+            "url": "https://www.redhat.com/en/blog/meet-vllm-faster-more-efficient-llm-inference-and-serving",
+            "description": "Key headline numbers from vLLM benchmarks: up to 24x throughput improvement over HuggingFace/TGI, 99% accuracy retention with quantization, 3.5x model compression, 2.4x single-stream speedup.",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://vllm.ai/blog/2023/06/20/vllm.html"
+            ],
+            "theme": "vLLM Architecture & Production AI Inference",
+            "group_item_id": "11bcb4",
+            "group_set_id": "17551d"
+          },
+          {
+            "words": [
+              "INFERENCE",
+              "SERVING",
+              "GENERATION",
+              "DECODING"
+            ],
+            "category": "LLM Runtime Terminology",
+            "color": "teal",
+            "url": "https://www.redhat.com/en/blog/meet-vllm-faster-more-efficient-llm-inference-and-serving",
+            "description": "Core terminology for running LLMs: inference (model computation), serving (exposing over an API), text generation, and autoregressive decoding (producing tokens one by one).",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://docs.vllm.ai/en/latest/"
+            ],
+            "theme": "vLLM Architecture & Production AI Inference",
+            "group_item_id": "c95be8",
+            "group_set_id": "17551d"
+          }
+        ],
+        [
+          {
+            "words": [
+              "GPU",
+              "MEMORY",
+              "CONTIGUOUS",
+              "ALLOCATION"
+            ],
+            "category": "GPU Memory Concepts in LLM Serving",
+            "color": "purple",
+            "url": "https://www.redhat.com/en/blog/meet-vllm-faster-more-efficient-llm-inference-and-serving",
+            "description": "Traditional GPU memory allocation is contiguous and pre-allocated per request regardless of actual use; PagedAttention replaces this with dynamic non-contiguous allocation.",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://arxiv.org/abs/2309.06180"
+            ],
+            "theme": "vLLM Architecture & Production AI Inference",
+            "group_item_id": "55c4b5",
+            "group_set_id": "16cee5"
+          },
+          {
+            "words": [
+              "CHATBOT",
+              "CODE ASSISTANT",
+              "PROMPTER",
+              "REQUESTER"
+            ],
+            "category": "Consumers of LLM Serving Infrastructure",
+            "color": "orange",
+            "url": "https://www.redhat.com/en/blog/meet-vllm-faster-more-efficient-llm-inference-and-serving",
+            "description": "End-user applications and actors that send requests to an LLM serving layer: chatbots, code assistants, and other AI-powered tools sending prompts.",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://www.redhat.com/en/blog/meet-vllm-faster-more-efficient-llm-inference-and-serving"
+            ],
+            "theme": "vLLM Architecture & Production AI Inference",
+            "group_item_id": "145bd6",
+            "group_set_id": "16cee5"
+          },
+          {
+            "words": [
+              "HF TRANSFORMERS",
+              "TGI",
+              "TRITON",
+              "VLLM"
+            ],
+            "category": "LLM Inference Serving Frameworks",
+            "color": "yellow",
+            "url": "https://www.redhat.com/en/blog/meet-vllm-faster-more-efficient-llm-inference-and-serving",
+            "description": "Competing and complementary frameworks for serving LLMs in production: HuggingFace Transformers, Text Generation Inference (TGI), NVIDIA Triton, and vLLM.",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://huggingface.co/docs/text-generation-inference/index",
+              "https://github.com/vllm-project/vllm"
+            ],
+            "theme": "vLLM Architecture & Production AI Inference",
+            "group_item_id": "0d0745",
+            "group_set_id": "16cee5"
+          },
+          {
+            "words": [
+              "DISTRIBUTED",
+              "MULTI-GPU",
+              "OVERHEAD",
+              "TENSOR"
+            ],
+            "category": "Scaling LLM Inference Beyond One GPU",
+            "color": "indigo",
+            "url": "https://www.redhat.com/en/blog/meet-vllm-faster-more-efficient-llm-inference-and-serving",
+            "description": "Large models that exceed single-GPU capacity require distributed inference with tensor parallelism, introducing additional coordination overhead across multiple GPUs.",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://docs.vllm.ai/en/latest/serving/distributed_serving.html"
+            ],
+            "theme": "vLLM Architecture & Production AI Inference",
+            "group_item_id": "694d19",
+            "group_set_id": "16cee5"
+          }
+        ]
+      ],
+      "game_set_id": "016e3d"
+    }
+  ]
+}

@@ -1,0 +1,203 @@
+{
+  "metadata": {
+    "generated_at": "2026-09-07T00:00:00Z",
+    "source": "https://www.etsy.com/ie/about",
+    "suggested_name": "etsy-marketplace-concepts.json",
+    "modified_at": "2026-09-07T20:10:42.221534",
+    "source_id": "https://www.etsy.com/ie/about",
+    "step": "finalize_metadata",
+    "id_registry": {
+      "game_set_ids": [
+        "6efd9d"
+      ],
+      "group_set_ids": [
+        "1198be",
+        "3a4fe8"
+      ],
+      "group_item_ids": [
+        "381a66",
+        "6cd30d",
+        "b92563",
+        "09332a",
+        "c347fb",
+        "fcec74",
+        "61b069",
+        "86152e"
+      ]
+    },
+    "id": "vhwIsOIa-zgBypz-",
+    "split_info": {
+      "role": "split",
+      "split_at": "2026-09-07T20:10:55.971849+00:00",
+      "parent_id": "vhwIsOIa-zgBypz-",
+      "parent_file": "/home/claude/output/games/etsy-marketplace-concepts.json",
+      "theme": "Selling and Buying on Etsy",
+      "slug": "selling-and-buying-on-etsy"
+    }
+  },
+  "game_sets": [
+    {
+      "theme": "Selling and Buying on Etsy",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "LISTING",
+              "FEES",
+              "TOOLS",
+              "SCALE"
+            ],
+            "category": "Etsy Seller Proposition",
+            "color": "green",
+            "url": "https://www.etsy.com/ie/sell",
+            "description": "Key elements of Etsy's offer to creative entrepreneurs — low listing costs, powerful tools, and the ability to scale a business",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.etsy.com/ie/about"
+            ],
+            "theme": "Selling and Buying on Etsy",
+            "group_item_id": "381a66",
+            "group_set_id": "1198be"
+          },
+          {
+            "words": [
+              "WEDDING",
+              "MILESTONE",
+              "GIFT",
+              "STYLE"
+            ],
+            "category": "Buyer Shopping Occasions",
+            "color": "red",
+            "url": "https://www.etsy.com/ie/about",
+            "description": "The life moments Etsy explicitly calls out as reasons to shop — personal occasions that warrant something special and human-made",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://www.etsy.com/ie/"
+            ],
+            "theme": "Selling and Buying on Etsy",
+            "group_item_id": "6cd30d",
+            "group_set_id": "1198be"
+          },
+          {
+            "words": [
+              "SEARCH",
+              "CURATED",
+              "TRENDING",
+              "PERSONALISED"
+            ],
+            "category": "Etsy Discovery Tools",
+            "color": "blue",
+            "url": "https://www.etsy.com/ie/about",
+            "description": "The ways Etsy surfaces products to buyers — from keyword search to editorial curation, trend spotting, and personal recommendations",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://blog.etsy.com/en/",
+              "https://etsy.com/featured/"
+            ],
+            "theme": "Selling and Buying on Etsy",
+            "group_item_id": "b92563",
+            "group_set_id": "1198be"
+          },
+          {
+            "words": [
+              "SECURITY",
+              "SAFETY",
+              "TRANSACTIONS",
+              "AUTHENTICATION"
+            ],
+            "category": "Etsy Platform Trust",
+            "color": "purple",
+            "url": "https://www.etsy.com/ie/about",
+            "description": "The pillars Etsy highlights when describing how it keeps buyer-seller connections safe, including secure login and transaction handling",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://www.etsy.com/ie/help"
+            ],
+            "theme": "Selling and Buying on Etsy",
+            "group_item_id": "09332a",
+            "group_set_id": "1198be"
+          }
+        ],
+        [
+          {
+            "words": [
+              "JEWELLERY",
+              "HOMEWARES",
+              "FASHION",
+              "DECOR"
+            ],
+            "category": "Etsy Popular Categories",
+            "color": "teal",
+            "url": "https://www.etsy.com/ie/about",
+            "description": "Top product categories on Etsy as featured on the About and navigation pages — the goods buyers most commonly seek",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://www.etsy.com/ie/"
+            ],
+            "theme": "Selling and Buying on Etsy",
+            "group_item_id": "c347fb",
+            "group_set_id": "3a4fe8"
+          },
+          {
+            "words": [
+              "IRELAND",
+              "AUSTRALIA",
+              "CANADA",
+              "GERMANY"
+            ],
+            "category": "Etsy Global Markets",
+            "color": "orange",
+            "url": "https://www.etsy.com/ie/about",
+            "description": "Four of the 27 country-specific storefronts that Etsy operates globally, enabling localised currency and language experiences",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.etsy.com/ie/about"
+            ],
+            "theme": "Selling and Buying on Etsy",
+            "group_item_id": "fcec74",
+            "group_set_id": "3a4fe8"
+          },
+          {
+            "words": [
+              "AUTOMATION",
+              "HUMAN",
+              "ALTERNATIVE",
+              "TOUCH"
+            ],
+            "category": "Etsy Mission Keywords",
+            "color": "yellow",
+            "url": "https://www.etsy.com/ie/about",
+            "description": "Words from Etsy's core mission statement — the contrast between increasing automation and the human-centred alternative Etsy offers",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://www.etsy.com/ie/about"
+            ],
+            "theme": "Selling and Buying on Etsy",
+            "group_item_id": "61b069",
+            "group_set_id": "3a4fe8"
+          },
+          {
+            "words": [
+              "COOKIES",
+              "PRIVACY",
+              "CONSENT",
+              "PERSONALISATION"
+            ],
+            "category": "Etsy Data & Privacy Concepts",
+            "color": "indigo",
+            "url": "https://www.etsy.com/ie/legal/cookies-and-tracking-technologies",
+            "description": "Key terms from Etsy's privacy and cookie policy — the technical and legal framework governing how user data is used on the platform",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://www.etsy.com/ie/legal/privacy"
+            ],
+            "theme": "Selling and Buying on Etsy",
+            "group_item_id": "86152e",
+            "group_set_id": "3a4fe8"
+          }
+        ]
+      ],
+      "game_set_id": "6efd9d"
+    }
+  ]
+}

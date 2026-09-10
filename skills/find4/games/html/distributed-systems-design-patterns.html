@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find4 &mdash; Distributed Systems Design Patterns</title>
+
+    <meta name="description" content="A Beginner-level Find4 word-grouping game on &#x27;Distributed Systems Design Patterns&#x27;. 2 rounds, 32 words. Find the hidden connections between groups of 4.">
+    <meta name="keywords" content="Distributed Systems Design Patterns, Core Concept Modules in the Course, Distributed Data Technologies, Advanced Specialised Topics, Real-World Architecture Case Studies, Infrastructure Components in a Design, Interviewer Techniques to Test Depth, Communication Failure Modes in Interviews, Complex System Design Question Archetypes">
+    <meta name="author" content="Find4">
+    <meta name="theme-color" content="#0f6e56">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://find4.org/#game=xZhtU-M4Ese_iipvLyYhBBh4lwczmyNPk4TZhzuKUmw50Ua2vJJMNjvFd79_244JMztV3MHkqqggSy2r1f1Td8tfarFwPOSO166_1FYiEYY7ET5wV7uutZqtC6955TUvF6et62YTf7_V6jWrMxMIjK-dS-11o7Hdbk_WQiktEyfMoxTbk0DHDSW4SRp2Z52IvVBYuUoaMvG4t86M2aHpjA6zwEmd0Fuz1UpYWjvhMb39xUSverUnrBWJk1zZk99tPjXWoYzk32n94frs7Lp1etL80Gy2ryrdH2T47uo7keKdkUy4kn-Jh8qs9ZoMH4xYSevMLjcytvdghYMStnb9r1pzeXneatXu67WV0Vl6OHR-dXF-Sq_4EESi1XyWkdBpL9QO2kGzCaHLQLSiAI1l1ObtNhrR2dV584x6zoPobInGVfv8vEUNcXGxvCSLhO3Wh-ZF7f6JFMUOeqfDxe1GbqNPo8t-dkGvsamS0CmJNOlvtMrdQ53V4N9b_qx1ctE6hRL_yOGBdMoNnPfwvZXK4UjmSzTWOhaNQPEsFA2duTRzDbKebbyeDbcWOU19sr9cZgCMzfPZlvXz6WzKHeYnljajshWEw2dhr1jK7tdK98JPMNjeleSHL__lUpWzaTJmb7Up_NnrTDE89hc_T2a3g_FHPHSmA_yOJn1_SB3AIMApXWkCqtbTRrCeTgKROjYCkkpYJhMGddCdGSswN9BKGwivjBBklsyo9z4BEAiMTPOn69oCq0dYnX4SHAT0csU2id4qEa4EC3XMZWJZoB-FgaGWIqJ9hPJRJiuo7zT7I0M8wDy2NIJvQr2F-L-zVvO0zQQP1izmqWWQ4wzjilW6sy3EE6DAQBOdHruRSj0o8Sho012cxQRxDgM8DGWh2UMRGHIHvM0qAbbhBYU7LLnqf8GiPN-YVZ3uw-CA_jI0PNUPyPltMrn1_ak_g3j_13EHwHTRnE7mi48zf_5piIcbEHT7FUGHmvURs9hCBOsExKyksAfwLFUmjsLOwfLMpjxJiIlAY58IryRUZ2ON_dTheVWyVWc8CRk2InhM4iUpRBw9btciIVgyKwp6pM1PSMzNhukIECFySG2YSICHyPF4yU0nfOTwaviDuNmInecO7f5mdKp88Ap0prPJL4PRYPErxBeDkT_3ZwN_jofPfm8xIaB6_d5X2OwNwuapCBBzpUV7oVMZHEKTZiZVR8FmLAM4FFZia7laezQXYcHlCsHX3MHFSDDYAGGiAUXp8gDkSMQoUcUXbLbOHkXgMNrv2hwtJ2PhWWEISp6mUJSi7GjYoOjj0Sgr9K4Cl_2GIf_PVBj3gwjipT-8YstvB6iqI14B0PynyXRwQ_j0B_PeZNZHaz7s9G4p5gw-jjpfwTMjo_2sjQpZxwRrLBq4jBIZxwGduyx8GXq04cnqKBRNq6EqFFD8cHhlkYLSbAnU15Szdiw1HLIkLUxFz3wNB0Q74PGIagT7rTM4AImB4hN2shJ1Nlc82BApYKXObuQq5izOlJOp4jthGFfqgDKKVME-l79EakA7j0UoYdsfBBaaUMDbShW-HaqqJv0OVPf1w2IIcejzoJdHom5n2Bn3_Bm1-51Fp9uZ5_29Tu8nNF7iNUgiw6FeVlKl4xQuSlxeGfFSzQO-TB7Xj1cVLTMYk7haKh1sKMA81y_wvkCcCFxe3VghGJjAua4zi5tFWCS63zOEGLr0FBtKizWZJlywdVYoRv1LJeJjF0GhUBJ13c6DKrGANzfvEI32d5ivwCnvRi-i0cgfTQZzn4qf2aRL__uTu-4C__1fpsPJzP8Gl2fb59WHpBhO5l8glEO51K0PaEEwUMfAZSTcWof2EA2bVzBQLBQUMpnNTAQ4vNyxLBaxNtLmJRHyl7GZZbjUZwhjDGU4OhzluufyaCnogSiBLzAHuQz3prwEtyWFRFyiHSDbYic0VJ6d_0McOrDVm3mqrsKv4Knv3_jj-eAzkdSZfbwb-eNFZ1E83417Q78zKzLfYtbpLfz-N1e0OM4SGRR-ueFSUVDCXa24qVX0HWa8HZlnewzKumLNHyVll6JKAiIbZBul-BLJKleZktdzdfQCx0jxFeUnUMltjkZRWFdFFdvqTNEFD5e7KJIBkhzxS0GBbWV-ro5aaL8vRdV3lFdQNPM7QyquIf3PSXeOtNW_G-a3tfFkMbgZ9IDUZEyI3fXy1jcUoZL-s1Rur9un_S2ZyijhdumLuknCCSt9DIr2epQQGfFHJgF5XtN49HWMokxAH2hQ7wgqjLzQIEkkZaoq0hq3uyR4cdXbQ7dGRUSXNUu3NZHX0WXQK6vuMuMFJIjKTRy5-n5frMqvct_F6v6-fvghESPlZ8Sn-6f_AA==">
+    <meta property="og:title" content="Distributed Systems Design Patterns">
+    <meta property="og:description" content="Test your knowledge on Distributed Systems Design Patterns. 2 rounds, 32 words.">
+    <meta property="og:image" content="https://find4.org/preview-image.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Distributed Systems Design Patterns">
+    <meta name="twitter:description" content="Beginner-level challenge covering Distributed Systems Design Patterns.">
+    <meta name="twitter:image" content="https://find4.org/preview-image.png">
+
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "EducationalOccupationalCredential",
+  "name": "Distributed Systems Design Patterns",
+  "educationalLevel": "Beginner",
+  "abstract": "Covers concepts including: Core Concept Modules in the Course, Distributed Data Technologies, Advanced Specialised Topics, Real-World Architecture Case Studies."
+}
+    </script>
+
+    <style>
+        body{font-family:system-ui,-apple-system,sans-serif;max-width:720px;margin:2rem auto;padding:0 1rem;background:#f5f5f3;color:#111;}
+        .f4-game{background:#fff;border:0.5px solid rgba(0,0,0,0.15);border-radius:12px;padding:1rem 1.25rem;margin-bottom:48px;box-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1);}
+        .f4-game-header{display:flex;align-items:center;gap:10px;margin-bottom:1rem;flex-wrap:wrap;}
+        .f4-game-icon{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:20px;}
+        .f4-game-title-block{flex:1;min-width:0;}
+        .f4-game-title{font-size:15px;font-weight:500;margin:0;color:#111;}
+        .f4-game-meta{font-size:12px;color:#666;margin:0;}
+        .play-btn{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;background:#0f6e56;color:#fff;border-radius:10px;text-decoration:none;font-size:13px;font-weight:500;margin-left:auto;transition:background 0.2s;}
+        .play-btn:hover{background:#085041;}
+        .f4-groups{display:flex;flex-direction:column;gap:5px;}
+        .f4-round{font-size:11px;font-weight:500;color:#888;padding:8px 0 3px;text-transform:uppercase;letter-spacing:0.05em;}
+        .f4-group{display:grid;grid-template-columns:13px 1fr 90px 2fr;align-items:start;gap:8px;padding:8px 10px;border-radius:8px;border:0.5px solid #e0e0de;background:#fafaf9;}
+        .f4-dot{width:11px;height:11px;border-radius:50%;flex-shrink:0;margin-top:3px;}
+        .f4-cat{font-size:13px;font-weight:500;line-height:1.3;}
+        .f4-skill{font-size:11px;padding:2px 7px;border-radius:20px;text-align:center;white-space:nowrap;}
+        .f4-words{font-size:11px;color:#666;line-height:1.5;word-break:break-word;}
+        .sk-b{background:#e1f5ee;color:#085041;}.sk-i{background:#e6f1fb;color:#0c447c;}.sk-a{background:#faeeda;color:#633806;}.sk-e{background:#fcebeb;color:#791f1f;}
+        .dot-red{background:#e24b4a;}.dot-green{background:#639922;}.dot-blue{background:#378add;}.dot-yellow{background:#ba7517;}
+        .dot-purple{background:#7f77dd;}.dot-teal{background:#1d9e75;}.dot-orange{background:#d85a30;}.dot-indigo{background:#534ab7;}
+        @media(prefers-color-scheme:dark){
+          body{background:#1a1a18;color:#e8e6e1;}
+          .f4-game{background:#2c2c2a;border-color:rgba(255,255,255,0.1);box-shadow:0 4px 6px -1px rgb(0 0 0 / 0.4);}
+          .f4-game-title{color:#e8e6e1;}
+          .f4-game-meta{color:#888780;}
+          .f4-round{color:#888780;}
+          .f4-group{background:#222220;border-color:#3a3a38;}
+          .f4-cat{color:#e8e6e1;}
+          .f4-words{color:#888780;}
+          .sk-b{background:#04342c;color:#9fe1cb;}.sk-i{background:#042c53;color:#b5d4f4;}.sk-a{background:#412402;color:#fac775;}.sk-e{background:#501313;color:#f7c1c1;}
+        }
+    </style>
+</head>
+<body>
+<div class="f4-game f4-capture">
+  <div class="f4-game-header">
+    <div class="f4-game-icon" style="background:#eeedfe;" aria-hidden="true">&#x1F9E9;</div>
+    <div class="f4-game-title-block">
+      <h1 class="f4-game-title">Distributed Systems Design Patterns</h1>
+      <p class="f4-game-meta">2 rounds &middot; 32 words &middot; Beginner level</p>
+    </div>
+    <a class="play-btn" href="https://find4.org/#game=xZhtU-M4Ese_iipvLyYhBBh4lwczmyNPk4TZhzuKUmw50Ua2vJJMNjvFd79_244JMztV3MHkqqggSy2r1f1Td8tfarFwPOSO166_1FYiEYY7ET5wV7uutZqtC6955TUvF6et62YTf7_V6jWrMxMIjK-dS-11o7Hdbk_WQiktEyfMoxTbk0DHDSW4SRp2Z52IvVBYuUoaMvG4t86M2aHpjA6zwEmd0Fuz1UpYWjvhMb39xUSverUnrBWJk1zZk99tPjXWoYzk32n94frs7Lp1etL80Gy2ryrdH2T47uo7keKdkUy4kn-Jh8qs9ZoMH4xYSevMLjcytvdghYMStnb9r1pzeXneatXu67WV0Vl6OHR-dXF-Sq_4EESi1XyWkdBpL9QO2kGzCaHLQLSiAI1l1ObtNhrR2dV584x6zoPobInGVfv8vEUNcXGxvCSLhO3Wh-ZF7f6JFMUOeqfDxe1GbqNPo8t-dkGvsamS0CmJNOlvtMrdQ53V4N9b_qx1ctE6hRL_yOGBdMoNnPfwvZXK4UjmSzTWOhaNQPEsFA2duTRzDbKebbyeDbcWOU19sr9cZgCMzfPZlvXz6WzKHeYnljajshWEw2dhr1jK7tdK98JPMNjeleSHL__lUpWzaTJmb7Up_NnrTDE89hc_T2a3g_FHPHSmA_yOJn1_SB3AIMApXWkCqtbTRrCeTgKROjYCkkpYJhMGddCdGSswN9BKGwivjBBklsyo9z4BEAiMTPOn69oCq0dYnX4SHAT0csU2id4qEa4EC3XMZWJZoB-FgaGWIqJ9hPJRJiuo7zT7I0M8wDy2NIJvQr2F-L-zVvO0zQQP1izmqWWQ4wzjilW6sy3EE6DAQBOdHruRSj0o8Sho012cxQRxDgM8DGWh2UMRGHIHvM0qAbbhBYU7LLnqf8GiPN-YVZ3uw-CA_jI0PNUPyPltMrn1_ak_g3j_13EHwHTRnE7mi48zf_5piIcbEHT7FUGHmvURs9hCBOsExKyksAfwLFUmjsLOwfLMpjxJiIlAY58IryRUZ2ON_dTheVWyVWc8CRk2InhM4iUpRBw9btciIVgyKwp6pM1PSMzNhukIECFySG2YSICHyPF4yU0nfOTwaviDuNmInecO7f5mdKp88Ap0prPJL4PRYPErxBeDkT_3ZwN_jofPfm8xIaB6_d5X2OwNwuapCBBzpUV7oVMZHEKTZiZVR8FmLAM4FFZia7laezQXYcHlCsHX3MHFSDDYAGGiAUXp8gDkSMQoUcUXbLbOHkXgMNrv2hwtJ2PhWWEISp6mUJSi7GjYoOjj0Sgr9K4Cl_2GIf_PVBj3gwjipT-8YstvB6iqI14B0PynyXRwQ_j0B_PeZNZHaz7s9G4p5gw-jjpfwTMjo_2sjQpZxwRrLBq4jBIZxwGduyx8GXq04cnqKBRNq6EqFFD8cHhlkYLSbAnU15Szdiw1HLIkLUxFz3wNB0Q74PGIagT7rTM4AImB4hN2shJ1Nlc82BApYKXObuQq5izOlJOp4jthGFfqgDKKVME-l79EakA7j0UoYdsfBBaaUMDbShW-HaqqJv0OVPf1w2IIcejzoJdHom5n2Bn3_Bm1-51Fp9uZ5_29Tu8nNF7iNUgiw6FeVlKl4xQuSlxeGfFSzQO-TB7Xj1cVLTMYk7haKh1sKMA81y_wvkCcCFxe3VghGJjAua4zi5tFWCS63zOEGLr0FBtKizWZJlywdVYoRv1LJeJjF0GhUBJ13c6DKrGANzfvEI32d5ivwCnvRi-i0cgfTQZzn4qf2aRL__uTu-4C__1fpsPJzP8Gl2fb59WHpBhO5l8glEO51K0PaEEwUMfAZSTcWof2EA2bVzBQLBQUMpnNTAQ4vNyxLBaxNtLmJRHyl7GZZbjUZwhjDGU4OhzluufyaCnogSiBLzAHuQz3prwEtyWFRFyiHSDbYic0VJ6d_0McOrDVm3mqrsKv4Knv3_jj-eAzkdSZfbwb-eNFZ1E83417Q78zKzLfYtbpLfz-N1e0OM4SGRR-ueFSUVDCXa24qVX0HWa8HZlnewzKumLNHyVll6JKAiIbZBul-BLJKleZktdzdfQCx0jxFeUnUMltjkZRWFdFFdvqTNEFD5e7KJIBkhzxS0GBbWV-ro5aaL8vRdV3lFdQNPM7QyquIf3PSXeOtNW_G-a3tfFkMbgZ9IDUZEyI3fXy1jcUoZL-s1Rur9un_S2ZyijhdumLuknCCSt9DIr2epQQGfFHJgF5XtN49HWMokxAH2hQ7wgqjLzQIEkkZaoq0hq3uyR4cdXbQ7dGRUSXNUu3NZHX0WXQK6vuMuMFJIjKTRy5-n5frMqvct_F6v6-fvghESPlZ8Sn-6f_AA==" target="_blank" rel="noopener"><span>&#9654;</span> Play on find4.org</a>
+  </div>
+
+  <div class="f4-groups">
+    <h2 class="f4-round">Round 1</h2>
+    <div class="f4-group">
+        <div class="f4-dot dot-green" role="img" aria-label="Beginner Level Category"></div>
+        <div class="f4-cat">Core Concept Modules in the Course</div>
+        <span class="f4-skill sk-b">Beginner</span>
+        <div class="f4-words">CAP &middot; NETWORKING &middot; API &middot; MODELING</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-blue" role="img" aria-label="Advanced Level Category"></div>
+        <div class="f4-cat">Distributed Data Technologies</div>
+        <span class="f4-skill sk-a">Advanced</span>
+        <div class="f4-words">ZOOKEEPER &middot; DYNAMODB &middot; POSTGRESQL &middot; FLINK</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-purple" role="img" aria-label="Expert Level Category"></div>
+        <div class="f4-cat">Advanced Specialised Topics</div>
+        <span class="f4-skill sk-e">Expert</span>
+        <div class="f4-words">PROXIMITY &middot; TIMESERIES &middot; VECTOR &middot; CDC</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-orange" role="img" aria-label="Intermediate Level Category"></div>
+        <div class="f4-cat">Real-World Architecture Case Studies</div>
+        <span class="f4-skill sk-i">Intermediate</span>
+        <div class="f4-words">SHOPIFY &middot; DISCORD &middot; SLACK &middot; FIGMA</div>
+    </div>
+    <h2 class="f4-round">Round 2</h2>
+    <div class="f4-group">
+        <div class="f4-dot dot-red" role="img" aria-label="Beginner Level Category"></div>
+        <div class="f4-cat">Infrastructure Components in a Design</div>
+        <span class="f4-skill sk-b">Beginner</span>
+        <div class="f4-words">SERVICES &middot; BALANCERS &middot; DATABASES &middot; CACHES</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-teal" role="img" aria-label="Intermediate Level Category"></div>
+        <div class="f4-cat">Interviewer Techniques to Test Depth</div>
+        <span class="f4-skill sk-i">Intermediate</span>
+        <div class="f4-words">MEMOISE &middot; PROBE &middot; DOUBT &middot; EXPLORE</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-yellow" role="img" aria-label="Advanced Level Category"></div>
+        <div class="f4-cat">Communication Failure Modes in Interviews</div>
+        <span class="f4-skill sk-a">Advanced</span>
+        <div class="f4-words">DEFENSIVE &middot; ARGUMENTATIVE &middot; UNCLEAR &middot; DISTRACTED</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-indigo" role="img" aria-label="Expert Level Category"></div>
+        <div class="f4-cat">Complex System Design Question Archetypes</div>
+        <span class="f4-skill sk-e">Expert</span>
+        <div class="f4-words">REALTIME &middot; JOBSCHEDULER &middot; NOTIFICATION &middot; AUCTION</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

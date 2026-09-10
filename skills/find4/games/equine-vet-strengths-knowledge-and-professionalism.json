@@ -1,0 +1,202 @@
+{
+  "metadata": {
+    "generated_at": "2026-09-08T10:00:00Z",
+    "source": "stdin",
+    "suggested_name": "equine-vet-strengths.json",
+    "modified_at": "2026-09-08T15:07:46.362426",
+    "source_id": "stdin",
+    "step": "finalize_metadata",
+    "id_registry": {
+      "game_set_ids": [
+        "8f0a6d"
+      ],
+      "group_set_ids": [
+        "71b0ac",
+        "44a25e"
+      ],
+      "group_item_ids": [
+        "bbdb1d",
+        "700e88",
+        "a0838e",
+        "816d18",
+        "362ba9",
+        "1e8fd2",
+        "c2d895",
+        "97610a"
+      ]
+    },
+    "id": "WlfRej3yfXgy8iTg",
+    "split_info": {
+      "role": "split",
+      "split_at": "2026-09-08T15:08:03.459565+00:00",
+      "parent_id": "WlfRej3yfXgy8iTg",
+      "parent_file": "/home/claude/output/games/equine-vet-strengths.json",
+      "theme": "Equine Vet Strengths: Knowledge & Professionalism",
+      "slug": "equine-vet-strengths-knowledge-and-professionalism"
+    }
+  },
+  "game_sets": [
+    {
+      "theme": "Equine Vet Strengths: Knowledge & Professionalism",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "CASTRATION",
+              "SUTURING",
+              "ANAESTHESIA",
+              "DEBRIDEMENT"
+            ],
+            "category": "Field Surgical Procedures",
+            "color": "red",
+            "url": "https://www.aaep.org/horsehealth/surgery",
+            "description": "Common surgical and procedural skills performed by equine vets outside clinic settings",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://www.merckvetmanual.com/horse-owners/disorders-affecting-multiple-body-systems-of-horses"
+            ],
+            "theme": "Equine Vet Strengths: Knowledge & Professionalism",
+            "group_item_id": "bbdb1d",
+            "group_set_id": "71b0ac"
+          },
+          {
+            "words": [
+              "DEWORMING",
+              "RESISTANCE",
+              "FECAL",
+              "ROTATION"
+            ],
+            "category": "Parasite Management",
+            "color": "green",
+            "url": "https://www.aaep.org/horsehealth/parasite-control-guidelines",
+            "description": "Evidence-based strategies equine vets use to manage internal parasite burdens in horses",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.beva.org.uk/Veterinary-Support/Parasitology"
+            ],
+            "theme": "Equine Vet Strengths: Knowledge & Professionalism",
+            "group_item_id": "700e88",
+            "group_set_id": "71b0ac"
+          },
+          {
+            "words": [
+              "THOROUGHBRED",
+              "WARMBLOOD",
+              "ARABIAN",
+              "STOCK"
+            ],
+            "category": "Breed-Specific Knowledge",
+            "color": "blue",
+            "url": "https://www.aaep.org/horsehealth/breeds",
+            "description": "Understanding of inherited conditions and discipline predispositions unique to different horse breeds",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.merckvetmanual.com/horse-owners"
+            ],
+            "theme": "Equine Vet Strengths: Knowledge & Professionalism",
+            "group_item_id": "a0838e",
+            "group_set_id": "71b0ac"
+          },
+          {
+            "words": [
+              "FORAGE",
+              "ELECTROLYTES",
+              "METABOLISM",
+              "WEIGHT"
+            ],
+            "category": "Equine Nutrition",
+            "color": "yellow",
+            "url": "https://www.aaep.org/horsehealth/nutrition",
+            "description": "Nutritional concepts and feed management skills relevant to equine health and performance",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://www.merckvetmanual.com/horse-owners/feeding-and-managing-horses"
+            ],
+            "theme": "Equine Vet Strengths: Knowledge & Professionalism",
+            "group_item_id": "816d18",
+            "group_set_id": "71b0ac"
+          }
+        ],
+        [
+          {
+            "words": [
+              "REFERRAL",
+              "INSURANCE",
+              "RECORDS",
+              "MENTORING"
+            ],
+            "category": "Professional Responsibilities",
+            "color": "purple",
+            "url": "https://www.rcvs.org.uk/setting-standards/advice-and-guidance/code-of-professional-conduct-for-veterinary-surgeons/",
+            "description": "Administrative and ethical duties that define professionalism in equine veterinary practice",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://www.avma.org/resources-tools/avma-policies/principles-veterinary-medical-ethics-avma"
+            ],
+            "theme": "Equine Vet Strengths: Knowledge & Professionalism",
+            "group_item_id": "362ba9",
+            "group_set_id": "44a25e"
+          },
+          {
+            "words": [
+              "TOXIN",
+              "ZOONOSIS",
+              "DIFFERENTIAL",
+              "PATTERN"
+            ],
+            "category": "Diagnostic Reasoning",
+            "color": "teal",
+            "url": "https://www.merckvetmanual.com/toxicology/toxicoses-in-horses",
+            "description": "Analytical skills used to narrow down and identify disease causes in equine patients",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://www.aaep.org/horsehealth/infectious-disease"
+            ],
+            "theme": "Equine Vet Strengths: Knowledge & Professionalism",
+            "group_item_id": "1e8fd2",
+            "group_set_id": "44a25e"
+          },
+          {
+            "words": [
+              "EVENTER",
+              "RACEHORSE",
+              "ENDURANCE",
+              "SHOWJUMPER"
+            ],
+            "category": "Equine Disciplines",
+            "color": "orange",
+            "url": "https://www.aaep.org/horsehealth/performance-horse",
+            "description": "Competitive disciplines that shape the specific health demands and risks equine vets must understand",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.beva.org.uk/Veterinary-Support/Performance-Horse"
+            ],
+            "theme": "Equine Vet Strengths: Knowledge & Professionalism",
+            "group_item_id": "c2d895",
+            "group_set_id": "44a25e"
+          },
+          {
+            "words": [
+              "HOOF",
+              "FARRIER",
+              "LAMENESS",
+              "CONFORMATION"
+            ],
+            "category": "Musculoskeletal & Hoof Health",
+            "color": "indigo",
+            "url": "https://www.aaep.org/horsehealth/lameness",
+            "description": "Lower limb and structural assessment areas where vets collaborate closely with farriers",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://www.merckvetmanual.com/musculoskeletal-system/lameness-in-horses/overview-of-lameness-in-horses"
+            ],
+            "theme": "Equine Vet Strengths: Knowledge & Professionalism",
+            "group_item_id": "97610a",
+            "group_set_id": "44a25e"
+          }
+        ]
+      ],
+      "game_set_id": "8f0a6d"
+    }
+  ]
+}

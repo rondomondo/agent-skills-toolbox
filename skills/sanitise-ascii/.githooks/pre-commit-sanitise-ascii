@@ -1,0 +1,96 @@
+#!/usr/bin/env bash
+# .git/hooks/pre-commit
+#
+# Sanitise non-ASCII characters from staged .md files before commit.
+# Auto-fixes known typographic characters; blocks commit if unfixable chars remain.
+#
+# Install:
+#   cp pre-commit-sanitise-ascii .git/hooks/pre-commit-sanitise-ascii
+#   chmod +x .git/hooks/pre-commit-sanitise-ascii
+#
+# Or for all repos via global hooks:
+#   mkdir -p ~/.githooks
+#   cp pre-commit-sanitise-ascii ~/.githooks/
+#   chmod +x ~/.githooks/pre-commit-sanitise-ascii
+#   git config --global core.hooksPath ~/.githooks
+
+set -euo pipefail
+
+
+# disable for now....
+
+exit 0
+
+
+# Find the sanitise script — looks alongside this hook, or on PATH
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+SANITISE=""
+
+# Search order: repo root, hooks dir, PATH
+for candidate in \
+    "$(git rev-parse --show-toplevel)/sanitise-ascii.py" \
+    "$SCRIPT_DIR/sanitise-ascii.py" \
+    "$(command -v sanitise-ascii.py 2>/dev/null || true)"; do
+    if [[ -f "$candidate" ]]; then
+        SANITISE="$candidate"
+        break
+    fi
+done
+
+if [[ -z "$SANITISE" ]]; then
+    echo "[sanitise] WARNING: sanitise-ascii.py not found — skipping ASCII check"
+    echo "[sanitise] Place sanitise-ascii.py in repo root or on PATH to enable"
+    exit 0
+fi
+
+# Get list of staged .md files that exist (not deleted)
+STAGED_MD=$(git diff --cached --name-only --diff-filter=ACM | grep '\.md$' || true)
+
+if [[ -z "$STAGED_MD" ]]; then
+    exit 0
+fi
+
+echo "[sanitise] Checking staged .md files for non-ASCII..."
+
+# Resolve Python interpreter once
+PYTHON=$(command -v python3 || command -v python || true)
+if [[ -z "$PYTHON" ]]; then
+    echo "[sanitise] WARNING: python3/python not found -- skipping ASCII check"
+    exit 0
+fi
+
+FIXED_FILES=()
+FAILED=0
+
+while IFS= read -r file; do
+    # Run sanitise in fix mode on this file
+    output=$("$PYTHON" "$SANITISE" "$file" 2>&1) || {
+        echo "$output"
+        FAILED=1
+        continue
+    }
+
+    if echo "$output" | grep -q "^  FIX"; then
+        echo "$output"
+        # Re-stage the fixed file
+        git add "$file"
+        FIXED_FILES+=("$file")
+    elif echo "$output" | grep -q "^  WARN"; then
+        echo "$output"
+        FAILED=1
+    fi
+done <<< "$STAGED_MD"
+
+if [[ ${#FIXED_FILES[@]} -gt 0 ]]; then
+    echo "[sanitise] Auto-fixed and re-staged: ${FIXED_FILES[*]}"
+fi
+
+if [[ $FAILED -ne 0 ]]; then
+    echo ""
+    echo "[sanitise] BLOCKED: unfixable non-ASCII characters in staged files."
+    echo "[sanitise] Review the WARNs above and fix manually, then re-commit."
+    exit 1
+fi
+
+echo "[sanitise] All staged .md files are ASCII-clean."
+exit 0

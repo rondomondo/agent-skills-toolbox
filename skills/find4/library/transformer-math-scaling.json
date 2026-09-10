@@ -1,0 +1,372 @@
+{
+  "metadata": {
+    "generated_at": "2026-09-07T00:00:00Z",
+    "source": "https://jax-ml.github.io/scaling-book/transformers/",
+    "suggested_name": "transformer-math-scaling.json",
+    "modified_at": "2026-09-07T21:45:49.479063",
+    "source_id": "https://jax-ml.github.io/scaling-book/transformers/",
+    "step": "finalize_metadata",
+    "id_registry": {
+      "group_set_ids": [
+        "0effd4",
+        "e08ebf",
+        "02c26c",
+        "d78a96"
+      ],
+      "game_set_ids": [
+        "0254e3",
+        "6c0ac0"
+      ],
+      "group_item_ids": [
+        "d83d6d",
+        "8a7a6b",
+        "297184",
+        "0dfcc9",
+        "b059d1",
+        "08d389",
+        "d1954d",
+        "c89eb8",
+        "14f84c",
+        "7e582b",
+        "0c8288",
+        "4c62da",
+        "b2bc35",
+        "f1e600",
+        "14cd64",
+        "342c97"
+      ]
+    },
+    "id": "aF86B9mpRK-2XpwH",
+    "split_info": {
+      "role": "combined",
+      "split_at": "2026-09-07T21:45:58.261283+00:00",
+      "source_file": "/home/claude/output/games/transformer-math-scaling.json"
+    }
+  },
+  "game_sets": [
+    {
+      "theme": "Transformer Architecture and FLOP Counting",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "CONTRACTING",
+              "BATCHING",
+              "EINSUM",
+              "PRODUCT"
+            ],
+            "category": "Matmul dimension types",
+            "color": "blue",
+            "url": "https://jax-ml.github.io/scaling-book/transformers/",
+            "description": "Types of dimensions in a tensor contraction: contracting dims are summed over, batching dims pass through unchanged, einsum notation describes both, and product of all dims gives FLOPs",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://numpy.org/doc/stable/reference/generated/numpy.einsum.html"
+            ],
+            "theme": "Transformer Architecture and FLOP Counting",
+            "group_item_id": "d83d6d",
+            "group_set_id": "0effd4"
+          },
+          {
+            "words": [
+              "PREFILL",
+              "GENERATION",
+              "DECODE",
+              "CACHE"
+            ],
+            "category": "LLM inference phases and structures",
+            "color": "green",
+            "url": "https://jax-ml.github.io/scaling-book/transformers/",
+            "description": "The two main phases of transformer inference: prefill processes the prompt and populates the KV cache, and generation (decode) samples tokens using that cache",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://huggingface.co/docs/transformers/llm_tutorial"
+            ],
+            "theme": "Transformer Architecture and FLOP Counting",
+            "group_item_id": "8a7a6b",
+            "group_set_id": "0effd4"
+          },
+          {
+            "words": [
+              "MHA",
+              "MQA",
+              "GMQA",
+              "GQA"
+            ],
+            "category": "Attention head variants",
+            "color": "red",
+            "url": "https://jax-ml.github.io/scaling-book/transformers/",
+            "description": "Multi-Head Attention (MHA), Multi-Query Attention (MQA), Grouped Multi-Query Attention (GMQA/GQA) — variants trading KV head count for memory savings",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://arxiv.org/abs/2305.13245"
+            ],
+            "theme": "Transformer Architecture and FLOP Counting",
+            "group_item_id": "297184",
+            "group_set_id": "0effd4"
+          },
+          {
+            "words": [
+              "FORWARD",
+              "BACKWARD",
+              "GRADIENT",
+              "CHECKPOINT"
+            ],
+            "category": "Training pass components",
+            "color": "yellow",
+            "url": "https://jax-ml.github.io/scaling-book/transformers/",
+            "description": "The forward pass computes outputs (2x FLOPs), backward computes gradients (4x FLOPs), and gradient checkpointing trades recompute for memory",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://jax.readthedocs.io/en/latest/jax.checkpoint.html"
+            ],
+            "theme": "Transformer Architecture and FLOP Counting",
+            "group_item_id": "0dfcc9",
+            "group_set_id": "0effd4"
+          }
+        ],
+        [
+          {
+            "words": [
+              "SOFTMAX",
+              "CHUNK",
+              "SRAM",
+              "TILING"
+            ],
+            "category": "Flash Attention mechanisms",
+            "color": "purple",
+            "url": "https://jax-ml.github.io/scaling-book/transformers/",
+            "description": "Flash Attention avoids materialising the full attention matrix by computing softmax in chunks (tiles), keeping running max/sum in on-chip SRAM to reduce HBM pressure",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://arxiv.org/abs/2205.14135"
+            ],
+            "theme": "Transformer Architecture and FLOP Counting",
+            "group_item_id": "b059d1",
+            "group_set_id": "e08ebf"
+          },
+          {
+            "words": [
+              "SPARSITY",
+              "ROUTING",
+              "EXPERT",
+              "GATING"
+            ],
+            "category": "Mixture-of-Experts components",
+            "color": "teal",
+            "url": "https://jax-ml.github.io/scaling-book/transformers/",
+            "description": "MoE models use a gating network to route each token to k of E experts, achieving sparsity (E/k) where only a fraction of parameters activate per token",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://arxiv.org/abs/2101.03961"
+            ],
+            "theme": "Transformer Architecture and FLOP Counting",
+            "group_item_id": "08d389",
+            "group_set_id": "e08ebf"
+          },
+          {
+            "words": [
+              "PRENORM",
+              "POSTNORM",
+              "RESIDUAL",
+              "LAYERNORM"
+            ],
+            "category": "Transformer normalisation patterns",
+            "color": "orange",
+            "url": "https://jax-ml.github.io/scaling-book/transformers/",
+            "description": "Pre-norm applies LayerNorm before the residual branch (x + attn(norm(x))), post-norm applies it after (norm(x + attn(x))); LLaMA-3 uses pre-norm",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://arxiv.org/abs/1706.03762"
+            ],
+            "theme": "Transformer Architecture and FLOP Counting",
+            "group_item_id": "d1954d",
+            "group_set_id": "e08ebf"
+          },
+          {
+            "words": [
+              "REMAT",
+              "REMATERIALISE",
+              "ACTIVATION",
+              "MEMORY"
+            ],
+            "category": "Gradient checkpointing strategies",
+            "color": "indigo",
+            "url": "https://jax-ml.github.io/scaling-book/transformers/",
+            "description": "jax.remat / jax.checkpoint lets you trade extra FLOPs for memory by discarding and recomputing activations during the backward pass instead of saving them all",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://jax.readthedocs.io/en/latest/jax.checkpoint.html"
+            ],
+            "theme": "Transformer Architecture and FLOP Counting",
+            "group_item_id": "c89eb8",
+            "group_set_id": "e08ebf"
+          }
+        ]
+      ],
+      "game_set_id": "0254e3"
+    },
+    {
+      "theme": "Transformer Parameters, Arithmetic and Scaling Laws",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "TOKENS",
+              "PARAMS",
+              "FLOPS",
+              "UTILISATION"
+            ],
+            "category": "Scaling law quantities",
+            "color": "red",
+            "url": "https://jax-ml.github.io/scaling-book/transformers/",
+            "description": "The fundamental quantities in the 6 * num_params * num_tokens FLOP rule, with hardware utilisation measuring how much of theoretical peak you actually achieve",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://arxiv.org/abs/2001.08361"
+            ],
+            "theme": "Transformer Parameters, Arithmetic and Scaling Laws",
+            "group_item_id": "14f84c",
+            "group_set_id": "02c26c"
+          },
+          {
+            "words": [
+              "QUERY",
+              "KEY",
+              "VALUE",
+              "OUTPUT"
+            ],
+            "category": "Attention projection matrices",
+            "color": "blue",
+            "url": "https://jax-ml.github.io/scaling-book/transformers/",
+            "description": "The four weight matrices in the attention block: Q, K, V projections map input to head space; O (output) maps back to model dimension D",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://arxiv.org/abs/1706.03762"
+            ],
+            "theme": "Transformer Parameters, Arithmetic and Scaling Laws",
+            "group_item_id": "7e582b",
+            "group_set_id": "02c26c"
+          },
+          {
+            "words": [
+              "ALLTOALL",
+              "ALLGATHER",
+              "SHARDING",
+              "COMM"
+            ],
+            "category": "MoE collective communication ops",
+            "color": "teal",
+            "url": "https://jax-ml.github.io/scaling-book/transformers/",
+            "description": "MoE layers introduce two AllToAll collectives to route tokens to remote experts and return results; cost is 1/4 of an AllGather on a bidirectional ring",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://jax.readthedocs.io/en/latest/"
+            ],
+            "theme": "Transformer Parameters, Arithmetic and Scaling Laws",
+            "group_item_id": "0c8288",
+            "group_set_id": "02c26c"
+          },
+          {
+            "words": [
+              "UNEMBED",
+              "VOCAB",
+              "LOGITS",
+              "PROJECTION"
+            ],
+            "category": "Output layer components",
+            "color": "green",
+            "url": "https://jax-ml.github.io/scaling-book/transformers/",
+            "description": "The final non-per-layer matmul that projects from model dimension D to vocab size V, producing logits; its cost is 6BTDV FLOPs and DV parameters",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://jax-ml.github.io/scaling-book/transformers/"
+            ],
+            "theme": "Transformer Parameters, Arithmetic and Scaling Laws",
+            "group_item_id": "4c62da",
+            "group_set_id": "02c26c"
+          }
+        ],
+        [
+          {
+            "words": [
+              "ARITHMETIC",
+              "INTENSITY",
+              "ROOFLINE",
+              "BANDWIDTH"
+            ],
+            "category": "Hardware performance model terms",
+            "color": "yellow",
+            "url": "https://jax-ml.github.io/scaling-book/transformers/",
+            "description": "Arithmetic intensity (FLOPs per byte) determines whether an op is compute-bound or memory-bandwidth-bound on the roofline model",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://jax-ml.github.io/scaling-book/rooflines/"
+            ],
+            "theme": "Transformer Parameters, Arithmetic and Scaling Laws",
+            "group_item_id": "b2bc35",
+            "group_set_id": "d78a96"
+          },
+          {
+            "words": [
+              "BFLOAT16",
+              "INT8",
+              "FP8",
+              "QUANTISATION"
+            ],
+            "category": "Numeric precision formats in LLM training",
+            "color": "orange",
+            "url": "https://jax-ml.github.io/scaling-book/transformers/",
+            "description": "Different floating-point formats trade precision for memory and throughput; int8 KV caches halve KV memory; FP8 used in DeepSeek v3 training",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://arxiv.org/abs/2412.19437"
+            ],
+            "theme": "Transformer Parameters, Arithmetic and Scaling Laws",
+            "group_item_id": "f1e600",
+            "group_set_id": "d78a96"
+          },
+          {
+            "words": [
+              "CAUSAL",
+              "BIDIRECTIONAL",
+              "MASK",
+              "DECODER"
+            ],
+            "category": "Attention masking approaches",
+            "color": "purple",
+            "url": "https://jax-ml.github.io/scaling-book/transformers/",
+            "description": "Causal masking prevents tokens attending to future positions (decoder-only), halving useful attention FLOPs vs bidirectional (encoder) attention",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://arxiv.org/abs/1706.03762"
+            ],
+            "theme": "Transformer Parameters, Arithmetic and Scaling Laws",
+            "group_item_id": "14cd64",
+            "group_set_id": "d78a96"
+          },
+          {
+            "words": [
+              "BLOCK",
+              "RECOMPUTE",
+              "MATMUL",
+              "POLICY"
+            ],
+            "category": "Rematerialisation checkpointing strategies",
+            "color": "indigo",
+            "url": "https://jax-ml.github.io/scaling-book/transformers/",
+            "description": "Block remat saves only layer inputs (1 checkpoint/layer), big-matmuls-only saves 7 outputs/layer; each policy trades FLOPs for activation memory differently",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://jax.readthedocs.io/en/latest/jax.checkpoint.html"
+            ],
+            "theme": "Transformer Parameters, Arithmetic and Scaling Laws",
+            "group_item_id": "342c97",
+            "group_set_id": "d78a96"
+          }
+        ]
+      ],
+      "game_set_id": "6c0ac0"
+    }
+  ]
+}

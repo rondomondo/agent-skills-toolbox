@@ -1,0 +1,186 @@
+{
+  "metadata": {
+    "generated_at": "2026-09-07T12:00:00Z",
+    "source": "https://jax-ml.github.io/scaling-book/gpus/",
+    "suggested_name": "gpu-scaling-book.json",
+    "modified_at": "2026-09-07T21:13:58.983682",
+    "source_id": "https://jax-ml.github.io/scaling-book/gpus/",
+    "step": "finalize_metadata",
+    "id_registry": {
+      "game_set_ids": [
+        "b0a4e4"
+      ],
+      "group_set_ids": [
+        "8ea60f",
+        "d8370d"
+      ],
+      "group_item_ids": [
+        "04576c",
+        "0a704d",
+        "70cfd3",
+        "b3fb39",
+        "befb35",
+        "7980fa",
+        "71b6a2",
+        "835063"
+      ]
+    },
+    "id": "gj7cz7i48Waas1YU",
+    "split_info": {
+      "role": "split",
+      "split_at": "2026-09-07T21:14:07.526749+00:00",
+      "parent_id": "gj7cz7i48Waas1YU",
+      "parent_file": "/home/claude/output/games/gpu-scaling-book.json",
+      "theme": "GPU Hardware Internals",
+      "slug": "gpu-hardware-internals"
+    }
+  },
+  "game_sets": [
+    {
+      "theme": "GPU Hardware Internals",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "SM",
+              "SMEM",
+              "TMEM",
+              "HBM"
+            ],
+            "category": "GPU Memory Hierarchy Levels",
+            "color": "blue",
+            "url": "https://jax-ml.github.io/scaling-book/gpus/",
+            "description": "Memory structures in a GPU, from fastest on-chip (SMEM, TMEM) to off-chip HBM. Each SM has its own SMEM; TMEM was introduced in Blackwell.",
+            "skill_level": "Intermediate",
+            "additional_sources": [],
+            "theme": "GPU Hardware Internals",
+            "group_item_id": "04576c",
+            "group_set_id": "8ea60f"
+          },
+          {
+            "words": [
+              "VOLTA",
+              "AMPERE",
+              "HOPPER",
+              "BLACKWELL"
+            ],
+            "category": "NVIDIA GPU Microarchitectures",
+            "color": "green",
+            "url": "https://jax-ml.github.io/scaling-book/gpus/",
+            "description": "Four consecutive NVIDIA data-center GPU generations: V100 (Volta), A100 (Ampere), H100 (Hopper), B200 (Blackwell).",
+            "skill_level": "Beginner",
+            "additional_sources": [],
+            "theme": "GPU Hardware Internals",
+            "group_item_id": "0a704d",
+            "group_set_id": "8ea60f"
+          },
+          {
+            "words": [
+              "FMA",
+              "SIMT",
+              "WARP",
+              "DIVERGENCE"
+            ],
+            "category": "CUDA Execution Model Concepts",
+            "color": "red",
+            "url": "https://jax-ml.github.io/scaling-book/gpus/",
+            "description": "Core concepts of how CUDA cores execute: Fused Multiply-Add, Single Instruction Multiple Threads, the 32-thread execution unit (warp), and warp divergence that degrades performance.",
+            "skill_level": "Advanced",
+            "additional_sources": [],
+            "theme": "GPU Hardware Internals",
+            "group_item_id": "70cfd3",
+            "group_set_id": "8ea60f"
+          },
+          {
+            "words": [
+              "MXU",
+              "VPU",
+              "VMEM",
+              "MEGACORE"
+            ],
+            "category": "TPU Hardware Equivalents",
+            "color": "yellow",
+            "url": "https://jax-ml.github.io/scaling-book/gpus/",
+            "description": "TPU-side components that correspond to GPU Tensor Cores, Warp Schedulers, SMEM, and the pairing of two TensorCores — useful for comparing GPU vs. TPU architecture.",
+            "skill_level": "Expert",
+            "additional_sources": [],
+            "theme": "GPU Hardware Internals",
+            "group_item_id": "b3fb39",
+            "group_set_id": "8ea60f"
+          }
+        ],
+        [
+          {
+            "words": [
+              "H100",
+              "H200",
+              "B200",
+              "A100"
+            ],
+            "category": "NVIDIA Data-Center GPUs",
+            "color": "teal",
+            "url": "https://jax-ml.github.io/scaling-book/gpus/",
+            "description": "Specific GPU model numbers covered in the scaling book, each with distinct specs for SMs, HBM capacity, FLOPs/s, and memory bandwidth.",
+            "skill_level": "Beginner",
+            "additional_sources": [],
+            "theme": "GPU Hardware Internals",
+            "group_item_id": "befb35",
+            "group_set_id": "d8370d"
+          },
+          {
+            "words": [
+              "REGISTERS",
+              "L2",
+              "SMEM",
+              "HBM"
+            ],
+            "category": "GPU Memory — Fastest to Slowest",
+            "color": "orange",
+            "url": "https://jax-ml.github.io/scaling-book/gpus/",
+            "description": "The four-level memory hierarchy in a GPU ordered by speed and proximity to compute: per-subpartition register file, shared L2 cache, on-chip SMEM, and off-chip HBM.",
+            "skill_level": "Intermediate",
+            "additional_sources": [],
+            "theme": "GPU Hardware Internals",
+            "group_item_id": "7980fa",
+            "group_set_id": "d8370d"
+          },
+          {
+            "words": [
+              "INTENSITY",
+              "ROOFLINE",
+              "BANDWIDTH",
+              "FLOPS"
+            ],
+            "category": "Compute Bound vs Memory Bound Analysis",
+            "color": "purple",
+            "url": "https://jax-ml.github.io/scaling-book/gpus/",
+            "description": "The roofline model determines whether a workload is limited by arithmetic intensity (FLOPs/byte), peak compute (FLOPs/s), or memory bandwidth. Critical for understanding GPU utilisation.",
+            "skill_level": "Advanced",
+            "additional_sources": [],
+            "theme": "GPU Hardware Internals",
+            "group_item_id": "71b6a2",
+            "group_set_id": "d8370d"
+          },
+          {
+            "words": [
+              "BF16",
+              "FP8",
+              "FP16",
+              "FP4"
+            ],
+            "category": "Supported Matrix Multiplication Precisions",
+            "color": "indigo",
+            "url": "https://jax-ml.github.io/scaling-book/gpus/",
+            "description": "Number formats supported by NVIDIA Tensor Cores for matmul. Lower precision yields higher throughput: fp8 doubles fp16 FLOPs/s; fp4 (Blackwell only) doubles fp8.",
+            "skill_level": "Intermediate",
+            "additional_sources": [],
+            "theme": "GPU Hardware Internals",
+            "group_item_id": "835063",
+            "group_set_id": "d8370d"
+          }
+        ]
+      ],
+      "game_set_id": "b0a4e4"
+    }
+  ]
+}
