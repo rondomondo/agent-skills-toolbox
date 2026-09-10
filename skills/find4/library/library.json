@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-09-10T20:34:13",
-    "library_version": "2026-09-10T20:34:13",
+    "generated_at": "2026-09-10T20:36:19",
+    "library_version": "2026-09-10T20:36:19",
     "trigger": "rondomondo via Publish find4 games to github - workflow call run 34527152704",
     "source": "library/themes.json",
     "game_set_count": 24,
@@ -33,7 +33,7 @@
       "f2ed89": "0d4476d490725c00b5391d01894c2b99b76350f16948a4d1583c220338f6ee6c"
     },
     "content_hash": "241d529be927bd491d99cf0ef64dd305fffa3380812802c9609aeeea9562b3b1",
-    "metadata_fingerprint": "f95039cf31637fa7"
+    "metadata_fingerprint": "bb34dbb347f50437"
   },
   "game_sets": [
     {

@@ -6,7 +6,7 @@
     "short_link": "ff-ee240d72",
     "games_file": "construction-management-core-competencies.json",
     "config_file": "library/construction-management-competencies/construction-management-core-competencies.json",
-    "last_modified": "2026-09-10T20:34:12.422555",
+    "last_modified": "2026-09-10T20:36:19.527444",
     "content_hash": "4261c3099fa1af07d605b9fb02ccccec1edc6a29e9aa277afbcab75378f50488",
     "total_words": 32,
     "categories": [
@@ -52,7 +52,7 @@
     "short_link": "ff-31f758c1",
     "games_file": "construction-management-procurement-leadership-and-compliance.json",
     "config_file": "library/construction-management-competencies/construction-management-procurement-leadership-and-compliance.json",
-    "last_modified": "2026-09-10T20:34:12.422555",
+    "last_modified": "2026-09-10T20:36:19.527444",
     "content_hash": "65c77bdad58794c5d91fe5bb6a7074c833d8ca65f0a73ca83e3a7a980609dbde",
     "total_words": 32,
     "categories": [
@@ -98,7 +98,7 @@
     "short_link": "ff-257383cf",
     "games_file": "equine-vet-strengths-clinical-and-emergency.json",
     "config_file": "library/equine-vet-strengths/equine-vet-strengths-clinical-and-emergency.json",
-    "last_modified": "2026-09-10T20:34:12.422555",
+    "last_modified": "2026-09-10T20:36:19.527444",
     "content_hash": "8f6f39d993d68d63478e5869b68bbe86ad88f0f02f8de1694c9652a38ab001de",
     "total_words": 32,
     "categories": [
@@ -144,7 +144,7 @@
     "short_link": "ff-71805d3d",
     "games_file": "equine-vet-strengths-knowledge-and-professionalism.json",
     "config_file": "library/equine-vet-strengths/equine-vet-strengths-knowledge-and-professionalism.json",
-    "last_modified": "2026-09-10T20:34:12.422555",
+    "last_modified": "2026-09-10T20:36:19.527444",
     "content_hash": "0210572c66d2de501ba2eb934179267298fd0b3c394bc714f689ddb66c5d3318",
     "total_words": 32,
     "categories": [
@@ -190,7 +190,7 @@
     "short_link": "ff-ccf89713",
     "games_file": "etsy-llm-search-relevance-evaluation-and-future-directions.json",
     "config_file": "library/etsy-llm-search-relevance/etsy-llm-search-relevance-evaluation-and-future-directions.json",
-    "last_modified": "2026-09-10T20:34:12.616170",
+    "last_modified": "2026-09-10T20:36:19.527444",
     "content_hash": "b587002e3afb5713edb318b0d205773decf0dba18eb0ca1ac2db27057436d19c",
     "total_words": 32,
     "categories": [
@@ -235,7 +235,7 @@
     "short_link": "ff-2863210d",
     "games_file": "etsy-llm-search-relevance-models-and-data.json",
     "config_file": "library/etsy-llm-search-relevance/etsy-llm-search-relevance-models-and-data.json",
-    "last_modified": "2026-09-10T20:34:12.650123",
+    "last_modified": "2026-09-10T20:36:19.527444",
     "content_hash": "66fed2d783da7adc4cf2e1d55c23f313635572c0e97ea64b81de5e88dce63b22",
     "total_words": 32,
     "categories": [
@@ -281,7 +281,7 @@
     "short_link": "ff-aaa8c7d7",
     "games_file": "etsy-s-llm-powered-search-relevance-framework.json",
     "config_file": "library/etsy-llm-search-relevance/etsy-s-llm-powered-search-relevance-framework.json",
-    "last_modified": "2026-09-10T20:34:12.685380",
+    "last_modified": "2026-09-10T20:36:19.527444",
     "content_hash": "3763392617e9cab9d728e849b913406b2e54450963097a7b5d214b3e64b4235d",
     "total_words": 32,
     "categories": [
@@ -327,7 +327,7 @@
     "short_link": "ff-dad8ec9c",
     "games_file": "etsy-the-human-marketplace.json",
     "config_file": "library/etsy-marketplace-concepts/etsy-the-human-marketplace.json",
-    "last_modified": "2026-09-10T20:34:12.422555",
+    "last_modified": "2026-09-10T20:36:19.527444",
     "content_hash": "88eb8088efc900b6457ccfd5817d207bced7b2ab0978a02ffc7eb5b91793627c",
     "total_words": 32,
     "categories": [
@@ -373,7 +373,7 @@
     "short_link": "ff-fd940460",
     "games_file": "event-driven-architecture.json",
     "config_file": "library/event-driven-architecture/event-driven-architecture.json",
-    "last_modified": "2026-09-10T20:34:12.422555",
+    "last_modified": "2026-09-10T20:36:19.527444",
     "content_hash": "d2a10673bd5166a7d9d101ac030cdc49c76494661a568d20dd4b5bcd7b758af0",
     "total_words": 32,
     "categories": [
@@ -419,7 +419,7 @@
     "short_link": "ff-6232afa3",
     "games_file": "fifa-world-cup-records-and-legends.json",
     "config_file": "library/world-cup-facts/fifa-world-cup-records-and-legends.json",
-    "last_modified": "2026-09-10T20:34:12.422555",
+    "last_modified": "2026-09-10T20:36:19.528055",
     "content_hash": "00ebc72cbf8b96cdff73c9d897fa104d568f1cb0eaeeb8a5ed0a09e60d4d5501",
     "total_words": 32,
     "categories": [
@@ -465,7 +465,7 @@
     "short_link": "ff-dd50da29",
     "games_file": "gpu-networking-and-llm-parallelism.json",
     "config_file": "library/gpu-scaling-book/gpu-networking-and-llm-parallelism.json",
-    "last_modified": "2026-09-10T20:34:12.422555",
+    "last_modified": "2026-09-10T20:36:19.528055",
     "content_hash": "02e241504a47265f3942b9d963dd91f361d10725fe43d9280b39cd3984835c93",
     "total_words": 32,
     "categories": [
@@ -510,7 +510,7 @@
     "short_link": "ff-5f4f034e",
     "games_file": "llm-evaluation-types-and-methods.json",
     "config_file": "library/llm-evaluation-types-and-evals/llm-evaluation-types-and-methods.json",
-    "last_modified": "2026-09-10T20:34:12.428666",
+    "last_modified": "2026-09-10T20:36:19.535055",
     "content_hash": "7d8604a84e19c9fc8e241774f033c631883405c43a1815d91351c2d4e3f318a8",
     "total_words": 32,
     "categories": [
@@ -556,7 +556,7 @@
     "short_link": "ff-f26f9c3d",
     "games_file": "llm-hardware-and-architecture-deep-dive.json",
     "config_file": "library/jax-scaling-book-llm-systems/llm-hardware-and-architecture-deep-dive.json",
-    "last_modified": "2026-09-10T20:34:12.428666",
+    "last_modified": "2026-09-10T20:36:19.535055",
     "content_hash": "20d31035fb1dc66c0390c6bba45e7af29971b11b1f70a7b6bd2c5f7274e6fbba",
     "total_words": 32,
     "categories": [
@@ -602,7 +602,7 @@
     "short_link": "ff-8f573843",
     "games_file": "linux-performance-observability-with-ebpf.json",
     "config_file": "library/ebpf-tracing-tools-brendan-gregg/linux-performance-observability-with-ebpf.json",
-    "last_modified": "2026-09-10T20:34:12.428666",
+    "last_modified": "2026-09-10T20:36:19.535055",
     "content_hash": "944c7b60d99e2bef644950080340f5d8d38951861d660a1299b8b61e0b33398e",
     "total_words": 32,
     "categories": [
@@ -648,7 +648,7 @@
     "short_link": "ff-b50c3ef5",
     "games_file": "linux-process-memory-metrics.json",
     "config_file": "library/linux-memory-metrics-vsz-rss-pss/linux-process-memory-metrics.json",
-    "last_modified": "2026-09-10T20:34:12.428666",
+    "last_modified": "2026-09-10T20:36:19.535055",
     "content_hash": "cedc93290a0ab8e73c5667a1c7359eb168bf2885b50173a6f563f80bdcff7c1f",
     "total_words": 32,
     "categories": [
@@ -694,7 +694,7 @@
     "short_link": "ff-273687e2",
     "games_file": "ml-systems-for-marketplace-search-broader-concepts.json",
     "config_file": "library/etsy-llm-search-relevance/ml-systems-for-marketplace-search-broader-concepts.json",
-    "last_modified": "2026-09-10T20:34:12.718859",
+    "last_modified": "2026-09-10T20:36:19.535055",
     "content_hash": "a402878f454b13a454dd54f5ba5bbcaf099bae1a1c75cca9712f0e8c62d90094",
     "total_words": 32,
     "categories": [
@@ -740,7 +740,7 @@
     "short_link": "ff-155d0fed",
     "games_file": "observability-frameworks-red-use-and-four-golden-signals.json",
     "config_file": "library/observability-frameworks-red-use-golden-signals/observability-frameworks-red-use-and-four-golden-signals.json",
-    "last_modified": "2026-09-10T20:34:12.429666",
+    "last_modified": "2026-09-10T20:36:19.535055",
     "content_hash": "256a05fea1fb52ce75cba851e6470f58bfa57de3073fd34a0d05dfaa76f1715a",
     "total_words": 32,
     "categories": [
@@ -785,7 +785,7 @@
     "short_link": "ff-54c6a4cd",
     "games_file": "scaling-llms-on-hardware-systems-concepts.json",
     "config_file": "library/jax-scaling-book-llm-systems/scaling-llms-on-hardware-systems-concepts.json",
-    "last_modified": "2026-09-10T20:34:12.429666",
+    "last_modified": "2026-09-10T20:36:19.535055",
     "content_hash": "b848a5aed3dde0c481d74171bf5161d9e8618f057a16d861c0c47572277cb62a",
     "total_words": 32,
     "categories": [
@@ -830,7 +830,7 @@
     "short_link": "ff-14d5ac48",
     "games_file": "transformer-architecture-and-flop-counting.json",
     "config_file": "library/transformer-math-scaling/transformer-architecture-and-flop-counting.json",
-    "last_modified": "2026-09-10T20:34:12.443666",
+    "last_modified": "2026-09-10T20:36:19.551055",
     "content_hash": "25920f6f66798627e907b76fb327c963c7dd831b5be38d35afb0c711d7b675db",
     "total_words": 32,
     "categories": [
@@ -876,7 +876,7 @@
     "short_link": "ff-229bdf94",
     "games_file": "transformer-parameters-arithmetic-and-scaling-laws.json",
     "config_file": "library/transformer-math-scaling/transformer-parameters-arithmetic-and-scaling-laws.json",
-    "last_modified": "2026-09-10T20:34:12.443666",
+    "last_modified": "2026-09-10T20:36:19.551055",
     "content_hash": "0ccdcd771e917f674d930826fdfa6456027c46d825bf1a46703929effdc6bf9f",
     "total_words": 32,
     "categories": [
@@ -922,7 +922,7 @@
     "short_link": "ff-93cf4694",
     "games_file": "ebpf-architecture-and-observability.json",
     "config_file": "library/brendangregg-ebpf/ebpf-architecture-and-observability.json",
-    "last_modified": "2026-09-10T20:34:12.422555",
+    "last_modified": "2026-09-10T20:36:19.527444",
     "content_hash": "7692844fd0a82f3c49373eef768bf6b4521a8eb49ccb7d6136674b1838f21937",
     "total_words": 32,
     "categories": [
@@ -968,7 +968,7 @@
     "short_link": "ff-73fc156f",
     "games_file": "ebpf-tracing-tools-and-concepts.json",
     "config_file": "library/ebpf-tracing-tools-brendan-gregg/ebpf-tracing-tools-and-concepts.json",
-    "last_modified": "2026-09-10T20:34:12.422555",
+    "last_modified": "2026-09-10T20:36:19.527444",
     "content_hash": "9a58e5e93a4e60017fa59f676a26603270c79bdc18042ff3158d186b8d9a0eae",
     "total_words": 32,
     "categories": [
@@ -1014,7 +1014,7 @@
     "short_link": "ff-6b72bef9",
     "games_file": "vllm-architecture-and-production-ai-inference.json",
     "config_file": "library/vllm-inference-serving/vllm-architecture-and-production-ai-inference.json",
-    "last_modified": "2026-09-10T20:34:12.443666",
+    "last_modified": "2026-09-10T20:36:19.551055",
     "content_hash": "37c89f750241e5f28a62bb8e80f7cc314ed1e0cfaa844d9f4e32bd524ca77d36",
     "total_words": 32,
     "categories": [
@@ -1060,7 +1060,7 @@
     "short_link": "ff-589d65f1",
     "games_file": "vllm-faster-llm-inference-and-serving.json",
     "config_file": "library/vllm-inference-serving/vllm-faster-llm-inference-and-serving.json",
-    "last_modified": "2026-09-10T20:34:12.443666",
+    "last_modified": "2026-09-10T20:36:19.551055",
     "content_hash": "0d4476d490725c00b5391d01894c2b99b76350f16948a4d1583c220338f6ee6c",
     "total_words": 32,
     "categories": [
