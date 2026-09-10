@@ -1,2 +1,0 @@
-output/games/etsy-llm-search-relevance/etsy-s-llm-powered-search-relevance-framework.json
-output/games/etsy-llm-search-relevance/ml-systems-for-marketplace-search-broader-concepts.json
