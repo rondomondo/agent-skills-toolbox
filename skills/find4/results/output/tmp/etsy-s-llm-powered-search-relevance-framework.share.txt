@@ -1,0 +1,9 @@
+[share_game.sh] called with arguments 'output/games/etsy-llm-search-relevance/etsy-s-llm-powered-search-relevance-framework.json'
+[share_game.sh] Game file is large (7431 bytes). Share URLs over 8KB may be truncated by some browsers/apps.
+[share_game.sh] share_game.sh  --compress --no-compact --format json --output-filename output/games/html/etsy-s-llm-powered-search-relevance-framework.html_share_url.json 
+[share_game.sh] Share link written to output/games/html/etsy-s-llm-powered-search-relevance-framework.html_share_url.json
+{
+  "input_file": "output/games/etsy-llm-search-relevance/etsy-s-llm-powered-search-relevance-framework.json",
+  "share_url_file": "output/games/html/etsy-s-llm-powered-search-relevance-framework.html_share_url.json"
+}
+[share_game.sh] [output/games/etsy-llm-search-relevance/etsy-s-llm-powered-search-relevance-framework.json] completed successfully
