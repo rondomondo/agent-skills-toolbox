@@ -1,0 +1,32 @@
+short_link: ff-b40c3d5d short_path: games/system-design-patterns.json config_file: library/system-design-patterns/system-design-patterns.json
+short_link: ff-9c14bd2d short_path: games/system-design-interview-concepts.json config_file: library/system-design-patterns/system-design-interview-concepts.json
+  OK   53ce27: System Design Interview Concepts
+  OK   43b32a: System Design Patterns
+
+Validation Report:
+--------------------------------------------------------------------------------
+No validation errors found.
+
+Duplicate Analysis:
+
+Processed 4 files
+Found 2 unique game sets
+
+Theme Index Summary:
+------------------------------------------------------------------------------------------------------------------------
+Theme                          Game Set ID     Words    Groups   Vers    File
+------------------------------------------------------------------------------------------------------------------------
+System Design Interview Concep 53ce27          32       8        1   [v] system-design-interview-concepts.json
+System Design Patterns         43b32a          32       8        1   [v] system-design-patterns.json
+------------------------------------------------------------------------------------------------------------------------
+
+Theme index saved to library/themes.json
+
+Building library.json from library/themes.json ...
+
+Done.
+  game_sets : 2
+  missing   : 0
+  hash      : df211dd6414d1803...
+  fingerprint: 895c256aff206c25
+  output    : library/library.json

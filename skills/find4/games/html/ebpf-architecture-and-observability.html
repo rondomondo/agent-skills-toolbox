@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find4 &mdash; eBPF Architecture and Observability</title>
+
+    <meta name="description" content="A Advanced-level Find4 word-grouping game on &#x27;eBPF Architecture and Observability&#x27;. 2 rounds, 32 words. Find the hidden connections between groups of 4.">
+    <meta name="keywords" content="eBPF Architecture and Observability, CPU Performance Tools, Block I/O Tracing Tools, Network TCP Observability Tools, Memory Analysis Tools, eBPF Networking Hook Points, eBPF Safety Properties, eBPF Helper Functions, Pre-eBPF Tracing Predecessors">
+    <meta name="author" content="Find4">
+    <meta name="theme-color" content="#0f6e56">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://find4.org/#game=vZhrb9s2FIb_CuGvsy3n7vhbk7ZrMXTx0BQbNgQGRR1JnClRI6mkXpH_vvdQsufc0LTxBgQIxes578NzSPrLoKIgMxnkYPZlUFBNTgbKFjIMZoP9yf7xaHI62ptcTiaz-Pf7YDjwtnWK0F6G0PhZktzc3IxTR3Um68JRUYyVrRJKm3xchsrwiLYoyPO8tax45HbvUez5p7c1elY207l-xIC949nR_mxyOJ6cTE-mhxszFjr7JksCNeif61oa_TctNt4PBzpbYIj2wa2iFrB04SlgAT-Y_TE42lMpTQZXw0HhbNtsN52q_Ohgiimy7HAfymz66EDVuhPJYyWP0ekgo4PY-yg7OD7llWWW0cmEm2Q-TQ-4Zv8gO4lN-6dTqVA43pvmpweDq1s2FB78aNI36S-rQ_fJ1ctfF0v2rTEaNtW5ZfudNax0rNw0Pq7q3mR8eno4ne79EBmjdyMhYlg8tVLfnOu4RFLaihJlZJtRYtvQtCFh9XzyJOZQUtwHdDZ_K145VUIpFVpHQtaZuEg9uWuZapi8YttNW3BnTDCSW51H6DyydzrfQp81OZb9yzcutWHLgzH6xroOn2vrv4xkJVXTZtglKNk8x0fQmB-aOBv1AHyFECosb6PB-fyTmJPLratkrUhcWms8T2KNdWh3lOGrdeZbNnFGXjndBA0tZ4Oz8_MEjcFJzB94fhFKGURF0rObbIJXJWWtISfgA9VqNRS2HnELWy_YH6fTlmeMssCz2Joaq5a6LhjCUhuzMHRNbOur7Jr9ybrdq3mgNIsuJKNea2cKHco2jS5oe629dUmqVIKJ06SSCEeXRJuTXuBxs2IJv4daH208ah1r26GK-j5Qb4dbYFNtfW1tg94ohr4QyCM9cNEsF1Ip23I42Ht0z1ge8T65EJdQHzo94Juall4KmDUYpdJT1uNlCSLuxuo6eIHdJbowYBMAs7Npg5pducO4m6IhN8KuBTB8q6Cv-2j7j0GvBd8J6U0yfQbpoJADc8aBkiMoWPvuo6OOAkhTE-5R_pkC5liKy_P5XXse0AZNqneBezuOu8DmxZWta2jDQcqOqJUyNBS9J5UOfogR0KEokZWifJ0_AiyxT_4Htr3EO0G7OR6fgbaiypCMh6CRaYfT2oq95bqy6kL8LtcPVKEgXsHpldf-Ac0VGWNvdo0zIxYB2TkuzlYDG1stJJaDeRyfQ3Fx8UGw-T27qJgvce5m66HM1j-E-uYz4jrsDmkv7U6Qbi46TyC9Gm4fub-9nseojHc9tawkU1Vx6D2S0Zo-TDkFvrN2KeYxOW7xbFrXmBdn45_I1WRE3SeFkpcKq4a8uCkJOkRbkFYLJysvlKwFzCDHcTgUuCGgHLUCSe14JyDpLIkJY2_oPCe-WiF3r8h9N9zMKj9WoNBWY20TqhMfZGoocRTnV8Q3hmQH6Xd9Yb0HtL8I34lRL3PqDhjMnNrPMe_UViw7QZWTvuQDdwUDbEaPIf4YpxBzZ1kGTdt0A0nzcrYrRtdP3l-j5LKHyg4gkgVuKmDKHbO2y8ajf4EjQsU1ufiIESnhaCZhrMx4W7Ki2BC1DZ23WIB69x-QPsNTBNnefZV19AaQb2DsSPt4zd4B2c0L5BlkseICAqSEB5RkqlyBcF0YBAcGk6Gqr13yfXNRYLZ49nJVPN8wHmGyfAz6OzIAIt62dRR7m7nFwVfsKqLLbp18vQ5QGcNRI3Jnq3txzdsAvq5zMW8Ng5tWl5OxZ5ouYxNO5f4A7x5G3xvReD2cjK0rEqPr9jN_jhqJN3Vs4GAedeb78Unn5A42QP_yfMYGeM3XX-bwcYWTo7qMmRrW5PjXPUzugZ3j8RbNWt-bUZERa2fdNmBdZ7qwLwX8RjqjgTZb1bLSKgLhRX20to_zLsRb1hCm4AnkcN-qcGBUyMf4HgmSqhQloHtd1AhwhDIStQbi7tDmpNAlOR7cWBe2nrB3oL_nE6HCAQBFvor-UWezqOqOUPe_LTyJ-upquP1zCN_Nuh9Dbq9u_wE=">
+    <meta property="og:title" content="eBPF Architecture and Observability">
+    <meta property="og:description" content="Test your knowledge on eBPF Architecture and Observability. 2 rounds, 32 words.">
+    <meta property="og:image" content="https://find4.org/preview-image.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="eBPF Architecture and Observability">
+    <meta name="twitter:description" content="Advanced-level challenge covering eBPF Architecture and Observability.">
+    <meta name="twitter:image" content="https://find4.org/preview-image.png">
+
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "EducationalOccupationalCredential",
+  "name": "eBPF Architecture and Observability",
+  "educationalLevel": "Advanced",
+  "abstract": "Covers concepts including: CPU Performance Tools, Block I/O Tracing Tools, Network TCP Observability Tools, Memory Analysis Tools."
+}
+    </script>
+
+    <style>
+        body{font-family:system-ui,-apple-system,sans-serif;max-width:720px;margin:2rem auto;padding:0 1rem;background:#f5f5f3;color:#111;}
+        .f4-game{background:#fff;border:0.5px solid rgba(0,0,0,0.15);border-radius:12px;padding:1rem 1.25rem;margin-bottom:48px;box-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1);}
+        .f4-game-header{display:flex;align-items:center;gap:10px;margin-bottom:1rem;flex-wrap:wrap;}
+        .f4-game-icon{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:20px;}
+        .f4-game-title-block{flex:1;min-width:0;}
+        .f4-game-title{font-size:15px;font-weight:500;margin:0;color:#111;}
+        .f4-game-meta{font-size:12px;color:#666;margin:0;}
+        .play-btn{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;background:#0f6e56;color:#fff;border-radius:10px;text-decoration:none;font-size:13px;font-weight:500;margin-left:auto;transition:background 0.2s;}
+        .play-btn:hover{background:#085041;}
+        .f4-groups{display:flex;flex-direction:column;gap:5px;}
+        .f4-round{font-size:11px;font-weight:500;color:#888;padding:8px 0 3px;text-transform:uppercase;letter-spacing:0.05em;}
+        .f4-group{display:grid;grid-template-columns:13px 1fr 90px 2fr;align-items:start;gap:8px;padding:8px 10px;border-radius:8px;border:0.5px solid #e0e0de;background:#fafaf9;}
+        .f4-dot{width:11px;height:11px;border-radius:50%;flex-shrink:0;margin-top:3px;}
+        .f4-cat{font-size:13px;font-weight:500;line-height:1.3;}
+        .f4-skill{font-size:11px;padding:2px 7px;border-radius:20px;text-align:center;white-space:nowrap;}
+        .f4-words{font-size:11px;color:#666;line-height:1.5;word-break:break-word;}
+        .sk-b{background:#e1f5ee;color:#085041;}.sk-i{background:#e6f1fb;color:#0c447c;}.sk-a{background:#faeeda;color:#633806;}.sk-e{background:#fcebeb;color:#791f1f;}
+        .dot-red{background:#e24b4a;}.dot-green{background:#639922;}.dot-blue{background:#378add;}.dot-yellow{background:#ba7517;}
+        .dot-purple{background:#7f77dd;}.dot-teal{background:#1d9e75;}.dot-orange{background:#d85a30;}.dot-indigo{background:#534ab7;}
+        @media(prefers-color-scheme:dark){
+          body{background:#1a1a18;color:#e8e6e1;}
+          .f4-game{background:#2c2c2a;border-color:rgba(255,255,255,0.1);box-shadow:0 4px 6px -1px rgb(0 0 0 / 0.4);}
+          .f4-game-title{color:#e8e6e1;}
+          .f4-game-meta{color:#888780;}
+          .f4-round{color:#888780;}
+          .f4-group{background:#222220;border-color:#3a3a38;}
+          .f4-cat{color:#e8e6e1;}
+          .f4-words{color:#888780;}
+          .sk-b{background:#04342c;color:#9fe1cb;}.sk-i{background:#042c53;color:#b5d4f4;}.sk-a{background:#412402;color:#fac775;}.sk-e{background:#501313;color:#f7c1c1;}
+        }
+    </style>
+</head>
+<body>
+<div class="f4-game f4-capture">
+  <div class="f4-game-header">
+    <div class="f4-game-icon" style="background:#eeedfe;" aria-hidden="true">&#x1F9E9;</div>
+    <div class="f4-game-title-block">
+      <h1 class="f4-game-title">eBPF Architecture and Observability</h1>
+      <p class="f4-game-meta">2 rounds &middot; 32 words &middot; Advanced level</p>
+    </div>
+    <a class="play-btn" href="https://find4.org/#game=vZhrb9s2FIb_CuGvsy3n7vhbk7ZrMXTx0BQbNgQGRR1JnClRI6mkXpH_vvdQsufc0LTxBgQIxes578NzSPrLoKIgMxnkYPZlUFBNTgbKFjIMZoP9yf7xaHI62ptcTiaz-Pf7YDjwtnWK0F6G0PhZktzc3IxTR3Um68JRUYyVrRJKm3xchsrwiLYoyPO8tax45HbvUez5p7c1elY207l-xIC949nR_mxyOJ6cTE-mhxszFjr7JksCNeif61oa_TctNt4PBzpbYIj2wa2iFrB04SlgAT-Y_TE42lMpTQZXw0HhbNtsN52q_Ohgiimy7HAfymz66EDVuhPJYyWP0ekgo4PY-yg7OD7llWWW0cmEm2Q-TQ-4Zv8gO4lN-6dTqVA43pvmpweDq1s2FB78aNI36S-rQ_fJ1ctfF0v2rTEaNtW5ZfudNax0rNw0Pq7q3mR8eno4ne79EBmjdyMhYlg8tVLfnOu4RFLaihJlZJtRYtvQtCFh9XzyJOZQUtwHdDZ_K145VUIpFVpHQtaZuEg9uWuZapi8YttNW3BnTDCSW51H6DyydzrfQp81OZb9yzcutWHLgzH6xroOn2vrv4xkJVXTZtglKNk8x0fQmB-aOBv1AHyFECosb6PB-fyTmJPLratkrUhcWms8T2KNdWh3lOGrdeZbNnFGXjndBA0tZ4Oz8_MEjcFJzB94fhFKGURF0rObbIJXJWWtISfgA9VqNRS2HnELWy_YH6fTlmeMssCz2Joaq5a6LhjCUhuzMHRNbOur7Jr9ybrdq3mgNIsuJKNea2cKHco2jS5oe629dUmqVIKJ06SSCEeXRJuTXuBxs2IJv4daH208ah1r26GK-j5Qb4dbYFNtfW1tg94ohr4QyCM9cNEsF1Ip23I42Ht0z1ge8T65EJdQHzo94Juall4KmDUYpdJT1uNlCSLuxuo6eIHdJbowYBMAs7Npg5pducO4m6IhN8KuBTB8q6Cv-2j7j0GvBd8J6U0yfQbpoJADc8aBkiMoWPvuo6OOAkhTE-5R_pkC5liKy_P5XXse0AZNqneBezuOu8DmxZWta2jDQcqOqJUyNBS9J5UOfogR0KEokZWifJ0_AiyxT_4Htr3EO0G7OR6fgbaiypCMh6CRaYfT2oq95bqy6kL8LtcPVKEgXsHpldf-Ac0VGWNvdo0zIxYB2TkuzlYDG1stJJaDeRyfQ3Fx8UGw-T27qJgvce5m66HM1j-E-uYz4jrsDmkv7U6Qbi46TyC9Gm4fub-9nseojHc9tawkU1Vx6D2S0Zo-TDkFvrN2KeYxOW7xbFrXmBdn45_I1WRE3SeFkpcKq4a8uCkJOkRbkFYLJysvlKwFzCDHcTgUuCGgHLUCSe14JyDpLIkJY2_oPCe-WiF3r8h9N9zMKj9WoNBWY20TqhMfZGoocRTnV8Q3hmQH6Xd9Yb0HtL8I34lRL3PqDhjMnNrPMe_UViw7QZWTvuQDdwUDbEaPIf4YpxBzZ1kGTdt0A0nzcrYrRtdP3l-j5LKHyg4gkgVuKmDKHbO2y8ajf4EjQsU1ufiIESnhaCZhrMx4W7Ki2BC1DZ23WIB69x-QPsNTBNnefZV19AaQb2DsSPt4zd4B2c0L5BlkseICAqSEB5RkqlyBcF0YBAcGk6Gqr13yfXNRYLZ49nJVPN8wHmGyfAz6OzIAIt62dRR7m7nFwVfsKqLLbp18vQ5QGcNRI3Jnq3txzdsAvq5zMW8Ng5tWl5OxZ5ouYxNO5f4A7x5G3xvReD2cjK0rEqPr9jN_jhqJN3Vs4GAedeb78Unn5A42QP_yfMYGeM3XX-bwcYWTo7qMmRrW5PjXPUzugZ3j8RbNWt-bUZERa2fdNmBdZ7qwLwX8RjqjgTZb1bLSKgLhRX20to_zLsRb1hCm4AnkcN-qcGBUyMf4HgmSqhQloHtd1AhwhDIStQbi7tDmpNAlOR7cWBe2nrB3oL_nE6HCAQBFvor-UWezqOqOUPe_LTyJ-upquP1zCN_Nuh9Dbq9u_wE=" target="_blank" rel="noopener"><span>&#9654;</span> Play on find4.org</a>
+  </div>
+
+  <div class="f4-groups">
+    <h2 class="f4-round">Round 1</h2>
+    <div class="f4-group">
+        <div class="f4-dot dot-red" role="img" aria-label="Advanced Level Category"></div>
+        <div class="f4-cat">CPU Performance Tools</div>
+        <span class="f4-skill sk-a">Advanced</span>
+        <div class="f4-words">runqlat &middot; cpudist &middot; offcputime &middot; profile</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-blue" role="img" aria-label="Advanced Level Category"></div>
+        <div class="f4-cat">Block I/O Tracing Tools</div>
+        <span class="f4-skill sk-a">Advanced</span>
+        <div class="f4-words">biosnoop &middot; biotop &middot; bitesize &middot; blk_account_io</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-green" role="img" aria-label="Advanced Level Category"></div>
+        <div class="f4-cat">Network TCP Observability Tools</div>
+        <span class="f4-skill sk-a">Advanced</span>
+        <div class="f4-words">tcplife &middot; tcpretrans &middot; tcptop &middot; tcpaccept</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-yellow" role="img" aria-label="Expert Level Category"></div>
+        <div class="f4-cat">Memory Analysis Tools</div>
+        <span class="f4-skill sk-e">Expert</span>
+        <div class="f4-words">memleak &middot; slabtop &middot; oomkill &middot; shmsnoop</div>
+    </div>
+    <h2 class="f4-round">Round 2</h2>
+    <div class="f4-group">
+        <div class="f4-dot dot-purple" role="img" aria-label="Expert Level Category"></div>
+        <div class="f4-cat">eBPF Networking Hook Points</div>
+        <span class="f4-skill sk-e">Expert</span>
+        <div class="f4-words">XDP &middot; tc &middot; sockmap &middot; cgroup</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-teal" role="img" aria-label="Beginner Level Category"></div>
+        <div class="f4-cat">eBPF Safety Properties</div>
+        <span class="f4-skill sk-b">Beginner</span>
+        <div class="f4-words">safety &middot; sandboxed &middot; no kernel crash &middot; bytecode</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-orange" role="img" aria-label="Expert Level Category"></div>
+        <div class="f4-cat">eBPF Helper Functions</div>
+        <span class="f4-skill sk-e">Expert</span>
+        <div class="f4-words">bpf_probe_read &middot; bpf_map_lookup_elem &middot; bpf_ktime_get_ns &middot; bpf_trace_printk</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-indigo" role="img" aria-label="Intermediate Level Category"></div>
+        <div class="f4-cat">Pre-eBPF Tracing Predecessors</div>
+        <span class="f4-skill sk-i">Intermediate</span>
+        <div class="f4-words">DTrace &middot; SystemTap &middot; perf &middot; ftrace</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,10 @@
+# .gitallowlist
+# One pattern per line — lines matching these are excluded from scanning.
+# Uses grep -F (fixed string) matching against the diff output.
+#
+# Examples:
+#   test/fixtures/example_token.txt
+#   EXAMPLE_AWS_KEY=AKIAIOSFODNN7EXAMPLE
+#   # fake-secret: used in unit tests only
+
+secrets/.secrets.enc

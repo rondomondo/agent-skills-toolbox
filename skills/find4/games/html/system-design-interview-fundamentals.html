@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find4 &mdash; System Design Interview Fundamentals</title>
+
+    <meta name="description" content="A Beginner-level Find4 word-grouping game on &#x27;System Design Interview Fundamentals&#x27;. 2 rounds, 32 words. Find the hidden connections between groups of 4.">
+    <meta name="keywords" content="System Design Interview Fundamentals, Interviewer Rubric Competencies, Classic System Design Interview Questions, Key Technologies in System Design, Core System Design Concepts, Types of System Design Interviews, What Interviewers Assess in Solution Design, Common Scaling Patterns, Engineering Levels in Design Interviews">
+    <meta name="author" content="Find4">
+    <meta name="theme-color" content="#0f6e56">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://find4.org/#game=xZhtc9o4EMe_isZvD4enhDS8c4xpmDjQGqfpPWQYYctGFyO5klyO6-S730oGx5Cmk7sSboZJbLSSVquf_rvim7UkCsdYYav_zUoJIwIrEs-wsvpWp9Xp2a0Lu3Uetjv9Vgs-v1kNS_JCRATaF0rlst9srlarkwXJMk6ZIuIrJauTiC-bGcGCNeVaKrK0YyJpypqU2dheFEKs4VEJHheRopzpUYs0JVLPzfBSj77T0a6GtomUhCmKM3nypzRdlzymCf2e1-_63W6_0z5pvWu1Ti8q32c0Prj7iuQwZkIZzujfZFaFtWHReCZISqUSaxNkWN5MEgVOSKv_u9Xu4FZ0bt03rFTwIq83xQmOugSGOLtot3vdJxsKPm2NTttdch6BEUl63egMHuLTs-SdnvkMlt07h4eL7tk5PoWHhPQuYm0T9c66JDZNrThqWfeP2lFYgdv2w-sHuko-3pwPip7uJPOMgk8s4dp_wTOzPfrLqvH7ke92Tnqddvfi7BcDD1jnWMDmzV6aadOcUDNFc8GXpBlluIhJkxcqL1RTR082X8-GWhBD09T0QAPTA422PdCwYDEMyRT00avJivQH7CV160cI2XYz9U58-7eTVfute0P3FRfllo6dT6P3TjiajMFq4E1H7_WD99n1fN8bux68uBPfdy4nQWkFYERwblOuEbOqCYlAQTEXNEIuX-ZEERZRomeOeMYFWM6zQuNViOzQ5wEMIkFz89a3wgVBCRw9FHFB4M_GmTWC_cYSYdg2-MSIMkS-ErFG5TSonAZVjjQQnCQs4gzMEU_MSJitERcog46Z3sEHmmWz8q1vXcLBYyBq0IDjmGp3cDYrVcCE-ucWHZOMan_tRMC-wv496K34TxhsjjR0qw50XQ_g-40aPDZqpNxeeoFmJJh8uJx8hqdw5F574Y0zDU3D5Sj0f93Dw80g3sDES-59LECHIVB1UFJBCDsGKXcwnP3A-IqhvLR6BgH6snUQqQVWgEQuiD738ErADPYCtBZ6FsDapnO1_H1AzLKXJKZg8EaQ7Kz35_GoZP4VeATeYDQF02tneO1o1XCmU2c8CPSz5wMkI3fqOYF7tYfINVmjkEQLBtufgmTog7njbg0NLjBLj6IiNzwmgu3vsKr7aYAgDA49IUJqeUHkr5xEUFcgxZEGC2EWI5zn2VqvCrihXNgGh2ekyWe4OPFXzCKTON8ClQeytuvrOQAuVTHwClxcx70ajd-D8fTKCQbl42g88D6Xj1fO1LTv6YnW9F3vXA5BylVdQfJC5NlRMBlyHZFya1Cs6y46LzQA5XASskbpXUkLGBORV5knrwbeS0JgKiNslrDLhAeACfVGROiEaW8dPgAOVUn4Ag73jXoh8iGYDG7d0FAwDEAvAni7DXQB4k_ubN_75PnwfOPvIRGuc2IS9Ate1sFQBGdHrUGWmNazScLFEgMMT6oBlQkgBO3oj6LTap9umWga5UFzQlmKllwqXX8sOWugFVULNJkMjLbc-FDQIAmqA4UolXibS49amRw46VQXiD1sNheTHRUJA2fgTYZDnXgC7-PtKPBuvHGoX6eu428EpkJpl5w7fSRrBaxEjikOTQbiWWEO5rMcJIwivzlCOi3GFKIkTfVB624CI3OCVguihQRnBWw7UCK3Lm9EZANUBJxQ0Cg4JKsFR9CiNdRUsomuYiSktXVOQW4gSyWYZv9H3fImxW11AX0FSO5kHAI45TXo0p9clkQ5A_3_LhiF3vRZKtLnEU0hcDr6H7ACt3YK2bUOw-q4dx7MONN7aRjJIGgbj6uCBaoRmOipHNnNPH2TsGBCfWNqIKmg4kqJvgrh2KQkWGrDKM9KQKC3Xx27dim10M63Mf95VqrfKF7ByjR0hkOtK954NNE3n5vRoMpPAFGwfwvyNnKvOfF1hIzE_ChRUTizKT8GOk8RKovXMoWA9CQJJCU9FE0AKKZAHebrDTRUrbfyIhVOkl8AkC8FhasRWgAc5kDg5ZymhbbUuESCS2lHhTJSZYoMsb1UwSEhm0s1TMwR4-rAhc8cStym8bSsvu2dWB0kZ5lftl7E5_6-Uf8xDlo2P8U93j_-Aw==">
+    <meta property="og:title" content="System Design Interview Fundamentals">
+    <meta property="og:description" content="Test your knowledge on System Design Interview Fundamentals. 2 rounds, 32 words.">
+    <meta property="og:image" content="https://find4.org/preview-image.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="System Design Interview Fundamentals">
+    <meta name="twitter:description" content="Beginner-level challenge covering System Design Interview Fundamentals.">
+    <meta name="twitter:image" content="https://find4.org/preview-image.png">
+
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "EducationalOccupationalCredential",
+  "name": "System Design Interview Fundamentals",
+  "educationalLevel": "Beginner",
+  "abstract": "Covers concepts including: Interviewer Rubric Competencies, Classic System Design Interview Questions, Key Technologies in System Design, Core System Design Concepts."
+}
+    </script>
+
+    <style>
+        body{font-family:system-ui,-apple-system,sans-serif;max-width:720px;margin:2rem auto;padding:0 1rem;background:#f5f5f3;color:#111;}
+        .f4-game{background:#fff;border:0.5px solid rgba(0,0,0,0.15);border-radius:12px;padding:1rem 1.25rem;margin-bottom:48px;box-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1);}
+        .f4-game-header{display:flex;align-items:center;gap:10px;margin-bottom:1rem;flex-wrap:wrap;}
+        .f4-game-icon{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:20px;}
+        .f4-game-title-block{flex:1;min-width:0;}
+        .f4-game-title{font-size:15px;font-weight:500;margin:0;color:#111;}
+        .f4-game-meta{font-size:12px;color:#666;margin:0;}
+        .play-btn{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;background:#0f6e56;color:#fff;border-radius:10px;text-decoration:none;font-size:13px;font-weight:500;margin-left:auto;transition:background 0.2s;}
+        .play-btn:hover{background:#085041;}
+        .f4-groups{display:flex;flex-direction:column;gap:5px;}
+        .f4-round{font-size:11px;font-weight:500;color:#888;padding:8px 0 3px;text-transform:uppercase;letter-spacing:0.05em;}
+        .f4-group{display:grid;grid-template-columns:13px 1fr 90px 2fr;align-items:start;gap:8px;padding:8px 10px;border-radius:8px;border:0.5px solid #e0e0de;background:#fafaf9;}
+        .f4-dot{width:11px;height:11px;border-radius:50%;flex-shrink:0;margin-top:3px;}
+        .f4-cat{font-size:13px;font-weight:500;line-height:1.3;}
+        .f4-skill{font-size:11px;padding:2px 7px;border-radius:20px;text-align:center;white-space:nowrap;}
+        .f4-words{font-size:11px;color:#666;line-height:1.5;word-break:break-word;}
+        .sk-b{background:#e1f5ee;color:#085041;}.sk-i{background:#e6f1fb;color:#0c447c;}.sk-a{background:#faeeda;color:#633806;}.sk-e{background:#fcebeb;color:#791f1f;}
+        .dot-red{background:#e24b4a;}.dot-green{background:#639922;}.dot-blue{background:#378add;}.dot-yellow{background:#ba7517;}
+        .dot-purple{background:#7f77dd;}.dot-teal{background:#1d9e75;}.dot-orange{background:#d85a30;}.dot-indigo{background:#534ab7;}
+        @media(prefers-color-scheme:dark){
+          body{background:#1a1a18;color:#e8e6e1;}
+          .f4-game{background:#2c2c2a;border-color:rgba(255,255,255,0.1);box-shadow:0 4px 6px -1px rgb(0 0 0 / 0.4);}
+          .f4-game-title{color:#e8e6e1;}
+          .f4-game-meta{color:#888780;}
+          .f4-round{color:#888780;}
+          .f4-group{background:#222220;border-color:#3a3a38;}
+          .f4-cat{color:#e8e6e1;}
+          .f4-words{color:#888780;}
+          .sk-b{background:#04342c;color:#9fe1cb;}.sk-i{background:#042c53;color:#b5d4f4;}.sk-a{background:#412402;color:#fac775;}.sk-e{background:#501313;color:#f7c1c1;}
+        }
+    </style>
+</head>
+<body>
+<div class="f4-game f4-capture">
+  <div class="f4-game-header">
+    <div class="f4-game-icon" style="background:#eeedfe;" aria-hidden="true">&#x1F9E9;</div>
+    <div class="f4-game-title-block">
+      <h1 class="f4-game-title">System Design Interview Fundamentals</h1>
+      <p class="f4-game-meta">2 rounds &middot; 32 words &middot; Beginner level</p>
+    </div>
+    <a class="play-btn" href="https://find4.org/#game=xZhtc9o4EMe_isZvD4enhDS8c4xpmDjQGqfpPWQYYctGFyO5klyO6-S730oGx5Cmk7sSboZJbLSSVquf_rvim7UkCsdYYav_zUoJIwIrEs-wsvpWp9Xp2a0Lu3Uetjv9Vgs-v1kNS_JCRATaF0rlst9srlarkwXJMk6ZIuIrJauTiC-bGcGCNeVaKrK0YyJpypqU2dheFEKs4VEJHheRopzpUYs0JVLPzfBSj77T0a6GtomUhCmKM3nypzRdlzymCf2e1-_63W6_0z5pvWu1Ti8q32c0Prj7iuQwZkIZzujfZFaFtWHReCZISqUSaxNkWN5MEgVOSKv_u9Xu4FZ0bt03rFTwIq83xQmOugSGOLtot3vdJxsKPm2NTttdch6BEUl63egMHuLTs-SdnvkMlt07h4eL7tk5PoWHhPQuYm0T9c66JDZNrThqWfeP2lFYgdv2w-sHuko-3pwPip7uJPOMgk8s4dp_wTOzPfrLqvH7ke92Tnqddvfi7BcDD1jnWMDmzV6aadOcUDNFc8GXpBlluIhJkxcqL1RTR082X8-GWhBD09T0QAPTA422PdCwYDEMyRT00avJivQH7CV160cI2XYz9U58-7eTVfute0P3FRfllo6dT6P3TjiajMFq4E1H7_WD99n1fN8bux68uBPfdy4nQWkFYERwblOuEbOqCYlAQTEXNEIuX-ZEERZRomeOeMYFWM6zQuNViOzQ5wEMIkFz89a3wgVBCRw9FHFB4M_GmTWC_cYSYdg2-MSIMkS-ErFG5TSonAZVjjQQnCQs4gzMEU_MSJitERcog46Z3sEHmmWz8q1vXcLBYyBq0IDjmGp3cDYrVcCE-ucWHZOMan_tRMC-wv496K34TxhsjjR0qw50XQ_g-40aPDZqpNxeeoFmJJh8uJx8hqdw5F574Y0zDU3D5Sj0f93Dw80g3sDES-59LECHIVB1UFJBCDsGKXcwnP3A-IqhvLR6BgH6snUQqQVWgEQuiD738ErADPYCtBZ6FsDapnO1_H1AzLKXJKZg8EaQ7Kz35_GoZP4VeATeYDQF02tneO1o1XCmU2c8CPSz5wMkI3fqOYF7tYfINVmjkEQLBtufgmTog7njbg0NLjBLj6IiNzwmgu3vsKr7aYAgDA49IUJqeUHkr5xEUFcgxZEGC2EWI5zn2VqvCrihXNgGh2ekyWe4OPFXzCKTON8ClQeytuvrOQAuVTHwClxcx70ajd-D8fTKCQbl42g88D6Xj1fO1LTv6YnW9F3vXA5BylVdQfJC5NlRMBlyHZFya1Cs6y46LzQA5XASskbpXUkLGBORV5knrwbeS0JgKiNslrDLhAeACfVGROiEaW8dPgAOVUn4Ag73jXoh8iGYDG7d0FAwDEAvAni7DXQB4k_ubN_75PnwfOPvIRGuc2IS9Ate1sFQBGdHrUGWmNazScLFEgMMT6oBlQkgBO3oj6LTap9umWga5UFzQlmKllwqXX8sOWugFVULNJkMjLbc-FDQIAmqA4UolXibS49amRw46VQXiD1sNheTHRUJA2fgTYZDnXgC7-PtKPBuvHGoX6eu428EpkJpl5w7fSRrBaxEjikOTQbiWWEO5rMcJIwivzlCOi3GFKIkTfVB624CI3OCVguihQRnBWw7UCK3Lm9EZANUBJxQ0Cg4JKsFR9CiNdRUsomuYiSktXVOQW4gSyWYZv9H3fImxW11AX0FSO5kHAI45TXo0p9clkQ5A_3_LhiF3vRZKtLnEU0hcDr6H7ACt3YK2bUOw-q4dx7MONN7aRjJIGgbj6uCBaoRmOipHNnNPH2TsGBCfWNqIKmg4kqJvgrh2KQkWGrDKM9KQKC3Xx27dim10M63Mf95VqrfKF7ByjR0hkOtK954NNE3n5vRoMpPAFGwfwvyNnKvOfF1hIzE_ChRUTizKT8GOk8RKovXMoWA9CQJJCU9FE0AKKZAHebrDTRUrbfyIhVOkl8AkC8FhasRWgAc5kDg5ZymhbbUuESCS2lHhTJSZYoMsb1UwSEhm0s1TMwR4-rAhc8cStym8bSsvu2dWB0kZ5lftl7E5_6-Uf8xDlo2P8U93j_-Aw==" target="_blank" rel="noopener"><span>&#9654;</span> Play on find4.org</a>
+  </div>
+
+  <div class="f4-groups">
+    <h2 class="f4-round">Round 1</h2>
+    <div class="f4-group">
+        <div class="f4-dot dot-blue" role="img" aria-label="Beginner Level Category"></div>
+        <div class="f4-cat">Interviewer Rubric Competencies</div>
+        <span class="f4-skill sk-b">Beginner</span>
+        <div class="f4-words">NAVIGATION &middot; DESIGN &middot; EXCELLENCE &middot; COLLABORATION</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-green" role="img" aria-label="Intermediate Level Category"></div>
+        <div class="f4-cat">Classic System Design Interview Questions</div>
+        <span class="f4-skill sk-i">Intermediate</span>
+        <div class="f4-words">UBER &middot; DROPBOX &middot; TICKETMASTER &middot; BITLY</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-orange" role="img" aria-label="Advanced Level Category"></div>
+        <div class="f4-cat">Key Technologies in System Design</div>
+        <span class="f4-skill sk-a">Advanced</span>
+        <div class="f4-words">REDIS &middot; KAFKA &middot; CASSANDRA &middot; ELASTICSEARCH</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-purple" role="img" aria-label="Expert Level Category"></div>
+        <div class="f4-cat">Core System Design Concepts</div>
+        <span class="f4-skill sk-e">Expert</span>
+        <div class="f4-words">CACHING &middot; SHARDING &middot; INDEXING &middot; HASHING</div>
+    </div>
+    <h2 class="f4-round">Round 2</h2>
+    <div class="f4-group">
+        <div class="f4-dot dot-teal" role="img" aria-label="Beginner Level Category"></div>
+        <div class="f4-cat">Types of System Design Interviews</div>
+        <span class="f4-skill sk-b">Beginner</span>
+        <div class="f4-words">PRODUCT &middot; INFRASTRUCTURE &middot; LOW-LEVEL &middot; ML</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-red" role="img" aria-label="Intermediate Level Category"></div>
+        <div class="f4-cat">What Interviewers Assess in Solution Design</div>
+        <span class="f4-skill sk-i">Intermediate</span>
+        <div class="f4-words">TRADEOFFS &middot; REQUIREMENTS &middot; SCALING &middot; STRUCTURE</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-yellow" role="img" aria-label="Advanced Level Category"></div>
+        <div class="f4-cat">Common Scaling Patterns</div>
+        <span class="f4-skill sk-a">Advanced</span>
+        <div class="f4-words">CONTENTION &middot; BLOBS &middot; READS &middot; WRITES</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-indigo" role="img" aria-label="Expert Level Category"></div>
+        <div class="f4-cat">Engineering Levels in Design Interviews</div>
+        <span class="f4-skill sk-e">Expert</span>
+        <div class="f4-words">STAFF &middot; SENIOR &middot; MID-LEVEL &middot; ENTRY</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

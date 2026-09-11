@@ -1,0 +1,194 @@
+{
+  "metadata": {
+    "generated_at": "2026-09-10T12:00:00Z",
+    "source": "https://www.etsy.com/ie/codeascraft/how-etsy-uses-llms-to-improve-search-relevance",
+    "suggested_name": "etsy-llm-search-relevance.json",
+    "modified_at": "2026-09-10T20:31:00.918303",
+    "source_id": "https://www.etsy.com/ie/codeascraft/how-etsy-uses-llms-to-improve-search-relevance",
+    "step": "finalize_metadata",
+    "id_registry": {
+      "game_set_ids": [
+        "1e8116"
+      ],
+      "group_set_ids": [
+        "c24d7d",
+        "b73c1f"
+      ],
+      "group_item_ids": [
+        "5a23c4",
+        "9647d2",
+        "65ee06",
+        "648522",
+        "e8a646",
+        "8e84be",
+        "404eb2",
+        "3b7a00"
+      ]
+    },
+    "id": "l8Ul5NGzkjhJouPL",
+    "split_info": {
+      "role": "split",
+      "split_at": "2026-09-10T20:31:09.293037+00:00",
+      "parent_id": "l8Ul5NGzkjhJouPL",
+      "parent_file": "/home/claude/output/games/etsy-llm-search-relevance.json",
+      "theme": "Etsy LLM Search Relevance: Evaluation & Future Directions",
+      "slug": "etsy-llm-search-relevance-evaluation-and-future-directions"
+    }
+  },
+  "game_sets": [
+    {
+      "theme": "Etsy LLM Search Relevance: Evaluation & Future Directions",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "MACRO-F1",
+              "UPLIFT",
+              "LATENCY",
+              "MONITORING"
+            ],
+            "category": "Relevance Evaluation Metrics",
+            "color": "red",
+            "url": "https://www.etsy.com/ie/codeascraft/how-etsy-uses-llms-to-improve-search-relevance",
+            "description": "The key measurements used to track model quality: multi-class Macro F1 vs golden labels, relevance uplift in production (58%→62%), sub-10ms latency, and daily monitoring dashboards",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://towardsdatascience.com/micro-macro-weighted-averages-of-f1-score-clearly-explained-b603420b292f/"
+            ],
+            "theme": "Etsy LLM Search Relevance: Evaluation & Future Directions",
+            "group_item_id": "5a23c4",
+            "group_set_id": "c24d7d"
+          },
+          {
+            "words": [
+              "SEMANTIC",
+              "INTENT",
+              "BEHAVIORAL",
+              "COMPLEMENTARY"
+            ],
+            "category": "Two Lenses on Search Quality",
+            "color": "green",
+            "url": "https://www.etsy.com/ie/codeascraft/how-etsy-uses-llms-to-improve-search-relevance",
+            "description": "Etsy's dual-signal approach: semantic relevance captures buyer intent while behavioural engagement captures popularity; together they produce more balanced search outcomes",
+            "skill_level": "Beginner",
+            "additional_sources": [],
+            "theme": "Etsy LLM Search Relevance: Evaluation & Future Directions",
+            "group_item_id": "9647d2",
+            "group_set_id": "c24d7d"
+          },
+          {
+            "words": [
+              "VLLM",
+              "LANGGRAPH",
+              "OFFLINE",
+              "A/B"
+            ],
+            "category": "Evaluation Infrastructure",
+            "color": "blue",
+            "url": "https://www.etsy.com/ie/codeascraft/how-etsy-uses-llms-to-improve-search-relevance",
+            "description": "The tooling stack for running relevance evaluation at scale: vLLM for high-throughput teacher inference, LangGraph for the annotator workflow, offline sampling, and A/B test monitoring",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://docs.vllm.ai/en/stable/"
+            ],
+            "theme": "Etsy LLM Search Relevance: Evaluation & Future Directions",
+            "group_item_id": "65ee06",
+            "group_set_id": "c24d7d"
+          },
+          {
+            "words": [
+              "FACE-MASKS",
+              "FALL-DECOR",
+              "CULTURAL",
+              "CONTEXTUAL"
+            ],
+            "category": "Why Relevance Definitions Must Evolve",
+            "color": "yellow",
+            "url": "https://www.etsy.com/ie/codeascraft/how-etsy-uses-llms-to-improve-search-relevance",
+            "description": "Real examples showing that buyer intent shifts over time and context — 'face masks' meant costumes pre-2020 but protective gear post-2020 — so labeling guidelines must be continuously updated",
+            "skill_level": "Beginner",
+            "additional_sources": [],
+            "theme": "Etsy LLM Search Relevance: Evaluation & Future Directions",
+            "group_item_id": "648522",
+            "group_set_id": "c24d7d"
+          }
+        ],
+        [
+          {
+            "words": [
+              "RETRIEVAL",
+              "ADAPTIVE",
+              "ESCI",
+              "MERGING"
+            ],
+            "category": "Planned Future Improvements",
+            "color": "purple",
+            "url": "https://www.etsy.com/ie/codeascraft/how-etsy-uses-llms-to-improve-search-relevance",
+            "description": "Etsy's next research directions: applying relevance upstream in retrieval, adaptive query-type strategies, finer-grained ESCI-style labels, and simplifying the three-tier stack by merging tiers",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://github.com/amazon-science/esci-data"
+            ],
+            "theme": "Etsy LLM Search Relevance: Evaluation & Future Directions",
+            "group_item_id": "e8a646",
+            "group_set_id": "b73c1f"
+          },
+          {
+            "words": [
+              "COMPLEMENTS",
+              "SUBSTITUTES",
+              "SUBCATEGORY",
+              "GRANULARITY"
+            ],
+            "category": "Refining Partial Relevance Labels",
+            "color": "teal",
+            "url": "https://www.etsy.com/ie/codeascraft/how-etsy-uses-llms-to-improve-search-relevance",
+            "description": "Inspired by Amazon's ESCI dataset, Etsy plans to split 'partially relevant' into finer sub-types — complements, substitutes — to enable more precise ranking and new search UX features",
+            "skill_level": "Expert",
+            "additional_sources": [],
+            "theme": "Etsy LLM Search Relevance: Evaluation & Future Directions",
+            "group_item_id": "8e84be",
+            "group_set_id": "b73c1f"
+          },
+          {
+            "words": [
+              "ENGAGEMENT-DROP",
+              "UNIFORM",
+              "QUERY-TYPE",
+              "TRADEOFF"
+            ],
+            "category": "Relevance vs Engagement Tension",
+            "color": "orange",
+            "url": "https://www.etsy.com/ie/codeascraft/how-etsy-uses-llms-to-improve-search-relevance",
+            "description": "A known paradox: A/B tests show engagement metrics can fall even when semantic relevance rises, because uniform relevance treatments ignore query-type variation — a key area for future research",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://arxiv.org/pdf/2409.17460v1"
+            ],
+            "theme": "Etsy LLM Search Relevance: Evaluation & Future Directions",
+            "group_item_id": "404eb2",
+            "group_set_id": "b73c1f"
+          },
+          {
+            "words": [
+              "SELLERS",
+              "VISIBILITY",
+              "SMALL-SHOPS",
+              "FAIRNESS"
+            ],
+            "category": "Business Impact on Sellers",
+            "color": "indigo",
+            "url": "https://www.etsy.com/ie/codeascraft/how-etsy-uses-llms-to-improve-search-relevance",
+            "description": "By surfacing intent-matched listings rather than just popular ones, semantic relevance helps smaller and newer sellers compete on relevance — 89% of Etsy sellers are solo businesses",
+            "skill_level": "Beginner",
+            "additional_sources": [],
+            "theme": "Etsy LLM Search Relevance: Evaluation & Future Directions",
+            "group_item_id": "3b7a00",
+            "group_set_id": "b73c1f"
+          }
+        ]
+      ],
+      "game_set_id": "1e8116"
+    }
+  ]
+}

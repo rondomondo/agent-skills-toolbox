@@ -1,0 +1,233 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# ANSI color codes
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[0;33m'
+CYAN='\033[0;36m'
+BOLD='\033[1m'
+RESET='\033[0m'
+
+# Set DEBUG=true/1 to enable verbose logging of invocation args via the log() helper.
+USE_LOGGING="${DEBUG:-false}"
+case "${USE_LOGGING}" in
+  true|1)  USE_LOGGING=true  ;;
+  false|0) USE_LOGGING=false ;;
+  *) printf "ERROR: DEBUG must be true/false/1/0, got '%s'\n" "${USE_LOGGING}" >&2; exit 1 ;;
+esac
+SCRIPT_NAME=$(basename "$0")
+
+ok() { ${USE_LOGGING} && printf "${BOLD}[$SCRIPT_NAME:$HOSTNAME]${RESET} ${GREEN}${*}${RESET}\n" >&2; return 0; }
+warn() { ${USE_LOGGING} && printf "${BOLD}[$SCRIPT_NAME:$HOSTNAME]${RESET} ${YELLOW}${*}${RESET}\n" >&2; return 0; }
+fail() { ${USE_LOGGING} && printf "${BOLD}[$SCRIPT_NAME:$HOSTNAME]${RESET} ${RED}${*}${RESET}\n" >&2; return 0; }
+log()  { ${USE_LOGGING} && printf "${BOLD}[$SCRIPT_NAME:$HOSTNAME]${RESET} ${CYAN}${*}${RESET}\n" >&2; return 0; }
+
+log "invoked with args '$*'"
+
+if ! command -v docker &>/dev/null; then
+  fail "docker is required but not found in PATH"
+  exit 1
+fi
+
+REMOTE_IMAGE="${PDF_STRIP_IMAGE:-ghcr.io/rondomondo/pdf-strip:latest}"
+
+usage() {
+  cat <<EOF
+pdf-strip - strip metadata from PDF files using pikepdf inside a container,
+with no local installation required. Stripped files are written alongside each
+source file with a .stripped.pdf suffix.
+
+Usage:
+  pdf-strip                          Show this help
+  pdf-strip -h | --help              Show this help
+  pdf-strip <file.pdf>               Strip one PDF file
+  pdf-strip <file1.pdf> <file2.pdf>  Strip multiple PDF files
+  pdf-strip <directory>              Strip every .pdf in a directory
+  pdf-strip <url>                    Fetch a PDF from a URL then strip it
+  pdf-strip --check <file.pdf>       Check for metadata without stripping
+  pdf-strip --check <directory>      Check every .pdf in a directory
+  pdf-strip --check <url>            Fetch a PDF from a URL then check it
+
+  pdf-strip -- [args...]             Pass args directly to the container
+                                     entrypoint with \$PWD mounted at /data
+
+Modes:
+  (default)  Strip metadata and write <base>.stripped.pdf alongside the original.
+  --check    Print any metadata found (or "none"); exit 1 if any found.
+
+Override the image with: PDF_STRIP_IMAGE=... pdf-strip ...
+
+EOF
+}
+
+
+
+# Extra docker flags shared by all container invocations.
+DOCKER_EXTRA_ARGS=(
+  --volume "$PWD:/data"
+  --env "HOST_PWD=/data"
+  --env "DEBUG=${USE_LOGGING}"
+)
+
+# Show agg help by running the image with no arguments.
+show_help() {
+  cat <<'EOF'
+---- pdf-split built-in help follows ----
+
+EOF
+  # shellcheck disable=SC2086
+  docker run --rm \
+    "${DOCKER_EXTRA_ARGS[@]}" \
+    "$REMOTE_IMAGE" \
+    --help 
+}
+
+check_xattrs() {
+  local file="$1"
+  command -v xattr &>/dev/null || return 0
+  local xattrs
+  xattrs=$(xattr "$file" 2>/dev/null || true)
+  [[ -n "$xattrs" ]] || return 0
+  printf "  xattrs:\n"
+  while IFS= read -r attr; do
+    local val
+    local raw
+    raw=$(xattr -p "$attr" "$file" 2>/dev/null || true)
+    # Try to decode as plist JSON; fall back to raw hex if that fails.
+    val=$(xattr -px "$attr" "$file" 2>/dev/null \
+          | xxd -r -p \
+          | plutil -convert json -o - - 2>/dev/null \
+          | sed 's/\\\//\//g') \
+          || val="$raw"
+    printf "    %s: %s\n" "$attr" "$val"
+  done <<< "$xattrs"
+}
+
+strip_xattrs() {
+  local file="$1"
+  command -v xattr &>/dev/null || return 0
+  xattr -c "$file" 2>/dev/null || true
+}
+
+run_pdf_strip_raw() {
+  docker run --rm \
+    "${DOCKER_EXTRA_ARGS[@]}" \
+    "$REMOTE_IMAGE" \
+    "$@"
+}
+
+run_pdf_strip_check_raw() {
+  docker run --rm \
+    "${DOCKER_EXTRA_ARGS[@]}" \
+    "$REMOTE_IMAGE" \
+    --check \
+    "$@"
+}
+
+
+# Fetch a URL to $PWD using the remote filename and return the local path via stdout.
+fetch_url() {
+  local url="$1"
+  if ! command -v curl &>/dev/null; then
+    printf "${RED}Error:${RESET} curl is required to fetch URLs but was not found in PATH\n" >&2
+    return 1
+  fi
+  log "fetching $url"
+  local filename
+  filename=$(cd "$PWD" && curl -fsSLOJ -w '%{filename_effective}' "$url") || {
+    printf "${RED}Error:${RESET} failed to fetch %s\n" "$url" >&2
+    return 1
+  }
+  printf '%s' "${PWD}/${filename}"
+}
+
+convert_one() {
+  local input="$1" output="${2:-}"
+
+  if [[ ! -f "$input" ]]; then
+    fail "not a file: $input"
+    return 1
+  fi
+
+  if [[ -z "$output" ]]; then
+    output="${input%.pdf}.stripped.pdf"
+  fi
+
+  if [[ "$PDF_STRIP_MODE" == "check" ]]; then
+    log "checking: $input"
+    run_pdf_strip_check_raw "$input"
+    check_xattrs "$input"
+    return
+  fi
+
+  log "stripping: $input -> $output"
+  strip_xattrs "$input"
+  run_pdf_strip_raw "$input" "$output"
+  test -e "$output" && ok "stripped:  $input -> $output" || { fail "$output not found"; return 1; }
+}
+
+
+# ---- dispatch -------------------------------------------------------
+
+if [[ $# -eq 0 ]]; then
+  usage
+  show_help
+  exit 0
+fi
+
+if [[ "$1" == "--" ]]; then
+  run_pdf_strip_raw "${@:2}"
+  exit 0
+fi
+
+if [[ "$1" == "-h" || "$1" == "--help" ]]; then
+  usage
+  exit 0
+fi
+
+# Default mode is strip; --check overrides.
+PDF_STRIP_MODE="strip"
+
+if [[ "$1" == "--check" ]]; then
+  PDF_STRIP_MODE="check"
+  shift
+fi
+
+initial_pwd=$(pwd)
+
+if [[ $# -eq 1 && ("$1" == http://* || "$1" == https://*) ]]; then
+  local_file=$(fetch_url "$1") || exit 1
+  convert_one "$local_file"
+  exit 0
+fi
+
+if [[ $# -eq 1 && -d "$1" ]]; then
+  # Single directory arg: recursively convert every .pdf beneath it
+  dir="$(cd "$1" && pwd)"
+  mapfile -t files < <(find "$dir" -type f -name "*.pdf" | sort)
+
+  if [[ ${#files[@]} -eq 0 ]]; then
+    fail "No .pdf files found in $1" >&2
+    exit 1
+  fi
+  ok "found ${#files[@]} PDF(s) in $dir (mode: $PDF_STRIP_MODE)"
+  for arg in "${files[@]}"; do
+    convert_one "${arg#"$initial_pwd/"}"
+  done
+  exit 0
+fi
+
+
+# One or more file or URL args
+errors=0
+for arg in "$@"; do
+  if [[ "$arg" == http://* || "$arg" == https://* ]]; then
+    local_file=$(fetch_url "$arg") || { (( errors++ )) || true; continue; }
+    convert_one "$local_file" || (( errors++ )) || true
+  else
+    convert_one "${arg#"$initial_pwd/"}" || (( errors++ )) || true  # || true prevents set -e from exiting on increment
+  fi
+done
+
+[[ $errors -eq 0 ]] || { fail "$errors file(s) failed"; exit 1; }

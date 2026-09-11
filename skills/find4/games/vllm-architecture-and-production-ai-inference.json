@@ -1,0 +1,204 @@
+{
+  "metadata": {
+    "generated_at": "2026-09-07T10:00:00Z",
+    "source": "https://www.redhat.com/en/blog/meet-vllm-faster-more-efficient-llm-inference-and-serving",
+    "suggested_name": "vllm-inference-serving.json",
+    "modified_at": "2026-09-07T19:40:57.357376",
+    "source_id": "https://www.redhat.com/en/blog/meet-vllm-faster-more-efficient-llm-inference-and-serving",
+    "step": "finalize_metadata",
+    "id_registry": {
+      "game_set_ids": [
+        "016e3d"
+      ],
+      "group_set_ids": [
+        "17551d",
+        "16cee5"
+      ],
+      "group_item_ids": [
+        "4802a6",
+        "6b2e0f",
+        "11bcb4",
+        "c95be8",
+        "55c4b5",
+        "145bd6",
+        "0d0745",
+        "694d19"
+      ]
+    },
+    "id": "pvJ56HMLaNAJwPcx",
+    "split_info": {
+      "role": "split",
+      "split_at": "2026-09-07T19:41:06.544690+00:00",
+      "parent_id": "pvJ56HMLaNAJwPcx",
+      "parent_file": "/home/claude/output/games/vllm-inference-serving.json",
+      "theme": "vLLM Architecture & Production AI Inference",
+      "slug": "vllm-architecture-and-production-ai-inference"
+    }
+  },
+  "game_sets": [
+    {
+      "theme": "vLLM Architecture & Production AI Inference",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "UC BERKELEY",
+              "APACHE 2.0",
+              "GITHUB",
+              "HUGGING FACE"
+            ],
+            "category": "vLLM Open Source Provenance",
+            "color": "green",
+            "url": "https://www.redhat.com/en/blog/meet-vllm-faster-more-efficient-llm-inference-and-serving",
+            "description": "vLLM originated at UC Berkeley, is Apache 2.0-licensed, hosted on GitHub with 40k+ stars, and integrates with Hugging Face model hub.",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://github.com/vllm-project/vllm"
+            ],
+            "theme": "vLLM Architecture & Production AI Inference",
+            "group_item_id": "4802a6",
+            "group_set_id": "17551d"
+          },
+          {
+            "words": [
+              "TOKENS",
+              "ATTENTION",
+              "KEYS",
+              "VALUES"
+            ],
+            "category": "LLM Inference Internals",
+            "color": "blue",
+            "url": "https://www.redhat.com/en/blog/meet-vllm-faster-more-efficient-llm-inference-and-serving",
+            "description": "The core internals of transformer-based inference: attention keys and values stored in the KV cache are used to generate next tokens in autoregressive decoding.",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://arxiv.org/abs/2309.06180",
+              "https://docs.vllm.ai/en/latest/design/kernel/paged_attention.html"
+            ],
+            "theme": "vLLM Architecture & Production AI Inference",
+            "group_item_id": "6b2e0f",
+            "group_set_id": "17551d"
+          },
+          {
+            "words": [
+              "24X",
+              "99%",
+              "3.5X",
+              "2.4X"
+            ],
+            "category": "vLLM Benchmark Results",
+            "color": "red",
+            "url": "https://www.redhat.com/en/blog/meet-vllm-faster-more-efficient-llm-inference-and-serving",
+            "description": "Key headline numbers from vLLM benchmarks: up to 24x throughput improvement over HuggingFace/TGI, 99% accuracy retention with quantization, 3.5x model compression, 2.4x single-stream speedup.",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://vllm.ai/blog/2023/06/20/vllm.html"
+            ],
+            "theme": "vLLM Architecture & Production AI Inference",
+            "group_item_id": "11bcb4",
+            "group_set_id": "17551d"
+          },
+          {
+            "words": [
+              "INFERENCE",
+              "SERVING",
+              "GENERATION",
+              "DECODING"
+            ],
+            "category": "LLM Runtime Terminology",
+            "color": "teal",
+            "url": "https://www.redhat.com/en/blog/meet-vllm-faster-more-efficient-llm-inference-and-serving",
+            "description": "Core terminology for running LLMs: inference (model computation), serving (exposing over an API), text generation, and autoregressive decoding (producing tokens one by one).",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://docs.vllm.ai/en/latest/"
+            ],
+            "theme": "vLLM Architecture & Production AI Inference",
+            "group_item_id": "c95be8",
+            "group_set_id": "17551d"
+          }
+        ],
+        [
+          {
+            "words": [
+              "GPU",
+              "MEMORY",
+              "CONTIGUOUS",
+              "ALLOCATION"
+            ],
+            "category": "GPU Memory Concepts in LLM Serving",
+            "color": "purple",
+            "url": "https://www.redhat.com/en/blog/meet-vllm-faster-more-efficient-llm-inference-and-serving",
+            "description": "Traditional GPU memory allocation is contiguous and pre-allocated per request regardless of actual use; PagedAttention replaces this with dynamic non-contiguous allocation.",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://arxiv.org/abs/2309.06180"
+            ],
+            "theme": "vLLM Architecture & Production AI Inference",
+            "group_item_id": "55c4b5",
+            "group_set_id": "16cee5"
+          },
+          {
+            "words": [
+              "CHATBOT",
+              "CODE ASSISTANT",
+              "PROMPTER",
+              "REQUESTER"
+            ],
+            "category": "Consumers of LLM Serving Infrastructure",
+            "color": "orange",
+            "url": "https://www.redhat.com/en/blog/meet-vllm-faster-more-efficient-llm-inference-and-serving",
+            "description": "End-user applications and actors that send requests to an LLM serving layer: chatbots, code assistants, and other AI-powered tools sending prompts.",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://www.redhat.com/en/blog/meet-vllm-faster-more-efficient-llm-inference-and-serving"
+            ],
+            "theme": "vLLM Architecture & Production AI Inference",
+            "group_item_id": "145bd6",
+            "group_set_id": "16cee5"
+          },
+          {
+            "words": [
+              "HF TRANSFORMERS",
+              "TGI",
+              "TRITON",
+              "VLLM"
+            ],
+            "category": "LLM Inference Serving Frameworks",
+            "color": "yellow",
+            "url": "https://www.redhat.com/en/blog/meet-vllm-faster-more-efficient-llm-inference-and-serving",
+            "description": "Competing and complementary frameworks for serving LLMs in production: HuggingFace Transformers, Text Generation Inference (TGI), NVIDIA Triton, and vLLM.",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://huggingface.co/docs/text-generation-inference/index",
+              "https://github.com/vllm-project/vllm"
+            ],
+            "theme": "vLLM Architecture & Production AI Inference",
+            "group_item_id": "0d0745",
+            "group_set_id": "16cee5"
+          },
+          {
+            "words": [
+              "DISTRIBUTED",
+              "MULTI-GPU",
+              "OVERHEAD",
+              "TENSOR"
+            ],
+            "category": "Scaling LLM Inference Beyond One GPU",
+            "color": "indigo",
+            "url": "https://www.redhat.com/en/blog/meet-vllm-faster-more-efficient-llm-inference-and-serving",
+            "description": "Large models that exceed single-GPU capacity require distributed inference with tensor parallelism, introducing additional coordination overhead across multiple GPUs.",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://docs.vllm.ai/en/latest/serving/distributed_serving.html"
+            ],
+            "theme": "vLLM Architecture & Production AI Inference",
+            "group_item_id": "694d19",
+            "group_set_id": "16cee5"
+          }
+        ]
+      ],
+      "game_set_id": "016e3d"
+    }
+  ]
+}

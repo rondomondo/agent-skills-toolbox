@@ -1,0 +1,82 @@
+[
+  {
+    "query": "hey can you make a find4 game from this blog post? https://martinfowler.com/articles/microservices.html",
+    "should_trigger": true
+  },
+  {
+    "query": "i've got a pdf chapter on kubernetes networking — turn it into a connections-style word game for my team's lunch-and-learn",
+    "should_trigger": true
+  },
+  {
+    "query": "generate game JSON for find4.org from this article i pasted below",
+    "should_trigger": true
+  },
+  {
+    "query": "can you create some word groups from this text? i want 4 categories of 4 words each with a hidden theme, it's for that game",
+    "should_trigger": true
+  },
+  {
+    "query": "i want to make a connections game (like the nyt one) from my company's Q3 engineering blog post — here's the url: https://eng.example.com/q3-recap",
+    "should_trigger": true
+  },
+  {
+    "query": "take this markdown file ~/notes/linux-internals.md and build me a find4 game JSON file from it",
+    "should_trigger": true
+  },
+  {
+    "query": "populate the find4 library with a new game about docker concepts — i'll paste the source text",
+    "should_trigger": true
+  },
+  {
+    "query": "build a word-grouping game for the onboarding session next tuesday — source is this RFC doc at /docs/rfc-2023.txt",
+    "should_trigger": true
+  },
+  {
+    "query": "can we do --game-count-max 3 and generate from stdin? i'll paste the text now",
+    "should_trigger": true
+  },
+  {
+    "query": "analyse this article into themed concept groups for a quiz game — 4 groups, 4 words each, output as JSON ready for find4",
+    "should_trigger": true
+  },
+  {
+    "query": "make a quiz where players have to guess which 4 things go together — there's 4 rounds and the source is this wikipedia page on TCP/IP",
+    "should_trigger": true
+  },
+  {
+    "query": "i need to extract keywords from this doc and group them into 4 thematic buckets of 4 for an icebreaker game",
+    "should_trigger": true
+  },
+  {
+    "query": "can you summarise this article for me and highlight the 4 main themes? it's about distributed systems",
+    "should_trigger": false
+  },
+  {
+    "query": "extract all the technical terms from this PDF and list them in a table with their definitions",
+    "should_trigger": false
+  },
+  {
+    "query": "i want to build a trivia quiz app with multiple choice questions from this textbook chapter — 10 questions, 4 answer options each",
+    "should_trigger": false
+  },
+  {
+    "query": "create a crossword puzzle from the vocabulary in this document",
+    "should_trigger": false
+  },
+  {
+    "query": "group these 20 concepts into clusters by theme — i need a mindmap-style breakdown, maybe 4-5 groups",
+    "should_trigger": false
+  },
+  {
+    "query": "i'm building a game where users drag words into categories. can you write the react component for the drag-and-drop logic?",
+    "should_trigger": false
+  },
+  {
+    "query": "scrape this url and give me a json file with all the headings and subheadings structured hierarchically",
+    "should_trigger": false
+  },
+  {
+    "query": "write a python script that reads a text file and outputs 4 random words per paragraph",
+    "should_trigger": false
+  }
+]

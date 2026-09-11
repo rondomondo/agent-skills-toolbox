@@ -1,0 +1,340 @@
+{
+  "metadata": {
+    "generated_at": "2026-09-07T00:00:00Z",
+    "source": "https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction",
+    "suggested_name": "system-design-interview-fundamentals.json",
+    "modified_at": "2026-09-07T18:05:33.144468",
+    "source_id": "https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction",
+    "step": "finalize_metadata",
+    "id_registry": {
+      "group_set_ids": [
+        "2461af",
+        "0a1454",
+        "2e7e44",
+        "d378e9"
+      ],
+      "game_set_ids": [
+        "7ed1db",
+        "0ef917"
+      ],
+      "group_item_ids": [
+        "877b67",
+        "1da1c4",
+        "87cf00",
+        "c515ce",
+        "71a0e9",
+        "ee7b87",
+        "63b039",
+        "0a6437",
+        "e9276e",
+        "037d83",
+        "745280",
+        "c836e4",
+        "f8650d",
+        "801cf1",
+        "21e500",
+        "99f2a7"
+      ]
+    },
+    "id": "Wr-eQZ3v9RO16xr3",
+    "split_info": {
+      "role": "combined",
+      "split_at": "2026-09-07T18:05:44.087734+00:00",
+      "source_file": "/output/games/system-design-interview-fundamentals.json"
+    }
+  },
+  "game_sets": [
+    {
+      "theme": "System Design Interview Fundamentals",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "NAVIGATION",
+              "DESIGN",
+              "EXCELLENCE",
+              "COLLABORATION"
+            ],
+            "category": "Interviewer Rubric Pillars",
+            "color": "blue",
+            "url": "https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction",
+            "description": "The four core competencies every system design interviewer assesses, regardless of company or level: Problem Navigation, Solution Design, Technical Excellence, and Communication and Collaboration.",
+            "skill_level": "Beginner",
+            "additional_sources": [],
+            "theme": "System Design Interview Fundamentals",
+            "group_item_id": "877b67",
+            "group_set_id": "2461af"
+          },
+          {
+            "words": [
+              "REQUIREMENTS",
+              "TRADEOFFS",
+              "SCALING",
+              "STRUCTURE"
+            ],
+            "category": "Candidate Failure Modes — Solution Design",
+            "color": "red",
+            "url": "https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction",
+            "description": "Things interviewers watch for that derail candidates: missing requirements, ignoring tradeoffs, overlooking scaling, and producing spaghetti-structure designs.",
+            "skill_level": "Intermediate",
+            "additional_sources": [],
+            "theme": "System Design Interview Fundamentals",
+            "group_item_id": "1da1c4",
+            "group_set_id": "2461af"
+          },
+          {
+            "words": [
+              "PRODUCT",
+              "INFRASTRUCTURE",
+              "LOW-LEVEL",
+              "ML"
+            ],
+            "category": "Types of System Design Interviews",
+            "color": "green",
+            "url": "https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction",
+            "description": "The four main categories of system design interviews: Product Design, Infrastructure Design, Low-Level (OOD) Design, and ML System Design.",
+            "skill_level": "Beginner",
+            "additional_sources": [],
+            "theme": "System Design Interview Fundamentals",
+            "group_item_id": "87cf00",
+            "group_set_id": "2461af"
+          },
+          {
+            "words": [
+              "MID-LEVEL",
+              "SENIOR",
+              "STAFF",
+              "ENTRY-LEVEL"
+            ],
+            "category": "Engineering Levels and Design Interview Expectations",
+            "color": "yellow",
+            "url": "https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction",
+            "description": "How design interview frequency and depth expectations vary by seniority: entry-level rarely faces design rounds, mid-level increasingly so, senior carries disproportionate weight, and staff-level requires a distinct approach.",
+            "skill_level": "Intermediate",
+            "additional_sources": [],
+            "theme": "System Design Interview Fundamentals",
+            "group_item_id": "c515ce",
+            "group_set_id": "2461af"
+          }
+        ],
+        [
+          {
+            "words": [
+              "AMBIGUOUS",
+              "PRACTICAL",
+              "COLLABORATIVE",
+              "OPEN-ENDED"
+            ],
+            "category": "Characteristics of System Design Interviews",
+            "color": "purple",
+            "url": "https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction",
+            "description": "Defining traits of system design interviews: problems are ambiguously defined, interviews are practical not strictly academic, answers are open-ended with many valid solutions, and the process is collaborative.",
+            "skill_level": "Beginner",
+            "additional_sources": [],
+            "theme": "System Design Interview Fundamentals",
+            "group_item_id": "71a0e9",
+            "group_set_id": "0a1454"
+          },
+          {
+            "words": [
+              "FUNDAMENTALS",
+              "TECHNOLOGIES",
+              "FRAMEWORK",
+              "PRACTICE"
+            ],
+            "category": "Hello Interview Course Components",
+            "color": "teal",
+            "url": "https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction",
+            "description": "The four building blocks of the 'System Design in a Hurry' course: Core Concepts (Fundamentals), Key Technologies, Delivery Framework, and Guided Practice problems.",
+            "skill_level": "Beginner",
+            "additional_sources": [],
+            "theme": "System Design Interview Fundamentals",
+            "group_item_id": "ee7b87",
+            "group_set_id": "0a1454"
+          },
+          {
+            "words": [
+              "STUCK",
+              "TRIVIAL",
+              "REQUIREMENTS",
+              "DELIVERY"
+            ],
+            "category": "Problem Navigation Failure Modes",
+            "color": "orange",
+            "url": "https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction",
+            "description": "Four ways candidates fail the Problem Navigation rubric: getting stuck on one piece, focusing on trivial aspects, under-exploring requirements, and failing to deliver a working system.",
+            "skill_level": "Intermediate",
+            "additional_sources": [],
+            "theme": "System Design Interview Fundamentals",
+            "group_item_id": "63b039",
+            "group_set_id": "0a1454"
+          },
+          {
+            "words": [
+              "PATTERNS",
+              "HARDWARE",
+              "ANTIQUATED",
+              "TECHNOLOGIES"
+            ],
+            "category": "Technical Excellence Pitfalls",
+            "color": "indigo",
+            "url": "https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction",
+            "description": "Common technical excellence failures: not knowing available technologies, using outdated approaches from pre-2015 hardware assumptions, not recognising patterns, and misapplying technology to a problem.",
+            "skill_level": "Advanced",
+            "additional_sources": [],
+            "theme": "System Design Interview Fundamentals",
+            "group_item_id": "0a6437",
+            "group_set_id": "0a1454"
+          }
+        ]
+      ],
+      "game_set_id": "7ed1db"
+    },
+    {
+      "theme": "Acing the System Design Interview",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "RIDE-SHARING",
+              "RATE-LIMITER",
+              "INSTAGRAM",
+              "UBER"
+            ],
+            "category": "Classic System Design Problem Examples",
+            "color": "blue",
+            "url": "https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction",
+            "description": "Canonical system design interview prompts used to illustrate Product and Infrastructure design categories: 'Design Uber', 'Design a Rate Limiter', 'Design Instagram', and 'Design a Ride-Sharing Service'.",
+            "skill_level": "Beginner",
+            "additional_sources": [],
+            "theme": "Acing the System Design Interview",
+            "group_item_id": "e9276e",
+            "group_set_id": "2e7e44"
+          },
+          {
+            "words": [
+              "LOAD-BALANCER",
+              "DATABASE",
+              "SERVICE",
+              "CACHE"
+            ],
+            "category": "Core Infrastructure Components",
+            "color": "green",
+            "url": "https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction",
+            "description": "The standard infrastructure primitives that appear in virtually every Product and Infrastructure design interview: services, load balancers, databases, and caches.",
+            "skill_level": "Beginner",
+            "additional_sources": [],
+            "theme": "Acing the System Design Interview",
+            "group_item_id": "037d83",
+            "group_set_id": "2e7e44"
+          },
+          {
+            "words": [
+              "DEFENSIVE",
+              "WEEDS",
+              "FEEDBACK",
+              "COMMUNICATION"
+            ],
+            "category": "Communication and Collaboration Pitfalls",
+            "color": "red",
+            "url": "https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction",
+            "description": "The ways candidates fail on the collaboration rubric: being defensive under feedback, getting lost in the weeds, and failing to communicate complex concepts clearly.",
+            "skill_level": "Intermediate",
+            "additional_sources": [],
+            "theme": "Acing the System Design Interview",
+            "group_item_id": "745280",
+            "group_set_id": "2e7e44"
+          },
+          {
+            "words": [
+              "DENSE",
+              "PRACTICAL",
+              "EFFICIENT",
+              "BACKWARDS"
+            ],
+            "category": "Hello Interview's Design Philosophy",
+            "color": "yellow",
+            "url": "https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction",
+            "description": "The four adjectives that describe the Hello Interview approach: dense, practical, and efficient content, taught by working backwards from what interviews actually require.",
+            "skill_level": "Beginner",
+            "additional_sources": [],
+            "theme": "Acing the System Design Interview",
+            "group_item_id": "c836e4",
+            "group_set_id": "2e7e44"
+          }
+        ],
+        [
+          {
+            "words": [
+              "WEEK",
+              "MONTHS",
+              "DATE",
+              "RECRUITER"
+            ],
+            "category": "Interview Timing Strategies",
+            "color": "teal",
+            "url": "https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction",
+            "description": "Practical timing advice from the guide: preparation ranges from under a week (experienced candidates) to 3-4 weeks, and candidates are encouraged to ask recruiters to push interview dates if more time is needed.",
+            "skill_level": "Beginner",
+            "additional_sources": [],
+            "theme": "Acing the System Design Interview",
+            "group_item_id": "f8650d",
+            "group_set_id": "d378e9"
+          },
+          {
+            "words": [
+              "PROBE",
+              "DOUBT",
+              "REASONING",
+              "TRADEOFFS"
+            ],
+            "category": "How Interviewers Test Depth",
+            "color": "orange",
+            "url": "https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction",
+            "description": "Techniques interviewers use to check genuine understanding rather than memorised answers: probing reasoning, expressing doubt about an approach, and asking candidates to explore tradeoffs.",
+            "skill_level": "Advanced",
+            "additional_sources": [],
+            "theme": "Acing the System Design Interview",
+            "group_item_id": "801cf1",
+            "group_set_id": "d378e9"
+          },
+          {
+            "words": [
+              "BASICS",
+              "DEPTH",
+              "DEEP-DIVE",
+              "BREADTH"
+            ],
+            "category": "Senior vs Mid-Level Design Expectations",
+            "color": "purple",
+            "url": "https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction",
+            "description": "The distinction in interview expectations: a mid-level engineer covers basics well without great depth, while a senior engineer moves through basics quickly to demonstrate deep-dive capability.",
+            "skill_level": "Intermediate",
+            "additional_sources": [],
+            "theme": "Acing the System Design Interview",
+            "group_item_id": "21e500",
+            "group_set_id": "d378e9"
+          },
+          {
+            "words": [
+              "QUIZZES",
+              "WORKED",
+              "GUIDED",
+              "FEEDBACK"
+            ],
+            "category": "Course Learning Methods",
+            "color": "indigo",
+            "url": "https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction",
+            "description": "The active-learning tools embedded in the Hello Interview course: retention quizzes, worked solutions to common problems, guided practice walkthroughs, and personalised feedback.",
+            "skill_level": "Beginner",
+            "additional_sources": [],
+            "theme": "Acing the System Design Interview",
+            "group_item_id": "99f2a7",
+            "group_set_id": "d378e9"
+          }
+        ]
+      ],
+      "game_set_id": "0ef917"
+    }
+  ]
+}

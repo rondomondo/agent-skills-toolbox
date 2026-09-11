@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find4 &mdash; Acing the System Design Interview</title>
+
+    <meta name="description" content="A Beginner-level Find4 word-grouping game on &#x27;Acing the System Design Interview&#x27;. 2 rounds, 32 words. Find the hidden connections between groups of 4.">
+    <meta name="keywords" content="Acing the System Design Interview, Classic System Design Problem Examples, Core Infrastructure Components, Communication and Collaboration Pitfalls, Hello Interview&#x27;s Design Philosophy, Interview Timing Strategies, How Interviewers Test Depth, Senior vs Mid-Level Design Expectations, Course Learning Methods">
+    <meta name="author" content="Find4">
+    <meta name="theme-color" content="#0f6e56">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://find4.org/#game=xVhdb9u4Ev0rhF-6F9dKnI8mjt8UW2mMTeys7WyBLoKAFkcyN7KoklJct8h_3zOSrShpC2Qvdn0BA6LEGXI4c-bM0N9aS8qlkrls9b61YkrJypzUvcxbvdZh5_DE65x5ndNZp9Mrf59a7ZYzhQ0J84s8z1xvf3-1Wu0tKEmMTnOyj5pWe6FZ7ickbbrv1i6npafI6Tjd16knvUVh7RrD3BpVhLk2Ka9axDE53juVS179haJXL-1FRaogkeYycXt_ulJ5aZSO9A_sPuj2Ou97R0d7B8fHxyfd2vp7rf7xA-SUYc1IpzLRX-m-dmy7pdW9pVi73K5LN8P8e0c5jHCt3h-tDkVnB6etu3YrtqbImlOHdErHx1hCHZ126exZRsOmrRCdHZ6eEIQ6R6eqe4TB6fH7w24Hg7B7dEKsH3VP3ncUBt3OQRgdYHB4QO87LHN2Fh1KbP_EhuIEH61Hv306ejybjA9Ovlhez2WJhk1pZNh-a5IyQPyxnvyx54-P9zrd7tHp2X9L-EA6kxaxu__ZTpvpSJdb7Jsiz4p8nz3m9v8OIvIFlSjyQ53GAm9iWmqLQakthlttPkBSxBCVLOpB1PvJRq0nuGgbPPb8t7-1TR1cVoXuytgqfpPhIPCml_5kOPoAuYk_C7yr4fVwFkzwOhxNZ_6HiX-N8e05PgEDIZI0NoymVj-Rzunw1b431swTvAZf5DJLyDEUTGIsFOZJwVgpbPJPZwAEQquz8g2GydSkOpSJqPRFpS_qHURmzTLLnSgcKZEboZOkQI7gbGw_rytkquDDyEp8x3thabvMxgWaXE-825z6dk72Xbt-lWLCa13pJbKlOTFMXS5jK5f4xjs0FLQib7qQlsM5ZTtDerfHGHmAdfcJPRK77RzZnIIrMSGV0nximdxX1MIhvWv_D8jYpDR06oRu8gGnV8UGT-0GeK7G_sA796_8Ub-Ey8Cf-ef-NMBwGkx-H_Z51Pf7l8Fr4Bg485Vv-wiISZFJTcDElijdBWJmcBICg2S2CjB5YVlmOYr6kRx8KQGMLMNOkBKP2uaFTJK1QHDs-g3QqS3uCVeF2LVFYqQSc5nINCSLd6buuXQ8xSuFMlyQ2zkSakZ_AxIGwUUwmg5_54B_DILBFM8LPM_9_q-MgfH19e1o2Pdnw_HoOywslwUnK9tfnrdvkkTOja2-3Og8goubqLCkdoWJlVw7BCBVGkEBACKpEwGr2JXhCzttMbc67Ik5sasVRZQ6YEagQJAVEZGay_ChLWLKc5ZIjMsZQ7zSCrObYPMGZawM1t96hvdiLv2CJzDCxBXyyZL196goQ7okpaH2LyGjLvFvQsaoJISbid-fAQFXGAcXF8P-MBjNMGaEfPQnQMxLWFxyLJ-teOfq8rLQcJ3JFusGItYsvdoVKCI4Ukj1J4UNVqjE5lT68pX1TBnWII17EEsdtcEpEsqoUFXUKYp0qEF-HOAcz7bIZREvcjFfC_jygYPE-FmBn4BCVC-x4l3rgzmBBSsusvS50JZ2Thh1w_cTWNy1m50HaIKp4Xo8ml1Oq-LBOJkE_clt2X68xMOzL2dgY66QZbWO9YsGIyeZ7AIFN9vwibyyRirm8iow7LW4QDXvIcyErnJDEDKNaRO7ihQkJ_6D-IW-ZIRuApmtGlzzH-aAI--4FKpLQc1EaFYFVBA8GVc9jHQPiH1oC245HH_JCrdoND2Voo7EkusvLCehnUhBPqR2jpb6VvAKLZvbxgsSuZmMzxkcg_Ht-awEiT8dj6qWdTbxB8H44uI7AjGr5_3ZHzNc8WBYli8agDFlVHZCHBQuUv254Ag0zUIHWpL9gsIHFIe00OmmaJT9CDsWAFoALqCZVCwJwdPctcrU8QIMMjMvxUjiAoJRWwBRltCbcyUyxRwdyRzXGajUTFThCZBhmQasYAqUkxIgVioyUfSD1sNXj9ysqH8JG_VF8Q3YQMM57JcEEtzMLstncOMNql7kHEgZ4OtLaEwp1caKRyeutfKu-ExbqwKkYpiXCdvklaywKL-7qi8K13WdlvPcITwnMDWs64E-ljC_DAmYAMlKAEloHhlVaB916EAdSSJWOl9w9NFMl3UKGdBG9cA1F0u4yhe1_tJUFQ2OjxfbZVBPwgdUFoBDAX_p5qakiDJPcZMTykzO0bjk_5-GpP4_4Q14-e12-OlTwID5OJ78Ggww-HCLW_Cg2bK-blELiyy94rCycdcEh6omPjTyJza7wocs-w4v2dqTG5M4Qcs5KTD5tql83YOE5Sl6oAluMBhbCOvXr3zL4A4Dis4kRYmtbfcJmay6zUOoLGlq27lwa5w8bHCyqU6oYo4DW9LTtuPdeWHZ_Kf0UzDc3bWbf4PxTaf6E-zp7ukv">
+    <meta property="og:title" content="Acing the System Design Interview">
+    <meta property="og:description" content="Test your knowledge on Acing the System Design Interview. 2 rounds, 32 words.">
+    <meta property="og:image" content="https://find4.org/preview-image.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Acing the System Design Interview">
+    <meta name="twitter:description" content="Beginner-level challenge covering Acing the System Design Interview.">
+    <meta name="twitter:image" content="https://find4.org/preview-image.png">
+
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "EducationalOccupationalCredential",
+  "name": "Acing the System Design Interview",
+  "educationalLevel": "Beginner",
+  "abstract": "Covers concepts including: Classic System Design Problem Examples, Core Infrastructure Components, Communication and Collaboration Pitfalls, Hello Interview's Design Philosophy."
+}
+    </script>
+
+    <style>
+        body{font-family:system-ui,-apple-system,sans-serif;max-width:720px;margin:2rem auto;padding:0 1rem;background:#f5f5f3;color:#111;}
+        .f4-game{background:#fff;border:0.5px solid rgba(0,0,0,0.15);border-radius:12px;padding:1rem 1.25rem;margin-bottom:48px;box-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1);}
+        .f4-game-header{display:flex;align-items:center;gap:10px;margin-bottom:1rem;flex-wrap:wrap;}
+        .f4-game-icon{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:20px;}
+        .f4-game-title-block{flex:1;min-width:0;}
+        .f4-game-title{font-size:15px;font-weight:500;margin:0;color:#111;}
+        .f4-game-meta{font-size:12px;color:#666;margin:0;}
+        .play-btn{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;background:#0f6e56;color:#fff;border-radius:10px;text-decoration:none;font-size:13px;font-weight:500;margin-left:auto;transition:background 0.2s;}
+        .play-btn:hover{background:#085041;}
+        .f4-groups{display:flex;flex-direction:column;gap:5px;}
+        .f4-round{font-size:11px;font-weight:500;color:#888;padding:8px 0 3px;text-transform:uppercase;letter-spacing:0.05em;}
+        .f4-group{display:grid;grid-template-columns:13px 1fr 90px 2fr;align-items:start;gap:8px;padding:8px 10px;border-radius:8px;border:0.5px solid #e0e0de;background:#fafaf9;}
+        .f4-dot{width:11px;height:11px;border-radius:50%;flex-shrink:0;margin-top:3px;}
+        .f4-cat{font-size:13px;font-weight:500;line-height:1.3;}
+        .f4-skill{font-size:11px;padding:2px 7px;border-radius:20px;text-align:center;white-space:nowrap;}
+        .f4-words{font-size:11px;color:#666;line-height:1.5;word-break:break-word;}
+        .sk-b{background:#e1f5ee;color:#085041;}.sk-i{background:#e6f1fb;color:#0c447c;}.sk-a{background:#faeeda;color:#633806;}.sk-e{background:#fcebeb;color:#791f1f;}
+        .dot-red{background:#e24b4a;}.dot-green{background:#639922;}.dot-blue{background:#378add;}.dot-yellow{background:#ba7517;}
+        .dot-purple{background:#7f77dd;}.dot-teal{background:#1d9e75;}.dot-orange{background:#d85a30;}.dot-indigo{background:#534ab7;}
+        @media(prefers-color-scheme:dark){
+          body{background:#1a1a18;color:#e8e6e1;}
+          .f4-game{background:#2c2c2a;border-color:rgba(255,255,255,0.1);box-shadow:0 4px 6px -1px rgb(0 0 0 / 0.4);}
+          .f4-game-title{color:#e8e6e1;}
+          .f4-game-meta{color:#888780;}
+          .f4-round{color:#888780;}
+          .f4-group{background:#222220;border-color:#3a3a38;}
+          .f4-cat{color:#e8e6e1;}
+          .f4-words{color:#888780;}
+          .sk-b{background:#04342c;color:#9fe1cb;}.sk-i{background:#042c53;color:#b5d4f4;}.sk-a{background:#412402;color:#fac775;}.sk-e{background:#501313;color:#f7c1c1;}
+        }
+    </style>
+</head>
+<body>
+<div class="f4-game f4-capture">
+  <div class="f4-game-header">
+    <div class="f4-game-icon" style="background:#eeedfe;" aria-hidden="true">&#x1F9E9;</div>
+    <div class="f4-game-title-block">
+      <h1 class="f4-game-title">Acing the System Design Interview</h1>
+      <p class="f4-game-meta">2 rounds &middot; 32 words &middot; Beginner level</p>
+    </div>
+    <a class="play-btn" href="https://find4.org/#game=xVhdb9u4Ev0rhF-6F9dKnI8mjt8UW2mMTeys7WyBLoKAFkcyN7KoklJct8h_3zOSrShpC2Qvdn0BA6LEGXI4c-bM0N9aS8qlkrls9b61YkrJypzUvcxbvdZh5_DE65x5ndNZp9Mrf59a7ZYzhQ0J84s8z1xvf3-1Wu0tKEmMTnOyj5pWe6FZ7ickbbrv1i6npafI6Tjd16knvUVh7RrD3BpVhLk2Ka9axDE53juVS179haJXL-1FRaogkeYycXt_ulJ5aZSO9A_sPuj2Ou97R0d7B8fHxyfd2vp7rf7xA-SUYc1IpzLRX-m-dmy7pdW9pVi73K5LN8P8e0c5jHCt3h-tDkVnB6etu3YrtqbImlOHdErHx1hCHZ126exZRsOmrRCdHZ6eEIQ6R6eqe4TB6fH7w24Hg7B7dEKsH3VP3ncUBt3OQRgdYHB4QO87LHN2Fh1KbP_EhuIEH61Hv306ejybjA9Ovlhez2WJhk1pZNh-a5IyQPyxnvyx54-P9zrd7tHp2X9L-EA6kxaxu__ZTpvpSJdb7Jsiz4p8nz3m9v8OIvIFlSjyQ53GAm9iWmqLQakthlttPkBSxBCVLOpB1PvJRq0nuGgbPPb8t7-1TR1cVoXuytgqfpPhIPCml_5kOPoAuYk_C7yr4fVwFkzwOhxNZ_6HiX-N8e05PgEDIZI0NoymVj-Rzunw1b431swTvAZf5DJLyDEUTGIsFOZJwVgpbPJPZwAEQquz8g2GydSkOpSJqPRFpS_qHURmzTLLnSgcKZEboZOkQI7gbGw_rytkquDDyEp8x3thabvMxgWaXE-825z6dk72Xbt-lWLCa13pJbKlOTFMXS5jK5f4xjs0FLQib7qQlsM5ZTtDerfHGHmAdfcJPRK77RzZnIIrMSGV0nximdxX1MIhvWv_D8jYpDR06oRu8gGnV8UGT-0GeK7G_sA796_8Ub-Ey8Cf-ef-NMBwGkx-H_Z51Pf7l8Fr4Bg485Vv-wiISZFJTcDElijdBWJmcBICg2S2CjB5YVlmOYr6kRx8KQGMLMNOkBKP2uaFTJK1QHDs-g3QqS3uCVeF2LVFYqQSc5nINCSLd6buuXQ8xSuFMlyQ2zkSakZ_AxIGwUUwmg5_54B_DILBFM8LPM_9_q-MgfH19e1o2Pdnw_HoOywslwUnK9tfnrdvkkTOja2-3Og8goubqLCkdoWJlVw7BCBVGkEBACKpEwGr2JXhCzttMbc67Ik5sasVRZQ6YEagQJAVEZGay_ChLWLKc5ZIjMsZQ7zSCrObYPMGZawM1t96hvdiLv2CJzDCxBXyyZL196goQ7okpaH2LyGjLvFvQsaoJISbid-fAQFXGAcXF8P-MBjNMGaEfPQnQMxLWFxyLJ-teOfq8rLQcJ3JFusGItYsvdoVKCI4Ukj1J4UNVqjE5lT68pX1TBnWII17EEsdtcEpEsqoUFXUKYp0qEF-HOAcz7bIZREvcjFfC_jygYPE-FmBn4BCVC-x4l3rgzmBBSsusvS50JZ2Thh1w_cTWNy1m50HaIKp4Xo8ml1Oq-LBOJkE_clt2X68xMOzL2dgY66QZbWO9YsGIyeZ7AIFN9vwibyyRirm8iow7LW4QDXvIcyErnJDEDKNaRO7ihQkJ_6D-IW-ZIRuApmtGlzzH-aAI--4FKpLQc1EaFYFVBA8GVc9jHQPiH1oC245HH_JCrdoND2Voo7EkusvLCehnUhBPqR2jpb6VvAKLZvbxgsSuZmMzxkcg_Ht-awEiT8dj6qWdTbxB8H44uI7AjGr5_3ZHzNc8WBYli8agDFlVHZCHBQuUv254Ag0zUIHWpL9gsIHFIe00OmmaJT9CDsWAFoALqCZVCwJwdPctcrU8QIMMjMvxUjiAoJRWwBRltCbcyUyxRwdyRzXGajUTFThCZBhmQasYAqUkxIgVioyUfSD1sNXj9ysqH8JG_VF8Q3YQMM57JcEEtzMLstncOMNql7kHEgZ4OtLaEwp1caKRyeutfKu-ExbqwKkYpiXCdvklaywKL-7qi8K13WdlvPcITwnMDWs64E-ljC_DAmYAMlKAEloHhlVaB916EAdSSJWOl9w9NFMl3UKGdBG9cA1F0u4yhe1_tJUFQ2OjxfbZVBPwgdUFoBDAX_p5qakiDJPcZMTykzO0bjk_5-GpP4_4Q14-e12-OlTwID5OJ78Ggww-HCLW_Cg2bK-blELiyy94rCycdcEh6omPjTyJza7wocs-w4v2dqTG5M4Qcs5KTD5tql83YOE5Sl6oAluMBhbCOvXr3zL4A4Dis4kRYmtbfcJmay6zUOoLGlq27lwa5w8bHCyqU6oYo4DW9LTtuPdeWHZ_Kf0UzDc3bWbf4PxTaf6E-zp7ukv" target="_blank" rel="noopener"><span>&#9654;</span> Play on find4.org</a>
+  </div>
+
+  <div class="f4-groups">
+    <h2 class="f4-round">Round 1</h2>
+    <div class="f4-group">
+        <div class="f4-dot dot-blue" role="img" aria-label="Beginner Level Category"></div>
+        <div class="f4-cat">Classic System Design Problem Examples</div>
+        <span class="f4-skill sk-b">Beginner</span>
+        <div class="f4-words">RIDE-SHARING &middot; RATE-LIMITER &middot; INSTAGRAM &middot; UBER</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-green" role="img" aria-label="Beginner Level Category"></div>
+        <div class="f4-cat">Core Infrastructure Components</div>
+        <span class="f4-skill sk-b">Beginner</span>
+        <div class="f4-words">LOAD-BALANCER &middot; DATABASE &middot; SERVICE &middot; CACHE</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-red" role="img" aria-label="Intermediate Level Category"></div>
+        <div class="f4-cat">Communication and Collaboration Pitfalls</div>
+        <span class="f4-skill sk-i">Intermediate</span>
+        <div class="f4-words">DEFENSIVE &middot; WEEDS &middot; FEEDBACK &middot; COMMUNICATION</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-yellow" role="img" aria-label="Beginner Level Category"></div>
+        <div class="f4-cat">Hello Interview&#x27;s Design Philosophy</div>
+        <span class="f4-skill sk-b">Beginner</span>
+        <div class="f4-words">DENSE &middot; PRACTICAL &middot; EFFICIENT &middot; BACKWARDS</div>
+    </div>
+    <h2 class="f4-round">Round 2</h2>
+    <div class="f4-group">
+        <div class="f4-dot dot-teal" role="img" aria-label="Beginner Level Category"></div>
+        <div class="f4-cat">Interview Timing Strategies</div>
+        <span class="f4-skill sk-b">Beginner</span>
+        <div class="f4-words">WEEK &middot; MONTHS &middot; DATE &middot; RECRUITER</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-orange" role="img" aria-label="Advanced Level Category"></div>
+        <div class="f4-cat">How Interviewers Test Depth</div>
+        <span class="f4-skill sk-a">Advanced</span>
+        <div class="f4-words">PROBE &middot; DOUBT &middot; REASONING &middot; TRADEOFFS</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-purple" role="img" aria-label="Intermediate Level Category"></div>
+        <div class="f4-cat">Senior vs Mid-Level Design Expectations</div>
+        <span class="f4-skill sk-i">Intermediate</span>
+        <div class="f4-words">BASICS &middot; DEPTH &middot; DEEP-DIVE &middot; BREADTH</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-indigo" role="img" aria-label="Beginner Level Category"></div>
+        <div class="f4-cat">Course Learning Methods</div>
+        <span class="f4-skill sk-b">Beginner</span>
+        <div class="f4-words">QUIZZES &middot; WORKED &middot; GUIDED &middot; FEEDBACK</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

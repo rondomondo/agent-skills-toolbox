@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Find4 — Distributed Systems &amp; Observability</title>
+<style>
+.f4-wrap{padding:1rem 0;display:flex;flex-direction:column;gap:1.25rem;font-family:system-ui,sans-serif;max-width:720px;margin:0 auto}
+.f4-game{background:#fff;border:0.5px solid #ddd;border-radius:12px;padding:1rem 1.25rem;margin-bottom:24px}
+.f4-game-header{display:flex;align-items:center;gap:10px;margin-bottom:1rem;flex-wrap:wrap}
+.f4-game-icon{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:18px}
+.f4-game-title-block{flex:1;min-width:0}
+.f4-game-title{font-size:15px;font-weight:500;margin:0}
+.f4-game-meta{font-size:12px;color:#666;margin:0}
+.play-btn{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;background:#f5f5f5;border:0.5px solid #ddd;border-radius:12px;text-decoration:none;color:#333;font-size:13px;margin-left:auto}
+.play-btn:hover{background:#eee}
+.f4-groups{display:flex;flex-direction:column;gap:5px}
+.f4-round{font-size:11px;font-weight:500;color:#888;padding:8px 0 3px;text-transform:uppercase;letter-spacing:.05em}
+.f4-group{display:grid;grid-template-columns:13px 1fr 90px 2fr;align-items:start;gap:8px;padding:8px 10px;border-radius:8px;border:0.5px solid #e0e0de;background:#fafaf9}
+.f4-dot{width:11px;height:11px;border-radius:50%;flex-shrink:0;margin-top:3px}
+.f4-cat{font-size:13px;font-weight:500;line-height:1.3}
+.f4-skill{font-size:11px;padding:2px 7px;border-radius:20px;text-align:center;white-space:nowrap}
+.f4-words{font-size:11px;color:#666;line-height:1.5;word-break:break-word}
+.sk-b{background:#e1f5ee;color:#085041}
+.sk-i{background:#e6f1fb;color:#0c447c}
+.sk-a{background:#faeeda;color:#633806}
+.sk-e{background:#fcebeb;color:#791f1f}
+.dot-red{background:#e24b4a}.dot-green{background:#639922}.dot-blue{background:#378add}
+.dot-yellow{background:#ba7517}.dot-purple{background:#7f77dd}.dot-teal{background:#1d9e75}
+.dot-orange{background:#d85a30}.dot-indigo{background:#534ab7}
+</style>
+</head>
+<body>
+<div class="f4-wrap">
+<div class="f4-game">
+  <div class="f4-game-header">
+    <div class="f4-game-icon" style="background:#e6f1fb">🔭</div>
+    <div class="f4-game-title-block">
+      <p class="f4-game-title">Distributed Systems &amp; Observability</p>
+      <p class="f4-game-meta">2 rounds · 32 words</p>
+    </div>
+    <a class="play-btn" href="https://find4.org/#game=rVhrc9pKEv0rKj7sJwuJh_HjGwaFUCGIBeX6PjblGkmNmHjQ6M6MDGzK__12j3jZxBtv7CoXFppXd59zunv4XluCYSkzrHb9vZZBDooZSO-YqV3Xmn6z4_rnbqMRNfxrn_7-rJ3VtCxVAjiuTcpzelFmGWhalrMlDaRcG8XjEl-5eoMjS-1qBfVvWtL8pUz5nP_olOZ16-q67dc7Tb9zdbk_646nx8cZKPDrnOdM8P_C3d6DsxpP7xRkdPrG-qNkWdxpMLiBrl3_VYvPoXmV4MQ2NC_bKT6wztUF6-BDp52220nt61ktQyeOFyWd82aDdk9ajcsr306xG3N0bDfJ71x0Wj5Oiv2ruT2ikySXfhMf5j7Mz-mspNOYX8Q0p9FuMWYn-802TYam3zgnMxrnV405DaVx4jdo6KLd8C_a9KbTbLUpKJ1mu9OhoUYjZT4dCo2LeUIPfnrZmaMXjxQLDFLXFN0s-fNbq90WRdn6d-3x4B_Z_b1mFmAx6x8wc2YVZs6_nDDWoB5YzAU3m9rZIaK0GFevpKr8j6bdXoATZpPuGP_ddAeD7oBe9MJxFPweUdQSpFYmCZpaWEAegcCjESpnoviSG_4AmqIkhVQ4JRYl4NdSCfyyMKbQ154ncZ3Zratz6aUy0V4i8wQKoz3NMySF9oxiCWiPggY6UbwwHJl3XetJBU5ccoFMypxYyOReO3LuHBHWobU0ynPniZXEvHsuxJ2AByCbhmiJWkLK0S1iUppyOoaJu4q1Ni47w1erVX3VqkuVedG0ss9Fsw2sDZn5Sv-2K9xCyYJljI7zKLK_AuKWvbhqz91jvRAClVoez45wHoSjfkAIz0ah_RziZzCdhlPn5kt_EDwHejYNnCkIvj3d6W1dOQI6UwD5CdKULzIpMwH06MZS3nvkBsfAWQRcGX-DxLLmFOhPsHHo6F3knLlUzhKYLhVhy_LUWbKcZfRlu6ujDma-DWsCUQtZT-TyGNtEyDLd-mTHkH-Zh1CmZYLYZklhPZ2XeYoKzQ0S2dWC0wfTLpqMD1K_He59hnoF3IhvfzgeOLfDcT-8xTXTbhQ4o-HnYWRV3vs0mQaz2ZcpST36OA2jaBQ8o0Ck2HzOE4LeKCmcCTMYzPyYAlKxPDtV-73Ms8Xfh1hBjoABEITeQq5cI12EHTXvMlcnTLBYgEsFzBU2oeSZywRawc1ieUKRCJJFzv8uoSJHUlkniBEYX2cu5IpSgwKaggzCfHCcJrZ17YQp3fSBIefSn7JEIZs0STxDVDVTG--J5cfMoeRBrq8PoXjqpR18h0ywr1mvoMZo-CHYZvvPw35_FNx2LQum4ZcomOJDP5gEY0wWvT-eEeID06Y7GTrdohA8sVnMudkl5RublI-4YYCJE2bMcQtW8LrhSBy51Rrbht5b8jQVsGIKXigBOwuepAcMGApxmyD0Jk-cycYs0LYVxLskcYr3DfYbObZNP8X7hyab0iA9mfBijj2UctkhJPqYAf_bXzQlxwzydvz3rcoL-H89O675wfi38A-cPBiFVAswoIOAGPApHA-eQU7BHuDXFduQHRMl1_xJted5yjN5gjMxH_IHucE0uT4URPvKE7ihNqcQT2RRCqZQug-gNDh2rc35ZEZWmeFoKUobZ6fUGCSUt03Qbs6opiAbWMXDNxQCsrWuCa5K5tKFNIMju18sDYh1BmA3eDuq-77zGarbJviJqm_D6adg6kzCcFQV9gHqeUIghyTs4dj2dB-743EweobxQNrqXioFefJCU1eUqhCnib64z9D7egoPHrIbKW4bpbVHKvRAKWv4Cc54IAq4km0l4YIpJgQIC3ayM8Y4sIbEgv3r6XprXlWzeYG9Qm49-4ELZPU7lOndJeEVqH0ejockwVHY645mEZZlysphRO8Gvdnznqzl9uSyQJ5jvXRmmIFYhv93ejiCawMCy-AJXEue76WIz_iI0SjXHooY1vWFWYoTrELbrKGqqsNiFBfkqXb-U-LNp41SZRVoS8z-GKbta8IU6wGOYVwrUEkpDjp-LyRL30Ofdn-r9rrd3MN0oNys5Cl4bIV3itaxUu2SDMxSGmlJCvlOzzYcuzqBy6pAvEO7tr0jvoIH_ahuL2LDPs6_bfUONzHnY9Dt27I8mYaT7qAbhdPTPg274F51xaAUvbtiHBFCWaWc5uh0g2mT1tvspcuikMp4CxCFh5sh0u5-xtM7zmn2nhnEmaFDFR-wS2M518utwHdWUZdm7d1eiRyWKGyj9s18LKmNVvwHFTtYF6DM_3lji1mWIXF_flfTBeCnxIHdbY2S-f7GJtV71On9zwUvcOLr058xbA2wP2I8fn38Bw==" target="_blank">▶ Play on find4.org</a>
+  </div>
+  <div class="f4-groups">
+    <div class="f4-round">Round 1</div>
+    <div class="f4-group"><div class="f4-dot dot-blue"></div><div class="f4-cat">OpenTelemetry Primitives</div><span class="f4-skill sk-i">Intermediate</span><div class="f4-words">TRACE · SPAN · BAGGAGE · CONTEXT</div></div>
+    <div class="f4-group"><div class="f4-dot dot-green"></div><div class="f4-cat">SRE Reliability Concepts</div><span class="f4-skill sk-i">Intermediate</span><div class="f4-words">GOLDEN · SLO · SLI · ERROR BUDGET</div></div>
+    <div class="f4-group"><div class="f4-dot dot-orange"></div><div class="f4-cat">Traffic Control Patterns</div><span class="f4-skill sk-a">Advanced</span><div class="f4-words">SLIDING WINDOW · RATE LIMIT · BACKPRESSURE · THROTTLE</div></div>
+    <div class="f4-group"><div class="f4-dot dot-teal"></div><div class="f4-cat">FastAPI Building Blocks</div><span class="f4-skill sk-b">Beginner</span><div class="f4-words">LIFESPAN · MIDDLEWARE · ROUTER · DEPENDENCY</div></div>
+    <div class="f4-round">Round 2</div>
+    <div class="f4-group"><div class="f4-dot dot-indigo"></div><div class="f4-cat">API Gateways &amp; Proxies</div><span class="f4-skill sk-i">Intermediate</span><div class="f4-words">ENVOY · GLOO · APIGEE · KONG</div></div>
+    <div class="f4-group"><div class="f4-dot dot-purple"></div><div class="f4-cat">Go Concurrency Primitives</div><span class="f4-skill sk-a">Advanced</span><div class="f4-words">WORKER POOL · ERRGROUP · GOROUTINE · CHANNEL</div></div>
+    <div class="f4-group"><div class="f4-dot dot-yellow"></div><div class="f4-cat">S3-Compatible Storage</div><span class="f4-skill sk-i">Intermediate</span><div class="f4-words">MINIO · LOCALSTACK · MOTO · GCS</div></div>
+    <div class="f4-group"><div class="f4-dot dot-red"></div><div class="f4-cat">Trace Context Propagation</div><span class="f4-skill sk-e">Expert</span><div class="f4-words">DT.TRACEID · W3C · BAGGAGE HEADER · PROPAGATOR</div></div>
+  </div>
+</div>
+</div>
+</body>
+</html>

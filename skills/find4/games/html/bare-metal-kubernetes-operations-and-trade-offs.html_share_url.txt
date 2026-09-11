@@ -1,0 +1,18 @@
+{
+  "source": "output/games/bare-metal-kubernetes/bare-metal-kubernetes-operations-and-trade-offs.json",
+  "slug": "bare-metal-kubernetes-operations-and-trade-offs",
+  "stats": {
+    "game_sets": 1,
+    "group_sets": 2,
+    "items": 32,
+    "themes": [
+      "Bare Metal Kubernetes: Operations & Trade-offs"
+    ]
+  },
+  "compression": {
+    "raw_bytes": 1029,
+    "enc_bytes": 617,
+    "ratio": "60%"
+  },
+  "share_url": "https://find4.org/#game=ZZJRb9owEMe_ipWHPS0TtIEW3kxwSQaxI8e0QhWqDBw0aogzx7Sqqn73nUFbGcuDfZez7-f_3X0Er8Hw6nuw03t4asG1wfDxI3DPsIdgGIy0BZKB0xWZHlZga3DQDolowGpXmrol34iyegOh2W7b4CvNU7nB69tocHWr_W9rDs2f9PgFuRQZUwmbFxidSHpHOUVrOh-xsFBUsRDDMo19OBaSjXkRLDH-9xFErFqwr3pVVqV7J8qYyvNX1QFw0zDor1doRN1eNwK8ikwuxiwXUvmUs3mhmExztPHnTCwyxn2A04wVOY3ZBU1Caw52DUS9N3AUagFq3DedfjfqXZBUIsV8kuRzn3KGani8QEvcM5kwOkYzWeRM3qeFkB6Ug90au9c1AmKDa-OwymfFf23JfYbXLGy8utW214kumFhRzJcKnvKJZ_GRoHJ8cmKKklLl30DnSmRU4TkPPkMUa12V9Y7Ez7qqoN4dVRqr0UIDBr0-wBnSMx-P_YoFv0s9hY6zlP_wLjo_RcpDJaaM-xKnRezFL8KEFokHx9WhdWDJyBjXOqsbQq0rt3rtPLY52KbytIGObqCLxrXuRuubk1I_H2kcnprH_YTM7x5wLU6pObg3Y19IbsHCr0PZlr6BWN-zguJpB8fttq-716sLAs1VmFE5DRMx892a5JNwzKjMsF04Fmwhsa4ejE8ZzVgoca4uBibX6xe9Q5yucdtD7UjhoPHq3qGqzBsanaj7v7qM-skM_bBi5EHI6ZeHtVVSzMJ8Rrn3JQ7T4ryc3GyASFPhA3S9QaJ2xz6W9abcGT86vavOP3KXy8_l528="
+}

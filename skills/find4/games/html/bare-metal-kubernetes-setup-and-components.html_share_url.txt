@@ -1,0 +1,18 @@
+{
+  "source": "output/games/bare-metal-kubernetes/bare-metal-kubernetes-setup-and-components.json",
+  "slug": "bare-metal-kubernetes-setup-and-components",
+  "stats": {
+    "game_sets": 1,
+    "group_sets": 2,
+    "items": 32,
+    "themes": [
+      "Bare Metal Kubernetes: Setup & Components"
+    ]
+  },
+  "compression": {
+    "raw_bytes": 988,
+    "enc_bytes": 581,
+    "ratio": "59%"
+  },
+  "share_url": "https://find4.org/#game=ZVJhb5swEP0rFh-mTVqkEFhJ8s0xpkUFgwxpV1VRRMo1QyN25kCrqup_35mma5vlyx3n3Hvv3t2z8-DMJ9-dbbWD9QG6gzO_fXa6X7ADZ-4sKgMkha5qyWW_AaOgg8OcFND1e_KFML3bawUKu94R1k2Nnb57H7gTWza6378h48-5XC54wkt8shkN02PGyuSYjXKZ_bxxVvj1j5QIXcNnwk3bA4bJBFz3ziZ33mzsYxuSsEyUNBZchvjAZDzKMIYZu-QSE7kUzMIzrbqqUWCI7FXX7GCYwwAojL63-R83SqgQ3AplNImZRb3m9IrbQpzEy9TC5romArpHbX6TvO23jTqQr0zE3_Bf2lRqa2XX0yoI6hN4XrLwzQSaxwWXV4PgoVCwCx4uk_eCHVJmCVZGKRX0HF8-e2bnM7pFEZU6MW_fm3072Ff73r37QYcVcusU1zTPogjraRbiPhZ2xOKmeN3SRVaUgqbDzpBy2E1uYF-Zqmu0slS7StWWyIAdEqHBu7eubma1O36d9sz3PSy548mPsRXgBbMhTO27I-FP32D3h8sjJctJrs0wQQdVa7uD-gymJ8gsWRYll2jOIBttjBmnjGVLYQ8PjYvi85Tm9igoTzNR4EF-9k7CQffmzrpooOpQx-aJRGikAkv7BG2rHy2t7wVn_gn_Qq4FL6M4KYdtxfk6yuQ1Ha5xIePwnI9ENMITSkZxXtJFwotXp3G9xSjJaDiosVrat1Nq1JYcPdkdl9ioutlqTKazSeDWH0SsVi-rl78="
+}

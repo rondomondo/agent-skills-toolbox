@@ -1,0 +1,202 @@
+{
+  "metadata": {
+    "generated_at": "2026-09-07T00:00:00Z",
+    "source": "https://www.hellointerview.com/blog/event-driven-architecture",
+    "suggested_name": "event-driven-architecture.json",
+    "modified_at": "2026-09-07T14:31:42.519369",
+    "source_id": "https://www.hellointerview.com/blog/event-driven-architecture",
+    "step": "finalize_metadata",
+    "id_registry": {
+      "game_set_ids": [
+        "a87d52"
+      ],
+      "group_set_ids": [
+        "864966",
+        "f10f4f"
+      ],
+      "group_item_ids": [
+        "b0bd91",
+        "166761",
+        "04ec3c",
+        "9102d6",
+        "43dc24",
+        "cdfb14",
+        "c2eec5",
+        "05153c"
+      ]
+    },
+    "id": "hztXlTL9smQEAkXR",
+    "split_info": {
+      "role": "split",
+      "split_at": "2026-09-07T14:31:51.459305+00:00",
+      "parent_id": "hztXlTL9smQEAkXR",
+      "parent_file": "/home/claude/output/games/event-driven-architecture.json",
+      "theme": "Event-Driven Architecture",
+      "slug": "event-driven-architecture"
+    }
+  },
+  "game_sets": [
+    {
+      "theme": "Event-Driven Architecture",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "QUEUE",
+              "COMMAND",
+              "RPC",
+              "SYNCHRONOUS"
+            ],
+            "category": "Alternatives to EDA",
+            "color": "red",
+            "url": "https://www.hellointerview.com/blog/event-driven-architecture",
+            "description": "Simpler communication patterns to consider before reaching for event-driven architecture",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction"
+            ],
+            "theme": "Event-Driven Architecture",
+            "group_item_id": "b0bd91",
+            "group_set_id": "864966"
+          },
+          {
+            "words": [
+              "FRAUD",
+              "PRICING",
+              "LICENSING",
+              "LEDGER"
+            ],
+            "category": "EDA Use Case Domains",
+            "color": "blue",
+            "url": "https://www.hellointerview.com/blog/event-driven-architecture",
+            "description": "Business domains where event-driven patterns are justified by real operational requirements",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://www.hellointerview.com/learn/system-design/problem-breakdowns/payment-system"
+            ],
+            "theme": "Event-Driven Architecture",
+            "group_item_id": "166761",
+            "group_set_id": "864966"
+          },
+          {
+            "words": [
+              "SCHEMA",
+              "REGISTRY",
+              "EVOLUTION",
+              "CONTRACT"
+            ],
+            "category": "Event Schema Management",
+            "color": "green",
+            "url": "https://www.hellointerview.com/blog/event-driven-architecture",
+            "description": "Tooling and practices for managing how event data formats change over time without breaking consumers",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://docs.confluent.io/platform/current/schema-registry/index.html"
+            ],
+            "theme": "Event-Driven Architecture",
+            "group_item_id": "04ec3c",
+            "group_set_id": "864966"
+          },
+          {
+            "words": [
+              "UBER",
+              "NETFLIX",
+              "STRIPE",
+              "SHOPIFY"
+            ],
+            "category": "EDA Case Studies",
+            "color": "yellow",
+            "url": "https://www.hellointerview.com/blog/event-driven-architecture",
+            "description": "Real companies discussed in the article as evidence for specific EDA use case patterns",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://www.hellointerview.com/learn/system-design/problem-breakdowns/uber"
+            ],
+            "theme": "Event-Driven Architecture",
+            "group_item_id": "9102d6",
+            "group_set_id": "864966"
+          }
+        ],
+        [
+          {
+            "words": [
+              "SURGE",
+              "LATENCY",
+              "BATCH",
+              "PIPELINE"
+            ],
+            "category": "Real-Time Streaming Concepts",
+            "color": "purple",
+            "url": "https://www.hellointerview.com/blog/event-driven-architecture",
+            "description": "Terms related to real-time data processing, where EDA is often required over batch alternatives",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.hellointerview.com/learn/system-design/problem-breakdowns/uber"
+            ],
+            "theme": "Event-Driven Architecture",
+            "group_item_id": "43dc24",
+            "group_set_id": "f10f4f"
+          },
+          {
+            "words": [
+              "PAYMENT",
+              "INVENTORY",
+              "EMAIL",
+              "ANALYTICS"
+            ],
+            "category": "E-Commerce Service Example",
+            "color": "orange",
+            "url": "https://www.hellointerview.com/blog/event-driven-architecture",
+            "description": "The four downstream services in the article's canonical order-placement example illustrating tight coupling",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://www.hellointerview.com/blog/event-driven-architecture"
+            ],
+            "theme": "Event-Driven Architecture",
+            "group_item_id": "cdfb14",
+            "group_set_id": "f10f4f"
+          },
+          {
+            "words": [
+              "CONSUMER",
+              "GROUP",
+              "LAG",
+              "PARTITION"
+            ],
+            "category": "Kafka Consumer Mechanics",
+            "color": "teal",
+            "url": "https://www.hellointerview.com/learn/system-design/deep-dives/kafka",
+            "description": "Kafka-specific concepts for understanding parallel consumption and detecting processing slowdowns",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://kafka.apache.org/documentation/#consumerconfigs"
+            ],
+            "theme": "Event-Driven Architecture",
+            "group_item_id": "c2eec5",
+            "group_set_id": "f10f4f"
+          },
+          {
+            "words": [
+              "RESILIENCE",
+              "DURABILITY",
+              "PERSISTENCE",
+              "RETRY"
+            ],
+            "category": "EDA Reliability Properties",
+            "color": "indigo",
+            "url": "https://www.hellointerview.com/blog/event-driven-architecture",
+            "description": "The reliability guarantees that event-driven systems provide compared to direct API calls",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://aws.amazon.com/eventbridge/"
+            ],
+            "theme": "Event-Driven Architecture",
+            "group_item_id": "05153c",
+            "group_set_id": "f10f4f"
+          }
+        ]
+      ],
+      "game_set_id": "a87d52"
+    }
+  ]
+}

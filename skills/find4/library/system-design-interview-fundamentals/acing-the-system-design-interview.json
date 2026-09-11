@@ -1,0 +1,186 @@
+{
+  "metadata": {
+    "generated_at": "2026-09-07T00:00:00Z",
+    "source": "https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction",
+    "suggested_name": "system-design-interview-fundamentals.json",
+    "modified_at": "2026-09-07T18:05:33.144468",
+    "source_id": "https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction",
+    "step": "finalize_metadata",
+    "id_registry": {
+      "game_set_ids": [
+        "0ef917"
+      ],
+      "group_set_ids": [
+        "2e7e44",
+        "d378e9"
+      ],
+      "group_item_ids": [
+        "e9276e",
+        "037d83",
+        "745280",
+        "c836e4",
+        "f8650d",
+        "801cf1",
+        "21e500",
+        "99f2a7"
+      ]
+    },
+    "id": "Wr-eQZ3v9RO16xr3",
+    "split_info": {
+      "role": "split",
+      "split_at": "2026-09-07T18:05:44.088379+00:00",
+      "parent_id": "Wr-eQZ3v9RO16xr3",
+      "parent_file": "/output/games/system-design-interview-fundamentals.json",
+      "theme": "Acing the System Design Interview",
+      "slug": "acing-the-system-design-interview"
+    }
+  },
+  "game_sets": [
+    {
+      "theme": "Acing the System Design Interview",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "RIDE-SHARING",
+              "RATE-LIMITER",
+              "INSTAGRAM",
+              "UBER"
+            ],
+            "category": "Classic System Design Problem Examples",
+            "color": "blue",
+            "url": "https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction",
+            "description": "Canonical system design interview prompts used to illustrate Product and Infrastructure design categories: 'Design Uber', 'Design a Rate Limiter', 'Design Instagram', and 'Design a Ride-Sharing Service'.",
+            "skill_level": "Beginner",
+            "additional_sources": [],
+            "theme": "Acing the System Design Interview",
+            "group_item_id": "e9276e",
+            "group_set_id": "2e7e44"
+          },
+          {
+            "words": [
+              "LOAD-BALANCER",
+              "DATABASE",
+              "SERVICE",
+              "CACHE"
+            ],
+            "category": "Core Infrastructure Components",
+            "color": "green",
+            "url": "https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction",
+            "description": "The standard infrastructure primitives that appear in virtually every Product and Infrastructure design interview: services, load balancers, databases, and caches.",
+            "skill_level": "Beginner",
+            "additional_sources": [],
+            "theme": "Acing the System Design Interview",
+            "group_item_id": "037d83",
+            "group_set_id": "2e7e44"
+          },
+          {
+            "words": [
+              "DEFENSIVE",
+              "WEEDS",
+              "FEEDBACK",
+              "COMMUNICATION"
+            ],
+            "category": "Communication and Collaboration Pitfalls",
+            "color": "red",
+            "url": "https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction",
+            "description": "The ways candidates fail on the collaboration rubric: being defensive under feedback, getting lost in the weeds, and failing to communicate complex concepts clearly.",
+            "skill_level": "Intermediate",
+            "additional_sources": [],
+            "theme": "Acing the System Design Interview",
+            "group_item_id": "745280",
+            "group_set_id": "2e7e44"
+          },
+          {
+            "words": [
+              "DENSE",
+              "PRACTICAL",
+              "EFFICIENT",
+              "BACKWARDS"
+            ],
+            "category": "Hello Interview's Design Philosophy",
+            "color": "yellow",
+            "url": "https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction",
+            "description": "The four adjectives that describe the Hello Interview approach: dense, practical, and efficient content, taught by working backwards from what interviews actually require.",
+            "skill_level": "Beginner",
+            "additional_sources": [],
+            "theme": "Acing the System Design Interview",
+            "group_item_id": "c836e4",
+            "group_set_id": "2e7e44"
+          }
+        ],
+        [
+          {
+            "words": [
+              "WEEK",
+              "MONTHS",
+              "DATE",
+              "RECRUITER"
+            ],
+            "category": "Interview Timing Strategies",
+            "color": "teal",
+            "url": "https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction",
+            "description": "Practical timing advice from the guide: preparation ranges from under a week (experienced candidates) to 3-4 weeks, and candidates are encouraged to ask recruiters to push interview dates if more time is needed.",
+            "skill_level": "Beginner",
+            "additional_sources": [],
+            "theme": "Acing the System Design Interview",
+            "group_item_id": "f8650d",
+            "group_set_id": "d378e9"
+          },
+          {
+            "words": [
+              "PROBE",
+              "DOUBT",
+              "REASONING",
+              "TRADEOFFS"
+            ],
+            "category": "How Interviewers Test Depth",
+            "color": "orange",
+            "url": "https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction",
+            "description": "Techniques interviewers use to check genuine understanding rather than memorised answers: probing reasoning, expressing doubt about an approach, and asking candidates to explore tradeoffs.",
+            "skill_level": "Advanced",
+            "additional_sources": [],
+            "theme": "Acing the System Design Interview",
+            "group_item_id": "801cf1",
+            "group_set_id": "d378e9"
+          },
+          {
+            "words": [
+              "BASICS",
+              "DEPTH",
+              "DEEP-DIVE",
+              "BREADTH"
+            ],
+            "category": "Senior vs Mid-Level Design Expectations",
+            "color": "purple",
+            "url": "https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction",
+            "description": "The distinction in interview expectations: a mid-level engineer covers basics well without great depth, while a senior engineer moves through basics quickly to demonstrate deep-dive capability.",
+            "skill_level": "Intermediate",
+            "additional_sources": [],
+            "theme": "Acing the System Design Interview",
+            "group_item_id": "21e500",
+            "group_set_id": "d378e9"
+          },
+          {
+            "words": [
+              "QUIZZES",
+              "WORKED",
+              "GUIDED",
+              "FEEDBACK"
+            ],
+            "category": "Course Learning Methods",
+            "color": "indigo",
+            "url": "https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction",
+            "description": "The active-learning tools embedded in the Hello Interview course: retention quizzes, worked solutions to common problems, guided practice walkthroughs, and personalised feedback.",
+            "skill_level": "Beginner",
+            "additional_sources": [],
+            "theme": "Acing the System Design Interview",
+            "group_item_id": "99f2a7",
+            "group_set_id": "d378e9"
+          }
+        ]
+      ],
+      "game_set_id": "0ef917"
+    }
+  ]
+}

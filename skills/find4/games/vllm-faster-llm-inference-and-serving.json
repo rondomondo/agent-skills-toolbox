@@ -1,0 +1,203 @@
+{
+  "metadata": {
+    "generated_at": "2026-09-07T10:00:00Z",
+    "source": "https://www.redhat.com/en/blog/meet-vllm-faster-more-efficient-llm-inference-and-serving",
+    "suggested_name": "vllm-inference-serving.json",
+    "modified_at": "2026-09-07T19:40:57.357376",
+    "source_id": "https://www.redhat.com/en/blog/meet-vllm-faster-more-efficient-llm-inference-and-serving",
+    "step": "finalize_metadata",
+    "id_registry": {
+      "game_set_ids": [
+        "f2ed89"
+      ],
+      "group_set_ids": [
+        "37462e",
+        "5aceb4"
+      ],
+      "group_item_ids": [
+        "dbee88",
+        "64ffac",
+        "ba032d",
+        "4be080",
+        "c9bb1e",
+        "558698",
+        "f63383",
+        "07c555"
+      ]
+    },
+    "id": "pvJ56HMLaNAJwPcx",
+    "split_info": {
+      "role": "split",
+      "split_at": "2026-09-07T19:41:06.544690+00:00",
+      "parent_id": "pvJ56HMLaNAJwPcx",
+      "parent_file": "/home/claude/output/games/vllm-inference-serving.json",
+      "theme": "vLLM: Faster LLM Inference & Serving",
+      "slug": "vllm-faster-llm-inference-and-serving"
+    }
+  },
+  "game_sets": [
+    {
+      "theme": "vLLM: Faster LLM Inference & Serving",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "PAGEDATTENTION",
+              "FRAGMENTATION",
+              "KV CACHE",
+              "BLOCKS"
+            ],
+            "category": "vLLM Memory Management Concepts",
+            "color": "blue",
+            "url": "https://www.redhat.com/en/blog/meet-vllm-faster-more-efficient-llm-inference-and-serving",
+            "description": "PagedAttention divides GPU memory into non-contiguous blocks to manage the KV cache, eliminating fragmentation and wasted allocation.",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://vllm.ai",
+              "https://arxiv.org/abs/2309.06180"
+            ],
+            "theme": "vLLM: Faster LLM Inference & Serving",
+            "group_item_id": "dbee88",
+            "group_set_id": "37462e"
+          },
+          {
+            "words": [
+              "THROUGHPUT",
+              "LATENCY",
+              "BATCHING",
+              "UTILIZATION"
+            ],
+            "category": "LLM Serving Performance Metrics",
+            "color": "green",
+            "url": "https://www.redhat.com/en/blog/meet-vllm-faster-more-efficient-llm-inference-and-serving",
+            "description": "Key performance dimensions for LLM serving: throughput (requests/sec), latency (response time), batching (grouping requests), and GPU utilization rates.",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://vllm.ai/blog/2023/06/20/vllm.html"
+            ],
+            "theme": "vLLM: Faster LLM Inference & Serving",
+            "group_item_id": "64ffac",
+            "group_set_id": "37462e"
+          },
+          {
+            "words": [
+              "QUANTIZATION",
+              "COMPRESSION",
+              "CUDA",
+              "KERNELS"
+            ],
+            "category": "Hardware Optimization Techniques",
+            "color": "orange",
+            "url": "https://www.redhat.com/en/blog/meet-vllm-faster-more-efficient-llm-inference-and-serving",
+            "description": "vLLM uses quantized models for 3.5x compression and optimized CUDA kernels to maximize GPU throughput with minimal accuracy loss.",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://docs.vllm.ai/en/latest/quantization/auto_awq.html"
+            ],
+            "theme": "vLLM: Faster LLM Inference & Serving",
+            "group_item_id": "ba032d",
+            "group_set_id": "37462e"
+          },
+          {
+            "words": [
+              "LLAMA",
+              "MISTRAL",
+              "GRANITE",
+              "DEEPSEEK"
+            ],
+            "category": "LLM Architectures Supported by vLLM",
+            "color": "purple",
+            "url": "https://www.redhat.com/en/blog/meet-vllm-faster-more-efficient-llm-inference-and-serving",
+            "description": "Popular large language model architectures that vLLM natively supports for inference and serving.",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://docs.vllm.ai/en/latest/models/supported_models.html"
+            ],
+            "theme": "vLLM: Faster LLM Inference & Serving",
+            "group_item_id": "4be080",
+            "group_set_id": "37462e"
+          }
+        ],
+        [
+          {
+            "words": [
+              "PIP",
+              "CLI",
+              "OPENAI",
+              "CURL"
+            ],
+            "category": "Getting Started with vLLM",
+            "color": "teal",
+            "url": "https://www.redhat.com/en/blog/meet-vllm-faster-more-efficient-llm-inference-and-serving",
+            "description": "The vLLM quickstart path: install via pip, use the vllm CLI to serve a model, then query via curl against the OpenAI-compatible API.",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://docs.vllm.ai/en/latest/getting_started/installation.html"
+            ],
+            "theme": "vLLM: Faster LLM Inference & Serving",
+            "group_item_id": "c9bb1e",
+            "group_set_id": "5aceb4"
+          },
+          {
+            "words": [
+              "KSERVE",
+              "DOCKER",
+              "KUBERNETES",
+              "LANGCHAIN"
+            ],
+            "category": "vLLM Deployment & Integration Frameworks",
+            "color": "red",
+            "url": "https://www.redhat.com/en/blog/meet-vllm-faster-more-efficient-llm-inference-and-serving",
+            "description": "Frameworks and platforms that integrate with vLLM for production deployment: KServe, Docker, Kubernetes, and orchestration libraries like LangChain.",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://docs.vllm.ai/en/latest/serving/deploying_with_k8s.html"
+            ],
+            "theme": "vLLM: Faster LLM Inference & Serving",
+            "group_item_id": "558698",
+            "group_set_id": "5aceb4"
+          },
+          {
+            "words": [
+              "CONTINUOUS",
+              "STATIC",
+              "DYNAMIC",
+              "ITERATION"
+            ],
+            "category": "Batching Strategies in LLM Serving",
+            "color": "yellow",
+            "url": "https://www.redhat.com/en/blog/meet-vllm-faster-more-efficient-llm-inference-and-serving",
+            "description": "Contrasting batching approaches: static batching waits for all sequences to finish; continuous (dynamic) batching replaces completed sequences at each iteration for higher efficiency.",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.anyscale.com/blog/continuous-batching-llm-inference"
+            ],
+            "theme": "vLLM: Faster LLM Inference & Serving",
+            "group_item_id": "f63383",
+            "group_set_id": "5aceb4"
+          },
+          {
+            "words": [
+              "MEMORY",
+              "SCALING",
+              "HOARDING",
+              "FRAGMENTATION"
+            ],
+            "category": "Traditional LLM Serving Challenges",
+            "color": "indigo",
+            "url": "https://www.redhat.com/en/blog/meet-vllm-faster-more-efficient-llm-inference-and-serving",
+            "description": "Key pain points that vLLM was built to solve: GPU memory hoarding and fragmentation, poor scaling economics, and high latency under load.",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://arxiv.org/abs/2309.06180"
+            ],
+            "theme": "vLLM: Faster LLM Inference & Serving",
+            "group_item_id": "07c555",
+            "group_set_id": "5aceb4"
+          }
+        ]
+      ],
+      "game_set_id": "f2ed89"
+    }
+  ]
+}

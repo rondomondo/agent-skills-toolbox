@@ -1,0 +1,189 @@
+{
+  "metadata": {
+    "generated_at": "2026-09-10T12:00:00Z",
+    "source": "https://www.etsy.com/ie/codeascraft/how-etsy-uses-llms-to-improve-search-relevance",
+    "suggested_name": "etsy-llm-search-relevance.json",
+    "modified_at": "2026-09-10T20:31:00.918303",
+    "source_id": "https://www.etsy.com/ie/codeascraft/how-etsy-uses-llms-to-improve-search-relevance",
+    "step": "finalize_metadata",
+    "id_registry": {
+      "game_set_ids": [
+        "a63c3e"
+      ],
+      "group_set_ids": [
+        "b40d8a",
+        "840ee7"
+      ],
+      "group_item_ids": [
+        "15c114",
+        "7570b8",
+        "8d0a26",
+        "dfee3f",
+        "550cec",
+        "ae11fd",
+        "1ae191",
+        "c10862"
+      ]
+    },
+    "id": "l8Ul5NGzkjhJouPL",
+    "split_info": {
+      "role": "split",
+      "split_at": "2026-09-10T20:31:09.293037+00:00",
+      "parent_id": "l8Ul5NGzkjhJouPL",
+      "parent_file": "/home/claude/output/games/etsy-llm-search-relevance.json",
+      "theme": "Etsy LLM Search Relevance: Models & Data",
+      "slug": "etsy-llm-search-relevance-models-and-data"
+    }
+  },
+  "game_sets": [
+    {
+      "theme": "Etsy LLM Search Relevance: Models & Data",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "ANNOTATOR",
+              "TEACHER",
+              "STUDENT",
+              "DISTILLATION"
+            ],
+            "category": "Three-Tier Model Stack",
+            "color": "red",
+            "url": "https://www.etsy.com/ie/codeascraft/how-etsy-uses-llms-to-improve-search-relevance",
+            "description": "Etsy's cascaded model pipeline: an LLM annotator generates labels, a fine-tuned teacher scales them, and a lightweight student runs in production",
+            "skill_level": "Intermediate",
+            "additional_sources": [],
+            "theme": "Etsy LLM Search Relevance: Models & Data",
+            "group_item_id": "15c114",
+            "group_set_id": "b40d8a"
+          },
+          {
+            "words": [
+              "RELEVANT",
+              "PARTIAL",
+              "IRRELEVANT",
+              "GOLDEN"
+            ],
+            "category": "Relevance Label Categories",
+            "color": "blue",
+            "url": "https://www.etsy.com/ie/codeascraft/how-etsy-uses-llms-to-improve-search-relevance",
+            "description": "The four labels used to judge query-listing pairs: fully relevant, partially relevant, irrelevant, and the human-curated golden set used for evaluation",
+            "skill_level": "Beginner",
+            "additional_sources": [],
+            "theme": "Etsy LLM Search Relevance: Models & Data",
+            "group_item_id": "7570b8",
+            "group_set_id": "b40d8a"
+          },
+          {
+            "words": [
+              "FEW-SHOT",
+              "CHAIN-OF-THOUGHT",
+              "SELF-CONSISTENCY",
+              "O3"
+            ],
+            "category": "LLM Annotator Prompting Techniques",
+            "color": "green",
+            "url": "https://www.etsy.com/ie/codeascraft/how-etsy-uses-llms-to-improve-search-relevance",
+            "description": "Prompting strategies used with OpenAI's o3 model in LangGraph to generate high-quality, reliable relevance judgments at scale",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/LLM-as-a-Judge",
+              "https://www.promptingguide.ai/techniques/consistency"
+            ],
+            "theme": "Etsy LLM Search Relevance: Models & Data",
+            "group_item_id": "8d0a26",
+            "group_set_id": "b40d8a"
+          },
+          {
+            "words": [
+              "CLICKS",
+              "PURCHASES",
+              "ADD-TO-CART",
+              "ENGAGEMENT"
+            ],
+            "category": "Legacy Search Signals (Biased)",
+            "color": "yellow",
+            "url": "https://www.etsy.com/ie/codeascraft/how-etsy-uses-llms-to-improve-search-relevance",
+            "description": "Behavioural signals that historically drove Etsy search ranking — objective but popularity-biased, disadvantaging new or niche sellers",
+            "skill_level": "Beginner",
+            "additional_sources": [],
+            "theme": "Etsy LLM Search Relevance: Models & Data",
+            "group_item_id": "dfee3f",
+            "group_set_id": "b40d8a"
+          }
+        ],
+        [
+          {
+            "words": [
+              "FILTERING",
+              "ENRICHMENT",
+              "WEIGHTING",
+              "BOOSTING"
+            ],
+            "category": "Student Model Integration Points",
+            "color": "purple",
+            "url": "https://www.etsy.com/ie/codeascraft/how-etsy-uses-llms-to-improve-search-relevance",
+            "description": "The four ways the real-time student model plugs into Etsy's search stack: removing irrelevant results, adding score features, reweighting training, and promoting top matches",
+            "skill_level": "Advanced",
+            "additional_sources": [],
+            "theme": "Etsy LLM Search Relevance: Models & Data",
+            "group_item_id": "550cec",
+            "group_set_id": "840ee7"
+          },
+          {
+            "words": [
+              "DOMAIN-SHIFT",
+              "COST",
+              "SCALE",
+              "ALIGNMENT"
+            ],
+            "category": "LLM-as-a-Judge Challenges",
+            "color": "teal",
+            "url": "https://www.etsy.com/ie/codeascraft/how-etsy-uses-llms-to-improve-search-relevance",
+            "description": "Core obstacles when using LLMs to judge relevance: off-the-shelf models miss Etsy context, large models are expensive, and human alignment must be preserved at scale",
+            "skill_level": "Intermediate",
+            "additional_sources": [],
+            "theme": "Etsy LLM Search Relevance: Models & Data",
+            "group_item_id": "ae11fd",
+            "group_set_id": "840ee7"
+          },
+          {
+            "words": [
+              "SFT",
+              "QWEN",
+              "BERT",
+              "TWO-TOWER"
+            ],
+            "category": "Model Architecture Terms",
+            "color": "orange",
+            "url": "https://www.etsy.com/ie/codeascraft/how-etsy-uses-llms-to-improve-search-relevance",
+            "description": "Technical building blocks: Supervised Fine-Tuning to create the teacher (Qwen 3 VL 4B), and the BERT-based two-tower architecture used for the low-latency student model",
+            "skill_level": "Expert",
+            "additional_sources": [],
+            "theme": "Etsy LLM Search Relevance: Models & Data",
+            "group_item_id": "1ae191",
+            "group_set_id": "840ee7"
+          },
+          {
+            "words": [
+              "STRATIFIED",
+              "SAMPLING",
+              "DISAGREEMENT",
+              "ANNOTATION"
+            ],
+            "category": "Human Label Quality Controls",
+            "color": "indigo",
+            "url": "https://www.etsy.com/ie/codeascraft/how-etsy-uses-llms-to-improve-search-relevance",
+            "description": "Methods Etsy uses to keep its ground-truth labels trustworthy: stratified sampling for coverage, targeted sampling for hard cases, dual-admin labeling, and disagreement-rate tracking",
+            "skill_level": "Intermediate",
+            "additional_sources": [],
+            "theme": "Etsy LLM Search Relevance: Models & Data",
+            "group_item_id": "c10862",
+            "group_set_id": "840ee7"
+          }
+        ]
+      ],
+      "game_set_id": "a63c3e"
+    }
+  ]
+}

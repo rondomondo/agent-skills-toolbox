@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{font-family:system-ui,-apple-system,sans-serif;max-width:720px;margin:2rem auto;padding:0 1rem;background:#f5f5f3;color:#111;}
+        .f4-game{background:#fff;border:0.5px solid rgba(0,0,0,0.15);border-radius:12px;padding:1rem 1.25rem;margin-bottom:48px;box-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1);}
+        .f4-game-header{display:flex;align-items:center;gap:10px;margin-bottom:1rem;flex-wrap:wrap;}
+        .f4-game-icon{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:20px;}
+        .f4-game-title-block{flex:1;min-width:0;}
+        .f4-game-title{font-size:15px;font-weight:500;margin:0;color:#111;}
+        .f4-game-meta{font-size:12px;color:#666;margin:0;}
+        .play-btn{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;background:#0f6e56;color:#fff;border-radius:10px;text-decoration:none;font-size:13px;font-weight:500;margin-left:auto;transition:background 0.2s;}
+        .play-btn:hover{background:#085041;}
+        .f4-groups{display:flex;flex-direction:column;gap:5px;}
+        .f4-round{font-size:11px;font-weight:500;color:#888;padding:8px 0 3px;text-transform:uppercase;letter-spacing:0.05em;}
+        .f4-group{display:grid;grid-template-columns:13px 1fr 90px 2fr;align-items:start;gap:8px;padding:8px 10px;border-radius:8px;border:0.5px solid #e0e0de;background:#fafaf9;}
+        .f4-dot{width:11px;height:11px;border-radius:50%;flex-shrink:0;margin-top:3px;}
+        .f4-cat{font-size:13px;font-weight:500;line-height:1.3;}
+        .f4-skill{font-size:11px;padding:2px 7px;border-radius:20px;text-align:center;white-space:nowrap;}
+        .f4-words{font-size:11px;color:#666;line-height:1.5;word-break:break-word;}
+        .sk-b{background:#e1f5ee;color:#085041;}.sk-i{background:#e6f1fb;color:#0c447c;}.sk-a{background:#faeeda;color:#633806;}.sk-e{background:#fcebeb;color:#791f1f;}
+        .dot-red{background:#e24b4a;}.dot-green{background:#639922;}.dot-blue{background:#378add;}.dot-yellow{background:#ba7517;}
+        .dot-purple{background:#7f77dd;}.dot-teal{background:#1d9e75;}.dot-orange{background:#d85a30;}.dot-indigo{background:#534ab7;}
+        @media(prefers-color-scheme:dark){
+          body{background:#1a1a18;color:#e8e6e1;}
+          .f4-game{background:#2c2c2a;border-color:rgba(255,255,255,0.1);box-shadow:0 4px 6px -1px rgb(0 0 0 / 0.4);}
+          .f4-game-title{color:#e8e6e1;}
+          .f4-game-meta{color:#888780;}
+          .f4-round{color:#888780;}
+          .f4-group{background:#222220;border-color:#3a3a38;}
+          .f4-cat{color:#e8e6e1;}
+          .f4-words{color:#888780;}
+          .sk-b{background:#04342c;color:#9fe1cb;}.sk-i{background:#042c53;color:#b5d4f4;}.sk-a{background:#412402;color:#fac775;}.sk-e{background:#501313;color:#f7c1c1;}
+        }
+        .play-btn{pointer-events:none;cursor:default;}
+        @media(prefers-color-scheme:dark){
+          body{background:transparent;}
+        }
+    </style>
+</head>
+<body>
+<div class="f4-game f4-capture">
+  <div class="f4-game-header">
+    <div class="f4-game-icon" style="background:#e6f1fb;" aria-hidden="true">&#x2699;&#xFE0F;</div>
+    <div class="f4-game-title-block">
+      <h1 class="f4-game-title">ML Systems for Marketplace Search: Broader Concepts</h1>
+      <p class="f4-game-meta">2 rounds &middot; 32 words &middot; Beginner level</p>
+    </div>
+    <span class="play-btn">&#9654; Play on find4.org</span>
+  </div>
+
+  <div class="f4-groups">
+    <h2 class="f4-round">Round 1</h2>
+    <div class="f4-group">
+        <div class="f4-dot dot-red" role="img" aria-label="Beginner Level Category"></div>
+        <div class="f4-cat">People in Etsy&#x27;s Search Optimisation Loop</div>
+        <span class="f4-skill sk-b">Beginner</span>
+        <div class="f4-words">BUYERS &middot; SELLERS &middot; ADMINS &middot; ANNOTATORS</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-yellow" role="img" aria-label="Intermediate Level Category"></div>
+        <div class="f4-cat">Model Tier Trade-off Dimensions</div>
+        <span class="f4-skill sk-i">Intermediate</span>
+        <div class="f4-words">ACCURACY &middot; LATENCY &middot; COST &middot; THROUGHPUT</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-green" role="img" aria-label="Advanced Level Category"></div>
+        <div class="f4-cat">Student and Teacher Model Architecture Details</div>
+        <span class="f4-skill sk-a">Advanced</span>
+        <div class="f4-words">BERT &middot; QWEN &middot; TWO-TOWER &middot; SFT</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-blue" role="img" aria-label="Expert Level Category"></div>
+        <div class="f4-cat">Seller Benefits of Semantic Relevance</div>
+        <span class="f4-skill sk-e">Expert</span>
+        <div class="f4-words">VISIBILITY &middot; DISCOVERY &middot; FAIRNESS &middot; OPPORTUNITY</div>
+    </div>
+    <h2 class="f4-round">Round 2</h2>
+    <div class="f4-group">
+        <div class="f4-dot dot-purple" role="img" aria-label="Beginner Level Category"></div>
+        <div class="f4-cat">A/B Test Design Concepts</div>
+        <span class="f4-skill sk-b">Beginner</span>
+        <div class="f4-words">POWER &middot; VARIANTS &middot; CONTROL &middot; TREATMENT</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-teal" role="img" aria-label="Intermediate Level Category"></div>
+        <div class="f4-cat">Types of Relevance Drift Over Time</div>
+        <span class="f4-skill sk-i">Intermediate</span>
+        <div class="f4-words">CULTURAL &middot; TEMPORAL &middot; SEASONAL &middot; DOMAIN</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-orange" role="img" aria-label="Advanced Level Category"></div>
+        <div class="f4-cat">Amazon-Inspired Relevance Label Refinements</div>
+        <span class="f4-skill sk-a">Advanced</span>
+        <div class="f4-words">COMPLEMENTS &middot; SUBSTITUTES &middot; ESCI &middot; SUBCATEGORIES</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-indigo" role="img" aria-label="Expert Level Category"></div>
+        <div class="f4-cat">Evaluation Modes Across the Model Tiers</div>
+        <span class="f4-skill sk-e">Expert</span>
+        <div class="f4-words">OFFLINE &middot; ONLINE &middot; MONITORING &middot; MACRO-F1</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find4 &mdash; vLLM: Faster LLM Inference &amp; Serving</title>
+
+    <meta name="description" content="A Beginner-level Find4 word-grouping game on &#x27;vLLM: Faster LLM Inference &amp; Serving&#x27;. 2 rounds, 32 words. Find the hidden connections between groups of 4.">
+    <meta name="keywords" content="vLLM: Faster LLM Inference &amp; Serving, vLLM Memory Management Concepts, LLM Serving Performance Metrics, Hardware Optimization Techniques, LLM Architectures Supported by vLLM, Getting Started with vLLM, vLLM Deployment &amp; Integration Frameworks, Batching Strategies in LLM Serving, Traditional LLM Serving Challenges">
+    <meta name="author" content="Find4">
+    <meta name="theme-color" content="#0f6e56">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://find4.org/#game=xZhrcxo5Fob_iooPU5laoIkx2GY_dTCxGXMbLlM1mXJRols0WotWR62GMCn_93mPusE4a-96Jk5SlXKErkfnPHp11J9La2F5yC0vtT6XIhELw60I59yWWqWT2kmzUruo1M6mb2utGv37UCqXUp2ZQKB9ZW2Stjxvu91WjQhX3FYDvfZE7C2Ujry1ELayUWpdWfLUClNZayMqYrmUgRSxrVCLjJfCiDgQFR6HlVSYjYwjWiOLIpGSJTFf01qbx72LntX_pDpG97UO5VI-ZfdF67TWapxV642z-lnzYP1cht94A1YkWGEpY67kn2J-cHO5JMO5EZFMrdk5p2OD81RYmJSWWn-UliciPL8o3ZZLkdFZctxUPzttnghM0eCBWJw-9JFWrPedwoUQ5-fo1DxdLnmAwoLX6ichCqcLUTuvoRBcLBZv3USN8-YFdV426_XzOgq1s6DRaJRu78lQ7CDZ_NJoXvd7fOD_sh0Fn2hviZKwKV5qst9oRQFylYfGp-LwtlVrVhunp82L2r8cTOidcDjPzp9bqWheSreEt9Jr4QWKZ6HwdGaTzHrkvdT733TYlcgZ6vX6LfbexZKhzLr7EewnNnkIncqiPXFF4J-P9D38tI8guf_z313tEGQajeFbbfI4jvyrzqU_nXYG0-5wgJ7vx_5VH7_84vfNb6ztt687KL7rDds3E-IhwPGNNJHlDGB9AWh3rM9jHsGu2LK2hgkJlkNnrbRBz4XKCIbMqG97KEKRBkYmViIsrdIIFoW-tRiFChbKjUQHdjWasXVutYytZrGOK4FGnyjTWcpgRHCXMjSs3Z4Y_M3gioAHK1FmQsk1zpzFgmxpeERb5m5-mMK2ZHLIuMIkrrZK8b6TSs2V2AjafjfGptYilHAkGnkYSurI1TxXDhebvY_ID1Uu0W9fw80nualqE3l8kXon9dpFtdZ8i0N3W_5nZBRHG8MOB_tYF1BfqMJ9-Qie6fV4OLu6Hs2m6N_zAVH7d-LEn7avu4MrFGfTbq_7IWfpMTdkUWEFGwmz1Aaehm19YY0MjrmJjBDx9wfnRuxYcmRYKBHlFG0pQ53zaDG0BTrgrGgFqWBvjPiY4VJJvVQEP5eZwpbjYEf1aYLBQAkToWHBbbCi3b9xnqbSfihaiSNiNLMSyp6zRZdm-t8svYPMx7hSX8pR7ijIZt2rNfF_Xr-ya_UK-Byugxfg8-vMh-p82CtNe9gfjTuTSfFrdumT_HTGg07vS9G55ibcQrXZENFa7_0zFcEqluTCI3q04XH0A3TH6WKWQmo-Zhy68icUAQmEUDk-9WrjE8PKCbBI98Kh892gJ-2e3QkTU3-nQp9ci2PiiLattCsGKZJrrhgPgsxwsKZ0-gQnfrghkMP_y0mog7S6hwWeIYRT6xX7cL72eGb1nG8_vhY3h-zhBdz0en6f2Oh3J9Ox30PpauwPulO6oy47ndGk07l5Qm18g_NmRWAz-JxNsiTRhnR6sWNk9BEzSWYS9SPuKp1kihtohsGVowBuRnePw4bxR-ZbWOHMZnQNIcA7luY7yvk6LOjA2qcq_1w7nmEiJ9pL986c5xWvRcUhlXyGitvyo1ymOyLh6HXxdzjqDPyu05Fx7wsYroR1N_fEcgeAO0RfIGAFV98fgCmyDBfUj5lE_kH2sYTbVQvxxC-l2EZylsikTNLikhJal2HPpBI0LQKeA1Om5hgzCeQ4NAziAIoiTlO5ocNExH63QioEhhZKMH_UfX1Gotzd8zR3t1dsJc-MXgmUw1PjC1CKJ8wj-biZdMa_Oa1AOtsZ0yUze0fXzLQzcXnM4Kp97XcHTyW6lyJReucy3J8YJXGRye-e9wbpOZa4O757jBPb78zQgyXu6CdwNOUwhWTIwmbxQL3Ti8ToMAvyFPmwxxa7IZcj4b1EOixMmd1kC7qUENc8RdEQJcS4cIKSC8ONhDwpeSdYDwLWXoG3r8x_n-GqcICX20uE0Zbmd-evJj-Hd-sLqGoPkcsMZsMZMTSh51ObEPt94PddCdfT-Kk8-N0-DZyQF3HU4D0Zs6P0-AioncCbYvv9mcJrDtalTjUPeStPAA29h9IWS-n5Ezy0bbksLiISrZTyWqzhUpklspV09W_mXluxe229CXcxX8vg54cJDILKaQSpkxIk0w-zgGOBhRkiVZBHK61ktEJ49_sLdl-JHXmVx7s04Eo4vzqnPphd2Rv72JGvwN3hM8kLuOt3-sMxvbombb-XP7quh_74Mi8-fs0_Jm9q-H77x7gxHFmlBJLmYymTcSgj_YNeYZAQlmhI13Heg1c2W2RSWXfzabURreNX_UrjjeAwhUw9eqOXMRdwobhSu0BENeArFI0oOjzasjhE4JTm4Vdci9_wsV58RnsWlNvb8vGXP0Ir_-53f3v_Fw==">
+    <meta property="og:title" content="vLLM: Faster LLM Inference &amp; Serving">
+    <meta property="og:description" content="Test your knowledge on vLLM: Faster LLM Inference &amp; Serving. 2 rounds, 32 words.">
+    <meta property="og:image" content="https://find4.org/preview-image.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="vLLM: Faster LLM Inference &amp; Serving">
+    <meta name="twitter:description" content="Beginner-level challenge covering vLLM: Faster LLM Inference &amp; Serving.">
+    <meta name="twitter:image" content="https://find4.org/preview-image.png">
+
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "EducationalOccupationalCredential",
+  "name": "vLLM: Faster LLM Inference & Serving",
+  "educationalLevel": "Beginner",
+  "abstract": "Covers concepts including: vLLM Memory Management Concepts, LLM Serving Performance Metrics, Hardware Optimization Techniques, LLM Architectures Supported by vLLM."
+}
+    </script>
+
+    <style>
+        body{font-family:system-ui,-apple-system,sans-serif;max-width:720px;margin:2rem auto;padding:0 1rem;background:#f5f5f3;color:#111;}
+        .f4-game{background:#fff;border:0.5px solid rgba(0,0,0,0.15);border-radius:12px;padding:1rem 1.25rem;margin-bottom:48px;box-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1);}
+        .f4-game-header{display:flex;align-items:center;gap:10px;margin-bottom:1rem;flex-wrap:wrap;}
+        .f4-game-icon{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:20px;}
+        .f4-game-title-block{flex:1;min-width:0;}
+        .f4-game-title{font-size:15px;font-weight:500;margin:0;color:#111;}
+        .f4-game-meta{font-size:12px;color:#666;margin:0;}
+        .play-btn{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;background:#0f6e56;color:#fff;border-radius:10px;text-decoration:none;font-size:13px;font-weight:500;margin-left:auto;transition:background 0.2s;}
+        .play-btn:hover{background:#085041;}
+        .f4-groups{display:flex;flex-direction:column;gap:5px;}
+        .f4-round{font-size:11px;font-weight:500;color:#888;padding:8px 0 3px;text-transform:uppercase;letter-spacing:0.05em;}
+        .f4-group{display:grid;grid-template-columns:13px 1fr 90px 2fr;align-items:start;gap:8px;padding:8px 10px;border-radius:8px;border:0.5px solid #e0e0de;background:#fafaf9;}
+        .f4-dot{width:11px;height:11px;border-radius:50%;flex-shrink:0;margin-top:3px;}
+        .f4-cat{font-size:13px;font-weight:500;line-height:1.3;}
+        .f4-skill{font-size:11px;padding:2px 7px;border-radius:20px;text-align:center;white-space:nowrap;}
+        .f4-words{font-size:11px;color:#666;line-height:1.5;word-break:break-word;}
+        .sk-b{background:#e1f5ee;color:#085041;}.sk-i{background:#e6f1fb;color:#0c447c;}.sk-a{background:#faeeda;color:#633806;}.sk-e{background:#fcebeb;color:#791f1f;}
+        .dot-red{background:#e24b4a;}.dot-green{background:#639922;}.dot-blue{background:#378add;}.dot-yellow{background:#ba7517;}
+        .dot-purple{background:#7f77dd;}.dot-teal{background:#1d9e75;}.dot-orange{background:#d85a30;}.dot-indigo{background:#534ab7;}
+        @media(prefers-color-scheme:dark){
+          body{background:#1a1a18;color:#e8e6e1;}
+          .f4-game{background:#2c2c2a;border-color:rgba(255,255,255,0.1);box-shadow:0 4px 6px -1px rgb(0 0 0 / 0.4);}
+          .f4-game-title{color:#e8e6e1;}
+          .f4-game-meta{color:#888780;}
+          .f4-round{color:#888780;}
+          .f4-group{background:#222220;border-color:#3a3a38;}
+          .f4-cat{color:#e8e6e1;}
+          .f4-words{color:#888780;}
+          .sk-b{background:#04342c;color:#9fe1cb;}.sk-i{background:#042c53;color:#b5d4f4;}.sk-a{background:#412402;color:#fac775;}.sk-e{background:#501313;color:#f7c1c1;}
+        }
+    </style>
+</head>
+<body>
+<div class="f4-game f4-capture">
+  <div class="f4-game-header">
+    <div class="f4-game-icon" style="background:#e6f1fb;" aria-hidden="true">&#x2699;&#xFE0F;</div>
+    <div class="f4-game-title-block">
+      <h1 class="f4-game-title">vLLM: Faster LLM Inference &amp; Serving</h1>
+      <p class="f4-game-meta">2 rounds &middot; 32 words &middot; Beginner level</p>
+    </div>
+    <a class="play-btn" href="https://find4.org/#game=xZhrcxo5Fob_iooPU5laoIkx2GY_dTCxGXMbLlM1mXJRols0WotWR62GMCn_93mPusE4a-96Jk5SlXKErkfnPHp11J9La2F5yC0vtT6XIhELw60I59yWWqWT2kmzUruo1M6mb2utGv37UCqXUp2ZQKB9ZW2Stjxvu91WjQhX3FYDvfZE7C2Ujry1ELayUWpdWfLUClNZayMqYrmUgRSxrVCLjJfCiDgQFR6HlVSYjYwjWiOLIpGSJTFf01qbx72LntX_pDpG97UO5VI-ZfdF67TWapxV642z-lnzYP1cht94A1YkWGEpY67kn2J-cHO5JMO5EZFMrdk5p2OD81RYmJSWWn-UliciPL8o3ZZLkdFZctxUPzttnghM0eCBWJw-9JFWrPedwoUQ5-fo1DxdLnmAwoLX6ichCqcLUTuvoRBcLBZv3USN8-YFdV426_XzOgq1s6DRaJRu78lQ7CDZ_NJoXvd7fOD_sh0Fn2hviZKwKV5qst9oRQFylYfGp-LwtlVrVhunp82L2r8cTOidcDjPzp9bqWheSreEt9Jr4QWKZ6HwdGaTzHrkvdT733TYlcgZ6vX6LfbexZKhzLr7EewnNnkIncqiPXFF4J-P9D38tI8guf_z313tEGQajeFbbfI4jvyrzqU_nXYG0-5wgJ7vx_5VH7_84vfNb6ztt687KL7rDds3E-IhwPGNNJHlDGB9AWh3rM9jHsGu2LK2hgkJlkNnrbRBz4XKCIbMqG97KEKRBkYmViIsrdIIFoW-tRiFChbKjUQHdjWasXVutYytZrGOK4FGnyjTWcpgRHCXMjSs3Z4Y_M3gioAHK1FmQsk1zpzFgmxpeERb5m5-mMK2ZHLIuMIkrrZK8b6TSs2V2AjafjfGptYilHAkGnkYSurI1TxXDhebvY_ID1Uu0W9fw80nualqE3l8kXon9dpFtdZ8i0N3W_5nZBRHG8MOB_tYF1BfqMJ9-Qie6fV4OLu6Hs2m6N_zAVH7d-LEn7avu4MrFGfTbq_7IWfpMTdkUWEFGwmz1Aaehm19YY0MjrmJjBDx9wfnRuxYcmRYKBHlFG0pQ53zaDG0BTrgrGgFqWBvjPiY4VJJvVQEP5eZwpbjYEf1aYLBQAkToWHBbbCi3b9xnqbSfihaiSNiNLMSyp6zRZdm-t8svYPMx7hSX8pR7ijIZt2rNfF_Xr-ya_UK-Byugxfg8-vMh-p82CtNe9gfjTuTSfFrdumT_HTGg07vS9G55ibcQrXZENFa7_0zFcEqluTCI3q04XH0A3TH6WKWQmo-Zhy68icUAQmEUDk-9WrjE8PKCbBI98Kh892gJ-2e3QkTU3-nQp9ci2PiiLattCsGKZJrrhgPgsxwsKZ0-gQnfrghkMP_y0mog7S6hwWeIYRT6xX7cL72eGb1nG8_vhY3h-zhBdz0en6f2Oh3J9Ox30PpauwPulO6oy47ndGk07l5Qm18g_NmRWAz-JxNsiTRhnR6sWNk9BEzSWYS9SPuKp1kihtohsGVowBuRnePw4bxR-ZbWOHMZnQNIcA7luY7yvk6LOjA2qcq_1w7nmEiJ9pL986c5xWvRcUhlXyGitvyo1ymOyLh6HXxdzjqDPyu05Fx7wsYroR1N_fEcgeAO0RfIGAFV98fgCmyDBfUj5lE_kH2sYTbVQvxxC-l2EZylsikTNLikhJal2HPpBI0LQKeA1Om5hgzCeQ4NAziAIoiTlO5ocNExH63QioEhhZKMH_UfX1Gotzd8zR3t1dsJc-MXgmUw1PjC1CKJ8wj-biZdMa_Oa1AOtsZ0yUze0fXzLQzcXnM4Kp97XcHTyW6lyJReucy3J8YJXGRye-e9wbpOZa4O757jBPb78zQgyXu6CdwNOUwhWTIwmbxQL3Ti8ToMAvyFPmwxxa7IZcj4b1EOixMmd1kC7qUENc8RdEQJcS4cIKSC8ONhDwpeSdYDwLWXoG3r8x_n-GqcICX20uE0Zbmd-evJj-Hd-sLqGoPkcsMZsMZMTSh51ObEPt94PddCdfT-Kk8-N0-DZyQF3HU4D0Zs6P0-AioncCbYvv9mcJrDtalTjUPeStPAA29h9IWS-n5Ezy0bbksLiISrZTyWqzhUpklspV09W_mXluxe229CXcxX8vg54cJDILKaQSpkxIk0w-zgGOBhRkiVZBHK61ktEJ49_sLdl-JHXmVx7s04Eo4vzqnPphd2Rv72JGvwN3hM8kLuOt3-sMxvbombb-XP7quh_74Mi8-fs0_Jm9q-H77x7gxHFmlBJLmYymTcSgj_YNeYZAQlmhI13Heg1c2W2RSWXfzabURreNX_UrjjeAwhUw9eqOXMRdwobhSu0BENeArFI0oOjzasjhE4JTm4Vdci9_wsV58RnsWlNvb8vGXP0Ir_-53f3v_Fw==" target="_blank" rel="noopener"><span>&#9654;</span> Play on find4.org</a>
+  </div>
+
+  <div class="f4-groups">
+    <h2 class="f4-round">Round 1</h2>
+    <div class="f4-group">
+        <div class="f4-dot dot-blue" role="img" aria-label="Intermediate Level Category"></div>
+        <div class="f4-cat">vLLM Memory Management Concepts</div>
+        <span class="f4-skill sk-i">Intermediate</span>
+        <div class="f4-words">PAGEDATTENTION &middot; FRAGMENTATION &middot; KV CACHE &middot; BLOCKS</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-green" role="img" aria-label="Beginner Level Category"></div>
+        <div class="f4-cat">LLM Serving Performance Metrics</div>
+        <span class="f4-skill sk-b">Beginner</span>
+        <div class="f4-words">THROUGHPUT &middot; LATENCY &middot; BATCHING &middot; UTILIZATION</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-orange" role="img" aria-label="Advanced Level Category"></div>
+        <div class="f4-cat">Hardware Optimization Techniques</div>
+        <span class="f4-skill sk-a">Advanced</span>
+        <div class="f4-words">QUANTIZATION &middot; COMPRESSION &middot; CUDA &middot; KERNELS</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-purple" role="img" aria-label="Beginner Level Category"></div>
+        <div class="f4-cat">LLM Architectures Supported by vLLM</div>
+        <span class="f4-skill sk-b">Beginner</span>
+        <div class="f4-words">LLAMA &middot; MISTRAL &middot; GRANITE &middot; DEEPSEEK</div>
+    </div>
+    <h2 class="f4-round">Round 2</h2>
+    <div class="f4-group">
+        <div class="f4-dot dot-teal" role="img" aria-label="Beginner Level Category"></div>
+        <div class="f4-cat">Getting Started with vLLM</div>
+        <span class="f4-skill sk-b">Beginner</span>
+        <div class="f4-words">PIP &middot; CLI &middot; OPENAI &middot; CURL</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-red" role="img" aria-label="Intermediate Level Category"></div>
+        <div class="f4-cat">vLLM Deployment &amp; Integration Frameworks</div>
+        <span class="f4-skill sk-i">Intermediate</span>
+        <div class="f4-words">KSERVE &middot; DOCKER &middot; KUBERNETES &middot; LANGCHAIN</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-yellow" role="img" aria-label="Intermediate Level Category"></div>
+        <div class="f4-cat">Batching Strategies in LLM Serving</div>
+        <span class="f4-skill sk-i">Intermediate</span>
+        <div class="f4-words">CONTINUOUS &middot; STATIC &middot; DYNAMIC &middot; ITERATION</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-indigo" role="img" aria-label="Beginner Level Category"></div>
+        <div class="f4-cat">Traditional LLM Serving Challenges</div>
+        <span class="f4-skill sk-b">Beginner</span>
+        <div class="f4-words">MEMORY &middot; SCALING &middot; HOARDING &middot; FRAGMENTATION</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

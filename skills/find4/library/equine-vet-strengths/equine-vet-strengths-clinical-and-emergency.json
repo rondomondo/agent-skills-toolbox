@@ -1,0 +1,202 @@
+{
+  "metadata": {
+    "generated_at": "2026-09-08T10:00:00Z",
+    "source": "stdin",
+    "suggested_name": "equine-vet-strengths.json",
+    "modified_at": "2026-09-08T15:07:46.362426",
+    "source_id": "stdin",
+    "step": "finalize_metadata",
+    "id_registry": {
+      "game_set_ids": [
+        "e425e9"
+      ],
+      "group_set_ids": [
+        "bf9cde",
+        "59ed22"
+      ],
+      "group_item_ids": [
+        "2658a3",
+        "c1a1c1",
+        "d191ee",
+        "830dd3",
+        "d8a5e4",
+        "451d14",
+        "43af4e",
+        "be66da"
+      ]
+    },
+    "id": "WlfRej3yfXgy8iTg",
+    "split_info": {
+      "role": "split",
+      "split_at": "2026-09-08T15:08:03.459565+00:00",
+      "parent_id": "WlfRej3yfXgy8iTg",
+      "parent_file": "/home/claude/output/games/equine-vet-strengths.json",
+      "theme": "Equine Vet Strengths: Clinical & Emergency",
+      "slug": "equine-vet-strengths-clinical-and-emergency"
+    }
+  },
+  "game_sets": [
+    {
+      "theme": "Equine Vet Strengths: Clinical & Emergency",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "AUSCULTATION",
+              "PALPATION",
+              "PERCUSSION",
+              "ENDOSCOPY"
+            ],
+            "category": "Physical Examination Techniques",
+            "color": "blue",
+            "url": "https://www.aaep.org/horsehealth/physical-examination",
+            "description": "Core hands-on assessment methods used during an equine clinical examination",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://www.merckvetmanual.com/horse-owners/routine-care-and-breeding-of-horses/routine-health-care-of-horses"
+            ],
+            "theme": "Equine Vet Strengths: Clinical & Emergency",
+            "group_item_id": "2658a3",
+            "group_set_id": "bf9cde"
+          },
+          {
+            "words": [
+              "COLIC",
+              "LAMINITIS",
+              "DYSTOCIA",
+              "FRACTURE"
+            ],
+            "category": "Equine Emergencies",
+            "color": "red",
+            "url": "https://www.aaep.org/horsehealth/colic",
+            "description": "Critical conditions requiring urgent field triage and intervention by an equine vet",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://www.merckvetmanual.com/emergency-medicine-and-critical-care"
+            ],
+            "theme": "Equine Vet Strengths: Clinical & Emergency",
+            "group_item_id": "c1a1c1",
+            "group_set_id": "bf9cde"
+          },
+          {
+            "words": [
+              "FLOATING",
+              "EXTRACTION",
+              "OCCLUSION",
+              "ERUPTION"
+            ],
+            "category": "Equine Dentistry",
+            "color": "green",
+            "url": "https://www.aaep.org/horsehealth/dental-care",
+            "description": "Dental procedures and concepts specific to equine oral health assessment and treatment",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.beva.org.uk/Veterinary-Support/Dentistry"
+            ],
+            "theme": "Equine Vet Strengths: Clinical & Emergency",
+            "group_item_id": "d191ee",
+            "group_set_id": "bf9cde"
+          },
+          {
+            "words": [
+              "EMPATHY",
+              "PROGNOSIS",
+              "EUTHANASIA",
+              "TRANSPARENCY"
+            ],
+            "category": "Difficult Client Conversations",
+            "color": "yellow",
+            "url": "https://www.aaep.org/horsehealth/euthanasia",
+            "description": "Skills needed to communicate sensitively about hard outcomes, costs, and end-of-life decisions",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://www.rcvs.org.uk/setting-standards/advice-and-guidance/code-of-professional-conduct-for-veterinary-surgeons/"
+            ],
+            "theme": "Equine Vet Strengths: Clinical & Emergency",
+            "group_item_id": "830dd3",
+            "group_set_id": "bf9cde"
+          }
+        ],
+        [
+          {
+            "words": [
+              "ULTRASOUND",
+              "RADIOGRAPH",
+              "CULTURE",
+              "BLOODWORK"
+            ],
+            "category": "Diagnostic Tools",
+            "color": "teal",
+            "url": "https://www.aaep.org/horsehealth/lameness",
+            "description": "Imaging and laboratory investigations used to confirm equine diagnoses",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.merckvetmanual.com/musculoskeletal-system/lameness-in-horses"
+            ],
+            "theme": "Equine Vet Strengths: Clinical & Emergency",
+            "group_item_id": "d8a5e4",
+            "group_set_id": "59ed22"
+          },
+          {
+            "words": [
+              "BREEDING",
+              "EMBRYO",
+              "FOALING",
+              "OVULATION"
+            ],
+            "category": "Equine Reproduction",
+            "color": "purple",
+            "url": "https://www.aaep.org/horsehealth/reproduction",
+            "description": "Reproductive procedures and milestones managed by equine vets across the breeding cycle",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://www.merckvetmanual.com/reproductive-system/reproductive-diseases-of-the-horse"
+            ],
+            "theme": "Equine Vet Strengths: Clinical & Emergency",
+            "group_item_id": "451d14",
+            "group_set_id": "59ed22"
+          },
+          {
+            "words": [
+              "STAMINA",
+              "DEXTERITY",
+              "AWARENESS",
+              "COMPOSURE"
+            ],
+            "category": "Physical & Personal Attributes",
+            "color": "orange",
+            "url": "https://www.bva.co.uk/our-campaigns/wellbeing/",
+            "description": "Physical and psychological traits required to work safely with large, unpredictable animals in field conditions",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://www.rcvs.org.uk/lifelong-learning/wellbeing/"
+            ],
+            "theme": "Equine Vet Strengths: Clinical & Emergency",
+            "group_item_id": "43af4e",
+            "group_set_id": "59ed22"
+          },
+          {
+            "words": [
+              "TELEMEDICINE",
+              "RADIOGRAPHY",
+              "INVENTORY",
+              "SOFTWARE"
+            ],
+            "category": "Veterinary Technology Skills",
+            "color": "indigo",
+            "url": "https://www.avma.org/resources-tools/practice-management/technology-veterinary-practice",
+            "description": "Modern tools and platforms equine vets use to manage practice operations and remote consultations",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.aaep.org/industry/practice-management"
+            ],
+            "theme": "Equine Vet Strengths: Clinical & Emergency",
+            "group_item_id": "be66da",
+            "group_set_id": "59ed22"
+          }
+        ]
+      ],
+      "game_set_id": "e425e9"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+short_link: ff-b50c3ef5 short_path: games/linux-process-memory-metrics.json config_file: library/linux-memory-metrics-vsz-rss-pss/linux-process-memory-metrics.json
+short_link: ff-77ae9d14 short_path: games/reading-linux-memory-statistics.json config_file: library/linux-memory-metrics-vsz-rss-pss/reading-linux-memory-statistics.json
+short_link: ff-c071ee5f short_path: games/bare-metal-kubernetes-setup-and-components.json config_file: library/bare-metal-kubernetes/bare-metal-kubernetes-setup-and-components.json
+short_link: ff-fd940460 short_path: games/event-driven-architecture.json config_file: library/event-driven-architecture/event-driven-architecture.json
+short_link: ff-a5a6b61f short_path: games/bare-metal-kubernetes-operations-and-trade-offs.json config_file: library/bare-metal-kubernetes/bare-metal-kubernetes-operations-and-trade-offs.json
+  OK   f4928a: Bare Metal Kubernetes: Operations & Trade-offs
+  OK   41f712: Bare Metal Kubernetes: Setup & Components
+  OK   a87d52: Event-Driven Architecture
+  OK   9da791: Linux Process Memory Metrics
+  OK   b2f373: Reading Linux Memory Statistics
+
+Validation Report:
+--------------------------------------------------------------------------------
+No validation errors found.
+
+Duplicate Analysis:
+
+Processed 7 files
+Found 5 unique game sets
+
+Theme Index Summary:
+------------------------------------------------------------------------------------------------------------------------
+Theme                          Game Set ID     Words    Groups   Vers    File
+------------------------------------------------------------------------------------------------------------------------
+Bare Metal Kubernetes: Operati f4928a          32       8        1   [v] bare-metal-kubernetes-operations-and-trade-offs.json
+Bare Metal Kubernetes: Setup & 41f712          32       8        1   [v] bare-metal-kubernetes-setup-and-components.json
+Event-Driven Architecture      a87d52          32       8        1   [v] event-driven-architecture.json
+Linux Process Memory Metrics   9da791          32       8        1   [v] linux-process-memory-metrics.json
+Reading Linux Memory Statistic b2f373          32       8        1   [v] reading-linux-memory-statistics.json
+------------------------------------------------------------------------------------------------------------------------
+
+Theme index saved to library/themes.json
+
+Building library.json from library/themes.json ...
+
+Done.
+  game_sets : 5
+  missing   : 0
+  hash      : d319a4134bb1f740...
+  fingerprint: ea4f2bf27f256a73
+  output    : library/library.json

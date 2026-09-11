@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find4 &mdash; Transformer Architecture and FLOP Counting</title>
+
+    <meta name="description" content="A Intermediate-level Find4 word-grouping game on &#x27;Transformer Architecture and FLOP Counting&#x27;. 2 rounds, 32 words. Find the hidden connections between groups of 4.">
+    <meta name="keywords" content="Transformer Architecture and FLOP Counting, Matmul dimension types, LLM inference phases and structures, Attention head variants, Training pass components, Flash Attention mechanisms, Mixture-of-Experts components, Transformer normalisation patterns, Gradient checkpointing strategies">
+    <meta name="author" content="Find4">
+    <meta name="theme-color" content="#0f6e56">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://find4.org/#game=xVhtb-I4EP4rFp9aHRDeSoH7lKVpi8pLN6V3u3dXIRObxEcSR45D4Vb97zfjhLd2q93bRTqpahJ7xh7PPH5mhi-liGvKqKal3peSz2OuqOZsRnWpV2rUGu1KrVupXU5rtZ75-6NULqUyUx6H-UDrJO1Z1t90XYnCqi90kM2rQlqpR0MR-5W5lEtLKxqnC6kirlIL1TPf5yluEtMIlzkQqERUB5VCvfp3KmNQiCQTC_EVoxr1Xuui1-pWW5fdWru5M20m2I9bp3kCygsRg9A_fLZzT7kk2ExxX6RabYyzwPpZyjXslpZ6f5ZqjYsWb5aeyiVfySw5muKLBWvBErzW4fPFXkZoHm2FWKfJ2gyEOvSStufw0uhe1juoVmMLz-vCy7x20WV1HOmwZgdHWL170UItr9Pl807p6QUNhRPQ6077QzdK3LtK41PyfItnS0IBNsULifYrGaL3zeBu8usuvuhUG-16t33xiwEBSCdU8VjP3tupmF4Is4UVyIhbXkgzxi2Z6STTFnovtb4Veh1wA5HpXo7YygvAb57OFCc0ZuR6OLknfZnFGjTxJGHmv4IVPdCpgE5lEcqk4m11XsBp23BiLL782Ma7uOMasMizVHlo-5Px1LX708H4BsQ-2NP-bf7qDMYPjyN4uXcnV4_9KSLDgwvoS8RYaUR1lIWEiYjHqZAx0ZuEpxhsGUoFAvMw4_CZqfCHAc946imRaFgez4sbELnY75kSERNKNHxJRTwZwwIeSvf2H7GP8imBqJM0iyLOiFxxVSZzqsFn2-mEpinRAXjJD0gWewGNfc7KhIsYtEgsNcWFSW7SHAyZSx2Uja8TJVnmaTSNhmG-ni9WIINRQJ-kSxGGs5CvODpjEGsOZ2QCvAmTlDGBa9NwlnOEicvWY3EWJZuqVL7FpGelms5Dbim-4IBij1s7WiwEc3urgY5CDNhPYKW4_6C8u_2H5AHjBXW8lA_gdO8614PhEIRvnLHj2tPBZAwfV05_cuXAS9_u3zqvoDQcjiCQxYlIEtAUXIeGAZ1lxsxDXPmK8_i0wAo40c-SRBTgVGwPsTxQ2pvXg2hz4I4Qow6hQllwMn5Fic7hIJMshNPlE3e_EY96Ac-hUoQLkXTGuCcZPycpjZIQpeUSgEyyFEGpA6pzxTfw-QBEH8My34ROANkM1lpQj1c9ifhJjz0RhtFMZ1oqQU-Hll2K-A60jG5tEBx9xP83xQP-H8PD1nDBjcsCThlZUTA31oeQUJydFBCjLNSicou77Tc_A2PPyySf-5hxtTma_IiTN3hkYJh3hPCIFhzwnPyVNWr11u4siDWGYQe0mEMa-idgIIl4BG4AkKxg_i2X2GxFAZbsm2Cgai1WhkfoPLUazdpFtd5stC5OFvddRfAdcb-euL_b7pVJOP274vXGta8GzniKLHHr9O_uJ4Px66wDFooYHWX42oM7J2N-DIYND0P5fHKCgMlnqth-4wxveF4xpOSssc7J_hwTi7c0ojspH6OLZpKz1l7O8EExQ-Cie8tECuNdAwfQU7xY4gAJP5dNwAtVBQCDiCMdoB94bBm20mZyb8dpc8iuTHwHHU_lw6LkYXI9HdmfDBIex3fwfHBtrEWmgyFWJ8eguA5pGhzcs4hj-hZpdAiLJFPAsieFxet96UpCvQxpBAICjCoKIofoZZAv6N4-qpVYk_mmQAiKpXKhI7rGgsYLsngJUNFQoSJOlpwnKKKy2EAfxCysSUBUxhWIQ0LQO5A_ADBQiHBy-2GEaSpNITpv8OKsE670f-WLBvJFq948HV_s-oVXiCj6kCO-eLi33YfB9DNIu5PHolZ1Pt07LrLFjT19C4qRWJuKWi4q-YnfoQvNIfedNHlIh0BbyENM5eAK4lMT4ZhDjaGWJkwS7zSH7J4nfRxbYsnhEJ7bCuwA7uQrAw3oWFKhN-TMsZbn5DmASgQiH25g7UVR8KIyiEGfANiD4gkGV-ALAovlW5wscdRr9Wqt2W3XT0cN237xO4AA5eV44pquZPIwLV5d52Fw9Whj0Tm0PzuuGX6TN3YGxvDA25mXYQneSxUfQkIqLP5PCop7QCLuS2gCvSxQ-5BuuBrjyJyDFjc8AVdWsIyGZA6LATjO1uQX5I34DHXP1ufnQAeJTPXxWgLqzgUcghRiWyWU_5UMh3RkV5oIxhRZwej-XBY5hkT9stYGSFy2G6frOLa_HHwHJFxnZE8NCuDpuAN7OHjATgN72t-2_cfIGU3cz69AcfP15AtdB8qIo65DxEz48qSYyHMxJANikePUS0Lo08lGZnkhAKQAz7xuOKwJIYEwARsqUzqiX7cFg_nOOcC0ySxT21y0q05MIQPdosZ6E-gjrzBRJsI29kfzxv9WYRQ_Mr2Lmaen8uHvYkg8-a9iL08v_wI=">
+    <meta property="og:title" content="Transformer Architecture and FLOP Counting">
+    <meta property="og:description" content="Test your knowledge on Transformer Architecture and FLOP Counting. 2 rounds, 32 words.">
+    <meta property="og:image" content="https://find4.org/preview-image.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Transformer Architecture and FLOP Counting">
+    <meta name="twitter:description" content="Intermediate-level challenge covering Transformer Architecture and FLOP Counting.">
+    <meta name="twitter:image" content="https://find4.org/preview-image.png">
+
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "EducationalOccupationalCredential",
+  "name": "Transformer Architecture and FLOP Counting",
+  "educationalLevel": "Intermediate",
+  "abstract": "Covers concepts including: Matmul dimension types, LLM inference phases and structures, Attention head variants, Training pass components."
+}
+    </script>
+
+    <style>
+        body{font-family:system-ui,-apple-system,sans-serif;max-width:720px;margin:2rem auto;padding:0 1rem;background:#f5f5f3;color:#111;}
+        .f4-game{background:#fff;border:0.5px solid rgba(0,0,0,0.15);border-radius:12px;padding:1rem 1.25rem;margin-bottom:48px;box-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1);}
+        .f4-game-header{display:flex;align-items:center;gap:10px;margin-bottom:1rem;flex-wrap:wrap;}
+        .f4-game-icon{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:20px;}
+        .f4-game-title-block{flex:1;min-width:0;}
+        .f4-game-title{font-size:15px;font-weight:500;margin:0;color:#111;}
+        .f4-game-meta{font-size:12px;color:#666;margin:0;}
+        .play-btn{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;background:#0f6e56;color:#fff;border-radius:10px;text-decoration:none;font-size:13px;font-weight:500;margin-left:auto;transition:background 0.2s;}
+        .play-btn:hover{background:#085041;}
+        .f4-groups{display:flex;flex-direction:column;gap:5px;}
+        .f4-round{font-size:11px;font-weight:500;color:#888;padding:8px 0 3px;text-transform:uppercase;letter-spacing:0.05em;}
+        .f4-group{display:grid;grid-template-columns:13px 1fr 90px 2fr;align-items:start;gap:8px;padding:8px 10px;border-radius:8px;border:0.5px solid #e0e0de;background:#fafaf9;}
+        .f4-dot{width:11px;height:11px;border-radius:50%;flex-shrink:0;margin-top:3px;}
+        .f4-cat{font-size:13px;font-weight:500;line-height:1.3;}
+        .f4-skill{font-size:11px;padding:2px 7px;border-radius:20px;text-align:center;white-space:nowrap;}
+        .f4-words{font-size:11px;color:#666;line-height:1.5;word-break:break-word;}
+        .sk-b{background:#e1f5ee;color:#085041;}.sk-i{background:#e6f1fb;color:#0c447c;}.sk-a{background:#faeeda;color:#633806;}.sk-e{background:#fcebeb;color:#791f1f;}
+        .dot-red{background:#e24b4a;}.dot-green{background:#639922;}.dot-blue{background:#378add;}.dot-yellow{background:#ba7517;}
+        .dot-purple{background:#7f77dd;}.dot-teal{background:#1d9e75;}.dot-orange{background:#d85a30;}.dot-indigo{background:#534ab7;}
+        @media(prefers-color-scheme:dark){
+          body{background:#1a1a18;color:#e8e6e1;}
+          .f4-game{background:#2c2c2a;border-color:rgba(255,255,255,0.1);box-shadow:0 4px 6px -1px rgb(0 0 0 / 0.4);}
+          .f4-game-title{color:#e8e6e1;}
+          .f4-game-meta{color:#888780;}
+          .f4-round{color:#888780;}
+          .f4-group{background:#222220;border-color:#3a3a38;}
+          .f4-cat{color:#e8e6e1;}
+          .f4-words{color:#888780;}
+          .sk-b{background:#04342c;color:#9fe1cb;}.sk-i{background:#042c53;color:#b5d4f4;}.sk-a{background:#412402;color:#fac775;}.sk-e{background:#501313;color:#f7c1c1;}
+        }
+    </style>
+</head>
+<body>
+<div class="f4-game f4-capture">
+  <div class="f4-game-header">
+    <div class="f4-game-icon" style="background:#eeedfe;" aria-hidden="true">&#x1F9E9;</div>
+    <div class="f4-game-title-block">
+      <h1 class="f4-game-title">Transformer Architecture and FLOP Counting</h1>
+      <p class="f4-game-meta">2 rounds &middot; 32 words &middot; Intermediate level</p>
+    </div>
+    <a class="play-btn" href="https://find4.org/#game=xVhtb-I4EP4rFp9aHRDeSoH7lKVpi8pLN6V3u3dXIRObxEcSR45D4Vb97zfjhLd2q93bRTqpahJ7xh7PPH5mhi-liGvKqKal3peSz2OuqOZsRnWpV2rUGu1KrVupXU5rtZ75-6NULqUyUx6H-UDrJO1Z1t90XYnCqi90kM2rQlqpR0MR-5W5lEtLKxqnC6kirlIL1TPf5yluEtMIlzkQqERUB5VCvfp3KmNQiCQTC_EVoxr1Xuui1-pWW5fdWru5M20m2I9bp3kCygsRg9A_fLZzT7kk2ExxX6RabYyzwPpZyjXslpZ6f5ZqjYsWb5aeyiVfySw5muKLBWvBErzW4fPFXkZoHm2FWKfJ2gyEOvSStufw0uhe1juoVmMLz-vCy7x20WV1HOmwZgdHWL170UItr9Pl807p6QUNhRPQ6077QzdK3LtK41PyfItnS0IBNsULifYrGaL3zeBu8usuvuhUG-16t33xiwEBSCdU8VjP3tupmF4Is4UVyIhbXkgzxi2Z6STTFnovtb4Veh1wA5HpXo7YygvAb57OFCc0ZuR6OLknfZnFGjTxJGHmv4IVPdCpgE5lEcqk4m11XsBp23BiLL782Ma7uOMasMizVHlo-5Px1LX708H4BsQ-2NP-bf7qDMYPjyN4uXcnV4_9KSLDgwvoS8RYaUR1lIWEiYjHqZAx0ZuEpxhsGUoFAvMw4_CZqfCHAc946imRaFgez4sbELnY75kSERNKNHxJRTwZwwIeSvf2H7GP8imBqJM0iyLOiFxxVSZzqsFn2-mEpinRAXjJD0gWewGNfc7KhIsYtEgsNcWFSW7SHAyZSx2Uja8TJVnmaTSNhmG-ni9WIINRQJ-kSxGGs5CvODpjEGsOZ2QCvAmTlDGBa9NwlnOEicvWY3EWJZuqVL7FpGelms5Dbim-4IBij1s7WiwEc3urgY5CDNhPYKW4_6C8u_2H5AHjBXW8lA_gdO8614PhEIRvnLHj2tPBZAwfV05_cuXAS9_u3zqvoDQcjiCQxYlIEtAUXIeGAZ1lxsxDXPmK8_i0wAo40c-SRBTgVGwPsTxQ2pvXg2hz4I4Qow6hQllwMn5Fic7hIJMshNPlE3e_EY96Ac-hUoQLkXTGuCcZPycpjZIQpeUSgEyyFEGpA6pzxTfw-QBEH8My34ROANkM1lpQj1c9ifhJjz0RhtFMZ1oqQU-Hll2K-A60jG5tEBx9xP83xQP-H8PD1nDBjcsCThlZUTA31oeQUJydFBCjLNSicou77Tc_A2PPyySf-5hxtTma_IiTN3hkYJh3hPCIFhzwnPyVNWr11u4siDWGYQe0mEMa-idgIIl4BG4AkKxg_i2X2GxFAZbsm2Cgai1WhkfoPLUazdpFtd5stC5OFvddRfAdcb-euL_b7pVJOP274vXGta8GzniKLHHr9O_uJ4Px66wDFooYHWX42oM7J2N-DIYND0P5fHKCgMlnqth-4wxveF4xpOSssc7J_hwTi7c0ojspH6OLZpKz1l7O8EExQ-Cie8tECuNdAwfQU7xY4gAJP5dNwAtVBQCDiCMdoB94bBm20mZyb8dpc8iuTHwHHU_lw6LkYXI9HdmfDBIex3fwfHBtrEWmgyFWJ8eguA5pGhzcs4hj-hZpdAiLJFPAsieFxet96UpCvQxpBAICjCoKIofoZZAv6N4-qpVYk_mmQAiKpXKhI7rGgsYLsngJUNFQoSJOlpwnKKKy2EAfxCysSUBUxhWIQ0LQO5A_ADBQiHBy-2GEaSpNITpv8OKsE670f-WLBvJFq948HV_s-oVXiCj6kCO-eLi33YfB9DNIu5PHolZ1Pt07LrLFjT19C4qRWJuKWi4q-YnfoQvNIfedNHlIh0BbyENM5eAK4lMT4ZhDjaGWJkwS7zSH7J4nfRxbYsnhEJ7bCuwA7uQrAw3oWFKhN-TMsZbn5DmASgQiH25g7UVR8KIyiEGfANiD4gkGV-ALAovlW5wscdRr9Wqt2W3XT0cN237xO4AA5eV44pquZPIwLV5d52Fw9Whj0Tm0PzuuGX6TN3YGxvDA25mXYQneSxUfQkIqLP5PCop7QCLuS2gCvSxQ-5BuuBrjyJyDFjc8AVdWsIyGZA6LATjO1uQX5I34DHXP1ufnQAeJTPXxWgLqzgUcghRiWyWU_5UMh3RkV5oIxhRZwej-XBY5hkT9stYGSFy2G6frOLa_HHwHJFxnZE8NCuDpuAN7OHjATgN72t-2_cfIGU3cz69AcfP15AtdB8qIo65DxEz48qSYyHMxJANikePUS0Lo08lGZnkhAKQAz7xuOKwJIYEwARsqUzqiX7cFg_nOOcC0ySxT21y0q05MIQPdosZ6E-gjrzBRJsI29kfzxv9WYRQ_Mr2Lmaen8uHvYkg8-a9iL08v_wI=" target="_blank" rel="noopener"><span>&#9654;</span> Play on find4.org</a>
+  </div>
+
+  <div class="f4-groups">
+    <h2 class="f4-round">Round 1</h2>
+    <div class="f4-group">
+        <div class="f4-dot dot-blue" role="img" aria-label="Intermediate Level Category"></div>
+        <div class="f4-cat">Matmul dimension types</div>
+        <span class="f4-skill sk-i">Intermediate</span>
+        <div class="f4-words">CONTRACTING &middot; BATCHING &middot; EINSUM &middot; PRODUCT</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-green" role="img" aria-label="Beginner Level Category"></div>
+        <div class="f4-cat">LLM inference phases and structures</div>
+        <span class="f4-skill sk-b">Beginner</span>
+        <div class="f4-words">PREFILL &middot; GENERATION &middot; DECODE &middot; CACHE</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-red" role="img" aria-label="Advanced Level Category"></div>
+        <div class="f4-cat">Attention head variants</div>
+        <span class="f4-skill sk-a">Advanced</span>
+        <div class="f4-words">MHA &middot; MQA &middot; GMQA &middot; GQA</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-yellow" role="img" aria-label="Intermediate Level Category"></div>
+        <div class="f4-cat">Training pass components</div>
+        <span class="f4-skill sk-i">Intermediate</span>
+        <div class="f4-words">FORWARD &middot; BACKWARD &middot; GRADIENT &middot; CHECKPOINT</div>
+    </div>
+    <h2 class="f4-round">Round 2</h2>
+    <div class="f4-group">
+        <div class="f4-dot dot-purple" role="img" aria-label="Expert Level Category"></div>
+        <div class="f4-cat">Flash Attention mechanisms</div>
+        <span class="f4-skill sk-e">Expert</span>
+        <div class="f4-words">SOFTMAX &middot; CHUNK &middot; SRAM &middot; TILING</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-teal" role="img" aria-label="Advanced Level Category"></div>
+        <div class="f4-cat">Mixture-of-Experts components</div>
+        <span class="f4-skill sk-a">Advanced</span>
+        <div class="f4-words">SPARSITY &middot; ROUTING &middot; EXPERT &middot; GATING</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-orange" role="img" aria-label="Intermediate Level Category"></div>
+        <div class="f4-cat">Transformer normalisation patterns</div>
+        <span class="f4-skill sk-i">Intermediate</span>
+        <div class="f4-words">PRENORM &middot; POSTNORM &middot; RESIDUAL &middot; LAYERNORM</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-indigo" role="img" aria-label="Expert Level Category"></div>
+        <div class="f4-cat">Gradient checkpointing strategies</div>
+        <span class="f4-skill sk-e">Expert</span>
+        <div class="f4-words">REMAT &middot; REMATERIALISE &middot; ACTIVATION &middot; MEMORY</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

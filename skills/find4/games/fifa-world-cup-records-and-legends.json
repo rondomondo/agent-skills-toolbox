@@ -1,0 +1,202 @@
+{
+  "metadata": {
+    "generated_at": "2026-09-07T10:00:00Z",
+    "source": "stdin",
+    "suggested_name": "world-cup-facts.json",
+    "modified_at": "2026-09-07T19:18:59.291266",
+    "source_id": "stdin",
+    "step": "finalize_metadata",
+    "id_registry": {
+      "game_set_ids": [
+        "24e8d0"
+      ],
+      "group_set_ids": [
+        "9ff67f",
+        "0ce5fe"
+      ],
+      "group_item_ids": [
+        "02cea0",
+        "f43678",
+        "7c2dc3",
+        "38aa58",
+        "232687",
+        "7ff126",
+        "3c306b",
+        "cb6b8f"
+      ]
+    },
+    "id": "TDyThGvzLwY5Febq",
+    "split_info": {
+      "role": "split",
+      "split_at": "2026-09-07T19:19:08.429206+00:00",
+      "parent_id": "TDyThGvzLwY5Febq",
+      "parent_file": "/output/games/world-cup-facts.json",
+      "theme": "FIFA World Cup Records and Legends",
+      "slug": "fifa-world-cup-records-and-legends"
+    }
+  },
+  "game_sets": [
+    {
+      "theme": "FIFA World Cup Records and Legends",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "BRAZIL",
+              "GERMANY",
+              "ITALY",
+              "ARGENTINA"
+            ],
+            "category": "Multi-Time World Cup Winners",
+            "color": "yellow",
+            "url": "https://www.fifa.com/fifaplus/en/articles/world-cup-winners-list",
+            "description": "Nations that have won the FIFA World Cup more than once — Brazil (5), Germany (4), Italy (4), Argentina (3)",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/FIFA_World_Cup"
+            ],
+            "theme": "FIFA World Cup Records and Legends",
+            "group_item_id": "02cea0",
+            "group_set_id": "9ff67f"
+          },
+          {
+            "words": [
+              "KLOSE",
+              "FONTAINE",
+              "RONALDO",
+              "MULLER"
+            ],
+            "category": "All-Time World Cup Top Scorers",
+            "color": "red",
+            "url": "https://www.fifa.com/fifaplus/en/articles/all-time-world-cup-top-scorers",
+            "description": "Miroslav Klose (16), Just Fontaine (13), Ronaldo (15), Gerd Muller (14) — the greatest goal scorers in World Cup history",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/FIFA_World_Cup_all-time_top_scorers"
+            ],
+            "theme": "FIFA World Cup Records and Legends",
+            "group_item_id": "f43678",
+            "group_set_id": "9ff67f"
+          },
+          {
+            "words": [
+              "PICKLES",
+              "HAND_OF_GOD",
+              "ZIDANE_HEADBUTT",
+              "BAGGIO_PENALTY"
+            ],
+            "category": "Famous World Cup Controversies",
+            "color": "purple",
+            "url": "https://www.theguardian.com/football/world-cup",
+            "description": "The dog who found the Jules Rimet Trophy, Maradona's handball, Zidane's red card in the 2006 final, Baggio's missed penalty in 1994",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/1986_FIFA_World_Cup_quarter-final"
+            ],
+            "theme": "FIFA World Cup Records and Legends",
+            "group_item_id": "7c2dc3",
+            "group_set_id": "9ff67f"
+          },
+          {
+            "words": [
+              "PELE",
+              "MARADONA",
+              "BECKENBAUER",
+              "ZIDANE"
+            ],
+            "category": "Golden Ball Winners",
+            "color": "blue",
+            "url": "https://www.fifa.com/fifaplus/en/articles/world-cup-golden-ball-winners",
+            "description": "Legendary players awarded the Golden Ball as the tournament's best player — each defined their era of World Cup football",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/FIFA_World_Cup_awards"
+            ],
+            "theme": "FIFA World Cup Records and Legends",
+            "group_item_id": "38aa58",
+            "group_set_id": "9ff67f"
+          }
+        ],
+        [
+          {
+            "words": [
+              "URUGUAY",
+              "SOUTH_AFRICA",
+              "QATAR",
+              "JAPAN_KOREA"
+            ],
+            "category": "Historic Host Nations",
+            "color": "green",
+            "url": "https://www.fifa.com/fifaplus/en/articles/world-cup-hosts-history",
+            "description": "Uruguay hosted the first tournament (1930), South Africa first African host (2010), Qatar first Middle Eastern host (2022), Japan/Korea first co-hosts (2002)",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/FIFA_World_Cup_hosts"
+            ],
+            "theme": "FIFA World Cup Records and Legends",
+            "group_item_id": "232687",
+            "group_set_id": "0ce5fe"
+          },
+          {
+            "words": [
+              "HURST",
+              "MOORE",
+              "BANKS",
+              "CHARLTON"
+            ],
+            "category": "England's 1966 World Cup Heroes",
+            "color": "teal",
+            "url": "https://en.wikipedia.org/wiki/1966_FIFA_World_Cup_final",
+            "description": "Geoff Hurst (hat trick in the final), Bobby Moore (captain), Gordon Banks (goalkeeper), Bobby Charlton — the core of England's only World Cup win",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.bbc.co.uk/sport/football/world-cup"
+            ],
+            "theme": "FIFA World Cup Records and Legends",
+            "group_item_id": "7ff126",
+            "group_set_id": "0ce5fe"
+          },
+          {
+            "words": [
+              "SUKUR",
+              "FERREYRA",
+              "WHITESIDE",
+              "SALENKO"
+            ],
+            "category": "Obscure World Cup Record Holders",
+            "color": "orange",
+            "url": "https://www.fifa.com/fifaplus/en/articles/world-cup-records",
+            "description": "Hakan Sukur fastest goal (11 seconds), Bernabe Ferreyra fastest hat trick, Norman Whiteside youngest player, Oleg Salenko 5 goals in one game",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/FIFA_World_Cup_records_and_statistics"
+            ],
+            "theme": "FIFA World Cup Records and Legends",
+            "group_item_id": "3c306b",
+            "group_set_id": "0ce5fe"
+          },
+          {
+            "words": [
+              "BUFFON",
+              "KAHN",
+              "ZOFF",
+              "CASILLAS"
+            ],
+            "category": "Legendary World Cup Goalkeepers",
+            "color": "indigo",
+            "url": "https://www.fifa.com/fifaplus/en/articles/world-cup-goalkeepers",
+            "description": "Gianluigi Buffon (176 Italy caps), Oliver Kahn (2002 Golden Ball), Dino Zoff (1982 winner at age 40), Iker Casillas — the greatest keepers in World Cup history",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/FIFA_World_Cup_Golden_Glove"
+            ],
+            "theme": "FIFA World Cup Records and Legends",
+            "group_item_id": "cb6b8f",
+            "group_set_id": "0ce5fe"
+          }
+        ]
+      ],
+      "game_set_id": "24e8d0"
+    }
+  ]
+}

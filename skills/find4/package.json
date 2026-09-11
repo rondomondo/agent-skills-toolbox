@@ -1,0 +1,20 @@
+{
+    "devDependencies": {
+        "esbuild": "^0.24.2",
+        "glob": "^11.1.0",
+        "javascript-obfuscator": "^4.2.2"
+    },
+    "buildConfig": {
+        "bundle": false,
+        "minify": false,
+        "obfuscate": false
+    },
+    "scripts": {
+        "release": "node build.js --bundle=true --minify=true --obfuscate=true",
+        "bundle": "node build.js --bundle=true --minify=false --obfuscate=false",
+        "minify": "node build.js --bundle=true --minify=true --obfuscate=false"
+    },
+    "dependencies": {
+        "jszip": "^3.10.1"
+    }
+}
