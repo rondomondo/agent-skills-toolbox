@@ -1,0 +1,204 @@
+{
+  "metadata": {
+    "generated_at": "2026-09-07T00:00:00Z",
+    "source": "https://www.etsy.com/ie/about",
+    "suggested_name": "etsy-marketplace-concepts.json",
+    "modified_at": "2026-09-07T20:10:42.221534",
+    "source_id": "https://www.etsy.com/ie/about",
+    "step": "finalize_metadata",
+    "id_registry": {
+      "game_set_ids": [
+        "28f7dd"
+      ],
+      "group_set_ids": [
+        "f923bf",
+        "e507bb"
+      ],
+      "group_item_ids": [
+        "48abe1",
+        "9fb301",
+        "f78043",
+        "54926e",
+        "1f977a",
+        "c175c4",
+        "31fd75",
+        "bff639"
+      ]
+    },
+    "id": "vhwIsOIa-zgBypz-",
+    "split_info": {
+      "role": "split",
+      "split_at": "2026-09-07T20:10:55.971849+00:00",
+      "parent_id": "vhwIsOIa-zgBypz-",
+      "parent_file": "/home/claude/output/games/etsy-marketplace-concepts.json",
+      "theme": "Etsy: The Human Marketplace",
+      "slug": "etsy-the-human-marketplace"
+    }
+  },
+  "game_sets": [
+    {
+      "theme": "Etsy: The Human Marketplace",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "HANDMADE",
+              "VINTAGE",
+              "UNIQUE",
+              "ARTISAN"
+            ],
+            "category": "Etsy Item Types",
+            "color": "orange",
+            "url": "https://www.etsy.com/ie/about",
+            "description": "The four types of goods that define what's sold on Etsy — all centred on human creativity and curation",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://www.etsy.com/ie/sell"
+            ],
+            "theme": "Etsy: The Human Marketplace",
+            "group_item_id": "48abe1",
+            "group_set_id": "f923bf"
+          },
+          {
+            "words": [
+              "CRAFT",
+              "OPTIMISM",
+              "CURIOSITY",
+              "SUSTAINABILITY"
+            ],
+            "category": "Etsy Guiding Principles",
+            "color": "teal",
+            "url": "https://www.etsy.com/ie/about",
+            "description": "Core values that Etsy commits to: craft, minimising waste (sustainability), embracing differences (curiosity), and leading with optimism",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.etsy.com/ie/impact"
+            ],
+            "theme": "Etsy: The Human Marketplace",
+            "group_item_id": "9fb301",
+            "group_set_id": "f923bf"
+          },
+          {
+            "words": [
+              "SELLERS",
+              "BUYERS",
+              "COMMUNITY",
+              "MARKETPLACE"
+            ],
+            "category": "Etsy Ecosystem Roles",
+            "color": "blue",
+            "url": "https://www.etsy.com/ie/about",
+            "description": "The four pillars of the Etsy ecosystem — creative sellers, shoppers, their collective community, and the platform itself",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://www.etsy.com/ie/sell"
+            ],
+            "theme": "Etsy: The Human Marketplace",
+            "group_item_id": "f78043",
+            "group_set_id": "f923bf"
+          },
+          {
+            "words": [
+              "JOURNAL",
+              "REGISTRY",
+              "EDITORS",
+              "GIFTCARDS"
+            ],
+            "category": "Etsy Buyer Features",
+            "color": "purple",
+            "url": "https://www.etsy.com/ie/about",
+            "description": "Tools and content features Etsy provides to help buyers discover, plan, and gift — from curated editorial to wish lists",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://blog.etsy.com/en/",
+              "https://www.etsy.com/ie/registry"
+            ],
+            "theme": "Etsy: The Human Marketplace",
+            "group_item_id": "54926e",
+            "group_set_id": "f923bf"
+          }
+        ],
+        [
+          {
+            "words": [
+              "IMAGINATION",
+              "CONNECTION",
+              "CREATIVITY",
+              "PASSION"
+            ],
+            "category": "Etsy Brand Values",
+            "color": "yellow",
+            "url": "https://www.etsy.com/ie/about",
+            "description": "The human qualities Etsy places at the heart of its mission — keeping commerce personal and driven by people",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://www.etsy.com/ie/about"
+            ],
+            "theme": "Etsy: The Human Marketplace",
+            "group_item_id": "1f977a",
+            "group_set_id": "e507bb"
+          },
+          {
+            "words": [
+              "FORUMS",
+              "TEAMS",
+              "AFFILIATES",
+              "EDUCATION"
+            ],
+            "category": "Etsy Seller Support",
+            "color": "green",
+            "url": "https://www.etsy.com/ie/about",
+            "description": "The resources and programmes Etsy provides to help sellers grow — from peer communities to educational tools and partnerships",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.etsy.com/ie/sell"
+            ],
+            "theme": "Etsy: The Human Marketplace",
+            "group_item_id": "c175c4",
+            "group_set_id": "e507bb"
+          },
+          {
+            "words": [
+              "INVESTORS",
+              "CAREERS",
+              "PRESS",
+              "IMPACT"
+            ],
+            "category": "Etsy Corporate Sections",
+            "color": "indigo",
+            "url": "https://www.etsy.com/ie/about",
+            "description": "The four main corporate information areas linked from Etsy's About page — covering financials, jobs, media, and social responsibility",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://investors.etsy.com",
+              "https://careers.etsy.com"
+            ],
+            "theme": "Etsy: The Human Marketplace",
+            "group_item_id": "31fd75",
+            "group_set_id": "e507bb"
+          },
+          {
+            "words": [
+              "INSTAGRAM",
+              "FACEBOOK",
+              "PINTEREST",
+              "YOUTUBE"
+            ],
+            "category": "Etsy Social Channels",
+            "color": "red",
+            "url": "https://www.etsy.com/ie/about",
+            "description": "The four social media platforms where Etsy maintains an official presence, as listed on its About page",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://www.etsy.com/ie/about"
+            ],
+            "theme": "Etsy: The Human Marketplace",
+            "group_item_id": "bff639",
+            "group_set_id": "e507bb"
+          }
+        ]
+      ],
+      "game_set_id": "28f7dd"
+    }
+  ]
+}

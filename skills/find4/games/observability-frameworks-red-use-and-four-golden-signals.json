@@ -1,0 +1,202 @@
+{
+  "metadata": {
+    "generated_at": "2026-09-07T00:00:00Z",
+    "source": "stdin",
+    "suggested_name": "observability-frameworks-red-use-golden-signals.json",
+    "modified_at": "2026-09-07T15:46:32.793527",
+    "source_id": "stdin",
+    "step": "finalize_metadata",
+    "id_registry": {
+      "game_set_ids": [
+        "05f422"
+      ],
+      "group_set_ids": [
+        "f06dc5",
+        "e36bf3"
+      ],
+      "group_item_ids": [
+        "506860",
+        "d16c86",
+        "ef7198",
+        "780002",
+        "c4c374",
+        "e2b3ff",
+        "8a0b3f",
+        "2259cf"
+      ]
+    },
+    "id": "eFgKfSpSOvmyiuUW",
+    "split_info": {
+      "role": "split",
+      "split_at": "2026-09-07T15:46:37.754184+00:00",
+      "parent_id": "eFgKfSpSOvmyiuUW",
+      "parent_file": "/home/claude/output/games/observability-frameworks-red-use-golden-signals.json",
+      "theme": "Observability Frameworks: RED, USE & Four Golden Signals",
+      "slug": "observability-frameworks-red-use-and-four-golden-signals"
+    }
+  },
+  "game_sets": [
+    {
+      "theme": "Observability Frameworks: RED, USE & Four Golden Signals",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "P50",
+              "P95",
+              "P99",
+              "HISTOGRAM"
+            ],
+            "category": "Latency Measurement",
+            "color": "blue",
+            "url": "https://sre.google/sre-book/monitoring-distributed-systems/",
+            "description": "Percentile distributions and histograms used to measure latency properly — averages mask tail latency that real users experience",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://grafana.com/blog/2018/08/02/the-red-method-how-to-instrument-your-services/"
+            ],
+            "theme": "Observability Frameworks: RED, USE & Four Golden Signals",
+            "group_item_id": "506860",
+            "group_set_id": "f06dc5"
+          },
+          {
+            "words": [
+              "METRICS",
+              "LOGS",
+              "TRACES",
+              "EVENTS"
+            ],
+            "category": "Observability Pillars",
+            "color": "green",
+            "url": "https://opentelemetry.io/docs/concepts/observability-primer/",
+            "description": "The four telemetry signal types that feed all observability frameworks — together they provide the full picture of system behaviour",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://www.squadcast.com/blog/how-important-is-observability-for-sre"
+            ],
+            "theme": "Observability Frameworks: RED, USE & Four Golden Signals",
+            "group_item_id": "d16c86",
+            "group_set_id": "f06dc5"
+          },
+          {
+            "words": [
+              "PROMETHEUS",
+              "GRAFANA",
+              "DATADOG",
+              "OTEL"
+            ],
+            "category": "Observability Tooling",
+            "color": "teal",
+            "url": "https://opentelemetry.io/",
+            "description": "The dominant tools used to collect, store, and visualise the signals defined by RED, USE, and the Golden Signals frameworks",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://grafana.com/blog/2018/08/02/the-red-method-how-to-instrument-your-services/"
+            ],
+            "theme": "Observability Frameworks: RED, USE & Four Golden Signals",
+            "group_item_id": "ef7198",
+            "group_set_id": "f06dc5"
+          },
+          {
+            "words": [
+              "COUNTER",
+              "GAUGE",
+              "HISTOGRAM",
+              "SUMMARY"
+            ],
+            "category": "Prometheus Metric Types",
+            "color": "orange",
+            "url": "https://prometheus.io/docs/concepts/metric_types/",
+            "description": "The four Prometheus metric types — each suited to a different kind of signal when instrumenting services for RED and USE",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://grafana.com/blog/2018/08/02/the-red-method-how-to-instrument-your-services/"
+            ],
+            "theme": "Observability Frameworks: RED, USE & Four Golden Signals",
+            "group_item_id": "780002",
+            "group_set_id": "f06dc5"
+          }
+        ],
+        [
+          {
+            "words": [
+              "ALERT",
+              "DASHBOARD",
+              "ONCALL",
+              "POSTMORTEM"
+            ],
+            "category": "Observability Outputs",
+            "color": "red",
+            "url": "https://sre.google/sre-book/monitoring-distributed-systems/",
+            "description": "The operational artefacts that observability frameworks drive — actionable signals rather than noise, enabling sustainable on-call",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.squadcast.com/blog/how-important-is-observability-for-sre"
+            ],
+            "theme": "Observability Frameworks: RED, USE & Four Golden Signals",
+            "group_item_id": "c4c374",
+            "group_set_id": "e36bf3"
+          },
+          {
+            "words": [
+              "UPSTREAM",
+              "DOWNSTREAM",
+              "DEPENDENCY",
+              "FANOUT"
+            ],
+            "category": "Distributed Service Topology",
+            "color": "purple",
+            "url": "https://sre.google/sre-book/monitoring-distributed-systems/",
+            "description": "Concepts describing how services relate in a call graph — critical when applying RED to identify where degradation originates",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://opentelemetry.io/docs/concepts/observability-primer/"
+            ],
+            "theme": "Observability Frameworks: RED, USE & Four Golden Signals",
+            "group_item_id": "e2b3ff",
+            "group_set_id": "e36bf3"
+          },
+          {
+            "words": [
+              "MTTR",
+              "MTTD",
+              "MTBF",
+              "TOIL"
+            ],
+            "category": "SRE Reliability Metrics",
+            "color": "yellow",
+            "url": "https://sre.google/sre-book/introduction/",
+            "description": "Time-based reliability measures that good observability directly improves — faster detection and recovery, less repetitive operational work",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.squadcast.com/blog/how-important-is-observability-for-sre"
+            ],
+            "theme": "Observability Frameworks: RED, USE & Four Golden Signals",
+            "group_item_id": "8a0b3f",
+            "group_set_id": "e36bf3"
+          },
+          {
+            "words": [
+              "QUEUE",
+              "BUSY",
+              "BACKLOG",
+              "HEADROOM"
+            ],
+            "category": "Saturation Signals",
+            "color": "indigo",
+            "url": "https://www.brendangregg.com/usemethod.html",
+            "description": "Indicators that a resource is saturated — work is queuing beyond capacity, the key leading indicator of degradation in USE",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://lantern.splunk.com/Observability/Product_Tips/Observability_Cloud/Adopting_monitoring_frameworks_-_RED_and_USE"
+            ],
+            "theme": "Observability Frameworks: RED, USE & Four Golden Signals",
+            "group_item_id": "2259cf",
+            "group_set_id": "e36bf3"
+          }
+        ]
+      ],
+      "game_set_id": "05f422"
+    }
+  ]
+}

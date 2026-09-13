@@ -1,0 +1,104 @@
+short_link: ff-6232afa3 short_path: games/fifa-world-cup-records-and-legends.json config_file: library/world-cup-facts/fifa-world-cup-records-and-legends.json
+short_link: ff-dd50da29 short_path: games/gpu-networking-and-llm-parallelism.json config_file: library/gpu-scaling-book/gpu-networking-and-llm-parallelism.json
+short_link: ff-5f4f034e short_path: games/llm-evaluation-types-and-methods.json config_file: library/llm-evaluation-types-and-evals/llm-evaluation-types-and-methods.json
+short_link: ff-b50c3ef5 short_path: games/linux-process-memory-metrics.json config_file: library/linux-memory-metrics-vsz-rss-pss/linux-process-memory-metrics.json
+short_link: ff-14d5ac48 short_path: games/transformer-architecture-and-flop-counting.json config_file: library/transformer-math-scaling/transformer-architecture-and-flop-counting.json
+short_link: ff-589d65f1 short_path: games/vllm-faster-llm-inference-and-serving.json config_file: library/vllm-inference-serving/vllm-faster-llm-inference-and-serving.json
+short_link: ff-35058e6a short_path: games/system-design-interview-fundamentals.json config_file: library/system-design-interview-essentials/system-design-interview-fundamentals.json
+short_link: ff-352670fe short_path: games/distributed-systems-design-patterns.json config_file: library/system-design-interview-essentials/distributed-systems-design-patterns.json
+short_link: ff-54c6a4cd short_path: games/scaling-llms-on-hardware-systems-concepts.json config_file: library/jax-scaling-book-llm-systems/scaling-llms-on-hardware-systems-concepts.json
+short_link: ff-dad8ec9c short_path: games/etsy-the-human-marketplace.json config_file: library/etsy-marketplace-concepts/etsy-the-human-marketplace.json
+short_link: ff-77ae9d14 short_path: games/reading-linux-memory-statistics.json config_file: library/linux-memory-metrics-vsz-rss-pss/reading-linux-memory-statistics.json
+short_link: ff-2773f418 short_path: games/acing-the-system-design-interview.json config_file: library/system-design-interview-fundamentals/acing-the-system-design-interview.json
+short_link: ff-94c5c09c short_path: games/opentelemetry-concepts-deep-dive.json config_file: library/opentelemetry-overview/opentelemetry-concepts-deep-dive.json
+short_link: ff-ac53f967 short_path: games/fifa-world-cup-history-and-trophies.json config_file: library/world-cup-facts/fifa-world-cup-history-and-trophies.json
+short_link: ff-f26f9c3d short_path: games/llm-hardware-and-architecture-deep-dive.json config_file: library/jax-scaling-book-llm-systems/llm-hardware-and-architecture-deep-dive.json
+short_link: ff-634550bc short_path: games/opentelemetry-data-types-and-attribute-rules.json config_file: library/opentelemetry-common-spec/opentelemetry-data-types-and-attribute-rules.json
+short_link: ff-229bdf94 short_path: games/transformer-parameters-arithmetic-and-scaling-laws.json config_file: library/transformer-math-scaling/transformer-parameters-arithmetic-and-scaling-laws.json
+short_link: ff-c82ddd1d short_path: games/gpu-hardware-internals.json config_file: library/gpu-scaling-book/gpu-hardware-internals.json
+short_link: ff-cdd78006 short_path: games/selling-and-buying-on-etsy.json config_file: library/etsy-marketplace-concepts/selling-and-buying-on-etsy.json
+short_link: ff-a15ebc6c short_path: games/opentelemetry-architecture-and-signals.json config_file: library/opentelemetry-overview/opentelemetry-architecture-and-signals.json
+short_link: ff-c071ee5f short_path: games/bare-metal-kubernetes-setup-and-components.json config_file: library/bare-metal-kubernetes/bare-metal-kubernetes-setup-and-components.json
+short_link: ff-fd940460 short_path: games/event-driven-architecture.json config_file: library/event-driven-architecture/event-driven-architecture.json
+short_link: ff-a5a6b61f short_path: games/bare-metal-kubernetes-operations-and-trade-offs.json config_file: library/bare-metal-kubernetes/bare-metal-kubernetes-operations-and-trade-offs.json
+short_link: ff-6b72bef9 short_path: games/vllm-architecture-and-production-ai-inference.json config_file: library/vllm-inference-serving/vllm-architecture-and-production-ai-inference.json
+short_link: ff-155d0fed short_path: games/observability-frameworks-red-use-and-four-golden-signals.json config_file: library/observability-frameworks-red-use-golden-signals/observability-frameworks-red-use-and-four-golden-signals.json
+short_link: ff-e40ac200 short_path: games/opentelemetry-common-specification-concepts.json config_file: library/opentelemetry-common-spec/opentelemetry-common-specification-concepts.json
+  OK   0ef917: Acing the System Design Interview
+  OK   f4928a: Bare Metal Kubernetes: Operations & Trade-offs
+  OK   41f712: Bare Metal Kubernetes: Setup & Components
+  OK   0b7522: Distributed Systems Design Patterns
+  OK   28f7dd: Etsy: The Human Marketplace
+  OK   a87d52: Event-Driven Architecture
+  OK   e19f5f: FIFA World Cup History and Trophies
+  OK   24e8d0: FIFA World Cup Records and Legends
+  OK   b0a4e4: GPU Hardware Internals
+  OK   171586: GPU Networking and LLM Parallelism
+  OK   788fe7: LLM Evaluation: Types and Methods
+  OK   7a8f2f: LLM Hardware and Architecture Deep Dive
+  OK   9da791: Linux Process Memory Metrics
+  OK   05f422: Observability Frameworks: RED, USE & Four Golden Signals
+  OK   b79f5a: OpenTelemetry Architecture & Signals
+  OK   118128: OpenTelemetry Common Specification Concepts
+  OK   b92538: OpenTelemetry Concepts Deep Dive
+  OK   1d4d39: OpenTelemetry Data Types and Attribute Rules
+  OK   b2f373: Reading Linux Memory Statistics
+  OK   da75bc: Scaling LLMs on Hardware: Systems Concepts
+  OK   6efd9d: Selling and Buying on Etsy
+  OK   12a0c7: System Design Interview Fundamentals
+  OK   0254e3: Transformer Architecture and FLOP Counting
+  OK   6c0ac0: Transformer Parameters, Arithmetic and Scaling Laws
+  OK   016e3d: vLLM Architecture & Production AI Inference
+  OK   f2ed89: vLLM: Faster LLM Inference & Serving
+
+Validation Report:
+--------------------------------------------------------------------------------
+No validation errors found.
+
+Duplicate Analysis:
+
+Processed 43 files
+Found 26 unique game sets
+
+Theme Index Summary:
+------------------------------------------------------------------------------------------------------------------------
+Theme                          Game Set ID     Words    Groups   Vers    File
+------------------------------------------------------------------------------------------------------------------------
+Acing the System Design Interv 0ef917          32       8        1   [v] acing-the-system-design-interview.json
+Bare Metal Kubernetes: Operati f4928a          32       8        1   [v] bare-metal-kubernetes-operations-and-trade-offs.json
+Bare Metal Kubernetes: Setup & 41f712          32       8        1   [v] bare-metal-kubernetes-setup-and-components.json
+Distributed Systems Design Pat 0b7522          32       8        1   [v] distributed-systems-design-patterns.json
+Etsy: The Human Marketplace    28f7dd          32       8        1   [v] etsy-the-human-marketplace.json
+Event-Driven Architecture      a87d52          32       8        1   [v] event-driven-architecture.json
+FIFA World Cup History and Tro e19f5f          32       8        1   [v] fifa-world-cup-history-and-trophies.json
+FIFA World Cup Records and Leg 24e8d0          32       8        1   [v] fifa-world-cup-records-and-legends.json
+GPU Hardware Internals         b0a4e4          32       8        1   [v] gpu-hardware-internals.json
+GPU Networking and LLM Paralle 171586          32       8        1   [v] gpu-networking-and-llm-parallelism.json
+LLM Evaluation: Types and Meth 788fe7          32       8        1   [v] llm-evaluation-types-and-methods.json
+LLM Hardware and Architecture  7a8f2f          32       8        1   [v] llm-hardware-and-architecture-deep-dive.json
+Linux Process Memory Metrics   9da791          32       8        1   [v] linux-process-memory-metrics.json
+Observability Frameworks: RED, 05f422          32       8        1   [v] observability-frameworks-red-use-and-four-golden-signals.json
+OpenTelemetry Architecture & S b79f5a          32       8        1   [v] opentelemetry-architecture-and-signals.json
+OpenTelemetry Common Specifica 118128          32       8        1   [v] opentelemetry-common-specification-concepts.json
+OpenTelemetry Concepts Deep Di b92538          32       8        1   [v] opentelemetry-concepts-deep-dive.json
+OpenTelemetry Data Types and A 1d4d39          32       8        1   [v] opentelemetry-data-types-and-attribute-rules.json
+Reading Linux Memory Statistic b2f373          32       8        1   [v] reading-linux-memory-statistics.json
+Scaling LLMs on Hardware: Syst da75bc          32       8        1   [v] scaling-llms-on-hardware-systems-concepts.json
+Selling and Buying on Etsy     6efd9d          32       8        1   [v] selling-and-buying-on-etsy.json
+System Design Interview Fundam 12a0c7          32       8        1   [v] system-design-interview-fundamentals.json
+Transformer Architecture and F 0254e3          32       8        1   [v] transformer-architecture-and-flop-counting.json
+Transformer Parameters, Arithm 6c0ac0          32       8        1   [v] transformer-parameters-arithmetic-and-scaling-laws.json
+vLLM Architecture & Production 016e3d          32       8        1   [v] vllm-architecture-and-production-ai-inference.json
+vLLM: Faster LLM Inference & S f2ed89          32       8        1   [v] vllm-faster-llm-inference-and-serving.json
+------------------------------------------------------------------------------------------------------------------------
+
+Theme index saved to library/themes.json
+
+Building library.json from library/themes.json ...
+
+Done.
+  game_sets : 26
+  missing   : 0
+  hash      : 1545e66fac217173...
+  fingerprint: ac5428f8680a4500
+  output    : library/library.json

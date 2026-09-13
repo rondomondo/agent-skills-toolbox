@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find4 &mdash; OpenTelemetry Concepts Deep Dive</title>
+
+    <meta name="description" content="A Intermediate-level Find4 word-grouping game on &#x27;OpenTelemetry Concepts Deep Dive&#x27;. 2 rounds, 32 words. Find the hidden connections between groups of 4.">
+    <meta name="keywords" content="OpenTelemetry Concepts Deep Dive, Resource Entity Hierarchy, Instrumentation Library Techniques, Span Link Patterns, Instrument Invocation Modes, Telemetry Export Formats, Metrics Data Model Semantics, Trace Graph Relationships, OTel Stability Guarantees">
+    <meta name="author" content="Find4">
+    <meta name="theme-color" content="#0f6e56">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://find4.org/#game=zZhtc-I4FoX_ioovm9RCIO8v-4kAnaZDgAXSU9O7qZSwL0YdY3klmTTTlf--58o2IenOVmaSrtqqqR5HlnSvpUfnHvG9siAnQ-lk5ex7JaKEjHQU3kpXOavsNfaOao3TWuN4sts4a_B_XyrVitWZCQjv586l9qxe1ykljmLCVGa1o3Q91IGt25Twr8aLul6SWSq6r_PoLIrIcoxELniWJ6NrZdedr1Yn6L7QoZqpn2V0cnZwctbY3dlvHJweH67zulXhX07NUYqxM5XIWP1Bt-ulqVZUeGsoUhaz-IVC6reWHILZytm_KtPTvcP9k8pNtRIZnaWbr47CPaJ9THGwf0Dy6LGPcrQoOzUa4d5JyJ1O948PGniYBschceTdk-nR6SkeZvJod3rCffYO5QHPGBzK8JhHNfYOdsOwcvPAieILFpf_bJ9_Pf38x-hycnH07RN_Wxor5JTMNOdvdMxL7xvXL19Y4dOd4-PDxvH-3z0A6J1Kg0W9fSlS8XqmfIi6zlyauTqvmK3_7712c_JEDNBrUvYSLZ0ElDor2kSpaKslccZxFv3ATlD0rIXoWQu55wOWpNwsXunvfybIei95JIbea5Nv16gzHlyPWh30afWux5POCE_95lVnPGz61uGgzRsd4CxFmpGpjCjHU3QSp9xKfFQ4aSaYr3gfdawN-kSGiNchM_FfRTgkGxiVOoUFPas0xTps_mJKVmABBOVJpEaHWaCSSKwDiH9ne43dA6ESIcVlNiWTkMMoSpbK6GSBkZhBWTEvP0BsBXGGo2N46O7pnuBzbVOJoEVDqsNtgSGBTF1mKBTSClMmJp1DXhnH0IgZx4IWykEfhFURDqLd4e2-U3F8G9OSeGW6WA-zoFBhefFShqHiD5bxbT6n36NXL1-ZSd2Gd3XetT9NSHGSMWR9jjdlAO2FCDxUNyDq9seT0fVVpz9pTrqDPgb9NmoOh93-BWPV7PXOm63LMZ6vuu12r_Nbc9R5xlQ3gR5lvCWSv1_01BRbshITCuaJ-k-GhXiEaxpn9J5sXSGITJRdWJFZ7NZ0JQZYLfHzpBSDpwW2SuipxZxyqmJGEI3AyYQ1yAb-DHRI4l65OWRDeO1fMZ7KlVzeG5mmvokhmIEyWxU2m3q6PckanMXxVAZ3eKONkIHjdjC3UGEY0z306UemmuFSYoPDt_MUxdpabMNbWVqXglewNG41J7kKXTQnH_3Dh8HoEv_7NOj2n2EzTiVvS3Inhjh8OOCbmGgjk-hdQWlz1fQnPBT0jYLMY5EWocX9nAzl6HBOVmzBgaANWEjuxsWkFsxVHEIzYs-UnavUbgu8ytEr0LCBnxOlxo-XSShm2tzVv2qImUqWOl6SWGSxU2mMkSnSIrkQkCqkMSPoCWMC2UkivJcR5BhTcSN3-RGZzreUjHs7MM6A4rpM1VuJWXuG1xDze7_1cTToD65ZYppP_yzVB4-D83Fn9Ll53ntZfHDklzrIT_sVzu8mTsafqHdjyWOi1pGtZ4CU32-7SoI5SpTOwBBLAMhQSawSYm2CasSqSNKLjIS-kLSoR3lNUwva9nKxMU-91CrwsDVuX3qK7iBlUuRukLialXLD9SukBbjb_tU1i18o_PEO0Kz95QvQ3FQ3nc9g0huyqjQ7F15lhqPBVQeK47H50h1e_qA2j-ngvGjjxAdtFtJtQpJmBifyPTk5x3ZQElovAvcKkMzyqN79eIpaGoQEDjseQGcMBYT1ETOjF0wB5bmimBTiwh_OHobH_s3C4zjuDgPlND7jH-KTpIhMVQwxASFIhuLDwb-o9I69FFKIISfBCpyCG1RNrnIbWdgs5ZC_hJygjIKnZKaizPiD8FZ01jeSZ-gUN50nejPpwh13Rt0Og9Ltf-h1Lz5O8Nj5DAN0NWh3ejlN7esWwHqK0FVOu2jjLuYVJhZjPmcOjRsYOZLxe0I0ASpuDk8ubBFNxHJFBkZ19shRmRxfFNmxoKlABlh1lqwteetWc9jdZiigIrVZrKL5-g2kpe4BQylILGOwndMjxQS6NCbvn4rOOZoQPO-AUkO50douw06NCqPckHGSeX7MJax-OYp9068raKU68ZLUfNZv9kLllfcVpLWbbKBHgwHjNYRr7vND62O39_xONuHCKy7gKOe4KG14iw2oVBKqSL_vpSyPC1XIyxmXkzY0KmCH1AxWAQpVkdUWPmabcRt7k1LsMLYLC8emRMxha7mSaetQfqjwSwwJL6oHwGjNOLEA5gbHMdJwVw6qB3ysL6TcM5CZlfGGSYPDVz8xPueofUlC5v_I-qx_CnkFIOOJtzPVClscXKvaLEmfO6MxbmHF7WtwNcSl7Lzb605-fwaN37OxK-8vF5nEmXX0xPWsKI71_XtC09KGq41KAjavTxWIJ1Cz0twUjPCiiYU0d3yRduxgqgIClFdE6I0VUZm5YPOCWxHKZaAXMOaq-DYZGFxlBJKyfDKqvtxRfp16NGEIEK_veL5-TuGr77gT3xAjsr-SoCI5RKvhy2q23Jg33-Tzn9ReBOrmprr5KyC77_w3wIebh_8C">
+    <meta property="og:title" content="OpenTelemetry Concepts Deep Dive">
+    <meta property="og:description" content="Test your knowledge on OpenTelemetry Concepts Deep Dive. 2 rounds, 32 words.">
+    <meta property="og:image" content="https://find4.org/preview-image.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="OpenTelemetry Concepts Deep Dive">
+    <meta name="twitter:description" content="Intermediate-level challenge covering OpenTelemetry Concepts Deep Dive.">
+    <meta name="twitter:image" content="https://find4.org/preview-image.png">
+
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "EducationalOccupationalCredential",
+  "name": "OpenTelemetry Concepts Deep Dive",
+  "educationalLevel": "Intermediate",
+  "abstract": "Covers concepts including: Resource Entity Hierarchy, Instrumentation Library Techniques, Span Link Patterns, Instrument Invocation Modes."
+}
+    </script>
+
+    <style>
+        body{font-family:system-ui,-apple-system,sans-serif;max-width:720px;margin:2rem auto;padding:0 1rem;background:#f5f5f3;color:#111;}
+        .f4-game{background:#fff;border:0.5px solid rgba(0,0,0,0.15);border-radius:12px;padding:1rem 1.25rem;margin-bottom:48px;box-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1);}
+        .f4-game-header{display:flex;align-items:center;gap:10px;margin-bottom:1rem;flex-wrap:wrap;}
+        .f4-game-icon{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:20px;}
+        .f4-game-title-block{flex:1;min-width:0;}
+        .f4-game-title{font-size:15px;font-weight:500;margin:0;color:#111;}
+        .f4-game-meta{font-size:12px;color:#666;margin:0;}
+        .play-btn{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;background:#0f6e56;color:#fff;border-radius:10px;text-decoration:none;font-size:13px;font-weight:500;margin-left:auto;transition:background 0.2s;}
+        .play-btn:hover{background:#085041;}
+        .f4-groups{display:flex;flex-direction:column;gap:5px;}
+        .f4-round{font-size:11px;font-weight:500;color:#888;padding:8px 0 3px;text-transform:uppercase;letter-spacing:0.05em;}
+        .f4-group{display:grid;grid-template-columns:13px 1fr 90px 2fr;align-items:start;gap:8px;padding:8px 10px;border-radius:8px;border:0.5px solid #e0e0de;background:#fafaf9;}
+        .f4-dot{width:11px;height:11px;border-radius:50%;flex-shrink:0;margin-top:3px;}
+        .f4-cat{font-size:13px;font-weight:500;line-height:1.3;}
+        .f4-skill{font-size:11px;padding:2px 7px;border-radius:20px;text-align:center;white-space:nowrap;}
+        .f4-words{font-size:11px;color:#666;line-height:1.5;word-break:break-word;}
+        .sk-b{background:#e1f5ee;color:#085041;}.sk-i{background:#e6f1fb;color:#0c447c;}.sk-a{background:#faeeda;color:#633806;}.sk-e{background:#fcebeb;color:#791f1f;}
+        .dot-red{background:#e24b4a;}.dot-green{background:#639922;}.dot-blue{background:#378add;}.dot-yellow{background:#ba7517;}
+        .dot-purple{background:#7f77dd;}.dot-teal{background:#1d9e75;}.dot-orange{background:#d85a30;}.dot-indigo{background:#534ab7;}
+        @media(prefers-color-scheme:dark){
+          body{background:#1a1a18;color:#e8e6e1;}
+          .f4-game{background:#2c2c2a;border-color:rgba(255,255,255,0.1);box-shadow:0 4px 6px -1px rgb(0 0 0 / 0.4);}
+          .f4-game-title{color:#e8e6e1;}
+          .f4-game-meta{color:#888780;}
+          .f4-round{color:#888780;}
+          .f4-group{background:#222220;border-color:#3a3a38;}
+          .f4-cat{color:#e8e6e1;}
+          .f4-words{color:#888780;}
+          .sk-b{background:#04342c;color:#9fe1cb;}.sk-i{background:#042c53;color:#b5d4f4;}.sk-a{background:#412402;color:#fac775;}.sk-e{background:#501313;color:#f7c1c1;}
+        }
+    </style>
+</head>
+<body>
+<div class="f4-game f4-capture">
+  <div class="f4-game-header">
+    <div class="f4-game-icon" style="background:#eeedfe;" aria-hidden="true">&#x1F9E9;</div>
+    <div class="f4-game-title-block">
+      <h1 class="f4-game-title">OpenTelemetry Concepts Deep Dive</h1>
+      <p class="f4-game-meta">2 rounds &middot; 32 words &middot; Intermediate level</p>
+    </div>
+    <a class="play-btn" href="https://find4.org/#game=zZhtc-I4FoX_ioovm9RCIO8v-4kAnaZDgAXSU9O7qZSwL0YdY3klmTTTlf--58o2IenOVmaSrtqqqR5HlnSvpUfnHvG9siAnQ-lk5ex7JaKEjHQU3kpXOavsNfaOao3TWuN4sts4a_B_XyrVitWZCQjv586l9qxe1ykljmLCVGa1o3Q91IGt25Twr8aLul6SWSq6r_PoLIrIcoxELniWJ6NrZdedr1Yn6L7QoZqpn2V0cnZwctbY3dlvHJweH67zulXhX07NUYqxM5XIWP1Bt-ulqVZUeGsoUhaz-IVC6reWHILZytm_KtPTvcP9k8pNtRIZnaWbr47CPaJ9THGwf0Dy6LGPcrQoOzUa4d5JyJ1O948PGniYBschceTdk-nR6SkeZvJod3rCffYO5QHPGBzK8JhHNfYOdsOwcvPAieILFpf_bJ9_Pf38x-hycnH07RN_Wxor5JTMNOdvdMxL7xvXL19Y4dOd4-PDxvH-3z0A6J1Kg0W9fSlS8XqmfIi6zlyauTqvmK3_7712c_JEDNBrUvYSLZ0ElDor2kSpaKslccZxFv3ATlD0rIXoWQu55wOWpNwsXunvfybIei95JIbea5Nv16gzHlyPWh30afWux5POCE_95lVnPGz61uGgzRsd4CxFmpGpjCjHU3QSp9xKfFQ4aSaYr3gfdawN-kSGiNchM_FfRTgkGxiVOoUFPas0xTps_mJKVmABBOVJpEaHWaCSSKwDiH9ne43dA6ESIcVlNiWTkMMoSpbK6GSBkZhBWTEvP0BsBXGGo2N46O7pnuBzbVOJoEVDqsNtgSGBTF1mKBTSClMmJp1DXhnH0IgZx4IWykEfhFURDqLd4e2-U3F8G9OSeGW6WA-zoFBhefFShqHiD5bxbT6n36NXL1-ZSd2Gd3XetT9NSHGSMWR9jjdlAO2FCDxUNyDq9seT0fVVpz9pTrqDPgb9NmoOh93-BWPV7PXOm63LMZ6vuu12r_Nbc9R5xlQ3gR5lvCWSv1_01BRbshITCuaJ-k-GhXiEaxpn9J5sXSGITJRdWJFZ7NZ0JQZYLfHzpBSDpwW2SuipxZxyqmJGEI3AyYQ1yAb-DHRI4l65OWRDeO1fMZ7KlVzeG5mmvokhmIEyWxU2m3q6PckanMXxVAZ3eKONkIHjdjC3UGEY0z306UemmuFSYoPDt_MUxdpabMNbWVqXglewNG41J7kKXTQnH_3Dh8HoEv_7NOj2n2EzTiVvS3Inhjh8OOCbmGgjk-hdQWlz1fQnPBT0jYLMY5EWocX9nAzl6HBOVmzBgaANWEjuxsWkFsxVHEIzYs-UnavUbgu8ytEr0LCBnxOlxo-XSShm2tzVv2qImUqWOl6SWGSxU2mMkSnSIrkQkCqkMSPoCWMC2UkivJcR5BhTcSN3-RGZzreUjHs7MM6A4rpM1VuJWXuG1xDze7_1cTToD65ZYppP_yzVB4-D83Fn9Ll53ntZfHDklzrIT_sVzu8mTsafqHdjyWOi1pGtZ4CU32-7SoI5SpTOwBBLAMhQSawSYm2CasSqSNKLjIS-kLSoR3lNUwva9nKxMU-91CrwsDVuX3qK7iBlUuRukLialXLD9SukBbjb_tU1i18o_PEO0Kz95QvQ3FQ3nc9g0huyqjQ7F15lhqPBVQeK47H50h1e_qA2j-ngvGjjxAdtFtJtQpJmBifyPTk5x3ZQElovAvcKkMzyqN79eIpaGoQEDjseQGcMBYT1ETOjF0wB5bmimBTiwh_OHobH_s3C4zjuDgPlND7jH-KTpIhMVQwxASFIhuLDwb-o9I69FFKIISfBCpyCG1RNrnIbWdgs5ZC_hJygjIKnZKaizPiD8FZ01jeSZ-gUN50nejPpwh13Rt0Og9Ltf-h1Lz5O8Nj5DAN0NWh3ejlN7esWwHqK0FVOu2jjLuYVJhZjPmcOjRsYOZLxe0I0ASpuDk8ubBFNxHJFBkZ19shRmRxfFNmxoKlABlh1lqwteetWc9jdZiigIrVZrKL5-g2kpe4BQylILGOwndMjxQS6NCbvn4rOOZoQPO-AUkO50douw06NCqPckHGSeX7MJax-OYp9068raKU68ZLUfNZv9kLllfcVpLWbbKBHgwHjNYRr7vND62O39_xONuHCKy7gKOe4KG14iw2oVBKqSL_vpSyPC1XIyxmXkzY0KmCH1AxWAQpVkdUWPmabcRt7k1LsMLYLC8emRMxha7mSaetQfqjwSwwJL6oHwGjNOLEA5gbHMdJwVw6qB3ysL6TcM5CZlfGGSYPDVz8xPueofUlC5v_I-qx_CnkFIOOJtzPVClscXKvaLEmfO6MxbmHF7WtwNcSl7Lzb605-fwaN37OxK-8vF5nEmXX0xPWsKI71_XtC09KGq41KAjavTxWIJ1Cz0twUjPCiiYU0d3yRduxgqgIClFdE6I0VUZm5YPOCWxHKZaAXMOaq-DYZGFxlBJKyfDKqvtxRfp16NGEIEK_veL5-TuGr77gT3xAjsr-SoCI5RKvhy2q23Jg33-Tzn9ReBOrmprr5KyC77_w3wIebh_8C" target="_blank" rel="noopener"><span>&#9654;</span> Play on find4.org</a>
+  </div>
+
+  <div class="f4-groups">
+    <h2 class="f4-round">Round 1</h2>
+    <div class="f4-group">
+        <div class="f4-dot dot-green" role="img" aria-label="Intermediate Level Category"></div>
+        <div class="f4-cat">Resource Entity Hierarchy</div>
+        <span class="f4-skill sk-i">Intermediate</span>
+        <div class="f4-words">RESOURCE &middot; CLUSTER &middot; NAMESPACE &middot; POD</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-blue" role="img" aria-label="Advanced Level Category"></div>
+        <div class="f4-cat">Instrumentation Library Techniques</div>
+        <span class="f4-skill sk-a">Advanced</span>
+        <div class="f4-words">INSTRUMENTATION &middot; WRAPPING &middot; CALLBACKS &middot; MIDDLEWARE</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-orange" role="img" aria-label="Expert Level Category"></div>
+        <div class="f4-cat">Span Link Patterns</div>
+        <span class="f4-skill sk-e">Expert</span>
+        <div class="f4-words">SCATTER &middot; GATHER &middot; FORK &middot; JOIN</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-red" role="img" aria-label="Intermediate Level Category"></div>
+        <div class="f4-cat">Instrument Invocation Modes</div>
+        <span class="f4-skill sk-i">Intermediate</span>
+        <div class="f4-words">SYNCHRONOUS &middot; ASYNCHRONOUS &middot; CALLBACK &middot; OBSERVABLE</div>
+    </div>
+    <h2 class="f4-round">Round 2</h2>
+    <div class="f4-group">
+        <div class="f4-dot dot-purple" role="img" aria-label="Intermediate Level Category"></div>
+        <div class="f4-cat">Telemetry Export Formats</div>
+        <span class="f4-skill sk-i">Intermediate</span>
+        <div class="f4-words">OTLP &middot; JAEGER &middot; PROMETHEUS &middot; ZIPKIN</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-teal" role="img" aria-label="Expert Level Category"></div>
+        <div class="f4-cat">Metrics Data Model Semantics</div>
+        <span class="f4-skill sk-e">Expert</span>
+        <div class="f4-words">TIMESERIES &middot; INFLIGHT &middot; EVENTMODEL &middot; PRODUCER</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-indigo" role="img" aria-label="Beginner Level Category"></div>
+        <div class="f4-cat">Trace Graph Relationships</div>
+        <span class="f4-skill sk-b">Beginner</span>
+        <div class="f4-words">DAG &middot; ROOT &middot; PARENT &middot; CHILD</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-yellow" role="img" aria-label="Beginner Level Category"></div>
+        <div class="f4-cat">OTel Stability Guarantees</div>
+        <span class="f4-skill sk-b">Beginner</span>
+        <div class="f4-words">STABLE &middot; BACKWARDS &middot; VERSIONING &middot; COMPATIBILITY</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

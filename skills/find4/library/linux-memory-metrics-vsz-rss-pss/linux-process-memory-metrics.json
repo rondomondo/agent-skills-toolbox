@@ -1,0 +1,205 @@
+{
+  "metadata": {
+    "generated_at": "2026-09-07T00:00:00Z",
+    "source": "https://kernel-internals.org/mm/virtual-physical-resident/",
+    "suggested_name": "linux-memory-metrics-vsz-rss-pss.json",
+    "modified_at": "2026-09-07T13:16:23.199529",
+    "source_id": "https://kernel-internals.org/mm/virtual-physical-resident/",
+    "step": "finalize_metadata",
+    "id_registry": {
+      "game_set_ids": [
+        "9da791"
+      ],
+      "group_set_ids": [
+        "9818c4",
+        "91431b"
+      ],
+      "group_item_ids": [
+        "e0eeb6",
+        "8e0f22",
+        "2599b9",
+        "0e979a",
+        "2d00f9",
+        "91f9f1",
+        "5bca10",
+        "5b063d"
+      ]
+    },
+    "id": "o1oCs-3bZdXdaIl3",
+    "split_info": {
+      "role": "split",
+      "split_at": "2026-09-07T13:16:32.089997+00:00",
+      "parent_id": "o1oCs-3bZdXdaIl3",
+      "parent_file": "/home/claude/output/games/linux-memory-metrics-vsz-rss-pss.json",
+      "theme": "Linux Process Memory Metrics",
+      "slug": "linux-process-memory-metrics"
+    }
+  },
+  "game_sets": [
+    {
+      "theme": "Linux Process Memory Metrics",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "VSZ",
+              "VIRT",
+              "MMAP",
+              "OVERCOMMIT"
+            ],
+            "category": "Virtual Memory Concepts",
+            "color": "blue",
+            "url": "https://kernel-internals.org/mm/virtual-physical-resident/",
+            "description": "Terms related to virtual address space — what a process has mapped, not what it uses in RAM",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://man7.org/linux/man-pages/man5/proc.5.html"
+            ],
+            "theme": "Linux Process Memory Metrics",
+            "group_item_id": "e0eeb6",
+            "group_set_id": "9818c4"
+          },
+          {
+            "words": [
+              "RSS",
+              "RES",
+              "RESIDENT",
+              "DEMAND-PAGING"
+            ],
+            "category": "Physical RAM Occupancy",
+            "color": "green",
+            "url": "https://kernel-internals.org/mm/virtual-physical-resident/",
+            "description": "Terms describing which virtual pages are currently backed by physical RAM",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://man7.org/linux/man-pages/man1/ps.1.html"
+            ],
+            "theme": "Linux Process Memory Metrics",
+            "group_item_id": "8e0f22",
+            "group_set_id": "9818c4"
+          },
+          {
+            "words": [
+              "PSS",
+              "USS",
+              "SMAPS",
+              "SMAPS_ROLLUP"
+            ],
+            "category": "Accurate Accounting Tools",
+            "color": "orange",
+            "url": "https://kernel-internals.org/mm/virtual-physical-resident/",
+            "description": "Metrics and /proc files that give fair, shared-aware memory accounting beyond simple RSS",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://lkml.iu.edu/hypermail/linux/kernel/0710.3/1565.html"
+            ],
+            "theme": "Linux Process Memory Metrics",
+            "group_item_id": "2599b9",
+            "group_set_id": "9818c4"
+          },
+          {
+            "words": [
+              "KSM",
+              "THP",
+              "CGROUP",
+              "SWAP"
+            ],
+            "category": "Modern Memory Complexity",
+            "color": "purple",
+            "url": "https://kernel-internals.org/mm/virtual-physical-resident/",
+            "description": "Kernel features that further complicate simple memory accounting: page merging, huge pages, limits, and swap",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://kernel-internals.org/mm/ksm/",
+              "https://kernel-internals.org/mm/thp/"
+            ],
+            "theme": "Linux Process Memory Metrics",
+            "group_item_id": "0e979a",
+            "group_set_id": "9818c4"
+          }
+        ],
+        [
+          {
+            "words": [
+              "PRIVATE_CLEAN",
+              "PRIVATE_DIRTY",
+              "SHARED_CLEAN",
+              "SHARED_DIRTY"
+            ],
+            "category": "smaps Page Categories",
+            "color": "teal",
+            "url": "https://kernel-internals.org/mm/virtual-physical-resident/",
+            "description": "The four page-state fields in /proc/pid/smaps used to compute USS and PSS",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://man7.org/linux/man-pages/man5/proc.5.html"
+            ],
+            "theme": "Linux Process Memory Metrics",
+            "group_item_id": "2d00f9",
+            "group_set_id": "91431b"
+          },
+          {
+            "words": [
+              "SLAB",
+              "PAGE-CACHE",
+              "BUFF/CACHE",
+              "AVAILABLE"
+            ],
+            "category": "Physical Memory Consumers",
+            "color": "yellow",
+            "url": "https://kernel-internals.org/mm/virtual-physical-resident/",
+            "description": "The main categories shown in `free` output that consume physical RAM outside process RSS",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://kernel-internals.org/mm/slab/",
+              "https://kernel-internals.org/mm/page-cache/"
+            ],
+            "theme": "Linux Process Memory Metrics",
+            "group_item_id": "91f9f1",
+            "group_set_id": "91431b"
+          },
+          {
+            "words": [
+              "COW",
+              "LIBC",
+              "MAP_NORESERVE",
+              "PMAP"
+            ],
+            "category": "Shared Library & Mapping Mechanics",
+            "color": "red",
+            "url": "https://kernel-internals.org/mm/virtual-physical-resident/",
+            "description": "Mechanisms and tools central to understanding how shared pages work and how to inspect mappings",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://kernel-internals.org/mm/cow/",
+              "https://man7.org/linux/man-pages/man1/pmap.1.html"
+            ],
+            "theme": "Linux Process Memory Metrics",
+            "group_item_id": "5bca10",
+            "group_set_id": "91431b"
+          },
+          {
+            "words": [
+              "2.6.14",
+              "2.6.25",
+              "4.14",
+              "MATT-MACKALL"
+            ],
+            "category": "PSS History Milestones",
+            "color": "indigo",
+            "url": "https://kernel-internals.org/mm/virtual-physical-resident/",
+            "description": "Kernel versions and the key contributor behind the introduction of smaps and PSS accounting",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://lwn.net/Articles/230975/"
+            ],
+            "theme": "Linux Process Memory Metrics",
+            "group_item_id": "5b063d",
+            "group_set_id": "91431b"
+          }
+        ]
+      ],
+      "game_set_id": "9da791"
+    }
+  ]
+}

@@ -1,0 +1,203 @@
+{
+  "metadata": {
+    "generated_at": "2026-09-07T00:00:00Z",
+    "source": "https://kernel-internals.org/mm/virtual-physical-resident/",
+    "suggested_name": "linux-memory-metrics-vsz-rss-pss.json",
+    "modified_at": "2026-09-07T13:16:23.199529",
+    "source_id": "https://kernel-internals.org/mm/virtual-physical-resident/",
+    "step": "finalize_metadata",
+    "id_registry": {
+      "game_set_ids": [
+        "b2f373"
+      ],
+      "group_set_ids": [
+        "80479e",
+        "6a88b1"
+      ],
+      "group_item_ids": [
+        "83a412",
+        "86dd9d",
+        "ebef49",
+        "ef12ee",
+        "ea0be7",
+        "15615c",
+        "96de09",
+        "a41ac9"
+      ]
+    },
+    "id": "o1oCs-3bZdXdaIl3",
+    "split_info": {
+      "role": "split",
+      "split_at": "2026-09-07T13:16:32.089997+00:00",
+      "parent_id": "o1oCs-3bZdXdaIl3",
+      "parent_file": "/home/claude/output/games/linux-memory-metrics-vsz-rss-pss.json",
+      "theme": "Reading Linux Memory Statistics",
+      "slug": "reading-linux-memory-statistics"
+    }
+  },
+  "game_sets": [
+    {
+      "theme": "Reading Linux Memory Statistics",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "PS",
+              "TOP",
+              "HTOP",
+              "SMEM"
+            ],
+            "category": "Process Memory Tools",
+            "color": "green",
+            "url": "https://kernel-internals.org/mm/virtual-physical-resident/",
+            "description": "CLI tools used to observe VSZ, RSS, and related per-process memory fields",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://man7.org/linux/man-pages/man1/ps.1.html"
+            ],
+            "theme": "Reading Linux Memory Statistics",
+            "group_item_id": "83a412",
+            "group_set_id": "80479e"
+          },
+          {
+            "words": [
+              "VMRSS",
+              "RSSANON",
+              "RSSFILE",
+              "RSSSHMEM"
+            ],
+            "category": "proc/pid/status RSS Fields",
+            "color": "blue",
+            "url": "https://kernel-internals.org/mm/virtual-physical-resident/",
+            "description": "The four RSS breakdown fields readable from /proc/pid/status without parsing full smaps",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://man7.org/linux/man-pages/man5/proc.5.html"
+            ],
+            "theme": "Reading Linux Memory Statistics",
+            "group_item_id": "86dd9d",
+            "group_set_id": "80479e"
+          },
+          {
+            "words": [
+              "PSS_ANON",
+              "PSS_FILE",
+              "PSS_SHMEM",
+              "SMAPS_ROLLUP"
+            ],
+            "category": "PSS Breakdown in Modern Kernels",
+            "color": "orange",
+            "url": "https://kernel-internals.org/mm/virtual-physical-resident/",
+            "description": "The three PSS sub-categories available in /proc/pid/smaps_rollup on kernel 4.14+",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://lore.kernel.org/lkml/20170806225154.18820-1-dancol@google.com/"
+            ],
+            "theme": "Reading Linux Memory Statistics",
+            "group_item_id": "ebef49",
+            "group_set_id": "80479e"
+          },
+          {
+            "words": [
+              "OVERCOMMIT",
+              "MAP_ANONYMOUS",
+              "XMXHEAP",
+              "SPARSE"
+            ],
+            "category": "Why VSZ Is Misleadingly Large",
+            "color": "red",
+            "url": "https://kernel-internals.org/mm/virtual-physical-resident/",
+            "description": "Reasons a process VSZ can far exceed physical RAM: JVM heap reservations, sparse mmap, and overcommit policy",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://kernel-internals.org/mm/overcommit/"
+            ],
+            "theme": "Reading Linux Memory Statistics",
+            "group_item_id": "ef12ee",
+            "group_set_id": "80479e"
+          }
+        ],
+        [
+          {
+            "words": [
+              "FREE",
+              "MEMINFO",
+              "WATCH",
+              "BUFF"
+            ],
+            "category": "System-Wide Memory Commands",
+            "color": "teal",
+            "url": "https://kernel-internals.org/mm/virtual-physical-resident/",
+            "description": "Commands and files for watching total RAM, cache, and available memory at the system level",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://kernel-internals.org/mm/understanding-proc-meminfo/"
+            ],
+            "theme": "Reading Linux Memory Statistics",
+            "group_item_id": "ea0be7",
+            "group_set_id": "6a88b1"
+          },
+          {
+            "words": [
+              "PROPORTIONAL",
+              "DOUBLE-COUNTING",
+              "SHARERS",
+              "FAIR"
+            ],
+            "category": "The PSS Fairness Model",
+            "color": "purple",
+            "url": "https://kernel-internals.org/mm/virtual-physical-resident/",
+            "description": "Core concepts of how PSS divides shared page cost equally among all processes using a mapping",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://lwn.net/Articles/256333/"
+            ],
+            "theme": "Reading Linux Memory Statistics",
+            "group_item_id": "15615c",
+            "group_set_id": "6a88b1"
+          },
+          {
+            "words": [
+              "KILL-IMPACT",
+              "CONTAINER-DENSITY",
+              "UNIQUE",
+              "PRIVATE"
+            ],
+            "category": "USS Use Cases",
+            "color": "yellow",
+            "url": "https://kernel-internals.org/mm/virtual-physical-resident/",
+            "description": "Scenarios where USS (Unique Set Size) gives a more accurate answer than RSS or PSS",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://man7.org/linux/man-pages/man5/proc.5.html"
+            ],
+            "theme": "Reading Linux Memory Statistics",
+            "group_item_id": "96de09",
+            "group_set_id": "6a88b1"
+          },
+          {
+            "words": [
+              "DRAM",
+              "PMEM",
+              "CXL",
+              "TIERING"
+            ],
+            "category": "Modern Memory Tiering",
+            "color": "indigo",
+            "url": "https://kernel-internals.org/mm/virtual-physical-resident/",
+            "description": "Emerging hardware concepts where physical memory spans multiple speed tiers, complicating classical RSS/PSS",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://kernel-internals.org/mm/memory-tiering/",
+              "https://kernel-internals.org/mm/cxl-memory-tiering/"
+            ],
+            "theme": "Reading Linux Memory Statistics",
+            "group_item_id": "a41ac9",
+            "group_set_id": "6a88b1"
+          }
+        ]
+      ],
+      "game_set_id": "b2f373"
+    }
+  ]
+}

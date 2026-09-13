@@ -1,0 +1,202 @@
+{
+  "metadata": {
+    "generated_at": "2026-09-07T12:00:00Z",
+    "source": "https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction",
+    "suggested_name": "system-design-interview-essentials.json",
+    "modified_at": "2026-09-07T18:33:21.080049",
+    "source_id": "https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction",
+    "step": "finalize_metadata",
+    "id_registry": {
+      "game_set_ids": [
+        "12a0c7"
+      ],
+      "group_set_ids": [
+        "dfac3e",
+        "591163"
+      ],
+      "group_item_ids": [
+        "413e7c",
+        "ef63c5",
+        "d45f8a",
+        "580067",
+        "9357a4",
+        "fe69d5",
+        "c653ed",
+        "930dc0"
+      ]
+    },
+    "id": "C1LTKkiwfQM7Du64",
+    "split_info": {
+      "role": "split",
+      "split_at": "2026-09-07T18:33:32.621395+00:00",
+      "parent_id": "C1LTKkiwfQM7Du64",
+      "parent_file": "/home/claude/output/games/system-design-interview-essentials.json",
+      "theme": "System Design Interview Fundamentals",
+      "slug": "system-design-interview-fundamentals"
+    }
+  },
+  "game_sets": [
+    {
+      "theme": "System Design Interview Fundamentals",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "NAVIGATION",
+              "DESIGN",
+              "EXCELLENCE",
+              "COLLABORATION"
+            ],
+            "category": "Interviewer Rubric Competencies",
+            "color": "blue",
+            "url": "https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction",
+            "description": "The four core competency areas assessed in every system design interview, regardless of company or level",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://www.hellointerview.com/learn/system-design/in-a-hurry/delivery-framework"
+            ],
+            "theme": "System Design Interview Fundamentals",
+            "group_item_id": "413e7c",
+            "group_set_id": "dfac3e"
+          },
+          {
+            "words": [
+              "UBER",
+              "DROPBOX",
+              "TICKETMASTER",
+              "BITLY"
+            ],
+            "category": "Classic System Design Interview Questions",
+            "color": "green",
+            "url": "https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction",
+            "description": "Well-known product design interview questions that represent the infrastructure design category",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction"
+            ],
+            "theme": "System Design Interview Fundamentals",
+            "group_item_id": "ef63c5",
+            "group_set_id": "dfac3e"
+          },
+          {
+            "words": [
+              "REDIS",
+              "KAFKA",
+              "CASSANDRA",
+              "ELASTICSEARCH"
+            ],
+            "category": "Key Technologies in System Design",
+            "color": "orange",
+            "url": "https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction",
+            "description": "Modern infrastructure technologies that engineers are expected to know and apply in senior-level design interviews",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://www.hellointerview.com/learn/system-design/in-a-hurry/key-technologies"
+            ],
+            "theme": "System Design Interview Fundamentals",
+            "group_item_id": "d45f8a",
+            "group_set_id": "dfac3e"
+          },
+          {
+            "words": [
+              "CACHING",
+              "SHARDING",
+              "INDEXING",
+              "HASHING"
+            ],
+            "category": "Core System Design Concepts",
+            "color": "purple",
+            "url": "https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction",
+            "description": "Foundational distributed systems concepts that underpin every production system design at scale",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://www.hellointerview.com/learn/system-design/in-a-hurry/core-concepts"
+            ],
+            "theme": "System Design Interview Fundamentals",
+            "group_item_id": "580067",
+            "group_set_id": "dfac3e"
+          }
+        ],
+        [
+          {
+            "words": [
+              "PRODUCT",
+              "INFRASTRUCTURE",
+              "LOW-LEVEL",
+              "ML"
+            ],
+            "category": "Types of System Design Interviews",
+            "color": "teal",
+            "url": "https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction",
+            "description": "The four main interview formats engineers encounter — product/infra being most common, with OOD and ML as specialisations",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction"
+            ],
+            "theme": "System Design Interview Fundamentals",
+            "group_item_id": "9357a4",
+            "group_set_id": "591163"
+          },
+          {
+            "words": [
+              "TRADEOFFS",
+              "REQUIREMENTS",
+              "SCALING",
+              "STRUCTURE"
+            ],
+            "category": "What Interviewers Assess in Solution Design",
+            "color": "red",
+            "url": "https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction",
+            "description": "Key dimensions interviewers probe when evaluating solution design — candidates who ignore any of these typically fail",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.hellointerview.com/learn/system-design/in-a-hurry/delivery-framework"
+            ],
+            "theme": "System Design Interview Fundamentals",
+            "group_item_id": "fe69d5",
+            "group_set_id": "591163"
+          },
+          {
+            "words": [
+              "CONTENTION",
+              "BLOBS",
+              "READS",
+              "WRITES"
+            ],
+            "category": "Common Scaling Patterns",
+            "color": "yellow",
+            "url": "https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction",
+            "description": "The four canonical problem categories that appear in senior system design: concurrency, storage, read scaling, and write scaling",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://www.hellointerview.com/learn/system-design/in-a-hurry/common-patterns"
+            ],
+            "theme": "System Design Interview Fundamentals",
+            "group_item_id": "c653ed",
+            "group_set_id": "591163"
+          },
+          {
+            "words": [
+              "STAFF",
+              "SENIOR",
+              "MID-LEVEL",
+              "ENTRY"
+            ],
+            "category": "Engineering Levels in Design Interviews",
+            "color": "indigo",
+            "url": "https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction",
+            "description": "Interview expectations differ significantly by seniority — staff+ requires handling ambiguity and cross-cutting concerns that lower levels do not",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://www.hellointerview.com/blog/staff-level-system-design"
+            ],
+            "theme": "System Design Interview Fundamentals",
+            "group_item_id": "930dc0",
+            "group_set_id": "591163"
+          }
+        ]
+      ],
+      "game_set_id": "12a0c7"
+    }
+  ]
+}

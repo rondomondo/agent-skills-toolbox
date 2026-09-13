@@ -1,0 +1,277 @@
+[
+  {
+    "game_set_id": "28f7dd",
+    "theme": "Etsy: The Human Marketplace",
+    "short_path": "games/etsy-the-human-marketplace.json",
+    "short_link": "ff-dad8ec9c",
+    "games_file": "etsy-the-human-marketplace.json",
+    "config_file": "library/etsy-marketplace-concepts/etsy-the-human-marketplace.json",
+    "last_modified": "2026-09-07T21:20:41.222821",
+    "content_hash": "88eb8088efc900b6457ccfd5817d207bced7b2ab0978a02ffc7eb5b91793627c",
+    "total_words": 32,
+    "categories": [
+      "Etsy Brand Values",
+      "Etsy Buyer Features",
+      "Etsy Corporate Sections",
+      "Etsy Ecosystem Roles",
+      "Etsy Guiding Principles",
+      "Etsy Item Types",
+      "Etsy Seller Support",
+      "Etsy Social Channels"
+    ],
+    "skill_levels": [
+      "Advanced",
+      "Beginner",
+      "Expert",
+      "Intermediate"
+    ],
+    "colors": [
+      "blue",
+      "green",
+      "indigo",
+      "orange",
+      "purple",
+      "red",
+      "teal",
+      "yellow"
+    ],
+    "group_sets_count": 2,
+    "total_groups": 8,
+    "versions_found": 1,
+    "is_latest": true,
+    "metadata": {
+      "generated_at": "2026-09-07T00:00:00Z",
+      "source": "https://www.etsy.com/ie/about",
+      "suggested_name": "etsy-marketplace-concepts.json"
+    }
+  },
+  {
+    "game_set_id": "24e8d0",
+    "theme": "FIFA World Cup Records and Legends",
+    "short_path": "games/fifa-world-cup-records-and-legends.json",
+    "short_link": "ff-6232afa3",
+    "games_file": "fifa-world-cup-records-and-legends.json",
+    "config_file": "library/world-cup-facts/fifa-world-cup-records-and-legends.json",
+    "last_modified": "2026-09-07T20:22:03.292810",
+    "content_hash": "00ebc72cbf8b96cdff73c9d897fa104d568f1cb0eaeeb8a5ed0a09e60d4d5501",
+    "total_words": 32,
+    "categories": [
+      "All-Time World Cup Top Scorers",
+      "England's 1966 World Cup Heroes",
+      "Famous World Cup Controversies",
+      "Golden Ball Winners",
+      "Historic Host Nations",
+      "Legendary World Cup Goalkeepers",
+      "Multi-Time World Cup Winners",
+      "Obscure World Cup Record Holders"
+    ],
+    "skill_levels": [
+      "Advanced",
+      "Beginner",
+      "Expert",
+      "Intermediate"
+    ],
+    "colors": [
+      "blue",
+      "green",
+      "indigo",
+      "orange",
+      "purple",
+      "red",
+      "teal",
+      "yellow"
+    ],
+    "group_sets_count": 2,
+    "total_groups": 8,
+    "versions_found": 1,
+    "is_latest": true,
+    "metadata": {
+      "generated_at": "2026-09-07T10:00:00Z",
+      "source": "stdin",
+      "suggested_name": "world-cup-facts.json"
+    }
+  },
+  {
+    "game_set_id": "788fe7",
+    "theme": "LLM Evaluation: Types and Methods",
+    "short_path": "games/llm-evaluation-types-and-methods.json",
+    "short_link": "ff-5f4f034e",
+    "games_file": "llm-evaluation-types-and-methods.json",
+    "config_file": "library/llm-evaluation-types-and-evals/llm-evaluation-types-and-methods.json",
+    "last_modified": "2026-09-07T18:34:43.481617",
+    "content_hash": "7d8604a84e19c9fc8e241774f033c631883405c43a1815d91351c2d4e3f318a8",
+    "total_words": 32,
+    "categories": [
+      "Agent Evaluation Signals",
+      "Eval Frameworks & Tools",
+      "Eval Quality Assurance",
+      "Eval Testing Strategies",
+      "Production Eval Signals",
+      "Prompting Eval Techniques",
+      "RAG-Specific Evals",
+      "Scoring Method Types"
+    ],
+    "skill_levels": [
+      "Advanced",
+      "Beginner",
+      "Expert",
+      "Intermediate"
+    ],
+    "colors": [
+      "blue",
+      "green",
+      "indigo",
+      "orange",
+      "purple",
+      "red",
+      "teal",
+      "yellow"
+    ],
+    "group_sets_count": 2,
+    "total_groups": 8,
+    "versions_found": 1,
+    "is_latest": true,
+    "metadata": {
+      "generated_at": "2026-09-07T00:00:00Z",
+      "source": "stdin",
+      "suggested_name": "llm-evaluation-types-and-evals.json"
+    }
+  },
+  {
+    "game_set_id": "9da791",
+    "theme": "Linux Process Memory Metrics",
+    "short_path": "games/linux-process-memory-metrics.json",
+    "short_link": "ff-b50c3ef5",
+    "games_file": "linux-process-memory-metrics.json",
+    "config_file": "library/linux-memory-metrics-vsz-rss-pss/linux-process-memory-metrics.json",
+    "last_modified": "2026-09-07T18:34:43.480817",
+    "content_hash": "cedc93290a0ab8e73c5667a1c7359eb168bf2885b50173a6f563f80bdcff7c1f",
+    "total_words": 32,
+    "categories": [
+      "Accurate Accounting Tools",
+      "Modern Memory Complexity",
+      "PSS History Milestones",
+      "Physical Memory Consumers",
+      "Physical RAM Occupancy",
+      "Shared Library & Mapping Mechanics",
+      "Virtual Memory Concepts",
+      "smaps Page Categories"
+    ],
+    "skill_levels": [
+      "Advanced",
+      "Beginner",
+      "Expert",
+      "Intermediate"
+    ],
+    "colors": [
+      "blue",
+      "green",
+      "indigo",
+      "orange",
+      "purple",
+      "red",
+      "teal",
+      "yellow"
+    ],
+    "group_sets_count": 2,
+    "total_groups": 8,
+    "versions_found": 1,
+    "is_latest": true,
+    "metadata": {
+      "generated_at": "2026-09-07T00:00:00Z",
+      "source": "https://kernel-internals.org/mm/virtual-physical-resident/",
+      "suggested_name": "linux-memory-metrics-vsz-rss-pss.json"
+    }
+  },
+  {
+    "game_set_id": "05f422",
+    "theme": "Observability Frameworks: RED, USE & Four Golden Signals",
+    "short_path": "games/observability-frameworks-red-use-and-four-golden-signals.json",
+    "short_link": "ff-155d0fed",
+    "games_file": "observability-frameworks-red-use-and-four-golden-signals.json",
+    "config_file": "library/observability-frameworks-red-use-golden-signals/observability-frameworks-red-use-and-four-golden-signals.json",
+    "last_modified": "2026-09-07T18:34:43.482184",
+    "content_hash": "256a05fea1fb52ce75cba851e6470f58bfa57de3073fd34a0d05dfaa76f1715a",
+    "total_words": 32,
+    "categories": [
+      "Distributed Service Topology",
+      "Latency Measurement",
+      "Observability Outputs",
+      "Observability Pillars",
+      "Observability Tooling",
+      "Prometheus Metric Types",
+      "SRE Reliability Metrics",
+      "Saturation Signals"
+    ],
+    "skill_levels": [
+      "Advanced",
+      "Beginner",
+      "Intermediate"
+    ],
+    "colors": [
+      "blue",
+      "green",
+      "indigo",
+      "orange",
+      "purple",
+      "red",
+      "teal",
+      "yellow"
+    ],
+    "group_sets_count": 2,
+    "total_groups": 8,
+    "versions_found": 1,
+    "is_latest": true,
+    "metadata": {
+      "generated_at": "2026-09-07T00:00:00Z",
+      "source": "stdin",
+      "suggested_name": "observability-frameworks-red-use-golden-signals.json"
+    }
+  },
+  {
+    "game_set_id": "016e3d",
+    "theme": "vLLM Architecture & Production AI Inference",
+    "short_path": "games/vllm-architecture-and-production-ai-inference.json",
+    "short_link": "ff-6b72bef9",
+    "games_file": "vllm-architecture-and-production-ai-inference.json",
+    "config_file": "library/vllm-inference-serving/vllm-architecture-and-production-ai-inference.json",
+    "last_modified": "2026-09-07T20:50:07.682710",
+    "content_hash": "37c89f750241e5f28a62bb8e80f7cc314ed1e0cfaa844d9f4e32bd524ca77d36",
+    "total_words": 32,
+    "categories": [
+      "Consumers of LLM Serving Infrastructure",
+      "GPU Memory Concepts in LLM Serving",
+      "LLM Inference Internals",
+      "LLM Inference Serving Frameworks",
+      "LLM Runtime Terminology",
+      "Scaling LLM Inference Beyond One GPU",
+      "vLLM Benchmark Results",
+      "vLLM Open Source Provenance"
+    ],
+    "skill_levels": [
+      "Advanced",
+      "Beginner",
+      "Expert",
+      "Intermediate"
+    ],
+    "colors": [
+      "blue",
+      "green",
+      "indigo",
+      "orange",
+      "purple",
+      "red",
+      "teal",
+      "yellow"
+    ],
+    "group_sets_count": 2,
+    "total_groups": 8,
+    "versions_found": 1,
+    "is_latest": true,
+    "metadata": {
+      "generated_at": "2026-09-07T10:00:00Z",
+      "source": "https://www.redhat.com/en/blog/meet-vllm-faster-more-efficient-llm-inference-and-serving",
+      "suggested_name": "vllm-inference-serving.json"
+    }
+  }
+]

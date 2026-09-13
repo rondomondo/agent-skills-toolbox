@@ -1,0 +1,381 @@
+{
+    "skill_name": "mermaid-render",
+    "evals": [
+        {
+            "id": 1,
+            "prompt": "Render the mermaid diagrams in examples/example1.md as SVG",
+            "expected_output": "Claude detects the environment, renders the file using the appropriate path (mmdc in sandbox, mermaid-render otherwise), and reports the output SVG files produced.",
+            "expectations": [
+                "Claude checks IS_SANDBOX before deciding which render path to use",
+                "Claude verifies the file exists before attempting to render",
+                "Claude reports the output SVG file paths after rendering",
+                "Claude does not modify the original source .md file"
+            ],
+            "rubric": {
+                "environment_detection": {
+                    "weight": 3,
+                    "description": "Correctly checks IS_SANDBOX and selects the right render path (mmdc vs mermaid-render)"
+                },
+                "correctness": {
+                    "weight": 3,
+                    "description": "Renders the file successfully and produces output files"
+                },
+                "output_reporting": {
+                    "weight": 1,
+                    "description": "Reports output file paths clearly to the user"
+                },
+                "source_preservation": {
+                    "weight": 2,
+                    "description": "Does not modify the original .md file"
+                }
+            }
+        },
+        {
+            "id": 2,
+            "prompt": "Export examples/example2.md as a PNG at double resolution",
+            "expected_output": "Claude renders the file to PNG with --scale 2 (or equivalent flag), using the appropriate render path for the environment.",
+            "expectations": [
+                "Claude uses PNG as the output format",
+                "Claude applies a scale factor of 2 (retina/HiDPI quality)",
+                "Claude detects the environment and uses the correct render path",
+                "Claude reports the output PNG file paths"
+            ],
+            "rubric": {
+                "format_flag": {
+                    "weight": 3,
+                    "description": "Correctly applies PNG format flag"
+                },
+                "scale_flag": {
+                    "weight": 3,
+                    "description": "Correctly interprets 'double resolution' as --scale 2 and applies it"
+                },
+                "environment_detection": {
+                    "weight": 2,
+                    "description": "Selects the correct render path for the environment"
+                },
+                "output_reporting": {
+                    "weight": 1,
+                    "description": "Reports output PNG file paths"
+                }
+            }
+        },
+        {
+            "id": 3,
+            "prompt": "I've got a folder of docs at ./docs/ that has some architecture diagrams in it — can you render them all?",
+            "expected_output": "Claude scans the directory for .md files containing mermaid blocks (up to 2 levels deep), skips companion files, and renders each qualifying file. Reports how many files were found and rendered.",
+            "expectations": [
+                "Claude uses directory handling (not single-file handling) for the input",
+                "Claude filters to only .md files containing mermaid blocks",
+                "Claude skips companion files (.svg.md, .png.md, .pdf.md)",
+                "Claude reports a summary of files found and rendered"
+            ],
+            "rubric": {
+                "input_classification": {
+                    "weight": 3,
+                    "description": "Correctly classifies the input as a directory and uses directory handling"
+                },
+                "filtering": {
+                    "weight": 3,
+                    "description": "Correctly filters to .md files with mermaid blocks and skips companion files"
+                },
+                "depth_handling": {
+                    "weight": 2,
+                    "description": "Scans up to 2 levels deep and notes if files beyond that depth were skipped"
+                },
+                "summary_reporting": {
+                    "weight": 2,
+                    "description": "Reports how many files were found, rendered, and total diagrams produced"
+                }
+            }
+        },
+        {
+            "id": 4,
+            "prompt": "Render the mermaid diagrams from https://raw.githubusercontent.com/rondomondo/mermaid/main/examples/example1.md",
+            "expected_output": "Claude identifies this as a single-file URL, fetches the content via web_fetch (not curl), saves it locally, and renders it. If the domain is blocked by the egress proxy, Claude reports the error clearly.",
+            "expectations": [
+                "Claude uses web_fetch and not curl to fetch the URL",
+                "Claude saves the fetched content to /home/claude/ before rendering",
+                "Claude derives a sensible filename from the URL path",
+                "If the fetch fails due to egress proxy, Claude reports this clearly and suggests uploading the file directly"
+            ],
+            "rubric": {
+                "fetch_method": {
+                    "weight": 3,
+                    "description": "Uses web_fetch tool, not curl — curl may be blocked by the egress proxy"
+                },
+                "local_save": {
+                    "weight": 3,
+                    "description": "Saves fetched content to /home/claude/ with a sensible filename before rendering"
+                },
+                "error_handling": {
+                    "weight": 3,
+                    "description": "If the domain is blocked or fetch fails, reports the error clearly and suggests the user upload the file directly"
+                },
+                "output_reporting": {
+                    "weight": 1,
+                    "description": "Reports output file paths after successful render"
+                }
+            }
+        },
+        {
+            "id": 5,
+            "prompt": "Can you render the diagrams from the docs directory in this GitHub repo: https://github.com/rondomondo/mermaid/tree/main/examples",
+            "expected_output": "Claude converts the GitHub tree URL to an API contents URL, fetches the directory listing via web_fetch, validates the JSON response, and renders each qualifying .md file. Reports a summary.",
+            "expectations": [
+                "Claude converts the GitHub tree URL to the api.github.com contents URL format",
+                "Claude validates the JSON response before iterating over results",
+                "Claude skips companion files in the listing",
+                "Claude reports a summary of files fetched and rendered",
+                "If GitHub is blocked by the egress proxy, Claude informs the user clearly and suggests downloading locally"
+            ],
+            "rubric": {
+                "url_conversion": {
+                    "weight": 4,
+                    "description": "Correctly converts github.com/user/repo/tree/<branch>/path to api.github.com/repos/user/repo/contents/path?ref=<branch>"
+                },
+                "response_validation": {
+                    "weight": 3,
+                    "description": "Validates the API response is a JSON array with expected fields before iterating; does not silently fail on HTML or error responses"
+                },
+                "filtering": {
+                    "weight": 2,
+                    "description": "Filters to .md files and skips companion files"
+                },
+                "error_handling": {
+                    "weight": 2,
+                    "description": "Handles egress proxy blocks or API rate limits gracefully and informs the user"
+                },
+                "summary_reporting": {
+                    "weight": 1,
+                    "description": "Reports a summary of files fetched and rendered"
+                }
+            }
+        },
+        {
+            "id": 6,
+            "prompt": "Render examples/example1.md as PDF",
+            "expected_output": "Claude renders the file to PDF format using the appropriate render path, reports the output file path, and shows stderr so the user can see per-diagram success or failure.",
+            "expectations": [
+                "Claude uses PDF as the output format",
+                "Claude detects the environment and uses the correct render path",
+                "Claude reports the output PDF file path",
+                "Claude shows stderr from the render so the user can see success/failure per diagram"
+            ],
+            "rubric": {
+                "format_flag": {
+                    "weight": 3,
+                    "description": "Correctly applies PDF format flag"
+                },
+                "environment_detection": {
+                    "weight": 2,
+                    "description": "Selects the correct render path for the environment"
+                },
+                "stderr_reporting": {
+                    "weight": 3,
+                    "description": "Shows raw stderr from the render — important for PDF since failures can be silent"
+                },
+                "output_reporting": {
+                    "weight": 1,
+                    "description": "Reports output PDF file path"
+                }
+            }
+        },
+        {
+            "id": 7,
+            "prompt": "Render examples/example1.svg.md — I want to see what it looks like",
+            "expected_output": "Claude recognises this as a companion output file (name contains .svg.md), refuses to render it, explains why, and asks the user to pass the original source .md file instead.",
+            "expectations": [
+                "Claude detects the companion file pattern (.svg.md) in the filename",
+                "Claude does not attempt to render the companion file",
+                "Claude explains that this is a rendered output file, not a source file",
+                "Claude asks the user to pass the original .md source file"
+            ],
+            "rubric": {
+                "guard_detection": {
+                    "weight": 5,
+                    "description": "Correctly identifies the companion file pattern and refuses to proceed — this is a correctness guard, not just UX"
+                },
+                "explanation": {
+                    "weight": 3,
+                    "description": "Clearly explains the distinction between source .md files and rendered companion files"
+                },
+                "recovery_guidance": {
+                    "weight": 2,
+                    "description": "Asks the user to provide the original source .md file"
+                }
+            }
+        },
+        {
+            "id": 8,
+            "prompt": "Render the diagrams in examples/example1.md using the dark theme and a transparent background",
+            "expected_output": "Claude renders the file with --theme dark and --bg transparent (or equivalent flags) applied, using the correct render path for the environment.",
+            "expectations": [
+                "Claude applies the dark theme flag",
+                "Claude applies the transparent background flag",
+                "Claude uses the correct render path for the environment",
+                "Claude reports the output file paths"
+            ],
+            "rubric": {
+                "theme_flag": {
+                    "weight": 3,
+                    "description": "Correctly applies --theme dark (or equivalent)"
+                },
+                "bg_flag": {
+                    "weight": 3,
+                    "description": "Correctly applies --bg transparent (or equivalent)"
+                },
+                "environment_detection": {
+                    "weight": 2,
+                    "description": "Selects the correct render path for the environment"
+                },
+                "output_reporting": {
+                    "weight": 1,
+                    "description": "Reports output file paths"
+                }
+            }
+        },
+        {
+            "id": 9,
+            "prompt": "I want to render some flowcharts from /mnt/user-data/uploads/diagrams.md",
+            "expected_output": "Claude detects that the file is under a read-only mount (/mnt/), copies it to /home/claude/ first, then renders it from the copied location.",
+            "expectations": [
+                "Claude detects the /mnt/ path as a read-only mount",
+                "Claude copies the file to /home/claude/ before rendering",
+                "Claude renders from the copied location, not the original mount path",
+                "Claude reports the output file paths"
+            ],
+            "rubric": {
+                "mount_detection": {
+                    "weight": 4,
+                    "description": "Correctly identifies /mnt/ as a read-only mount and does not attempt to render in-place"
+                },
+                "copy_step": {
+                    "weight": 4,
+                    "description": "Copies the file to /home/claude/ before rendering — skipping this would cause a write error"
+                },
+                "render_from_copy": {
+                    "weight": 2,
+                    "description": "Renders from the copied location, not the original /mnt/ path"
+                },
+                "output_reporting": {
+                    "weight": 1,
+                    "description": "Reports output file paths after rendering"
+                }
+            }
+        },
+        {
+            "id": 10,
+            "prompt": "Render examples/example1.md as a high-res PNG — 1920px wide, scale 3",
+            "expected_output": "Claude renders the file to PNG with --width 1920 and --scale 3 applied, using the appropriate render path.",
+            "expectations": [
+                "Claude uses PNG as the output format",
+                "Claude sets canvas width to 1920px",
+                "Claude sets scale factor to 3",
+                "Claude reports the output PNG file paths"
+            ],
+            "rubric": {
+                "format_flag": {
+                    "weight": 2,
+                    "description": "Correctly applies PNG format"
+                },
+                "width_flag": {
+                    "weight": 3,
+                    "description": "Correctly applies --width 1920"
+                },
+                "scale_flag": {
+                    "weight": 3,
+                    "description": "Correctly applies --scale 3"
+                },
+                "output_reporting": {
+                    "weight": 1,
+                    "description": "Reports output PNG file paths"
+                }
+            }
+        },
+        {
+            "id": 11,
+            "prompt": "The file I want to render doesn't exist: examples/nonexistent.md — can you render it?",
+            "expected_output": "Claude attempts to verify the file exists, finds it does not, reports the error clearly with the exact path tried, and does not attempt to render.",
+            "expectations": [
+                "Claude verifies whether the file exists before attempting to render",
+                "Claude does not attempt to render a non-existent file",
+                "Claude reports the exact path that was checked",
+                "Claude suggests the user check the path or working directory (e.g. with pwd)"
+            ],
+            "rubric": {
+                "existence_check": {
+                    "weight": 4,
+                    "description": "Explicitly checks whether the file exists before attempting any render step"
+                },
+                "no_hallucinated_render": {
+                    "weight": 4,
+                    "description": "Does not proceed with a render attempt or fabricate success output for a missing file"
+                },
+                "error_clarity": {
+                    "weight": 2,
+                    "description": "Reports the exact path tried and suggests the user verify it with pwd or ls"
+                }
+            }
+        },
+        {
+            "id": 12,
+            "prompt": "I have some sequence diagrams and architecture charts in a markdown doc. Can you turn them into images?",
+            "expected_output": "Claude recognises this as a mermaid render request even without 'mermaid' being mentioned, asks the user for the file path or content, then renders once provided.",
+            "expectations": [
+                "Claude triggers the mermaid-render skill based on diagram/image language without 'mermaid' being mentioned",
+                "Claude asks for the file path or content if not provided",
+                "Claude proceeds to render once the file is identified",
+                "Claude detects the environment and uses the correct render path"
+            ],
+            "rubric": {
+                "skill_trigger": {
+                    "weight": 5,
+                    "description": "Skill triggers correctly from natural language about diagrams/charts without the word 'mermaid' — this is the core triggering test"
+                },
+                "clarification": {
+                    "weight": 3,
+                    "description": "Asks for the file path or content if not supplied, rather than failing silently or guessing"
+                },
+                "render_on_followup": {
+                    "weight": 2,
+                    "description": "Proceeds correctly to render once the file is identified"
+                }
+            }
+        },
+        {
+            "id": 13,
+            "prompt": "Render examples/example2.md — it has 5 diagrams in it",
+            "expected_output": "In a 1-vCPU sandbox, Claude detects 5 diagrams exceeding the threshold of 2, uses split mode, renders each split file serially, recombines outputs into a single companion .md, copies everything to /mnt/user-data/outputs/, and reports that split mode was used and why.",
+            "expectations": [
+                "Claude checks nproc and diagram count before rendering",
+                "Claude uses split mode because VCPUS=1 and DIAGRAM_COUNT > 2",
+                "Claude renders each split file serially, not concurrently",
+                "Claude produces a combined companion .md referencing all rendered images in order",
+                "Claude copies all rendered images and companion .md to /mnt/user-data/outputs/",
+                "Claude reports that split mode was used and why (single vCPU, N diagrams)"
+            ],
+            "rubric": {
+                "split_mode_detection": {
+                    "weight": 4,
+                    "description": "Correctly checks nproc and diagram count, identifies the split mode threshold (VCPUS<=1, DIAGRAMS>2), and selects split mode rather than a direct render"
+                },
+                "serial_rendering": {
+                    "weight": 3,
+                    "description": "Renders split files one at a time (never concurrently) — concurrent rendering on a single vCPU causes OOM and is explicitly prohibited"
+                },
+                "recombination": {
+                    "weight": 2,
+                    "description": "Produces a single combined companion .md that references all output images in order"
+                },
+                "output_copy": {
+                    "weight": 2,
+                    "description": "Copies all rendered images and companion .md to /mnt/user-data/outputs/"
+                },
+                "split_mode_reporting": {
+                    "weight": 2,
+                    "description": "Tells the user that split mode was used, how many diagrams were split, and why (single vCPU + diagram count)"
+                }
+            }
+        }
+    ]
+}

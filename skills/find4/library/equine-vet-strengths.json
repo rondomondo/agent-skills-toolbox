@@ -1,0 +1,367 @@
+{
+  "metadata": {
+    "generated_at": "2026-09-08T10:00:00Z",
+    "source": "stdin",
+    "suggested_name": "equine-vet-strengths.json",
+    "modified_at": "2026-09-08T15:07:46.362426",
+    "source_id": "stdin",
+    "step": "finalize_metadata",
+    "id_registry": {
+      "group_set_ids": [
+        "bf9cde",
+        "59ed22",
+        "71b0ac",
+        "44a25e"
+      ],
+      "game_set_ids": [
+        "e425e9",
+        "8f0a6d"
+      ],
+      "group_item_ids": [
+        "2658a3",
+        "c1a1c1",
+        "d191ee",
+        "830dd3",
+        "d8a5e4",
+        "451d14",
+        "43af4e",
+        "be66da",
+        "bbdb1d",
+        "700e88",
+        "a0838e",
+        "816d18",
+        "362ba9",
+        "1e8fd2",
+        "c2d895",
+        "97610a"
+      ]
+    },
+    "id": "WlfRej3yfXgy8iTg"
+  },
+  "game_sets": [
+    {
+      "theme": "Equine Vet Strengths: Clinical & Emergency",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "AUSCULTATION",
+              "PALPATION",
+              "PERCUSSION",
+              "ENDOSCOPY"
+            ],
+            "category": "Physical Examination Techniques",
+            "color": "blue",
+            "url": "https://www.aaep.org/horsehealth/physical-examination",
+            "description": "Core hands-on assessment methods used during an equine clinical examination",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://www.merckvetmanual.com/horse-owners/routine-care-and-breeding-of-horses/routine-health-care-of-horses"
+            ],
+            "theme": "Equine Vet Strengths: Clinical & Emergency",
+            "group_item_id": "2658a3",
+            "group_set_id": "bf9cde"
+          },
+          {
+            "words": [
+              "COLIC",
+              "LAMINITIS",
+              "DYSTOCIA",
+              "FRACTURE"
+            ],
+            "category": "Equine Emergencies",
+            "color": "red",
+            "url": "https://www.aaep.org/horsehealth/colic",
+            "description": "Critical conditions requiring urgent field triage and intervention by an equine vet",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://www.merckvetmanual.com/emergency-medicine-and-critical-care"
+            ],
+            "theme": "Equine Vet Strengths: Clinical & Emergency",
+            "group_item_id": "c1a1c1",
+            "group_set_id": "bf9cde"
+          },
+          {
+            "words": [
+              "FLOATING",
+              "EXTRACTION",
+              "OCCLUSION",
+              "ERUPTION"
+            ],
+            "category": "Equine Dentistry",
+            "color": "green",
+            "url": "https://www.aaep.org/horsehealth/dental-care",
+            "description": "Dental procedures and concepts specific to equine oral health assessment and treatment",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.beva.org.uk/Veterinary-Support/Dentistry"
+            ],
+            "theme": "Equine Vet Strengths: Clinical & Emergency",
+            "group_item_id": "d191ee",
+            "group_set_id": "bf9cde"
+          },
+          {
+            "words": [
+              "EMPATHY",
+              "PROGNOSIS",
+              "EUTHANASIA",
+              "TRANSPARENCY"
+            ],
+            "category": "Difficult Client Conversations",
+            "color": "yellow",
+            "url": "https://www.aaep.org/horsehealth/euthanasia",
+            "description": "Skills needed to communicate sensitively about hard outcomes, costs, and end-of-life decisions",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://www.rcvs.org.uk/setting-standards/advice-and-guidance/code-of-professional-conduct-for-veterinary-surgeons/"
+            ],
+            "theme": "Equine Vet Strengths: Clinical & Emergency",
+            "group_item_id": "830dd3",
+            "group_set_id": "bf9cde"
+          }
+        ],
+        [
+          {
+            "words": [
+              "ULTRASOUND",
+              "RADIOGRAPH",
+              "CULTURE",
+              "BLOODWORK"
+            ],
+            "category": "Diagnostic Tools",
+            "color": "teal",
+            "url": "https://www.aaep.org/horsehealth/lameness",
+            "description": "Imaging and laboratory investigations used to confirm equine diagnoses",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.merckvetmanual.com/musculoskeletal-system/lameness-in-horses"
+            ],
+            "theme": "Equine Vet Strengths: Clinical & Emergency",
+            "group_item_id": "d8a5e4",
+            "group_set_id": "59ed22"
+          },
+          {
+            "words": [
+              "BREEDING",
+              "EMBRYO",
+              "FOALING",
+              "OVULATION"
+            ],
+            "category": "Equine Reproduction",
+            "color": "purple",
+            "url": "https://www.aaep.org/horsehealth/reproduction",
+            "description": "Reproductive procedures and milestones managed by equine vets across the breeding cycle",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://www.merckvetmanual.com/reproductive-system/reproductive-diseases-of-the-horse"
+            ],
+            "theme": "Equine Vet Strengths: Clinical & Emergency",
+            "group_item_id": "451d14",
+            "group_set_id": "59ed22"
+          },
+          {
+            "words": [
+              "STAMINA",
+              "DEXTERITY",
+              "AWARENESS",
+              "COMPOSURE"
+            ],
+            "category": "Physical & Personal Attributes",
+            "color": "orange",
+            "url": "https://www.bva.co.uk/our-campaigns/wellbeing/",
+            "description": "Physical and psychological traits required to work safely with large, unpredictable animals in field conditions",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://www.rcvs.org.uk/lifelong-learning/wellbeing/"
+            ],
+            "theme": "Equine Vet Strengths: Clinical & Emergency",
+            "group_item_id": "43af4e",
+            "group_set_id": "59ed22"
+          },
+          {
+            "words": [
+              "TELEMEDICINE",
+              "RADIOGRAPHY",
+              "INVENTORY",
+              "SOFTWARE"
+            ],
+            "category": "Veterinary Technology Skills",
+            "color": "indigo",
+            "url": "https://www.avma.org/resources-tools/practice-management/technology-veterinary-practice",
+            "description": "Modern tools and platforms equine vets use to manage practice operations and remote consultations",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.aaep.org/industry/practice-management"
+            ],
+            "theme": "Equine Vet Strengths: Clinical & Emergency",
+            "group_item_id": "be66da",
+            "group_set_id": "59ed22"
+          }
+        ]
+      ],
+      "game_set_id": "e425e9"
+    },
+    {
+      "theme": "Equine Vet Strengths: Knowledge & Professionalism",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "CASTRATION",
+              "SUTURING",
+              "ANAESTHESIA",
+              "DEBRIDEMENT"
+            ],
+            "category": "Field Surgical Procedures",
+            "color": "red",
+            "url": "https://www.aaep.org/horsehealth/surgery",
+            "description": "Common surgical and procedural skills performed by equine vets outside clinic settings",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://www.merckvetmanual.com/horse-owners/disorders-affecting-multiple-body-systems-of-horses"
+            ],
+            "theme": "Equine Vet Strengths: Knowledge & Professionalism",
+            "group_item_id": "bbdb1d",
+            "group_set_id": "71b0ac"
+          },
+          {
+            "words": [
+              "DEWORMING",
+              "RESISTANCE",
+              "FECAL",
+              "ROTATION"
+            ],
+            "category": "Parasite Management",
+            "color": "green",
+            "url": "https://www.aaep.org/horsehealth/parasite-control-guidelines",
+            "description": "Evidence-based strategies equine vets use to manage internal parasite burdens in horses",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.beva.org.uk/Veterinary-Support/Parasitology"
+            ],
+            "theme": "Equine Vet Strengths: Knowledge & Professionalism",
+            "group_item_id": "700e88",
+            "group_set_id": "71b0ac"
+          },
+          {
+            "words": [
+              "THOROUGHBRED",
+              "WARMBLOOD",
+              "ARABIAN",
+              "STOCK"
+            ],
+            "category": "Breed-Specific Knowledge",
+            "color": "blue",
+            "url": "https://www.aaep.org/horsehealth/breeds",
+            "description": "Understanding of inherited conditions and discipline predispositions unique to different horse breeds",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.merckvetmanual.com/horse-owners"
+            ],
+            "theme": "Equine Vet Strengths: Knowledge & Professionalism",
+            "group_item_id": "a0838e",
+            "group_set_id": "71b0ac"
+          },
+          {
+            "words": [
+              "FORAGE",
+              "ELECTROLYTES",
+              "METABOLISM",
+              "WEIGHT"
+            ],
+            "category": "Equine Nutrition",
+            "color": "yellow",
+            "url": "https://www.aaep.org/horsehealth/nutrition",
+            "description": "Nutritional concepts and feed management skills relevant to equine health and performance",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://www.merckvetmanual.com/horse-owners/feeding-and-managing-horses"
+            ],
+            "theme": "Equine Vet Strengths: Knowledge & Professionalism",
+            "group_item_id": "816d18",
+            "group_set_id": "71b0ac"
+          }
+        ],
+        [
+          {
+            "words": [
+              "REFERRAL",
+              "INSURANCE",
+              "RECORDS",
+              "MENTORING"
+            ],
+            "category": "Professional Responsibilities",
+            "color": "purple",
+            "url": "https://www.rcvs.org.uk/setting-standards/advice-and-guidance/code-of-professional-conduct-for-veterinary-surgeons/",
+            "description": "Administrative and ethical duties that define professionalism in equine veterinary practice",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://www.avma.org/resources-tools/avma-policies/principles-veterinary-medical-ethics-avma"
+            ],
+            "theme": "Equine Vet Strengths: Knowledge & Professionalism",
+            "group_item_id": "362ba9",
+            "group_set_id": "44a25e"
+          },
+          {
+            "words": [
+              "TOXIN",
+              "ZOONOSIS",
+              "DIFFERENTIAL",
+              "PATTERN"
+            ],
+            "category": "Diagnostic Reasoning",
+            "color": "teal",
+            "url": "https://www.merckvetmanual.com/toxicology/toxicoses-in-horses",
+            "description": "Analytical skills used to narrow down and identify disease causes in equine patients",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://www.aaep.org/horsehealth/infectious-disease"
+            ],
+            "theme": "Equine Vet Strengths: Knowledge & Professionalism",
+            "group_item_id": "1e8fd2",
+            "group_set_id": "44a25e"
+          },
+          {
+            "words": [
+              "EVENTER",
+              "RACEHORSE",
+              "ENDURANCE",
+              "SHOWJUMPER"
+            ],
+            "category": "Equine Disciplines",
+            "color": "orange",
+            "url": "https://www.aaep.org/horsehealth/performance-horse",
+            "description": "Competitive disciplines that shape the specific health demands and risks equine vets must understand",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.beva.org.uk/Veterinary-Support/Performance-Horse"
+            ],
+            "theme": "Equine Vet Strengths: Knowledge & Professionalism",
+            "group_item_id": "c2d895",
+            "group_set_id": "44a25e"
+          },
+          {
+            "words": [
+              "HOOF",
+              "FARRIER",
+              "LAMENESS",
+              "CONFORMATION"
+            ],
+            "category": "Musculoskeletal & Hoof Health",
+            "color": "indigo",
+            "url": "https://www.aaep.org/horsehealth/lameness",
+            "description": "Lower limb and structural assessment areas where vets collaborate closely with farriers",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://www.merckvetmanual.com/musculoskeletal-system/lameness-in-horses/overview-of-lameness-in-horses"
+            ],
+            "theme": "Equine Vet Strengths: Knowledge & Professionalism",
+            "group_item_id": "97610a",
+            "group_set_id": "44a25e"
+          }
+        ]
+      ],
+      "game_set_id": "8f0a6d"
+    }
+  ]
+}

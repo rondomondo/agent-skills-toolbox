@@ -1,0 +1,202 @@
+{
+  "metadata": {
+    "generated_at": "2026-09-08T00:00:00Z",
+    "source": "stdin",
+    "suggested_name": "construction-management-competencies.json",
+    "modified_at": "2026-09-08T16:35:00.907062",
+    "source_id": "stdin",
+    "step": "finalize_metadata",
+    "id_registry": {
+      "game_set_ids": [
+        "3bb628"
+      ],
+      "group_set_ids": [
+        "00ada0",
+        "a6bf2f"
+      ],
+      "group_item_ids": [
+        "9726a4",
+        "13c5d0",
+        "a757d7",
+        "6bd4c5",
+        "f409fe",
+        "343f3a",
+        "8d43d2",
+        "afe02d"
+      ]
+    },
+    "id": "HOenmQxoxuq6DXeg",
+    "split_info": {
+      "role": "split",
+      "split_at": "2026-09-08T16:35:07.695838+00:00",
+      "parent_id": "HOenmQxoxuq6DXeg",
+      "parent_file": "/output/games/construction-management-competencies.json",
+      "theme": "Construction Management: Procurement, Leadership & Compliance",
+      "slug": "construction-management-procurement-leadership-and-compliance"
+    }
+  },
+  "game_sets": [
+    {
+      "theme": "Construction Management: Procurement, Leadership & Compliance",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "RFQ",
+              "PREQUALIFICATION",
+              "LEAD TIMES",
+              "TENDER DOCS"
+            ],
+            "category": "Procurement Process Steps",
+            "color": "green",
+            "url": "https://www.ciob.org/industry/procurement",
+            "description": "Sequential activities in sourcing subcontractors and suppliers for construction projects",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.cips.org/"
+            ],
+            "theme": "Construction Management: Procurement, Leadership & Compliance",
+            "group_item_id": "9726a4",
+            "group_set_id": "00ada0"
+          },
+          {
+            "words": [
+              "RACI",
+              "STAKEHOLDER REGISTER",
+              "COMMUNITY LIAISON",
+              "COMMUNICATION PLAN"
+            ],
+            "category": "Stakeholder Management Tools",
+            "color": "blue",
+            "url": "https://www.pmi.org/learning/library/stakeholder-management-tools-6250",
+            "description": "Frameworks and artefacts used to manage project communication and stakeholder expectations",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://www.apm.org.uk/"
+            ],
+            "theme": "Construction Management: Procurement, Leadership & Compliance",
+            "group_item_id": "13c5d0",
+            "group_set_id": "00ada0"
+          },
+          {
+            "words": [
+              "EIA",
+              "CDM",
+              "NOISE ABATEMENT",
+              "PLANNING PERMISSION"
+            ],
+            "category": "Regulatory & Legal Compliance",
+            "color": "red",
+            "url": "https://www.hse.gov.uk/construction/cdm/2015/",
+            "description": "Statutory requirements and legal instruments governing construction project approvals and environmental impact",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://www.gov.uk/guidance/environmental-impact-assessment"
+            ],
+            "theme": "Construction Management: Procurement, Leadership & Compliance",
+            "group_item_id": "a757d7",
+            "group_set_id": "00ada0"
+          },
+          {
+            "words": [
+              "MENTORING",
+              "DELEGATION",
+              "CONFLICT RESOLUTION",
+              "ACCOUNTABILITY"
+            ],
+            "category": "Leadership Behaviours",
+            "color": "orange",
+            "url": "https://www.ciob.org/learning/professional-development/leadership",
+            "description": "People management competencies that distinguish high-performing construction leaders",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.cmi.org.uk/"
+            ],
+            "theme": "Construction Management: Procurement, Leadership & Compliance",
+            "group_item_id": "6bd4c5",
+            "group_set_id": "00ada0"
+          }
+        ],
+        [
+          {
+            "words": [
+              "DIGITAL TWIN",
+              "DRONE SURVEY",
+              "4D SIMULATION",
+              "LASER SCANNING"
+            ],
+            "category": "Emerging Digital Construction Tech",
+            "color": "teal",
+            "url": "https://www.autodesk.com/solutions/digital-construction",
+            "description": "Advanced digital technologies reshaping how construction sites are surveyed, modelled and managed",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://www.buildingsmart.org/"
+            ],
+            "theme": "Construction Management: Procurement, Leadership & Compliance",
+            "group_item_id": "f409fe",
+            "group_set_id": "a6bf2f"
+          },
+          {
+            "words": [
+              "WBS",
+              "MILESTONE PLAN",
+              "LOOK-AHEAD",
+              "RESOURCE LEVELLING"
+            ],
+            "category": "Planning & Scheduling Artefacts",
+            "color": "indigo",
+            "url": "https://www.pmi.org/learning/library/work-breakdown-structures-project-7676",
+            "description": "Core planning outputs used to structure, sequence and resource construction programmes",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://www.apm.org.uk/"
+            ],
+            "theme": "Construction Management: Procurement, Leadership & Compliance",
+            "group_item_id": "343f3a",
+            "group_set_id": "a6bf2f"
+          },
+          {
+            "words": [
+              "COMMISSIONING",
+              "AS-BUILT DRAWINGS",
+              "HANDOVER DOCS",
+              "CONTRACT CLOSEOUT"
+            ],
+            "category": "Project Closeout Activities",
+            "color": "purple",
+            "url": "https://www.cibse.org/knowledge-research/knowledge-portal/commissioning-guide",
+            "description": "Final-stage deliverables and activities required to formally complete and hand over a construction project",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://www.bwf.org.uk/"
+            ],
+            "theme": "Construction Management: Procurement, Leadership & Compliance",
+            "group_item_id": "8d43d2",
+            "group_set_id": "a6bf2f"
+          },
+          {
+            "words": [
+              "QUANTITY TAKEOFF",
+              "PARAMETRIC ESTIMATE",
+              "CASH FLOW",
+              "BID PREPARATION"
+            ],
+            "category": "Cost Estimating Methods",
+            "color": "yellow",
+            "url": "https://www.rics.org/uk/profession-standards/sector-standards/construction/black-book/",
+            "description": "Techniques used by estimators and cost managers to develop and validate construction budgets",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.aace.org/"
+            ],
+            "theme": "Construction Management: Procurement, Leadership & Compliance",
+            "group_item_id": "afe02d",
+            "group_set_id": "a6bf2f"
+          }
+        ]
+      ],
+      "game_set_id": "3bb628"
+    }
+  ]
+}

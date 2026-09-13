@@ -1,0 +1,338 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# ANSI color codes
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[0;33m'
+CYAN='\033[0;36m'
+BOLD='\033[1m'
+RESET='\033[0m'
+
+# Set DEBUG=true/1 to enable verbose logging of invocation args via the log() helper.
+USE_LOGGING="${DEBUG:-false}"
+case "${USE_LOGGING}" in
+  true|1)  USE_LOGGING=true  ;;
+  false|0) USE_LOGGING=false ;;
+  *) printf "ERROR: DEBUG must be true/false/1/0, got '%s'\n" "${USE_LOGGING}" >&2; exit 1 ;;
+esac
+SCRIPT_NAME=$(basename "$0")
+
+ok()   { ${USE_LOGGING} && printf "${BOLD}[$SCRIPT_NAME:$HOSTNAME]${RESET} ${GREEN}${*}${RESET}\n" >&2; return 0; }
+warn() { ${USE_LOGGING} && printf "${BOLD}[$SCRIPT_NAME:$HOSTNAME]${RESET} ${YELLOW}${*}${RESET}\n" >&2; return 0; }
+fail() { ${USE_LOGGING} && printf "${BOLD}[$SCRIPT_NAME:$HOSTNAME]${RESET} ${RED}${*}${RESET}\n" >&2; return 0; }
+log()  { ${USE_LOGGING} && printf "${BOLD}[$SCRIPT_NAME:$HOSTNAME]${RESET} ${CYAN}${*}${RESET}\n" >&2; return 0; }
+
+log "invoked with args '$*'"
+
+if ! command -v docker &>/dev/null; then
+  printf "${RED}Error:${RESET} docker is required but not found in PATH\n" >&2
+  exit 1
+fi
+
+usage() {
+  cat <<'EOF'
+mermaid-render - a convenience wrapper around the ghcr.io/rondomondo/mermaid-render
+Docker image, which is built upon minlag/mermaid-cli (mmdc).
+
+It renders every ```mermaid fenced block in a Markdown file to SVG, PNG, or PDF,
+writing numbered image files and a companion Markdown file with image references
+replacing the code blocks. Running mmdc directly as a container requires manually
+wiring up Docker volume mounts so the container can read your file and write output
+back to the host. This wrapper handles all of that automatically.
+
+Note: calling with '--' passes everything through directly to mmdc.
+
+Usage:
+  mermaid-render                      Show this help, then mmdc built-in help
+  mermaid-render -h | --help          Show this help only
+  mermaid-render <input.md> [opts]    Render all diagrams in a Markdown file
+  mermaid-render <directory> [opts]   Render every .md with mermaid blocks in a directory
+  mermaid-render <md1> <md2> [opts]   Render multiple files (opts apply to all)
+  mermaid-render -- [args...]         Pass args directly to mmdc inside Docker, with the
+                                      current directory mounted at /data. Use this to
+                                      access mmdc flags not covered by this wrapper
+                                      (e.g. "mermaid-render -- --help").
+  mermaid-render install [dir]        Copy mermaid-render to ./[dir] on the host
+
+Options:
+  -f, --format <fmt>    Output format: svg (default), png, pdf, jpg, gif, webp
+  -t, --theme <theme>   Mermaid theme: default, dark, forest, neutral
+  -b, --bg <color>      Background colour (e.g. white, transparent, '#f5f5f5')
+  -w, --width <px>      Diagram width in pixels
+  -H, --height <px>     Diagram height in pixels
+  -s, --scale <n>       Pixel density / scale factor (use 2-3 for retina PNG)
+
+EOF
+}
+
+find_docker_socket() {
+    local candidates=(
+        "/var/run/docker.sock"
+        "/run/docker.sock"
+        "${HOME}/.docker/run/docker.sock"
+        "/run/user/$(id -u)/docker.sock"
+    )
+    for sock in "${candidates[@]}"; do
+        if [[ -S "$sock" ]]; then
+            echo "$sock"
+            return 0
+        fi
+    done
+    return 1
+}
+
+DOCKER_SOCK=$(find_docker_socket) || { printf "${RED}Error:${RESET} Docker socket not found\n" >&2; exit 1; }
+
+# Extra docker flags shared by all container invocations:
+#   - mounts $PWD at /data (the mmdc working directory)
+#   - exposes HOST_PWD and DEBUG for the entrypoint
+DOCKER_EXTRA_ARGS=(
+  "--volume ${PWD}:/data"
+  "--env HOST_PWD=/data"
+  "--env DEBUG=${USE_LOGGING}"
+)
+
+show_help() {
+  cat <<'EOF'
+---- mmdc built-in help follows ----
+
+EOF
+  # shellcheck disable=SC2086
+  docker run --rm \
+    ${DOCKER_EXTRA_ARGS[*]:-} \
+    ghcr.io/rondomondo/mermaid-render:latest -h
+}
+
+# Pass args directly to mmdc inside Docker. $PWD is mounted at /data.
+run_mmdc_raw() {
+  # Fall back to current working directory if no explicit override is provided
+  HOST_MOUNT_PATH="${DIR_OVERRIDE:-$PWD}"
+
+  # Extra docker flags shared by all container invocations:
+  #   - mounts the resolved host path at /data (the mmdc working directory)
+  #   - exposes HOST_PWD and DEBUG for the entrypoint
+  DOCKER_EXTRA_ARGS=(
+    "--volume ${HOST_MOUNT_PATH}:/data"
+    "--env HOST_PWD=/data"
+    "--env DEBUG=${USE_LOGGING}"
+  )
+
+  #shellcheck disable=SC2086
+  docker run --rm \
+    ${DOCKER_EXTRA_ARGS[*]:-} \
+    ghcr.io/rondomondo/mermaid-render:latest \
+    "$@"
+}
+
+# Fetch a URL to $PWD using the remote filename and return the local path via stdout.
+fetch_url() {
+  local url="$1"
+  if ! command -v curl &>/dev/null; then
+    printf "${RED}Error:${RESET} curl is required to fetch URLs but was not found in PATH\n" >&2
+    return 1
+  fi
+  log "fetching $url"
+  local filename
+  filename=$(cd "$PWD" && curl -fsSLOJ -w '%{filename_effective}' "$url") || {
+    printf "${RED}Error:${RESET} failed to fetch %s\n" "$url" >&2
+    return 1
+  }
+  printf '%s' "${PWD}/${filename}"
+}
+
+# Render all mermaid blocks in one .md file.
+# mmdc with no explicit -o renders to numbered files alongside the input,
+# and writes a companion .md with image references.
+render_one() {
+  local input="$1"; shift
+  local extra_args=("$@")
+  #extra_args+=(--quiet)
+
+  if [[ ! -f "$input" ]]; then
+    printf "${RED}Error:${RESET} not a file: %s\n" "$input" >&2
+    return 1
+  fi
+
+  # Reject companion files (already-rendered output).
+  case "$input" in
+    *.svg.md|*.png.md|*.pdf.md|*.webp.md|*.gif.md|*.jpg.md)
+      printf "${YELLOW}Skipping${RESET} %s -- looks like a rendered companion file (pass the source .md instead)\n" "$input" >&2
+      return 0
+      ;;
+  esac
+
+  local abs_input container_input
+  abs_input="$(cd "$(dirname "$input")" && pwd)/$(basename "$input")"
+  container_input="/data/${input#"$PWD/"}"
+
+  log "rendering: $input (container path: $container_input)"
+
+  # When converting to a non-native format, suppress mmdc's stdout so we can
+  # reprint the summary with the correct final extension after conversion.
+  local mmdc_output rc
+  if [[ -n "${CONVERT_FORMAT:-}" ]]; then
+    mmdc_output=$(run_mmdc_raw -i "$container_input" "${extra_args[@]}" 2>&1)
+    rc=$?
+  else
+    run_mmdc_raw -i "$container_input" "${extra_args[@]}"
+    rc=$?
+  fi
+
+  if [[ $rc -eq 0 ]]; then
+    ok "rendered: $input"
+    # Post-process: convert intermediate PNGs to the requested raster format.
+    if [[ -n "${CONVERT_FORMAT:-}" ]]; then
+      local stem dir
+      dir="$(dirname "$abs_input")"
+      stem="$(basename "$input")"
+      mapfile -t pngs < <(find "$dir" -maxdepth 1 -name "${stem}-*.png" | sort)
+      if [[ ${#pngs[@]} -gt 0 ]]; then
+        # Print the header line from mmdc's suppressed output (chart count).
+        local header
+        header=$(printf '%s' "$mmdc_output" | grep -m1 'Found.*mermaid' || true)
+        [[ -n "$header" ]] && printf '%s\n' "$header"
+        convert_images "$CONVERT_FORMAT" "${pngs[@]}"
+        rc=$?
+      else
+        warn "no intermediate PNGs found for $input — skipping convert step"
+      fi
+    fi
+  else
+    fail "mmdc exited with code $rc for: $input"
+  fi
+  return $rc
+}
+
+# Formats that mmdc cannot produce natively — rendered as PNG then converted.
+CONVERT_FORMATS="jpg jpeg gif webp"
+
+# convert_images <ext> <file1.png> [file2.png ...]
+# Converts each PNG to <ext> via ImageMagick convert, then removes the PNG.
+convert_images() {
+  local target_ext="$1"; shift
+  if ! command -v convert &>/dev/null; then
+    printf "${RED}Error:${RESET} ImageMagick 'convert' not found in PATH — cannot produce %s output\n" "$target_ext" >&2
+    return 1
+  fi
+  local png
+  for png in "$@"; do
+    local out="${png%.png}.${target_ext}"
+    log "converting $png -> $out"
+    convert "$png" "$out" && rm -f "$png" || {
+      printf "${RED}Error:${RESET} convert failed for %s\n" "$png" >&2
+      return 1
+    }
+    printf " ${GREEN}✅ ./%s${RESET}\n" "$(basename "$out")"
+  done
+}
+
+# ---- parse render flags from the tail of $@ ----------------------------
+# Returns RENDER_FLAGS, POSITIONAL, DIR_OVERRIDE, and CONVERT_FORMAT arrays.
+parse_render_flags() {
+  local format="" theme="" bg="" width="" height="" scale=""
+
+  RENDER_FLAGS=()
+  POSITIONAL=()
+  DIR_OVERRIDE=""
+  CONVERT_FORMAT=""
+
+  while [[ $# -gt 0 ]]; do
+    case "$1" in
+      -f|--format)
+        format="${2:?--format requires a value}"; shift 2
+        # Check if format needs ImageMagick conversion (not natively supported by mmdc)
+        if [[ " $CONVERT_FORMATS " == *" $format "* ]]; then
+          CONVERT_FORMAT="$format"
+          RENDER_FLAGS+=(--outputFormat png)
+        else
+          RENDER_FLAGS+=(--outputFormat "$format")
+        fi
+        ;;
+      -t|--theme)   theme="${2:?--theme requires a value}";    shift 2; RENDER_FLAGS+=(--theme "$theme") ;;
+      -b|--bg)      bg="${2:?--bg requires a value}";          shift 2; RENDER_FLAGS+=(--backgroundColor "$bg") ;;
+      -w|--width)   width="${2:?--width requires a value}";    shift 2; RENDER_FLAGS+=(--width "$width") ;;
+      -H|--height)  height="${2:?--height requires a value}";  shift 2; RENDER_FLAGS+=(--height "$height") ;;
+      -s|--scale)   scale="${2:?--scale requires a value}";    shift 2; RENDER_FLAGS+=(--scale "$scale") ;;
+      -d|--dir)     DIR_OVERRIDE="${2:?--dir requires a value}"; shift 2 ;;
+      -*)           printf "${RED}Error:${RESET} unknown option: %s\n" "$1" >&2; exit 1 ;;
+      *)            POSITIONAL+=("$1"); shift ;;
+    esac
+  done
+
+  # For convert formats, default to scale 3 for a high-quality PNG intermediate
+  # unless the user already specified a scale.
+  if [[ -n "$CONVERT_FORMAT" && -z "$scale" ]]; then
+    RENDER_FLAGS+=(--scale 3)
+  fi
+}
+
+# ---- dispatch -------------------------------------------------------
+
+if [[ $# -eq 0 ]]; then
+  usage
+  show_help
+  exit 0
+fi
+
+if [[ "$1" == "-h" || "$1" == "--help" ]]; then
+  usage
+  exit 0
+fi
+
+if [[ "$1" == "--" ]]; then
+  run_mmdc_raw "${@:2}"
+  exit 0
+fi
+
+if [[ "$1" == "install" ]]; then
+  log "running install via container"
+  # shellcheck disable=SC2086
+  docker run --rm \
+    ${DOCKER_EXTRA_ARGS[*]:-} \
+    ghcr.io/rondomondo/mermaid-render:latest \
+    install "${@:2}"
+  exit 0
+fi
+
+parse_render_flags "$@"
+set -- "${POSITIONAL[@]+"${POSITIONAL[@]}"}"
+
+if [[ $# -eq 0 ]]; then
+  printf "${RED}Error:${RESET} no input file or directory specified\n" >&2
+  usage
+  exit 1
+fi
+
+if [[ $# -eq 1 && ("$1" == http://* || "$1" == https://*) ]]; then
+  local_file=$(fetch_url "$1") || exit 1
+  render_one "$local_file" "${RENDER_FLAGS[@]+"${RENDER_FLAGS[@]}"}"
+elif [[ $# -eq 1 && -d "$1" ]]; then
+  dir="$(cd "$1" && pwd)"
+  mapfile -t files < <(
+    find "$dir" -maxdepth 2 -name "*.md" \
+      ! -name "*.svg.md" \
+      ! -name "*.png.md" \
+      ! -name "*.pdf.md" \
+      -exec grep -l '```mermaid' {} + 2>/dev/null \
+      | sort
+  )
+
+  if [[ ${#files[@]} -eq 0 ]]; then
+    printf "${YELLOW}Warning:${RESET} no .md files with mermaid blocks found in %s\n" "$1" >&2
+    exit 1
+  fi
+
+  for f in "${files[@]}"; do
+    render_one "${f#"$PWD/"}" "${RENDER_FLAGS[@]+"${RENDER_FLAGS[@]}"}"
+  done
+else
+  for arg in "$@"; do
+    if [[ "$arg" == http://* || "$arg" == https://* ]]; then
+      local_file=$(fetch_url "$arg") || exit 1
+      render_one "$local_file" "${RENDER_FLAGS[@]+"${RENDER_FLAGS[@]}"}"
+    else
+      render_one "$arg" "${RENDER_FLAGS[@]+"${RENDER_FLAGS[@]}"}"
+    fi
+  done
+fi

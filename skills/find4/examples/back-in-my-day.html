@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Find4 — Back in My Day</title>
+<style>
+body{font-family:Georgia,serif;background:#fffdf7;color:#333;margin:0;padding:1rem}
+.f4-wrap{max-width:720px;margin:0 auto}
+.f4-game{background:#fff;border:1px solid #e8dfc8;border-radius:12px;padding:1.25rem;margin-bottom:24px}
+.f4-game-header{display:flex;align-items:center;gap:12px;margin-bottom:1rem;flex-wrap:wrap}
+.f4-game-icon{width:40px;height:40px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:22px}
+.f4-game-title{font-size:18px;font-weight:bold;margin:0}
+.f4-game-meta{font-size:13px;color:#888;margin:0}
+.play-btn{display:inline-block;padding:10px 18px;background:#7b5e3a;color:#fff;border-radius:8px;text-decoration:none;font-size:14px;margin-left:auto;font-family:Georgia,serif}
+.play-btn:hover{background:#5c4429}
+.f4-groups{display:flex;flex-direction:column;gap:6px}
+.f4-round{font-size:12px;font-weight:bold;color:#9b7f5a;padding:10px 0 4px;text-transform:uppercase;letter-spacing:.05em}
+.f4-group{display:grid;grid-template-columns:14px 1fr 100px 2fr;align-items:start;gap:10px;padding:10px 12px;border-radius:8px;border:1px solid #f0e6d0;background:#fffbf4}
+.f4-dot{width:12px;height:12px;border-radius:50%;flex-shrink:0;margin-top:4px}
+.f4-cat{font-size:14px;font-weight:bold;line-height:1.3}
+.f4-skill{font-size:12px;padding:3px 8px;border-radius:20px;text-align:center;white-space:nowrap}
+.f4-words{font-size:12px;color:#666;line-height:1.6;word-break:break-word}
+.sk-b{background:#e1f5ee;color:#085041}
+.sk-i{background:#e6f1fb;color:#0c447c}
+.sk-a{background:#faeeda;color:#633806}
+.sk-e{background:#fcebeb;color:#791f1f}
+.dot-red{background:#e24b4a}.dot-green{background:#639922}.dot-blue{background:#378add}
+.dot-yellow{background:#ba7517}.dot-purple{background:#7f77dd}.dot-teal{background:#1d9e75}
+.dot-orange{background:#d85a30}.dot-indigo{background:#534ab7}
+</style>
+</head>
+<body>
+<div class="f4-wrap">
+<div class="f4-game">
+  <div class="f4-game-header">
+    <div class="f4-game-icon" style="background:#faeeda">📻</div>
+    <div>
+      <p class="f4-game-title">Back in My Day</p>
+      <p class="f4-game-meta">2 rounds · 32 words</p>
+    </div>
+    <a class="play-btn" href="https://find4.org/#game=tZdbb-I4FID_ihVpNV2pl4RyfwskFNRAUELb7a6qyMQOeOvEjB3KZkf973scKANlZqCj2afYyYl9fL5z8xcjpTkmOMdG-4sxoxmVOKckwrnRNipmpX5h1i4sa2KZ7WuzbZp_GueGEksZU_iucsIy_WI5m1Glf8twqj_MJM6y4mIGM3X5txJaKBWEJexbS1fbVr1dqV1a9WbjurLdIGJkd4-cLmCasAxz9i-NtmqfG4xEks6YymVRHkKK5SJSNIcFlNH-y5hWq0lSB8FG1bKIHuCGRa0qDFqtpIpN4-nc0Lru_mQmcTNpgEiT1mjtuhQpF2Y5Td-ELFJJqhYI1erV66aWrtarZkMrVa82LVNvUZ-2WlX9qVGjjXoCAzh7jZpaOLFIMoUBiSvXFf2mjnGrTvSCrarZ1Kq2YtNqXcOATnE10YPGtNGol8cBvZKm_tRo1uKq8fSqbQFG8v_5XOk8Fp-HJG7ipN8xXr-eT-v9xcjntATVwfEzYhkaFsjBhXH-1XhaDgRXQq6P2vMDB3X9YDIY2SA3HIwG-uEHwSBEMPMDmN7bd3_0bc9D94N7W5ssBmeaCc3F6HKsFItRR7KcqTmKsVTwSyy4kPB5ypcUpkvJYTLP84VqX13R7HLFntmCEoYvhZxd6dlVD3SKukLm4AvaeFTFki1yBm7WNgaxyHZ2SUUuZLkXSqRIERwcWa26qRDOCGqYWgX1zDiPOH2heu9BllOZ6h1zrRAmhOmlMY_Wblla48cKDlnG4NcjQkJKpiKQhfODqY4g2bgdCGydZdfR4f3GqV_Pd6iF_YHnDUY3IN3z_GAwgkE38B_0E0D1xu5o9PgOlM_JV0iCZbuUCsq5WJ3IKZyDXVk2i842y0V6ud8PkO1thpaKEjSliZAUERqzFOJdYS2qrWK1Gtb_gawH52PZoaY__svZ0-9DFLeRfgrFiTue-C6yRw4Kfc3OsZ1PIbKD4SNM_JH3iHq-74V6AkiRDsG-fxeER2JQsTwW6S7gmaQ0O5UvpORc0AgiKQrLHP-OK-Xihe46EzAqkKKSUQWRiHM0x6QMydVccIqyNWaOl7M5-M0B5w5k-Qwq1E8ydjD5rdJQkS3T4ihaP-NF1BOCq_J8fSEV7PERwtsUfgrhsT0EybH_4LiB6yD3RoesEwzG43X0dgLXdtD4znH0fJ_qA4ZUmNIyoy2EyldYokQIsstVQEWenZpgwwVOozO9xGGw9vTCCNxIxDrcCFqxfI5kSQ6YlUqk-FkPidD2mWNJqERaw_8l2QZvW0cQvwAnusuYbkVu4RUR6VHQHUkxiRZL2Bpc7iOAt6X5O4CfzncL6NAe3Xiupup7EK-Tu04JPAxdXTkf7LDf8e3A-UYyXmE1L-2JC5Rrj9zhmlPMT6Q6BA_gNDpLcQzL0UO07uclW6Q0y9c5GDKwDsWMyOItH0MPR2W2VWiz0iFWm7zgLKbkJ5E-wPpTAX4TnW0UOJ6KvbXghwBuW6p3ADdd4V6Edv3RrRvoDNv3x2HXn3T7MA5vtxE6tIOO577PuGOOC706REXZDe-gk6V9TiHXFdkzLbulfWATid-Mi4AEJ5Jmn9R6I7SAnYGiWOaKEfpGEH6HBK9-dWrti4WKRR7Pj7c9WE75BzPptuM9gZPr3Q80pV5gj25RCN3qJLDLqNONqmPrggnv0C1Qg34WInIf2I3ghGYIrkFQHSFl7jWpi6Vc8FOzqMtfoL8bS6o4LQ7YeRQuWwRDbG220TUQGh644NB1TUyXulSLBGG0uZexssj-UnA9qAvPUQiddC7x8X5H6JZVQ_oQvrd7ygn4Jq7n3gRlMRwOvFsEXas9gUlg35TtT8cf6Rza9W0POa43uHeD9_3rROemTX8RQyhAzkQF2APqkZA7MFlG2EycCHNCOYVbbXrAMaTyhYGpy8IHNoSvCyrAS0qeZSKF_cETWF5SnUMThOC6uuRY8uJXZ84h489RwgXcsc-P1s3ZBeh8MRUZ3Kbxx7rXzY3zu0if9m_U8GVzjX59ev0P" target="_blank">▶ Play now</a>
+  </div>
+  <div class="f4-groups">
+    <div class="f4-round">Round 1</div>
+    <div class="f4-group"><div class="f4-dot dot-blue"></div><div class="f4-cat">Classic British cars</div><span class="f4-skill sk-i">Intermediate</span><div class="f4-words">FORD CORTINA · MINI · MORRIS MINOR · VAUXHALL VIVA</div></div>
+    <div class="f4-group"><div class="f4-dot dot-yellow"></div><div class="f4-cat">Old British coins</div><span class="f4-skill sk-i">Intermediate</span><div class="f4-words">SHILLING · FLORIN · CROWN · HALFPENNY</div></div>
+    <div class="f4-group"><div class="f4-dot dot-green"></div><div class="f4-cat">Classic British sitcoms</div><span class="f4-skill sk-b">Beginner</span><div class="f4-words">STEPTOE AND SON · DAD'S ARMY · ONLY FOOLS · OPEN ALL HOURS</div></div>
+    <div class="f4-group"><div class="f4-dot dot-orange"></div><div class="f4-cat">Wartime and postwar foods</div><span class="f4-skill sk-i">Intermediate</span><div class="f4-words">SPAM · POWDERED EGG · DRIPPING · BREAD PUDDING</div></div>
+    <div class="f4-round">Round 2</div>
+    <div class="f4-group"><div class="f4-dot dot-teal"></div><div class="f4-cat">Old washing day tools</div><span class="f4-skill sk-a">Advanced</span><div class="f4-words">MANGLE · DOLLY TUB · POSSER · WASHBOARD</div></div>
+    <div class="f4-group"><div class="f4-dot dot-red"></div><div class="f4-cat">Playground games</div><span class="f4-skill sk-b">Beginner</span><div class="f4-words">CONKERS · HOPSCOTCH · SKIPPING · MARBLES</div></div>
+    <div class="f4-group"><div class="f4-dot dot-purple"></div><div class="f4-cat">Golden era singers</div><span class="f4-skill sk-b">Beginner</span><div class="f4-words">ELVIS · FRANK SINATRA · DORIS DAY · NAT KING COLE</div></div>
+    <div class="f4-group"><div class="f4-dot dot-indigo"></div><div class="f4-cat">Things that came to your door</div><span class="f4-skill sk-a">Advanced</span><div class="f4-words">TELEGRAM · MILK FLOAT · RAG AND BONE · COAL DELIVERY</div></div>
+  </div>
+</div>
+</div>
+</body>
+</html>

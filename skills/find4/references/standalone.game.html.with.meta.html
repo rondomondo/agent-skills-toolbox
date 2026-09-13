@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find4 &mdash; KubeRay & vLLM: Core Architecture</title>
+    
+    <meta name="description" content="A Staff SRE-level interactive architecture challenge covering KubeRay CRDs, vLLM throughput optimization, and distributed inference primitives.">
+    <meta name="keywords" content="KubeRay, vLLM, RayCluster, PagedAttention, SRE, LLM Inference, Kubernetes, DevOps">
+    <meta name="author" content="Find4">
+    <meta name="theme-color" content="#0f6e56">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://find4.org/">
+    <meta property="og:title" content="KubeRay & vLLM: Core Architecture Challenge">
+    <meta property="og:description" content="Test your knowledge on Ray clusters and vLLM optimization techniques. 2 Rounds, 32 technical terms.">
+    <meta property="og:image" content="https://find4.org/preview-image.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="KubeRay & vLLM: Core Architecture">
+    <meta name="twitter:description" content="Deep dive into Staff SRE level concepts for AI infrastructure.">
+    <meta name="twitter:image" content="https://find4.org/preview-image.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOccupationalCredential",
+      "name": "KubeRay & vLLM: Core Architecture",
+      "educationalLevel": "Staff SRE",
+      "abstract": "Core concepts of KubeRay Custom Resource Definitions and vLLM throughput optimization techniques like PagedAttention and Continuous Batching."
+    }
+    </script>
+
+    <style>
+        body{font-family:system-ui,-apple-system,sans-serif;max-width:720px;margin:2rem auto;padding:0 1rem;background:#f5f5f3;color:#111;}
+        .f4-game{background:#fff;border:0.5px solid rgba(0,0,0,0.3);border-radius:12px;padding:1rem 1.25rem;margin-bottom:48px;box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);}
+        .f4-game-header{display:flex;align-items:center;gap:10px;margin-bottom:1rem;flex-wrap:wrap;}
+        .f4-game-icon{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:20px;}
+        .f4-game-title-block{flex:1;min-width:0;}
+        .f4-game-title{font-size:15px;font-weight:500;margin:0;color:#111;}
+        .f4-game-meta{font-size:12px;color:#666;margin:0;}
+        .play-btn{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;background:#0f6e56;color:#fff;border-radius:10px;text-decoration:none;font-size:13px;font-weight:500;margin-left:auto;transition: background 0.2s;}
+        .play-btn:hover{background:#085041;}
+        .f4-groups{display:flex;flex-direction:column;gap:5px;}
+        .f4-round{font-size:11px;font-weight:500;color:#888;padding:8px 0 3px;text-transform:uppercase;letter-spacing:0.05em;}
+        .f4-group{display:grid;grid-template-columns:13px 1fr 90px 2fr;align-items:start;gap:8px;padding:8px 10px;border-radius:8px;border:0.5px solid #e0e0de;background:#fafaf9;}
+        .f4-dot{width:11px;height:11px;border-radius:50%;flex-shrink:0;margin-top:3px;}
+        .f4-cat{font-size:13px;font-weight:500;line-height:1.3;}
+        .f4-skill{font-size:11px;padding:2px 7px;border-radius:20px;text-align:center;white-space:nowrap;}
+        .f4-words{font-size:11px;color:#666;line-height:1.5;word-break:break-word;}
+        .sk-b{background:#e1f5ee;color:#085041;}.sk-i{background:#e6f1fb;color:#0c447c;}.sk-a{background:#faeeda;color:#633806;}.sk-e{background:#fcebeb;color:#791f1f;}
+        .dot-red{background:#e24b4a;}.dot-green{background:#639922;}.dot-blue{background:#378add;}.dot-yellow{background:#ba7517;}
+        .dot-purple{background:#7f77dd;}.dot-teal{background:#1d9e75;}.dot-orange{background:#d85a30;}.dot-indigo{background:#534ab7;}
+    </style>
+</head>
+<body>
+<div class="f4-game">
+  <div class="f4-game-header">
+    <div class="f4-game-icon" style="background:#e6f1fb;" aria-hidden="true">&#x2699;&#xFE0F;</div>
+    <div class="f4-game-title-block">
+      <h1 class="f4-game-title">KubeRay & vLLM: Core Architecture</h1>
+      <p class="f4-game-meta">2 rounds &middot; 32 words &middot; Staff SRE level</p>
+    </div>
+    <span id="u_kuberay-and-vllm-core-architecture" style="display:none">https://find4.org/#game=tVhtb9s4Ev4rhA-43QXi2I4bx00_qbaTeOu32kr35VAEtETJbCRRJSknbtH_fs9Qsus0yTa99IAgkajhzHDmmWeG-VxLheUht7x2-rkWi0xobkV4xW3ttHbUPOrUm8f1VttvNk_dz9-1g5pRhQ4EvhsbyowWijgWhrZlPKUP18USejb1dZKkdaPF4QejSDBVoYzkQ-rbp63uaevk8Kh13D1p7oxcyXDfjhU5XiOZ8UR-Elc71w9qMrzSIpbG6o07iFZFfmWEhQJTO_1P7Vi0o-UJBFvdrni5xEPQbvMgxANvRwIP7w9qMbzf33QS8manDZEj3lnyYyfiFEsr0q1QdMLbnSMINflJFDrpk1C0XuJBdJbRMX3inajjFC2DoNMho91Oh7eE-3QUHQfkT3hy3KVdS95td1v00Il4SDKdl8GL5jFpFscvOK10X5x0QhJutTrhUQcP7agVtbq1918oFggSF7GOx7re7dvrT3-_nNe-fD0f-f25ZlfCJesNkjXnG_Zvth6Nxqesp7Rgng5WOGVgC032dvGkrdh7o3R5-rn312jgQ-K8t8Dv2chbjD089L3FxeupN-9T0AJAKlaUmRoZuhA8ZBMVCjbTKhDGCEPnV4nSkFgmBVksdIKXlbW5OW00QhWYQyDqUKqGyBoJFBrbIIgF8LYRqCySMVw9XNk0we5QmEDL3ErA7rS2M8Psilumi4ypjIm10BtGDmXky6_Qlgh7wPKEm5QzY6H5N6Y0M7kIANuAJ8mGBQpHBwCtYEFSAJG6fiOx3Vha4lnI1tLIpUyk3bBIqxQ2BVvRkX9FjA5YyM1qqbgOfyNEX8skuUrgCp12mEFdKkIJVQSNMJR0Ap5cldXgIv7PIal8argKzATWGjILxW0ZGOTix7NegZ0Kbwv1_fLCelVcXw7uAqM3ulz4gznk8fL79HX5sBjM3w17g68vg950cjY8_wYoW_96OA-COBdlCFhfoPxdWPZBE2shsnuoIXzkWn3AgQ5jaVfFkoJVkVPjHkx8JCqCFdab941L29YJlRMtAgpaAGqBTIR5xQQPVgyMJhLDOAOxRUKLzLJEgk82QQKAqMxqHtgSB9BhQFAkUmUJRhSQKOpmpSz7oJZuAR6HRUA-sYXQa8FCkSdqk2KjuQeZ1yC9DKT9XbhU5w9Uuh-WbTCei4wd9z0BGTPvfND3fH8w8YfTCfb0Li4nbwb92XxwNhyNaGGKT5PL6eXitef3LoaTcywuZoPe5cjzh-8GfUCmT6t3IUPuMn8FD-JVXlg2RWJTabgLpS-CVSY_Fne4RmmexY-wDfWuQy73agtokXHW4AjFlQJ5rKW4eZhwvAQuIeCpDJjdGXbxZIXjIcVSfkveCXY-u2SFBWFUnhKHpMC4-0ims2DzioF8KhgKthSJunEANeRFFjNvNoToRmi3myNhMnM8BBTCFokSfTmc3AWQF655FojwuwDi-lauD5WOG3xpGkft5svDZqfVbT4XOrtu-QToeH-8pVYz8-nP2ayL38OJ330IB38IGa8se1vwzG4je6Z0yu0-APJC58mTAfDRKfvklDVMkedK09CzApnf8EebjzK2DhpARpGoj_v-mIDiZthOFVtuSpAgZ1qABQR7N_fGYCVlcy0zW7EO1MEImAKNyZCmCNyUihTnL-GDHGjxsZAI_7Z7OZzxvVzcJ5PBLQBmn9Z5vhOdKO_-lJazG6EeQcf7g_1pxPfPaBbxZ1P6M_SJTN5eDi7BGDP_4huYUJwXVf2MyjJjY2G1DPYRol1pPAkeVTE20lLJw3DwXSlmKqN5glWijMYNHkVsMR9QcoNrwxwTMHJyW-SL0fQVoyOymOgnM9RSAiHXAA7SmaMl4jnDpMNuVuhRjOLQQBQqedjQgqekSlCmJY4snjeEBIkqwsNYqTgRrrcsExU3qg5mGlzWU-BVosUlgmuqgAZdCWTmemUg6nAjoqqk5yVWVinX1xB7Lm52E_c3uKnG_zusMh5O5oPZaNjzaIQde3_uvQ37GG-H48H00l_QoNKnxcvZoueN0IDG0_7gkbnFK6wySDEouVdNpxUJSZGE-wizgic_OLrEhQwpZA1eWaHA3oNaaQmdwPE_nOqVYwfDya-FPqfILMAO5VTshhWVsBVaC2R_MWxZyMQiV4x_PctSFRl0EsnkPCDuovW6QrultfINW8KKmcz_dcgVNP8jDrktq-1fe_F4LoJ2V7UnIAizzGI6n3lzbzQajIaLMV2FhjM8TgZ3VzHzej1_Ot8bfy-8CUD2UA_r031WLgvqDMNtyeDShNHAotL3QbQRCWaCH2Wq8KuBq2rtcdaiALr7DbmGsGMrFXmJHpFxmjXSIrGy7joNtSH35m5Xu4p_hYEoM2hXOdc0kWDsSZmhFgrWKns2ejRIUWxZLJc5pDLx0A438zyvkd1DFwVC_MRb0-6q_wQguRn4z563HXpH0zndphfeeEZ8Q1gaEwN5i78mPXgwmJwDYg9hZ4aL6VzQ2Gl3Xe5M8G3j3-IGx5Sx-lHcYBDNuLwC4ecgNSTeoUfoh8GzNVsiBW0OoWJkeC3DAk1QV26ugBmqXGIsOsMrGnAieYt-ST0kZnytJJJOk1EG_rPszTtGPhS2pNYSLyM190oy4mnu9BFwUkMjNLgNyKhvLbrbGwvcFbMayv73AfmRmJU3xAbCzX8KnHb_MHoETu_v_iMLX6p_Y315_-W_</span>
+    <a class="play-btn" href="#" rel="noopener" onclick="event.preventDefault();window.open(document.getElementById('u_kuberay-and-vllm-core-architecture').textContent.trim(),'_blank');">
+        <span>&#9654;</span> Play on find4.org
+    </a>
+  </div>
+
+  <div class="f4-groups">
+    <h2 class="f4-round">Round 1</h2>
+    <div class="f4-group">
+        <div class="f4-dot dot-blue" role="img" aria-label="Intermediate Level Category"></div>
+        <div class="f4-cat">Ray Head Node Processes</div>
+        <span class="f4-skill sk-i">Intermediate</span>
+        <div class="f4-words">RAYLET &middot; GCS &middot; PLASMA &middot; DASHBOARD</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-green" role="img" aria-label="Beginner Level Category"></div>
+        <div class="f4-cat">KubeRay Custom Resource Definitions</div>
+        <span class="f4-skill sk-b">Beginner</span>
+        <div class="f4-words">RAYCLUSTER &middot; RAYJOB &middot; RAYSERVICE &middot; RAYSERVECONFIG</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-orange" role="img" aria-label="Advanced Level Category"></div>
+        <div class="f4-cat">vLLM Throughput Optimisation Techniques</div>
+        <span class="f4-skill sk-a">Advanced</span>
+        <div class="f4-words">PAGEDATTENTION &middot; CHUNKEDPREFILL &middot; CONTINUOUSBATCHING &middot; SPECULATIVEDECODING</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-purple" role="img" aria-label="Expert Level Category"></div>
+        <div class="f4-cat">vLLM Weight Quantisation Formats</div>
+        <span class="f4-skill sk-e">Expert</span>
+        <div class="f4-words">AWQ &middot; GPTQ &middot; FP8 &middot; INT8</div>
+    </div>
+
+    <h2 class="f4-round">Round 2</h2>
+    <div class="f4-group">
+        <div class="f4-dot dot-red" role="img" aria-label="Intermediate Level Category"></div>
+        <div class="f4-cat">LLM Serving Latency Metrics</div>
+        <span class="f4-skill sk-i">Intermediate</span>
+        <div class="f4-words">TTFT &middot; TPOT &middot; ITL &middot; QUEUEDEPTH</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-teal" role="img" aria-label="Intermediate Level Category"></div>
+        <div class="f4-cat">KubeRay Autoscaler Configuration Fields</div>
+        <span class="f4-skill sk-i">Intermediate</span>
+        <div class="f4-words">MINREPLICAS &middot; MAXREPLICAS &middot; IDLETIMEOUTSECONDS &middot; UPSCALINGMODE</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-yellow" role="img" aria-label="Expert Level Category"></div>
+        <div class="f4-cat">vLLM Distributed Inference Primitives</div>
+        <span class="f4-skill sk-e">Expert</span>
+        <div class="f4-words">TENSORPARALLELISM &middot; PIPELINEPARALLELISM &middot; RAYACTOR &middot; RAYSERVEHANDLE</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-indigo" role="img" aria-label="Advanced Level Category"></div>
+        <div class="f4-cat">vLLM Per-Request Serving Features</div>
+        <span class="f4-skill sk-a">Advanced</span>
+        <div class="f4-words">PREFIXCACHING &middot; LORA &middot; SAMPLINGPARAMS &middot; ASYNCLLMENGINE</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+

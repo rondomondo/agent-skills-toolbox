@@ -1,0 +1,202 @@
+{
+  "metadata": {
+    "generated_at": "2025-09-07T20:30:00Z",
+    "source": "https://jax-ml.github.io/scaling-book/#high-level-outline",
+    "suggested_name": "jax-scaling-book-llm-systems.json",
+    "modified_at": "2026-09-07T20:29:25.549627",
+    "source_id": "https://jax-ml.github.io/scaling-book/#high-level-outline",
+    "step": "finalize_metadata",
+    "id_registry": {
+      "game_set_ids": [
+        "da75bc"
+      ],
+      "group_set_ids": [
+        "916309",
+        "8be5a2"
+      ],
+      "group_item_ids": [
+        "916acf",
+        "c0b781",
+        "acf6a9",
+        "5580e0",
+        "9a6cac",
+        "4abd51",
+        "250d93",
+        "ab23a5"
+      ]
+    },
+    "id": "bIX-telvioUGEK20",
+    "split_info": {
+      "role": "split",
+      "split_at": "2026-09-07T20:29:36.851456+00:00",
+      "parent_id": "bIX-telvioUGEK20",
+      "parent_file": "/home/claude/output/games/jax-scaling-book-llm-systems.json",
+      "theme": "Scaling LLMs on Hardware: Systems Concepts",
+      "slug": "scaling-llms-on-hardware-systems-concepts"
+    }
+  },
+  "game_sets": [
+    {
+      "theme": "Scaling LLMs on Hardware: Systems Concepts",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "ROOFLINE",
+              "FLOPS",
+              "BANDWIDTH",
+              "BOTTLENECK"
+            ],
+            "category": "Performance Analysis Terms",
+            "color": "blue",
+            "url": "https://jax-ml.github.io/scaling-book/",
+            "description": "Core concepts from roofline analysis used to understand and measure hardware utilisation limits in ML workloads",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://jax-ml.github.io/scaling-book/"
+            ],
+            "theme": "Scaling LLMs on Hardware: Systems Concepts",
+            "group_item_id": "916acf",
+            "group_set_id": "916309"
+          },
+          {
+            "words": [
+              "ALLGATHER",
+              "REDUCESCATTER",
+              "ALLREDUCE",
+              "BROADCAST"
+            ],
+            "category": "Collective Communication Ops",
+            "color": "red",
+            "url": "https://jax-ml.github.io/scaling-book/sharding/",
+            "description": "Network collective operations used to synchronise or redistribute tensors across multiple TPU/GPU devices during training and inference",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://jax-ml.github.io/scaling-book/sharding/"
+            ],
+            "theme": "Scaling LLMs on Hardware: Systems Concepts",
+            "group_item_id": "c0b781",
+            "group_set_id": "916309"
+          },
+          {
+            "words": [
+              "PIPELINE",
+              "TENSOR",
+              "DATA",
+              "EXPERT"
+            ],
+            "category": "Parallelism Strategies",
+            "color": "green",
+            "url": "https://jax-ml.github.io/scaling-book/training/",
+            "description": "Distinct schemes for distributing model computation across many accelerators — each trades communication for memory or latency differently",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://jax-ml.github.io/scaling-book/training/"
+            ],
+            "theme": "Scaling LLMs on Hardware: Systems Concepts",
+            "group_item_id": "acf6a9",
+            "group_set_id": "916309"
+          },
+          {
+            "words": [
+              "HBM",
+              "SRAM",
+              "DRAM",
+              "CACHE"
+            ],
+            "category": "Memory Hierarchy Levels",
+            "color": "yellow",
+            "url": "https://jax-ml.github.io/scaling-book/tpus/",
+            "description": "Layers of on-chip and off-chip memory with different bandwidths and capacities that determine whether a workload is compute-bound or memory-bound",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://jax-ml.github.io/scaling-book/tpus/"
+            ],
+            "theme": "Scaling LLMs on Hardware: Systems Concepts",
+            "group_item_id": "5580e0",
+            "group_set_id": "916309"
+          }
+        ],
+        [
+          {
+            "words": [
+              "ATTENTION",
+              "MLP",
+              "LAYERNORM",
+              "EMBEDDING"
+            ],
+            "category": "Transformer Sub-Layers",
+            "color": "purple",
+            "url": "https://jax-ml.github.io/scaling-book/transformers/",
+            "description": "The core building blocks inside every Transformer block, each with distinct compute and memory footprints at scale",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://jax-ml.github.io/scaling-book/transformers/"
+            ],
+            "theme": "Scaling LLMs on Hardware: Systems Concepts",
+            "group_item_id": "9a6cac",
+            "group_set_id": "8be5a2"
+          },
+          {
+            "words": [
+              "PREFILL",
+              "DECODE",
+              "BATCH",
+              "LATENCY"
+            ],
+            "category": "LLM Inference Phases",
+            "color": "teal",
+            "url": "https://jax-ml.github.io/scaling-book/inference/",
+            "description": "Operational stages and dimensions of serving a large language model — prefill processes the prompt in parallel, decode generates tokens autoregressively",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://jax-ml.github.io/scaling-book/inference/"
+            ],
+            "theme": "Scaling LLMs on Hardware: Systems Concepts",
+            "group_item_id": "4abd51",
+            "group_set_id": "8be5a2"
+          },
+          {
+            "words": [
+              "SHARDING",
+              "REPLICATION",
+              "PARTITIONING",
+              "TILING"
+            ],
+            "category": "Tensor Distribution Techniques",
+            "color": "orange",
+            "url": "https://jax-ml.github.io/scaling-book/sharding/",
+            "description": "Methods for splitting or copying tensors across devices to fit large models in distributed memory while keeping communication overhead low",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://jax-ml.github.io/scaling-book/sharding/"
+            ],
+            "theme": "Scaling LLMs on Hardware: Systems Concepts",
+            "group_item_id": "250d93",
+            "group_set_id": "8be5a2"
+          },
+          {
+            "words": [
+              "THROUGHPUT",
+              "UTILISATION",
+              "EFFICIENCY",
+              "SCALING"
+            ],
+            "category": "Performance Metrics",
+            "color": "indigo",
+            "url": "https://jax-ml.github.io/scaling-book/",
+            "description": "Top-level measures used to evaluate whether a model is running well on hardware — strong scaling means adding chips yields proportional throughput gains",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://jax-ml.github.io/scaling-book/"
+            ],
+            "theme": "Scaling LLMs on Hardware: Systems Concepts",
+            "group_item_id": "ab23a5",
+            "group_set_id": "8be5a2"
+          }
+        ]
+      ],
+      "game_set_id": "da75bc"
+    }
+  ]
+}

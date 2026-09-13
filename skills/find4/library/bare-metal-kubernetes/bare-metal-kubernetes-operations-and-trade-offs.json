@@ -1,0 +1,202 @@
+{
+  "metadata": {
+    "generated_at": "2026-09-07T00:00:00Z",
+    "source": "https://www.digitalocean.com/community/tutorials/bare-metal-kubernetes",
+    "suggested_name": "bare-metal-kubernetes.json",
+    "modified_at": "2026-09-07T14:07:30.800910",
+    "source_id": "https://www.digitalocean.com/community/tutorials/bare-metal-kubernetes",
+    "step": "finalize_metadata",
+    "id_registry": {
+      "game_set_ids": [
+        "f4928a"
+      ],
+      "group_set_ids": [
+        "41514e",
+        "3a14c7"
+      ],
+      "group_item_ids": [
+        "ae96cb",
+        "d06145",
+        "abf504",
+        "e956ee",
+        "9a47e1",
+        "86a13b",
+        "0417e1",
+        "a5203b"
+      ]
+    },
+    "id": "xuUgnvXE7P8KKLFj",
+    "split_info": {
+      "role": "split",
+      "split_at": "2026-09-07T14:07:38.538942+00:00",
+      "parent_id": "xuUgnvXE7P8KKLFj",
+      "parent_file": "/home/claude/output/games/bare-metal-kubernetes.json",
+      "theme": "Bare Metal Kubernetes: Operations & Trade-offs",
+      "slug": "bare-metal-kubernetes-operations-and-trade-offs"
+    }
+  },
+  "game_sets": [
+    {
+      "theme": "Bare Metal Kubernetes: Operations & Trade-offs",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "PROMETHEUS",
+              "GRAFANA",
+              "KUBE-STATE-METRICS",
+              "COREDNS"
+            ],
+            "category": "Kubernetes Observability Tools",
+            "color": "blue",
+            "url": "https://www.digitalocean.com/community/tutorials/bare-metal-kubernetes",
+            "description": "Tools used to monitor, visualize, and debug a Kubernetes cluster in production",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://kubernetes.io/docs/tasks/debug/"
+            ],
+            "theme": "Bare Metal Kubernetes: Operations & Trade-offs",
+            "group_item_id": "ae96cb",
+            "group_set_id": "41514e"
+          },
+          {
+            "words": [
+              "NODEPORT",
+              "CLUSTERIP",
+              "DEPLOYMENT",
+              "NAMESPACE"
+            ],
+            "category": "Kubernetes Resource Types",
+            "color": "green",
+            "url": "https://www.digitalocean.com/community/tutorials/bare-metal-kubernetes",
+            "description": "Core Kubernetes API objects used when deploying and exposing applications on the cluster",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://kubernetes.io/docs/concepts/workloads/"
+            ],
+            "theme": "Bare Metal Kubernetes: Operations & Trade-offs",
+            "group_item_id": "d06145",
+            "group_set_id": "41514e"
+          },
+          {
+            "words": [
+              "THROUGHPUT",
+              "LATENCY",
+              "OVERHEAD",
+              "HYPERVISOR"
+            ],
+            "category": "Performance Concepts: Bare Metal vs VM",
+            "color": "red",
+            "url": "https://www.digitalocean.com/community/tutorials/bare-metal-kubernetes",
+            "description": "Key performance factors that differentiate bare metal from VM-based Kubernetes deployments",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.digitalocean.com/community/tutorials/bare-metal-kubernetes"
+            ],
+            "theme": "Bare Metal Kubernetes: Operations & Trade-offs",
+            "group_item_id": "abf504",
+            "group_set_id": "41514e"
+          },
+          {
+            "words": [
+              "PROVISIONING",
+              "ONBOARDING",
+              "CAPACITY",
+              "AUTOMATION"
+            ],
+            "category": "Bare Metal Scaling Challenges",
+            "color": "orange",
+            "url": "https://www.digitalocean.com/community/tutorials/bare-metal-kubernetes",
+            "description": "Operational concerns unique to scaling bare metal clusters — unlike cloud, nodes must be physically added",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://www.digitalocean.com/community/tutorials/bare-metal-kubernetes"
+            ],
+            "theme": "Bare Metal Kubernetes: Operations & Trade-offs",
+            "group_item_id": "e956ee",
+            "group_set_id": "41514e"
+          }
+        ],
+        [
+          {
+            "words": [
+              "KUBECONFIG",
+              "ADMIN.CONF",
+              "JOIN-TOKEN",
+              "DISCOVERY-HASH"
+            ],
+            "category": "Cluster Bootstrap Artifacts",
+            "color": "purple",
+            "url": "https://www.digitalocean.com/community/tutorials/bare-metal-kubernetes",
+            "description": "Files and tokens generated during kubeadm init that enable cluster access and worker node joining",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/"
+            ],
+            "theme": "Bare Metal Kubernetes: Operations & Trade-offs",
+            "group_item_id": "9a47e1",
+            "group_set_id": "3a14c7"
+          },
+          {
+            "words": [
+              "STATIC-IP",
+              "DNS",
+              "UFW",
+              "SSH"
+            ],
+            "category": "Network Prerequisites for Bare Metal",
+            "color": "teal",
+            "url": "https://www.digitalocean.com/community/tutorials/bare-metal-kubernetes",
+            "description": "Network and access requirements that must be configured before installing Kubernetes on bare metal",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://www.digitalocean.com/community/tutorials/bare-metal-kubernetes"
+            ],
+            "theme": "Bare Metal Kubernetes: Operations & Trade-offs",
+            "group_item_id": "86a13b",
+            "group_set_id": "3a14c7"
+          },
+          {
+            "words": [
+              "APT-MARK-HOLD",
+              "GPG-DEARMOR",
+              "KEYRINGS",
+              "STABLE-REPO"
+            ],
+            "category": "Kubernetes Package Management Steps",
+            "color": "yellow",
+            "url": "https://www.digitalocean.com/community/tutorials/bare-metal-kubernetes",
+            "description": "Debian/Ubuntu package management steps required to install and pin Kubernetes component versions",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/"
+            ],
+            "theme": "Bare Metal Kubernetes: Operations & Trade-offs",
+            "group_item_id": "0417e1",
+            "group_set_id": "3a14c7"
+          },
+          {
+            "words": [
+              "MASTER-NODE",
+              "WORKER-NODE",
+              "CONTROL-PLANE",
+              "READY"
+            ],
+            "category": "Cluster Node Roles and States",
+            "color": "indigo",
+            "url": "https://www.digitalocean.com/community/tutorials/bare-metal-kubernetes",
+            "description": "Node classifications and the expected status reported by kubectl get nodes after cluster setup",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://kubernetes.io/docs/concepts/architecture/nodes/"
+            ],
+            "theme": "Bare Metal Kubernetes: Operations & Trade-offs",
+            "group_item_id": "a5203b",
+            "group_set_id": "3a14c7"
+          }
+        ]
+      ],
+      "game_set_id": "f4928a"
+    }
+  ]
+}

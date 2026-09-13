@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category & Theme</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="/vendor/material.min.css">
+    <link rel="stylesheet" href="/vendor/material-grid.min.css">
+    <script src="/vendor/material.min.js"></script>
+    <style>
+      .theme-card {
+        width: 100%;
+        margin-bottom: 16px;
+      }
+
+      .chip-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+        margin: 4px 0;
+      }
+
+      .mobile-cards {
+        display: block;
+        padding: 16px;
+      }
+
+      .refresh-fab {
+        position: fixed;
+        bottom: 24px;
+        right: 24px;
+        z-index: 100;
+      }
+
+      /* Desktop table */
+      .desktop-table {
+        display: none;
+        overflow-x: auto;
+      }
+
+      @media (min-width: 768px) {
+        .desktop-table {
+          display: block;
+        }
+
+        .mobile-cards {
+          display: none;
+        }
+      }
+
+      .mdl-data-table {
+        width: 100%;
+        table-layout: fixed;
+      }
+
+      /* Sticky header */
+      .mdl-data-table thead th {
+        position: sticky;
+        top: 0;
+        background: #fff;
+        z-index: 10;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.12);
+      }
+
+      /* Column widths */
+      .core-theme-th    { width: 18%; }
+      .categories-th    { width: 26%; }
+      .skill-levels-th  { width: 20%; }
+      .quad-count-th    { width: 8%; }
+      .categories-count-th { width: 8%; }
+      .mdl-data-table td {
+        word-break: break-word;
+        white-space: normal;
+      }
+
+      /* Sortable column headers */
+      th.sortable {
+        cursor: pointer;
+        user-select: none;
+        white-space: nowrap;
+      }
+
+      th.sortable:hover {
+        background: #f5f5f5;
+      }
+
+      .sort-icon {
+        display: inline-block;
+        width: 14px;
+        margin-left: 4px;
+        opacity: 0.4;
+        font-size: 1rem;
+        vertical-align: middle;
+      }
+
+      th.sort-asc  .sort-icon,
+      th.sort-desc .sort-icon { opacity: 1; }
+
+      /* Persistent search in header */
+      .header-search-wrap {
+        display: flex;
+        align-items: center;
+        background: rgba(255,255,255,0.15);
+        border-radius: 4px;
+        padding: 0 8px;
+        margin-right: 8px;
+      }
+
+      .header-search-wrap .material-icons {
+        color: rgba(255,255,255,0.7);
+        font-size: 20px;
+        margin-right: 6px;
+      }
+
+      #search {
+        background: transparent;
+        border: none;
+        outline: none;
+        color: #fff;
+        font-size: 14px;
+        width: 200px;
+        padding: 6px 0;
+      }
+
+      #search::placeholder {
+        color: rgba(255,255,255,0.6);
+      }
+
+      .loading-spinner {
+        text-align: center;
+        padding: 32px;
+      }
+
+      .error-card {
+        margin: 16px;
+        padding: 16px;
+        background-color: #FEE2E2;
+        color: #DC2626;
+      }
+
+      .mdl-chip {
+        padding: 3px 8px;
+      }
+
+      .mdl-chip__text {
+        font-size: 1.2rem !important;
+      }
+
+      .header-line-th {
+        font-size: 1.3rem !important;
+      }
+
+      .labels-text {
+        font-size: 1.4rem !important;
+      }
+
+      .theme-link {
+        text-decoration: none;
+        color: inherit;
+        cursor: pointer;
+        background-image: linear-gradient(#3f51b5, #3f51b5);
+        background-position: 0 100%;
+        background-repeat: no-repeat;
+        background-size: 0% 2px;
+        transition: background-size 0.25s ease;
+      }
+
+      .theme-link:hover,
+      .theme-link:active {
+        background-size: 100% 2px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title">Categories &amp; Themes</span>
+          <div class="mdl-layout-spacer"></div>
+          <div class="header-search-wrap">
+            <i class="material-icons">search</i>
+            <input type="text" id="search" placeholder="Search...">
+          </div>
+        </div>
+      </header>
+
+      <main class="mdl-layout__content">
+        <!-- Desktop Table View -->
+        <div class="desktop-table">
+          <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+            <thead>
+              <tr>
+                <th class="mdl-data-table__cell--non-numeric core-theme-th header-line-th sortable" data-col="theme">
+                  Core Theme<span class="sort-icon">&#8597;</span>
+                </th>
+                <th class="mdl-data-table__cell--non-numeric categories-th header-line-th">Categories</th>
+                <th class="mdl-data-table__cell--non-numeric skill-levels-th header-line-th sortable" data-col="skill_levels">
+                  Skill Levels<span class="sort-icon">&#8597;</span>
+                </th>
+                <th class="mdl-data-table__cell--non-numeric quad-count-th header-line-th sortable" data-col="total_words">
+                  Quad #<span class="sort-icon">&#8597;</span>
+                </th>
+                <th class="mdl-data-table__cell--non-numeric categories-count-th header-line-th sortable" data-col="total_groups">
+                  Categories #<span class="sort-icon">&#8597;</span>
+                </th>
+                </tr>
+            </thead>
+            <tbody id="table-body"></tbody>
+          </table>
+        </div>
+
+        <!-- Mobile Card View -->
+        <div class="mobile-cards" id="card-container"></div>
+
+        <!-- Refresh Button -->
+        <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored refresh-fab">
+          <i class="material-icons">refresh</i>
+        </button>
+      </main>
+    </div>
+
+    <script>
+      let ffLinkMode = false; // when true, clicks go to ff- short link instead of config
+      const WINDOW_FEATURES = 'noopener,noreferrer';
+
+      // FNV-1a 32-bit: stable 8-char hex code from a config_file path, prefixed ff-
+      const ffHash = (configFile) => {
+        let h = 0x811c9dc5;
+        for (let i = 0; i < configFile.length; i++) {
+          h ^= configFile.charCodeAt(i);
+          h = Math.imul(h, 0x01000193) >>> 0;
+        }
+        return `ff-${h.toString(16).padStart(8, '0')}`;
+      };
+
+      class ThemeIndex {
+        constructor() {
+          this.themes = [];
+          this.sortCol = null;
+          this.sortDir = 'asc';
+
+          this.searchInput = document.getElementById('search');
+          this.tableBody = document.getElementById('table-body');
+          this.cardContainer = document.getElementById('card-container');
+          this.refreshButton = document.querySelector('.refresh-fab');
+
+          this.setupEventListeners();
+          this.fetchThemes();
+        }
+
+        setupEventListeners = () => {
+          this.searchInput.addEventListener('input', () => this.filterThemes());
+          this.refreshButton.addEventListener('click', () => this.fetchThemes());
+          this.refreshButton.addEventListener('touchend', () => this.fetchThemes());
+
+          document.querySelectorAll('th.sortable').forEach(th => {
+            th.addEventListener('click', () => this.handleSort(th));
+          });
+
+          const desktopTable = document.querySelector('.desktop-table');
+          if (desktopTable) {
+            desktopTable.addEventListener('dblclick', (e) => {
+              e.stopPropagation();
+              this.toggleLinkMode();
+            });
+            desktopTable.addEventListener('touchend', (() => {
+              let last = 0;
+              return (e) => {
+                const now = Date.now();
+                if (now - last < 350) { e.preventDefault(); this.toggleLinkMode(); }
+                last = now;
+              };
+            })());
+          }
+        };
+
+        handleSort = (th) => {
+          const col = th.dataset.col;
+          if (this.sortCol === col) {
+            this.sortDir = this.sortDir === 'asc' ? 'desc' : 'asc';
+          } else {
+            this.sortCol = col;
+            this.sortDir = 'asc';
+          }
+
+          document.querySelectorAll('th.sortable').forEach(el => {
+            el.classList.remove('sort-asc', 'sort-desc');
+            el.querySelector('.sort-icon').innerHTML = '&#8597;';
+          });
+          th.classList.add(this.sortDir === 'asc' ? 'sort-asc' : 'sort-desc');
+          th.querySelector('.sort-icon').innerHTML = this.sortDir === 'asc' ? '&#8593;' : '&#8595;';
+
+          this.filterThemes();
+        };
+
+        sortThemes = (themes) => {
+          if (!this.sortCol) return themes;
+          const col = this.sortCol;
+          const dir = this.sortDir === 'asc' ? 1 : -1;
+
+          return [...themes].sort((a, b) => {
+            let av = a[col];
+            let bv = b[col];
+            if (Array.isArray(av)) av = av.join(', ');
+            if (Array.isArray(bv)) bv = bv.join(', ');
+            if (typeof av === 'number' && typeof bv === 'number') return (av - bv) * dir;
+            return String(av).localeCompare(String(bv)) * dir;
+          });
+        };
+
+        fetchThemes = async () => {
+          this.showLoading();
+          try {
+            const source = localStorage.getItem('GAME_SOURCE');
+            const themes_url = (source === 'library') ? '/library/themes.json' : '/config/themes.json';
+            const game_source = (source === 'library') ? 'library' : 'default';
+            localStorage.setItem('GAME_SOURCE', game_source);
+
+            const response = await fetch(`${themes_url}?v=${Date.now()}`);
+            if (!response.ok) throw new Error(`Failed to fetch themes: ${themes_url}`);
+            this.themes = await response.json();
+            this.filterThemes();
+          } catch (error) {
+            this.showError(error.message);
+          }
+        };
+
+        showLoading = () => {
+          this.tableBody.innerHTML = `
+            <tr>
+              <td colspan="5" class="loading-spinner">
+                <div class="mdl-spinner mdl-js-spinner is-active"></div>
+                <p>Loading themes...</p>
+              </td>
+            </tr>`;
+          this.cardContainer.innerHTML = `
+            <div class="loading-spinner">
+              <div class="mdl-spinner mdl-js-spinner is-active"></div>
+              <p>Loading themes...</p>
+            </div>`;
+          componentHandler.upgradeDom();
+        };
+
+        showError = (message) => {
+          const html = `
+            <div class="error-card mdl-card mdl-shadow--2dp">
+              <div class="mdl-card__title">
+                <h2 class="mdl-card__title-text">Error</h2>
+              </div>
+              <div class="mdl-card__supporting-text">${message}</div>
+            </div>`;
+          this.tableBody.innerHTML = html;
+          this.cardContainer.innerHTML = html;
+        };
+
+        // windowName controls tab reuse: a stable name reuses the same tab; '_blank' always opens fresh
+        openNewLocation = (url, windowName = 'Find4', features = WINDOW_FEATURES) => {
+          if (url === undefined) return;
+          window.open(url, windowName, features);
+        };
+
+        handleConfigClick = (configFile, event) => {
+          const useShortLink = (event && event.altKey) || ffLinkMode;
+          const base = window.location.origin;
+          let newUrl;
+          if (useShortLink) {
+            const code = ffHash(configFile);
+            newUrl = `${base}/?${code}`;
+            localStorage.setItem('GAME_SOURCE', 'library');
+          } else {
+            newUrl = `${base}/index.html?config=${configFile}`;
+          }
+          if (event && event.shiftKey && event.altKey) {
+            if (navigator.clipboard) {
+              navigator.clipboard.writeText(newUrl).catch(() => this._copyFallback(newUrl));
+            } else {
+              this.copyFallback(newUrl);
+            }
+            return;
+          }
+          this.openNewLocation(newUrl);
+        };
+
+        copyFallback = (text) => {
+          const ta = document.createElement('textarea');
+          ta.value = text;
+          ta.style.position = 'fixed';
+          ta.style.opacity = '0';
+          document.body.appendChild(ta);
+          ta.select();
+          document.execCommand('copy');
+          document.body.removeChild(ta);
+        };
+
+        toggleLinkMode = () => {
+          ffLinkMode = !ffLinkMode;
+          const th = document.querySelector('th[data-col="theme"]');
+          if (th) {
+            const label = th.childNodes[0];
+            label.textContent = ffLinkMode ? 'Core Theme [x] ' : 'Core Theme ';
+            th.title = ffLinkMode
+              ? 'Click mode: ff- short link (double-click to switch back)'
+              : 'Click mode: direct config (double-click to switch)';
+          }
+        };
+
+        filterThemes = () => {
+          const term = this.searchInput.value.toLowerCase();
+          const filtered = this.themes.filter(t =>
+            t.theme.toLowerCase().includes(term) ||
+            t.categories.some(c => c.toLowerCase().includes(term)) ||
+            t.skill_levels.some(l => l.toLowerCase().includes(term))
+          );
+          this.renderThemes(this.sortThemes(filtered));
+        };
+
+        renderThemes = (themes) => {
+          this.tableBody.innerHTML = themes.map(t => `
+            <tr>
+              <td class="mdl-data-table__cell--non-numeric labels-text"
+                  data-short-link="${t.games_file.replace(/\.json$/, '')}"
+                  data-config-file="${t.short_path}">
+                <a href="javascript:void(0)"
+                   onclick="themeIndex.handleConfigClick('${t.short_path}', event)"
+                   title="play game - ${t.games_file.replace(/\.json$/, '')}"
+                   class="theme-link">${t.theme}</a>
+              </td>
+              <td class="mdl-data-table__cell--non-numeric">
+                <div class="chip-container">
+                  ${t.categories.map(c => `<span class="mdl-chip"><span class="mdl-chip__text">${c}</span></span>`).join('')}
+                </div>
+              </td>
+              <td class="mdl-data-table__cell--non-numeric">
+                <div class="chip-container">
+                  ${t.skill_levels.map(l => `<span class="mdl-chip mdl-chip--contact"><span class="mdl-chip__text">${l}</span></span>`).join('')}
+                </div>
+              </td>
+              <td class="labels-text">${t.total_words}</td>
+              <td class="labels-text">${t.total_groups}</td>
+            </tr>`).join('');
+
+          this.cardContainer.innerHTML = themes.map(t => `
+            <div class="theme-card mdl-card mdl-shadow--2dp"
+                 data-short-link="${t.games_file.replace(/\.json$/, '')}"
+                 data-config-file="${t.short_path}">
+              <div class="mdl-card__title">
+                <h2 class="mdl-card__title-text">${t.theme}</h2>
+              </div>
+              <div class="mdl-card__supporting-text">
+                <div class="mb-3">
+                  <strong class="labels-text">Categories:</strong>
+                  <div class="chip-container">
+                    ${t.categories.map(c => `<span class="mdl-chip"><span class="mdl-chip__text">${c}</span></span>`).join('')}
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <strong>Skill Levels:</strong>
+                  <div class="chip-container">
+                    ${t.skill_levels.map(l => `<span class="mdl-chip mdl-chip--contact"><span class="mdl-chip__text">${l}</span></span>`).join('')}
+                  </div>
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+                  <div class="labels-text"><strong>Words:</strong> ${t.total_words}</div>
+                  <div class="labels-text"><strong>Groups:</strong> ${t.total_groups}</div>
+                </div>
+              </div>
+              <div class="mdl-card__actions mdl-card--border">
+                <button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"
+                        onclick="themeIndex.handleConfigClick('${t.short_path}', event)"
+                        ontouchend="themeIndex.handleConfigClick('${t.short_path}', event)">
+                  ${t.games_file}
+                </button>
+              </div>
+            </div>`).join('');
+
+          componentHandler.upgradeDom();
+          this.stampFfLinks(themes);
+        };
+
+        stampFfLinks = (themes) => {
+          for (const t of themes) {
+            const code = ffHash(t.short_path);
+            const base = window.location.origin;
+            const ffUrl = `${base}/?${code}`;
+
+            const td = this.tableBody.querySelector(`td[data-config-file="${t.short_path}"]`);
+            if (td) {
+              td.dataset.ffLink = code;
+              const a = td.querySelector('a');
+              if (a) a.title = `play game - ${code}  |  ${ffUrl}`;
+            }
+
+            const card = this.cardContainer.querySelector(`div[data-config-file="${t.short_path}"]`);
+            if (card) card.dataset.ffLink = code;
+          }
+        };
+      }
+
+      let themeIndex;
+      document.addEventListener('DOMContentLoaded', () => {
+        themeIndex = new ThemeIndex();
+      });
+    </script>
+  </body>
+
+</html>

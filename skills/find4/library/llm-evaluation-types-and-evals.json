@@ -1,0 +1,372 @@
+{
+  "metadata": {
+    "generated_at": "2026-09-07T00:00:00Z",
+    "source": "stdin",
+    "suggested_name": "llm-evaluation-types-and-evals.json",
+    "modified_at": "2026-09-07T16:08:30.419690",
+    "source_id": "stdin",
+    "step": "finalize_metadata",
+    "id_registry": {
+      "group_set_ids": [
+        "7db972",
+        "50ee1b",
+        "ae2d63",
+        "f87da9"
+      ],
+      "game_set_ids": [
+        "21636b",
+        "788fe7"
+      ],
+      "group_item_ids": [
+        "81844a",
+        "8764d9",
+        "f2cf44",
+        "a48b87",
+        "a95b1a",
+        "d2d602",
+        "f8a131",
+        "67900f",
+        "3b91a6",
+        "91eae5",
+        "d7c3e5",
+        "231e21",
+        "3bffc1",
+        "c5ecb5",
+        "2d7f1b",
+        "b55102"
+      ]
+    },
+    "id": "b6phovl5GxmDdXSk",
+    "split_info": {
+      "role": "combined",
+      "split_at": "2026-09-07T16:08:30.514262+00:00",
+      "source_file": "/home/claude/output/games/llm-evaluation-types-and-evals.json"
+    }
+  },
+  "game_sets": [
+    {
+      "theme": "LLM Evaluation: Types and Methods",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "POINTWISE",
+              "PAIRWISE",
+              "RUBRIC",
+              "REFERENCE"
+            ],
+            "category": "LLM-as-Judge Patterns",
+            "color": "blue",
+            "url": "https://decagon.ai/glossary/what-is-llm-as-a-judge",
+            "description": "The four core patterns for LLM-as-judge evaluation — scoring a single output, comparing two outputs, evaluating against criteria, or checking against a gold answer",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://arxiv.org/abs/2306.05685"
+            ],
+            "theme": "LLM Evaluation: Types and Methods",
+            "group_item_id": "81844a",
+            "group_set_id": "7db972"
+          },
+          {
+            "words": [
+              "BLEU",
+              "ROUGE",
+              "BERTSCORE",
+              "EXACT_MATCH"
+            ],
+            "category": "Reference-Based Metrics",
+            "color": "green",
+            "url": "https://futureagi.com/blog/llm-evaluation-frameworks-metrics-best-practices",
+            "description": "Automated metrics that score model output by comparing it to a known gold reference — the workhorses of benchmarking for tasks with unambiguous correct answers",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://futureagi.com/blogs/build-llm-evaluation-framework-2025"
+            ],
+            "theme": "LLM Evaluation: Types and Methods",
+            "group_item_id": "8764d9",
+            "group_set_id": "7db972"
+          },
+          {
+            "words": [
+              "LIKERT",
+              "PREFERENCE",
+              "ANNOTATION",
+              "AGREEMENT"
+            ],
+            "category": "Human Evaluation Methods",
+            "color": "yellow",
+            "url": "https://futureagi.com/blog/llm-evaluation-frameworks-metrics-best-practices",
+            "description": "The gold-standard approaches to human evaluation — rating scales, preference rankings, expert annotation, and inter-annotator agreement scores like Cohen's kappa",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://interviewkickstart.com/ai-glossary/evals-llm-evaluation"
+            ],
+            "theme": "LLM Evaluation: Types and Methods",
+            "group_item_id": "f2cf44",
+            "group_set_id": "7db972"
+          },
+          {
+            "words": [
+              "HALLUCINATION",
+              "FAITHFULNESS",
+              "GROUNDEDNESS",
+              "TOXICITY"
+            ],
+            "category": "Safety & Factuality Evals",
+            "color": "red",
+            "url": "https://arxiv.org/html/2602.18823",
+            "description": "Evaluation criteria focused on whether model outputs are factually accurate, grounded in provided context, and free from harmful or toxic content",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://futureagi.com/glossary/llm-as-a-judge"
+            ],
+            "theme": "LLM Evaluation: Types and Methods",
+            "group_item_id": "a48b87",
+            "group_set_id": "7db972"
+          }
+        ],
+        [
+          {
+            "words": [
+              "OFFLINE",
+              "ONLINE",
+              "SHADOW",
+              "PRODUCTION"
+            ],
+            "category": "Eval Deployment Modes",
+            "color": "purple",
+            "url": "https://interviewkickstart.com/ai-glossary/evals-llm-evaluation",
+            "description": "Where and when evals run — offline against a fixed dataset before release, or online against live production traffic including shadow mode testing",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://aiagentrank.io/glossary/llm-as-a-judge"
+            ],
+            "theme": "LLM Evaluation: Types and Methods",
+            "group_item_id": "a95b1a",
+            "group_set_id": "50ee1b"
+          },
+          {
+            "words": [
+              "POSITION_BIAS",
+              "VERBOSITY_BIAS",
+              "SELF_PREFERENCE",
+              "CALIBRATION"
+            ],
+            "category": "LLM Judge Failure Modes",
+            "color": "orange",
+            "url": "https://inblog.ai/glossary/llm-as-judge",
+            "description": "Known systematic biases in LLM-as-judge — favouring the first answer, longer answers, or outputs from the same model family, plus overall score miscalibration",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://arxiv.org/abs/2306.05685"
+            ],
+            "theme": "LLM Evaluation: Types and Methods",
+            "group_item_id": "d2d602",
+            "group_set_id": "50ee1b"
+          },
+          {
+            "words": [
+              "HELPFULNESS",
+              "RELEVANCE",
+              "COHERENCE",
+              "COMPLETENESS"
+            ],
+            "category": "Qualitative Eval Criteria",
+            "color": "teal",
+            "url": "https://futureagi.com/blog/llm-evaluation-frameworks-metrics-best-practices",
+            "description": "Subjective quality dimensions that automated metrics cannot easily capture — where LLM-as-judge or human evaluation is required",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://www.promptlayer.com/glossary/llm-as-a-judge"
+            ],
+            "theme": "LLM Evaluation: Types and Methods",
+            "group_item_id": "f8a131",
+            "group_set_id": "50ee1b"
+          },
+          {
+            "words": [
+              "MT_BENCH",
+              "CHATBOT_ARENA",
+              "MMLU",
+              "HELLASWAG"
+            ],
+            "category": "LLM Benchmarks",
+            "color": "indigo",
+            "url": "https://arxiv.org/abs/2306.05685",
+            "description": "Established benchmarks used to rank and compare LLMs — covering multi-turn dialogue quality, human preference, and multiple-choice reasoning tasks",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://arxiv.org/abs/2403.04132"
+            ],
+            "theme": "LLM Evaluation: Types and Methods",
+            "group_item_id": "67900f",
+            "group_set_id": "50ee1b"
+          }
+        ]
+      ],
+      "game_set_id": "21636b"
+    },
+    {
+      "theme": "LLM Evaluation: Types and Methods",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "TRAJECTORY",
+              "TOOL_CALL",
+              "OUTCOME",
+              "STEP_EFFICIENCY"
+            ],
+            "category": "Agent Evaluation Signals",
+            "color": "orange",
+            "url": "https://futureagi.com/glossary/llm-as-a-judge",
+            "description": "Evaluation signals specific to agentic systems — assessing not just the final answer but whether the agent took the right steps to get there",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://aiagentrank.io/glossary/llm-as-a-judge"
+            ],
+            "theme": "LLM Evaluation: Types and Methods",
+            "group_item_id": "3b91a6",
+            "group_set_id": "ae2d63"
+          },
+          {
+            "words": [
+              "REGRESSION",
+              "A_B_TEST",
+              "CANARY",
+              "BASELINE"
+            ],
+            "category": "Eval Testing Strategies",
+            "color": "blue",
+            "url": "https://inblog.ai/glossary/llm-as-judge",
+            "description": "Strategies for detecting quality changes — running evals after every prompt change, comparing variants, and always measuring against a known baseline",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://aiagentrank.io/glossary/llm-as-a-judge"
+            ],
+            "theme": "LLM Evaluation: Types and Methods",
+            "group_item_id": "91eae5",
+            "group_set_id": "ae2d63"
+          },
+          {
+            "words": [
+              "FEW_SHOT",
+              "ZERO_SHOT",
+              "CHAIN_OF_THOUGHT",
+              "SELF_CONSISTENCY"
+            ],
+            "category": "Prompting Eval Techniques",
+            "color": "green",
+            "url": "https://futureagi.com/blog/llm-evaluation-frameworks-metrics-best-practices",
+            "description": "Prompting strategies that affect how a model is evaluated and how a judge model is prompted — few-shot calibration examples improve judge reliability",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://www.promptlayer.com/glossary/llm-as-a-judge"
+            ],
+            "theme": "LLM Evaluation: Types and Methods",
+            "group_item_id": "d7c3e5",
+            "group_set_id": "ae2d63"
+          },
+          {
+            "words": [
+              "SPOT_CHECK",
+              "KAPPA",
+              "CORRELATION",
+              "INTER_RATER"
+            ],
+            "category": "Eval Quality Assurance",
+            "color": "purple",
+            "url": "https://futureagi.com/glossary/llm-as-a-judge",
+            "description": "Methods for validating that your evals are themselves trustworthy — human spot-checks, Cohen's kappa, and correlation against expert annotations",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://memx.app/glossary/llm-as-a-judge/"
+            ],
+            "theme": "LLM Evaluation: Types and Methods",
+            "group_item_id": "231e21",
+            "group_set_id": "ae2d63"
+          }
+        ],
+        [
+          {
+            "words": [
+              "DETERMINISTIC",
+              "SEMANTIC",
+              "CLASSIFIER",
+              "NEURAL"
+            ],
+            "category": "Scoring Method Types",
+            "color": "teal",
+            "url": "https://interviewkickstart.com/ai-glossary/evals-llm-evaluation",
+            "description": "The spectrum of automated scoring approaches — from exact string matching at one end to neural semantic similarity and classifier-based grading at the other",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://futureagi.com/blogs/build-llm-evaluation-framework-2025"
+            ],
+            "theme": "LLM Evaluation: Types and Methods",
+            "group_item_id": "3bffc1",
+            "group_set_id": "f87da9"
+          },
+          {
+            "words": [
+              "RAG_FAITHFULNESS",
+              "CONTEXT_RECALL",
+              "ANSWER_RELEVANCY",
+              "CONTEXT_PRECISION"
+            ],
+            "category": "RAG-Specific Evals",
+            "color": "red",
+            "url": "https://futureagi.com/glossary/llm-as-a-judge",
+            "description": "Eval metrics specific to Retrieval-Augmented Generation pipelines — checking that answers are faithful to retrieved context and that retrieval itself is relevant and precise",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://arxiv.org/html/2602.18823"
+            ],
+            "theme": "LLM Evaluation: Types and Methods",
+            "group_item_id": "c5ecb5",
+            "group_set_id": "f87da9"
+          },
+          {
+            "words": [
+              "DEEPEVAL",
+              "RAGAS",
+              "LANGSMITH",
+              "BRAINTRUST"
+            ],
+            "category": "Eval Frameworks & Tools",
+            "color": "yellow",
+            "url": "https://dataaspirant.com/llm-evaluation-tools/",
+            "description": "The leading open-source and commercial toolkits for running LLM evals — each with built-in judge patterns, metric libraries, and production monitoring",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://aiagentrank.io/glossary/llm-as-a-judge"
+            ],
+            "theme": "LLM Evaluation: Types and Methods",
+            "group_item_id": "2d7f1b",
+            "group_set_id": "f87da9"
+          },
+          {
+            "words": [
+              "DRIFT",
+              "LATENCY",
+              "COST",
+              "THROUGHPUT"
+            ],
+            "category": "Production Eval Signals",
+            "color": "indigo",
+            "url": "https://interviewkickstart.com/ai-glossary/evals-llm-evaluation",
+            "description": "Operational signals monitored alongside quality evals in production — detecting model drift, regression in response time, and cost-per-query changes over time",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://dataaspirant.com/llm-evaluation-tools/"
+            ],
+            "theme": "LLM Evaluation: Types and Methods",
+            "group_item_id": "b55102",
+            "group_set_id": "f87da9"
+          }
+        ]
+      ],
+      "game_set_id": "788fe7"
+    }
+  ]
+}

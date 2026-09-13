@@ -1,0 +1,47 @@
+short_link: ff-b40c3d5d short_path: games/system-design-patterns.json config_file: library/system-design-patterns/system-design-patterns.json
+short_link: ff-ac02ab6a short_path: games/database-scaling-decisions.json config_file: library/find4_final/database-scaling-decisions.json
+short_link: ff-9c14bd2d short_path: games/system-design-interview-concepts.json config_file: library/system-design-patterns/system-design-interview-concepts.json
+short_link: ff-2dd1cf97 short_path: games/system-design-caching.json config_file: library/system-design-caching/system-design-caching.json
+short_link: ff-be0db455 short_path: games/system-design-interview-mastery.json config_file: library/system-design-in-a-hurry/system-design-interview-mastery.json
+short_link: ff-b33a5bf9 short_path: games/system-design-core-concepts.json config_file: library/system-design-in-a-hurry/system-design-core-concepts.json
+short_link: ff-2f6a9444 short_path: games/sharding-and-distributed-data.json config_file: library/find4_final/sharding-and-distributed-data.json
+  OK   11d36c: Database Scaling Decisions
+  OK   50f0ee: Sharding & Distributed Data
+  OK   ec6d57: System Design Caching
+  OK   fb86e5: System Design Core Concepts
+  OK   53ce27: System Design Interview Concepts
+  OK   205727: System Design Interview Mastery
+  OK   43b32a: System Design Patterns
+
+Validation Report:
+--------------------------------------------------------------------------------
+No validation errors found.
+
+Duplicate Analysis:
+
+Processed 12 files
+Found 7 unique game sets
+
+Theme Index Summary:
+------------------------------------------------------------------------------------------------------------------------
+Theme                          Game Set ID     Words    Groups   Vers    File
+------------------------------------------------------------------------------------------------------------------------
+Database Scaling Decisions     11d36c          32       8        1   [v] database-scaling-decisions.json
+Sharding & Distributed Data    50f0ee          32       8        1   [v] sharding-and-distributed-data.json
+System Design Caching          ec6d57          32       8        1   [v] system-design-caching.json
+System Design Core Concepts    fb86e5          32       8        1   [v] system-design-core-concepts.json
+System Design Interview Concep 53ce27          32       8        1   [v] system-design-interview-concepts.json
+System Design Interview Master 205727          32       8        1   [v] system-design-interview-mastery.json
+System Design Patterns         43b32a          32       8        1   [v] system-design-patterns.json
+------------------------------------------------------------------------------------------------------------------------
+
+Theme index saved to library/themes.json
+
+Building library.json from library/themes.json ...
+
+Done.
+  game_sets : 7
+  missing   : 0
+  hash      : d84321f4b761a6be...
+  fingerprint: 9d9d3c9063b93376
+  output    : library/library.json

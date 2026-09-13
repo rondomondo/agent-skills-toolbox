@@ -1,0 +1,202 @@
+{
+  "metadata": {
+    "generated_at": "2026-09-10T12:00:00Z",
+    "source": "https://www.brendangregg.com/ebpf.html",
+    "suggested_name": "ebpf-tracing-tools-brendan-gregg.json",
+    "modified_at": "2026-09-10T16:49:01.127199",
+    "source_id": "https://www.brendangregg.com/ebpf.html",
+    "step": "finalize_metadata",
+    "id_registry": {
+      "game_set_ids": [
+        "eeb31f"
+      ],
+      "group_set_ids": [
+        "76bc75",
+        "e3a454"
+      ],
+      "group_item_ids": [
+        "035dd9",
+        "1c848b",
+        "dafe36",
+        "db919a",
+        "c77c79",
+        "ac3a4c",
+        "2986f8",
+        "39b7ee"
+      ]
+    },
+    "id": "ny1IRkxOCNb7SVu8",
+    "split_info": {
+      "role": "split",
+      "split_at": "2026-09-10T16:49:09.384997+00:00",
+      "parent_id": "ny1IRkxOCNb7SVu8",
+      "parent_file": "/home/claude/output/games/ebpf-tracing-tools-brendan-gregg.json",
+      "theme": "Linux Performance Observability with eBPF",
+      "slug": "linux-performance-observability-with-ebpf"
+    }
+  },
+  "game_sets": [
+    {
+      "theme": "Linux Performance Observability with eBPF",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "TCPRETRANS",
+              "TCPACCEPT",
+              "TCPLIFE",
+              "TCPDROP"
+            ],
+            "category": "TCP Network Tracing Tools",
+            "color": "blue",
+            "url": "https://www.brendangregg.com/ebpf.html",
+            "description": "bcc tools focused on tracing TCP connection lifecycle events — retransmits, passive accepts, connection lifespans, and dropped packets",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://github.com/iovisor/bcc"
+            ],
+            "theme": "Linux Performance Observability with eBPF",
+            "group_item_id": "035dd9",
+            "group_set_id": "76bc75"
+          },
+          {
+            "words": [
+              "HIST",
+              "LHIST",
+              "COUNT",
+              "STATS"
+            ],
+            "category": "bpftrace Map Functions",
+            "color": "green",
+            "url": "https://www.brendangregg.com/ebpf.html",
+            "description": "bpftrace map-populating builtin functions for summarising data: power-of-2 histogram, linear histogram, event count, and statistics (min/max/avg)",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://github.com/iovisor/bpftrace"
+            ],
+            "theme": "Linux Performance Observability with eBPF",
+            "group_item_id": "1c848b",
+            "group_set_id": "76bc75"
+          },
+          {
+            "words": [
+              "KPROBE",
+              "KRETPROBE",
+              "KFUNC",
+              "KRETFUNC"
+            ],
+            "category": "Kernel Dynamic Probe Types",
+            "color": "red",
+            "url": "https://www.brendangregg.com/ebpf.html",
+            "description": "bpftrace probe types for attaching to kernel function entry and return — standard kprobes and the newer BPF-based kfunc variants",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://github.com/iovisor/bpftrace"
+            ],
+            "theme": "Linux Performance Observability with eBPF",
+            "group_item_id": "dafe36",
+            "group_set_id": "76bc75"
+          },
+          {
+            "words": [
+              "PROFILE",
+              "FUNCLATENCY",
+              "BITESIZE",
+              "EXT4SLOWER"
+            ],
+            "category": "Latency & Profiling Tools",
+            "color": "orange",
+            "url": "https://www.brendangregg.com/ebpf.html",
+            "description": "bcc tools for measuring latency and profiling: CPU flame graph sampling, function latency, block I/O size distribution, and slow filesystem operation tracing",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://github.com/iovisor/bcc"
+            ],
+            "theme": "Linux Performance Observability with eBPF",
+            "group_item_id": "db919a",
+            "group_set_id": "76bc75"
+          }
+        ],
+        [
+          {
+            "words": [
+              "BPF_PROBE_READ",
+              "BPF_KTIME_GET_NS",
+              "BPF_LOG2L",
+              "BPF_TRACE_PRINTK"
+            ],
+            "category": "eBPF Helper Functions",
+            "color": "purple",
+            "url": "https://www.brendangregg.com/ebpf.html",
+            "description": "Kernel-side BPF helper functions used within eBPF programs: safe memory reads, nanosecond timestamps, log2 bucketing for histograms, and debug printing",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://github.com/iovisor/bcc"
+            ],
+            "theme": "Linux Performance Observability with eBPF",
+            "group_item_id": "c77c79",
+            "group_set_id": "e3a454"
+          },
+          {
+            "words": [
+              "USDT",
+              "UPROBE",
+              "URETPROBE",
+              "BASHREADLINE"
+            ],
+            "category": "User-Space Tracing Probes",
+            "color": "teal",
+            "url": "https://www.brendangregg.com/ebpf.html",
+            "description": "Probe types and an example tool for tracing user-space code: statically defined tracing points, dynamic function entry/return probes, and bash command tracing",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://github.com/iovisor/bcc"
+            ],
+            "theme": "Linux Performance Observability with eBPF",
+            "group_item_id": "ac3a4c",
+            "group_set_id": "e3a454"
+          },
+          {
+            "words": [
+              "LIBBPF",
+              "LIBBPF-TOOLS",
+              "SKEL",
+              "CONFIG_BPF_SYSCALL"
+            ],
+            "category": "eBPF Build & Runtime Requirements",
+            "color": "indigo",
+            "url": "https://www.brendangregg.com/ebpf.html",
+            "description": "Components required to build and run modern eBPF tools: the libbpf C library, skeleton headers generated from BPF objects, and the kernel config option enabling BPF syscalls",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://github.com/libbpf/libbpf"
+            ],
+            "theme": "Linux Performance Observability with eBPF",
+            "group_item_id": "2986f8",
+            "group_set_id": "e3a454"
+          },
+          {
+            "words": [
+              "CILIUM",
+              "XDP",
+              "SDN",
+              "DDOS"
+            ],
+            "category": "Non-Observability eBPF Uses",
+            "color": "yellow",
+            "url": "https://www.brendangregg.com/ebpf.html",
+            "description": "eBPF applications beyond tracing: Cilium for API-aware networking, eXpress Data Path for high-performance packet processing, software-defined networking, and early packet drop for DDoS mitigation",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://cilium.io"
+            ],
+            "theme": "Linux Performance Observability with eBPF",
+            "group_item_id": "39b7ee",
+            "group_set_id": "e3a454"
+          }
+        ]
+      ],
+      "game_set_id": "eeb31f"
+    }
+  ]
+}

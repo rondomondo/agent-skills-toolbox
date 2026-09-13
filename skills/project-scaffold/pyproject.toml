@@ -1,0 +1,59 @@
+[build-system]
+requires = ["setuptools>=72"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "project-scaffold"
+version = "0.1.0"
+description = "project-scaffold — Claude Code skill that scaffolds new Python development projects with devcontainer, VS Code config, Makefile, testing setup, and GitHub SSH support."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.12"
+authors = [{ name = "David Kierans", email = "dave@abcdef.ai" }]
+keywords = ["project-scaffold", "devcontainer", "scaffold", "python", "agent", "skill", "claude-code"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-cov>=5.0",
+    "ruff>=0.4",
+    "mypy>=1.9",
+    "black>=24.0",
+    "isort>=5.13",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "--cov=project-scaffold/src"
+
+[tool.ruff]
+line-length = 119
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]
+
+[tool.mypy]
+python_version = "3.10"
+strict = false
+ignore_missing_imports = true
+
+[tool.black]
+line-length = 119
+target-version = ["py312"]
+
+[tool.isort]
+profile = "black"
+line_length = 119

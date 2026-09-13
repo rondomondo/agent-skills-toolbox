@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find4 &mdash; Kubernetes Operators: Core Concepts</title>
+
+    <meta name="description" content="A Beginner-level Find4 word-grouping game on &#x27;Kubernetes Operators: Core Concepts&#x27;. 2 rounds, 32 words. Find the hidden connections between groups of 4.">
+    <meta name="keywords" content="Kubernetes Operators: Core Concepts, The Operator Building Blocks, The Control Loop Model, Operator RBAC Primitives, Operator Maturity Model Phases, Operator Scope &amp; Tenancy, CR Anatomy, Operator Examples in the Book, Advanced CR Metadata">
+    <meta name="author" content="Find4">
+    <meta name="theme-color" content="#0f6e56">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://find4.org/#game=tVhrb9s4Fv0rhBdYJIAdO87DifeT46ipMY4dyE5md3aLgJZom2NJFEgqqafof59zqZfdNNNO0wUCR6L4uOQ999xz-akRC8tDbnmj_6mxEonQ3IrwkdtGv9HtdM9bnbNWtzPvdPru77dGs2FUpgOB779kC6ETYYWZpjROaeMtlNpMfSGjaHuUhkvqnq1WwtCkCY9p2KYa1lLluKPfjUrQOVahXMqvGXDZP-n1O92j7uXpaa9bmfEow--3xIoUnZcy4ZH8QzxWW282ZPioxUoaq7fuILTK0kcjLKY3jf5_G-dBKIITdBS9i84yxMOCn3UuAzx0e-EZ7zU-NBsr7G93UO8s6IQ9dOEnwUmv47q4iaUVcdlpcRp0F2QCpjk7PcXDcae3XJ7hAdOeLQQewt5lxz1cdPlxcIyH5XmXC9fn7PTk-JLMuDw9P3GGXfS6p9TS6QUnx9T57ELwC2rhl53z83NaK1gGJ7TWohdcLGgUP-32Li4aHz7TWeCQfL2Krv89iqLwP4kemN8bn-v9kd2fGnYt4n0UsOrw-2yotMBPEogU_Zv1idJgjH5WOt__0L_G56FPP_ez-fSWDaeTuT8djz1qm955_mByTWcXAJkrRQ5qzNeiWoxdZTIKZbJiV5EKNrRYoCKl0W0RZXRqmY7wsrY2Nf12u4bfkVTtUAWmHRR2tsVHK5KwVXdp81S2XKuRKmkHmbEqbmmRg8-0yTnCBFqmFt8Ly5b4yFItY2nlE46FJ7Wx0rAF7LVsqVXcZ5xh_-xg6Ob1i2mvBSAqacJDlqNSaMNw3iwRz2xwN2J2m4qmG1yOZeXgQ1oCK8rEWI5tMbVk0jbd8Nx8hu1araJIaPbMbbCGiUOfBoWMB9Y03RP1d-GJZ5mvztM0kvACDGMLQSce84SvBOHHbBBoj5F4EnTWV7A6AZcQsMLQbYVHj8Whkdd_zBklXbQJDj-CvyLwCBpl2O2GOtqLQP_c3IGo7wGSw9HYY-Pp9A5jrr3ZyPeu2Ww-mHsE0quZ5z_sNIy9B2_M5v7o5sbzR5Obr8B3mDuBjZVK2a0KcW41cFdaiORvIZfrYI3dBTbTol07-CVA36vnGo11R8Ow3U3f-VkLmlZGgkVkHHWSSaYyE23xEqcc-GeYVWoRMqDMCnZgUhEcMr7ihDumFkbop52v-JeZwxxYfEMxETgYWUXTPwm9ErR0_C_mINSyWiJraIcxwZMcfzu41YKQSsNzXGstElushq2t0cWuEQX0FRPiG14tC3hmYBXFQ8w3NLu0LIFtmiNNMBmKOFVAnX2B6FGCIIxFKLHCN1FNqeeIvEWhHgpN7nrFQS2d4XRjcbS2cfR2WFdJ5DtgTZgdDT02GA6n95M5BoF1veLf1WhyTcAFK49By57vvu3DuIKRfzUYsruK8HaArB05fBPGWiwFPBiINg9wlqbFM7tO3O8fbb3gwUscuzUrIs7duwJb2X26BUjwHEtD_G2IcGdApgzEIAgUjp58DgdAc-QYq0amKiSG9RXCICRCJtBGkXoGfoiCgdmFAcuiD-kak_JAlAOuZOIS0gL_82ndNAVa9w1wNB5lxPGuE4XIzns5VU6GGA8uDvLPrWfY_jagfsUVlpuN45WlXAGqLZxDi-CKwAad1O0m30WL59v4CZRc6Z7vwO5oAqodj9H5_u7GH1wTbAGIX-6Jngf38-ndaDydv4bXW4p4abc577K7NTd7qE0znUYvlUOZfpYaDie6pEMrG1sBT_lCRjjtV3UBgoNV3bY51RlK0HvI27eun5vHjtnBFTcyYCNK7FEEMs2QzLl1XJxGahsLQlPeu8sOZoLHEWKJ3aeIC1hzyMCIIZoIuxQOLEADtHk56IQdvMsipCS5FME2iKAlAB8IFh5sshRBCvWgRdn7lB1cC5GSPXK1tphefEwVDhKMDfoGlDj4zVazn7GDASxmdzJStraFdtEyARQ5UO7yQ5bg8cclhQk3R1_1lIO3eiLciufX_PZmFFei_RUUf2juqt_J4Nab3Q3AwrMhpG5Nt9W7E8DzqX_jTx24fx3Mh--rYa8hfBZgf-yfbC4SiMDtDrat4NFLZEfxX5wZD59ISYYtq1Lya3V0BqvAVyAiu65qObdv8w3h8SSNLKKACK1Mh2G_JlM3O8i2OnumEuToXHLuMD8oWCVil4RLfnwxgVO7uSYA58OPRc9m1eeGjGcHlELGt9Uih1UGeF5LzFCtta_tAwIX8L7vIqz1xJ64E1s5dxrmLGPIWEX2fxuL_zXiF0V5VBfb7ZWKEPj7fhQ_AftVnfoF9ouieV993HlD9CTFfD_Dw937wczhfwrhMR9NJ7MvsI1aZwCppuJdNCtNDPY9EiPPay9rihcl3RcNrbCqxr4C6hlqrJDrENwuorDQA19UZH1G4pitVVSIgVI6l4DIKyoSO4qaF1sGlUpAymXzzsgvdPUz0gT2QyP29XGTpY5zqRRkRsbIZmwNlm45fDGTxTHXW8ziFPaBOFodMT9LiHjb7ziUf3jYpOly1EFCafUEsUEDMqdgQ1JVOCNuYHlhJmJKk4wiNmCEarTHqfn_FIcE8Ujx0LQhUNxPKyrTVvsfhWgpzH87sKt7l-8AtjcfXrOStTHkYTQb4WnG8I8A_t4Ds-x8H0xmoyvUllXTK5TufeTkR4cx8vYVioydSCCduFIvImEFZ2SLI5RtdbhXHLHDAOHmBbbpPDROaodAXfXE4erSFrvGgazWKrPOJip88hpS2KBmXnbg4MkTlUhkegSLRpFYTML-l3U7x6cFsZt8ZEHMrPLpYX6D8YC84SyZwTl0IQGuJiOEaCF_a9fijITQQDEH51u60GQ3qv1eRHF7ALGyiNxIrThdfWBi-rJj67PmKcWNa4ZE0hZ9yoF1t1CXlzvltzTiWzqBwx-HfOkQ8tmOuGzTobwdxtWt4XfA-N1oMhiPfssv4X6dQJH43jvP9yZDAvGNNyG0gqapXvRm03sfme7B82fUtI_gQSEf6Lbqtr5yLYG7FVRV_a3Ljjr4dy4w2iuOSnElEPh4d9cLL_m6XL_k6_xWoLiKUYvfMa7GXJ-VV8UA3IIuF4GpSDi2prwdAaaCJxAMkVpBmdPdSEQWN5l6hrf9sqqlgEk1aXG6O0lsK1gjJ0NeRI76zVoCcEaxYges3gGCBto4pCmLy3lqlBSYJPdJE9H9BnE55Zhc0KOwsJaIffd6JxR0-cCA2iWqhDK7PRSVQH5n6EJPCxJn7m5mg9ziomkJwCucIepo6zaa5FcuTlnuQ7309pvYvVLp5OlaYTr_mHbtlZ-h18sL9Fdi4sP-xT7dseTX-p8_fP4T">
+    <meta property="og:title" content="Kubernetes Operators: Core Concepts">
+    <meta property="og:description" content="Test your knowledge on Kubernetes Operators: Core Concepts. 2 rounds, 32 words.">
+    <meta property="og:image" content="https://find4.org/preview-image.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kubernetes Operators: Core Concepts">
+    <meta name="twitter:description" content="Beginner-level challenge covering Kubernetes Operators: Core Concepts.">
+    <meta name="twitter:image" content="https://find4.org/preview-image.png">
+
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "EducationalOccupationalCredential",
+  "name": "Kubernetes Operators: Core Concepts",
+  "educationalLevel": "Beginner",
+  "abstract": "Covers concepts including: The Operator Building Blocks, The Control Loop Model, Operator RBAC Primitives, Operator Maturity Model Phases."
+}
+    </script>
+
+    <style>
+        body{font-family:system-ui,-apple-system,sans-serif;max-width:720px;margin:2rem auto;padding:0 1rem;background:#f5f5f3;color:#111;}
+        .f4-game{background:#fff;border:0.5px solid rgba(0,0,0,0.3);border-radius:12px;padding:1rem 1.25rem;margin-bottom:48px;box-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1);}
+        .f4-game-header{display:flex;align-items:center;gap:10px;margin-bottom:1rem;flex-wrap:wrap;}
+        .f4-game-icon{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:20px;}
+        .f4-game-title-block{flex:1;min-width:0;}
+        .f4-game-title{font-size:15px;font-weight:500;margin:0;color:#111;}
+        .f4-game-meta{font-size:12px;color:#666;margin:0;}
+        .play-btn{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;background:#0f6e56;color:#fff;border-radius:10px;text-decoration:none;font-size:13px;font-weight:500;margin-left:auto;transition:background 0.2s;}
+        .play-btn:hover{background:#085041;}
+        .f4-groups{display:flex;flex-direction:column;gap:5px;}
+        .f4-round{font-size:11px;font-weight:500;color:#888;padding:8px 0 3px;text-transform:uppercase;letter-spacing:0.05em;}
+        .f4-group{display:grid;grid-template-columns:13px 1fr 90px 2fr;align-items:start;gap:8px;padding:8px 10px;border-radius:8px;border:0.5px solid #e0e0de;background:#fafaf9;}
+        .f4-dot{width:11px;height:11px;border-radius:50%;flex-shrink:0;margin-top:3px;}
+        .f4-cat{font-size:13px;font-weight:500;line-height:1.3;}
+        .f4-skill{font-size:11px;padding:2px 7px;border-radius:20px;text-align:center;white-space:nowrap;}
+        .f4-words{font-size:11px;color:#666;line-height:1.5;word-break:break-word;}
+        .sk-b{background:#e1f5ee;color:#085041;}.sk-i{background:#e6f1fb;color:#0c447c;}.sk-a{background:#faeeda;color:#633806;}.sk-e{background:#fcebeb;color:#791f1f;}
+        .dot-red{background:#e24b4a;}.dot-green{background:#639922;}.dot-blue{background:#378add;}.dot-yellow{background:#ba7517;}
+        .dot-purple{background:#7f77dd;}.dot-teal{background:#1d9e75;}.dot-orange{background:#d85a30;}.dot-indigo{background:#534ab7;}
+    </style>
+</head>
+<body>
+<div class="f4-game">
+  <div class="f4-game-header">
+    <div class="f4-game-icon" style="background:#e6f1fb;" aria-hidden="true">&#x2699;&#xFE0F;</div>
+    <div class="f4-game-title-block">
+      <h1 class="f4-game-title">Kubernetes Operators: Core Concepts</h1>
+      <p class="f4-game-meta">2 rounds &middot; 32 words &middot; Beginner level</p>
+    </div>
+    <a class="play-btn" href="https://find4.org/#game=tVhrb9s4Fv0rhBdYJIAdO87DifeT46ipMY4dyE5md3aLgJZom2NJFEgqqafof59zqZfdNNNO0wUCR6L4uOQ999xz-akRC8tDbnmj_6mxEonQ3IrwkdtGv9HtdM9bnbNWtzPvdPru77dGs2FUpgOB779kC6ETYYWZpjROaeMtlNpMfSGjaHuUhkvqnq1WwtCkCY9p2KYa1lLluKPfjUrQOVahXMqvGXDZP-n1O92j7uXpaa9bmfEow--3xIoUnZcy4ZH8QzxWW282ZPioxUoaq7fuILTK0kcjLKY3jf5_G-dBKIITdBS9i84yxMOCn3UuAzx0e-EZ7zU-NBsr7G93UO8s6IQ9dOEnwUmv47q4iaUVcdlpcRp0F2QCpjk7PcXDcae3XJ7hAdOeLQQewt5lxz1cdPlxcIyH5XmXC9fn7PTk-JLMuDw9P3GGXfS6p9TS6QUnx9T57ELwC2rhl53z83NaK1gGJ7TWohdcLGgUP-32Li4aHz7TWeCQfL2Krv89iqLwP4kemN8bn-v9kd2fGnYt4n0UsOrw-2yotMBPEogU_Zv1idJgjH5WOt__0L_G56FPP_ez-fSWDaeTuT8djz1qm955_mByTWcXAJkrRQ5qzNeiWoxdZTIKZbJiV5EKNrRYoCKl0W0RZXRqmY7wsrY2Nf12u4bfkVTtUAWmHRR2tsVHK5KwVXdp81S2XKuRKmkHmbEqbmmRg8-0yTnCBFqmFt8Ly5b4yFItY2nlE46FJ7Wx0rAF7LVsqVXcZ5xh_-xg6Ob1i2mvBSAqacJDlqNSaMNw3iwRz2xwN2J2m4qmG1yOZeXgQ1oCK8rEWI5tMbVk0jbd8Nx8hu1araJIaPbMbbCGiUOfBoWMB9Y03RP1d-GJZ5mvztM0kvACDGMLQSce84SvBOHHbBBoj5F4EnTWV7A6AZcQsMLQbYVHj8Whkdd_zBklXbQJDj-CvyLwCBpl2O2GOtqLQP_c3IGo7wGSw9HYY-Pp9A5jrr3ZyPeu2Ww-mHsE0quZ5z_sNIy9B2_M5v7o5sbzR5Obr8B3mDuBjZVK2a0KcW41cFdaiORvIZfrYI3dBTbTol07-CVA36vnGo11R8Ow3U3f-VkLmlZGgkVkHHWSSaYyE23xEqcc-GeYVWoRMqDMCnZgUhEcMr7ihDumFkbop52v-JeZwxxYfEMxETgYWUXTPwm9ErR0_C_mINSyWiJraIcxwZMcfzu41YKQSsNzXGstElushq2t0cWuEQX0FRPiG14tC3hmYBXFQ8w3NLu0LIFtmiNNMBmKOFVAnX2B6FGCIIxFKLHCN1FNqeeIvEWhHgpN7nrFQS2d4XRjcbS2cfR2WFdJ5DtgTZgdDT02GA6n95M5BoF1veLf1WhyTcAFK49By57vvu3DuIKRfzUYsruK8HaArB05fBPGWiwFPBiINg9wlqbFM7tO3O8fbb3gwUscuzUrIs7duwJb2X26BUjwHEtD_G2IcGdApgzEIAgUjp58DgdAc-QYq0amKiSG9RXCICRCJtBGkXoGfoiCgdmFAcuiD-kak_JAlAOuZOIS0gL_82ndNAVa9w1wNB5lxPGuE4XIzns5VU6GGA8uDvLPrWfY_jagfsUVlpuN45WlXAGqLZxDi-CKwAad1O0m30WL59v4CZRc6Z7vwO5oAqodj9H5_u7GH1wTbAGIX-6Jngf38-ndaDydv4bXW4p4abc577K7NTd7qE0znUYvlUOZfpYaDie6pEMrG1sBT_lCRjjtV3UBgoNV3bY51RlK0HvI27eun5vHjtnBFTcyYCNK7FEEMs2QzLl1XJxGahsLQlPeu8sOZoLHEWKJ3aeIC1hzyMCIIZoIuxQOLEADtHk56IQdvMsipCS5FME2iKAlAB8IFh5sshRBCvWgRdn7lB1cC5GSPXK1tphefEwVDhKMDfoGlDj4zVazn7GDASxmdzJStraFdtEyARQ5UO7yQ5bg8cclhQk3R1_1lIO3eiLciufX_PZmFFei_RUUf2juqt_J4Nab3Q3AwrMhpG5Nt9W7E8DzqX_jTx24fx3Mh--rYa8hfBZgf-yfbC4SiMDtDrat4NFLZEfxX5wZD59ISYYtq1Lya3V0BqvAVyAiu65qObdv8w3h8SSNLKKACK1Mh2G_JlM3O8i2OnumEuToXHLuMD8oWCVil4RLfnwxgVO7uSYA58OPRc9m1eeGjGcHlELGt9Uih1UGeF5LzFCtta_tAwIX8L7vIqz1xJ64E1s5dxrmLGPIWEX2fxuL_zXiF0V5VBfb7ZWKEPj7fhQ_AftVnfoF9ouieV993HlD9CTFfD_Dw937wczhfwrhMR9NJ7MvsI1aZwCppuJdNCtNDPY9EiPPay9rihcl3RcNrbCqxr4C6hlqrJDrENwuorDQA19UZH1G4pitVVSIgVI6l4DIKyoSO4qaF1sGlUpAymXzzsgvdPUz0gT2QyP29XGTpY5zqRRkRsbIZmwNlm45fDGTxTHXW8ziFPaBOFodMT9LiHjb7ziUf3jYpOly1EFCafUEsUEDMqdgQ1JVOCNuYHlhJmJKk4wiNmCEarTHqfn_FIcE8Ujx0LQhUNxPKyrTVvsfhWgpzH87sKt7l-8AtjcfXrOStTHkYTQb4WnG8I8A_t4Ds-x8H0xmoyvUllXTK5TufeTkR4cx8vYVioydSCCduFIvImEFZ2SLI5RtdbhXHLHDAOHmBbbpPDROaodAXfXE4erSFrvGgazWKrPOJip88hpS2KBmXnbg4MkTlUhkegSLRpFYTML-l3U7x6cFsZt8ZEHMrPLpYX6D8YC84SyZwTl0IQGuJiOEaCF_a9fijITQQDEH51u60GQ3qv1eRHF7ALGyiNxIrThdfWBi-rJj67PmKcWNa4ZE0hZ9yoF1t1CXlzvltzTiWzqBwx-HfOkQ8tmOuGzTobwdxtWt4XfA-N1oMhiPfssv4X6dQJH43jvP9yZDAvGNNyG0gqapXvRm03sfme7B82fUtI_gQSEf6Lbqtr5yLYG7FVRV_a3Ljjr4dy4w2iuOSnElEPh4d9cLL_m6XL_k6_xWoLiKUYvfMa7GXJ-VV8UA3IIuF4GpSDi2prwdAaaCJxAMkVpBmdPdSEQWN5l6hrf9sqqlgEk1aXG6O0lsK1gjJ0NeRI76zVoCcEaxYges3gGCBto4pCmLy3lqlBSYJPdJE9H9BnE55Zhc0KOwsJaIffd6JxR0-cCA2iWqhDK7PRSVQH5n6EJPCxJn7m5mg9ziomkJwCucIepo6zaa5FcuTlnuQ7309pvYvVLp5OlaYTr_mHbtlZ-h18sL9Fdi4sP-xT7dseTX-p8_fP4T" target="_blank" rel="noopener">
+        <span>&#9654;</span> Play on find4.org
+    </a>
+  </div>
+
+  <div class="f4-groups">
+    <h2 class="f4-round">Round 1</h2>
+    <div class="f4-group">
+        <div class="f4-dot dot-blue" role="img" aria-label="Beginner Level Category"></div>
+        <div class="f4-cat">The Operator Building Blocks</div>
+        <span class="f4-skill sk-b">Beginner</span>
+        <div class="f4-words">CRD &middot; CR &middot; CUSTOM CONTROLLER &middot; OPERAND</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-green" role="img" aria-label="Intermediate Level Category"></div>
+        <div class="f4-cat">The Control Loop Model</div>
+        <span class="f4-skill sk-i">Intermediate</span>
+        <div class="f4-words">RECONCILE LOOP &middot; DESIRED STATE &middot; OBSERVED STATE &middot; LEVEL TRIGGERING</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-red" role="img" aria-label="Intermediate Level Category"></div>
+        <div class="f4-cat">Operator RBAC Primitives</div>
+        <span class="f4-skill sk-i">Intermediate</span>
+        <div class="f4-words">SERVICE ACCOUNT &middot; ROLE &middot; ROLEBINDING &middot; CLUSTERROLE</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-purple" role="img" aria-label="Beginner Level Category"></div>
+        <div class="f4-cat">Operator Maturity Model Phases</div>
+        <span class="f4-skill sk-b">Beginner</span>
+        <div class="f4-words">INSTALL &middot; UPGRADE &middot; BACKUP &middot; AUTOPILOT</div>
+    </div>
+    <h2 class="f4-round">Round 2</h2>
+    <div class="f4-group">
+        <div class="f4-dot dot-teal" role="img" aria-label="Intermediate Level Category"></div>
+        <div class="f4-cat">Operator Scope &amp; Tenancy</div>
+        <span class="f4-skill sk-i">Intermediate</span>
+        <div class="f4-words">NAMESPACE SCOPE &middot; CLUSTER SCOPE &middot; OPERATORGROUP &middot; WATCHNAMESPACE</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-orange" role="img" aria-label="Beginner Level Category"></div>
+        <div class="f4-cat">CR Anatomy</div>
+        <span class="f4-skill sk-b">Beginner</span>
+        <div class="f4-words">SPEC &middot; STATUS &middot; PHASE &middot; CONDITIONS</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-indigo" role="img" aria-label="Beginner Level Category"></div>
+        <div class="f4-cat">Operator Examples in the Book</div>
+        <span class="f4-skill sk-b">Beginner</span>
+        <div class="f4-words">ETCD OPERATOR &middot; VISITORS SITE &middot; HELM OPERATOR &middot; ANSIBLE OPERATOR</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-yellow" role="img" aria-label="Advanced Level Category"></div>
+        <div class="f4-cat">Advanced CR Metadata</div>
+        <span class="f4-skill sk-a">Advanced</span>
+        <div class="f4-words">FINALIZER &middot; OWNER REFERENCE &middot; GENERATION &middot; RESOURCE VERSION</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Find4</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="/vendor/material.min.css">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+        <link rel="stylesheet" href="dist/bundle.min.css">
+    </head>
+
+    <body id="body-main" class="body-main">
+        
+        <div id="celebration"></div>
+        <div class="header hidden">
+            <h1>Find4</h1>
+        </div>
+        <div id="toolbar-section" class="section-collapsed">
+            <div id="toolbar" class="toolbar">
+                <div class="button-group">
+                    <button class="button mdl-button create-btn uiverse-button" onclick="game.openGameEditor()" title="Create">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                            <path
+                                d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                        </svg>
+                        <span class="btn-label">Create</span>
+                    </button>
+
+                    <button class="button mdl-button export-btn uiverse-button" onclick="game.exportGames()" title="Export">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
+                            <path
+                                d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
+                        </svg>
+                        <span class="btn-label">Export</span>
+                    </button>
+
+                    <button class="button mdl-button help-btn uiverse-button" onclick="game.openTutorial()" title="Help">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                            <path
+                                d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z" />
+                        </svg>
+                        <span class="btn-label">Help</span>
+                    </button>
+
+                    <button id="resources" class="button mdl-button resources-btn uiverse-button"
+                        onclick="game.openResourceTable()" title="Detail">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                            <path
+                                d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533l1.002-4.705z" />
+                            <circle cx="8" cy="4.5" r="1" />
+                        </svg>
+                        <span class="btn-label">Detail</span>
+                    </button>
+
+                    <button id="library" class="button mdl-button library-btn uiverse-button"
+                        onclick="game.openThemes('themes.html')" title="Library">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                            <path d="M4 4.5h8M4 6.5h8M4 8.5h8M4 10.5h8" stroke="currentColor" stroke-width="1.5" />
+                            <rect x="4" y="4" width="1" height="1" />
+                            <rect x="4" y="6" width="1" height="1" />
+                            <rect x="4" y="8" width="1" height="1" />
+                            <rect x="4" y="10" width="1" height="1" />
+                        </svg>
+                        <span class="btn-label">Library</span>
+                    </button>
+
+
+
+
+                    <button class="button mdl-button shift-btn uiverse-button hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M7.27 1.047a1 1 0 0 1 1.46 0l6.345 6.77c.6.638.146 1.683-.73 1.683H11.5v3a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-3H1.654C.78 9.5.326 8.455.924 7.816L7.27 1.047zM4.5 13.5V8H1.309l6.19-6.19L13.69 8h-3.19v5.5h-6z" />
+                        </svg>
+                    </button>
+
+                </div>
+                <div class="option-group toolbar-options">
+                    <div class="stats-bar option-item">
+                        <div class="stats">
+                            <button onclick="game.goHome()" class="mdl-button home-btn" aria-label="Home">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                                    <polyline points="9 22 9 12 15 12 15 22" />
+                                </svg>
+                            </button>
+                            <div>Lives: <span id="lives">4</span>/4</div>
+                            <div class="hiden">Hints: <span id="hints-left">4</span> left</div>
+                            <span>Games: <span id="puzzle-count">0</span></span>
+                            <div class="timer" id="timer">00:00</div>
+
+                        </div>
+                        <div class="level-select level-select-wrapper option-item">
+                            <select id="level-select">
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div id="toast-container"></div>
+        </div>
+
+        <section id="game-grid-solved-categories-section">
+
+            <div class="game-grid-solved-categories">
+                <div id="game-grid" class="game-grid"></div>
+
+                <div class="controls controls-button-group">
+                    <button id="toolbar-toggle" class="button mdl-button toolbar-toggle-btn uiverse-button controls-toolbar-toggle-btn " title="Toggle toolbar (Ctrl+Shift+O)" aria-label="Toggle toolbar">≡</button>
+                    <button id="submit" class="button mdl-button submit-btn uiverse-button" disabled>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                        </svg>
+                        <span class="btn-label">Submit</span>
+                    </button>
+                    <button id="hint" class="button mdl-button hint-btn uiverse-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13h-5a.5.5 0 0 1-.46-.302l-.761-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6zm3 8.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1-.5-.5z"/>
+                        </svg>
+                        <span class="btn-label">Hint</span>
+                    </button>
+                    <button id="shuffle" class="button mdl-button shuffle-btn uiverse-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.196 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z"/>
+                            <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 5.068v3.932a.25.25 0 0 0 .41.192l2.36-1.966c.12-.1.12-.284 0-.384l-2.36-1.966a.25.25 0 0 0-.41.192z"/>
+                        </svg>
+                        <span class="btn-label">Shuffle</span>
+                    </button>
+                    <button id="reset" class="button mdl-button reset-btn uiverse-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"/>
+                            <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/>
+                        </svg>
+                        <span class="btn-label">Reset</span>
+                    </button>
+                    <button id="solve" class="button mdl-button solve-btn uiverse-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M7.27 1.047a1 1 0 0 1 1.46 0l6.345 6.77c.6.638.146 1.683-.73 1.683H11.5v3a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-3H1.654C.78 9.5.326 8.455.924 7.816L7.27 1.047z"/>
+                        </svg>
+                        <span class="btn-label">Solve</span>
+                    </button>
+                    <button id="help-btn-toggle" class="button mdl-button help-btn uiverse-button controls-help-btn" onclick="game.openTutorial()" title="Help">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                            <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"/>
+                        </svg>
+                    </button>
+                </div>
+
+
+            </div>
+            <div class="solved-categories">
+                <div id="solved-categories" class="controls-categories"></div>
+            </div>
+
+        </section>
+
+        <div class="game-management">
+            <div class="game-sets-header" id="game-sets-header">
+                <svg class="game-sets-chevron rotated" id="game-sets-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"/>
+                </svg>
+                <span>Games</span>
+            </div>
+            <div class="game-sets game-sets-collapsed" id="game-sets"></div>
+            <div class="drop-zone" id="drop-zone">
+                <div class="drop-zone-icon">
+                    <!-- folder icon (default) -->
+                    <svg class="dz-icon dz-folder" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z"/>
+                    </svg>
+                    <!-- drop arrow icon (shown on drag-over) -->
+                    <svg class="dz-icon dz-drop" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 3v14M5 10l7 7 7-7"/>
+                        <path d="M3 21h18"/>
+                    </svg>
+                </div>
+                <div class="drop-zone-label">
+                    <span class="dz-label-default">Drop / Paste JSON or ZIP here, or double-click to browse</span>
+                    <span class="dz-label-hover">Release to load game</span>
+                </div>
+                <input type="file" id="file-input" style="display: none" accept=".json,.zip" multiple>
+            </div>
+        </div>
+
+        <!-- Game Editor Modal -->
+        <div class="modal-overlay" id="editor-modal">
+            <div class="modal modal-content editor-modal">
+                <div class="modal-buttons editor-button-group">
+                    <button class="button mdl-button cancel-btn" onclick="game.closeEditor()">Cancel</button>
+                    <button class="button mdl-button save-btn" onclick="game.saveGame()">Save Game</button>
+                </div>
+                <h2>Game Editor</h2>
+                <div class="game-editor" id="game-editor">
+                    <!-- Groups will be generated here -->
+                </div>
+                <div class="validation-error" id="editor-validation"></div>
+            </div>
+        </div>
+
+        <!-- Resources Modal -->
+        <div class="modal-overlay" id="resources-modal">
+            <div id="resources-modal-container" class="modal modal-content resources-modal">
+                <h2 class="resources-modal-header"></h2>
+                <div class="game-resources" id="game-resources">
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Help Modal -->
+        <div class="modal-overlay" id="tutorial-modal">
+            <div class="modal tutorial-modal">
+                <div class="tutorial-header">
+                    <h2>How to use Find4</h2>
+
+                </div>
+                <div class="tutorial-content">
+                    <div class="tutorial-section">
+                        <h3>Basic Instructions</h3>
+                        <p>Find groups of 4 words (or phrases) that share a common theme. Think creatively as the
+                            relationships between items could have more than one possable answer. Click the "Library"
+                            button for other category examples, create your own or edit and export existing collections.
+                            If you get very stuck you can request to auto-solve any group of 4 or even the whole game.
+                            Detailed sources, urls and description to allow further research on any items is just an
+                            item click away, or click the "Detail" button.</p>
+                    </div>
+
+                    <div class="tutorial-section">
+                        <h3>How to Play - Game Mechanics</h3>
+                        <div class="step-grid">
+                            <div class="tutorial-step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h4>Select Words</h4>
+                                    <p>Click on 4 words/phrames you think are related</p>
+                                </div>
+                            </div>
+                            <div class="tutorial-step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h4>Check your choices</h4>
+                                    <p>Click "Submit" to check if you are right</p>
+                                </div>
+                            </div>
+                            <div class="tutorial-step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h4>Keep Going</h4>
+                                    <p>Find all groups to win!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tutorial-section hidden">
+                        <h3>Difficulty Levels</h3>
+                        <div class="difficulty-grid">
+                            <div class="difficulty-item" style="background-color: #fef9c3">
+                                <h4>Beginner</h4>
+                                <p>Simple, obvious connections</p>
+                            </div>
+                            <div class="difficulty-item" style="background-color: #dcfce7">
+                                <h4>Easy</h4>
+                                <p>Clear but broader connections</p>
+                            </div>
+                            <div class="difficulty-item" style="background-color: #dbeafe">
+                                <h4>Medium</h4>
+                                <p>More subtle relationships</p>
+                            </div>
+                            <div class="difficulty-item" style="background-color: #f3e8ff">
+                                <h4>Hard</h4>
+                                <p>Complex or cryptic connections</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tutorial-section">
+                        <h3>Game Features</h3>
+                        <div class="features-list">
+                            <div class="feature-item">
+                                <span class="feature-highlight">4 Lives</span>
+                                <p>You get 4 attempts to find all connections</p>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-highlight">4 Hints</span>
+                                <p>Use hints wisely when you're stuck! (or God mode...)</p>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-highlight">Shuffle</span>
+                                <p>Rearrange words to see new patterns</p>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-highlight">Click to Learn</span>
+                                <p>Click on any solved item to see extra details</p>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-highlight">Hover to Isolate</span>
+                                <p>Hover over any solved sets to isolate categories</p>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-highlight">Reset</span>
+                                <p>Click the RESET button to start over</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tutorial-section">
+                        <h3>Import/Export Game Content</h3>
+                        <div class="features-list">
+                            <div class="feature-item">
+                                <span class="feature-highlight">Export the games</span>
+                                <p>Save the game content in JSON format by clicking the EXPORT button or CTRL + SHIFT +
+                                    E</p>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-highlight">Import new games</span>
+                                <p>Drag & Drop a JSON file containing the games anywhere in the page, or double click
+                                    for files.</p>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-highlight">Create or Edit</span>
+                                <p>You can CREATE, EDIT, CLONE or DELETE games by clicking the appropriate button.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tutorial-section">
+                        <h3>God mode</h3>
+                        <div class="features-list">
+                            <div class="feature-item">
+                                <span class="feature-highlight">Shift then Click to Solve</span>
+                                <p>Holding down the SHIFT when clicking a box will auto solve that single group of 4</p>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-highlight">Auto Solve the Game</span>
+                                <p>Click the SOLVE buttone, or CTRL + SHIFT + S, and the game will auto solve.</p>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-highlight">Game Select & Stats</span>
+                                <p>Double click the toolbar, or CTRL + SHIFT + O to toggle extra stats and a dropdown of
+                                    all games.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tutorial-section">
+                        <h3>Keyboard Shortcuts</h3>
+                        <div class="features-list">
+                            <div class="feature-item">
+                                <span class="feature-highlight">Show Extra Detail</span>
+                                <p>Press CTRL + SHIFT + D to show a table of extra category information.</p>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-highlight">Export</span>
+                                <p>Press CTRL + SHIFT + E to export games to your downloads folder.</p>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-highlight">Library</span>
+                                <p>Press CTRL + SHIFT + L to see a selection of suggested topics.</p>
+                            </div>
+                        </div>
+                        <div class="features-list">
+                            <div class="feature-item">
+                                <span class="feature-highlight">Show the Help</span>
+                                <p>Press CTRL + SHIFT + H for this Help.</p>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-highlight">Auto solve all</span>
+                                <p>Press CTRL + SHIFT + S to autosolve all 4 group connections.</p>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-highlight">Switch game source</span>
+                                <p>Press CTRL + SHIFT + G to toggle between the Default and Library game sources.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Mobile bottom sheet -->
+        <button class="mobile-fab" id="mobile-fab" aria-label="Open menu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"/>
+            </svg>
+        </button>
+        <div class="mobile-sheet-backdrop" id="mobile-sheet-backdrop"></div>
+        <div class="mobile-sheet" id="mobile-sheet" role="dialog" aria-label="Game menu">
+            <div class="mobile-sheet-handle"></div>
+            <div class="mobile-sheet-title">Menu</div>
+            <div class="mobile-sheet-actions">
+                <button class="mobile-sheet-btn" onclick="game.openTutorial(); closeMobileSheet()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                        <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"/>
+                    </svg>
+                    <span>Help</span>
+                </button>
+                <button class="mobile-sheet-btn" onclick="game.openThemes('themes.html'); closeMobileSheet()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                        <path d="M4 4.5h8M4 6.5h8M4 8.5h8M4 10.5h8" stroke="currentColor" stroke-width="1.5"/>
+                        <rect x="4" y="4" width="1" height="1"/><rect x="4" y="6" width="1" height="1"/>
+                        <rect x="4" y="8" width="1" height="1"/><rect x="4" y="10" width="1" height="1"/>
+                    </svg>
+                    <span>Library</span>
+                </button>
+                <button class="mobile-sheet-btn" onclick="game.openGameEditor(); closeMobileSheet()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                    </svg>
+                    <span>Create game</span>
+                </button>
+                <button class="mobile-sheet-btn" onclick="game.openResourceTable(); closeMobileSheet()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                        <path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533l1.002-4.705z"/>
+                        <circle cx="8" cy="4.5" r="1"/>
+                    </svg>
+                    <span>Detail</span>
+                </button>
+                <button class="mobile-sheet-btn" onclick="game.exportGames(); closeMobileSheet()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+                        <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+                    </svg>
+                    <span>Export</span>
+                </button>
+                <button id="mobile-game-source-btn" class="mobile-sheet-btn" onclick="game.toggleGameSource(); closeMobileSheet()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5zm14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5z"/>
+                    </svg>
+                    <span>Switch to Library</span>
+                </button>
+                <button class="mobile-sheet-btn mobile-sheet-btn--danger" onclick="if(confirm('Delete ALL saved games? This cannot be undone.')) { localStorage.clear(); window.find4.showMessage('All saved games deleted', 'error'); } closeMobileSheet()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+                        <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+                    </svg>
+                    <span>Clear saved games</span>
+                </button>
+            </div>
+        </div>
+
+        <script defer src="/vendor/material.min.js"></script>
+
+        <script type="module" src="dist/bundle.min.js"></script>
+    </body>
+
+</html>

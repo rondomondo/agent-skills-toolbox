@@ -1,0 +1,202 @@
+{
+  "metadata": {
+    "generated_at": "2026-09-07T12:00:00Z",
+    "source": "https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction",
+    "suggested_name": "system-design-interview-essentials.json",
+    "modified_at": "2026-09-07T18:33:21.080049",
+    "source_id": "https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction",
+    "step": "finalize_metadata",
+    "id_registry": {
+      "game_set_ids": [
+        "0b7522"
+      ],
+      "group_set_ids": [
+        "59651a",
+        "8cfe20"
+      ],
+      "group_item_ids": [
+        "4c4c00",
+        "7ce2fc",
+        "bf4a44",
+        "f39503",
+        "b5cf3b",
+        "94552b",
+        "e66b79",
+        "d42806"
+      ]
+    },
+    "id": "C1LTKkiwfQM7Du64",
+    "split_info": {
+      "role": "split",
+      "split_at": "2026-09-07T18:33:32.621395+00:00",
+      "parent_id": "C1LTKkiwfQM7Du64",
+      "parent_file": "/home/claude/output/games/system-design-interview-essentials.json",
+      "theme": "Distributed Systems Design Patterns",
+      "slug": "distributed-systems-design-patterns"
+    }
+  },
+  "game_sets": [
+    {
+      "theme": "Distributed Systems Design Patterns",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "CAP",
+              "NETWORKING",
+              "API",
+              "MODELING"
+            ],
+            "category": "Core Concept Modules in the Course",
+            "color": "green",
+            "url": "https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction",
+            "description": "The four foundational knowledge domains covered before diving into question breakdowns — each maps to a real interview weakness area",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://www.hellointerview.com/learn/system-design/in-a-hurry/core-concepts"
+            ],
+            "theme": "Distributed Systems Design Patterns",
+            "group_item_id": "4c4c00",
+            "group_set_id": "59651a"
+          },
+          {
+            "words": [
+              "ZOOKEEPER",
+              "DYNAMODB",
+              "POSTGRESQL",
+              "FLINK"
+            ],
+            "category": "Distributed Data Technologies",
+            "color": "blue",
+            "url": "https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction",
+            "description": "Technologies spanning coordination, NoSQL, relational, and streaming — knowing when to use each is the mark of a senior engineer",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://www.hellointerview.com/learn/system-design/in-a-hurry/key-technologies"
+            ],
+            "theme": "Distributed Systems Design Patterns",
+            "group_item_id": "7ce2fc",
+            "group_set_id": "59651a"
+          },
+          {
+            "words": [
+              "PROXIMITY",
+              "TIMESERIES",
+              "VECTOR",
+              "CDC"
+            ],
+            "category": "Advanced Specialised Topics",
+            "color": "purple",
+            "url": "https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction",
+            "description": "Niche but high-signal topics that separate strong senior candidates — CDC, vector DBs and time-series appear in ML/real-time system questions",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://www.hellointerview.com/learn/system-design/in-a-hurry/advanced-topics"
+            ],
+            "theme": "Distributed Systems Design Patterns",
+            "group_item_id": "bf4a44",
+            "group_set_id": "59651a"
+          },
+          {
+            "words": [
+              "SHOPIFY",
+              "DISCORD",
+              "SLACK",
+              "FIGMA"
+            ],
+            "category": "Real-World Architecture Case Studies",
+            "color": "orange",
+            "url": "https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction",
+            "description": "Production engineering teardowns published by practitioners — Shopify inventory, Discord storage, Slack queues, Figma multiplayer all appear in the course",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.hellointerview.com/learn/system-design/in-a-hurry/in-the-wild"
+            ],
+            "theme": "Distributed Systems Design Patterns",
+            "group_item_id": "f39503",
+            "group_set_id": "59651a"
+          }
+        ],
+        [
+          {
+            "words": [
+              "SERVICES",
+              "BALANCERS",
+              "DATABASES",
+              "CACHES"
+            ],
+            "category": "Infrastructure Components in a Design",
+            "color": "red",
+            "url": "https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction",
+            "description": "The four building blocks an interviewer expects to see placed, sized, and justified in a product or infra design problem",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://www.hellointerview.com/learn/system-design/in-a-hurry/delivery-framework"
+            ],
+            "theme": "Distributed Systems Design Patterns",
+            "group_item_id": "b5cf3b",
+            "group_set_id": "8cfe20"
+          },
+          {
+            "words": [
+              "MEMOISE",
+              "PROBE",
+              "DOUBT",
+              "EXPLORE"
+            ],
+            "category": "Interviewer Techniques to Test Depth",
+            "color": "teal",
+            "url": "https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction",
+            "description": "Methods interviewers use to detect surface-level memorisation versus genuine understanding — being probed on reasoning is expected, not a warning sign",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction"
+            ],
+            "theme": "Distributed Systems Design Patterns",
+            "group_item_id": "94552b",
+            "group_set_id": "8cfe20"
+          },
+          {
+            "words": [
+              "DEFENSIVE",
+              "ARGUMENTATIVE",
+              "UNCLEAR",
+              "DISTRACTED"
+            ],
+            "category": "Communication Failure Modes in Interviews",
+            "color": "yellow",
+            "url": "https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction",
+            "description": "Behaviours that tank collaboration scores — interviewers flag these as signs the candidate would be difficult to work with",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction"
+            ],
+            "theme": "Distributed Systems Design Patterns",
+            "group_item_id": "e66b79",
+            "group_set_id": "8cfe20"
+          },
+          {
+            "words": [
+              "REALTIME",
+              "JOBSCHEDULER",
+              "NOTIFICATION",
+              "AUCTION"
+            ],
+            "category": "Complex System Design Question Archetypes",
+            "color": "indigo",
+            "url": "https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction",
+            "description": "Questions that require multi-step processes, event-driven design, and async coordination — hallmarks of expert-level system design challenges",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction"
+            ],
+            "theme": "Distributed Systems Design Patterns",
+            "group_item_id": "d42806",
+            "group_set_id": "8cfe20"
+          }
+        ]
+      ],
+      "game_set_id": "0b7522"
+    }
+  ]
+}

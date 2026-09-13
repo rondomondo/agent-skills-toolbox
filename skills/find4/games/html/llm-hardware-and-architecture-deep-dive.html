@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find4 &mdash; LLM Hardware and Architecture Deep Dive</title>
+
+    <meta name="description" content="A Expert-level Find4 word-grouping game on &#x27;LLM Hardware and Architecture Deep Dive&#x27;. 2 rounds, 32 words. Find the hidden connections between groups of 4.">
+    <meta name="keywords" content="LLM Hardware and Architecture Deep Dive, TPU Compute Architecture, Inference Optimisation Methods, Training State Components, Chip Interconnect Technologies, Transformer Elementwise Ops, Hardware Binding Regimes, Large Language Model Families, JAX Compilation Abstractions">
+    <meta name="author" content="Find4">
+    <meta name="theme-color" content="#0f6e56">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://find4.org/#game=zVhtU9s4F_0rmjwftp0nJiElQNhPaUiLt3lbcLp0dxlGsRVHjWx5LRnIdvjve66cmADtDGzpzH7JyNKVdHXv0blH-VJLhOURt7x29KUWi1Tk3IroktvaUa3VbLW9ZsdrHgSt5tGb5lGz-XutXjO6yEOB8YW1mTlqND7zGy9RO7G0i2K2I3XDhFzJNPZmWi8b_1vIeOEpcSWUpwuLAUGLFHEsDG2V8oQWo0W253lKJZ5ZwSQxO5-NTjEp0ZGcyy339u_ca3WOWu2d9l5nv3VQOXkpo-_104oMS8xlCtO_xWUVrnpNRpe5iKWx-coFD-e4NMJiT1M7-qN2wA_nrXntol6Lc11k20P7B629cB9L8F2xG7bubCROuzGataPZwR6MxGF0eNBBo7MbtttvqGcetdpzNPY6e81WixphR7TJqc5szjuRs9mNDju1i1tyFCeY-eeeFepK6un7_odWk86WKQmf0rkm_3OtKA-usxr8eqDf7O8ctnf32vv_bxIoYJ3xXKT28ls7rYfn0m3RWOhENELFi0g0EOqssA2Knmk8BQR2IRxgBoMhO-F5dI21GU8j1s3DBQIY2gIdx0Jk7FheuRyqIsYEWmuxnuBhgse3JngRJngRTbhFyDbJpEx8-RdbVimnBbDCtc7LrJ59OgvGA78Hm2E3GE4H1Dif4rd7hl4gIcQFjDVhqhZMpqynE8RH3NsK1qFWOodJLijZRa6ejHOE2zQwJxImzGVmJaJ6VKuOFeo0FJk1zGQixG0LmdXsvdaxEgz-GPZn0Wru7jHEhFFmtIIJz3O-Ygm3ubxhSaGszNSKFam07BVO95qJGxHiFOaBjUQPN0xiu5RbhI7pjBgIPtVhuoTTGGQyElyxuc5ZkPPUoJGInCGmS6U54ooUL6VSl-7y4jD9G6xCIOZRJGkxri5LQnA5eE6cLur_Ovvry0w3YnOVt5kA_WseuK1vAeTDR6_X7Z30YX026femg27gf6SvX6fdUeCf4XM8wuexfxb4g0H5eR82fjoXuG-hYGOkN5HGBZQNhV1oF60NeGaqEM9Ej9ys_RhCgQgXqfyrQE7tglsGaBbwgYASrkGMDCYigZfoMZbpOTMiv6IsI7iGXWNP8AGLRJzziLpLdmB_FXDBrjbYQ4xCHmJdfqXBltip3IBmcGtBNXTepVgZl6crrsgpYAJYXor0EV660RXHkaLvRMxWbF4ENhXxPwE2QEzvw2TsjwLYvz_tHvt91xxPAn_o_94_Rfu3vv_-JHjIMTmXKQXuzKLT0Y1OEcFtnMS5cFF7Fs2s132Mk_HsMw6_BgkuuWBF5lAyL5Rim3nMOH_WGUeyw2WmZWrRr3OiDdgCP5hnRJ05vMBrLIXqTMMU7DAsQDQkaFzyqZbXwTB0J_5237QDNgyXICbUpNQWSZ1dCwgBWy5BbkF1CMVQwlATrMgf042fojsRkcRy30s6VdReBEGVYngCgvyeT7TSI3IZfRzIdImGP3rnj_y33dHxA9j0FjJj7uAoGClcYe76AzAxSH0LOyuhlL5-kRoVIBnZYmUkTBmMl2sMbTxAvoWi8qHzkktk6sLFw1wbVBjksSpfOC175fz3Hh3lNZOGat1PhjlNOMMi1zKyCwb85dzLdMTmfJbL8GeGeG32N5uNMI62ZTg3UFbN_s-XqUpWfgMtF_V7Smb8Lhh2z2F-Og66p58IPKfjyXjqGKg_mD4mmqp095Wg23YtDdWobbhYVPrnM81m4a-AZqRTj7Q8z10wUthh7rokVmoD-cpIjkRMbLkmUwPpwfg92bEGUFnH7rABXwrCGggKzgk2EyEvjGOQFYs0m4tr9m4wnpR1aLYC85B4cUXnR9LJVmheBCTVk-MBSNZPmXuU0j31g5NhP_B7HgpTf3TmBwST3ng4mQZ97-14Cl6B_u0Px6efqk8MD6cjv-ekzbr3PpQqz9_K1MmEU7zDknu0kxV5pp4rbr7KOHaB6sfycoeScCKqAwlAxa7pU6GeWJdXCjUpiSMUD2yBegFxDNIQABLkyysHgAYl_zXDE0kZttIFFoEyAyhKEbNRv6VOqvBVJ_GUCkuqlywTqOuwRLE0rk7NtLUKL_hw-SMh9UIo2rxXn4AiiNxhlzhlUjLLEBUJjUl3MHyAiwHPY8EGPI0LjsbQFe53PJHqfk3SuBbxd4NjkmsIXPrwyiu_zRJONBgGBojohUNZI3K54QlgSfnCuWMndt1DqtyI0Ub03qKoEJnMDKkTyxZ3QeYKBRBPphSQ5MrDwgqGW3F_rE_eAruoUPl_IvPVHxRPyPwv3fMJCdfzAeV_8otPADg76Z4ee8Pu5EHyYezUq1Tlreiug0fsvpV7YoxYvwQx0IZ0dHjnru5mY8jKcFkSRcW_hk1WeNuk0Lhp6RLRgmYR_X0kZwVJ1CrJWa6hZ5NKq9DB3U6GTLyEZ5U2zXKZcNBEd-Ib90AWNxkgYAhM9DeVm3YnYJUSqH3Jj1EiLyVC3P9W38THxUV9-682jKz_aLu9uP0H">
+    <meta property="og:title" content="LLM Hardware and Architecture Deep Dive">
+    <meta property="og:description" content="Test your knowledge on LLM Hardware and Architecture Deep Dive. 2 rounds, 32 words.">
+    <meta property="og:image" content="https://find4.org/preview-image.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="LLM Hardware and Architecture Deep Dive">
+    <meta name="twitter:description" content="Expert-level challenge covering LLM Hardware and Architecture Deep Dive.">
+    <meta name="twitter:image" content="https://find4.org/preview-image.png">
+
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "EducationalOccupationalCredential",
+  "name": "LLM Hardware and Architecture Deep Dive",
+  "educationalLevel": "Expert",
+  "abstract": "Covers concepts including: TPU Compute Architecture, Inference Optimisation Methods, Training State Components, Chip Interconnect Technologies."
+}
+    </script>
+
+    <style>
+        body{font-family:system-ui,-apple-system,sans-serif;max-width:720px;margin:2rem auto;padding:0 1rem;background:#f5f5f3;color:#111;}
+        .f4-game{background:#fff;border:0.5px solid rgba(0,0,0,0.15);border-radius:12px;padding:1rem 1.25rem;margin-bottom:48px;box-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1);}
+        .f4-game-header{display:flex;align-items:center;gap:10px;margin-bottom:1rem;flex-wrap:wrap;}
+        .f4-game-icon{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:20px;}
+        .f4-game-title-block{flex:1;min-width:0;}
+        .f4-game-title{font-size:15px;font-weight:500;margin:0;color:#111;}
+        .f4-game-meta{font-size:12px;color:#666;margin:0;}
+        .play-btn{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;background:#0f6e56;color:#fff;border-radius:10px;text-decoration:none;font-size:13px;font-weight:500;margin-left:auto;transition:background 0.2s;}
+        .play-btn:hover{background:#085041;}
+        .f4-groups{display:flex;flex-direction:column;gap:5px;}
+        .f4-round{font-size:11px;font-weight:500;color:#888;padding:8px 0 3px;text-transform:uppercase;letter-spacing:0.05em;}
+        .f4-group{display:grid;grid-template-columns:13px 1fr 90px 2fr;align-items:start;gap:8px;padding:8px 10px;border-radius:8px;border:0.5px solid #e0e0de;background:#fafaf9;}
+        .f4-dot{width:11px;height:11px;border-radius:50%;flex-shrink:0;margin-top:3px;}
+        .f4-cat{font-size:13px;font-weight:500;line-height:1.3;}
+        .f4-skill{font-size:11px;padding:2px 7px;border-radius:20px;text-align:center;white-space:nowrap;}
+        .f4-words{font-size:11px;color:#666;line-height:1.5;word-break:break-word;}
+        .sk-b{background:#e1f5ee;color:#085041;}.sk-i{background:#e6f1fb;color:#0c447c;}.sk-a{background:#faeeda;color:#633806;}.sk-e{background:#fcebeb;color:#791f1f;}
+        .dot-red{background:#e24b4a;}.dot-green{background:#639922;}.dot-blue{background:#378add;}.dot-yellow{background:#ba7517;}
+        .dot-purple{background:#7f77dd;}.dot-teal{background:#1d9e75;}.dot-orange{background:#d85a30;}.dot-indigo{background:#534ab7;}
+        @media(prefers-color-scheme:dark){
+          body{background:#1a1a18;color:#e8e6e1;}
+          .f4-game{background:#2c2c2a;border-color:rgba(255,255,255,0.1);box-shadow:0 4px 6px -1px rgb(0 0 0 / 0.4);}
+          .f4-game-title{color:#e8e6e1;}
+          .f4-game-meta{color:#888780;}
+          .f4-round{color:#888780;}
+          .f4-group{background:#222220;border-color:#3a3a38;}
+          .f4-cat{color:#e8e6e1;}
+          .f4-words{color:#888780;}
+          .sk-b{background:#04342c;color:#9fe1cb;}.sk-i{background:#042c53;color:#b5d4f4;}.sk-a{background:#412402;color:#fac775;}.sk-e{background:#501313;color:#f7c1c1;}
+        }
+    </style>
+</head>
+<body>
+<div class="f4-game f4-capture">
+  <div class="f4-game-header">
+    <div class="f4-game-icon" style="background:#e6f1fb;" aria-hidden="true">&#x2699;&#xFE0F;</div>
+    <div class="f4-game-title-block">
+      <h1 class="f4-game-title">LLM Hardware and Architecture Deep Dive</h1>
+      <p class="f4-game-meta">2 rounds &middot; 32 words &middot; Expert level</p>
+    </div>
+    <a class="play-btn" href="https://find4.org/#game=zVhtU9s4F_0rmjwftp0nJiElQNhPaUiLt3lbcLp0dxlGsRVHjWx5LRnIdvjve66cmADtDGzpzH7JyNKVdHXv0blH-VJLhOURt7x29KUWi1Tk3IroktvaUa3VbLW9ZsdrHgSt5tGb5lGz-XutXjO6yEOB8YW1mTlqND7zGy9RO7G0i2K2I3XDhFzJNPZmWi8b_1vIeOEpcSWUpwuLAUGLFHEsDG2V8oQWo0W253lKJZ5ZwSQxO5-NTjEp0ZGcyy339u_ca3WOWu2d9l5nv3VQOXkpo-_104oMS8xlCtO_xWUVrnpNRpe5iKWx-coFD-e4NMJiT1M7-qN2wA_nrXntol6Lc11k20P7B629cB9L8F2xG7bubCROuzGataPZwR6MxGF0eNBBo7MbtttvqGcetdpzNPY6e81WixphR7TJqc5szjuRs9mNDju1i1tyFCeY-eeeFepK6un7_odWk86WKQmf0rkm_3OtKA-usxr8eqDf7O8ctnf32vv_bxIoYJ3xXKT28ls7rYfn0m3RWOhENELFi0g0EOqssA2Knmk8BQR2IRxgBoMhO-F5dI21GU8j1s3DBQIY2gIdx0Jk7FheuRyqIsYEWmuxnuBhgse3JngRJngRTbhFyDbJpEx8-RdbVimnBbDCtc7LrJ59OgvGA78Hm2E3GE4H1Dif4rd7hl4gIcQFjDVhqhZMpqynE8RH3NsK1qFWOodJLijZRa6ejHOE2zQwJxImzGVmJaJ6VKuOFeo0FJk1zGQixG0LmdXsvdaxEgz-GPZn0Wru7jHEhFFmtIIJz3O-Ygm3ubxhSaGszNSKFam07BVO95qJGxHiFOaBjUQPN0xiu5RbhI7pjBgIPtVhuoTTGGQyElyxuc5ZkPPUoJGInCGmS6U54ooUL6VSl-7y4jD9G6xCIOZRJGkxri5LQnA5eE6cLur_Ovvry0w3YnOVt5kA_WseuK1vAeTDR6_X7Z30YX026femg27gf6SvX6fdUeCf4XM8wuexfxb4g0H5eR82fjoXuG-hYGOkN5HGBZQNhV1oF60NeGaqEM9Ej9ys_RhCgQgXqfyrQE7tglsGaBbwgYASrkGMDCYigZfoMZbpOTMiv6IsI7iGXWNP8AGLRJzziLpLdmB_FXDBrjbYQ4xCHmJdfqXBltip3IBmcGtBNXTepVgZl6crrsgpYAJYXor0EV660RXHkaLvRMxWbF4ENhXxPwE2QEzvw2TsjwLYvz_tHvt91xxPAn_o_94_Rfu3vv_-JHjIMTmXKQXuzKLT0Y1OEcFtnMS5cFF7Fs2s132Mk_HsMw6_BgkuuWBF5lAyL5Rim3nMOH_WGUeyw2WmZWrRr3OiDdgCP5hnRJ05vMBrLIXqTMMU7DAsQDQkaFzyqZbXwTB0J_5237QDNgyXICbUpNQWSZ1dCwgBWy5BbkF1CMVQwlATrMgf042fojsRkcRy30s6VdReBEGVYngCgvyeT7TSI3IZfRzIdImGP3rnj_y33dHxA9j0FjJj7uAoGClcYe76AzAxSH0LOyuhlL5-kRoVIBnZYmUkTBmMl2sMbTxAvoWi8qHzkktk6sLFw1wbVBjksSpfOC175fz3Hh3lNZOGat1PhjlNOMMi1zKyCwb85dzLdMTmfJbL8GeGeG32N5uNMI62ZTg3UFbN_s-XqUpWfgMtF_V7Smb8Lhh2z2F-Og66p58IPKfjyXjqGKg_mD4mmqp095Wg23YtDdWobbhYVPrnM81m4a-AZqRTj7Q8z10wUthh7rokVmoD-cpIjkRMbLkmUwPpwfg92bEGUFnH7rABXwrCGggKzgk2EyEvjGOQFYs0m4tr9m4wnpR1aLYC85B4cUXnR9LJVmheBCTVk-MBSNZPmXuU0j31g5NhP_B7HgpTf3TmBwST3ng4mQZ97-14Cl6B_u0Px6efqk8MD6cjv-ekzbr3PpQqz9_K1MmEU7zDknu0kxV5pp4rbr7KOHaB6sfycoeScCKqAwlAxa7pU6GeWJdXCjUpiSMUD2yBegFxDNIQABLkyysHgAYl_zXDE0kZttIFFoEyAyhKEbNRv6VOqvBVJ_GUCkuqlywTqOuwRLE0rk7NtLUKL_hw-SMh9UIo2rxXn4AiiNxhlzhlUjLLEBUJjUl3MHyAiwHPY8EGPI0LjsbQFe53PJHqfk3SuBbxd4NjkmsIXPrwyiu_zRJONBgGBojohUNZI3K54QlgSfnCuWMndt1DqtyI0Ub03qKoEJnMDKkTyxZ3QeYKBRBPphSQ5MrDwgqGW3F_rE_eAruoUPl_IvPVHxRPyPwv3fMJCdfzAeV_8otPADg76Z4ee8Pu5EHyYezUq1Tlreiug0fsvpV7YoxYvwQx0IZ0dHjnru5mY8jKcFkSRcW_hk1WeNuk0Lhp6RLRgmYR_X0kZwVJ1CrJWa6hZ5NKq9DB3U6GTLyEZ5U2zXKZcNBEd-Ib90AWNxkgYAhM9DeVm3YnYJUSqH3Jj1EiLyVC3P9W38THxUV9-682jKz_aLu9uP0H" target="_blank" rel="noopener"><span>&#9654;</span> Play on find4.org</a>
+  </div>
+
+  <div class="f4-groups">
+    <h2 class="f4-round">Round 1</h2>
+    <div class="f4-group">
+        <div class="f4-dot dot-red" role="img" aria-label="Expert Level Category"></div>
+        <div class="f4-cat">TPU Compute Architecture</div>
+        <span class="f4-skill sk-e">Expert</span>
+        <div class="f4-words">SYSTOLIC &middot; MATMUL &middot; MXU &middot; ASIC</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-blue" role="img" aria-label="Advanced Level Category"></div>
+        <div class="f4-cat">Inference Optimisation Methods</div>
+        <span class="f4-skill sk-a">Advanced</span>
+        <div class="f4-words">KV-CACHE &middot; SPECULATIVE &middot; QUANTISATION &middot; DISTILLATION</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-green" role="img" aria-label="Intermediate Level Category"></div>
+        <div class="f4-cat">Training State Components</div>
+        <span class="f4-skill sk-i">Intermediate</span>
+        <div class="f4-words">CHECKPOINT &middot; GRADIENT &middot; OPTIMIZER &middot; WEIGHT</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-yellow" role="img" aria-label="Expert Level Category"></div>
+        <div class="f4-cat">Chip Interconnect Technologies</div>
+        <span class="f4-skill sk-e">Expert</span>
+        <div class="f4-words">ICI &middot; DCN &middot; NVLink &middot; INFINIBAND</div>
+    </div>
+    <h2 class="f4-round">Round 2</h2>
+    <div class="f4-group">
+        <div class="f4-dot dot-teal" role="img" aria-label="Intermediate Level Category"></div>
+        <div class="f4-cat">Transformer Elementwise Ops</div>
+        <span class="f4-skill sk-i">Intermediate</span>
+        <div class="f4-words">SOFTMAX &middot; ROTARY &middot; DROPOUT &middot; GELU</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-purple" role="img" aria-label="Intermediate Level Category"></div>
+        <div class="f4-cat">Hardware Binding Regimes</div>
+        <span class="f4-skill sk-i">Intermediate</span>
+        <div class="f4-words">ARITHMETIC-INTENSITY &middot; COMPUTE-BOUND &middot; MEMORY-BOUND &middot; COMMUNICATION-BOUND</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-orange" role="img" aria-label="Beginner Level Category"></div>
+        <div class="f4-cat">Large Language Model Families</div>
+        <span class="f4-skill sk-b">Beginner</span>
+        <div class="f4-words">LLAMA &middot; GPT &middot; GEMINI &middot; PALM</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-indigo" role="img" aria-label="Expert Level Category"></div>
+        <div class="f4-cat">JAX Compilation Abstractions</div>
+        <span class="f4-skill sk-e">Expert</span>
+        <div class="f4-words">JAXPR &middot; XLA &middot; PJIT &middot; SHARD-MAP</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

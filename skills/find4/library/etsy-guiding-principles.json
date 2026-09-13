@@ -1,0 +1,372 @@
+{
+  "metadata": {
+    "generated_at": "2026-09-08T00:00:00Z",
+    "source": "https://careers.etsy.com/guiding-principles",
+    "suggested_name": "etsy-guiding-principles.json",
+    "modified_at": "2026-09-08T02:03:43.226487",
+    "source_id": "https://careers.etsy.com/guiding-principles",
+    "step": "finalize_metadata",
+    "id_registry": {
+      "group_set_ids": [
+        "dc69f5",
+        "d30305",
+        "a90f3d",
+        "418c77"
+      ],
+      "game_set_ids": [
+        "d1720d",
+        "dcc1e7"
+      ],
+      "group_item_ids": [
+        "ee813d",
+        "684a74",
+        "9cd8dc",
+        "435344",
+        "43eb06",
+        "df8b4f",
+        "64493e",
+        "9bbc72",
+        "449bde",
+        "1fffb2",
+        "1952da",
+        "62519c",
+        "c909f1",
+        "350eaa",
+        "212040",
+        "732305"
+      ]
+    },
+    "id": "HQSudwv6twus4Zpq",
+    "split_info": {
+      "role": "combined",
+      "split_at": "2026-09-08T02:03:52.710877+00:00",
+      "source_file": "/output/games/etsy-guiding-principles.json"
+    }
+  },
+  "game_sets": [
+    {
+      "theme": "Etsy Guiding Principles",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "CRAFT",
+              "MASTERY",
+              "EXCELLENCE",
+              "SKILL"
+            ],
+            "category": "Commit to our Craft",
+            "color": "orange",
+            "url": "https://careers.etsy.com/guiding-principles",
+            "description": "Words that connect to Etsy's principle of dedicating oneself to continuous learning and excelling at what you do",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://www.etsy.com/about"
+            ],
+            "theme": "Etsy Guiding Principles",
+            "group_item_id": "ee813d",
+            "group_set_id": "dc69f5"
+          },
+          {
+            "words": [
+              "FOCUS",
+              "EFFICIENCY",
+              "IMPACT",
+              "PRIORITIZE"
+            ],
+            "category": "Minimize Waste",
+            "color": "green",
+            "url": "https://careers.etsy.com/guiding-principles",
+            "description": "Words that connect to Etsy's principle of using time, resources and energy only on what matters most",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.etsy.com/about"
+            ],
+            "theme": "Etsy Guiding Principles",
+            "group_item_id": "684a74",
+            "group_set_id": "dc69f5"
+          },
+          {
+            "words": [
+              "DIVERSITY",
+              "INCLUSION",
+              "PERSPECTIVE",
+              "BELONGING"
+            ],
+            "category": "Embrace Differences",
+            "color": "purple",
+            "url": "https://careers.etsy.com/guiding-principles",
+            "description": "Words that connect to Etsy's principle that diverse teams are stronger and inclusive cultures more resilient",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.etsy.com/impact"
+            ],
+            "theme": "Etsy Guiding Principles",
+            "group_item_id": "9cd8dc",
+            "group_set_id": "dc69f5"
+          },
+          {
+            "words": [
+              "CURIOSITY",
+              "INSIGHT",
+              "ANALYSIS",
+              "RIGOR"
+            ],
+            "category": "Dig Deeper",
+            "color": "blue",
+            "url": "https://careers.etsy.com/guiding-principles",
+            "description": "Words that connect to Etsy's principle of staying curious and balancing intuition with data to make confident decisions",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://www.etsy.com/about"
+            ],
+            "theme": "Etsy Guiding Principles",
+            "group_item_id": "435344",
+            "group_set_id": "dc69f5"
+          }
+        ],
+        [
+          {
+            "words": [
+              "OPTIMISM",
+              "AMBITION",
+              "INSPIRATION",
+              "POSSIBILITY"
+            ],
+            "category": "Lead with Optimism",
+            "color": "yellow",
+            "url": "https://careers.etsy.com/guiding-principles",
+            "description": "Words that connect to Etsy's principle of believing in the mission, setting ambitious goals and reimagining what is possible",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://www.etsy.com/impact"
+            ],
+            "theme": "Etsy Guiding Principles",
+            "group_item_id": "43eb06",
+            "group_set_id": "d30305"
+          },
+          {
+            "words": [
+              "LEARNING",
+              "GROWTH",
+              "IMPROVEMENT",
+              "DEDICATION"
+            ],
+            "category": "Craft in Practice",
+            "color": "teal",
+            "url": "https://careers.etsy.com/guiding-principles",
+            "description": "Words describing the ongoing behaviors behind committing to craft — continuous improvement and dedicated practice",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://careers.etsy.com/guiding-principles"
+            ],
+            "theme": "Etsy Guiding Principles",
+            "group_item_id": "df8b4f",
+            "group_set_id": "d30305"
+          },
+          {
+            "words": [
+              "RESILIENCE",
+              "STRENGTH",
+              "EQUITY",
+              "CULTURE"
+            ],
+            "category": "What Inclusion Builds",
+            "color": "red",
+            "url": "https://careers.etsy.com/guiding-principles",
+            "description": "Outcomes that result from embracing differences — the qualities that emerge when diverse perspectives are genuinely welcomed",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://www.etsy.com/impact"
+            ],
+            "theme": "Etsy Guiding Principles",
+            "group_item_id": "64493e",
+            "group_set_id": "d30305"
+          },
+          {
+            "words": [
+              "MISSION",
+              "GENEROSITY",
+              "TOGETHER",
+              "SPIRIT"
+            ],
+            "category": "Optimism in Action",
+            "color": "indigo",
+            "url": "https://careers.etsy.com/guiding-principles",
+            "description": "Words from Etsy's optimism principle describing how belief and collective spirit drive reimagining what is possible",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://careers.etsy.com/guiding-principles"
+            ],
+            "theme": "Etsy Guiding Principles",
+            "group_item_id": "9bbc72",
+            "group_set_id": "d30305"
+          }
+        ]
+      ],
+      "game_set_id": "d1720d"
+    },
+    {
+      "theme": "Etsy Principles in Action",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "STRIVE",
+              "EXCEL",
+              "LEARN",
+              "IMPROVE"
+            ],
+            "category": "Craft Verbs",
+            "color": "orange",
+            "url": "https://careers.etsy.com/guiding-principles",
+            "description": "Action words directly from Etsy's craft principle — what it looks like to commit to your craft every day",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://careers.etsy.com/guiding-principles"
+            ],
+            "theme": "Etsy Principles in Action",
+            "group_item_id": "449bde",
+            "group_set_id": "a90f3d"
+          },
+          {
+            "words": [
+              "RESOURCES",
+              "ENERGY",
+              "TIME",
+              "PRECIOUS"
+            ],
+            "category": "What We Minimize Waste Of",
+            "color": "green",
+            "url": "https://careers.etsy.com/guiding-principles",
+            "description": "The specific things Etsy says are precious and must not be wasted — the inputs that require careful stewardship",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://careers.etsy.com/guiding-principles"
+            ],
+            "theme": "Etsy Principles in Action",
+            "group_item_id": "1fffb2",
+            "group_set_id": "a90f3d"
+          },
+          {
+            "words": [
+              "INTUITION",
+              "CONFIDENCE",
+              "BALANCE",
+              "DECISION"
+            ],
+            "category": "How We Dig Deeper",
+            "color": "blue",
+            "url": "https://careers.etsy.com/guiding-principles",
+            "description": "The tools and qualities Etsy uses to get to non-obvious solutions — balancing gut feel with evidence to decide with confidence",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://careers.etsy.com/guiding-principles"
+            ],
+            "theme": "Etsy Principles in Action",
+            "group_item_id": "1952da",
+            "group_set_id": "a90f3d"
+          },
+          {
+            "words": [
+              "REIMAGINE",
+              "BELIEVE",
+              "INSPIRE",
+              "ACHIEVE"
+            ],
+            "category": "Optimism Verbs",
+            "color": "yellow",
+            "url": "https://careers.etsy.com/guiding-principles",
+            "description": "Verbs that capture the active stance of leading with optimism — doing, not just hoping",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://careers.etsy.com/guiding-principles"
+            ],
+            "theme": "Etsy Principles in Action",
+            "group_item_id": "62519c",
+            "group_set_id": "a90f3d"
+          }
+        ],
+        [
+          {
+            "words": [
+              "NORTH STAR",
+              "COLLECTIVE",
+              "ALIGNED",
+              "MISSION"
+            ],
+            "category": "Why Guiding Principles Exist",
+            "color": "purple",
+            "url": "https://careers.etsy.com/guiding-principles",
+            "description": "Concepts from Etsy's own framing of why these principles matter — alignment, collective purpose and direction",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://careers.etsy.com/guiding-principles"
+            ],
+            "theme": "Etsy Principles in Action",
+            "group_item_id": "c909f1",
+            "group_set_id": "418c77"
+          },
+          {
+            "words": [
+              "HANDMADE",
+              "ARTISAN",
+              "MAKER",
+              "CREATIVE"
+            ],
+            "category": "Etsy's Marketplace Identity",
+            "color": "red",
+            "url": "https://www.etsy.com/about",
+            "description": "Words that define what Etsy sells and who its sellers are — the craft-driven identity that gives the guiding principles their context",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://www.etsy.com/about"
+            ],
+            "theme": "Etsy Principles in Action",
+            "group_item_id": "350eaa",
+            "group_set_id": "418c77"
+          },
+          {
+            "words": [
+              "SELLER",
+              "BUYER",
+              "COMMUNITY",
+              "PLATFORM"
+            ],
+            "category": "Etsy's Stakeholders",
+            "color": "teal",
+            "url": "https://www.etsy.com/about",
+            "description": "The key actors in the Etsy ecosystem — the people and structures the guiding principles are ultimately designed to serve",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.etsy.com/impact"
+            ],
+            "theme": "Etsy Principles in Action",
+            "group_item_id": "212040",
+            "group_set_id": "418c77"
+          },
+          {
+            "words": [
+              "TRUST",
+              "SAFETY",
+              "INTEGRITY",
+              "ETHICS"
+            ],
+            "category": "Platform Values",
+            "color": "indigo",
+            "url": "https://careers.etsy.com/trust-safety",
+            "description": "The foundational values that underpin Etsy as a responsible marketplace — enabling craft and commerce to thrive safely",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://careers.etsy.com/trust-safety"
+            ],
+            "theme": "Etsy Principles in Action",
+            "group_item_id": "732305",
+            "group_set_id": "418c77"
+          }
+        ]
+      ],
+      "game_set_id": "dcc1e7"
+    }
+  ]
+}

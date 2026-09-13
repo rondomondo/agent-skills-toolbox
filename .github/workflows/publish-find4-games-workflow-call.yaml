@@ -1,0 +1,281 @@
+name: Publish find4 games to github - workflow call
+
+on:
+  workflow_dispatch:
+    inputs:
+      source_branch:
+        description: "Scratch branch containing results/output to publish (e.g. find4-drop-20260624-abc123)"
+        required: true
+      branch_prod:
+        description: "Prod branch name (receives merged assets before main)"
+        required: false
+        default: "find4-prod"
+      source_branch_action:
+        description: "What to do with source_branch after publish: nothing | delete (default: delete)"
+        required: false
+        default: "delete"
+
+concurrency:
+  group: find4-publish-merge
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    name: Publish new/changed Find4 games to Github
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    defaults:
+      run:
+        working-directory: skills/find4
+
+    outputs:
+      has_prod: ${{ steps.merge.outputs.has_prod }}
+      source_branch: ${{ steps.resolve.outputs.source_branch }}
+
+    steps:
+      - name: Resolve source branch
+        id: resolve
+        working-directory: .
+        run: |
+          SOURCE_BRANCH="${{ inputs.source_branch }}"
+          if [ -z "${SOURCE_BRANCH}" ]; then
+            echo "ERROR: source_branch input is required" >&2
+            exit 1
+          fi
+          echo "source_branch=${SOURCE_BRANCH}" >> $GITHUB_OUTPUT
+          echo "Resolved source branch: ${SOURCE_BRANCH}"
+
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ steps.resolve.outputs.source_branch }}
+
+      - name: Guarantee directories exist
+        run: |
+          mkdir -p logs games library json webapp config || true
+
+      - name: Read meta.json payload
+        id: meta
+        if: always()
+        run: |
+          META_FILE="results/meta.json"
+          if [ -f "${META_FILE}" ]; then
+            python3 - <<'PYEOF'
+          import json, os
+          from pathlib import Path
+
+          meta = json.loads(Path("results/meta.json").read_text(encoding="utf-8"))
+
+          source_id = meta.get("source_id", "")
+          zip_name  = meta.get("zip", "")
+          games     = meta.get("games", [])
+
+          lines = []
+          for g in games:
+              theme     = g.get("theme", "")
+              short_url = g.get("short_url", "")
+              path_url  = g.get("path_url", "")
+              lines.append(f"  {theme}")
+              if short_url:
+                  lines.append(f"    Short : {short_url}")
+              if path_url:
+                  lines.append(f"    Path  : {path_url}")
+
+          games_block = "\n".join(lines) if lines else "  (none)"
+
+          env_file = os.environ["GITHUB_OUTPUT"]
+          with open(env_file, "a", encoding="utf-8") as fh:
+              fh.write(f"source_id={source_id}\n")
+              fh.write(f"zip={zip_name}\n")
+              delimiter = "EOF_GAMES_BLOCK"
+              fh.write(f"games_block<<{delimiter}\n{games_block}\n{delimiter}\n")
+
+          print(f"meta.json loaded: {len(games)} game set(s)")
+          PYEOF
+          else
+            echo "source_id=" >> $GITHUB_OUTPUT
+            echo "zip="       >> $GITHUB_OUTPUT
+            printf 'games_block<<EOF_GAMES_BLOCK\n  (meta.json not found)\nEOF_GAMES_BLOCK\n' >> $GITHUB_OUTPUT
+            echo "WARNING: skills/find4/results/meta.json not found -- email will omit game links" >&2
+          fi
+
+      - name: Looking for new assets in results/output/
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: us-east-1
+          FIND4_BASE_URL: https://find4.org
+          SOURCE_DIR: results/output
+          SOURCE_BRANCH_ACTION: ${{ inputs.source_branch_action || 'delete' }}
+        run: |
+          remove_flag=""
+          [ "${SOURCE_BRANCH_ACTION}" != "nothing" ] && remove_flag="--remove-src"
+          bash scripts/publish_games.sh \
+            --src ${{ env.SOURCE_DIR }} \
+            --dst . \
+            ${remove_flag} \
+            2>&1 | tee logs/publish-games-${{ github.run_id }}.log
+
+      - name: Regenerate library
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: us-east-1
+          FIND4_BASE_URL: https://find4.org
+        run: |
+          python3 scripts/generate_library_all.py \
+            --games-dir games \
+            --config-dir library \
+            --output-dir library \
+            --library-root . \
+            --trigger "${{ github.actor }} via ${{ github.workflow }} run ${{ github.run_id }}" \
+            --force \
+            2>&1 | tee logs/generate-library-${{ github.run_id }}.log
+
+      - name: Write publish manifest
+        env:
+          SOURCE_BRANCH: ${{ steps.resolve.outputs.source_branch }}
+        run: |
+          timestamp=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+          python3 -c "
+          import json, os
+          source_branch = os.environ['SOURCE_BRANCH']
+          manifest = {
+              'timestamp': '$timestamp',
+              'commit': '${{ github.sha }}',
+              'run_id': '${{ github.run_id }}',
+              'source_branch': source_branch,
+              'triggered_by': '${{ github.actor }}',
+          }
+          path = 'logs/publish-${{ github.run_id }}.json'
+          with open(path, 'w', encoding='utf-8') as f:
+              json.dump(manifest, f, indent=2, ensure_ascii=False)
+          print(f'manifest written to [{source_branch}] {path}')
+          "
+          echo '${{ toJson(github) }}' \
+            | python3 scripts/mask_context.py \
+                --schema scripts/github_context_schema.json \
+                --output logs/github-context-${{ github.run_id }}.json
+
+      - name: Commit games, library, config + logs back to source branch
+        env:
+          GH_TOKEN_FOR_WORKFLOW: ${{ secrets.GH_TOKEN_FOR_WORKFLOW }}
+          SOURCE_BRANCH: ${{ steps.resolve.outputs.source_branch }}
+          SOURCE_BRANCH_ACTION: ${{ inputs.source_branch_action || 'delete' }}
+          SOURCE_DIR: results/output
+        run: |
+          git config user.email "github-actions-find4@abcdef.ai"
+          git config user.name "David Kierans[bot]"
+          git remote set-url origin "https://x-access-token:${GH_TOKEN_FOR_WORKFLOW}@github.com/${{ github.repository }}.git"
+          if [ "${SOURCE_BRANCH_ACTION}" = "nothing" ]; then
+            git add games/ library/ logs/ config/ ${{ env.SOURCE_DIR }}/
+          else
+            git add games/ library/ logs/ config/
+            git rm -rf --cached --ignore-unmatch ${{ env.SOURCE_DIR }}
+          fi
+          git diff --cached --quiet || git commit -m "chore(find4): regenerate library & publish ${SOURCE_BRANCH}"
+          git push origin "${SOURCE_BRANCH}"
+
+      - name: Merge published assets to prod then main
+        id: merge
+        env:
+          GH_TOKEN_FOR_WORKFLOW: ${{ secrets.GH_TOKEN_FOR_WORKFLOW }}
+          BRANCH_PROD: ${{ inputs.branch_prod || secrets.GITHUB_BRANCH_GAMES_PROD || 'find4-prod' }}
+          SOURCE_BRANCH: ${{ steps.resolve.outputs.source_branch }}
+        run: |
+          git config user.email "github-actions-find4@abcdef.ai"
+          git config user.name "David Kierans[bot]"
+          git remote set-url origin "https://x-access-token:${GH_TOKEN_FOR_WORKFLOW}@github.com/${{ github.repository }}.git"
+
+          git fetch origin
+
+          echo "Merging ${SOURCE_BRANCH} -> ${BRANCH_PROD}"
+          git fetch origin "${BRANCH_PROD}" 2>/dev/null \
+            && git checkout -B "${BRANCH_PROD}" "origin/${BRANCH_PROD}" \
+            || git checkout -b "${BRANCH_PROD}"
+          git merge --no-edit "origin/${SOURCE_BRANCH}" \
+            -m "chore(find4): merge in published assets from ${SOURCE_BRANCH}"
+          git push origin "${BRANCH_PROD}"
+
+          echo "Merging ${BRANCH_PROD} -> main"
+          git fetch origin main
+          git checkout -B main origin/main
+          git merge --no-edit "origin/${BRANCH_PROD}" \
+            -m "chore(find4): merge ${BRANCH_PROD} into main"
+          git push origin main
+
+          echo "has_prod=true" >> $GITHUB_OUTPUT
+
+      - name: Send success email
+        if: success()
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          secure: true
+          username: dave@abcdef.ai
+          password: ${{ secrets.GOOGLE_APP_PASSWORD }}
+          subject: "✅ Find4 publish complete — ${{ steps.resolve.outputs.source_branch }}"
+          to: dave@abcdef.ai
+          from: Find4 CI <find4-skill-github@abcdef.ai>
+          body: |
+            Find4 publish workflow completed successfully.
+
+            Source branch : ${{ steps.resolve.outputs.source_branch }}
+            Prod branch   : ${{ inputs.branch_prod || 'find4-prod' }}
+            Source action : ${{ inputs.source_branch_action || 'delete' }}
+            Triggered by  : ${{ github.actor }}
+            Run ID        : ${{ github.run_id }}
+            Commit        : ${{ github.sha }}
+            Source        : ${{ steps.meta.outputs.source_id }}
+            Zip           : ${{ steps.meta.outputs.zip }}
+
+            Published games:
+            ${{ steps.meta.outputs.games_block }}
+
+            Flow:
+              ${{ steps.resolve.outputs.source_branch }} -> ${{ inputs.branch_prod || 'find4-prod' }} -> main
+
+            Run log: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
+      - name: Delete source branch
+        if: ${{ inputs.source_branch_action != 'nothing' }}
+        env:
+          GH_TOKEN_FOR_WORKFLOW: ${{ secrets.GH_TOKEN_FOR_WORKFLOW }}
+          SOURCE_BRANCH: ${{ steps.resolve.outputs.source_branch }}
+        run: |
+          git remote set-url origin "https://x-access-token:${GH_TOKEN_FOR_WORKFLOW}@github.com/${{ github.repository }}.git"
+          echo "Deleting scratch branch ${SOURCE_BRANCH}"
+          git push origin --delete "${SOURCE_BRANCH}" || echo "Branch already gone"
+
+      - name: Send failure email
+        if: failure()
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          secure: true
+          username: dave@abcdef.ai
+          password: ${{ secrets.GOOGLE_APP_PASSWORD }}
+          subject: "❌ Find4 publish FAILED — ${{ steps.resolve.outputs.source_branch }}"
+          to: find4-skill-github@abcdef.ai
+          from: Find4 CI <find4-skill-github@abcdef.ai>
+          body: |
+            Find4 publish workflow FAILED.
+
+            Source branch : ${{ steps.resolve.outputs.source_branch }}
+            Triggered by  : ${{ github.actor }}
+            Run ID        : ${{ github.run_id }}
+
+            Check the logs: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
+  trigger-deploy:
+    needs: publish
+    if: ${{ needs.publish.outputs.has_prod == 'true' }}
+    uses: ./.github/workflows/deploy-find4-s3-workflow-call.yaml
+    secrets:
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      CLOUDFRONT_DISTRIBUTION_ID: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}

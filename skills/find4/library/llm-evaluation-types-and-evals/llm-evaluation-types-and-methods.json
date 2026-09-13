@@ -1,0 +1,202 @@
+{
+  "metadata": {
+    "generated_at": "2026-09-07T00:00:00Z",
+    "source": "stdin",
+    "suggested_name": "llm-evaluation-types-and-evals.json",
+    "modified_at": "2026-09-07T16:08:30.419690",
+    "source_id": "stdin",
+    "step": "finalize_metadata",
+    "id_registry": {
+      "game_set_ids": [
+        "788fe7"
+      ],
+      "group_set_ids": [
+        "ae2d63",
+        "f87da9"
+      ],
+      "group_item_ids": [
+        "3b91a6",
+        "91eae5",
+        "d7c3e5",
+        "231e21",
+        "3bffc1",
+        "c5ecb5",
+        "2d7f1b",
+        "b55102"
+      ]
+    },
+    "id": "b6phovl5GxmDdXSk",
+    "split_info": {
+      "role": "split",
+      "split_at": "2026-09-07T16:08:30.515387+00:00",
+      "parent_id": "b6phovl5GxmDdXSk",
+      "parent_file": "/home/claude/output/games/llm-evaluation-types-and-evals.json",
+      "theme": "LLM Evaluation: Types and Methods",
+      "slug": "llm-evaluation-types-and-methods"
+    }
+  },
+  "game_sets": [
+    {
+      "theme": "LLM Evaluation: Types and Methods",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "TRAJECTORY",
+              "TOOL_CALL",
+              "OUTCOME",
+              "STEP_EFFICIENCY"
+            ],
+            "category": "Agent Evaluation Signals",
+            "color": "orange",
+            "url": "https://futureagi.com/glossary/llm-as-a-judge",
+            "description": "Evaluation signals specific to agentic systems — assessing not just the final answer but whether the agent took the right steps to get there",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://aiagentrank.io/glossary/llm-as-a-judge"
+            ],
+            "theme": "LLM Evaluation: Types and Methods",
+            "group_item_id": "3b91a6",
+            "group_set_id": "ae2d63"
+          },
+          {
+            "words": [
+              "REGRESSION",
+              "A_B_TEST",
+              "CANARY",
+              "BASELINE"
+            ],
+            "category": "Eval Testing Strategies",
+            "color": "blue",
+            "url": "https://inblog.ai/glossary/llm-as-judge",
+            "description": "Strategies for detecting quality changes — running evals after every prompt change, comparing variants, and always measuring against a known baseline",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://aiagentrank.io/glossary/llm-as-a-judge"
+            ],
+            "theme": "LLM Evaluation: Types and Methods",
+            "group_item_id": "91eae5",
+            "group_set_id": "ae2d63"
+          },
+          {
+            "words": [
+              "FEW_SHOT",
+              "ZERO_SHOT",
+              "CHAIN_OF_THOUGHT",
+              "SELF_CONSISTENCY"
+            ],
+            "category": "Prompting Eval Techniques",
+            "color": "green",
+            "url": "https://futureagi.com/blog/llm-evaluation-frameworks-metrics-best-practices",
+            "description": "Prompting strategies that affect how a model is evaluated and how a judge model is prompted — few-shot calibration examples improve judge reliability",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://www.promptlayer.com/glossary/llm-as-a-judge"
+            ],
+            "theme": "LLM Evaluation: Types and Methods",
+            "group_item_id": "d7c3e5",
+            "group_set_id": "ae2d63"
+          },
+          {
+            "words": [
+              "SPOT_CHECK",
+              "KAPPA",
+              "CORRELATION",
+              "INTER_RATER"
+            ],
+            "category": "Eval Quality Assurance",
+            "color": "purple",
+            "url": "https://futureagi.com/glossary/llm-as-a-judge",
+            "description": "Methods for validating that your evals are themselves trustworthy — human spot-checks, Cohen's kappa, and correlation against expert annotations",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://memx.app/glossary/llm-as-a-judge/"
+            ],
+            "theme": "LLM Evaluation: Types and Methods",
+            "group_item_id": "231e21",
+            "group_set_id": "ae2d63"
+          }
+        ],
+        [
+          {
+            "words": [
+              "DETERMINISTIC",
+              "SEMANTIC",
+              "CLASSIFIER",
+              "NEURAL"
+            ],
+            "category": "Scoring Method Types",
+            "color": "teal",
+            "url": "https://interviewkickstart.com/ai-glossary/evals-llm-evaluation",
+            "description": "The spectrum of automated scoring approaches — from exact string matching at one end to neural semantic similarity and classifier-based grading at the other",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://futureagi.com/blogs/build-llm-evaluation-framework-2025"
+            ],
+            "theme": "LLM Evaluation: Types and Methods",
+            "group_item_id": "3bffc1",
+            "group_set_id": "f87da9"
+          },
+          {
+            "words": [
+              "RAG_FAITHFULNESS",
+              "CONTEXT_RECALL",
+              "ANSWER_RELEVANCY",
+              "CONTEXT_PRECISION"
+            ],
+            "category": "RAG-Specific Evals",
+            "color": "red",
+            "url": "https://futureagi.com/glossary/llm-as-a-judge",
+            "description": "Eval metrics specific to Retrieval-Augmented Generation pipelines — checking that answers are faithful to retrieved context and that retrieval itself is relevant and precise",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://arxiv.org/html/2602.18823"
+            ],
+            "theme": "LLM Evaluation: Types and Methods",
+            "group_item_id": "c5ecb5",
+            "group_set_id": "f87da9"
+          },
+          {
+            "words": [
+              "DEEPEVAL",
+              "RAGAS",
+              "LANGSMITH",
+              "BRAINTRUST"
+            ],
+            "category": "Eval Frameworks & Tools",
+            "color": "yellow",
+            "url": "https://dataaspirant.com/llm-evaluation-tools/",
+            "description": "The leading open-source and commercial toolkits for running LLM evals — each with built-in judge patterns, metric libraries, and production monitoring",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://aiagentrank.io/glossary/llm-as-a-judge"
+            ],
+            "theme": "LLM Evaluation: Types and Methods",
+            "group_item_id": "2d7f1b",
+            "group_set_id": "f87da9"
+          },
+          {
+            "words": [
+              "DRIFT",
+              "LATENCY",
+              "COST",
+              "THROUGHPUT"
+            ],
+            "category": "Production Eval Signals",
+            "color": "indigo",
+            "url": "https://interviewkickstart.com/ai-glossary/evals-llm-evaluation",
+            "description": "Operational signals monitored alongside quality evals in production — detecting model drift, regression in response time, and cost-per-query changes over time",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://dataaspirant.com/llm-evaluation-tools/"
+            ],
+            "theme": "LLM Evaluation: Types and Methods",
+            "group_item_id": "b55102",
+            "group_set_id": "f87da9"
+          }
+        ]
+      ],
+      "game_set_id": "788fe7"
+    }
+  ]
+}

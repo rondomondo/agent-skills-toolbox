@@ -1,0 +1,3881 @@
+{
+  "metadata": {
+    "generated_at": "2026-09-10T20:36:19",
+    "library_version": "2026-09-10T20:36:19",
+    "trigger": "rondomondo via Publish find4 games to github - workflow call run 34527152704",
+    "source": "library/themes.json",
+    "game_set_count": 24,
+    "missing_count": 0,
+    "source_hashes": {
+      "6bbf13": "4261c3099fa1af07d605b9fb02ccccec1edc6a29e9aa277afbcab75378f50488",
+      "3bb628": "65c77bdad58794c5d91fe5bb6a7074c833d8ca65f0a73ca83e3a7a980609dbde",
+      "e425e9": "8f6f39d993d68d63478e5869b68bbe86ad88f0f02f8de1694c9652a38ab001de",
+      "8f0a6d": "0210572c66d2de501ba2eb934179267298fd0b3c394bc714f689ddb66c5d3318",
+      "1e8116": "b587002e3afb5713edb318b0d205773decf0dba18eb0ca1ac2db27057436d19c",
+      "a63c3e": "66fed2d783da7adc4cf2e1d55c23f313635572c0e97ea64b81de5e88dce63b22",
+      "57e196": "3763392617e9cab9d728e849b913406b2e54450963097a7b5d214b3e64b4235d",
+      "28f7dd": "88eb8088efc900b6457ccfd5817d207bced7b2ab0978a02ffc7eb5b91793627c",
+      "a87d52": "d2a10673bd5166a7d9d101ac030cdc49c76494661a568d20dd4b5bcd7b758af0",
+      "24e8d0": "00ebc72cbf8b96cdff73c9d897fa104d568f1cb0eaeeb8a5ed0a09e60d4d5501",
+      "171586": "02e241504a47265f3942b9d963dd91f361d10725fe43d9280b39cd3984835c93",
+      "788fe7": "7d8604a84e19c9fc8e241774f033c631883405c43a1815d91351c2d4e3f318a8",
+      "7a8f2f": "20d31035fb1dc66c0390c6bba45e7af29971b11b1f70a7b6bd2c5f7274e6fbba",
+      "eeb31f": "944c7b60d99e2bef644950080340f5d8d38951861d660a1299b8b61e0b33398e",
+      "9da791": "cedc93290a0ab8e73c5667a1c7359eb168bf2885b50173a6f563f80bdcff7c1f",
+      "27ceb0": "a402878f454b13a454dd54f5ba5bbcaf099bae1a1c75cca9712f0e8c62d90094",
+      "05f422": "256a05fea1fb52ce75cba851e6470f58bfa57de3073fd34a0d05dfaa76f1715a",
+      "da75bc": "b848a5aed3dde0c481d74171bf5161d9e8618f057a16d861c0c47572277cb62a",
+      "0254e3": "25920f6f66798627e907b76fb327c963c7dd831b5be38d35afb0c711d7b675db",
+      "6c0ac0": "0ccdcd771e917f674d930826fdfa6456027c46d825bf1a46703929effdc6bf9f",
+      "51cbe0": "7692844fd0a82f3c49373eef768bf6b4521a8eb49ccb7d6136674b1838f21937",
+      "8ea23b": "9a58e5e93a4e60017fa59f676a26603270c79bdc18042ff3158d186b8d9a0eae",
+      "016e3d": "37c89f750241e5f28a62bb8e80f7cc314ed1e0cfaa844d9f4e32bd524ca77d36",
+      "f2ed89": "0d4476d490725c00b5391d01894c2b99b76350f16948a4d1583c220338f6ee6c"
+    },
+    "content_hash": "241d529be927bd491d99cf0ef64dd305fffa3380812802c9609aeeea9562b3b1",
+    "metadata_fingerprint": "bb34dbb347f50437"
+  },
+  "game_sets": [
+    {
+      "theme": "Construction Management Core Competencies",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "CPM",
+              "FLOAT",
+              "CRASHING",
+              "FAST-TRACKING"
+            ],
+            "category": "Schedule Control Techniques",
+            "color": "blue",
+            "url": "https://www.pmi.org/learning/library/schedule-compression-techniques-9927",
+            "description": "Methods used to manage and compress construction project schedules",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.projectmanagement.com/articles/scheduling"
+            ],
+            "theme": "Construction Management Core Competencies",
+            "group_item_id": "d0bca8",
+            "group_set_id": "341543"
+          },
+          {
+            "words": [
+              "EVM",
+              "CPI",
+              "BAC",
+              "EAC"
+            ],
+            "category": "Earned Value Metrics",
+            "color": "green",
+            "url": "https://www.pmi.org/learning/library/earned-value-management-6001",
+            "description": "Key performance indicators used in earned value management to track cost and schedule",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://www.projectmanagement.com/articles/evm"
+            ],
+            "theme": "Construction Management Core Competencies",
+            "group_item_id": "06dd57",
+            "group_set_id": "341543"
+          },
+          {
+            "words": [
+              "NCR",
+              "ITP",
+              "HOLD POINT",
+              "PUNCH LIST"
+            ],
+            "category": "Quality Control Tools",
+            "color": "orange",
+            "url": "https://www.iso.org/standard/62085.html",
+            "description": "Quality management instruments used to track and resolve defects on construction sites",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.constructionqualityassociation.com"
+            ],
+            "theme": "Construction Management Core Competencies",
+            "group_item_id": "720ef1",
+            "group_set_id": "341543"
+          },
+          {
+            "words": [
+              "RAMS",
+              "PTW",
+              "LOTO",
+              "RIDDOR"
+            ],
+            "category": "Site Safety Documents & Regulations",
+            "color": "red",
+            "url": "https://www.hse.gov.uk/construction/",
+            "description": "Formal safety instruments and legal frameworks governing hazard control on construction sites",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://www.hse.gov.uk/riddor/"
+            ],
+            "theme": "Construction Management Core Competencies",
+            "group_item_id": "87021d",
+            "group_set_id": "341543"
+          }
+        ],
+        [
+          {
+            "words": [
+              "GMP",
+              "RETAINAGE",
+              "FIDIC",
+              "LIQUIDATED DAMAGES"
+            ],
+            "category": "Contract Administration Terms",
+            "color": "purple",
+            "url": "https://www.fidic.org/node/26",
+            "description": "Key contractual concepts in construction project delivery and dispute resolution",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://www.nec.uk.com/",
+              "https://constructionblog.autodesk.com"
+            ],
+            "theme": "Construction Management Core Competencies",
+            "group_item_id": "40f41b",
+            "group_set_id": "5b0b4f"
+          },
+          {
+            "words": [
+              "PROCORE",
+              "ACONEX",
+              "PRIMAVERA P6",
+              "NAVISWORKS"
+            ],
+            "category": "Construction Software Platforms",
+            "color": "teal",
+            "url": "https://construction.autodesk.com/solutions/construction-software/",
+            "description": "Digital tools widely used by construction managers for scheduling, document control, and BIM coordination",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.oracle.com/construction-engineering/primavera-p6/"
+            ],
+            "theme": "Construction Management Core Competencies",
+            "group_item_id": "f9424e",
+            "group_set_id": "5b0b4f"
+          },
+          {
+            "words": [
+              "MONTE CARLO",
+              "RISK REGISTER",
+              "MITIGATION",
+              "CONTINGENCY"
+            ],
+            "category": "Risk Management Techniques",
+            "color": "indigo",
+            "url": "https://www.pmi.org/learning/library/risk-management-techniques-9932",
+            "description": "Structured approaches to identifying, quantifying and responding to construction project risks",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://www.riba.org/"
+            ],
+            "theme": "Construction Management Core Competencies",
+            "group_item_id": "272ae9",
+            "group_set_id": "5b0b4f"
+          },
+          {
+            "words": [
+              "DEWATERING",
+              "FALSEWORK",
+              "SHORING",
+              "PILING"
+            ],
+            "category": "Temporary Works & Ground Engineering",
+            "color": "yellow",
+            "url": "https://www.ciria.org/Resources/Free_publications/Temporary_works.aspx",
+            "description": "Temporary works and geotechnical methods used to enable safe construction below or at ground level",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://www.ice.org.uk/"
+            ],
+            "theme": "Construction Management Core Competencies",
+            "group_item_id": "0a3e38",
+            "group_set_id": "5b0b4f"
+          }
+        ]
+      ],
+      "game_set_id": "6bbf13"
+    },
+    {
+      "theme": "Construction Management: Procurement, Leadership & Compliance",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "RFQ",
+              "PREQUALIFICATION",
+              "LEAD TIMES",
+              "TENDER DOCS"
+            ],
+            "category": "Procurement Process Steps",
+            "color": "green",
+            "url": "https://www.ciob.org/industry/procurement",
+            "description": "Sequential activities in sourcing subcontractors and suppliers for construction projects",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.cips.org/"
+            ],
+            "theme": "Construction Management: Procurement, Leadership & Compliance",
+            "group_item_id": "9726a4",
+            "group_set_id": "00ada0"
+          },
+          {
+            "words": [
+              "RACI",
+              "STAKEHOLDER REGISTER",
+              "COMMUNITY LIAISON",
+              "COMMUNICATION PLAN"
+            ],
+            "category": "Stakeholder Management Tools",
+            "color": "blue",
+            "url": "https://www.pmi.org/learning/library/stakeholder-management-tools-6250",
+            "description": "Frameworks and artefacts used to manage project communication and stakeholder expectations",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://www.apm.org.uk/"
+            ],
+            "theme": "Construction Management: Procurement, Leadership & Compliance",
+            "group_item_id": "13c5d0",
+            "group_set_id": "00ada0"
+          },
+          {
+            "words": [
+              "EIA",
+              "CDM",
+              "NOISE ABATEMENT",
+              "PLANNING PERMISSION"
+            ],
+            "category": "Regulatory & Legal Compliance",
+            "color": "red",
+            "url": "https://www.hse.gov.uk/construction/cdm/2015/",
+            "description": "Statutory requirements and legal instruments governing construction project approvals and environmental impact",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://www.gov.uk/guidance/environmental-impact-assessment"
+            ],
+            "theme": "Construction Management: Procurement, Leadership & Compliance",
+            "group_item_id": "a757d7",
+            "group_set_id": "00ada0"
+          },
+          {
+            "words": [
+              "MENTORING",
+              "DELEGATION",
+              "CONFLICT RESOLUTION",
+              "ACCOUNTABILITY"
+            ],
+            "category": "Leadership Behaviours",
+            "color": "orange",
+            "url": "https://www.ciob.org/learning/professional-development/leadership",
+            "description": "People management competencies that distinguish high-performing construction leaders",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.cmi.org.uk/"
+            ],
+            "theme": "Construction Management: Procurement, Leadership & Compliance",
+            "group_item_id": "6bd4c5",
+            "group_set_id": "00ada0"
+          }
+        ],
+        [
+          {
+            "words": [
+              "DIGITAL TWIN",
+              "DRONE SURVEY",
+              "4D SIMULATION",
+              "LASER SCANNING"
+            ],
+            "category": "Emerging Digital Construction Tech",
+            "color": "teal",
+            "url": "https://www.autodesk.com/solutions/digital-construction",
+            "description": "Advanced digital technologies reshaping how construction sites are surveyed, modelled and managed",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://www.buildingsmart.org/"
+            ],
+            "theme": "Construction Management: Procurement, Leadership & Compliance",
+            "group_item_id": "f409fe",
+            "group_set_id": "a6bf2f"
+          },
+          {
+            "words": [
+              "WBS",
+              "MILESTONE PLAN",
+              "LOOK-AHEAD",
+              "RESOURCE LEVELLING"
+            ],
+            "category": "Planning & Scheduling Artefacts",
+            "color": "indigo",
+            "url": "https://www.pmi.org/learning/library/work-breakdown-structures-project-7676",
+            "description": "Core planning outputs used to structure, sequence and resource construction programmes",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://www.apm.org.uk/"
+            ],
+            "theme": "Construction Management: Procurement, Leadership & Compliance",
+            "group_item_id": "343f3a",
+            "group_set_id": "a6bf2f"
+          },
+          {
+            "words": [
+              "COMMISSIONING",
+              "AS-BUILT DRAWINGS",
+              "HANDOVER DOCS",
+              "CONTRACT CLOSEOUT"
+            ],
+            "category": "Project Closeout Activities",
+            "color": "purple",
+            "url": "https://www.cibse.org/knowledge-research/knowledge-portal/commissioning-guide",
+            "description": "Final-stage deliverables and activities required to formally complete and hand over a construction project",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://www.bwf.org.uk/"
+            ],
+            "theme": "Construction Management: Procurement, Leadership & Compliance",
+            "group_item_id": "8d43d2",
+            "group_set_id": "a6bf2f"
+          },
+          {
+            "words": [
+              "QUANTITY TAKEOFF",
+              "PARAMETRIC ESTIMATE",
+              "CASH FLOW",
+              "BID PREPARATION"
+            ],
+            "category": "Cost Estimating Methods",
+            "color": "yellow",
+            "url": "https://www.rics.org/uk/profession-standards/sector-standards/construction/black-book/",
+            "description": "Techniques used by estimators and cost managers to develop and validate construction budgets",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.aace.org/"
+            ],
+            "theme": "Construction Management: Procurement, Leadership & Compliance",
+            "group_item_id": "afe02d",
+            "group_set_id": "a6bf2f"
+          }
+        ]
+      ],
+      "game_set_id": "3bb628"
+    },
+    {
+      "theme": "Equine Vet Strengths: Clinical & Emergency",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "AUSCULTATION",
+              "PALPATION",
+              "PERCUSSION",
+              "ENDOSCOPY"
+            ],
+            "category": "Physical Examination Techniques",
+            "color": "blue",
+            "url": "https://www.aaep.org/horsehealth/physical-examination",
+            "description": "Core hands-on assessment methods used during an equine clinical examination",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://www.merckvetmanual.com/horse-owners/routine-care-and-breeding-of-horses/routine-health-care-of-horses"
+            ],
+            "theme": "Equine Vet Strengths: Clinical & Emergency",
+            "group_item_id": "2658a3",
+            "group_set_id": "bf9cde"
+          },
+          {
+            "words": [
+              "COLIC",
+              "LAMINITIS",
+              "DYSTOCIA",
+              "FRACTURE"
+            ],
+            "category": "Equine Emergencies",
+            "color": "red",
+            "url": "https://www.aaep.org/horsehealth/colic",
+            "description": "Critical conditions requiring urgent field triage and intervention by an equine vet",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://www.merckvetmanual.com/emergency-medicine-and-critical-care"
+            ],
+            "theme": "Equine Vet Strengths: Clinical & Emergency",
+            "group_item_id": "c1a1c1",
+            "group_set_id": "bf9cde"
+          },
+          {
+            "words": [
+              "FLOATING",
+              "EXTRACTION",
+              "OCCLUSION",
+              "ERUPTION"
+            ],
+            "category": "Equine Dentistry",
+            "color": "green",
+            "url": "https://www.aaep.org/horsehealth/dental-care",
+            "description": "Dental procedures and concepts specific to equine oral health assessment and treatment",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.beva.org.uk/Veterinary-Support/Dentistry"
+            ],
+            "theme": "Equine Vet Strengths: Clinical & Emergency",
+            "group_item_id": "d191ee",
+            "group_set_id": "bf9cde"
+          },
+          {
+            "words": [
+              "EMPATHY",
+              "PROGNOSIS",
+              "EUTHANASIA",
+              "TRANSPARENCY"
+            ],
+            "category": "Difficult Client Conversations",
+            "color": "yellow",
+            "url": "https://www.aaep.org/horsehealth/euthanasia",
+            "description": "Skills needed to communicate sensitively about hard outcomes, costs, and end-of-life decisions",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://www.rcvs.org.uk/setting-standards/advice-and-guidance/code-of-professional-conduct-for-veterinary-surgeons/"
+            ],
+            "theme": "Equine Vet Strengths: Clinical & Emergency",
+            "group_item_id": "830dd3",
+            "group_set_id": "bf9cde"
+          }
+        ],
+        [
+          {
+            "words": [
+              "ULTRASOUND",
+              "RADIOGRAPH",
+              "CULTURE",
+              "BLOODWORK"
+            ],
+            "category": "Diagnostic Tools",
+            "color": "teal",
+            "url": "https://www.aaep.org/horsehealth/lameness",
+            "description": "Imaging and laboratory investigations used to confirm equine diagnoses",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.merckvetmanual.com/musculoskeletal-system/lameness-in-horses"
+            ],
+            "theme": "Equine Vet Strengths: Clinical & Emergency",
+            "group_item_id": "d8a5e4",
+            "group_set_id": "59ed22"
+          },
+          {
+            "words": [
+              "BREEDING",
+              "EMBRYO",
+              "FOALING",
+              "OVULATION"
+            ],
+            "category": "Equine Reproduction",
+            "color": "purple",
+            "url": "https://www.aaep.org/horsehealth/reproduction",
+            "description": "Reproductive procedures and milestones managed by equine vets across the breeding cycle",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://www.merckvetmanual.com/reproductive-system/reproductive-diseases-of-the-horse"
+            ],
+            "theme": "Equine Vet Strengths: Clinical & Emergency",
+            "group_item_id": "451d14",
+            "group_set_id": "59ed22"
+          },
+          {
+            "words": [
+              "STAMINA",
+              "DEXTERITY",
+              "AWARENESS",
+              "COMPOSURE"
+            ],
+            "category": "Physical & Personal Attributes",
+            "color": "orange",
+            "url": "https://www.bva.co.uk/our-campaigns/wellbeing/",
+            "description": "Physical and psychological traits required to work safely with large, unpredictable animals in field conditions",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://www.rcvs.org.uk/lifelong-learning/wellbeing/"
+            ],
+            "theme": "Equine Vet Strengths: Clinical & Emergency",
+            "group_item_id": "43af4e",
+            "group_set_id": "59ed22"
+          },
+          {
+            "words": [
+              "TELEMEDICINE",
+              "RADIOGRAPHY",
+              "INVENTORY",
+              "SOFTWARE"
+            ],
+            "category": "Veterinary Technology Skills",
+            "color": "indigo",
+            "url": "https://www.avma.org/resources-tools/practice-management/technology-veterinary-practice",
+            "description": "Modern tools and platforms equine vets use to manage practice operations and remote consultations",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.aaep.org/industry/practice-management"
+            ],
+            "theme": "Equine Vet Strengths: Clinical & Emergency",
+            "group_item_id": "be66da",
+            "group_set_id": "59ed22"
+          }
+        ]
+      ],
+      "game_set_id": "e425e9"
+    },
+    {
+      "theme": "Equine Vet Strengths: Knowledge & Professionalism",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "CASTRATION",
+              "SUTURING",
+              "ANAESTHESIA",
+              "DEBRIDEMENT"
+            ],
+            "category": "Field Surgical Procedures",
+            "color": "red",
+            "url": "https://www.aaep.org/horsehealth/surgery",
+            "description": "Common surgical and procedural skills performed by equine vets outside clinic settings",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://www.merckvetmanual.com/horse-owners/disorders-affecting-multiple-body-systems-of-horses"
+            ],
+            "theme": "Equine Vet Strengths: Knowledge & Professionalism",
+            "group_item_id": "bbdb1d",
+            "group_set_id": "71b0ac"
+          },
+          {
+            "words": [
+              "DEWORMING",
+              "RESISTANCE",
+              "FECAL",
+              "ROTATION"
+            ],
+            "category": "Parasite Management",
+            "color": "green",
+            "url": "https://www.aaep.org/horsehealth/parasite-control-guidelines",
+            "description": "Evidence-based strategies equine vets use to manage internal parasite burdens in horses",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.beva.org.uk/Veterinary-Support/Parasitology"
+            ],
+            "theme": "Equine Vet Strengths: Knowledge & Professionalism",
+            "group_item_id": "700e88",
+            "group_set_id": "71b0ac"
+          },
+          {
+            "words": [
+              "THOROUGHBRED",
+              "WARMBLOOD",
+              "ARABIAN",
+              "STOCK"
+            ],
+            "category": "Breed-Specific Knowledge",
+            "color": "blue",
+            "url": "https://www.aaep.org/horsehealth/breeds",
+            "description": "Understanding of inherited conditions and discipline predispositions unique to different horse breeds",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.merckvetmanual.com/horse-owners"
+            ],
+            "theme": "Equine Vet Strengths: Knowledge & Professionalism",
+            "group_item_id": "a0838e",
+            "group_set_id": "71b0ac"
+          },
+          {
+            "words": [
+              "FORAGE",
+              "ELECTROLYTES",
+              "METABOLISM",
+              "WEIGHT"
+            ],
+            "category": "Equine Nutrition",
+            "color": "yellow",
+            "url": "https://www.aaep.org/horsehealth/nutrition",
+            "description": "Nutritional concepts and feed management skills relevant to equine health and performance",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://www.merckvetmanual.com/horse-owners/feeding-and-managing-horses"
+            ],
+            "theme": "Equine Vet Strengths: Knowledge & Professionalism",
+            "group_item_id": "816d18",
+            "group_set_id": "71b0ac"
+          }
+        ],
+        [
+          {
+            "words": [
+              "REFERRAL",
+              "INSURANCE",
+              "RECORDS",
+              "MENTORING"
+            ],
+            "category": "Professional Responsibilities",
+            "color": "purple",
+            "url": "https://www.rcvs.org.uk/setting-standards/advice-and-guidance/code-of-professional-conduct-for-veterinary-surgeons/",
+            "description": "Administrative and ethical duties that define professionalism in equine veterinary practice",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://www.avma.org/resources-tools/avma-policies/principles-veterinary-medical-ethics-avma"
+            ],
+            "theme": "Equine Vet Strengths: Knowledge & Professionalism",
+            "group_item_id": "362ba9",
+            "group_set_id": "44a25e"
+          },
+          {
+            "words": [
+              "TOXIN",
+              "ZOONOSIS",
+              "DIFFERENTIAL",
+              "PATTERN"
+            ],
+            "category": "Diagnostic Reasoning",
+            "color": "teal",
+            "url": "https://www.merckvetmanual.com/toxicology/toxicoses-in-horses",
+            "description": "Analytical skills used to narrow down and identify disease causes in equine patients",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://www.aaep.org/horsehealth/infectious-disease"
+            ],
+            "theme": "Equine Vet Strengths: Knowledge & Professionalism",
+            "group_item_id": "1e8fd2",
+            "group_set_id": "44a25e"
+          },
+          {
+            "words": [
+              "EVENTER",
+              "RACEHORSE",
+              "ENDURANCE",
+              "SHOWJUMPER"
+            ],
+            "category": "Equine Disciplines",
+            "color": "orange",
+            "url": "https://www.aaep.org/horsehealth/performance-horse",
+            "description": "Competitive disciplines that shape the specific health demands and risks equine vets must understand",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.beva.org.uk/Veterinary-Support/Performance-Horse"
+            ],
+            "theme": "Equine Vet Strengths: Knowledge & Professionalism",
+            "group_item_id": "c2d895",
+            "group_set_id": "44a25e"
+          },
+          {
+            "words": [
+              "HOOF",
+              "FARRIER",
+              "LAMENESS",
+              "CONFORMATION"
+            ],
+            "category": "Musculoskeletal & Hoof Health",
+            "color": "indigo",
+            "url": "https://www.aaep.org/horsehealth/lameness",
+            "description": "Lower limb and structural assessment areas where vets collaborate closely with farriers",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://www.merckvetmanual.com/musculoskeletal-system/lameness-in-horses/overview-of-lameness-in-horses"
+            ],
+            "theme": "Equine Vet Strengths: Knowledge & Professionalism",
+            "group_item_id": "97610a",
+            "group_set_id": "44a25e"
+          }
+        ]
+      ],
+      "game_set_id": "8f0a6d"
+    },
+    {
+      "theme": "Etsy LLM Search Relevance: Evaluation & Future Directions",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "MACRO-F1",
+              "UPLIFT",
+              "LATENCY",
+              "MONITORING"
+            ],
+            "category": "Relevance Evaluation Metrics",
+            "color": "red",
+            "url": "https://www.etsy.com/ie/codeascraft/how-etsy-uses-llms-to-improve-search-relevance",
+            "description": "The key measurements used to track model quality: multi-class Macro F1 vs golden labels, relevance uplift in production (58%→62%), sub-10ms latency, and daily monitoring dashboards",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://towardsdatascience.com/micro-macro-weighted-averages-of-f1-score-clearly-explained-b603420b292f/"
+            ],
+            "theme": "Etsy LLM Search Relevance: Evaluation & Future Directions",
+            "group_item_id": "5a23c4",
+            "group_set_id": "c24d7d"
+          },
+          {
+            "words": [
+              "SEMANTIC",
+              "INTENT",
+              "BEHAVIORAL",
+              "COMPLEMENTARY"
+            ],
+            "category": "Two Lenses on Search Quality",
+            "color": "green",
+            "url": "https://www.etsy.com/ie/codeascraft/how-etsy-uses-llms-to-improve-search-relevance",
+            "description": "Etsy's dual-signal approach: semantic relevance captures buyer intent while behavioural engagement captures popularity; together they produce more balanced search outcomes",
+            "skill_level": "Beginner",
+            "additional_sources": [],
+            "theme": "Etsy LLM Search Relevance: Evaluation & Future Directions",
+            "group_item_id": "9647d2",
+            "group_set_id": "c24d7d"
+          },
+          {
+            "words": [
+              "VLLM",
+              "LANGGRAPH",
+              "OFFLINE",
+              "A/B"
+            ],
+            "category": "Evaluation Infrastructure",
+            "color": "blue",
+            "url": "https://www.etsy.com/ie/codeascraft/how-etsy-uses-llms-to-improve-search-relevance",
+            "description": "The tooling stack for running relevance evaluation at scale: vLLM for high-throughput teacher inference, LangGraph for the annotator workflow, offline sampling, and A/B test monitoring",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://docs.vllm.ai/en/stable/"
+            ],
+            "theme": "Etsy LLM Search Relevance: Evaluation & Future Directions",
+            "group_item_id": "65ee06",
+            "group_set_id": "c24d7d"
+          },
+          {
+            "words": [
+              "FACE-MASKS",
+              "FALL-DECOR",
+              "CULTURAL",
+              "CONTEXTUAL"
+            ],
+            "category": "Why Relevance Definitions Must Evolve",
+            "color": "yellow",
+            "url": "https://www.etsy.com/ie/codeascraft/how-etsy-uses-llms-to-improve-search-relevance",
+            "description": "Real examples showing that buyer intent shifts over time and context — 'face masks' meant costumes pre-2020 but protective gear post-2020 — so labeling guidelines must be continuously updated",
+            "skill_level": "Beginner",
+            "additional_sources": [],
+            "theme": "Etsy LLM Search Relevance: Evaluation & Future Directions",
+            "group_item_id": "648522",
+            "group_set_id": "c24d7d"
+          }
+        ],
+        [
+          {
+            "words": [
+              "RETRIEVAL",
+              "ADAPTIVE",
+              "ESCI",
+              "MERGING"
+            ],
+            "category": "Planned Future Improvements",
+            "color": "purple",
+            "url": "https://www.etsy.com/ie/codeascraft/how-etsy-uses-llms-to-improve-search-relevance",
+            "description": "Etsy's next research directions: applying relevance upstream in retrieval, adaptive query-type strategies, finer-grained ESCI-style labels, and simplifying the three-tier stack by merging tiers",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://github.com/amazon-science/esci-data"
+            ],
+            "theme": "Etsy LLM Search Relevance: Evaluation & Future Directions",
+            "group_item_id": "e8a646",
+            "group_set_id": "b73c1f"
+          },
+          {
+            "words": [
+              "COMPLEMENTS",
+              "SUBSTITUTES",
+              "SUBCATEGORY",
+              "GRANULARITY"
+            ],
+            "category": "Refining Partial Relevance Labels",
+            "color": "teal",
+            "url": "https://www.etsy.com/ie/codeascraft/how-etsy-uses-llms-to-improve-search-relevance",
+            "description": "Inspired by Amazon's ESCI dataset, Etsy plans to split 'partially relevant' into finer sub-types — complements, substitutes — to enable more precise ranking and new search UX features",
+            "skill_level": "Expert",
+            "additional_sources": [],
+            "theme": "Etsy LLM Search Relevance: Evaluation & Future Directions",
+            "group_item_id": "8e84be",
+            "group_set_id": "b73c1f"
+          },
+          {
+            "words": [
+              "ENGAGEMENT-DROP",
+              "UNIFORM",
+              "QUERY-TYPE",
+              "TRADEOFF"
+            ],
+            "category": "Relevance vs Engagement Tension",
+            "color": "orange",
+            "url": "https://www.etsy.com/ie/codeascraft/how-etsy-uses-llms-to-improve-search-relevance",
+            "description": "A known paradox: A/B tests show engagement metrics can fall even when semantic relevance rises, because uniform relevance treatments ignore query-type variation — a key area for future research",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://arxiv.org/pdf/2409.17460v1"
+            ],
+            "theme": "Etsy LLM Search Relevance: Evaluation & Future Directions",
+            "group_item_id": "404eb2",
+            "group_set_id": "b73c1f"
+          },
+          {
+            "words": [
+              "SELLERS",
+              "VISIBILITY",
+              "SMALL-SHOPS",
+              "FAIRNESS"
+            ],
+            "category": "Business Impact on Sellers",
+            "color": "indigo",
+            "url": "https://www.etsy.com/ie/codeascraft/how-etsy-uses-llms-to-improve-search-relevance",
+            "description": "By surfacing intent-matched listings rather than just popular ones, semantic relevance helps smaller and newer sellers compete on relevance — 89% of Etsy sellers are solo businesses",
+            "skill_level": "Beginner",
+            "additional_sources": [],
+            "theme": "Etsy LLM Search Relevance: Evaluation & Future Directions",
+            "group_item_id": "3b7a00",
+            "group_set_id": "b73c1f"
+          }
+        ]
+      ],
+      "game_set_id": "1e8116"
+    },
+    {
+      "theme": "Etsy LLM Search Relevance: Models & Data",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "ANNOTATOR",
+              "TEACHER",
+              "STUDENT",
+              "DISTILLATION"
+            ],
+            "category": "Three-Tier Model Stack",
+            "color": "red",
+            "url": "https://www.etsy.com/ie/codeascraft/how-etsy-uses-llms-to-improve-search-relevance",
+            "description": "Etsy's cascaded model pipeline: an LLM annotator generates labels, a fine-tuned teacher scales them, and a lightweight student runs in production",
+            "skill_level": "Intermediate",
+            "additional_sources": [],
+            "theme": "Etsy LLM Search Relevance: Models & Data",
+            "group_item_id": "15c114",
+            "group_set_id": "b40d8a"
+          },
+          {
+            "words": [
+              "RELEVANT",
+              "PARTIAL",
+              "IRRELEVANT",
+              "GOLDEN"
+            ],
+            "category": "Relevance Label Categories",
+            "color": "blue",
+            "url": "https://www.etsy.com/ie/codeascraft/how-etsy-uses-llms-to-improve-search-relevance",
+            "description": "The four labels used to judge query-listing pairs: fully relevant, partially relevant, irrelevant, and the human-curated golden set used for evaluation",
+            "skill_level": "Beginner",
+            "additional_sources": [],
+            "theme": "Etsy LLM Search Relevance: Models & Data",
+            "group_item_id": "7570b8",
+            "group_set_id": "b40d8a"
+          },
+          {
+            "words": [
+              "FEW-SHOT",
+              "CHAIN-OF-THOUGHT",
+              "SELF-CONSISTENCY",
+              "O3"
+            ],
+            "category": "LLM Annotator Prompting Techniques",
+            "color": "green",
+            "url": "https://www.etsy.com/ie/codeascraft/how-etsy-uses-llms-to-improve-search-relevance",
+            "description": "Prompting strategies used with OpenAI's o3 model in LangGraph to generate high-quality, reliable relevance judgments at scale",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/LLM-as-a-Judge",
+              "https://www.promptingguide.ai/techniques/consistency"
+            ],
+            "theme": "Etsy LLM Search Relevance: Models & Data",
+            "group_item_id": "8d0a26",
+            "group_set_id": "b40d8a"
+          },
+          {
+            "words": [
+              "CLICKS",
+              "PURCHASES",
+              "ADD-TO-CART",
+              "ENGAGEMENT"
+            ],
+            "category": "Legacy Search Signals (Biased)",
+            "color": "yellow",
+            "url": "https://www.etsy.com/ie/codeascraft/how-etsy-uses-llms-to-improve-search-relevance",
+            "description": "Behavioural signals that historically drove Etsy search ranking — objective but popularity-biased, disadvantaging new or niche sellers",
+            "skill_level": "Beginner",
+            "additional_sources": [],
+            "theme": "Etsy LLM Search Relevance: Models & Data",
+            "group_item_id": "dfee3f",
+            "group_set_id": "b40d8a"
+          }
+        ],
+        [
+          {
+            "words": [
+              "FILTERING",
+              "ENRICHMENT",
+              "WEIGHTING",
+              "BOOSTING"
+            ],
+            "category": "Student Model Integration Points",
+            "color": "purple",
+            "url": "https://www.etsy.com/ie/codeascraft/how-etsy-uses-llms-to-improve-search-relevance",
+            "description": "The four ways the real-time student model plugs into Etsy's search stack: removing irrelevant results, adding score features, reweighting training, and promoting top matches",
+            "skill_level": "Advanced",
+            "additional_sources": [],
+            "theme": "Etsy LLM Search Relevance: Models & Data",
+            "group_item_id": "550cec",
+            "group_set_id": "840ee7"
+          },
+          {
+            "words": [
+              "DOMAIN-SHIFT",
+              "COST",
+              "SCALE",
+              "ALIGNMENT"
+            ],
+            "category": "LLM-as-a-Judge Challenges",
+            "color": "teal",
+            "url": "https://www.etsy.com/ie/codeascraft/how-etsy-uses-llms-to-improve-search-relevance",
+            "description": "Core obstacles when using LLMs to judge relevance: off-the-shelf models miss Etsy context, large models are expensive, and human alignment must be preserved at scale",
+            "skill_level": "Intermediate",
+            "additional_sources": [],
+            "theme": "Etsy LLM Search Relevance: Models & Data",
+            "group_item_id": "ae11fd",
+            "group_set_id": "840ee7"
+          },
+          {
+            "words": [
+              "SFT",
+              "QWEN",
+              "BERT",
+              "TWO-TOWER"
+            ],
+            "category": "Model Architecture Terms",
+            "color": "orange",
+            "url": "https://www.etsy.com/ie/codeascraft/how-etsy-uses-llms-to-improve-search-relevance",
+            "description": "Technical building blocks: Supervised Fine-Tuning to create the teacher (Qwen 3 VL 4B), and the BERT-based two-tower architecture used for the low-latency student model",
+            "skill_level": "Expert",
+            "additional_sources": [],
+            "theme": "Etsy LLM Search Relevance: Models & Data",
+            "group_item_id": "1ae191",
+            "group_set_id": "840ee7"
+          },
+          {
+            "words": [
+              "STRATIFIED",
+              "SAMPLING",
+              "DISAGREEMENT",
+              "ANNOTATION"
+            ],
+            "category": "Human Label Quality Controls",
+            "color": "indigo",
+            "url": "https://www.etsy.com/ie/codeascraft/how-etsy-uses-llms-to-improve-search-relevance",
+            "description": "Methods Etsy uses to keep its ground-truth labels trustworthy: stratified sampling for coverage, targeted sampling for hard cases, dual-admin labeling, and disagreement-rate tracking",
+            "skill_level": "Intermediate",
+            "additional_sources": [],
+            "theme": "Etsy LLM Search Relevance: Models & Data",
+            "group_item_id": "c10862",
+            "group_set_id": "840ee7"
+          }
+        ]
+      ],
+      "game_set_id": "a63c3e"
+    },
+    {
+      "theme": "Etsy's LLM-Powered Search Relevance Framework",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "FILTERING",
+              "ENRICHMENT",
+              "WEIGHTING",
+              "BOOSTING"
+            ],
+            "category": "Student Model's Production Integration Points",
+            "color": "green",
+            "url": "https://www.etsy.com/ie/codeascraft/how-etsy-uses-llms-to-improve-search-relevance",
+            "description": "The four ways Etsy's lightweight student model plugs into the real-time search stack to improve result quality",
+            "skill_level": "Beginner",
+            "additional_sources": [],
+            "theme": "Etsy's LLM-Powered Search Relevance Framework",
+            "group_item_id": "c452fe",
+            "group_set_id": "8f6bff"
+          },
+          {
+            "words": [
+              "CLICKS",
+              "PURCHASES",
+              "CARTS",
+              "IMPRESSIONS"
+            ],
+            "category": "Legacy Engagement Proxy Signals",
+            "color": "blue",
+            "url": "https://www.etsy.com/ie/codeascraft/how-etsy-uses-llms-to-improve-search-relevance",
+            "description": "Behavioural signals historically used as relevance proxies but biased toward popular listings",
+            "skill_level": "Intermediate",
+            "additional_sources": [],
+            "theme": "Etsy's LLM-Powered Search Relevance Framework",
+            "group_item_id": "d5ce66",
+            "group_set_id": "8f6bff"
+          },
+          {
+            "words": [
+              "VLLM",
+              "LANGGRAPH",
+              "QWEN",
+              "O3"
+            ],
+            "category": "LLM Annotation Stack Components",
+            "color": "red",
+            "url": "https://www.etsy.com/ie/codeascraft/how-etsy-uses-llms-to-improve-search-relevance",
+            "description": "The inference engine, orchestration framework, fine-tuned base model, and reasoning model in Etsy's annotation pipeline",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://docs.vllm.ai/en/stable/",
+              "https://openai.com/index/introducing-o3-and-o4-mini/"
+            ],
+            "theme": "Etsy's LLM-Powered Search Relevance Framework",
+            "group_item_id": "6dbb31",
+            "group_set_id": "8f6bff"
+          },
+          {
+            "words": [
+              "GOLDEN",
+              "DISAGREEMENT",
+              "STRATIFIED",
+              "GUIDELINES"
+            ],
+            "category": "Data Annotation Quality Controls",
+            "color": "yellow",
+            "url": "https://www.etsy.com/ie/codeascraft/how-etsy-uses-llms-to-improve-search-relevance",
+            "description": "The mechanisms Etsy uses to ensure human-labeled training data accurately captures user intent",
+            "skill_level": "Expert",
+            "additional_sources": [],
+            "theme": "Etsy's LLM-Powered Search Relevance Framework",
+            "group_item_id": "b72927",
+            "group_set_id": "8f6bff"
+          }
+        ],
+        [
+          {
+            "words": [
+              "RELEVANT",
+              "PARTIAL",
+              "IRRELEVANT",
+              "GOLDEN"
+            ],
+            "category": "Etsy Relevance Taxonomy Terms",
+            "color": "purple",
+            "url": "https://www.etsy.com/ie/codeascraft/how-etsy-uses-llms-to-improve-search-relevance",
+            "description": "The three relevance label categories plus the human-curated reference dataset — core vocabulary in Etsy's relevance framework",
+            "skill_level": "Beginner",
+            "additional_sources": [],
+            "theme": "Etsy's LLM-Powered Search Relevance Framework",
+            "group_item_id": "9543be",
+            "group_set_id": "37b4da"
+          },
+          {
+            "words": [
+              "FEW-SHOT",
+              "CHAIN-OF-THOUGHT",
+              "SELF-CONSISTENCY",
+              "VALIDATION"
+            ],
+            "category": "LLM Annotator Prompting Techniques",
+            "color": "teal",
+            "url": "https://www.etsy.com/ie/codeascraft/how-etsy-uses-llms-to-improve-search-relevance",
+            "description": "Techniques applied to o3 to produce high-quality, reliable relevance judgments aligned with human labels",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.promptingguide.ai/techniques/consistency"
+            ],
+            "theme": "Etsy's LLM-Powered Search Relevance Framework",
+            "group_item_id": "511dbf",
+            "group_set_id": "37b4da"
+          },
+          {
+            "words": [
+              "ADAPTIVE",
+              "SUBCATEGORIES",
+              "FACILITATION",
+              "SIMPLIFICATION"
+            ],
+            "category": "Future Research Directions",
+            "color": "orange",
+            "url": "https://www.etsy.com/ie/codeascraft/how-etsy-uses-llms-to-improve-search-relevance",
+            "description": "Four strategic areas Etsy's search relevance team plans to explore next",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://github.com/amazon-science/esci-data"
+            ],
+            "theme": "Etsy's LLM-Powered Search Relevance Framework",
+            "group_item_id": "637efc",
+            "group_set_id": "37b4da"
+          },
+          {
+            "words": [
+              "ANNOTATOR",
+              "TEACHER",
+              "STUDENT",
+              "JUDGE"
+            ],
+            "category": "Distillation Pipeline Roles",
+            "color": "indigo",
+            "url": "https://www.etsy.com/ie/codeascraft/how-etsy-uses-llms-to-improve-search-relevance",
+            "description": "The four functional roles in Etsy's cascaded model pipeline from most expensive to most efficient",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/LLM-as-a-Judge"
+            ],
+            "theme": "Etsy's LLM-Powered Search Relevance Framework",
+            "group_item_id": "a77761",
+            "group_set_id": "37b4da"
+          }
+        ]
+      ],
+      "game_set_id": "57e196"
+    },
+    {
+      "theme": "Etsy: The Human Marketplace",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "HANDMADE",
+              "VINTAGE",
+              "UNIQUE",
+              "ARTISAN"
+            ],
+            "category": "Etsy Item Types",
+            "color": "orange",
+            "url": "https://www.etsy.com/ie/about",
+            "description": "The four types of goods that define what's sold on Etsy — all centred on human creativity and curation",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://www.etsy.com/ie/sell"
+            ],
+            "theme": "Etsy: The Human Marketplace",
+            "group_item_id": "48abe1",
+            "group_set_id": "f923bf"
+          },
+          {
+            "words": [
+              "CRAFT",
+              "OPTIMISM",
+              "CURIOSITY",
+              "SUSTAINABILITY"
+            ],
+            "category": "Etsy Guiding Principles",
+            "color": "teal",
+            "url": "https://www.etsy.com/ie/about",
+            "description": "Core values that Etsy commits to: craft, minimising waste (sustainability), embracing differences (curiosity), and leading with optimism",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.etsy.com/ie/impact"
+            ],
+            "theme": "Etsy: The Human Marketplace",
+            "group_item_id": "9fb301",
+            "group_set_id": "f923bf"
+          },
+          {
+            "words": [
+              "SELLERS",
+              "BUYERS",
+              "COMMUNITY",
+              "MARKETPLACE"
+            ],
+            "category": "Etsy Ecosystem Roles",
+            "color": "blue",
+            "url": "https://www.etsy.com/ie/about",
+            "description": "The four pillars of the Etsy ecosystem — creative sellers, shoppers, their collective community, and the platform itself",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://www.etsy.com/ie/sell"
+            ],
+            "theme": "Etsy: The Human Marketplace",
+            "group_item_id": "f78043",
+            "group_set_id": "f923bf"
+          },
+          {
+            "words": [
+              "JOURNAL",
+              "REGISTRY",
+              "EDITORS",
+              "GIFTCARDS"
+            ],
+            "category": "Etsy Buyer Features",
+            "color": "purple",
+            "url": "https://www.etsy.com/ie/about",
+            "description": "Tools and content features Etsy provides to help buyers discover, plan, and gift — from curated editorial to wish lists",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://blog.etsy.com/en/",
+              "https://www.etsy.com/ie/registry"
+            ],
+            "theme": "Etsy: The Human Marketplace",
+            "group_item_id": "54926e",
+            "group_set_id": "f923bf"
+          }
+        ],
+        [
+          {
+            "words": [
+              "IMAGINATION",
+              "CONNECTION",
+              "CREATIVITY",
+              "PASSION"
+            ],
+            "category": "Etsy Brand Values",
+            "color": "yellow",
+            "url": "https://www.etsy.com/ie/about",
+            "description": "The human qualities Etsy places at the heart of its mission — keeping commerce personal and driven by people",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://www.etsy.com/ie/about"
+            ],
+            "theme": "Etsy: The Human Marketplace",
+            "group_item_id": "1f977a",
+            "group_set_id": "e507bb"
+          },
+          {
+            "words": [
+              "FORUMS",
+              "TEAMS",
+              "AFFILIATES",
+              "EDUCATION"
+            ],
+            "category": "Etsy Seller Support",
+            "color": "green",
+            "url": "https://www.etsy.com/ie/about",
+            "description": "The resources and programmes Etsy provides to help sellers grow — from peer communities to educational tools and partnerships",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.etsy.com/ie/sell"
+            ],
+            "theme": "Etsy: The Human Marketplace",
+            "group_item_id": "c175c4",
+            "group_set_id": "e507bb"
+          },
+          {
+            "words": [
+              "INVESTORS",
+              "CAREERS",
+              "PRESS",
+              "IMPACT"
+            ],
+            "category": "Etsy Corporate Sections",
+            "color": "indigo",
+            "url": "https://www.etsy.com/ie/about",
+            "description": "The four main corporate information areas linked from Etsy's About page — covering financials, jobs, media, and social responsibility",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://investors.etsy.com",
+              "https://careers.etsy.com"
+            ],
+            "theme": "Etsy: The Human Marketplace",
+            "group_item_id": "31fd75",
+            "group_set_id": "e507bb"
+          },
+          {
+            "words": [
+              "INSTAGRAM",
+              "FACEBOOK",
+              "PINTEREST",
+              "YOUTUBE"
+            ],
+            "category": "Etsy Social Channels",
+            "color": "red",
+            "url": "https://www.etsy.com/ie/about",
+            "description": "The four social media platforms where Etsy maintains an official presence, as listed on its About page",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://www.etsy.com/ie/about"
+            ],
+            "theme": "Etsy: The Human Marketplace",
+            "group_item_id": "bff639",
+            "group_set_id": "e507bb"
+          }
+        ]
+      ],
+      "game_set_id": "28f7dd"
+    },
+    {
+      "theme": "Event-Driven Architecture",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "QUEUE",
+              "COMMAND",
+              "RPC",
+              "SYNCHRONOUS"
+            ],
+            "category": "Alternatives to EDA",
+            "color": "red",
+            "url": "https://www.hellointerview.com/blog/event-driven-architecture",
+            "description": "Simpler communication patterns to consider before reaching for event-driven architecture",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction"
+            ],
+            "theme": "Event-Driven Architecture",
+            "group_item_id": "b0bd91",
+            "group_set_id": "864966"
+          },
+          {
+            "words": [
+              "FRAUD",
+              "PRICING",
+              "LICENSING",
+              "LEDGER"
+            ],
+            "category": "EDA Use Case Domains",
+            "color": "blue",
+            "url": "https://www.hellointerview.com/blog/event-driven-architecture",
+            "description": "Business domains where event-driven patterns are justified by real operational requirements",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://www.hellointerview.com/learn/system-design/problem-breakdowns/payment-system"
+            ],
+            "theme": "Event-Driven Architecture",
+            "group_item_id": "166761",
+            "group_set_id": "864966"
+          },
+          {
+            "words": [
+              "SCHEMA",
+              "REGISTRY",
+              "EVOLUTION",
+              "CONTRACT"
+            ],
+            "category": "Event Schema Management",
+            "color": "green",
+            "url": "https://www.hellointerview.com/blog/event-driven-architecture",
+            "description": "Tooling and practices for managing how event data formats change over time without breaking consumers",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://docs.confluent.io/platform/current/schema-registry/index.html"
+            ],
+            "theme": "Event-Driven Architecture",
+            "group_item_id": "04ec3c",
+            "group_set_id": "864966"
+          },
+          {
+            "words": [
+              "UBER",
+              "NETFLIX",
+              "STRIPE",
+              "SHOPIFY"
+            ],
+            "category": "EDA Case Studies",
+            "color": "yellow",
+            "url": "https://www.hellointerview.com/blog/event-driven-architecture",
+            "description": "Real companies discussed in the article as evidence for specific EDA use case patterns",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://www.hellointerview.com/learn/system-design/problem-breakdowns/uber"
+            ],
+            "theme": "Event-Driven Architecture",
+            "group_item_id": "9102d6",
+            "group_set_id": "864966"
+          }
+        ],
+        [
+          {
+            "words": [
+              "SURGE",
+              "LATENCY",
+              "BATCH",
+              "PIPELINE"
+            ],
+            "category": "Real-Time Streaming Concepts",
+            "color": "purple",
+            "url": "https://www.hellointerview.com/blog/event-driven-architecture",
+            "description": "Terms related to real-time data processing, where EDA is often required over batch alternatives",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.hellointerview.com/learn/system-design/problem-breakdowns/uber"
+            ],
+            "theme": "Event-Driven Architecture",
+            "group_item_id": "43dc24",
+            "group_set_id": "f10f4f"
+          },
+          {
+            "words": [
+              "PAYMENT",
+              "INVENTORY",
+              "EMAIL",
+              "ANALYTICS"
+            ],
+            "category": "E-Commerce Service Example",
+            "color": "orange",
+            "url": "https://www.hellointerview.com/blog/event-driven-architecture",
+            "description": "The four downstream services in the article's canonical order-placement example illustrating tight coupling",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://www.hellointerview.com/blog/event-driven-architecture"
+            ],
+            "theme": "Event-Driven Architecture",
+            "group_item_id": "cdfb14",
+            "group_set_id": "f10f4f"
+          },
+          {
+            "words": [
+              "CONSUMER",
+              "GROUP",
+              "LAG",
+              "PARTITION"
+            ],
+            "category": "Kafka Consumer Mechanics",
+            "color": "teal",
+            "url": "https://www.hellointerview.com/learn/system-design/deep-dives/kafka",
+            "description": "Kafka-specific concepts for understanding parallel consumption and detecting processing slowdowns",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://kafka.apache.org/documentation/#consumerconfigs"
+            ],
+            "theme": "Event-Driven Architecture",
+            "group_item_id": "c2eec5",
+            "group_set_id": "f10f4f"
+          },
+          {
+            "words": [
+              "RESILIENCE",
+              "DURABILITY",
+              "PERSISTENCE",
+              "RETRY"
+            ],
+            "category": "EDA Reliability Properties",
+            "color": "indigo",
+            "url": "https://www.hellointerview.com/blog/event-driven-architecture",
+            "description": "The reliability guarantees that event-driven systems provide compared to direct API calls",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://aws.amazon.com/eventbridge/"
+            ],
+            "theme": "Event-Driven Architecture",
+            "group_item_id": "05153c",
+            "group_set_id": "f10f4f"
+          }
+        ]
+      ],
+      "game_set_id": "a87d52"
+    },
+    {
+      "theme": "FIFA World Cup Records and Legends",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "BRAZIL",
+              "GERMANY",
+              "ITALY",
+              "ARGENTINA"
+            ],
+            "category": "Multi-Time World Cup Winners",
+            "color": "yellow",
+            "url": "https://www.fifa.com/fifaplus/en/articles/world-cup-winners-list",
+            "description": "Nations that have won the FIFA World Cup more than once — Brazil (5), Germany (4), Italy (4), Argentina (3)",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/FIFA_World_Cup"
+            ],
+            "theme": "FIFA World Cup Records and Legends",
+            "group_item_id": "02cea0",
+            "group_set_id": "9ff67f"
+          },
+          {
+            "words": [
+              "KLOSE",
+              "FONTAINE",
+              "RONALDO",
+              "MULLER"
+            ],
+            "category": "All-Time World Cup Top Scorers",
+            "color": "red",
+            "url": "https://www.fifa.com/fifaplus/en/articles/all-time-world-cup-top-scorers",
+            "description": "Miroslav Klose (16), Just Fontaine (13), Ronaldo (15), Gerd Muller (14) — the greatest goal scorers in World Cup history",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/FIFA_World_Cup_all-time_top_scorers"
+            ],
+            "theme": "FIFA World Cup Records and Legends",
+            "group_item_id": "f43678",
+            "group_set_id": "9ff67f"
+          },
+          {
+            "words": [
+              "PICKLES",
+              "HAND_OF_GOD",
+              "ZIDANE_HEADBUTT",
+              "BAGGIO_PENALTY"
+            ],
+            "category": "Famous World Cup Controversies",
+            "color": "purple",
+            "url": "https://www.theguardian.com/football/world-cup",
+            "description": "The dog who found the Jules Rimet Trophy, Maradona's handball, Zidane's red card in the 2006 final, Baggio's missed penalty in 1994",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/1986_FIFA_World_Cup_quarter-final"
+            ],
+            "theme": "FIFA World Cup Records and Legends",
+            "group_item_id": "7c2dc3",
+            "group_set_id": "9ff67f"
+          },
+          {
+            "words": [
+              "PELE",
+              "MARADONA",
+              "BECKENBAUER",
+              "ZIDANE"
+            ],
+            "category": "Golden Ball Winners",
+            "color": "blue",
+            "url": "https://www.fifa.com/fifaplus/en/articles/world-cup-golden-ball-winners",
+            "description": "Legendary players awarded the Golden Ball as the tournament's best player — each defined their era of World Cup football",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/FIFA_World_Cup_awards"
+            ],
+            "theme": "FIFA World Cup Records and Legends",
+            "group_item_id": "38aa58",
+            "group_set_id": "9ff67f"
+          }
+        ],
+        [
+          {
+            "words": [
+              "URUGUAY",
+              "SOUTH_AFRICA",
+              "QATAR",
+              "JAPAN_KOREA"
+            ],
+            "category": "Historic Host Nations",
+            "color": "green",
+            "url": "https://www.fifa.com/fifaplus/en/articles/world-cup-hosts-history",
+            "description": "Uruguay hosted the first tournament (1930), South Africa first African host (2010), Qatar first Middle Eastern host (2022), Japan/Korea first co-hosts (2002)",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/FIFA_World_Cup_hosts"
+            ],
+            "theme": "FIFA World Cup Records and Legends",
+            "group_item_id": "232687",
+            "group_set_id": "0ce5fe"
+          },
+          {
+            "words": [
+              "HURST",
+              "MOORE",
+              "BANKS",
+              "CHARLTON"
+            ],
+            "category": "England's 1966 World Cup Heroes",
+            "color": "teal",
+            "url": "https://en.wikipedia.org/wiki/1966_FIFA_World_Cup_final",
+            "description": "Geoff Hurst (hat trick in the final), Bobby Moore (captain), Gordon Banks (goalkeeper), Bobby Charlton — the core of England's only World Cup win",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.bbc.co.uk/sport/football/world-cup"
+            ],
+            "theme": "FIFA World Cup Records and Legends",
+            "group_item_id": "7ff126",
+            "group_set_id": "0ce5fe"
+          },
+          {
+            "words": [
+              "SUKUR",
+              "FERREYRA",
+              "WHITESIDE",
+              "SALENKO"
+            ],
+            "category": "Obscure World Cup Record Holders",
+            "color": "orange",
+            "url": "https://www.fifa.com/fifaplus/en/articles/world-cup-records",
+            "description": "Hakan Sukur fastest goal (11 seconds), Bernabe Ferreyra fastest hat trick, Norman Whiteside youngest player, Oleg Salenko 5 goals in one game",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/FIFA_World_Cup_records_and_statistics"
+            ],
+            "theme": "FIFA World Cup Records and Legends",
+            "group_item_id": "3c306b",
+            "group_set_id": "0ce5fe"
+          },
+          {
+            "words": [
+              "BUFFON",
+              "KAHN",
+              "ZOFF",
+              "CASILLAS"
+            ],
+            "category": "Legendary World Cup Goalkeepers",
+            "color": "indigo",
+            "url": "https://www.fifa.com/fifaplus/en/articles/world-cup-goalkeepers",
+            "description": "Gianluigi Buffon (176 Italy caps), Oliver Kahn (2002 Golden Ball), Dino Zoff (1982 winner at age 40), Iker Casillas — the greatest keepers in World Cup history",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/FIFA_World_Cup_Golden_Glove"
+            ],
+            "theme": "FIFA World Cup Records and Legends",
+            "group_item_id": "cb6b8f",
+            "group_set_id": "0ce5fe"
+          }
+        ]
+      ],
+      "game_set_id": "24e8d0"
+    },
+    {
+      "theme": "GPU Networking and LLM Parallelism",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "NVLINK",
+              "INFINIBAND",
+              "NVSWITCH",
+              "SHARP"
+            ],
+            "category": "GPU Interconnect Technologies",
+            "color": "green",
+            "url": "https://jax-ml.github.io/scaling-book/gpus/",
+            "description": "The four key networking technologies in GPU clusters: NVLink (intra-node high-bandwidth), InfiniBand (inter-node fabric), NVSwitch (intra-node switching chip), and SHARP (in-network reductions).",
+            "skill_level": "Intermediate",
+            "additional_sources": [],
+            "theme": "GPU Networking and LLM Parallelism",
+            "group_item_id": "b38a68",
+            "group_set_id": "c0926f"
+          },
+          {
+            "words": [
+              "ALLGATHER",
+              "REDUCESCATTER",
+              "ALLREDUCE",
+              "ALLTOALL"
+            ],
+            "category": "Distributed Collective Operations",
+            "color": "red",
+            "url": "https://jax-ml.github.io/scaling-book/gpus/",
+            "description": "The four collective communication primitives used in distributed LLM training: AllGather and ReduceScatter are halves of an AllReduce; AllToAll is used in MoE expert routing.",
+            "skill_level": "Intermediate",
+            "additional_sources": [],
+            "theme": "GPU Networking and LLM Parallelism",
+            "group_item_id": "8c41bb",
+            "group_set_id": "c0926f"
+          },
+          {
+            "words": [
+              "NODE",
+              "SU",
+              "SUPERPOD",
+              "SPINE"
+            ],
+            "category": "DGX H100 Network Hierarchy Levels",
+            "color": "blue",
+            "url": "https://jax-ml.github.io/scaling-book/gpus/",
+            "description": "The four-level hierarchy in an NVIDIA DGX H100 SuperPod: 8-GPU NVLink node, 256-GPU Scalable Unit (leaf switches), 1024-GPU SuperPod (spine switches).",
+            "skill_level": "Advanced",
+            "additional_sources": [],
+            "theme": "GPU Networking and LLM Parallelism",
+            "group_item_id": "67fa67",
+            "group_set_id": "c0926f"
+          },
+          {
+            "words": [
+              "TP",
+              "DP",
+              "PP",
+              "EP"
+            ],
+            "category": "LLM Parallelism Strategies",
+            "color": "yellow",
+            "url": "https://jax-ml.github.io/scaling-book/gpus/",
+            "description": "The four main parallelism dimensions for large model training: Tensor (shard weight matrices), Data (replicate model), Pipeline (shard layers), Expert (shard MoE experts).",
+            "skill_level": "Intermediate",
+            "additional_sources": [],
+            "theme": "GPU Networking and LLM Parallelism",
+            "group_item_id": "541c64",
+            "group_set_id": "c0926f"
+          }
+        ],
+        [
+          {
+            "words": [
+              "NCCL",
+              "ZERO",
+              "FSDP",
+              "GSPMD"
+            ],
+            "category": "Distributed Training Libraries and Systems",
+            "color": "purple",
+            "url": "https://jax-ml.github.io/scaling-book/gpus/",
+            "description": "Software frameworks underpinning GPU-scale LLM training: NCCL (NVIDIA's collective library), ZeRO (optimizer state sharding), FSDP (fully sharded data parallelism), GSPMD (XLA's automatic parallelism).",
+            "skill_level": "Advanced",
+            "additional_sources": [],
+            "theme": "GPU Networking and LLM Parallelism",
+            "group_item_id": "552dd2",
+            "group_set_id": "4fae3c"
+          },
+          {
+            "words": [
+              "BISECTION",
+              "FATTREE",
+              "OVERSUBSCRIBED",
+              "NDR"
+            ],
+            "category": "Data-Centre Network Topology Terms",
+            "color": "teal",
+            "url": "https://jax-ml.github.io/scaling-book/gpus/",
+            "description": "Network design concepts relevant to GPU superpods: bisection bandwidth (bandwidth across any even partition), fat tree (guarantees full bisection), oversubscription (links cheaper but shared), NDR (400Gbps InfiniBand generation).",
+            "skill_level": "Expert",
+            "additional_sources": [],
+            "theme": "GPU Networking and LLM Parallelism",
+            "group_item_id": "3e56bc",
+            "group_set_id": "4fae3c"
+          },
+          {
+            "words": [
+              "BUBBLE",
+              "MICROBATCH",
+              "ZEROBUBBLE",
+              "INTERLEAVE"
+            ],
+            "category": "Pipeline Parallelism Scheduling Concepts",
+            "color": "orange",
+            "url": "https://jax-ml.github.io/scaling-book/gpus/",
+            "description": "Terms specific to pipeline parallelism scheduling: pipeline bubbles (idle compute), microbatches (subdivided batch to fill pipeline), zero-bubble scheduling (avoids idle stages), interleaved forward/backward passes.",
+            "skill_level": "Expert",
+            "additional_sources": [],
+            "theme": "GPU Networking and LLM Parallelism",
+            "group_item_id": "2d7ee6",
+            "group_set_id": "4fae3c"
+          },
+          {
+            "words": [
+              "MFU",
+              "DEEPSEEK",
+              "LLAMA",
+              "MEGATRON"
+            ],
+            "category": "Real-World LLM Training Examples",
+            "color": "indigo",
+            "url": "https://jax-ml.github.io/scaling-book/gpus/",
+            "description": "Concrete large-scale training examples from the chapter: MFU (metric for GPU utilisation), DeepSeek V3 (64-way EP + 16-way PP), LLaMA-3 (8-way TP + 16-way PP), and Megatron-LM (NVIDIA's training framework).",
+            "skill_level": "Intermediate",
+            "additional_sources": [],
+            "theme": "GPU Networking and LLM Parallelism",
+            "group_item_id": "0f7952",
+            "group_set_id": "4fae3c"
+          }
+        ]
+      ],
+      "game_set_id": "171586"
+    },
+    {
+      "theme": "LLM Evaluation: Types and Methods",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "TRAJECTORY",
+              "TOOL_CALL",
+              "OUTCOME",
+              "STEP_EFFICIENCY"
+            ],
+            "category": "Agent Evaluation Signals",
+            "color": "orange",
+            "url": "https://futureagi.com/glossary/llm-as-a-judge",
+            "description": "Evaluation signals specific to agentic systems — assessing not just the final answer but whether the agent took the right steps to get there",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://aiagentrank.io/glossary/llm-as-a-judge"
+            ],
+            "theme": "LLM Evaluation: Types and Methods",
+            "group_item_id": "3b91a6",
+            "group_set_id": "ae2d63"
+          },
+          {
+            "words": [
+              "REGRESSION",
+              "A_B_TEST",
+              "CANARY",
+              "BASELINE"
+            ],
+            "category": "Eval Testing Strategies",
+            "color": "blue",
+            "url": "https://inblog.ai/glossary/llm-as-judge",
+            "description": "Strategies for detecting quality changes — running evals after every prompt change, comparing variants, and always measuring against a known baseline",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://aiagentrank.io/glossary/llm-as-a-judge"
+            ],
+            "theme": "LLM Evaluation: Types and Methods",
+            "group_item_id": "91eae5",
+            "group_set_id": "ae2d63"
+          },
+          {
+            "words": [
+              "FEW_SHOT",
+              "ZERO_SHOT",
+              "CHAIN_OF_THOUGHT",
+              "SELF_CONSISTENCY"
+            ],
+            "category": "Prompting Eval Techniques",
+            "color": "green",
+            "url": "https://futureagi.com/blog/llm-evaluation-frameworks-metrics-best-practices",
+            "description": "Prompting strategies that affect how a model is evaluated and how a judge model is prompted — few-shot calibration examples improve judge reliability",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://www.promptlayer.com/glossary/llm-as-a-judge"
+            ],
+            "theme": "LLM Evaluation: Types and Methods",
+            "group_item_id": "d7c3e5",
+            "group_set_id": "ae2d63"
+          },
+          {
+            "words": [
+              "SPOT_CHECK",
+              "KAPPA",
+              "CORRELATION",
+              "INTER_RATER"
+            ],
+            "category": "Eval Quality Assurance",
+            "color": "purple",
+            "url": "https://futureagi.com/glossary/llm-as-a-judge",
+            "description": "Methods for validating that your evals are themselves trustworthy — human spot-checks, Cohen's kappa, and correlation against expert annotations",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://memx.app/glossary/llm-as-a-judge/"
+            ],
+            "theme": "LLM Evaluation: Types and Methods",
+            "group_item_id": "231e21",
+            "group_set_id": "ae2d63"
+          }
+        ],
+        [
+          {
+            "words": [
+              "DETERMINISTIC",
+              "SEMANTIC",
+              "CLASSIFIER",
+              "NEURAL"
+            ],
+            "category": "Scoring Method Types",
+            "color": "teal",
+            "url": "https://interviewkickstart.com/ai-glossary/evals-llm-evaluation",
+            "description": "The spectrum of automated scoring approaches — from exact string matching at one end to neural semantic similarity and classifier-based grading at the other",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://futureagi.com/blogs/build-llm-evaluation-framework-2025"
+            ],
+            "theme": "LLM Evaluation: Types and Methods",
+            "group_item_id": "3bffc1",
+            "group_set_id": "f87da9"
+          },
+          {
+            "words": [
+              "RAG_FAITHFULNESS",
+              "CONTEXT_RECALL",
+              "ANSWER_RELEVANCY",
+              "CONTEXT_PRECISION"
+            ],
+            "category": "RAG-Specific Evals",
+            "color": "red",
+            "url": "https://futureagi.com/glossary/llm-as-a-judge",
+            "description": "Eval metrics specific to Retrieval-Augmented Generation pipelines — checking that answers are faithful to retrieved context and that retrieval itself is relevant and precise",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://arxiv.org/html/2602.18823"
+            ],
+            "theme": "LLM Evaluation: Types and Methods",
+            "group_item_id": "c5ecb5",
+            "group_set_id": "f87da9"
+          },
+          {
+            "words": [
+              "DEEPEVAL",
+              "RAGAS",
+              "LANGSMITH",
+              "BRAINTRUST"
+            ],
+            "category": "Eval Frameworks & Tools",
+            "color": "yellow",
+            "url": "https://dataaspirant.com/llm-evaluation-tools/",
+            "description": "The leading open-source and commercial toolkits for running LLM evals — each with built-in judge patterns, metric libraries, and production monitoring",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://aiagentrank.io/glossary/llm-as-a-judge"
+            ],
+            "theme": "LLM Evaluation: Types and Methods",
+            "group_item_id": "2d7f1b",
+            "group_set_id": "f87da9"
+          },
+          {
+            "words": [
+              "DRIFT",
+              "LATENCY",
+              "COST",
+              "THROUGHPUT"
+            ],
+            "category": "Production Eval Signals",
+            "color": "indigo",
+            "url": "https://interviewkickstart.com/ai-glossary/evals-llm-evaluation",
+            "description": "Operational signals monitored alongside quality evals in production — detecting model drift, regression in response time, and cost-per-query changes over time",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://dataaspirant.com/llm-evaluation-tools/"
+            ],
+            "theme": "LLM Evaluation: Types and Methods",
+            "group_item_id": "b55102",
+            "group_set_id": "f87da9"
+          }
+        ]
+      ],
+      "game_set_id": "788fe7"
+    },
+    {
+      "theme": "LLM Hardware and Architecture Deep Dive",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "SYSTOLIC",
+              "MATMUL",
+              "MXU",
+              "ASIC"
+            ],
+            "category": "TPU Compute Architecture",
+            "color": "red",
+            "url": "https://jax-ml.github.io/scaling-book/tpus/",
+            "description": "Hardware concepts specific to Google TPUs — the systolic array matrix multiply unit (MXU) executes matrix multiplies as its native operation, making it ideal for Transformer workloads",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://jax-ml.github.io/scaling-book/tpus/"
+            ],
+            "theme": "LLM Hardware and Architecture Deep Dive",
+            "group_item_id": "b5db74",
+            "group_set_id": "6724c6"
+          },
+          {
+            "words": [
+              "KV-CACHE",
+              "SPECULATIVE",
+              "QUANTISATION",
+              "DISTILLATION"
+            ],
+            "category": "Inference Optimisation Methods",
+            "color": "blue",
+            "url": "https://jax-ml.github.io/scaling-book/inference/",
+            "description": "Techniques that reduce the compute or memory cost of serving LLMs without degrading output quality — KV-cache avoids recomputing attention keys and values per token",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://jax-ml.github.io/scaling-book/inference/"
+            ],
+            "theme": "LLM Hardware and Architecture Deep Dive",
+            "group_item_id": "e8d879",
+            "group_set_id": "6724c6"
+          },
+          {
+            "words": [
+              "CHECKPOINT",
+              "GRADIENT",
+              "OPTIMIZER",
+              "WEIGHT"
+            ],
+            "category": "Training State Components",
+            "color": "green",
+            "url": "https://jax-ml.github.io/scaling-book/training/",
+            "description": "Objects that make up the full training state — checkpoint stores all of these, gradient updates are accumulated per step, optimizer state tracks momentum, weights are the model parameters",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://jax-ml.github.io/scaling-book/training/"
+            ],
+            "theme": "LLM Hardware and Architecture Deep Dive",
+            "group_item_id": "91c553",
+            "group_set_id": "6724c6"
+          },
+          {
+            "words": [
+              "ICI",
+              "DCN",
+              "NVLink",
+              "INFINIBAND"
+            ],
+            "category": "Chip Interconnect Technologies",
+            "color": "yellow",
+            "url": "https://jax-ml.github.io/scaling-book/tpus/",
+            "description": "The physical links that connect accelerators within and across nodes — ICI (Inter-Chip Interconnect) is TPU's high-bandwidth intra-pod fabric; DCN connects across pods at lower bandwidth",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://jax-ml.github.io/scaling-book/tpus/"
+            ],
+            "theme": "LLM Hardware and Architecture Deep Dive",
+            "group_item_id": "efd25f",
+            "group_set_id": "6724c6"
+          }
+        ],
+        [
+          {
+            "words": [
+              "SOFTMAX",
+              "ROTARY",
+              "DROPOUT",
+              "GELU"
+            ],
+            "category": "Transformer Elementwise Ops",
+            "color": "teal",
+            "url": "https://jax-ml.github.io/scaling-book/transformers/",
+            "description": "Non-linear and normalisation operations applied elementwise inside a Transformer — memory-bandwidth-bound at scale because they do few FLOPs per byte loaded",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://jax-ml.github.io/scaling-book/transformers/"
+            ],
+            "theme": "LLM Hardware and Architecture Deep Dive",
+            "group_item_id": "494022",
+            "group_set_id": "a1e1c2"
+          },
+          {
+            "words": [
+              "ARITHMETIC-INTENSITY",
+              "COMPUTE-BOUND",
+              "MEMORY-BOUND",
+              "COMMUNICATION-BOUND"
+            ],
+            "category": "Hardware Binding Regimes",
+            "color": "purple",
+            "url": "https://jax-ml.github.io/scaling-book/",
+            "description": "The three regimes that determine what limits performance: arithmetic intensity (FLOPs/byte) tells you whether computation, memory bandwidth, or network communication is the bottleneck",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://jax-ml.github.io/scaling-book/"
+            ],
+            "theme": "LLM Hardware and Architecture Deep Dive",
+            "group_item_id": "4c9e5a",
+            "group_set_id": "a1e1c2"
+          },
+          {
+            "words": [
+              "LLAMA",
+              "GPT",
+              "GEMINI",
+              "PALM"
+            ],
+            "category": "Large Language Model Families",
+            "color": "orange",
+            "url": "https://jax-ml.github.io/scaling-book/",
+            "description": "Production-scale Transformer models used as worked examples throughout the scaling book to ground abstract hardware analysis in real-world architectures",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://jax-ml.github.io/scaling-book/"
+            ],
+            "theme": "LLM Hardware and Architecture Deep Dive",
+            "group_item_id": "9bfa9d",
+            "group_set_id": "a1e1c2"
+          },
+          {
+            "words": [
+              "JAXPR",
+              "XLA",
+              "PJIT",
+              "SHARD-MAP"
+            ],
+            "category": "JAX Compilation Abstractions",
+            "color": "indigo",
+            "url": "https://jax-ml.github.io/scaling-book/",
+            "description": "The JAX and XLA compilation stack that transforms Python functions into distributed hardware programs — PJIT and shard-map are the primary APIs for expressing data and model parallelism",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://jax-ml.github.io/scaling-book/"
+            ],
+            "theme": "LLM Hardware and Architecture Deep Dive",
+            "group_item_id": "ef1d89",
+            "group_set_id": "a1e1c2"
+          }
+        ]
+      ],
+      "game_set_id": "7a8f2f"
+    },
+    {
+      "theme": "Linux Performance Observability with eBPF",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "TCPRETRANS",
+              "TCPACCEPT",
+              "TCPLIFE",
+              "TCPDROP"
+            ],
+            "category": "TCP Network Tracing Tools",
+            "color": "blue",
+            "url": "https://www.brendangregg.com/ebpf.html",
+            "description": "bcc tools focused on tracing TCP connection lifecycle events — retransmits, passive accepts, connection lifespans, and dropped packets",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://github.com/iovisor/bcc"
+            ],
+            "theme": "Linux Performance Observability with eBPF",
+            "group_item_id": "035dd9",
+            "group_set_id": "76bc75"
+          },
+          {
+            "words": [
+              "HIST",
+              "LHIST",
+              "COUNT",
+              "STATS"
+            ],
+            "category": "bpftrace Map Functions",
+            "color": "green",
+            "url": "https://www.brendangregg.com/ebpf.html",
+            "description": "bpftrace map-populating builtin functions for summarising data: power-of-2 histogram, linear histogram, event count, and statistics (min/max/avg)",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://github.com/iovisor/bpftrace"
+            ],
+            "theme": "Linux Performance Observability with eBPF",
+            "group_item_id": "1c848b",
+            "group_set_id": "76bc75"
+          },
+          {
+            "words": [
+              "KPROBE",
+              "KRETPROBE",
+              "KFUNC",
+              "KRETFUNC"
+            ],
+            "category": "Kernel Dynamic Probe Types",
+            "color": "red",
+            "url": "https://www.brendangregg.com/ebpf.html",
+            "description": "bpftrace probe types for attaching to kernel function entry and return — standard kprobes and the newer BPF-based kfunc variants",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://github.com/iovisor/bpftrace"
+            ],
+            "theme": "Linux Performance Observability with eBPF",
+            "group_item_id": "dafe36",
+            "group_set_id": "76bc75"
+          },
+          {
+            "words": [
+              "PROFILE",
+              "FUNCLATENCY",
+              "BITESIZE",
+              "EXT4SLOWER"
+            ],
+            "category": "Latency & Profiling Tools",
+            "color": "orange",
+            "url": "https://www.brendangregg.com/ebpf.html",
+            "description": "bcc tools for measuring latency and profiling: CPU flame graph sampling, function latency, block I/O size distribution, and slow filesystem operation tracing",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://github.com/iovisor/bcc"
+            ],
+            "theme": "Linux Performance Observability with eBPF",
+            "group_item_id": "db919a",
+            "group_set_id": "76bc75"
+          }
+        ],
+        [
+          {
+            "words": [
+              "BPF_PROBE_READ",
+              "BPF_KTIME_GET_NS",
+              "BPF_LOG2L",
+              "BPF_TRACE_PRINTK"
+            ],
+            "category": "eBPF Helper Functions",
+            "color": "purple",
+            "url": "https://www.brendangregg.com/ebpf.html",
+            "description": "Kernel-side BPF helper functions used within eBPF programs: safe memory reads, nanosecond timestamps, log2 bucketing for histograms, and debug printing",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://github.com/iovisor/bcc"
+            ],
+            "theme": "Linux Performance Observability with eBPF",
+            "group_item_id": "c77c79",
+            "group_set_id": "e3a454"
+          },
+          {
+            "words": [
+              "USDT",
+              "UPROBE",
+              "URETPROBE",
+              "BASHREADLINE"
+            ],
+            "category": "User-Space Tracing Probes",
+            "color": "teal",
+            "url": "https://www.brendangregg.com/ebpf.html",
+            "description": "Probe types and an example tool for tracing user-space code: statically defined tracing points, dynamic function entry/return probes, and bash command tracing",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://github.com/iovisor/bcc"
+            ],
+            "theme": "Linux Performance Observability with eBPF",
+            "group_item_id": "ac3a4c",
+            "group_set_id": "e3a454"
+          },
+          {
+            "words": [
+              "LIBBPF",
+              "LIBBPF-TOOLS",
+              "SKEL",
+              "CONFIG_BPF_SYSCALL"
+            ],
+            "category": "eBPF Build & Runtime Requirements",
+            "color": "indigo",
+            "url": "https://www.brendangregg.com/ebpf.html",
+            "description": "Components required to build and run modern eBPF tools: the libbpf C library, skeleton headers generated from BPF objects, and the kernel config option enabling BPF syscalls",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://github.com/libbpf/libbpf"
+            ],
+            "theme": "Linux Performance Observability with eBPF",
+            "group_item_id": "2986f8",
+            "group_set_id": "e3a454"
+          },
+          {
+            "words": [
+              "CILIUM",
+              "XDP",
+              "SDN",
+              "DDOS"
+            ],
+            "category": "Non-Observability eBPF Uses",
+            "color": "yellow",
+            "url": "https://www.brendangregg.com/ebpf.html",
+            "description": "eBPF applications beyond tracing: Cilium for API-aware networking, eXpress Data Path for high-performance packet processing, software-defined networking, and early packet drop for DDoS mitigation",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://cilium.io"
+            ],
+            "theme": "Linux Performance Observability with eBPF",
+            "group_item_id": "39b7ee",
+            "group_set_id": "e3a454"
+          }
+        ]
+      ],
+      "game_set_id": "eeb31f"
+    },
+    {
+      "theme": "Linux Process Memory Metrics",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "VSZ",
+              "VIRT",
+              "MMAP",
+              "OVERCOMMIT"
+            ],
+            "category": "Virtual Memory Concepts",
+            "color": "blue",
+            "url": "https://kernel-internals.org/mm/virtual-physical-resident/",
+            "description": "Terms related to virtual address space — what a process has mapped, not what it uses in RAM",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://man7.org/linux/man-pages/man5/proc.5.html"
+            ],
+            "theme": "Linux Process Memory Metrics",
+            "group_item_id": "e0eeb6",
+            "group_set_id": "9818c4"
+          },
+          {
+            "words": [
+              "RSS",
+              "RES",
+              "RESIDENT",
+              "DEMAND-PAGING"
+            ],
+            "category": "Physical RAM Occupancy",
+            "color": "green",
+            "url": "https://kernel-internals.org/mm/virtual-physical-resident/",
+            "description": "Terms describing which virtual pages are currently backed by physical RAM",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://man7.org/linux/man-pages/man1/ps.1.html"
+            ],
+            "theme": "Linux Process Memory Metrics",
+            "group_item_id": "8e0f22",
+            "group_set_id": "9818c4"
+          },
+          {
+            "words": [
+              "PSS",
+              "USS",
+              "SMAPS",
+              "SMAPS_ROLLUP"
+            ],
+            "category": "Accurate Accounting Tools",
+            "color": "orange",
+            "url": "https://kernel-internals.org/mm/virtual-physical-resident/",
+            "description": "Metrics and /proc files that give fair, shared-aware memory accounting beyond simple RSS",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://lkml.iu.edu/hypermail/linux/kernel/0710.3/1565.html"
+            ],
+            "theme": "Linux Process Memory Metrics",
+            "group_item_id": "2599b9",
+            "group_set_id": "9818c4"
+          },
+          {
+            "words": [
+              "KSM",
+              "THP",
+              "CGROUP",
+              "SWAP"
+            ],
+            "category": "Modern Memory Complexity",
+            "color": "purple",
+            "url": "https://kernel-internals.org/mm/virtual-physical-resident/",
+            "description": "Kernel features that further complicate simple memory accounting: page merging, huge pages, limits, and swap",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://kernel-internals.org/mm/ksm/",
+              "https://kernel-internals.org/mm/thp/"
+            ],
+            "theme": "Linux Process Memory Metrics",
+            "group_item_id": "0e979a",
+            "group_set_id": "9818c4"
+          }
+        ],
+        [
+          {
+            "words": [
+              "PRIVATE_CLEAN",
+              "PRIVATE_DIRTY",
+              "SHARED_CLEAN",
+              "SHARED_DIRTY"
+            ],
+            "category": "smaps Page Categories",
+            "color": "teal",
+            "url": "https://kernel-internals.org/mm/virtual-physical-resident/",
+            "description": "The four page-state fields in /proc/pid/smaps used to compute USS and PSS",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://man7.org/linux/man-pages/man5/proc.5.html"
+            ],
+            "theme": "Linux Process Memory Metrics",
+            "group_item_id": "2d00f9",
+            "group_set_id": "91431b"
+          },
+          {
+            "words": [
+              "SLAB",
+              "PAGE-CACHE",
+              "BUFF/CACHE",
+              "AVAILABLE"
+            ],
+            "category": "Physical Memory Consumers",
+            "color": "yellow",
+            "url": "https://kernel-internals.org/mm/virtual-physical-resident/",
+            "description": "The main categories shown in `free` output that consume physical RAM outside process RSS",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://kernel-internals.org/mm/slab/",
+              "https://kernel-internals.org/mm/page-cache/"
+            ],
+            "theme": "Linux Process Memory Metrics",
+            "group_item_id": "91f9f1",
+            "group_set_id": "91431b"
+          },
+          {
+            "words": [
+              "COW",
+              "LIBC",
+              "MAP_NORESERVE",
+              "PMAP"
+            ],
+            "category": "Shared Library & Mapping Mechanics",
+            "color": "red",
+            "url": "https://kernel-internals.org/mm/virtual-physical-resident/",
+            "description": "Mechanisms and tools central to understanding how shared pages work and how to inspect mappings",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://kernel-internals.org/mm/cow/",
+              "https://man7.org/linux/man-pages/man1/pmap.1.html"
+            ],
+            "theme": "Linux Process Memory Metrics",
+            "group_item_id": "5bca10",
+            "group_set_id": "91431b"
+          },
+          {
+            "words": [
+              "2.6.14",
+              "2.6.25",
+              "4.14",
+              "MATT-MACKALL"
+            ],
+            "category": "PSS History Milestones",
+            "color": "indigo",
+            "url": "https://kernel-internals.org/mm/virtual-physical-resident/",
+            "description": "Kernel versions and the key contributor behind the introduction of smaps and PSS accounting",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://lwn.net/Articles/230975/"
+            ],
+            "theme": "Linux Process Memory Metrics",
+            "group_item_id": "5b063d",
+            "group_set_id": "91431b"
+          }
+        ]
+      ],
+      "game_set_id": "9da791"
+    },
+    {
+      "theme": "ML Systems for Marketplace Search: Broader Concepts",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "BUYERS",
+              "SELLERS",
+              "ADMINS",
+              "ANNOTATORS"
+            ],
+            "category": "People in Etsy's Search Optimisation Loop",
+            "color": "red",
+            "url": "https://www.etsy.com/ie/codeascraft/how-etsy-uses-llms-to-improve-search-relevance",
+            "description": "The four human roles directly involved in building, labelling, and benefiting from Etsy's relevance system",
+            "skill_level": "Beginner",
+            "additional_sources": [],
+            "theme": "ML Systems for Marketplace Search: Broader Concepts",
+            "group_item_id": "48aff5",
+            "group_set_id": "81929b"
+          },
+          {
+            "words": [
+              "ACCURACY",
+              "LATENCY",
+              "COST",
+              "THROUGHPUT"
+            ],
+            "category": "Model Tier Trade-off Dimensions",
+            "color": "yellow",
+            "url": "https://www.etsy.com/ie/codeascraft/how-etsy-uses-llms-to-improve-search-relevance",
+            "description": "The four competing properties that determine where each model sits in the three-tier distillation cascade",
+            "skill_level": "Intermediate",
+            "additional_sources": [],
+            "theme": "ML Systems for Marketplace Search: Broader Concepts",
+            "group_item_id": "e7735d",
+            "group_set_id": "81929b"
+          },
+          {
+            "words": [
+              "BERT",
+              "QWEN",
+              "TWO-TOWER",
+              "SFT"
+            ],
+            "category": "Student and Teacher Model Architecture Details",
+            "color": "green",
+            "url": "https://www.etsy.com/ie/codeascraft/how-etsy-uses-llms-to-improve-search-relevance",
+            "description": "Architecture choices and training approach used for the lightweight production and intermediate teacher models",
+            "skill_level": "Advanced",
+            "additional_sources": [],
+            "theme": "ML Systems for Marketplace Search: Broader Concepts",
+            "group_item_id": "d10d2b",
+            "group_set_id": "81929b"
+          },
+          {
+            "words": [
+              "VISIBILITY",
+              "DISCOVERY",
+              "FAIRNESS",
+              "OPPORTUNITY"
+            ],
+            "category": "Seller Benefits of Semantic Relevance",
+            "color": "blue",
+            "url": "https://www.etsy.com/ie/codeascraft/how-etsy-uses-llms-to-improve-search-relevance",
+            "description": "The business outcomes small and new sellers gain when search optimises for intent rather than raw popularity",
+            "skill_level": "Expert",
+            "additional_sources": [],
+            "theme": "ML Systems for Marketplace Search: Broader Concepts",
+            "group_item_id": "b4d19a",
+            "group_set_id": "81929b"
+          }
+        ],
+        [
+          {
+            "words": [
+              "POWER",
+              "VARIANTS",
+              "CONTROL",
+              "TREATMENT"
+            ],
+            "category": "A/B Test Design Concepts",
+            "color": "purple",
+            "url": "https://www.etsy.com/ie/codeascraft/how-etsy-uses-llms-to-improve-search-relevance",
+            "description": "The statistical and structural elements Etsy evaluates when deciding whether to ship a new search change",
+            "skill_level": "Beginner",
+            "additional_sources": [],
+            "theme": "ML Systems for Marketplace Search: Broader Concepts",
+            "group_item_id": "4d0aae",
+            "group_set_id": "72529b"
+          },
+          {
+            "words": [
+              "CULTURAL",
+              "TEMPORAL",
+              "SEASONAL",
+              "DOMAIN"
+            ],
+            "category": "Types of Relevance Drift Over Time",
+            "color": "teal",
+            "url": "https://www.etsy.com/ie/codeascraft/how-etsy-uses-llms-to-improve-search-relevance",
+            "description": "Dimensions along which what counts as relevant shifts — illustrated by the pre vs post-2020 face mask example",
+            "skill_level": "Intermediate",
+            "additional_sources": [],
+            "theme": "ML Systems for Marketplace Search: Broader Concepts",
+            "group_item_id": "865e2c",
+            "group_set_id": "72529b"
+          },
+          {
+            "words": [
+              "COMPLEMENTS",
+              "SUBSTITUTES",
+              "ESCI",
+              "SUBCATEGORIES"
+            ],
+            "category": "Amazon-Inspired Relevance Label Refinements",
+            "color": "orange",
+            "url": "https://www.etsy.com/ie/codeascraft/how-etsy-uses-llms-to-improve-search-relevance",
+            "description": "Finer-grained relevance distinctions Etsy plans to explore inspired by Amazon's ESCI taxonomy",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://github.com/amazon-science/esci-data"
+            ],
+            "theme": "ML Systems for Marketplace Search: Broader Concepts",
+            "group_item_id": "a6800e",
+            "group_set_id": "72529b"
+          },
+          {
+            "words": [
+              "OFFLINE",
+              "ONLINE",
+              "MONITORING",
+              "MACRO-F1"
+            ],
+            "category": "Evaluation Modes Across the Model Tiers",
+            "color": "indigo",
+            "url": "https://www.etsy.com/ie/codeascraft/how-etsy-uses-llms-to-improve-search-relevance",
+            "description": "The evaluation strategies used to track model quality against golden labels and production search metrics",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://towardsdatascience.com/micro-macro-weighted-averages-of-f1-score-clearly-explained-b603420b292f/"
+            ],
+            "theme": "ML Systems for Marketplace Search: Broader Concepts",
+            "group_item_id": "e97f40",
+            "group_set_id": "72529b"
+          }
+        ]
+      ],
+      "game_set_id": "27ceb0"
+    },
+    {
+      "theme": "Observability Frameworks: RED, USE & Four Golden Signals",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "P50",
+              "P95",
+              "P99",
+              "HISTOGRAM"
+            ],
+            "category": "Latency Measurement",
+            "color": "blue",
+            "url": "https://sre.google/sre-book/monitoring-distributed-systems/",
+            "description": "Percentile distributions and histograms used to measure latency properly — averages mask tail latency that real users experience",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://grafana.com/blog/2018/08/02/the-red-method-how-to-instrument-your-services/"
+            ],
+            "theme": "Observability Frameworks: RED, USE & Four Golden Signals",
+            "group_item_id": "506860",
+            "group_set_id": "f06dc5"
+          },
+          {
+            "words": [
+              "METRICS",
+              "LOGS",
+              "TRACES",
+              "EVENTS"
+            ],
+            "category": "Observability Pillars",
+            "color": "green",
+            "url": "https://opentelemetry.io/docs/concepts/observability-primer/",
+            "description": "The four telemetry signal types that feed all observability frameworks — together they provide the full picture of system behaviour",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://www.squadcast.com/blog/how-important-is-observability-for-sre"
+            ],
+            "theme": "Observability Frameworks: RED, USE & Four Golden Signals",
+            "group_item_id": "d16c86",
+            "group_set_id": "f06dc5"
+          },
+          {
+            "words": [
+              "PROMETHEUS",
+              "GRAFANA",
+              "DATADOG",
+              "OTEL"
+            ],
+            "category": "Observability Tooling",
+            "color": "teal",
+            "url": "https://opentelemetry.io/",
+            "description": "The dominant tools used to collect, store, and visualise the signals defined by RED, USE, and the Golden Signals frameworks",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://grafana.com/blog/2018/08/02/the-red-method-how-to-instrument-your-services/"
+            ],
+            "theme": "Observability Frameworks: RED, USE & Four Golden Signals",
+            "group_item_id": "ef7198",
+            "group_set_id": "f06dc5"
+          },
+          {
+            "words": [
+              "COUNTER",
+              "GAUGE",
+              "HISTOGRAM",
+              "SUMMARY"
+            ],
+            "category": "Prometheus Metric Types",
+            "color": "orange",
+            "url": "https://prometheus.io/docs/concepts/metric_types/",
+            "description": "The four Prometheus metric types — each suited to a different kind of signal when instrumenting services for RED and USE",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://grafana.com/blog/2018/08/02/the-red-method-how-to-instrument-your-services/"
+            ],
+            "theme": "Observability Frameworks: RED, USE & Four Golden Signals",
+            "group_item_id": "780002",
+            "group_set_id": "f06dc5"
+          }
+        ],
+        [
+          {
+            "words": [
+              "ALERT",
+              "DASHBOARD",
+              "ONCALL",
+              "POSTMORTEM"
+            ],
+            "category": "Observability Outputs",
+            "color": "red",
+            "url": "https://sre.google/sre-book/monitoring-distributed-systems/",
+            "description": "The operational artefacts that observability frameworks drive — actionable signals rather than noise, enabling sustainable on-call",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.squadcast.com/blog/how-important-is-observability-for-sre"
+            ],
+            "theme": "Observability Frameworks: RED, USE & Four Golden Signals",
+            "group_item_id": "c4c374",
+            "group_set_id": "e36bf3"
+          },
+          {
+            "words": [
+              "UPSTREAM",
+              "DOWNSTREAM",
+              "DEPENDENCY",
+              "FANOUT"
+            ],
+            "category": "Distributed Service Topology",
+            "color": "purple",
+            "url": "https://sre.google/sre-book/monitoring-distributed-systems/",
+            "description": "Concepts describing how services relate in a call graph — critical when applying RED to identify where degradation originates",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://opentelemetry.io/docs/concepts/observability-primer/"
+            ],
+            "theme": "Observability Frameworks: RED, USE & Four Golden Signals",
+            "group_item_id": "e2b3ff",
+            "group_set_id": "e36bf3"
+          },
+          {
+            "words": [
+              "MTTR",
+              "MTTD",
+              "MTBF",
+              "TOIL"
+            ],
+            "category": "SRE Reliability Metrics",
+            "color": "yellow",
+            "url": "https://sre.google/sre-book/introduction/",
+            "description": "Time-based reliability measures that good observability directly improves — faster detection and recovery, less repetitive operational work",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.squadcast.com/blog/how-important-is-observability-for-sre"
+            ],
+            "theme": "Observability Frameworks: RED, USE & Four Golden Signals",
+            "group_item_id": "8a0b3f",
+            "group_set_id": "e36bf3"
+          },
+          {
+            "words": [
+              "QUEUE",
+              "BUSY",
+              "BACKLOG",
+              "HEADROOM"
+            ],
+            "category": "Saturation Signals",
+            "color": "indigo",
+            "url": "https://www.brendangregg.com/usemethod.html",
+            "description": "Indicators that a resource is saturated — work is queuing beyond capacity, the key leading indicator of degradation in USE",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://lantern.splunk.com/Observability/Product_Tips/Observability_Cloud/Adopting_monitoring_frameworks_-_RED_and_USE"
+            ],
+            "theme": "Observability Frameworks: RED, USE & Four Golden Signals",
+            "group_item_id": "2259cf",
+            "group_set_id": "e36bf3"
+          }
+        ]
+      ],
+      "game_set_id": "05f422"
+    },
+    {
+      "theme": "Scaling LLMs on Hardware: Systems Concepts",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "ROOFLINE",
+              "FLOPS",
+              "BANDWIDTH",
+              "BOTTLENECK"
+            ],
+            "category": "Performance Analysis Terms",
+            "color": "blue",
+            "url": "https://jax-ml.github.io/scaling-book/",
+            "description": "Core concepts from roofline analysis used to understand and measure hardware utilisation limits in ML workloads",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://jax-ml.github.io/scaling-book/"
+            ],
+            "theme": "Scaling LLMs on Hardware: Systems Concepts",
+            "group_item_id": "916acf",
+            "group_set_id": "916309"
+          },
+          {
+            "words": [
+              "ALLGATHER",
+              "REDUCESCATTER",
+              "ALLREDUCE",
+              "BROADCAST"
+            ],
+            "category": "Collective Communication Ops",
+            "color": "red",
+            "url": "https://jax-ml.github.io/scaling-book/sharding/",
+            "description": "Network collective operations used to synchronise or redistribute tensors across multiple TPU/GPU devices during training and inference",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://jax-ml.github.io/scaling-book/sharding/"
+            ],
+            "theme": "Scaling LLMs on Hardware: Systems Concepts",
+            "group_item_id": "c0b781",
+            "group_set_id": "916309"
+          },
+          {
+            "words": [
+              "PIPELINE",
+              "TENSOR",
+              "DATA",
+              "EXPERT"
+            ],
+            "category": "Parallelism Strategies",
+            "color": "green",
+            "url": "https://jax-ml.github.io/scaling-book/training/",
+            "description": "Distinct schemes for distributing model computation across many accelerators — each trades communication for memory or latency differently",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://jax-ml.github.io/scaling-book/training/"
+            ],
+            "theme": "Scaling LLMs on Hardware: Systems Concepts",
+            "group_item_id": "acf6a9",
+            "group_set_id": "916309"
+          },
+          {
+            "words": [
+              "HBM",
+              "SRAM",
+              "DRAM",
+              "CACHE"
+            ],
+            "category": "Memory Hierarchy Levels",
+            "color": "yellow",
+            "url": "https://jax-ml.github.io/scaling-book/tpus/",
+            "description": "Layers of on-chip and off-chip memory with different bandwidths and capacities that determine whether a workload is compute-bound or memory-bound",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://jax-ml.github.io/scaling-book/tpus/"
+            ],
+            "theme": "Scaling LLMs on Hardware: Systems Concepts",
+            "group_item_id": "5580e0",
+            "group_set_id": "916309"
+          }
+        ],
+        [
+          {
+            "words": [
+              "ATTENTION",
+              "MLP",
+              "LAYERNORM",
+              "EMBEDDING"
+            ],
+            "category": "Transformer Sub-Layers",
+            "color": "purple",
+            "url": "https://jax-ml.github.io/scaling-book/transformers/",
+            "description": "The core building blocks inside every Transformer block, each with distinct compute and memory footprints at scale",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://jax-ml.github.io/scaling-book/transformers/"
+            ],
+            "theme": "Scaling LLMs on Hardware: Systems Concepts",
+            "group_item_id": "9a6cac",
+            "group_set_id": "8be5a2"
+          },
+          {
+            "words": [
+              "PREFILL",
+              "DECODE",
+              "BATCH",
+              "LATENCY"
+            ],
+            "category": "LLM Inference Phases",
+            "color": "teal",
+            "url": "https://jax-ml.github.io/scaling-book/inference/",
+            "description": "Operational stages and dimensions of serving a large language model — prefill processes the prompt in parallel, decode generates tokens autoregressively",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://jax-ml.github.io/scaling-book/inference/"
+            ],
+            "theme": "Scaling LLMs on Hardware: Systems Concepts",
+            "group_item_id": "4abd51",
+            "group_set_id": "8be5a2"
+          },
+          {
+            "words": [
+              "SHARDING",
+              "REPLICATION",
+              "PARTITIONING",
+              "TILING"
+            ],
+            "category": "Tensor Distribution Techniques",
+            "color": "orange",
+            "url": "https://jax-ml.github.io/scaling-book/sharding/",
+            "description": "Methods for splitting or copying tensors across devices to fit large models in distributed memory while keeping communication overhead low",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://jax-ml.github.io/scaling-book/sharding/"
+            ],
+            "theme": "Scaling LLMs on Hardware: Systems Concepts",
+            "group_item_id": "250d93",
+            "group_set_id": "8be5a2"
+          },
+          {
+            "words": [
+              "THROUGHPUT",
+              "UTILISATION",
+              "EFFICIENCY",
+              "SCALING"
+            ],
+            "category": "Performance Metrics",
+            "color": "indigo",
+            "url": "https://jax-ml.github.io/scaling-book/",
+            "description": "Top-level measures used to evaluate whether a model is running well on hardware — strong scaling means adding chips yields proportional throughput gains",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://jax-ml.github.io/scaling-book/"
+            ],
+            "theme": "Scaling LLMs on Hardware: Systems Concepts",
+            "group_item_id": "ab23a5",
+            "group_set_id": "8be5a2"
+          }
+        ]
+      ],
+      "game_set_id": "da75bc"
+    },
+    {
+      "theme": "Transformer Architecture and FLOP Counting",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "CONTRACTING",
+              "BATCHING",
+              "EINSUM",
+              "PRODUCT"
+            ],
+            "category": "Matmul dimension types",
+            "color": "blue",
+            "url": "https://jax-ml.github.io/scaling-book/transformers/",
+            "description": "Types of dimensions in a tensor contraction: contracting dims are summed over, batching dims pass through unchanged, einsum notation describes both, and product of all dims gives FLOPs",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://numpy.org/doc/stable/reference/generated/numpy.einsum.html"
+            ],
+            "theme": "Transformer Architecture and FLOP Counting",
+            "group_item_id": "d83d6d",
+            "group_set_id": "0effd4"
+          },
+          {
+            "words": [
+              "PREFILL",
+              "GENERATION",
+              "DECODE",
+              "CACHE"
+            ],
+            "category": "LLM inference phases and structures",
+            "color": "green",
+            "url": "https://jax-ml.github.io/scaling-book/transformers/",
+            "description": "The two main phases of transformer inference: prefill processes the prompt and populates the KV cache, and generation (decode) samples tokens using that cache",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://huggingface.co/docs/transformers/llm_tutorial"
+            ],
+            "theme": "Transformer Architecture and FLOP Counting",
+            "group_item_id": "8a7a6b",
+            "group_set_id": "0effd4"
+          },
+          {
+            "words": [
+              "MHA",
+              "MQA",
+              "GMQA",
+              "GQA"
+            ],
+            "category": "Attention head variants",
+            "color": "red",
+            "url": "https://jax-ml.github.io/scaling-book/transformers/",
+            "description": "Multi-Head Attention (MHA), Multi-Query Attention (MQA), Grouped Multi-Query Attention (GMQA/GQA) — variants trading KV head count for memory savings",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://arxiv.org/abs/2305.13245"
+            ],
+            "theme": "Transformer Architecture and FLOP Counting",
+            "group_item_id": "297184",
+            "group_set_id": "0effd4"
+          },
+          {
+            "words": [
+              "FORWARD",
+              "BACKWARD",
+              "GRADIENT",
+              "CHECKPOINT"
+            ],
+            "category": "Training pass components",
+            "color": "yellow",
+            "url": "https://jax-ml.github.io/scaling-book/transformers/",
+            "description": "The forward pass computes outputs (2x FLOPs), backward computes gradients (4x FLOPs), and gradient checkpointing trades recompute for memory",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://jax.readthedocs.io/en/latest/jax.checkpoint.html"
+            ],
+            "theme": "Transformer Architecture and FLOP Counting",
+            "group_item_id": "0dfcc9",
+            "group_set_id": "0effd4"
+          }
+        ],
+        [
+          {
+            "words": [
+              "SOFTMAX",
+              "CHUNK",
+              "SRAM",
+              "TILING"
+            ],
+            "category": "Flash Attention mechanisms",
+            "color": "purple",
+            "url": "https://jax-ml.github.io/scaling-book/transformers/",
+            "description": "Flash Attention avoids materialising the full attention matrix by computing softmax in chunks (tiles), keeping running max/sum in on-chip SRAM to reduce HBM pressure",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://arxiv.org/abs/2205.14135"
+            ],
+            "theme": "Transformer Architecture and FLOP Counting",
+            "group_item_id": "b059d1",
+            "group_set_id": "e08ebf"
+          },
+          {
+            "words": [
+              "SPARSITY",
+              "ROUTING",
+              "EXPERT",
+              "GATING"
+            ],
+            "category": "Mixture-of-Experts components",
+            "color": "teal",
+            "url": "https://jax-ml.github.io/scaling-book/transformers/",
+            "description": "MoE models use a gating network to route each token to k of E experts, achieving sparsity (E/k) where only a fraction of parameters activate per token",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://arxiv.org/abs/2101.03961"
+            ],
+            "theme": "Transformer Architecture and FLOP Counting",
+            "group_item_id": "08d389",
+            "group_set_id": "e08ebf"
+          },
+          {
+            "words": [
+              "PRENORM",
+              "POSTNORM",
+              "RESIDUAL",
+              "LAYERNORM"
+            ],
+            "category": "Transformer normalisation patterns",
+            "color": "orange",
+            "url": "https://jax-ml.github.io/scaling-book/transformers/",
+            "description": "Pre-norm applies LayerNorm before the residual branch (x + attn(norm(x))), post-norm applies it after (norm(x + attn(x))); LLaMA-3 uses pre-norm",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://arxiv.org/abs/1706.03762"
+            ],
+            "theme": "Transformer Architecture and FLOP Counting",
+            "group_item_id": "d1954d",
+            "group_set_id": "e08ebf"
+          },
+          {
+            "words": [
+              "REMAT",
+              "REMATERIALISE",
+              "ACTIVATION",
+              "MEMORY"
+            ],
+            "category": "Gradient checkpointing strategies",
+            "color": "indigo",
+            "url": "https://jax-ml.github.io/scaling-book/transformers/",
+            "description": "jax.remat / jax.checkpoint lets you trade extra FLOPs for memory by discarding and recomputing activations during the backward pass instead of saving them all",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://jax.readthedocs.io/en/latest/jax.checkpoint.html"
+            ],
+            "theme": "Transformer Architecture and FLOP Counting",
+            "group_item_id": "c89eb8",
+            "group_set_id": "e08ebf"
+          }
+        ]
+      ],
+      "game_set_id": "0254e3"
+    },
+    {
+      "theme": "Transformer Parameters, Arithmetic and Scaling Laws",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "TOKENS",
+              "PARAMS",
+              "FLOPS",
+              "UTILISATION"
+            ],
+            "category": "Scaling law quantities",
+            "color": "red",
+            "url": "https://jax-ml.github.io/scaling-book/transformers/",
+            "description": "The fundamental quantities in the 6 * num_params * num_tokens FLOP rule, with hardware utilisation measuring how much of theoretical peak you actually achieve",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://arxiv.org/abs/2001.08361"
+            ],
+            "theme": "Transformer Parameters, Arithmetic and Scaling Laws",
+            "group_item_id": "14f84c",
+            "group_set_id": "02c26c"
+          },
+          {
+            "words": [
+              "QUERY",
+              "KEY",
+              "VALUE",
+              "OUTPUT"
+            ],
+            "category": "Attention projection matrices",
+            "color": "blue",
+            "url": "https://jax-ml.github.io/scaling-book/transformers/",
+            "description": "The four weight matrices in the attention block: Q, K, V projections map input to head space; O (output) maps back to model dimension D",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://arxiv.org/abs/1706.03762"
+            ],
+            "theme": "Transformer Parameters, Arithmetic and Scaling Laws",
+            "group_item_id": "7e582b",
+            "group_set_id": "02c26c"
+          },
+          {
+            "words": [
+              "ALLTOALL",
+              "ALLGATHER",
+              "SHARDING",
+              "COMM"
+            ],
+            "category": "MoE collective communication ops",
+            "color": "teal",
+            "url": "https://jax-ml.github.io/scaling-book/transformers/",
+            "description": "MoE layers introduce two AllToAll collectives to route tokens to remote experts and return results; cost is 1/4 of an AllGather on a bidirectional ring",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://jax.readthedocs.io/en/latest/"
+            ],
+            "theme": "Transformer Parameters, Arithmetic and Scaling Laws",
+            "group_item_id": "0c8288",
+            "group_set_id": "02c26c"
+          },
+          {
+            "words": [
+              "UNEMBED",
+              "VOCAB",
+              "LOGITS",
+              "PROJECTION"
+            ],
+            "category": "Output layer components",
+            "color": "green",
+            "url": "https://jax-ml.github.io/scaling-book/transformers/",
+            "description": "The final non-per-layer matmul that projects from model dimension D to vocab size V, producing logits; its cost is 6BTDV FLOPs and DV parameters",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://jax-ml.github.io/scaling-book/transformers/"
+            ],
+            "theme": "Transformer Parameters, Arithmetic and Scaling Laws",
+            "group_item_id": "4c62da",
+            "group_set_id": "02c26c"
+          }
+        ],
+        [
+          {
+            "words": [
+              "ARITHMETIC",
+              "INTENSITY",
+              "ROOFLINE",
+              "BANDWIDTH"
+            ],
+            "category": "Hardware performance model terms",
+            "color": "yellow",
+            "url": "https://jax-ml.github.io/scaling-book/transformers/",
+            "description": "Arithmetic intensity (FLOPs per byte) determines whether an op is compute-bound or memory-bandwidth-bound on the roofline model",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://jax-ml.github.io/scaling-book/rooflines/"
+            ],
+            "theme": "Transformer Parameters, Arithmetic and Scaling Laws",
+            "group_item_id": "b2bc35",
+            "group_set_id": "d78a96"
+          },
+          {
+            "words": [
+              "BFLOAT16",
+              "INT8",
+              "FP8",
+              "QUANTISATION"
+            ],
+            "category": "Numeric precision formats in LLM training",
+            "color": "orange",
+            "url": "https://jax-ml.github.io/scaling-book/transformers/",
+            "description": "Different floating-point formats trade precision for memory and throughput; int8 KV caches halve KV memory; FP8 used in DeepSeek v3 training",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://arxiv.org/abs/2412.19437"
+            ],
+            "theme": "Transformer Parameters, Arithmetic and Scaling Laws",
+            "group_item_id": "f1e600",
+            "group_set_id": "d78a96"
+          },
+          {
+            "words": [
+              "CAUSAL",
+              "BIDIRECTIONAL",
+              "MASK",
+              "DECODER"
+            ],
+            "category": "Attention masking approaches",
+            "color": "purple",
+            "url": "https://jax-ml.github.io/scaling-book/transformers/",
+            "description": "Causal masking prevents tokens attending to future positions (decoder-only), halving useful attention FLOPs vs bidirectional (encoder) attention",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://arxiv.org/abs/1706.03762"
+            ],
+            "theme": "Transformer Parameters, Arithmetic and Scaling Laws",
+            "group_item_id": "14cd64",
+            "group_set_id": "d78a96"
+          },
+          {
+            "words": [
+              "BLOCK",
+              "RECOMPUTE",
+              "MATMUL",
+              "POLICY"
+            ],
+            "category": "Rematerialisation checkpointing strategies",
+            "color": "indigo",
+            "url": "https://jax-ml.github.io/scaling-book/transformers/",
+            "description": "Block remat saves only layer inputs (1 checkpoint/layer), big-matmuls-only saves 7 outputs/layer; each policy trades FLOPs for activation memory differently",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://jax.readthedocs.io/en/latest/jax.checkpoint.html"
+            ],
+            "theme": "Transformer Parameters, Arithmetic and Scaling Laws",
+            "group_item_id": "342c97",
+            "group_set_id": "d78a96"
+          }
+        ]
+      ],
+      "game_set_id": "6c0ac0"
+    },
+    {
+      "theme": "eBPF Architecture and Observability",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "runqlat",
+              "cpudist",
+              "offcputime",
+              "profile"
+            ],
+            "category": "CPU Performance Tools",
+            "color": "red",
+            "url": "https://www.brendangregg.com/ebpf.html",
+            "description": "BCC/bpftrace tools that measure CPU scheduler latency, on-CPU time distribution and off-CPU blocking",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://github.com/iovisor/bcc/blob/master/tools/runqlat.py"
+            ],
+            "theme": "eBPF Architecture and Observability",
+            "group_item_id": "ea6ca6",
+            "group_set_id": "9cf538"
+          },
+          {
+            "words": [
+              "biosnoop",
+              "biotop",
+              "bitesize",
+              "blk_account_io"
+            ],
+            "category": "Block I/O Tracing Tools",
+            "color": "blue",
+            "url": "https://www.brendangregg.com/ebpf.html",
+            "description": "eBPF-based tools and tracepoints for observing disk I/O latency, size distributions and per-process activity",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://github.com/iovisor/bcc/blob/master/tools/biosnoop.py"
+            ],
+            "theme": "eBPF Architecture and Observability",
+            "group_item_id": "3de338",
+            "group_set_id": "9cf538"
+          },
+          {
+            "words": [
+              "tcplife",
+              "tcpretrans",
+              "tcptop",
+              "tcpaccept"
+            ],
+            "category": "Network TCP Observability Tools",
+            "color": "green",
+            "url": "https://www.brendangregg.com/ebpf.html",
+            "description": "eBPF tools that trace TCP connection lifecycle, retransmits, throughput and accept events",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://github.com/iovisor/bcc/blob/master/tools/tcplife.py"
+            ],
+            "theme": "eBPF Architecture and Observability",
+            "group_item_id": "5d369a",
+            "group_set_id": "9cf538"
+          },
+          {
+            "words": [
+              "memleak",
+              "slabtop",
+              "oomkill",
+              "shmsnoop"
+            ],
+            "category": "Memory Analysis Tools",
+            "color": "yellow",
+            "url": "https://www.brendangregg.com/ebpf.html",
+            "description": "eBPF tools that detect memory leaks, slab allocations, OOM kill events and shared memory access",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://github.com/iovisor/bcc/blob/master/tools/memleak.py"
+            ],
+            "theme": "eBPF Architecture and Observability",
+            "group_item_id": "adde70",
+            "group_set_id": "9cf538"
+          }
+        ],
+        [
+          {
+            "words": [
+              "XDP",
+              "tc",
+              "sockmap",
+              "cgroup"
+            ],
+            "category": "eBPF Networking Hook Points",
+            "color": "purple",
+            "url": "https://www.brendangregg.com/ebpf.html",
+            "description": "Kernel network hook types where eBPF programs can intercept, filter and redirect packets at different layers",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://docs.cilium.io/en/stable/reference/bpf/"
+            ],
+            "theme": "eBPF Architecture and Observability",
+            "group_item_id": "3af8b3",
+            "group_set_id": "dd42ce"
+          },
+          {
+            "words": [
+              "safety",
+              "sandboxed",
+              "no kernel crash",
+              "bytecode"
+            ],
+            "category": "eBPF Safety Properties",
+            "color": "teal",
+            "url": "https://www.brendangregg.com/ebpf.html",
+            "description": "Key properties that make eBPF safe to run in production - programs are verified before loading and cannot crash the kernel",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://ebpf.io/what-is-ebpf/"
+            ],
+            "theme": "eBPF Architecture and Observability",
+            "group_item_id": "a23d7a",
+            "group_set_id": "dd42ce"
+          },
+          {
+            "words": [
+              "bpf_probe_read",
+              "bpf_map_lookup_elem",
+              "bpf_ktime_get_ns",
+              "bpf_trace_printk"
+            ],
+            "category": "eBPF Helper Functions",
+            "color": "orange",
+            "url": "https://www.brendangregg.com/ebpf.html",
+            "description": "Kernel helper functions callable from eBPF programs to read memory safely, access maps and emit trace output",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://man7.org/linux/man-pages/man7/bpf-helpers.7.html"
+            ],
+            "theme": "eBPF Architecture and Observability",
+            "group_item_id": "a298ac",
+            "group_set_id": "dd42ce"
+          },
+          {
+            "words": [
+              "DTrace",
+              "SystemTap",
+              "perf",
+              "ftrace"
+            ],
+            "category": "Pre-eBPF Tracing Predecessors",
+            "color": "indigo",
+            "url": "https://www.brendangregg.com/ebpf.html",
+            "description": "Earlier dynamic tracing systems that eBPF superseded or complemented - each had significant limitations in safety or portability",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.brendangregg.com/dtrace.html"
+            ],
+            "theme": "eBPF Architecture and Observability",
+            "group_item_id": "618f93",
+            "group_set_id": "dd42ce"
+          }
+        ]
+      ],
+      "game_set_id": "51cbe0"
+    },
+    {
+      "theme": "eBPF Tracing Tools and Concepts",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "KPROBES",
+              "UPROBES",
+              "TRACEPOINTS",
+              "PERF_EVENTS"
+            ],
+            "category": "eBPF Event Sources",
+            "color": "blue",
+            "url": "https://www.brendangregg.com/ebpf.html",
+            "description": "The four types of event sources that eBPF programs can attach to for kernel and user-space instrumentation",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://github.com/iovisor/bcc"
+            ],
+            "theme": "eBPF Tracing Tools and Concepts",
+            "group_item_id": "9d9baa",
+            "group_set_id": "fc1338"
+          },
+          {
+            "words": [
+              "EXECSNOOP",
+              "OPENSNOOP",
+              "BIOLATENCY",
+              "TCPCONNECT"
+            ],
+            "category": "BCC Single-Purpose Tools",
+            "color": "green",
+            "url": "https://www.brendangregg.com/ebpf.html",
+            "description": "Single-purpose bcc tools that each do one thing well — tracing execs, file opens, block I/O latency, and TCP connections",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://github.com/iovisor/bcc"
+            ],
+            "theme": "eBPF Tracing Tools and Concepts",
+            "group_item_id": "a07d7c",
+            "group_set_id": "fc1338"
+          },
+          {
+            "words": [
+              "TRACE",
+              "ARGDIST",
+              "FUNCCOUNT",
+              "STACKCOUNT"
+            ],
+            "category": "BCC Multi-Tools",
+            "color": "orange",
+            "url": "https://www.brendangregg.com/ebpf.html",
+            "description": "Powerful bcc multi-tools that can do many things depending on arguments — trace, argument distribution, function counting, and stack counting",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://github.com/iovisor/bcc"
+            ],
+            "theme": "eBPF Tracing Tools and Concepts",
+            "group_item_id": "c3c2f9",
+            "group_set_id": "fc1338"
+          },
+          {
+            "words": [
+              "BPF_HISTOGRAM",
+              "BPF_PERF_OUTPUT",
+              "BPF_HASH",
+              "BPF_MAP"
+            ],
+            "category": "eBPF Kernel Data Structures",
+            "color": "purple",
+            "url": "https://www.brendangregg.com/ebpf.html",
+            "description": "BPF kernel-side constructs for storing and passing data from kernel to user space — maps, histograms, and per-event outputs",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://github.com/iovisor/bcc"
+            ],
+            "theme": "eBPF Tracing Tools and Concepts",
+            "group_item_id": "ff72c0",
+            "group_set_id": "fc1338"
+          }
+        ],
+        [
+          {
+            "words": [
+              "BCC",
+              "BPFTRACE",
+              "PLY",
+              "PERF"
+            ],
+            "category": "eBPF Front-End Tools",
+            "color": "teal",
+            "url": "https://www.brendangregg.com/ebpf.html",
+            "description": "The main front-end interfaces for writing and running eBPF programs — from complex daemons (BCC) to powerful one-liners (bpftrace)",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://github.com/iovisor/bpftrace"
+            ],
+            "theme": "eBPF Tracing Tools and Concepts",
+            "group_item_id": "493e7c",
+            "group_set_id": "345499"
+          },
+          {
+            "words": [
+              "BIOSNOOP",
+              "CACHESTAT",
+              "RUNQLAT",
+              "GETHOSTLATENCY"
+            ],
+            "category": "System Observability Tools",
+            "color": "red",
+            "url": "https://www.brendangregg.com/ebpf.html",
+            "description": "bcc tools for observing system-level behaviour: disk I/O events, page cache hit rates, scheduler run-queue latency, and DNS lookup times",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://github.com/iovisor/bcc"
+            ],
+            "theme": "eBPF Tracing Tools and Concepts",
+            "group_item_id": "3b57db",
+            "group_set_id": "345499"
+          },
+          {
+            "words": [
+              "COMM",
+              "RETVAL",
+              "KSTACK",
+              "NSECS"
+            ],
+            "category": "bpftrace Builtin Variables",
+            "color": "indigo",
+            "url": "https://www.brendangregg.com/ebpf.html",
+            "description": "Built-in bpftrace variables available within probe actions — process name, return value, kernel stack trace, and current timestamp in nanoseconds",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://github.com/iovisor/bpftrace"
+            ],
+            "theme": "eBPF Tracing Tools and Concepts",
+            "group_item_id": "0f6483",
+            "group_set_id": "345499"
+          },
+          {
+            "words": [
+              "VERIFIER",
+              "BYTECODE",
+              "CO-RE",
+              "BTF"
+            ],
+            "category": "eBPF Runtime Internals",
+            "color": "yellow",
+            "url": "https://www.brendangregg.com/ebpf.html",
+            "description": "Internal eBPF runtime components: the kernel verifier that rejects unsafe programs, BPF bytecode, Compile Once Run Everywhere portability, and BPF Type Format",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://ebpf.io"
+            ],
+            "theme": "eBPF Tracing Tools and Concepts",
+            "group_item_id": "3652e6",
+            "group_set_id": "345499"
+          }
+        ]
+      ],
+      "game_set_id": "8ea23b"
+    },
+    {
+      "theme": "vLLM Architecture & Production AI Inference",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "UC BERKELEY",
+              "APACHE 2.0",
+              "GITHUB",
+              "HUGGING FACE"
+            ],
+            "category": "vLLM Open Source Provenance",
+            "color": "green",
+            "url": "https://www.redhat.com/en/blog/meet-vllm-faster-more-efficient-llm-inference-and-serving",
+            "description": "vLLM originated at UC Berkeley, is Apache 2.0-licensed, hosted on GitHub with 40k+ stars, and integrates with Hugging Face model hub.",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://github.com/vllm-project/vllm"
+            ],
+            "theme": "vLLM Architecture & Production AI Inference",
+            "group_item_id": "4802a6",
+            "group_set_id": "17551d"
+          },
+          {
+            "words": [
+              "TOKENS",
+              "ATTENTION",
+              "KEYS",
+              "VALUES"
+            ],
+            "category": "LLM Inference Internals",
+            "color": "blue",
+            "url": "https://www.redhat.com/en/blog/meet-vllm-faster-more-efficient-llm-inference-and-serving",
+            "description": "The core internals of transformer-based inference: attention keys and values stored in the KV cache are used to generate next tokens in autoregressive decoding.",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://arxiv.org/abs/2309.06180",
+              "https://docs.vllm.ai/en/latest/design/kernel/paged_attention.html"
+            ],
+            "theme": "vLLM Architecture & Production AI Inference",
+            "group_item_id": "6b2e0f",
+            "group_set_id": "17551d"
+          },
+          {
+            "words": [
+              "24X",
+              "99%",
+              "3.5X",
+              "2.4X"
+            ],
+            "category": "vLLM Benchmark Results",
+            "color": "red",
+            "url": "https://www.redhat.com/en/blog/meet-vllm-faster-more-efficient-llm-inference-and-serving",
+            "description": "Key headline numbers from vLLM benchmarks: up to 24x throughput improvement over HuggingFace/TGI, 99% accuracy retention with quantization, 3.5x model compression, 2.4x single-stream speedup.",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://vllm.ai/blog/2023/06/20/vllm.html"
+            ],
+            "theme": "vLLM Architecture & Production AI Inference",
+            "group_item_id": "11bcb4",
+            "group_set_id": "17551d"
+          },
+          {
+            "words": [
+              "INFERENCE",
+              "SERVING",
+              "GENERATION",
+              "DECODING"
+            ],
+            "category": "LLM Runtime Terminology",
+            "color": "teal",
+            "url": "https://www.redhat.com/en/blog/meet-vllm-faster-more-efficient-llm-inference-and-serving",
+            "description": "Core terminology for running LLMs: inference (model computation), serving (exposing over an API), text generation, and autoregressive decoding (producing tokens one by one).",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://docs.vllm.ai/en/latest/"
+            ],
+            "theme": "vLLM Architecture & Production AI Inference",
+            "group_item_id": "c95be8",
+            "group_set_id": "17551d"
+          }
+        ],
+        [
+          {
+            "words": [
+              "GPU",
+              "MEMORY",
+              "CONTIGUOUS",
+              "ALLOCATION"
+            ],
+            "category": "GPU Memory Concepts in LLM Serving",
+            "color": "purple",
+            "url": "https://www.redhat.com/en/blog/meet-vllm-faster-more-efficient-llm-inference-and-serving",
+            "description": "Traditional GPU memory allocation is contiguous and pre-allocated per request regardless of actual use; PagedAttention replaces this with dynamic non-contiguous allocation.",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://arxiv.org/abs/2309.06180"
+            ],
+            "theme": "vLLM Architecture & Production AI Inference",
+            "group_item_id": "55c4b5",
+            "group_set_id": "16cee5"
+          },
+          {
+            "words": [
+              "CHATBOT",
+              "CODE ASSISTANT",
+              "PROMPTER",
+              "REQUESTER"
+            ],
+            "category": "Consumers of LLM Serving Infrastructure",
+            "color": "orange",
+            "url": "https://www.redhat.com/en/blog/meet-vllm-faster-more-efficient-llm-inference-and-serving",
+            "description": "End-user applications and actors that send requests to an LLM serving layer: chatbots, code assistants, and other AI-powered tools sending prompts.",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://www.redhat.com/en/blog/meet-vllm-faster-more-efficient-llm-inference-and-serving"
+            ],
+            "theme": "vLLM Architecture & Production AI Inference",
+            "group_item_id": "145bd6",
+            "group_set_id": "16cee5"
+          },
+          {
+            "words": [
+              "HF TRANSFORMERS",
+              "TGI",
+              "TRITON",
+              "VLLM"
+            ],
+            "category": "LLM Inference Serving Frameworks",
+            "color": "yellow",
+            "url": "https://www.redhat.com/en/blog/meet-vllm-faster-more-efficient-llm-inference-and-serving",
+            "description": "Competing and complementary frameworks for serving LLMs in production: HuggingFace Transformers, Text Generation Inference (TGI), NVIDIA Triton, and vLLM.",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://huggingface.co/docs/text-generation-inference/index",
+              "https://github.com/vllm-project/vllm"
+            ],
+            "theme": "vLLM Architecture & Production AI Inference",
+            "group_item_id": "0d0745",
+            "group_set_id": "16cee5"
+          },
+          {
+            "words": [
+              "DISTRIBUTED",
+              "MULTI-GPU",
+              "OVERHEAD",
+              "TENSOR"
+            ],
+            "category": "Scaling LLM Inference Beyond One GPU",
+            "color": "indigo",
+            "url": "https://www.redhat.com/en/blog/meet-vllm-faster-more-efficient-llm-inference-and-serving",
+            "description": "Large models that exceed single-GPU capacity require distributed inference with tensor parallelism, introducing additional coordination overhead across multiple GPUs.",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://docs.vllm.ai/en/latest/serving/distributed_serving.html"
+            ],
+            "theme": "vLLM Architecture & Production AI Inference",
+            "group_item_id": "694d19",
+            "group_set_id": "16cee5"
+          }
+        ]
+      ],
+      "game_set_id": "016e3d"
+    },
+    {
+      "theme": "vLLM: Faster LLM Inference & Serving",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "PAGEDATTENTION",
+              "FRAGMENTATION",
+              "KV CACHE",
+              "BLOCKS"
+            ],
+            "category": "vLLM Memory Management Concepts",
+            "color": "blue",
+            "url": "https://www.redhat.com/en/blog/meet-vllm-faster-more-efficient-llm-inference-and-serving",
+            "description": "PagedAttention divides GPU memory into non-contiguous blocks to manage the KV cache, eliminating fragmentation and wasted allocation.",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://vllm.ai",
+              "https://arxiv.org/abs/2309.06180"
+            ],
+            "theme": "vLLM: Faster LLM Inference & Serving",
+            "group_item_id": "dbee88",
+            "group_set_id": "37462e"
+          },
+          {
+            "words": [
+              "THROUGHPUT",
+              "LATENCY",
+              "BATCHING",
+              "UTILIZATION"
+            ],
+            "category": "LLM Serving Performance Metrics",
+            "color": "green",
+            "url": "https://www.redhat.com/en/blog/meet-vllm-faster-more-efficient-llm-inference-and-serving",
+            "description": "Key performance dimensions for LLM serving: throughput (requests/sec), latency (response time), batching (grouping requests), and GPU utilization rates.",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://vllm.ai/blog/2023/06/20/vllm.html"
+            ],
+            "theme": "vLLM: Faster LLM Inference & Serving",
+            "group_item_id": "64ffac",
+            "group_set_id": "37462e"
+          },
+          {
+            "words": [
+              "QUANTIZATION",
+              "COMPRESSION",
+              "CUDA",
+              "KERNELS"
+            ],
+            "category": "Hardware Optimization Techniques",
+            "color": "orange",
+            "url": "https://www.redhat.com/en/blog/meet-vllm-faster-more-efficient-llm-inference-and-serving",
+            "description": "vLLM uses quantized models for 3.5x compression and optimized CUDA kernels to maximize GPU throughput with minimal accuracy loss.",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://docs.vllm.ai/en/latest/quantization/auto_awq.html"
+            ],
+            "theme": "vLLM: Faster LLM Inference & Serving",
+            "group_item_id": "ba032d",
+            "group_set_id": "37462e"
+          },
+          {
+            "words": [
+              "LLAMA",
+              "MISTRAL",
+              "GRANITE",
+              "DEEPSEEK"
+            ],
+            "category": "LLM Architectures Supported by vLLM",
+            "color": "purple",
+            "url": "https://www.redhat.com/en/blog/meet-vllm-faster-more-efficient-llm-inference-and-serving",
+            "description": "Popular large language model architectures that vLLM natively supports for inference and serving.",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://docs.vllm.ai/en/latest/models/supported_models.html"
+            ],
+            "theme": "vLLM: Faster LLM Inference & Serving",
+            "group_item_id": "4be080",
+            "group_set_id": "37462e"
+          }
+        ],
+        [
+          {
+            "words": [
+              "PIP",
+              "CLI",
+              "OPENAI",
+              "CURL"
+            ],
+            "category": "Getting Started with vLLM",
+            "color": "teal",
+            "url": "https://www.redhat.com/en/blog/meet-vllm-faster-more-efficient-llm-inference-and-serving",
+            "description": "The vLLM quickstart path: install via pip, use the vllm CLI to serve a model, then query via curl against the OpenAI-compatible API.",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://docs.vllm.ai/en/latest/getting_started/installation.html"
+            ],
+            "theme": "vLLM: Faster LLM Inference & Serving",
+            "group_item_id": "c9bb1e",
+            "group_set_id": "5aceb4"
+          },
+          {
+            "words": [
+              "KSERVE",
+              "DOCKER",
+              "KUBERNETES",
+              "LANGCHAIN"
+            ],
+            "category": "vLLM Deployment & Integration Frameworks",
+            "color": "red",
+            "url": "https://www.redhat.com/en/blog/meet-vllm-faster-more-efficient-llm-inference-and-serving",
+            "description": "Frameworks and platforms that integrate with vLLM for production deployment: KServe, Docker, Kubernetes, and orchestration libraries like LangChain.",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://docs.vllm.ai/en/latest/serving/deploying_with_k8s.html"
+            ],
+            "theme": "vLLM: Faster LLM Inference & Serving",
+            "group_item_id": "558698",
+            "group_set_id": "5aceb4"
+          },
+          {
+            "words": [
+              "CONTINUOUS",
+              "STATIC",
+              "DYNAMIC",
+              "ITERATION"
+            ],
+            "category": "Batching Strategies in LLM Serving",
+            "color": "yellow",
+            "url": "https://www.redhat.com/en/blog/meet-vllm-faster-more-efficient-llm-inference-and-serving",
+            "description": "Contrasting batching approaches: static batching waits for all sequences to finish; continuous (dynamic) batching replaces completed sequences at each iteration for higher efficiency.",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.anyscale.com/blog/continuous-batching-llm-inference"
+            ],
+            "theme": "vLLM: Faster LLM Inference & Serving",
+            "group_item_id": "f63383",
+            "group_set_id": "5aceb4"
+          },
+          {
+            "words": [
+              "MEMORY",
+              "SCALING",
+              "HOARDING",
+              "FRAGMENTATION"
+            ],
+            "category": "Traditional LLM Serving Challenges",
+            "color": "indigo",
+            "url": "https://www.redhat.com/en/blog/meet-vllm-faster-more-efficient-llm-inference-and-serving",
+            "description": "Key pain points that vLLM was built to solve: GPU memory hoarding and fragmentation, poor scaling economics, and high latency under load.",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://arxiv.org/abs/2309.06180"
+            ],
+            "theme": "vLLM: Faster LLM Inference & Serving",
+            "group_item_id": "07c555",
+            "group_set_id": "5aceb4"
+          }
+        ]
+      ],
+      "game_set_id": "f2ed89"
+    }
+  ]
+}

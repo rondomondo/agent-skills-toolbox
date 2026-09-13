@@ -1,0 +1,372 @@
+{
+  "metadata": {
+    "generated_at": "2026-09-07T00:00:00Z",
+    "source": "https://www.digitalocean.com/community/tutorials/bare-metal-kubernetes",
+    "suggested_name": "bare-metal-kubernetes.json",
+    "modified_at": "2026-09-07T14:07:30.800910",
+    "source_id": "https://www.digitalocean.com/community/tutorials/bare-metal-kubernetes",
+    "step": "finalize_metadata",
+    "id_registry": {
+      "group_set_ids": [
+        "2c3904",
+        "4b9d10",
+        "41514e",
+        "3a14c7"
+      ],
+      "game_set_ids": [
+        "41f712",
+        "f4928a"
+      ],
+      "group_item_ids": [
+        "22e11c",
+        "43b11c",
+        "d8a77d",
+        "2d43f1",
+        "390e3f",
+        "17d6e8",
+        "443764",
+        "89271d",
+        "ae96cb",
+        "d06145",
+        "abf504",
+        "e956ee",
+        "9a47e1",
+        "86a13b",
+        "0417e1",
+        "a5203b"
+      ]
+    },
+    "id": "xuUgnvXE7P8KKLFj",
+    "split_info": {
+      "role": "combined",
+      "split_at": "2026-09-07T14:07:38.538289+00:00",
+      "source_file": "/home/claude/output/games/bare-metal-kubernetes.json"
+    }
+  },
+  "game_sets": [
+    {
+      "theme": "Bare Metal Kubernetes: Setup & Components",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "KUBELET",
+              "KUBEADM",
+              "KUBECTL",
+              "KUBE-PROXY"
+            ],
+            "category": "Kubernetes Node Components",
+            "color": "blue",
+            "url": "https://www.digitalocean.com/community/tutorials/bare-metal-kubernetes",
+            "description": "Core binaries installed on every node in a bare metal Kubernetes cluster",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/"
+            ],
+            "theme": "Bare Metal Kubernetes: Setup & Components",
+            "group_item_id": "22e11c",
+            "group_set_id": "2c3904"
+          },
+          {
+            "words": [
+              "CONTAINERD",
+              "CRI-O",
+              "DOCKER",
+              "RUNC"
+            ],
+            "category": "Container Runtimes",
+            "color": "green",
+            "url": "https://www.digitalocean.com/community/tutorials/bare-metal-kubernetes",
+            "description": "Software responsible for running containers; Kubernetes supports multiple runtimes via CRI",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://kubernetes.io/docs/setup/production-environment/container-runtimes/"
+            ],
+            "theme": "Bare Metal Kubernetes: Setup & Components",
+            "group_item_id": "43b11c",
+            "group_set_id": "2c3904"
+          },
+          {
+            "words": [
+              "FLANNEL",
+              "CALICO",
+              "WEAVE",
+              "CILIUM"
+            ],
+            "category": "Pod Network Plugins (CNI)",
+            "color": "orange",
+            "url": "https://www.digitalocean.com/community/tutorials/bare-metal-kubernetes",
+            "description": "Container Network Interface plugins that enable pod-to-pod communication across nodes",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://kubernetes.io/docs/concepts/cluster-administration/networking/"
+            ],
+            "theme": "Bare Metal Kubernetes: Setup & Components",
+            "group_item_id": "d8a77d",
+            "group_set_id": "2c3904"
+          },
+          {
+            "words": [
+              "ETCD",
+              "KUBE-APISERVER",
+              "KUBE-SCHEDULER",
+              "KUBE-CONTROLLER-MANAGER"
+            ],
+            "category": "Kubernetes Control Plane Components",
+            "color": "purple",
+            "url": "https://www.digitalocean.com/community/tutorials/bare-metal-kubernetes",
+            "description": "Components that run on the master node and manage the overall state of the cluster",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://kubernetes.io/docs/concepts/overview/components/"
+            ],
+            "theme": "Bare Metal Kubernetes: Setup & Components",
+            "group_item_id": "2d43f1",
+            "group_set_id": "2c3904"
+          }
+        ],
+        [
+          {
+            "words": [
+              "SWAPOFF",
+              "MODPROBE",
+              "SYSCTL",
+              "HOSTNAMECTL"
+            ],
+            "category": "Node Preparation Commands",
+            "color": "red",
+            "url": "https://www.digitalocean.com/community/tutorials/bare-metal-kubernetes",
+            "description": "Linux commands used to prepare bare metal nodes before Kubernetes installation",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/"
+            ],
+            "theme": "Bare Metal Kubernetes: Setup & Components",
+            "group_item_id": "390e3f",
+            "group_set_id": "4b9d10"
+          },
+          {
+            "words": [
+              "6443",
+              "10250",
+              "2379",
+              "2380"
+            ],
+            "category": "Required Kubernetes TCP Ports",
+            "color": "teal",
+            "url": "https://www.digitalocean.com/community/tutorials/bare-metal-kubernetes",
+            "description": "Network ports that must be opened on bare metal nodes for Kubernetes API, Kubelet, and etcd",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://kubernetes.io/docs/reference/networking/ports-and-protocols/"
+            ],
+            "theme": "Bare Metal Kubernetes: Setup & Components",
+            "group_item_id": "17d6e8",
+            "group_set_id": "4b9d10"
+          },
+          {
+            "words": [
+              "CLUSTERROLE",
+              "SERVICEACCOUNT",
+              "CONFIGMAP",
+              "DAEMONSET"
+            ],
+            "category": "Kubernetes Resources Created by Flannel",
+            "color": "yellow",
+            "url": "https://www.digitalocean.com/community/tutorials/bare-metal-kubernetes",
+            "description": "Kubernetes resource types automatically provisioned when deploying the Flannel CNI plugin",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://github.com/flannel-io/flannel"
+            ],
+            "theme": "Bare Metal Kubernetes: Setup & Components",
+            "group_item_id": "443764",
+            "group_set_id": "4b9d10"
+          },
+          {
+            "words": [
+              "BR_NETFILTER",
+              "IP_FORWARD",
+              "BRIDGE-NF-CALL-IPTABLES",
+              "MODULES-LOAD"
+            ],
+            "category": "Kernel Networking Requirements",
+            "color": "indigo",
+            "url": "https://www.digitalocean.com/community/tutorials/bare-metal-kubernetes",
+            "description": "Linux kernel modules and sysctl settings required for Kubernetes pod networking to function",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/"
+            ],
+            "theme": "Bare Metal Kubernetes: Setup & Components",
+            "group_item_id": "89271d",
+            "group_set_id": "4b9d10"
+          }
+        ]
+      ],
+      "game_set_id": "41f712"
+    },
+    {
+      "theme": "Bare Metal Kubernetes: Operations & Trade-offs",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "PROMETHEUS",
+              "GRAFANA",
+              "KUBE-STATE-METRICS",
+              "COREDNS"
+            ],
+            "category": "Kubernetes Observability Tools",
+            "color": "blue",
+            "url": "https://www.digitalocean.com/community/tutorials/bare-metal-kubernetes",
+            "description": "Tools used to monitor, visualize, and debug a Kubernetes cluster in production",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://kubernetes.io/docs/tasks/debug/"
+            ],
+            "theme": "Bare Metal Kubernetes: Operations & Trade-offs",
+            "group_item_id": "ae96cb",
+            "group_set_id": "41514e"
+          },
+          {
+            "words": [
+              "NODEPORT",
+              "CLUSTERIP",
+              "DEPLOYMENT",
+              "NAMESPACE"
+            ],
+            "category": "Kubernetes Resource Types",
+            "color": "green",
+            "url": "https://www.digitalocean.com/community/tutorials/bare-metal-kubernetes",
+            "description": "Core Kubernetes API objects used when deploying and exposing applications on the cluster",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://kubernetes.io/docs/concepts/workloads/"
+            ],
+            "theme": "Bare Metal Kubernetes: Operations & Trade-offs",
+            "group_item_id": "d06145",
+            "group_set_id": "41514e"
+          },
+          {
+            "words": [
+              "THROUGHPUT",
+              "LATENCY",
+              "OVERHEAD",
+              "HYPERVISOR"
+            ],
+            "category": "Performance Concepts: Bare Metal vs VM",
+            "color": "red",
+            "url": "https://www.digitalocean.com/community/tutorials/bare-metal-kubernetes",
+            "description": "Key performance factors that differentiate bare metal from VM-based Kubernetes deployments",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.digitalocean.com/community/tutorials/bare-metal-kubernetes"
+            ],
+            "theme": "Bare Metal Kubernetes: Operations & Trade-offs",
+            "group_item_id": "abf504",
+            "group_set_id": "41514e"
+          },
+          {
+            "words": [
+              "PROVISIONING",
+              "ONBOARDING",
+              "CAPACITY",
+              "AUTOMATION"
+            ],
+            "category": "Bare Metal Scaling Challenges",
+            "color": "orange",
+            "url": "https://www.digitalocean.com/community/tutorials/bare-metal-kubernetes",
+            "description": "Operational concerns unique to scaling bare metal clusters — unlike cloud, nodes must be physically added",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://www.digitalocean.com/community/tutorials/bare-metal-kubernetes"
+            ],
+            "theme": "Bare Metal Kubernetes: Operations & Trade-offs",
+            "group_item_id": "e956ee",
+            "group_set_id": "41514e"
+          }
+        ],
+        [
+          {
+            "words": [
+              "KUBECONFIG",
+              "ADMIN.CONF",
+              "JOIN-TOKEN",
+              "DISCOVERY-HASH"
+            ],
+            "category": "Cluster Bootstrap Artifacts",
+            "color": "purple",
+            "url": "https://www.digitalocean.com/community/tutorials/bare-metal-kubernetes",
+            "description": "Files and tokens generated during kubeadm init that enable cluster access and worker node joining",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/"
+            ],
+            "theme": "Bare Metal Kubernetes: Operations & Trade-offs",
+            "group_item_id": "9a47e1",
+            "group_set_id": "3a14c7"
+          },
+          {
+            "words": [
+              "STATIC-IP",
+              "DNS",
+              "UFW",
+              "SSH"
+            ],
+            "category": "Network Prerequisites for Bare Metal",
+            "color": "teal",
+            "url": "https://www.digitalocean.com/community/tutorials/bare-metal-kubernetes",
+            "description": "Network and access requirements that must be configured before installing Kubernetes on bare metal",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://www.digitalocean.com/community/tutorials/bare-metal-kubernetes"
+            ],
+            "theme": "Bare Metal Kubernetes: Operations & Trade-offs",
+            "group_item_id": "86a13b",
+            "group_set_id": "3a14c7"
+          },
+          {
+            "words": [
+              "APT-MARK-HOLD",
+              "GPG-DEARMOR",
+              "KEYRINGS",
+              "STABLE-REPO"
+            ],
+            "category": "Kubernetes Package Management Steps",
+            "color": "yellow",
+            "url": "https://www.digitalocean.com/community/tutorials/bare-metal-kubernetes",
+            "description": "Debian/Ubuntu package management steps required to install and pin Kubernetes component versions",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/"
+            ],
+            "theme": "Bare Metal Kubernetes: Operations & Trade-offs",
+            "group_item_id": "0417e1",
+            "group_set_id": "3a14c7"
+          },
+          {
+            "words": [
+              "MASTER-NODE",
+              "WORKER-NODE",
+              "CONTROL-PLANE",
+              "READY"
+            ],
+            "category": "Cluster Node Roles and States",
+            "color": "indigo",
+            "url": "https://www.digitalocean.com/community/tutorials/bare-metal-kubernetes",
+            "description": "Node classifications and the expected status reported by kubectl get nodes after cluster setup",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://kubernetes.io/docs/concepts/architecture/nodes/"
+            ],
+            "theme": "Bare Metal Kubernetes: Operations & Trade-offs",
+            "group_item_id": "a5203b",
+            "group_set_id": "3a14c7"
+          }
+        ]
+      ],
+      "game_set_id": "f4928a"
+    }
+  ]
+}

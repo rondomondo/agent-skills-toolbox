@@ -1,0 +1,202 @@
+{
+  "metadata": {
+    "generated_at": "2025-09-07T20:30:00Z",
+    "source": "https://jax-ml.github.io/scaling-book/#high-level-outline",
+    "suggested_name": "jax-scaling-book-llm-systems.json",
+    "modified_at": "2026-09-07T20:29:25.549627",
+    "source_id": "https://jax-ml.github.io/scaling-book/#high-level-outline",
+    "step": "finalize_metadata",
+    "id_registry": {
+      "game_set_ids": [
+        "7a8f2f"
+      ],
+      "group_set_ids": [
+        "6724c6",
+        "a1e1c2"
+      ],
+      "group_item_ids": [
+        "b5db74",
+        "e8d879",
+        "91c553",
+        "efd25f",
+        "494022",
+        "4c9e5a",
+        "9bfa9d",
+        "ef1d89"
+      ]
+    },
+    "id": "bIX-telvioUGEK20",
+    "split_info": {
+      "role": "split",
+      "split_at": "2026-09-07T20:29:36.851456+00:00",
+      "parent_id": "bIX-telvioUGEK20",
+      "parent_file": "/home/claude/output/games/jax-scaling-book-llm-systems.json",
+      "theme": "LLM Hardware and Architecture Deep Dive",
+      "slug": "llm-hardware-and-architecture-deep-dive"
+    }
+  },
+  "game_sets": [
+    {
+      "theme": "LLM Hardware and Architecture Deep Dive",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "SYSTOLIC",
+              "MATMUL",
+              "MXU",
+              "ASIC"
+            ],
+            "category": "TPU Compute Architecture",
+            "color": "red",
+            "url": "https://jax-ml.github.io/scaling-book/tpus/",
+            "description": "Hardware concepts specific to Google TPUs — the systolic array matrix multiply unit (MXU) executes matrix multiplies as its native operation, making it ideal for Transformer workloads",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://jax-ml.github.io/scaling-book/tpus/"
+            ],
+            "theme": "LLM Hardware and Architecture Deep Dive",
+            "group_item_id": "b5db74",
+            "group_set_id": "6724c6"
+          },
+          {
+            "words": [
+              "KV-CACHE",
+              "SPECULATIVE",
+              "QUANTISATION",
+              "DISTILLATION"
+            ],
+            "category": "Inference Optimisation Methods",
+            "color": "blue",
+            "url": "https://jax-ml.github.io/scaling-book/inference/",
+            "description": "Techniques that reduce the compute or memory cost of serving LLMs without degrading output quality — KV-cache avoids recomputing attention keys and values per token",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://jax-ml.github.io/scaling-book/inference/"
+            ],
+            "theme": "LLM Hardware and Architecture Deep Dive",
+            "group_item_id": "e8d879",
+            "group_set_id": "6724c6"
+          },
+          {
+            "words": [
+              "CHECKPOINT",
+              "GRADIENT",
+              "OPTIMIZER",
+              "WEIGHT"
+            ],
+            "category": "Training State Components",
+            "color": "green",
+            "url": "https://jax-ml.github.io/scaling-book/training/",
+            "description": "Objects that make up the full training state — checkpoint stores all of these, gradient updates are accumulated per step, optimizer state tracks momentum, weights are the model parameters",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://jax-ml.github.io/scaling-book/training/"
+            ],
+            "theme": "LLM Hardware and Architecture Deep Dive",
+            "group_item_id": "91c553",
+            "group_set_id": "6724c6"
+          },
+          {
+            "words": [
+              "ICI",
+              "DCN",
+              "NVLink",
+              "INFINIBAND"
+            ],
+            "category": "Chip Interconnect Technologies",
+            "color": "yellow",
+            "url": "https://jax-ml.github.io/scaling-book/tpus/",
+            "description": "The physical links that connect accelerators within and across nodes — ICI (Inter-Chip Interconnect) is TPU's high-bandwidth intra-pod fabric; DCN connects across pods at lower bandwidth",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://jax-ml.github.io/scaling-book/tpus/"
+            ],
+            "theme": "LLM Hardware and Architecture Deep Dive",
+            "group_item_id": "efd25f",
+            "group_set_id": "6724c6"
+          }
+        ],
+        [
+          {
+            "words": [
+              "SOFTMAX",
+              "ROTARY",
+              "DROPOUT",
+              "GELU"
+            ],
+            "category": "Transformer Elementwise Ops",
+            "color": "teal",
+            "url": "https://jax-ml.github.io/scaling-book/transformers/",
+            "description": "Non-linear and normalisation operations applied elementwise inside a Transformer — memory-bandwidth-bound at scale because they do few FLOPs per byte loaded",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://jax-ml.github.io/scaling-book/transformers/"
+            ],
+            "theme": "LLM Hardware and Architecture Deep Dive",
+            "group_item_id": "494022",
+            "group_set_id": "a1e1c2"
+          },
+          {
+            "words": [
+              "ARITHMETIC-INTENSITY",
+              "COMPUTE-BOUND",
+              "MEMORY-BOUND",
+              "COMMUNICATION-BOUND"
+            ],
+            "category": "Hardware Binding Regimes",
+            "color": "purple",
+            "url": "https://jax-ml.github.io/scaling-book/",
+            "description": "The three regimes that determine what limits performance: arithmetic intensity (FLOPs/byte) tells you whether computation, memory bandwidth, or network communication is the bottleneck",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://jax-ml.github.io/scaling-book/"
+            ],
+            "theme": "LLM Hardware and Architecture Deep Dive",
+            "group_item_id": "4c9e5a",
+            "group_set_id": "a1e1c2"
+          },
+          {
+            "words": [
+              "LLAMA",
+              "GPT",
+              "GEMINI",
+              "PALM"
+            ],
+            "category": "Large Language Model Families",
+            "color": "orange",
+            "url": "https://jax-ml.github.io/scaling-book/",
+            "description": "Production-scale Transformer models used as worked examples throughout the scaling book to ground abstract hardware analysis in real-world architectures",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://jax-ml.github.io/scaling-book/"
+            ],
+            "theme": "LLM Hardware and Architecture Deep Dive",
+            "group_item_id": "9bfa9d",
+            "group_set_id": "a1e1c2"
+          },
+          {
+            "words": [
+              "JAXPR",
+              "XLA",
+              "PJIT",
+              "SHARD-MAP"
+            ],
+            "category": "JAX Compilation Abstractions",
+            "color": "indigo",
+            "url": "https://jax-ml.github.io/scaling-book/",
+            "description": "The JAX and XLA compilation stack that transforms Python functions into distributed hardware programs — PJIT and shard-map are the primary APIs for expressing data and model parallelism",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://jax-ml.github.io/scaling-book/"
+            ],
+            "theme": "LLM Hardware and Architecture Deep Dive",
+            "group_item_id": "ef1d89",
+            "group_set_id": "a1e1c2"
+          }
+        ]
+      ],
+      "game_set_id": "7a8f2f"
+    }
+  ]
+}

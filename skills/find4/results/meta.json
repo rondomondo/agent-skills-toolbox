@@ -1,0 +1,190 @@
+{
+  "source_id": "https://www.etsy.com/ie/codeascraft/how-etsy-uses-llms-to-improve-search-relevance",
+  "zip": "etsy-llm-search-relevance",
+  "games": [
+    {
+      "game_set_id": "e425e9",
+      "theme": "Equine Vet Strengths: Clinical & Emergency",
+      "short_link": "ff-257383cf",
+      "short_url": "https://find4.org/?ff-257383cf",
+      "short_path": "games/equine-vet-strengths-clinical-and-emergency.json",
+      "path_url": "https://find4.org/?config=games/equine-vet-strengths-clinical-and-emergency.json"
+    },
+    {
+      "game_set_id": "8f0a6d",
+      "theme": "Equine Vet Strengths: Knowledge & Professionalism",
+      "short_link": "ff-71805d3d",
+      "short_url": "https://find4.org/?ff-71805d3d",
+      "short_path": "games/equine-vet-strengths-knowledge-and-professionalism.json",
+      "path_url": "https://find4.org/?config=games/equine-vet-strengths-knowledge-and-professionalism.json"
+    },
+    {
+      "game_set_id": "28f7dd",
+      "theme": "Etsy: The Human Marketplace",
+      "short_link": "ff-dad8ec9c",
+      "short_url": "https://find4.org/?ff-dad8ec9c",
+      "short_path": "games/etsy-the-human-marketplace.json",
+      "path_url": "https://find4.org/?config=games/etsy-the-human-marketplace.json"
+    },
+    {
+      "game_set_id": "a87d52",
+      "theme": "Event-Driven Architecture",
+      "short_link": "ff-fd940460",
+      "short_url": "https://find4.org/?ff-fd940460",
+      "short_path": "games/event-driven-architecture.json",
+      "path_url": "https://find4.org/?config=games/event-driven-architecture.json"
+    },
+    {
+      "game_set_id": "24e8d0",
+      "theme": "FIFA World Cup Records and Legends",
+      "short_link": "ff-6232afa3",
+      "short_url": "https://find4.org/?ff-6232afa3",
+      "short_path": "games/fifa-world-cup-records-and-legends.json",
+      "path_url": "https://find4.org/?config=games/fifa-world-cup-records-and-legends.json"
+    },
+    {
+      "game_set_id": "171586",
+      "theme": "GPU Networking and LLM Parallelism",
+      "short_link": "ff-dd50da29",
+      "short_url": "https://find4.org/?ff-dd50da29",
+      "short_path": "games/gpu-networking-and-llm-parallelism.json",
+      "path_url": "https://find4.org/?config=games/gpu-networking-and-llm-parallelism.json"
+    },
+    {
+      "game_set_id": "788fe7",
+      "theme": "LLM Evaluation: Types and Methods",
+      "short_link": "ff-5f4f034e",
+      "short_url": "https://find4.org/?ff-5f4f034e",
+      "short_path": "games/llm-evaluation-types-and-methods.json",
+      "path_url": "https://find4.org/?config=games/llm-evaluation-types-and-methods.json"
+    },
+    {
+      "game_set_id": "7a8f2f",
+      "theme": "LLM Hardware and Architecture Deep Dive",
+      "short_link": "ff-f26f9c3d",
+      "short_url": "https://find4.org/?ff-f26f9c3d",
+      "short_path": "games/llm-hardware-and-architecture-deep-dive.json",
+      "path_url": "https://find4.org/?config=games/llm-hardware-and-architecture-deep-dive.json"
+    },
+    {
+      "game_set_id": "9da791",
+      "theme": "Linux Process Memory Metrics",
+      "short_link": "ff-b50c3ef5",
+      "short_url": "https://find4.org/?ff-b50c3ef5",
+      "short_path": "games/linux-process-memory-metrics.json",
+      "path_url": "https://find4.org/?config=games/linux-process-memory-metrics.json"
+    },
+    {
+      "game_set_id": "05f422",
+      "theme": "Observability Frameworks: RED, USE & Four Golden Signals",
+      "short_link": "ff-155d0fed",
+      "short_url": "https://find4.org/?ff-155d0fed",
+      "short_path": "games/observability-frameworks-red-use-and-four-golden-signals.json",
+      "path_url": "https://find4.org/?config=games/observability-frameworks-red-use-and-four-golden-signals.json"
+    },
+    {
+      "game_set_id": "da75bc",
+      "theme": "Scaling LLMs on Hardware: Systems Concepts",
+      "short_link": "ff-54c6a4cd",
+      "short_url": "https://find4.org/?ff-54c6a4cd",
+      "short_path": "games/scaling-llms-on-hardware-systems-concepts.json",
+      "path_url": "https://find4.org/?config=games/scaling-llms-on-hardware-systems-concepts.json"
+    },
+    {
+      "game_set_id": "0254e3",
+      "theme": "Transformer Architecture and FLOP Counting",
+      "short_link": "ff-14d5ac48",
+      "short_url": "https://find4.org/?ff-14d5ac48",
+      "short_path": "games/transformer-architecture-and-flop-counting.json",
+      "path_url": "https://find4.org/?config=games/transformer-architecture-and-flop-counting.json"
+    },
+    {
+      "game_set_id": "6c0ac0",
+      "theme": "Transformer Parameters, Arithmetic and Scaling Laws",
+      "short_link": "ff-229bdf94",
+      "short_url": "https://find4.org/?ff-229bdf94",
+      "short_path": "games/transformer-parameters-arithmetic-and-scaling-laws.json",
+      "path_url": "https://find4.org/?config=games/transformer-parameters-arithmetic-and-scaling-laws.json"
+    },
+    {
+      "game_set_id": "016e3d",
+      "theme": "vLLM Architecture & Production AI Inference",
+      "short_link": "ff-6b72bef9",
+      "short_url": "https://find4.org/?ff-6b72bef9",
+      "short_path": "games/vllm-architecture-and-production-ai-inference.json",
+      "path_url": "https://find4.org/?config=games/vllm-architecture-and-production-ai-inference.json"
+    },
+    {
+      "game_set_id": "f2ed89",
+      "theme": "vLLM: Faster LLM Inference & Serving",
+      "short_link": "ff-589d65f1",
+      "short_url": "https://find4.org/?ff-589d65f1",
+      "short_path": "games/vllm-faster-llm-inference-and-serving.json",
+      "path_url": "https://find4.org/?config=games/vllm-faster-llm-inference-and-serving.json"
+    },
+    {
+      "game_set_id": "6bbf13",
+      "theme": "Construction Management Core Competencies",
+      "short_link": "ff-ee240d72",
+      "short_url": "https://find4.org/?ff-ee240d72",
+      "short_path": "games/construction-management-core-competencies.json",
+      "path_url": "https://find4.org/?config=games/construction-management-core-competencies.json"
+    },
+    {
+      "game_set_id": "3bb628",
+      "theme": "Construction Management: Procurement, Leadership & Compliance",
+      "short_link": "ff-31f758c1",
+      "short_url": "https://find4.org/?ff-31f758c1",
+      "short_path": "games/construction-management-procurement-leadership-and-compliance.json",
+      "path_url": "https://find4.org/?config=games/construction-management-procurement-leadership-and-compliance.json"
+    },
+    {
+      "game_set_id": "51cbe0",
+      "theme": "eBPF Architecture and Observability",
+      "short_link": "ff-93cf4694",
+      "short_url": "https://find4.org/?ff-93cf4694",
+      "short_path": "games/ebpf-architecture-and-observability.json",
+      "path_url": "https://find4.org/?config=games/ebpf-architecture-and-observability.json"
+    },
+    {
+      "game_set_id": "d8ab0f",
+      "theme": "eBPF Tracing Tools and Concepts",
+      "short_link": "ff-73fc156f",
+      "short_url": "https://find4.org/?ff-73fc156f",
+      "short_path": "games/ebpf-tracing-tools-and-concepts.json",
+      "path_url": "https://find4.org/?config=games/ebpf-tracing-tools-and-concepts.json"
+    },
+    {
+      "game_set_id": "1e8116",
+      "theme": "Etsy LLM Search Relevance: Evaluation & Future Directions",
+      "short_link": "ff-ccf89713",
+      "short_url": "https://find4.org/?ff-ccf89713",
+      "short_path": "games/etsy-llm-search-relevance-evaluation-and-future-directions.json",
+      "path_url": "https://find4.org/?config=games/etsy-llm-search-relevance-evaluation-and-future-directions.json"
+    },
+    {
+      "game_set_id": "a63c3e",
+      "theme": "Etsy LLM Search Relevance: Models & Data",
+      "short_link": "ff-2863210d",
+      "short_url": "https://find4.org/?ff-2863210d",
+      "short_path": "games/etsy-llm-search-relevance-models-and-data.json",
+      "path_url": "https://find4.org/?config=games/etsy-llm-search-relevance-models-and-data.json"
+    },
+    {
+      "game_set_id": "57e196",
+      "theme": "Etsy's LLM-Powered Search Relevance Framework",
+      "short_link": "ff-aaa8c7d7",
+      "short_url": "https://find4.org/?ff-aaa8c7d7",
+      "short_path": "games/etsy-s-llm-powered-search-relevance-framework.json",
+      "path_url": "https://find4.org/?config=games/etsy-s-llm-powered-search-relevance-framework.json"
+    },
+    {
+      "game_set_id": "27ceb0",
+      "theme": "ML Systems for Marketplace Search: Broader Concepts",
+      "short_link": "ff-273687e2",
+      "short_url": "https://find4.org/?ff-273687e2",
+      "short_path": "games/ml-systems-for-marketplace-search-broader-concepts.json",
+      "path_url": "https://find4.org/?config=games/ml-systems-for-marketplace-search-broader-concepts.json"
+    }
+  ]
+}

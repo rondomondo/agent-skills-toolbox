@@ -1,0 +1,77 @@
+short_link: ff-6232afa3 short_path: games/fifa-world-cup-records-and-legends.json config_file: library/world-cup-facts/fifa-world-cup-records-and-legends.json
+short_link: ff-dd50da29 short_path: games/gpu-networking-and-llm-parallelism.json config_file: library/gpu-scaling-book/gpu-networking-and-llm-parallelism.json
+short_link: ff-5f4f034e short_path: games/llm-evaluation-types-and-methods.json config_file: library/llm-evaluation-types-and-evals/llm-evaluation-types-and-methods.json
+short_link: ff-b50c3ef5 short_path: games/linux-process-memory-metrics.json config_file: library/linux-memory-metrics-vsz-rss-pss/linux-process-memory-metrics.json
+short_link: ff-257383cf short_path: games/equine-vet-strengths-clinical-and-emergency.json config_file: library/equine-vet-strengths/equine-vet-strengths-clinical-and-emergency.json
+short_link: ff-71805d3d short_path: games/equine-vet-strengths-knowledge-and-professionalism.json config_file: library/equine-vet-strengths/equine-vet-strengths-knowledge-and-professionalism.json
+short_link: ff-14d5ac48 short_path: games/transformer-architecture-and-flop-counting.json config_file: library/transformer-math-scaling/transformer-architecture-and-flop-counting.json
+short_link: ff-589d65f1 short_path: games/vllm-faster-llm-inference-and-serving.json config_file: library/vllm-inference-serving/vllm-faster-llm-inference-and-serving.json
+short_link: ff-54c6a4cd short_path: games/scaling-llms-on-hardware-systems-concepts.json config_file: library/jax-scaling-book-llm-systems/scaling-llms-on-hardware-systems-concepts.json
+short_link: ff-ee240d72 short_path: games/construction-management-core-competencies.json config_file: library/construction-management-competencies/construction-management-core-competencies.json
+short_link: ff-dad8ec9c short_path: games/etsy-the-human-marketplace.json config_file: library/etsy-marketplace-concepts/etsy-the-human-marketplace.json
+short_link: ff-f26f9c3d short_path: games/llm-hardware-and-architecture-deep-dive.json config_file: library/jax-scaling-book-llm-systems/llm-hardware-and-architecture-deep-dive.json
+short_link: ff-229bdf94 short_path: games/transformer-parameters-arithmetic-and-scaling-laws.json config_file: library/transformer-math-scaling/transformer-parameters-arithmetic-and-scaling-laws.json
+short_link: ff-fd940460 short_path: games/event-driven-architecture.json config_file: library/event-driven-architecture/event-driven-architecture.json
+short_link: ff-31f758c1 short_path: games/construction-management-procurement-leadership-and-compliance.json config_file: library/construction-management-competencies/construction-management-procurement-leadership-and-compliance.json
+short_link: ff-6b72bef9 short_path: games/vllm-architecture-and-production-ai-inference.json config_file: library/vllm-inference-serving/vllm-architecture-and-production-ai-inference.json
+short_link: ff-155d0fed short_path: games/observability-frameworks-red-use-and-four-golden-signals.json config_file: library/observability-frameworks-red-use-golden-signals/observability-frameworks-red-use-and-four-golden-signals.json
+  OK   6bbf13: Construction Management Core Competencies
+  OK   3bb628: Construction Management: Procurement, Leadership & Compliance
+  OK   e425e9: Equine Vet Strengths: Clinical & Emergency
+  OK   8f0a6d: Equine Vet Strengths: Knowledge & Professionalism
+  OK   28f7dd: Etsy: The Human Marketplace
+  OK   a87d52: Event-Driven Architecture
+  OK   24e8d0: FIFA World Cup Records and Legends
+  OK   171586: GPU Networking and LLM Parallelism
+  OK   788fe7: LLM Evaluation: Types and Methods
+  OK   7a8f2f: LLM Hardware and Architecture Deep Dive
+  OK   9da791: Linux Process Memory Metrics
+  OK   05f422: Observability Frameworks: RED, USE & Four Golden Signals
+  OK   da75bc: Scaling LLMs on Hardware: Systems Concepts
+  OK   0254e3: Transformer Architecture and FLOP Counting
+  OK   6c0ac0: Transformer Parameters, Arithmetic and Scaling Laws
+  OK   016e3d: vLLM Architecture & Production AI Inference
+  OK   f2ed89: vLLM: Faster LLM Inference & Serving
+
+Validation Report:
+--------------------------------------------------------------------------------
+No validation errors found.
+
+Duplicate Analysis:
+
+Processed 19 files
+Found 17 unique game sets
+
+Theme Index Summary:
+------------------------------------------------------------------------------------------------------------------------
+Theme                          Game Set ID     Words    Groups   Vers    File
+------------------------------------------------------------------------------------------------------------------------
+Construction Management Core C 6bbf13          32       8        1   [v] construction-management-core-competencies.json
+Construction Management: Procu 3bb628          32       8        1   [v] construction-management-procurement-leadership-and-compliance.json
+Equine Vet Strengths: Clinical e425e9          32       8        1   [v] equine-vet-strengths-clinical-and-emergency.json
+Equine Vet Strengths: Knowledg 8f0a6d          32       8        1   [v] equine-vet-strengths-knowledge-and-professionalism.json
+Etsy: The Human Marketplace    28f7dd          32       8        1   [v] etsy-the-human-marketplace.json
+Event-Driven Architecture      a87d52          32       8        1   [v] event-driven-architecture.json
+FIFA World Cup Records and Leg 24e8d0          32       8        1   [v] fifa-world-cup-records-and-legends.json
+GPU Networking and LLM Paralle 171586          32       8        1   [v] gpu-networking-and-llm-parallelism.json
+LLM Evaluation: Types and Meth 788fe7          32       8        1   [v] llm-evaluation-types-and-methods.json
+LLM Hardware and Architecture  7a8f2f          32       8        1   [v] llm-hardware-and-architecture-deep-dive.json
+Linux Process Memory Metrics   9da791          32       8        1   [v] linux-process-memory-metrics.json
+Observability Frameworks: RED, 05f422          32       8        1   [v] observability-frameworks-red-use-and-four-golden-signals.json
+Scaling LLMs on Hardware: Syst da75bc          32       8        1   [v] scaling-llms-on-hardware-systems-concepts.json
+Transformer Architecture and F 0254e3          32       8        1   [v] transformer-architecture-and-flop-counting.json
+Transformer Parameters, Arithm 6c0ac0          32       8        1   [v] transformer-parameters-arithmetic-and-scaling-laws.json
+vLLM Architecture & Production 016e3d          32       8        1   [v] vllm-architecture-and-production-ai-inference.json
+vLLM: Faster LLM Inference & S f2ed89          32       8        1   [v] vllm-faster-llm-inference-and-serving.json
+------------------------------------------------------------------------------------------------------------------------
+
+Theme index saved to library/themes.json
+
+Building library.json from library/themes.json ...
+
+Done.
+  game_sets : 17
+  missing   : 0
+  hash      : 32e1037e497be5f2...
+  fingerprint: 2cc32da219ff8da7
+  output    : library/library.json
