@@ -1,6 +1,6 @@
 {
-  "source_id": "https://www.etsy.com/ie/codeascraft/how-etsy-uses-llms-to-improve-search-relevance",
-  "zip": "etsy-llm-search-relevance",
+  "source_id": "stdin",
+  "zip": "dogs",
   "games": [
     {
       "game_set_id": "e425e9",
@@ -185,6 +185,22 @@
       "short_url": "https://find4.org/?ff-273687e2",
       "short_path": "games/ml-systems-for-marketplace-search-broader-concepts.json",
       "path_url": "https://find4.org/?config=games/ml-systems-for-marketplace-search-broader-concepts.json"
+    },
+    {
+      "game_set_id": "6ba88b",
+      "theme": "Dog World — Breeds, Behaviour & Beyond",
+      "short_link": "ff-501f7ca6",
+      "short_url": "https://find4.org/?ff-501f7ca6",
+      "short_path": "games/dog-world-breeds-behaviour-and-beyond.json",
+      "path_url": "https://find4.org/?config=games/dog-world-breeds-behaviour-and-beyond.json"
+    },
+    {
+      "game_set_id": "ccef3d",
+      "theme": "Dogs — Man's Best Friend",
+      "short_link": "ff-4be3b7b1",
+      "short_url": "https://find4.org/?ff-4be3b7b1",
+      "short_path": "games/dogs-man-s-best-friend.json",
+      "path_url": "https://find4.org/?config=games/dogs-man-s-best-friend.json"
     }
   ]
 }
