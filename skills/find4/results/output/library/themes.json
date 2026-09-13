@@ -1,0 +1,48 @@
+[
+  {
+    "game_set_id": "c548c4",
+    "theme": "Animals",
+    "short_path": "games/animals.json",
+    "short_link": "ff-0240f762",
+    "games_file": "animals.json",
+    "config_file": "library/animals/animals.json",
+    "last_modified": "2026-09-13T12:57:23.562212",
+    "content_hash": "05e8219b2003318c45b9a526a5fbf76699091c81ae46edd5b0cb3b4ceff6b01b",
+    "total_words": 32,
+    "categories": [
+      "African Safari Animals",
+      "Animals With No Legs",
+      "Animals With a Bad Reputation",
+      "Chinese Zodiac Animals",
+      "Common Pets",
+      "Farm Animals",
+      "Striped Animals",
+      "Things That Can Fly"
+    ],
+    "skill_levels": [
+      "Advanced",
+      "Beginner",
+      "Expert",
+      "Intermediate"
+    ],
+    "colors": [
+      "blue",
+      "green",
+      "indigo",
+      "orange",
+      "purple",
+      "red",
+      "teal",
+      "yellow"
+    ],
+    "group_sets_count": 2,
+    "total_groups": 8,
+    "versions_found": 1,
+    "is_latest": true,
+    "metadata": {
+      "generated_at": "2026-09-13T10:00:00Z",
+      "source": "stdin",
+      "suggested_name": "animals.json"
+    }
+  }
+]

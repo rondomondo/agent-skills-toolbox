@@ -1,0 +1,2 @@
+output/games/animals/animals.json
+output/games/animals/animals.json

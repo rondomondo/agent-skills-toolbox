@@ -1,0 +1,299 @@
+{
+  "metadata": {
+    "generated_at": "2026-09-13T10:00:00Z",
+    "source": "stdin",
+    "suggested_name": "animals.json"
+  },
+  "game_sets": [
+    {
+      "theme": "Animals",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "KITTEN",
+              "PUPPY",
+              "LAMB",
+              "CUB"
+            ],
+            "category": "Baby Animal Names",
+            "color": "yellow",
+            "url": "https://en.wikipedia.org/wiki/List_of_animal_names",
+            "description": "These are all names for baby animals \u2014 young versions of familiar creatures",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://www.britannica.com/animal"
+            ],
+            "theme": "Animals"
+          },
+          {
+            "words": [
+              "PRIDE",
+              "PACK",
+              "FLOCK",
+              "POD"
+            ],
+            "category": "Animal Group Names",
+            "color": "green",
+            "url": "https://en.wikipedia.org/wiki/List_of_animal_names",
+            "description": "Each word is the collective noun used for a group of animals \u2014 a pride of lions, a pack of wolves, a flock of birds, a pod of whales",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.merriam-webster.com/words-at-play/names-for-groups-of-animals"
+            ],
+            "theme": "Animals"
+          },
+          {
+            "words": [
+              "KANGAROO",
+              "KOALA",
+              "WOMBAT",
+              "ECHIDNA"
+            ],
+            "category": "Native Australian Animals",
+            "color": "orange",
+            "url": "https://en.wikipedia.org/wiki/Fauna_of_Australia",
+            "description": "These animals are all native to Australia and found nowhere else naturally in the wild",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.australiangeographic.com.au/topics/wildlife"
+            ],
+            "theme": "Animals"
+          },
+          {
+            "words": [
+              "BEAR",
+              "HEDGEHOG",
+              "BADGER",
+              "DORMOUSE"
+            ],
+            "category": "Animals That Hibernate",
+            "color": "blue",
+            "url": "https://en.wikipedia.org/wiki/Hibernation",
+            "description": "These animals all hibernate \u2014 entering a deep sleep during winter months to conserve energy",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://www.nationalgeographic.com/animals/article/hibernation"
+            ],
+            "theme": "Animals"
+          }
+        ],
+        [
+          {
+            "words": [
+              "SHARK",
+              "DOLPHIN",
+              "CRAB",
+              "OCTOPUS"
+            ],
+            "category": "Ocean Animals",
+            "color": "teal",
+            "url": "https://en.wikipedia.org/wiki/Marine_life",
+            "description": "These creatures all live in the ocean or sea",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://www.nationalgeographic.com/animals/fish"
+            ],
+            "theme": "Animals"
+          },
+          {
+            "words": [
+              "CAMEL",
+              "SCORPION",
+              "FENNEC",
+              "RATTLESNAKE"
+            ],
+            "category": "Desert Animals",
+            "color": "red",
+            "url": "https://en.wikipedia.org/wiki/Desert_ecology",
+            "description": "All four animals are adapted to survive in desert environments with extreme heat and little water",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.worldwildlife.org/habitats/deserts"
+            ],
+            "theme": "Animals"
+          },
+          {
+            "words": [
+              "OWL",
+              "BAT",
+              "MOTH",
+              "FIREFLY"
+            ],
+            "category": "Nocturnal Animals",
+            "color": "indigo",
+            "url": "https://en.wikipedia.org/wiki/Nocturnality",
+            "description": "These creatures are all most active at night \u2014 nocturnal animals that sleep during the day",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.britannica.com/science/nocturnality"
+            ],
+            "theme": "Animals"
+          },
+          {
+            "words": [
+              "SIMBA",
+              "DUMBO",
+              "NEMO",
+              "BAMBI"
+            ],
+            "category": "Famous Fictional Animals",
+            "color": "purple",
+            "url": "https://en.wikipedia.org/wiki/List_of_fictional_animals",
+            "description": "Each of these is a beloved fictional animal character from a famous film \u2014 a lion, elephant, clownfish, and deer",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://www.imdb.com"
+            ],
+            "theme": "Animals"
+          }
+        ]
+      ]
+    },
+    {
+      "theme": "Animals",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "EAGLE",
+              "PENGUIN",
+              "BAT",
+              "BUMBLEBEE"
+            ],
+            "category": "Things That Can Fly",
+            "color": "blue",
+            "url": "https://en.wikipedia.org/wiki/Flying_animal",
+            "description": "All of these can fly \u2014 though bat and bumblebee might surprise you given how heavy they look",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://www.nationalgeographic.com/animals/birds"
+            ],
+            "theme": "Animals"
+          },
+          {
+            "words": [
+              "TIGER",
+              "ZEBRA",
+              "SKUNK",
+              "CHIPMUNK"
+            ],
+            "category": "Striped Animals",
+            "color": "orange",
+            "url": "https://en.wikipedia.org/wiki/Camouflage",
+            "description": "These animals are all known for having distinctive stripes on their bodies",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://www.worldwildlife.org"
+            ],
+            "theme": "Animals"
+          },
+          {
+            "words": [
+              "COW",
+              "PIG",
+              "ROOSTER",
+              "SHEEP"
+            ],
+            "category": "Farm Animals",
+            "color": "green",
+            "url": "https://en.wikipedia.org/wiki/Livestock",
+            "description": "These are all classic farm animals found on traditional farms around the world",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://www.britannica.com/topic/livestock"
+            ],
+            "theme": "Animals"
+          },
+          {
+            "words": [
+              "RAT",
+              "OX",
+              "TIGER",
+              "RABBIT"
+            ],
+            "category": "Chinese Zodiac Animals",
+            "color": "red",
+            "url": "https://en.wikipedia.org/wiki/Chinese_zodiac",
+            "description": "These four animals are all part of the 12-year Chinese zodiac cycle",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://www.chinahighlights.com/travelguide/chinese-zodiac"
+            ],
+            "theme": "Animals"
+          }
+        ],
+        [
+          {
+            "words": [
+              "LION",
+              "ELEPHANT",
+              "GIRAFFE",
+              "CHEETAH"
+            ],
+            "category": "African Safari Animals",
+            "color": "yellow",
+            "url": "https://en.wikipedia.org/wiki/African_Wildlife",
+            "description": "These iconic large animals are all found in Africa and commonly seen on safari",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://www.worldwildlife.org/places/africa"
+            ],
+            "theme": "Animals"
+          },
+          {
+            "words": [
+              "DOG",
+              "CAT",
+              "HAMSTER",
+              "PARROT"
+            ],
+            "category": "Common Pets",
+            "color": "teal",
+            "url": "https://en.wikipedia.org/wiki/Pet",
+            "description": "These four animals are among the most commonly kept as household pets worldwide",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://www.aspca.org"
+            ],
+            "theme": "Animals"
+          },
+          {
+            "words": [
+              "WOLF",
+              "CROW",
+              "HYENA",
+              "VULTURE"
+            ],
+            "category": "Animals With a Bad Reputation",
+            "color": "indigo",
+            "url": "https://en.wikipedia.org/wiki/Cultural_depictions_of_wolves",
+            "description": "These animals are often portrayed as villains or scavengers in stories and folklore, though they all play vital roles in nature",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.nationalgeographic.com"
+            ],
+            "theme": "Animals"
+          },
+          {
+            "words": [
+              "SNAKE",
+              "FISH",
+              "WORM",
+              "SEAL"
+            ],
+            "category": "Animals With No Legs",
+            "color": "purple",
+            "url": "https://en.wikipedia.org/wiki/Limbless_vertebrate",
+            "description": "These creatures all move without legs \u2014 they slither, swim, or wriggle to get around",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://www.britannica.com/animal"
+            ],
+            "theme": "Animals"
+          }
+        ]
+      ]
+    }
+  ]
+}
