@@ -1,0 +1,338 @@
+{
+  "metadata": {
+    "generated_at": "2026-09-13T13:59:08",
+    "library_version": "2026-09-13T13:59:08",
+    "trigger": "find4-skill",
+    "source": "output/library/themes.json",
+    "game_set_count": 2,
+    "missing_count": 0,
+    "source_hashes": {
+      "7a7191": "ff219572984783445d2e783aa2b691bd38869acb393dc385423fdcf74115dd0b",
+      "2400d9": "e38fbae9f49031fe2c4cf9dd762dcb8b01a838c4e62081305ef9d28336fce89a"
+    },
+    "content_hash": "16930a42dc389141a8bc398ff816a0b014d08df86a3d7ad08e4bcd12a380a8a7",
+    "metadata_fingerprint": "9a787bf0c0856a11"
+  },
+  "game_sets": [
+    {
+      "theme": "Things That Come In Sevens, Eights & Tens",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "DEADLY SINS",
+              "RAINBOW COLOURS",
+              "DWARVES",
+              "MUSICAL NOTES"
+            ],
+            "category": "Things That Come In Seven",
+            "color": "red",
+            "url": "https://en.wikipedia.org/wiki/Seven",
+            "description": "Seven deadly sins, seven colours in a rainbow, seven dwarves in Snow White, seven notes in a musical scale",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/Seven_deadly_sins"
+            ],
+            "theme": "Things That Come In Sevens, Eights & Tens",
+            "group_item_id": "f0fc7e",
+            "group_set_id": "ba5b84"
+          },
+          {
+            "words": [
+              "SPIDER LEGS",
+              "BITS IN A BYTE",
+              "TENTACLES (OCTOPUS)",
+              "STOP SIGN SIDES"
+            ],
+            "category": "Things That Come In Eight",
+            "color": "teal",
+            "url": "https://en.wikipedia.org/wiki/Eight",
+            "description": "A spider has eight legs, a byte has eight bits, an octopus has eight tentacles, and a stop sign is an octagon with eight sides",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/Octet_(computing)"
+            ],
+            "theme": "Things That Come In Sevens, Eights & Tens",
+            "group_item_id": "47f398",
+            "group_set_id": "ba5b84"
+          },
+          {
+            "words": [
+              "COMMANDMENTS",
+              "BOWLING PINS",
+              "FINGERS (BOTH HANDS)",
+              "DECADES IN A CENTURY"
+            ],
+            "category": "Things That Come In Ten",
+            "color": "blue",
+            "url": "https://en.wikipedia.org/wiki/Ten",
+            "description": "Ten commandments, ten pins in bowling, ten fingers on both hands, ten decades in a century",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/Ten_Commandments"
+            ],
+            "theme": "Things That Come In Sevens, Eights & Tens",
+            "group_item_id": "84447b",
+            "group_set_id": "ba5b84"
+          },
+          {
+            "words": [
+              "WONDERS OF WORLD",
+              "DAYS OF WEEK",
+              "PLANETS (SOLAR SYSTEM)",
+              "SEAS"
+            ],
+            "category": "Sevens & Eights — Mixed Bag",
+            "color": "purple",
+            "url": "https://en.wikipedia.org/wiki/Seven_Wonders_of_the_Ancient_World",
+            "description": "Seven Wonders of the World and Seven Seas, seven days of the week — but eight planets in the solar system (since Pluto's demotion). Can you spot which is eight?",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/Solar_System"
+            ],
+            "theme": "Things That Come In Sevens, Eights & Tens",
+            "group_item_id": "24498c",
+            "group_set_id": "ba5b84"
+          }
+        ],
+        [
+          {
+            "words": [
+              "MONTHS",
+              "ZODIAC SIGNS",
+              "APOSTLES",
+              "EGGS IN A CARTON"
+            ],
+            "category": "Things That Come In Twelve",
+            "color": "green",
+            "url": "https://en.wikipedia.org/wiki/Twelve",
+            "description": "Twelve months in a year, twelve signs of the zodiac, twelve apostles, twelve eggs in a standard carton",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/Apostle_(Christian)"
+            ],
+            "theme": "Things That Come In Sevens, Eights & Tens",
+            "group_item_id": "a641c4",
+            "group_set_id": "3e4c34"
+          },
+          {
+            "words": [
+              "BAKER'S DOZEN",
+              "US COLONIES",
+              "CARDS IN A SUIT",
+              "STRIPES ON US FLAG"
+            ],
+            "category": "Things That Come In Thirteen",
+            "color": "orange",
+            "url": "https://en.wikipedia.org/wiki/Thirteen",
+            "description": "A baker's dozen is 13, the original US colonies numbered 13, there are 13 cards in each suit, and the US flag has 13 stripes",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/Baker%27s_dozen"
+            ],
+            "theme": "Things That Come In Sevens, Eights & Tens",
+            "group_item_id": "3e2a67",
+            "group_set_id": "3e4c34"
+          },
+          {
+            "words": [
+              "EYES",
+              "WINGS",
+              "LUNGS",
+              "SHOES"
+            ],
+            "category": "Things That Come In Two",
+            "color": "yellow",
+            "url": "https://en.wikipedia.org/wiki/Two",
+            "description": "Eyes, wings on a bird, lungs, and shoes — all come in pairs of two",
+            "skill_level": "Beginner",
+            "additional_sources": [],
+            "theme": "Things That Come In Sevens, Eights & Tens",
+            "group_item_id": "01c516",
+            "group_set_id": "3e4c34"
+          },
+          {
+            "words": [
+              "HOURS ON CLOCK",
+              "INCHES IN FOOT",
+              "JURY MEMBERS",
+              "DAYS OF CHRISTMAS"
+            ],
+            "category": "More Things That Come In Twelve",
+            "color": "indigo",
+            "url": "https://en.wikipedia.org/wiki/Twelve",
+            "description": "Twelve hours on a clock face, twelve inches in a foot, twelve members on a jury, and twelve days of Christmas",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/Twelve_Days_of_Christmas"
+            ],
+            "theme": "Things That Come In Sevens, Eights & Tens",
+            "group_item_id": "68fc5a",
+            "group_set_id": "3e4c34"
+          }
+        ]
+      ],
+      "game_set_id": "7a7191"
+    },
+    {
+      "theme": "Things That Come In Threes & Fours",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "SEASONS",
+              "COMPASS POINTS",
+              "SUITS",
+              "BEATLES"
+            ],
+            "category": "Things That Come In Four",
+            "color": "blue",
+            "url": "https://en.wikipedia.org/wiki/Four",
+            "description": "Seasons of the year, points of a compass, suits in a card deck, and members of The Beatles — all come in exactly four",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://www.britannica.com/topic/four"
+            ],
+            "theme": "Things That Come In Threes & Fours",
+            "group_item_id": "c423a8",
+            "group_set_id": "40af74"
+          },
+          {
+            "words": [
+              "PRIMARY COLOURS",
+              "WISHES",
+              "BLIND MICE",
+              "MUSKETEERS"
+            ],
+            "category": "Things That Come In Three",
+            "color": "yellow",
+            "url": "https://en.wikipedia.org/wiki/Three",
+            "description": "Primary colours, fairy tale wishes, the Three Blind Mice, and the Three Musketeers — all famously come in threes",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://www.britannica.com/topic/three"
+            ],
+            "theme": "Things That Come In Threes & Fours",
+            "group_item_id": "224733",
+            "group_set_id": "40af74"
+          },
+          {
+            "words": [
+              "HEART CHAMBERS",
+              "CAR WHEELS",
+              "DOG LEGS",
+              "SQUARE SIDES"
+            ],
+            "category": "More Things That Come In Four",
+            "color": "green",
+            "url": "https://en.wikipedia.org/wiki/Four",
+            "description": "The human heart has four chambers, a car has four wheels, a dog has four legs, and a square has four sides",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.britannica.com/science/heart-anatomy"
+            ],
+            "theme": "Things That Come In Threes & Fours",
+            "group_item_id": "c13f1f",
+            "group_set_id": "40af74"
+          },
+          {
+            "words": [
+              "TRAFFIC LIGHTS",
+              "MEALS",
+              "CRICKET STUMPS",
+              "TRIANGLE SIDES"
+            ],
+            "category": "More Things That Come In Three",
+            "color": "orange",
+            "url": "https://en.wikipedia.org/wiki/Three",
+            "description": "Traffic lights have three colours, some eat three meals a day, cricket has three stumps, and a triangle has three sides",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/Cricket"
+            ],
+            "theme": "Things That Come In Threes & Fours",
+            "group_item_id": "0b5dec",
+            "group_set_id": "40af74"
+          }
+        ],
+        [
+          {
+            "words": [
+              "LEGS ON A DOG",
+              "CHAMBERS OF THE HEART",
+              "WHEELS ON A CAR",
+              "SIDES OF A SQUARE"
+            ],
+            "category": "Classic Fours — Fill In The Number",
+            "color": "teal",
+            "url": "https://en.wikipedia.org/wiki/Four",
+            "description": "Each of these is a well-known example of something that always comes in exactly four — can you name all four?",
+            "skill_level": "Advanced",
+            "additional_sources": [],
+            "theme": "Things That Come In Threes & Fours",
+            "group_item_id": "62ae0e",
+            "group_set_id": "f2e272"
+          },
+          {
+            "words": [
+              "STRIKES (BOWLING)",
+              "SIDES (TRIANGLE)",
+              "MAGI GIFTS",
+              "SISTERS (CHEKHOV)"
+            ],
+            "category": "Tricky Threes",
+            "color": "red",
+            "url": "https://en.wikipedia.org/wiki/Three",
+            "description": "Three strikes in bowling to get a turkey, three sides on a triangle, three gifts from the Magi, three sisters in Chekhov's play — all threes, but harder to spot",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/Three_Sisters_(play)"
+            ],
+            "theme": "Things That Come In Threes & Fours",
+            "group_item_id": "f12b71",
+            "group_set_id": "f2e272"
+          },
+          {
+            "words": [
+              "OLYMPIC RINGS",
+              "FINGERS (ONE HAND)",
+              "VOWELS (ENGLISH)",
+              "WORK WEEK DAYS"
+            ],
+            "category": "Things That Come In Five",
+            "color": "purple",
+            "url": "https://en.wikipedia.org/wiki/Five",
+            "description": "Five Olympic rings, five fingers on one hand, five vowels in English, five days in a standard working week",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://www.olympic.org/olympic-rings"
+            ],
+            "theme": "Things That Come In Threes & Fours",
+            "group_item_id": "db8a91",
+            "group_set_id": "f2e272"
+          },
+          {
+            "words": [
+              "INSECT LEGS",
+              "GUITAR STRINGS",
+              "BEER PACK",
+              "DIE FACES"
+            ],
+            "category": "Things That Come In Six",
+            "color": "indigo",
+            "url": "https://en.wikipedia.org/wiki/Six",
+            "description": "Insects have six legs, a standard guitar has six strings, beer often comes in a six-pack, and a die has six faces",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/Insect"
+            ],
+            "theme": "Things That Come In Threes & Fours",
+            "group_item_id": "ae6e7a",
+            "group_set_id": "f2e272"
+          }
+        ]
+      ],
+      "game_set_id": "2400d9"
+    }
+  ]
+}

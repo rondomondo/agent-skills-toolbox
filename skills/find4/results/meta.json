@@ -1,6 +1,6 @@
 {
   "source_id": "stdin",
-  "zip": "dogs",
+  "zip": "counting-numbers",
   "games": [
     {
       "game_set_id": "e425e9",
@@ -188,7 +188,7 @@
     },
     {
       "game_set_id": "6ba88b",
-      "theme": "Dog World — Breeds, Behaviour & Beyond",
+      "theme": "Dog World \u2014 Breeds, Behaviour & Beyond",
       "short_link": "ff-501f7ca6",
       "short_url": "https://find4.org/?ff-501f7ca6",
       "short_path": "games/dog-world-breeds-behaviour-and-beyond.json",
@@ -196,11 +196,27 @@
     },
     {
       "game_set_id": "ccef3d",
-      "theme": "Dogs — Man's Best Friend",
+      "theme": "Dogs \u2014 Man's Best Friend",
       "short_link": "ff-4be3b7b1",
       "short_url": "https://find4.org/?ff-4be3b7b1",
       "short_path": "games/dogs-man-s-best-friend.json",
       "path_url": "https://find4.org/?config=games/dogs-man-s-best-friend.json"
+    },
+    {
+      "game_set_id": "7a7191",
+      "theme": "Things That Come In Sevens, Eights & Tens",
+      "short_link": "ff-158a148a",
+      "short_url": "https://find4.org/?ff-158a148a",
+      "short_path": "games/things-that-come-in-sevens-eights-and-tens.json",
+      "path_url": "https://find4.org/?config=games/things-that-come-in-sevens-eights-and-tens.json"
+    },
+    {
+      "game_set_id": "2400d9",
+      "theme": "Things That Come In Threes & Fours",
+      "short_link": "ff-17fcb2a1",
+      "short_url": "https://find4.org/?ff-17fcb2a1",
+      "short_path": "games/things-that-come-in-threes-and-fours.json",
+      "path_url": "https://find4.org/?config=games/things-that-come-in-threes-and-fours.json"
     }
   ]
 }
