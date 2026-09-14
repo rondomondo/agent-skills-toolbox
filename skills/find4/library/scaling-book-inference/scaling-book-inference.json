@@ -1,0 +1,350 @@
+{
+  "metadata": {
+    "generated_at": "2026-09-14T10:00:00Z",
+    "source": "https://jax-ml.github.io/scaling-book/inference/",
+    "suggested_name": "scaling-book-inference.json",
+    "modified_at": "2026-09-14T02:16:23.725045",
+    "source_id": "https://jax-ml.github.io/scaling-book/inference/",
+    "step": "finalize_metadata",
+    "id_registry": {
+      "group_set_ids": [
+        "4ddbed",
+        "a2c7f7",
+        "4621ab",
+        "5e9fdc"
+      ],
+      "game_set_ids": [
+        "fbfb98",
+        "a11883"
+      ],
+      "group_item_ids": [
+        "803c16",
+        "9f0156",
+        "921322",
+        "59c76a",
+        "b9d727",
+        "40c2c3",
+        "a704f2",
+        "288f44",
+        "204f8f",
+        "fedcfd",
+        "4fc985",
+        "a1dedc",
+        "0d3617",
+        "cddea6",
+        "dabbdb",
+        "7111f8"
+      ]
+    },
+    "id": "dINEU1s5h2JrbxDh",
+    "split_info": {
+      "role": "combined",
+      "split_at": "2026-09-14T02:16:36.313001+00:00",
+      "source_file": "output/games/scaling-book-inference/scaling-book-inference.json",
+      "parent_stem": "scaling-book-inference"
+    }
+  },
+  "game_sets": [
+    {
+      "theme": "Transformer Inference — Core Concepts & Phases",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "PREFILL",
+              "GENERATION",
+              "TTFT",
+              "SAMPLING"
+            ],
+            "category": "Phases & Goals of Inference",
+            "color": "blue",
+            "url": "https://jax-ml.github.io/scaling-book/inference/",
+            "description": "The two core phases of transformer inference (prefill and generation), plus the key latency metric (TTFT) and the fundamental operation (sampling).",
+            "skill_level": "Beginner",
+            "additional_sources": [],
+            "theme": "Transformer Inference — Core Concepts & Phases",
+            "group_item_id": "803c16",
+            "group_set_id": "4ddbed"
+          },
+          {
+            "words": [
+              "KV CACHE",
+              "FLASH ATTENTION",
+              "PAGED ATTENTION",
+              "PREFIX CACHING"
+            ],
+            "category": "Memory Efficiency Techniques",
+            "color": "green",
+            "url": "https://jax-ml.github.io/scaling-book/inference/",
+            "description": "Techniques that reduce or manage memory during inference: the KV cache avoids recomputation, Flash Attention avoids materialising the attention matrix, Paged Attention uses OS-style page tables, and prefix caching reuses KV caches for shared prompt prefixes.",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://arxiv.org/pdf/2309.06180"
+            ],
+            "theme": "Transformer Inference — Core Concepts & Phases",
+            "group_item_id": "9f0156",
+            "group_set_id": "4ddbed"
+          },
+          {
+            "words": [
+              "GMQA",
+              "LOCAL ATTENTION",
+              "QUANTIZATION",
+              "KV SHARING"
+            ],
+            "category": "KV Cache Size Reduction Strategies",
+            "color": "orange",
+            "url": "https://jax-ml.github.io/scaling-book/inference/",
+            "description": "Architectural and runtime strategies to shrink the KV cache: Grouped Multi-Query Attention reduces KV heads, local attention caps context per layer, quantization lowers bytes per element, and KV sharing reuses caches across layers.",
+            "skill_level": "Advanced",
+            "additional_sources": [],
+            "theme": "Transformer Inference — Core Concepts & Phases",
+            "group_item_id": "921322",
+            "group_set_id": "4ddbed"
+          },
+          {
+            "words": [
+              "DISAGGREGATED",
+              "INTERLEAVED",
+              "CONTINUOUS BATCHING",
+              "EDGE"
+            ],
+            "category": "Inference Serving Architectures",
+            "color": "purple",
+            "url": "https://jax-ml.github.io/scaling-book/inference/",
+            "description": "Four distinct inference serving approaches: disaggregated (separate prefill/generate servers), interleaved (prefill at BS=1 then batch generation), continuous batching (dynamic slot scheduling), and edge (single-user low-latency, e.g. llama.cpp).",
+            "skill_level": "Advanced",
+            "additional_sources": [],
+            "theme": "Transformer Inference — Core Concepts & Phases",
+            "group_item_id": "59c76a",
+            "group_set_id": "4ddbed"
+          }
+        ],
+        [
+          {
+            "words": [
+              "LATENCY",
+              "THROUGHPUT",
+              "BATCH SIZE",
+              "ARITHMETIC INTENSITY"
+            ],
+            "category": "Performance Dimensions",
+            "color": "red",
+            "url": "https://jax-ml.github.io/scaling-book/inference/",
+            "description": "The four key performance dimensions in inference: latency (how fast a single response arrives), throughput (tokens per second), batch size (concurrent requests), and arithmetic intensity (FLOPs per byte, determining compute- vs memory-bound regime).",
+            "skill_level": "Beginner",
+            "additional_sources": [],
+            "theme": "Transformer Inference — Core Concepts & Phases",
+            "group_item_id": "b9d727",
+            "group_set_id": "a2c7f7"
+          },
+          {
+            "words": [
+              "COMPUTE-BOUND",
+              "MEMORY-BOUND",
+              "B_CRIT",
+              "ROOFLINE"
+            ],
+            "category": "Hardware Utilisation Concepts",
+            "color": "teal",
+            "url": "https://jax-ml.github.io/scaling-book/inference/",
+            "description": "Concepts from the roofline model: whether a workload is limited by FLOPs (compute-bound) or memory bandwidth (memory-bound), the critical batch size B_crit above which matmuls become compute-bound, and the roofline model itself.",
+            "skill_level": "Intermediate",
+            "additional_sources": [],
+            "theme": "Transformer Inference — Core Concepts & Phases",
+            "group_item_id": "40c2c3",
+            "group_set_id": "a2c7f7"
+          },
+          {
+            "words": [
+              "ALLREDUCE",
+              "ALLGATHER",
+              "ALLTAOLL",
+              "REDUCESCATTER"
+            ],
+            "category": "Collective Communication Operations",
+            "color": "yellow",
+            "url": "https://jax-ml.github.io/scaling-book/inference/",
+            "description": "The four collective communication primitives used in distributed inference: AllReduce (sum across replicas), AllGather (collect shards), AllToAll (transpose sharding), and ReduceScatter (reduce then scatter).",
+            "skill_level": "Expert",
+            "additional_sources": [],
+            "theme": "Transformer Inference — Core Concepts & Phases",
+            "group_item_id": "a704f2",
+            "group_set_id": "a2c7f7"
+          },
+          {
+            "words": [
+              "SPECULATIVE SAMPLING",
+              "DRAFT MODEL",
+              "ACCEPTANCE RATE",
+              "METROPOLIS-HASTINGS"
+            ],
+            "category": "Latency Optimisation via Speculation",
+            "color": "indigo",
+            "url": "https://jax-ml.github.io/scaling-book/inference/",
+            "description": "Concepts underlying speculative decoding: a small draft model proposes K tokens, the large model verifies them in one forward pass, tokens are accepted based on probability ratios (Metropolis-Hastings for non-greedy), and acceptance rate determines efficiency.",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://arxiv.org/abs/2211.17192",
+              "https://arxiv.org/abs/2302.01318"
+            ],
+            "theme": "Transformer Inference — Core Concepts & Phases",
+            "group_item_id": "288f44",
+            "group_set_id": "a2c7f7"
+          }
+        ]
+      ],
+      "game_set_id": "fbfb98"
+    },
+    {
+      "theme": "Transformer Inference — Distributed Systems & Hardware",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "HBM",
+              "MXU",
+              "ICI",
+              "TPU V5E"
+            ],
+            "category": "TPU Hardware Components",
+            "color": "blue",
+            "url": "https://jax-ml.github.io/scaling-book/inference/",
+            "description": "Key hardware components of a TPU accelerator: High Bandwidth Memory (HBM) stores parameters and KV caches, the Matrix Multiply Unit (MXU) performs compute, Inter-Chip Interconnect (ICI) links chips, and TPU v5e is the example accelerator throughout the chapter.",
+            "skill_level": "Intermediate",
+            "additional_sources": [],
+            "theme": "Transformer Inference — Distributed Systems & Hardware",
+            "group_item_id": "204f8f",
+            "group_set_id": "4621ab"
+          },
+          {
+            "words": [
+              "FSDP",
+              "DATA PARALLEL",
+              "MODEL PARALLEL",
+              "SEQUENCE PARALLEL"
+            ],
+            "category": "Parallelism Strategies",
+            "color": "green",
+            "url": "https://jax-ml.github.io/scaling-book/inference/",
+            "description": "Parallelism strategies and their applicability to inference: FSDP and data parallelism are unsuitable for generation (move weights not activations), model parallelism (Megatron) is the primary generation strategy, sequence parallelism works for prefill.",
+            "skill_level": "Advanced",
+            "additional_sources": [],
+            "theme": "Transformer Inference — Distributed Systems & Hardware",
+            "group_item_id": "fedcfd",
+            "group_set_id": "4621ab"
+          },
+          {
+            "words": [
+              "MEGATRON",
+              "2D WEIGHT STATIONARY",
+              "HEAD SHARDING",
+              "BATCH SHARDING"
+            ],
+            "category": "Model Sharding Techniques",
+            "color": "red",
+            "url": "https://jax-ml.github.io/scaling-book/inference/",
+            "description": "Specific sharding schemes: Megatron (1D model parallelism over hidden dim), 2D Weight Stationary (shards both D and F axes for scale beyond 72 chips), head sharding (KV sharded over attention heads), and batch sharding (KV sharded over batch when heads exhausted).",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://arxiv.org/pdf/2211.05102"
+            ],
+            "theme": "Transformer Inference — Distributed Systems & Hardware",
+            "group_item_id": "4fc985",
+            "group_set_id": "4621ab"
+          },
+          {
+            "words": [
+              "JETSTREAM",
+              "PREFILL ENGINE",
+              "GENERATE ENGINE",
+              "TRANSFER THREAD"
+            ],
+            "category": "JetStream Inference Engine Components",
+            "color": "teal",
+            "url": "https://jax-ml.github.io/scaling-book/inference/",
+            "description": "Components of Google's open-source JetStream inference engine: prefill engines process prompts, generate engines run autoregressive decoding, and the transfer thread moves KV caches between slices.",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://github.com/google/JetStream"
+            ],
+            "theme": "Transformer Inference — Distributed Systems & Hardware",
+            "group_item_id": "a1dedc",
+            "group_set_id": "4621ab"
+          }
+        ],
+        [
+          {
+            "words": [
+              "W_HBM",
+              "W_ICI",
+              "BETA",
+              "ALPHA_HBM"
+            ],
+            "category": "Hardware Bandwidth Ratios",
+            "color": "orange",
+            "url": "https://jax-ml.github.io/scaling-book/inference/",
+            "description": "Key hardware constants in inference roofline math: W_HBM (HBM bandwidth), W_ICI (ICI bandwidth), β (bits per param / bits per activation), and α_HBM (hardware arithmetic intensity = FLOPs/s / bandwidth). These determine B_crit and ICI sharding limits.",
+            "skill_level": "Expert",
+            "additional_sources": [],
+            "theme": "Transformer Inference — Distributed Systems & Hardware",
+            "group_item_id": "0d3617",
+            "group_set_id": "5e9fdc"
+          },
+          {
+            "words": [
+              "CONTINUOUS BATCHING",
+              "AFFINITY ROUTING",
+              "LRU EVICTION",
+              "TRIE"
+            ],
+            "category": "Inference Engine Scheduling Mechanisms",
+            "color": "purple",
+            "url": "https://jax-ml.github.io/scaling-book/inference/",
+            "description": "Mechanisms for efficient request scheduling: continuous batching fills generate slots dynamically, affinity routing sends follow-up requests to the same replica for prefix cache hits, the KV trie organises cached prefixes, and LRU eviction manages cache capacity.",
+            "skill_level": "Advanced",
+            "additional_sources": [],
+            "theme": "Transformer Inference — Distributed Systems & Hardware",
+            "group_item_id": "cddea6",
+            "group_set_id": "5e9fdc"
+          },
+          {
+            "words": [
+              "LLAMA-2 13B",
+              "LLAMA-3 8B",
+              "PALM",
+              "CHINCHILLA"
+            ],
+            "category": "Models Used as Examples",
+            "color": "yellow",
+            "url": "https://jax-ml.github.io/scaling-book/inference/",
+            "description": "Real models used as concrete examples in the chapter: LLaMA-2 13B (KV cache analysis), LLaMA-3 8B (GQA optimisation: 32Q/8KV), PaLM (latency-throughput Pareto frontier), and Chinchilla 70B (speculative sampling acceptance rates).",
+            "skill_level": "Beginner",
+            "additional_sources": [],
+            "theme": "Transformer Inference — Distributed Systems & Hardware",
+            "group_item_id": "dabbdb",
+            "group_set_id": "5e9fdc"
+          },
+          {
+            "words": [
+              "INT8",
+              "FP8",
+              "BF16",
+              "INT4"
+            ],
+            "category": "Numeric Precision Formats",
+            "color": "indigo",
+            "url": "https://jax-ml.github.io/scaling-book/inference/",
+            "description": "Numeric formats used in LLM inference: int8 and fp8 reduce parameter and KV cache memory (halving B_crit for weights), bf16 is the standard activation format, and int4 enables aggressive quantization for memory-limited deployments.",
+            "skill_level": "Intermediate",
+            "additional_sources": [],
+            "theme": "Transformer Inference — Distributed Systems & Hardware",
+            "group_item_id": "7111f8",
+            "group_set_id": "5e9fdc"
+          }
+        ]
+      ],
+      "game_set_id": "a11883"
+    }
+  ]
+}

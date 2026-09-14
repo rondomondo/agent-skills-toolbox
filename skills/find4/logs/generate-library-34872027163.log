@@ -1,0 +1,44 @@
+short_link: ff-773ed4f2 short_path: games/scaling-book-inference/transformer-inference-distributed-systems-and-hardware.json config_file: library/scaling-book-inference/transformer-inference-distributed-systems-and-hardware.json
+short_link: ff-d78318a3 short_path: games/scaling-book-inference/transformer-inference-core-concepts-and-phases.json config_file: library/scaling-book-inference/transformer-inference-core-concepts-and-phases.json
+short_link: ff-0803e86c short_path: games/history-of-ireland/history-of-ireland-conquest-and-conflict.json config_file: library/history-of-ireland/history-of-ireland-conquest-and-conflict.json
+short_link: ff-7291f074 short_path: games/history-of-ireland/history-of-ireland-identity-and-independence.json config_file: library/history-of-ireland/history-of-ireland-identity-and-independence.json
+short_link: ff-72374f55 short_path: games/generative-ai-system-design/generative-ai-system-design-safety-and-interview-strategy.json config_file: library/generative-ai-system-design/generative-ai-system-design-safety-and-interview-strategy.json
+short_link: ff-81963c0c short_path: games/generative-ai-system-design/generative-ai-system-design-core-architecture.json config_file: library/generative-ai-system-design/generative-ai-system-design-core-architecture.json
+  OK   12ac31: Generative AI System Design — Core Architecture
+  OK   908e82: Generative AI System Design — Safety & Interview Strategy
+  OK   ee24aa: History of Ireland — Conquest & Conflict
+  OK   c4c0f4: History of Ireland — Identity & Independence
+  OK   fbfb98: Transformer Inference — Core Concepts & Phases
+  OK   a11883: Transformer Inference — Distributed Systems & Hardware
+
+Validation Report:
+--------------------------------------------------------------------------------
+No validation errors found.
+
+Duplicate Analysis:
+
+Processed 6 files
+Found 6 unique game sets
+
+Theme Index Summary:
+------------------------------------------------------------------------------------------------------------------------
+Theme                          Game Set ID     Words    Groups   Vers    File
+------------------------------------------------------------------------------------------------------------------------
+Generative AI System Design —  12ac31          32       8        1   [v] generative-ai-system-design/generative-ai-system-design-core-architecture.json
+Generative AI System Design —  908e82          32       8        1   [v] generative-ai-system-design/generative-ai-system-design-safety-and-interview-strategy.json
+History of Ireland — Conquest  ee24aa          32       8        1   [v] history-of-ireland/history-of-ireland-conquest-and-conflict.json
+History of Ireland — Identity  c4c0f4          32       8        1   [v] history-of-ireland/history-of-ireland-identity-and-independence.json
+Transformer Inference — Core C fbfb98          32       8        1   [v] scaling-book-inference/transformer-inference-core-concepts-and-phases.json
+Transformer Inference — Distri a11883          32       8        1   [v] scaling-book-inference/transformer-inference-distributed-systems-and-hardware.json
+------------------------------------------------------------------------------------------------------------------------
+
+Theme index saved to library/themes.json
+
+Building library.json from library/themes.json ...
+
+Done.
+  game_sets : 6
+  missing   : 0
+  hash      : e0bb2f71215822a8...
+  fingerprint: 4da78a1b7724e0e6
+  output    : library/library.json

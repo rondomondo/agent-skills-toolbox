@@ -1,0 +1,203 @@
+{
+  "metadata": {
+    "generated_at": "2026-09-13T10:00:00Z",
+    "source": "stdin",
+    "suggested_name": "history-of-ireland.json",
+    "modified_at": "2026-09-13T20:11:01.198799",
+    "source_id": "stdin",
+    "step": "finalize_metadata",
+    "id_registry": {
+      "game_set_ids": [
+        "ee24aa"
+      ],
+      "group_set_ids": [
+        "794a18",
+        "055980"
+      ],
+      "group_item_ids": [
+        "2a34d2",
+        "c0aad1",
+        "3704db",
+        "01701b",
+        "239fee",
+        "1cf63c",
+        "45c93c",
+        "d393ef"
+      ]
+    },
+    "id": "JYmnz1TU3Bhb3vk8",
+    "split_info": {
+      "role": "split",
+      "split_at": "2026-09-13T20:17:44.751502+00:00",
+      "parent_id": "JYmnz1TU3Bhb3vk8",
+      "parent_stem": "history-of-ireland",
+      "parent_file": "/home/claude/output/games/history-of-ireland/history-of-ireland.json",
+      "theme": "History of Ireland — Conquest & Conflict",
+      "slug": "history-of-ireland-conquest-and-conflict"
+    }
+  },
+  "game_sets": [
+    {
+      "theme": "History of Ireland — Conquest & Conflict",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "BORU",
+              "CLONTARF",
+              "SITRIC",
+              "LONGSHIP"
+            ],
+            "category": "Viking Age Ireland",
+            "color": "blue",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_Clontarf",
+            "description": "Connected to the Viking presence in Ireland and the decisive Battle of Clontarf in 1014",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/Brian_Boru"
+            ],
+            "theme": "History of Ireland — Conquest & Conflict",
+            "group_item_id": "2a34d2",
+            "group_set_id": "794a18"
+          },
+          {
+            "words": [
+              "PEARSE",
+              "CONNOLLY",
+              "GPO",
+              "PROCLAMATION"
+            ],
+            "category": "Easter Rising 1916",
+            "color": "green",
+            "url": "https://en.wikipedia.org/wiki/Easter_Rising",
+            "description": "Key figures and locations of the 1916 Easter Rising against British rule",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/Proclamation_of_the_Irish_Republic"
+            ],
+            "theme": "History of Ireland — Conquest & Conflict",
+            "group_item_id": "c0aad1",
+            "group_set_id": "794a18"
+          },
+          {
+            "words": [
+              "DROGHEDA",
+              "KILKENNY",
+              "WEXFORD",
+              "CONFEDERATION"
+            ],
+            "category": "Cromwellian Ireland",
+            "color": "red",
+            "url": "https://en.wikipedia.org/wiki/Cromwellian_conquest_of_Ireland",
+            "description": "Places and events connected to Cromwell's brutal campaign in Ireland in the 1640s–50s",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/Confederation_of_Kilkenny"
+            ],
+            "theme": "History of Ireland — Conquest & Conflict",
+            "group_item_id": "3704db",
+            "group_set_id": "794a18"
+          },
+          {
+            "words": [
+              "BLIGHT",
+              "SKIBBEREEN",
+              "WORKHOUSE",
+              "COFFIN SHIP"
+            ],
+            "category": "The Great Famine",
+            "color": "yellow",
+            "url": "https://en.wikipedia.org/wiki/Great_Famine_(Ireland)",
+            "description": "Terms and places most closely associated with the catastrophic Irish famine of 1845–1852",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/Skibbereen"
+            ],
+            "theme": "History of Ireland — Conquest & Conflict",
+            "group_item_id": "01701b",
+            "group_set_id": "794a18"
+          }
+        ],
+        [
+          {
+            "words": [
+              "STRONGBOW",
+              "DIARMAIT",
+              "PALE",
+              "KILKENNY"
+            ],
+            "category": "Norman Invasion of Ireland",
+            "color": "orange",
+            "url": "https://en.wikipedia.org/wiki/Norman_invasion_of_Ireland",
+            "description": "Key figures and concepts from the 12th-century Norman arrival and settlement in Ireland",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/Strongbow_(medieval)"
+            ],
+            "theme": "History of Ireland — Conquest & Conflict",
+            "group_item_id": "239fee",
+            "group_set_id": "055980"
+          },
+          {
+            "words": [
+              "WOLFE TONE",
+              "VINEGAR HILL",
+              "UNITED IRISHMEN",
+              "EMMET"
+            ],
+            "category": "1798 Rebellion",
+            "color": "purple",
+            "url": "https://en.wikipedia.org/wiki/Irish_Rebellion_of_1798",
+            "description": "Leaders and places of the United Irishmen rebellion inspired by the French Revolution",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/Theobald_Wolfe_Tone"
+            ],
+            "theme": "History of Ireland — Conquest & Conflict",
+            "group_item_id": "1cf63c",
+            "group_set_id": "055980"
+          },
+          {
+            "words": [
+              "GLENDALOUGH",
+              "KELLS",
+              "ROUND TOWER",
+              "SKELLIG"
+            ],
+            "category": "Early Christian Monasticism",
+            "color": "teal",
+            "url": "https://en.wikipedia.org/wiki/Skellig_Michael",
+            "description": "Famous monastic sites and architectural symbols of Ireland's early Christian golden age",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/Glendalough"
+            ],
+            "theme": "History of Ireland — Conquest & Conflict",
+            "group_item_id": "45c93c",
+            "group_set_id": "055980"
+          },
+          {
+            "words": [
+              "PARTITION",
+              "STORMONT",
+              "B-SPECIALS",
+              "INTERNMENT"
+            ],
+            "category": "The Troubles — Northern Ireland",
+            "color": "indigo",
+            "url": "https://en.wikipedia.org/wiki/The_Troubles",
+            "description": "Political and security terms central to the conflict in Northern Ireland from partition to the 1990s",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/Partition_of_Ireland"
+            ],
+            "theme": "History of Ireland — Conquest & Conflict",
+            "group_item_id": "d393ef",
+            "group_set_id": "055980"
+          }
+        ]
+      ],
+      "game_set_id": "ee24aa"
+    }
+  ]
+}

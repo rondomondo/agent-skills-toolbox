@@ -1,0 +1,203 @@
+{
+  "metadata": {
+    "generated_at": "2026-09-13T10:00:00Z",
+    "source": "stdin",
+    "suggested_name": "history-of-ireland.json",
+    "modified_at": "2026-09-13T20:11:01.198799",
+    "source_id": "stdin",
+    "step": "finalize_metadata",
+    "id_registry": {
+      "game_set_ids": [
+        "c4c0f4"
+      ],
+      "group_set_ids": [
+        "a70f34",
+        "da5bc2"
+      ],
+      "group_item_ids": [
+        "b7ec6c",
+        "eb5e52",
+        "1b322e",
+        "251cab",
+        "426db9",
+        "98db1a",
+        "f5cf03",
+        "389e97"
+      ]
+    },
+    "id": "JYmnz1TU3Bhb3vk8",
+    "split_info": {
+      "role": "split",
+      "split_at": "2026-09-13T20:17:44.751502+00:00",
+      "parent_id": "JYmnz1TU3Bhb3vk8",
+      "parent_stem": "history-of-ireland",
+      "parent_file": "/home/claude/output/games/history-of-ireland/history-of-ireland.json",
+      "theme": "History of Ireland — Identity & Independence",
+      "slug": "history-of-ireland-identity-and-independence"
+    }
+  },
+  "game_sets": [
+    {
+      "theme": "History of Ireland — Identity & Independence",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "O'NEIL",
+              "O'DONNELL",
+              "FLIGHT",
+              "EARLS"
+            ],
+            "category": "Flight of the Earls 1607",
+            "color": "red",
+            "url": "https://en.wikipedia.org/wiki/Flight_of_the_Earls",
+            "description": "The pivotal 1607 departure of Ulster Gaelic lords that opened the door to the Ulster Plantation",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/Ulster_Plantation"
+            ],
+            "theme": "History of Ireland — Identity & Independence",
+            "group_item_id": "b7ec6c",
+            "group_set_id": "a70f34"
+          },
+          {
+            "words": [
+              "BOYNE",
+              "WILLIAM",
+              "JAMES",
+              "PENAL LAWS"
+            ],
+            "category": "Williamite War & Aftermath",
+            "color": "yellow",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_the_Boyne",
+            "description": "Figures and consequences of the Williamite War in Ireland, ending in Protestant Ascendancy",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/Penal_Laws_(Ireland)"
+            ],
+            "theme": "History of Ireland — Identity & Independence",
+            "group_item_id": "eb5e52",
+            "group_set_id": "a70f34"
+          },
+          {
+            "words": [
+              "COLLINS",
+              "BLACK AND TANS",
+              "TRUCE",
+              "SOLOHEADBEG"
+            ],
+            "category": "War of Independence 1919–1921",
+            "color": "green",
+            "url": "https://en.wikipedia.org/wiki/Irish_War_of_Independence",
+            "description": "Key persons and events in Ireland's guerrilla campaign that led to the Anglo-Irish Treaty",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/Michael_Collins_(Irish_leader)"
+            ],
+            "theme": "History of Ireland — Identity & Independence",
+            "group_item_id": "1b322e",
+            "group_set_id": "a70f34"
+          },
+          {
+            "words": [
+              "NEWGRANGE",
+              "TARA",
+              "DRUIDS",
+              "OGHAM"
+            ],
+            "category": "Ancient & Celtic Ireland",
+            "color": "blue",
+            "url": "https://en.wikipedia.org/wiki/Newgrange",
+            "description": "Monuments, culture, and writing of pre-Christian Celtic Ireland",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/Hill_of_Tara"
+            ],
+            "theme": "History of Ireland — Identity & Independence",
+            "group_item_id": "251cab",
+            "group_set_id": "a70f34"
+          }
+        ],
+        [
+          {
+            "words": [
+              "PARNELL",
+              "LAND LEAGUE",
+              "FENIANS",
+              "EMANCIPATION"
+            ],
+            "category": "19th-Century Irish Nationalism",
+            "color": "purple",
+            "url": "https://en.wikipedia.org/wiki/Charles_Stewart_Parnell",
+            "description": "The key movements and figures driving Irish political and agrarian nationalism in the 1800s",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/Irish_National_Land_League"
+            ],
+            "theme": "History of Ireland — Identity & Independence",
+            "group_item_id": "426db9",
+            "group_set_id": "da5bc2"
+          },
+          {
+            "words": [
+              "YEATS",
+              "JOYCE",
+              "BECKETT",
+              "WILDE"
+            ],
+            "category": "Irish Literary Giants",
+            "color": "orange",
+            "url": "https://en.wikipedia.org/wiki/Irish_literature",
+            "description": "Four of Ireland's most celebrated writers, all with global literary reputations",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/W._B._Yeats"
+            ],
+            "theme": "History of Ireland — Identity & Independence",
+            "group_item_id": "98db1a",
+            "group_set_id": "da5bc2"
+          },
+          {
+            "words": [
+              "CELTIC TIGER",
+              "MARRIAGE EQUALITY",
+              "ROBINSON",
+              "REPEAL"
+            ],
+            "category": "Modern Ireland (1990s–2018)",
+            "color": "teal",
+            "url": "https://en.wikipedia.org/wiki/Celtic_Tiger",
+            "description": "Landmark social and economic moments that shaped Ireland's modern identity",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/Mary_Robinson"
+            ],
+            "theme": "History of Ireland — Identity & Independence",
+            "group_item_id": "f5cf03",
+            "group_set_id": "da5bc2"
+          },
+          {
+            "words": [
+              "HURLING",
+              "BODHRAN",
+              "GAELTACHT",
+              "UILLEANN PIPES"
+            ],
+            "category": "Gaelic Culture & Language",
+            "color": "indigo",
+            "url": "https://en.wikipedia.org/wiki/Culture_of_Ireland",
+            "description": "Traditional Irish sports, music, and language heritage that define Gaelic identity",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/Gaelic_games"
+            ],
+            "theme": "History of Ireland — Identity & Independence",
+            "group_item_id": "389e97",
+            "group_set_id": "da5bc2"
+          }
+        ]
+      ],
+      "game_set_id": "c4c0f4"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "source_id": "https://www.systemdesignhandbook.com/guides/generative-ai-system-design-interview/",
+  "zip": "generative-ai-system-design",
+  "games": [
+    {
+      "game_set_id": "ee24aa",
+      "theme": "History of Ireland — Conquest & Conflict",
+      "short_link": "ff-0803e86c",
+      "short_url": "https://find4.org/?ff-0803e86c",
+      "short_path": "games/history-of-ireland/history-of-ireland-conquest-and-conflict.json",
+      "path_url": "https://find4.org/?config=games/history-of-ireland/history-of-ireland-conquest-and-conflict.json",
+      "game_card": "/games/history-of-ireland/html/history-of-ireland.card.html",
+      "game_screenshot": "/games/history-of-ireland/screenshots/history-of-ireland-conquest-and-conflict.html.png"
+    },
+    {
+      "game_set_id": "c4c0f4",
+      "theme": "History of Ireland — Identity & Independence",
+      "short_link": "ff-7291f074",
+      "short_url": "https://find4.org/?ff-7291f074",
+      "short_path": "games/history-of-ireland/history-of-ireland-identity-and-independence.json",
+      "path_url": "https://find4.org/?config=games/history-of-ireland/history-of-ireland-identity-and-independence.json",
+      "game_card": "/games/history-of-ireland/html/history-of-ireland.card.html",
+      "game_screenshot": "/games/history-of-ireland/screenshots/history-of-ireland-identity-and-independence.html.png"
+    },
+    {
+      "game_set_id": "fbfb98",
+      "theme": "Transformer Inference — Core Concepts & Phases",
+      "short_link": "ff-d78318a3",
+      "short_url": "https://find4.org/?ff-d78318a3",
+      "short_path": "games/scaling-book-inference/transformer-inference-core-concepts-and-phases.json",
+      "path_url": "https://find4.org/?config=games/scaling-book-inference/transformer-inference-core-concepts-and-phases.json",
+      "game_card": "/games/scaling-book-inference/html/scaling-book-inference.card.html",
+      "game_screenshot": "/games/scaling-book-inference/screenshots/transformer-inference-core-concepts-and-phases.html.png"
+    },
+    {
+      "game_set_id": "a11883",
+      "theme": "Transformer Inference — Distributed Systems & Hardware",
+      "short_link": "ff-773ed4f2",
+      "short_url": "https://find4.org/?ff-773ed4f2",
+      "short_path": "games/scaling-book-inference/transformer-inference-distributed-systems-and-hardware.json",
+      "path_url": "https://find4.org/?config=games/scaling-book-inference/transformer-inference-distributed-systems-and-hardware.json",
+      "game_card": "/games/scaling-book-inference/html/scaling-book-inference.card.html",
+      "game_screenshot": "/games/scaling-book-inference/screenshots/transformer-inference-distributed-systems-and-hardware.html.png"
+    },
+    {
+      "game_set_id": "12ac31",
+      "theme": "Generative AI System Design — Core Architecture",
+      "short_link": "ff-81963c0c",
+      "short_url": "https://find4.org/?ff-81963c0c",
+      "short_path": "games/generative-ai-system-design/generative-ai-system-design-core-architecture.json",
+      "path_url": "https://find4.org/?config=games/generative-ai-system-design/generative-ai-system-design-core-architecture.json"
+    },
+    {
+      "game_set_id": "908e82",
+      "theme": "Generative AI System Design — Safety & Interview Strategy",
+      "short_link": "ff-72374f55",
+      "short_url": "https://find4.org/?ff-72374f55",
+      "short_path": "games/generative-ai-system-design/generative-ai-system-design-safety-and-interview-strategy.json",
+      "path_url": "https://find4.org/?config=games/generative-ai-system-design/generative-ai-system-design-safety-and-interview-strategy.json"
+    }
+  ]
+}

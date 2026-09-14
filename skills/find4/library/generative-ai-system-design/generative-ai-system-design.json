@@ -1,0 +1,351 @@
+{
+  "metadata": {
+    "generated_at": "2026-09-14T12:00:00Z",
+    "source": "https://www.systemdesignhandbook.com/guides/generative-ai-system-design-interview/",
+    "suggested_name": "generative-ai-system-design.json",
+    "modified_at": "2026-09-14T16:57:46.850936",
+    "source_id": "https://www.systemdesignhandbook.com/guides/generative-ai-system-design-interview/",
+    "step": "finalize_metadata",
+    "id_registry": {
+      "group_set_ids": [
+        "b36dee",
+        "b81cfb",
+        "f0d353",
+        "1f027c"
+      ],
+      "game_set_ids": [
+        "12ac31",
+        "908e82"
+      ],
+      "group_item_ids": [
+        "ff314e",
+        "e8161e",
+        "6c1ecd",
+        "0d716e",
+        "b17f00",
+        "7d394d",
+        "99971a",
+        "711887",
+        "18a9df",
+        "d31bcc",
+        "722d75",
+        "af8fa4",
+        "170a6c",
+        "a2bf9c",
+        "523bf9",
+        "793b3a"
+      ]
+    },
+    "id": "M2BJHVTcDAgnd8s5",
+    "split_info": {
+      "role": "combined",
+      "split_at": "2026-09-14T16:57:50.425550+00:00",
+      "source_file": "output/games/generative-ai-system-design/generative-ai-system-design.json",
+      "parent_stem": "generative-ai-system-design"
+    }
+  },
+  "game_sets": [
+    {
+      "theme": "Generative AI System Design — Core Architecture",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "ORCHESTRATOR",
+              "RETRIEVER",
+              "EMBEDDER",
+              "POST-PROCESSOR"
+            ],
+            "category": "LLM Pipeline Components",
+            "color": "blue",
+            "url": "https://www.systemdesignhandbook.com/guides/generative-ai-system-design-interview/",
+            "description": "Core modules in a modular LLM pipeline that transform a raw user query into a grounded, safe response",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/Large_language_model"
+            ],
+            "theme": "Generative AI System Design — Core Architecture",
+            "group_item_id": "ff314e",
+            "group_set_id": "b36dee"
+          },
+          {
+            "words": [
+              "PINECONE",
+              "FAISS",
+              "QDRANT",
+              "WEAVIATE"
+            ],
+            "category": "Vector Database Options",
+            "color": "green",
+            "url": "https://en.wikipedia.org/wiki/Vector_database",
+            "description": "Purpose-built vector stores used in RAG pipelines to perform fast approximate nearest-neighbour search over dense embeddings",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.systemdesignhandbook.com/guides/generative-ai-system-design-interview/"
+            ],
+            "theme": "Generative AI System Design — Core Architecture",
+            "group_item_id": "e8161e",
+            "group_set_id": "b36dee"
+          },
+          {
+            "words": [
+              "TEMPERATURE",
+              "TOP-P",
+              "TOP-K",
+              "MAX-TOKENS"
+            ],
+            "category": "LLM Sampling Parameters",
+            "color": "orange",
+            "url": "https://help.openai.com/en/articles/4936856-what-are-tokens-and-how-to-count-them",
+            "description": "Inference-time knobs that control the randomness, diversity, and length of LLM outputs",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://www.systemdesignhandbook.com/guides/generative-ai-system-design-interview/"
+            ],
+            "theme": "Generative AI System Design — Core Architecture",
+            "group_item_id": "6c1ecd",
+            "group_set_id": "b36dee"
+          },
+          {
+            "words": [
+              "CHUNKING",
+              "RERANKING",
+              "BM25",
+              "SLIDING-WINDOW"
+            ],
+            "category": "RAG Retrieval Techniques",
+            "color": "purple",
+            "url": "https://www.systemdesignhandbook.com/guides/generative-ai-system-design-interview/",
+            "description": "Strategies for splitting documents, finding relevant passages, and improving result quality in retrieval-augmented generation",
+            "skill_level": "Advanced",
+            "additional_sources": [],
+            "theme": "Generative AI System Design — Core Architecture",
+            "group_item_id": "0d716e",
+            "group_set_id": "b36dee"
+          }
+        ],
+        [
+          {
+            "words": [
+              "DISTILLATION",
+              "QUANTIZATION",
+              "CACHING",
+              "TIERING"
+            ],
+            "category": "LLM Cost Reduction Strategies",
+            "color": "red",
+            "url": "https://www.systemdesignhandbook.com/guides/generative-ai-system-design-interview/",
+            "description": "Techniques to lower the token and compute cost of running LLMs in production without sacrificing too much quality",
+            "skill_level": "Advanced",
+            "additional_sources": [],
+            "theme": "Generative AI System Design — Core Architecture",
+            "group_item_id": "b17f00",
+            "group_set_id": "b81cfb"
+          },
+          {
+            "words": [
+              "PROMETHEUS",
+              "GRAFANA",
+              "SENTRY",
+              "OPENTELEMETRY"
+            ],
+            "category": "LLM Observability Tools",
+            "color": "teal",
+            "url": "https://www.systemdesignhandbook.com/guides/generative-ai-system-design-interview/",
+            "description": "Monitoring and tracing tools used to track token budgets, latency percentiles, retrieval hit rates, and toxic output rates in GenAI systems",
+            "skill_level": "Intermediate",
+            "additional_sources": [],
+            "theme": "Generative AI System Design — Core Architecture",
+            "group_item_id": "7d394d",
+            "group_set_id": "b81cfb"
+          },
+          {
+            "words": [
+              "HALLUCINATION",
+              "DRIFT",
+              "INJECTION",
+              "JAILBREAK"
+            ],
+            "category": "GenAI Failure Modes",
+            "color": "indigo",
+            "url": "https://www.systemdesignhandbook.com/guides/generative-ai-system-design-interview/",
+            "description": "Categories of failure unique to generative AI systems that engineers must detect, mitigate, and monitor in production",
+            "skill_level": "Expert",
+            "additional_sources": [],
+            "theme": "Generative AI System Design — Core Architecture",
+            "group_item_id": "99971a",
+            "group_set_id": "b81cfb"
+          },
+          {
+            "words": [
+              "STREAMING",
+              "WARM-POOL",
+              "BACKOFF",
+              "SHARDING"
+            ],
+            "category": "Latency & Scalability Patterns",
+            "color": "yellow",
+            "url": "https://www.systemdesignhandbook.com/guides/generative-ai-system-design-interview/",
+            "description": "Engineering techniques that manage throughput, cold-start, rate limits, and queue congestion in high-load LLM deployments",
+            "skill_level": "Advanced",
+            "additional_sources": [],
+            "theme": "Generative AI System Design — Core Architecture",
+            "group_item_id": "711887",
+            "group_set_id": "b81cfb"
+          }
+        ]
+      ],
+      "game_set_id": "12ac31"
+    },
+    {
+      "theme": "Generative AI System Design — Safety & Interview Strategy",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "RLHF",
+              "FINE-TUNING",
+              "RED-TEAMING",
+              "AUDIT-LOG"
+            ],
+            "category": "AI Governance Mechanisms",
+            "color": "indigo",
+            "url": "https://www.systemdesignhandbook.com/guides/generative-ai-system-design-interview/",
+            "description": "Processes and artefacts used to align, improve, and maintain accountability in production generative AI systems over time",
+            "skill_level": "Expert",
+            "additional_sources": [],
+            "theme": "Generative AI System Design — Safety & Interview Strategy",
+            "group_item_id": "18a9df",
+            "group_set_id": "f0d353"
+          },
+          {
+            "words": [
+              "LATENCY",
+              "SCALE",
+              "CONSISTENCY",
+              "PRIVACY"
+            ],
+            "category": "Non-Functional Requirements to Clarify",
+            "color": "blue",
+            "url": "https://www.systemdesignhandbook.com/blog/non-functional-requirements-system-design/",
+            "description": "The four critical NFR axes an interviewer expects you to probe before sketching any GenAI architecture",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://www.systemdesignhandbook.com/guides/generative-ai-system-design-interview/"
+            ],
+            "theme": "Generative AI System Design — Safety & Interview Strategy",
+            "group_item_id": "d31bcc",
+            "group_set_id": "f0d353"
+          },
+          {
+            "words": [
+              "SANITIZE",
+              "SEGREGATE",
+              "ENCRYPT",
+              "REDACT"
+            ],
+            "category": "Security Controls for GenAI",
+            "color": "red",
+            "url": "https://www.systemdesignhandbook.com/guides/generative-ai-system-design-interview/",
+            "description": "Defensive operations applied to inputs, training data, and token streams to prevent prompt injection, data leakage, and compliance violations",
+            "skill_level": "Advanced",
+            "additional_sources": [],
+            "theme": "Generative AI System Design — Safety & Interview Strategy",
+            "group_item_id": "722d75",
+            "group_set_id": "f0d353"
+          },
+          {
+            "words": [
+              "SPECULATIVE",
+              "SINGLE-TURN",
+              "MULTI-TURN",
+              "FUNCTION-CALLING"
+            ],
+            "category": "LLM Interaction Patterns",
+            "color": "green",
+            "url": "https://www.systemdesignhandbook.com/guides/generative-ai-system-design-interview/",
+            "description": "Distinct modes in which a client can interact with a language model, ranging from stateless single shots to tool-use and speculative decoding",
+            "skill_level": "Intermediate",
+            "additional_sources": [],
+            "theme": "Generative AI System Design — Safety & Interview Strategy",
+            "group_item_id": "af8fa4",
+            "group_set_id": "f0d353"
+          }
+        ],
+        [
+          {
+            "words": [
+              "CLARIFY",
+              "ESTIMATE",
+              "SKETCH",
+              "WRAP-UP"
+            ],
+            "category": "Interview Framework Steps",
+            "color": "yellow",
+            "url": "https://www.systemdesignhandbook.com/guides/generative-ai-system-design-interview/",
+            "description": "The four meta-phases of the 9-step GenAI system design interview framework: scope, size, design, and close",
+            "skill_level": "Beginner",
+            "additional_sources": [],
+            "theme": "Generative AI System Design — Safety & Interview Strategy",
+            "group_item_id": "170a6c",
+            "group_set_id": "1f027c"
+          },
+          {
+            "words": [
+              "GPT-4",
+              "LLAMA-3",
+              "MIXTRAL",
+              "MISTRAL"
+            ],
+            "category": "Model Routing Options",
+            "color": "orange",
+            "url": "https://openai.com/index/gpt-4/",
+            "description": "LLMs of varying cost and capability that a model-selector routes between based on query complexity, latency class, and privacy constraints",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.systemdesignhandbook.com/guides/generative-ai-system-design-interview/"
+            ],
+            "theme": "Generative AI System Design — Safety & Interview Strategy",
+            "group_item_id": "a2bf9c",
+            "group_set_id": "1f027c"
+          },
+          {
+            "words": [
+              "P50",
+              "P95",
+              "P99",
+              "TOKEN-BUDGET"
+            ],
+            "category": "GenAI Performance Metrics",
+            "color": "teal",
+            "url": "https://www.systemdesignhandbook.com/guides/generative-ai-system-design-interview/",
+            "description": "Key observability signals tracked per request or session to understand tail latency and control inference spend in production",
+            "skill_level": "Advanced",
+            "additional_sources": [],
+            "theme": "Generative AI System Design — Safety & Interview Strategy",
+            "group_item_id": "523bf9",
+            "group_set_id": "1f027c"
+          },
+          {
+            "words": [
+              "GROUNDING",
+              "CONFIDENCE",
+              "RERANKING",
+              "DISCLAIMER"
+            ],
+            "category": "Hallucination Mitigation Techniques",
+            "color": "purple",
+            "url": "https://www.systemdesignhandbook.com/guides/generative-ai-system-design-interview/",
+            "description": "Layered defences applied before, during, and after generation to detect and surface ungrounded or low-confidence LLM outputs",
+            "skill_level": "Expert",
+            "additional_sources": [],
+            "theme": "Generative AI System Design — Safety & Interview Strategy",
+            "group_item_id": "793b3a",
+            "group_set_id": "1f027c"
+          }
+        ]
+      ],
+      "game_set_id": "908e82"
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+[
+  {
+    "game_set_id": "ee24aa",
+    "theme": "History of Ireland — Conquest & Conflict",
+    "short_path": "games/history-of-ireland/history-of-ireland-conquest-and-conflict.json",
+    "short_link": "ff-0803e86c",
+    "games_file": "history-of-ireland/history-of-ireland-conquest-and-conflict.json",
+    "config_file": "library/history-of-ireland/history-of-ireland-conquest-and-conflict.json",
+    "last_modified": "2026-09-13T21:25:06.494887",
+    "content_hash": "c9dc98d57d64b50360baff8bc9703a16890b6f7851d5c9707d6752649e6d9f16",
+    "total_words": 32,
+    "categories": [
+      "1798 Rebellion",
+      "Cromwellian Ireland",
+      "Early Christian Monasticism",
+      "Easter Rising 1916",
+      "Norman Invasion of Ireland",
+      "The Great Famine",
+      "The Troubles — Northern Ireland",
+      "Viking Age Ireland"
+    ],
+    "skill_levels": [
+      "Advanced",
+      "Beginner",
+      "Intermediate"
+    ],
+    "colors": [
+      "blue",
+      "green",
+      "indigo",
+      "orange",
+      "purple",
+      "red",
+      "teal",
+      "yellow"
+    ],
+    "group_sets_count": 2,
+    "total_groups": 8,
+    "versions_found": 1,
+    "is_latest": true,
+    "game_card": "/games/history-of-ireland/html/history-of-ireland.card.html",
+    "game_screenshot_rounds": [
+      ".round1",
+      ".round2"
+    ],
+    "game_screenshot": "/games/history-of-ireland/screenshots/history-of-ireland-conquest-and-conflict.html.png",
+    "metadata": {
+      "generated_at": "2026-09-13T10:00:00Z",
+      "source": "stdin",
+      "suggested_name": "history-of-ireland.json"
+    }
+  },
+  {
+    "game_set_id": "c4c0f4",
+    "theme": "History of Ireland — Identity & Independence",
+    "short_path": "games/history-of-ireland/history-of-ireland-identity-and-independence.json",
+    "short_link": "ff-7291f074",
+    "games_file": "history-of-ireland/history-of-ireland-identity-and-independence.json",
+    "config_file": "library/history-of-ireland/history-of-ireland-identity-and-independence.json",
+    "last_modified": "2026-09-13T21:25:06.495308",
+    "content_hash": "2b73afca519d86d32caf9fdce5556b91b74b94478ce2e82210c4736f899b16fe",
+    "total_words": 32,
+    "categories": [
+      "19th-Century Irish Nationalism",
+      "Ancient & Celtic Ireland",
+      "Flight of the Earls 1607",
+      "Gaelic Culture & Language",
+      "Irish Literary Giants",
+      "Modern Ireland (1990s–2018)",
+      "War of Independence 1919–1921",
+      "Williamite War & Aftermath"
+    ],
+    "skill_levels": [
+      "Advanced",
+      "Beginner",
+      "Expert",
+      "Intermediate"
+    ],
+    "colors": [
+      "blue",
+      "green",
+      "indigo",
+      "orange",
+      "purple",
+      "red",
+      "teal",
+      "yellow"
+    ],
+    "group_sets_count": 2,
+    "total_groups": 8,
+    "versions_found": 1,
+    "is_latest": true,
+    "game_card": "/games/history-of-ireland/html/history-of-ireland.card.html",
+    "game_screenshot_rounds": [
+      ".round1",
+      ".round2"
+    ],
+    "game_screenshot": "/games/history-of-ireland/screenshots/history-of-ireland-identity-and-independence.html.png",
+    "metadata": {
+      "generated_at": "2026-09-13T10:00:00Z",
+      "source": "stdin",
+      "suggested_name": "history-of-ireland.json"
+    }
+  }
+]

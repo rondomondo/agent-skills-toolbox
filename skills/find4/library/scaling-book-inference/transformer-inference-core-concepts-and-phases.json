@@ -1,0 +1,192 @@
+{
+  "metadata": {
+    "generated_at": "2026-09-14T10:00:00Z",
+    "source": "https://jax-ml.github.io/scaling-book/inference/",
+    "suggested_name": "scaling-book-inference.json",
+    "modified_at": "2026-09-14T02:16:23.725045",
+    "source_id": "https://jax-ml.github.io/scaling-book/inference/",
+    "step": "finalize_metadata",
+    "id_registry": {
+      "game_set_ids": [
+        "fbfb98"
+      ],
+      "group_set_ids": [
+        "4ddbed",
+        "a2c7f7"
+      ],
+      "group_item_ids": [
+        "803c16",
+        "9f0156",
+        "921322",
+        "59c76a",
+        "b9d727",
+        "40c2c3",
+        "a704f2",
+        "288f44"
+      ]
+    },
+    "id": "dINEU1s5h2JrbxDh",
+    "split_info": {
+      "role": "split",
+      "split_at": "2026-09-14T02:16:36.313817+00:00",
+      "parent_id": "dINEU1s5h2JrbxDh",
+      "parent_stem": "scaling-book-inference",
+      "parent_file": "output/games/scaling-book-inference/scaling-book-inference.json",
+      "theme": "Transformer Inference — Core Concepts & Phases",
+      "slug": "transformer-inference-core-concepts-and-phases"
+    }
+  },
+  "game_sets": [
+    {
+      "theme": "Transformer Inference — Core Concepts & Phases",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "PREFILL",
+              "GENERATION",
+              "TTFT",
+              "SAMPLING"
+            ],
+            "category": "Phases & Goals of Inference",
+            "color": "blue",
+            "url": "https://jax-ml.github.io/scaling-book/inference/",
+            "description": "The two core phases of transformer inference (prefill and generation), plus the key latency metric (TTFT) and the fundamental operation (sampling).",
+            "skill_level": "Beginner",
+            "additional_sources": [],
+            "theme": "Transformer Inference — Core Concepts & Phases",
+            "group_item_id": "803c16",
+            "group_set_id": "4ddbed"
+          },
+          {
+            "words": [
+              "KV CACHE",
+              "FLASH ATTENTION",
+              "PAGED ATTENTION",
+              "PREFIX CACHING"
+            ],
+            "category": "Memory Efficiency Techniques",
+            "color": "green",
+            "url": "https://jax-ml.github.io/scaling-book/inference/",
+            "description": "Techniques that reduce or manage memory during inference: the KV cache avoids recomputation, Flash Attention avoids materialising the attention matrix, Paged Attention uses OS-style page tables, and prefix caching reuses KV caches for shared prompt prefixes.",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://arxiv.org/pdf/2309.06180"
+            ],
+            "theme": "Transformer Inference — Core Concepts & Phases",
+            "group_item_id": "9f0156",
+            "group_set_id": "4ddbed"
+          },
+          {
+            "words": [
+              "GMQA",
+              "LOCAL ATTENTION",
+              "QUANTIZATION",
+              "KV SHARING"
+            ],
+            "category": "KV Cache Size Reduction Strategies",
+            "color": "orange",
+            "url": "https://jax-ml.github.io/scaling-book/inference/",
+            "description": "Architectural and runtime strategies to shrink the KV cache: Grouped Multi-Query Attention reduces KV heads, local attention caps context per layer, quantization lowers bytes per element, and KV sharing reuses caches across layers.",
+            "skill_level": "Advanced",
+            "additional_sources": [],
+            "theme": "Transformer Inference — Core Concepts & Phases",
+            "group_item_id": "921322",
+            "group_set_id": "4ddbed"
+          },
+          {
+            "words": [
+              "DISAGGREGATED",
+              "INTERLEAVED",
+              "CONTINUOUS BATCHING",
+              "EDGE"
+            ],
+            "category": "Inference Serving Architectures",
+            "color": "purple",
+            "url": "https://jax-ml.github.io/scaling-book/inference/",
+            "description": "Four distinct inference serving approaches: disaggregated (separate prefill/generate servers), interleaved (prefill at BS=1 then batch generation), continuous batching (dynamic slot scheduling), and edge (single-user low-latency, e.g. llama.cpp).",
+            "skill_level": "Advanced",
+            "additional_sources": [],
+            "theme": "Transformer Inference — Core Concepts & Phases",
+            "group_item_id": "59c76a",
+            "group_set_id": "4ddbed"
+          }
+        ],
+        [
+          {
+            "words": [
+              "LATENCY",
+              "THROUGHPUT",
+              "BATCH SIZE",
+              "ARITHMETIC INTENSITY"
+            ],
+            "category": "Performance Dimensions",
+            "color": "red",
+            "url": "https://jax-ml.github.io/scaling-book/inference/",
+            "description": "The four key performance dimensions in inference: latency (how fast a single response arrives), throughput (tokens per second), batch size (concurrent requests), and arithmetic intensity (FLOPs per byte, determining compute- vs memory-bound regime).",
+            "skill_level": "Beginner",
+            "additional_sources": [],
+            "theme": "Transformer Inference — Core Concepts & Phases",
+            "group_item_id": "b9d727",
+            "group_set_id": "a2c7f7"
+          },
+          {
+            "words": [
+              "COMPUTE-BOUND",
+              "MEMORY-BOUND",
+              "B_CRIT",
+              "ROOFLINE"
+            ],
+            "category": "Hardware Utilisation Concepts",
+            "color": "teal",
+            "url": "https://jax-ml.github.io/scaling-book/inference/",
+            "description": "Concepts from the roofline model: whether a workload is limited by FLOPs (compute-bound) or memory bandwidth (memory-bound), the critical batch size B_crit above which matmuls become compute-bound, and the roofline model itself.",
+            "skill_level": "Intermediate",
+            "additional_sources": [],
+            "theme": "Transformer Inference — Core Concepts & Phases",
+            "group_item_id": "40c2c3",
+            "group_set_id": "a2c7f7"
+          },
+          {
+            "words": [
+              "ALLREDUCE",
+              "ALLGATHER",
+              "ALLTAOLL",
+              "REDUCESCATTER"
+            ],
+            "category": "Collective Communication Operations",
+            "color": "yellow",
+            "url": "https://jax-ml.github.io/scaling-book/inference/",
+            "description": "The four collective communication primitives used in distributed inference: AllReduce (sum across replicas), AllGather (collect shards), AllToAll (transpose sharding), and ReduceScatter (reduce then scatter).",
+            "skill_level": "Expert",
+            "additional_sources": [],
+            "theme": "Transformer Inference — Core Concepts & Phases",
+            "group_item_id": "a704f2",
+            "group_set_id": "a2c7f7"
+          },
+          {
+            "words": [
+              "SPECULATIVE SAMPLING",
+              "DRAFT MODEL",
+              "ACCEPTANCE RATE",
+              "METROPOLIS-HASTINGS"
+            ],
+            "category": "Latency Optimisation via Speculation",
+            "color": "indigo",
+            "url": "https://jax-ml.github.io/scaling-book/inference/",
+            "description": "Concepts underlying speculative decoding: a small draft model proposes K tokens, the large model verifies them in one forward pass, tokens are accepted based on probability ratios (Metropolis-Hastings for non-greedy), and acceptance rate determines efficiency.",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://arxiv.org/abs/2211.17192",
+              "https://arxiv.org/abs/2302.01318"
+            ],
+            "theme": "Transformer Inference — Core Concepts & Phases",
+            "group_item_id": "288f44",
+            "group_set_id": "a2c7f7"
+          }
+        ]
+      ],
+      "game_set_id": "fbfb98"
+    }
+  ]
+}

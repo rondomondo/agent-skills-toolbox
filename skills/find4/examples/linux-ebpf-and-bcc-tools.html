@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find4 &mdash; Linux eBPF &amp; BCC Tools</title>
+
+    <meta name="description" content="A Advanced-level Find4 word-grouping game on &#x27;Linux eBPF &amp; BCC Tools&#x27;. 2 rounds, 32 words. Find the hidden connections between groups of 4.">
+    <meta name="keywords" content="Linux eBPF &amp; BCC Tools, BCC Single-Purpose Tools, BCC Multi-Tools, BCC TCP Tools, eBPF Data Structures, eBPF Event Sources, BCC Observability Checklist Tools, eBPF Safety &amp; Prerequisites, eBPF Front-End Options">
+    <meta name="author" content="Find4">
+    <meta name="theme-color" content="#0f6e56">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://find4.org/#game=vZh9b9s4Esa_CuEFFilgxU5SJ7H_cxSlNZrYvtgptncoDEoa2dxIoitScb1Fv_s9Q8mO89LbNIseEAQkNXz_8ZkZf2tkZGUsrWz0vjXmlFMhLcUzaRu9xmH78Nhrd7zD9rTd7rm_fzeaDaPLIiJ8X1i7NL1Wa7Va7YcF5bHM5wXN5_uRzloULpP9hc1S7lHO52R43Fxm3DNVefnVYxPPFjJS-dyzWqdm_0-jc3TIdKwS9dw6ur2Dbu_oYL_TPmh3Drerman4pxZkaQn7ROUyVX_RbHsIzYaKZ-iijC3W7kgKXS5nhixmMI3efxrH7Tg5PYJht3vUiXkFp3GXDo5RkCEdt2Xjc7MxxzZ3O4Vvk4TYhA6SsFuZuIGVpWxjFJ3IMO7AKJTHnShCIUoOD49OUTh-2z1NuNAJj0M3-2HnmLpu0rhzehTzp-RtNzxA4ShKwugtCidRO5QhD3hy1Gl3UWgnh92QjbsnUXLKLdSO2h2eK4yoG3H3Ezo5Pj1ofP7OZ4FDmsTrTwEFX94frIKZ7g8a3-_3x-v-1rALcrd6ybcq6Gx8IX4XZ74vpnynjeb9IbI9Oqx0UW05-CPwJ8PRaAyj0TgYbspng9FlfxoM_U-oXN8M_4UaH1oEOOeab6bB408ATkreuCyW2tB2ukinuoBJmJaEalmkO2zMlV2UoSNC6TtldNEKo-g3W_eNyUSFWloFDnsNP5XGqMhtxlSTLevJXIeeoK8UmVzrpWCQyYicVmJZaBQNandKOpO9N02hl5Q_ME1USlVrU4RKp9hcHq3FAvDpeSEzI8JUR7di0BqJ-mNTFGX-BZVdKxMtKC5TKvij96Wkkjb2zPqtStNZSnfEx3AGtnO8ckdOrHifMp1Vj8hdycve0G84s0otUkwe3aZYDV_QC1GosYfhFvrdh4b2-pl9b-7QMr3u-wFM-9fvzgeTKUoXN0PfH90MuTyZ9v0PVeUpKVdlapX3GBC-y_QpIn-_9edpGesVFUmZug1nbsaaEnfhIta4dBl7Cx2JeA0pBFm1_IkVsAQ3KreJZ-yawSjtsrRNIYt5jNMVpswyWSimKinziOfkb2VGuRVsUaiw5FbQxAaRLvHB_d_pEck0hYGxMrqtLCxaFAZ1TRs0U5IxL8tqIbedn8DUj-9kHlH8tzA9_-hawDtsZRJqXLRiHZmWLa0ulEz3s_hVNG2V8yU0-WN_NBwGPsODSt_3g3Fdvg7A2nBSVS4HF8EzSOHLE8WxJNNX4PTkJT0mazOfDg0VdzJUqbLrjQTZaBlpvOnIbm5P4rruSOzVzXtv3oi6WOGBHjKKaLntsGSZ4x5V83MdCoJtbjY96mqmAJdjF_hYcpapSkiYhV5hXCo8AGuYvLhEaPEcRYMc959RrDDA62QJHM1bh-2DjnfQ9o4OWvcn4m236uGcK_f_KpnaeOIXgIXRZu_7k_fsx7gIqRq9u-5f1fVxcH0xG91MxzfTuuWqP37El1vROQISMbFFGdmyoF3MNI5-_hrdgmNil5HhaT9h7AOtq5O4pSKn1DNLp1m8CLNdRE9sdodGjQZYr707CU8LiFRhxB7tz_eFVRkCPpktnQHFIlwDGbgmCNlSK75xeMQHx7MZcMkq6unEOxRhGd3SRsMq853T42UR-z-mDCxBy6qFGpatEi_FbcH1E5nEUmQBv70gUb83IUPDODthDGmh8lhADIVO2MrQr9e7ghLChSF-nZcqptfK3jY8_AGdn5u7QdeH8fXoLGBxu9mWnGsdjwbDKdfcIQcfA649A2bgznpSb_seS0BH-c9SySM-YXGKS0owvqivtZqqOoqaYQNXBgdo4bUWuO-euMWHkJ2jLmqEHzvZpih3bBgQz93sUzsnco7TyhYoh3DJ9bAsdbvW4C-ZuZVW1gx_LAzoT9mHSmA1vvLFQhbxihF0PIPOX6CE9-cKweYHpwwwMa-iaptrPKKqTnweaJ7f998HiMCmVfC-iePfBdP3o8n0PpYHcBeDy-fc6eiBa_M3rvCJi8UjVXP9K5wsC6BzqULlTiZ4WRup4DvWRcbPX2yH6IFBVJiHjcOTc_JcIwJ028qUgatkt1eF-A_Cf5YtDu2rID-mO8V6i0xUcYQ2J7vQxm6SgoykYQEW58MJlNTo1MV693kByHb5hMMOdv745mFIhzUilFNfgWbipPgfpQf_r4hum-e-AMKPwfXgYhBcM4OfpoE_OudsYdIfnp-N_kAJ4d7F4N2M3cjk08TvX14-p24TmRAI_F2MH7ygewIL5wB-Cr_lo6EeguemNdW0GUULmSuTcWAHilTu1apzRwX_JoIkj_4kdnJbIXTxV5mHkJUYt5uCMSNY4XIeFENm2J7gMMiY5o5-6mzJxMBZ8gLCtaVIxwRPCNKRQWqXAjSrpwCDj1ecX7rXgZAAqhZqhonyO1XonNOQpnh6xEiE8IpDgh1raLx5XPWu9m5CiGFZ5UYWSS1HCjElEunTm9c7YL6PaoZ9XcwZxda5jlyu5ILQVk4W3Nxigy08G-C6b7--LoPd_gDzAkIxThXzbVLZ8SWr4uXgjL3gMzBe4GStF8CDjBwtuxyuKU316mdRTHhEfP0BhjsRonCmHttCw_LbKoqDDlFPYLgqp2V_p3Py4Ong0ZyvgxIW0EM3MkdtODu2YtxS-lpLLBvGEmQCqL3xGlqXCxcWJjxqrleAAK-Gz8Mhk8g7jgcQmqUqxOzCR_y4TNduaMpCioF-y2SI37xQ5RLAw8FDn5F-NLd9nDW2GJdV0OePvOtAOHtF_9AfP6-I6Pa_DOpjfJ1_3vzg9wPwPj_8IZLT4-pnyO-fv_8X">
+    <meta property="og:title" content="Linux eBPF &amp; BCC Tools">
+    <meta property="og:description" content="Test your knowledge on Linux eBPF &amp; BCC Tools. 2 rounds, 32 words.">
+    <meta property="og:image" content="https://find4.org/preview-image.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Linux eBPF &amp; BCC Tools">
+    <meta name="twitter:description" content="Advanced-level challenge covering Linux eBPF &amp; BCC Tools.">
+    <meta name="twitter:image" content="https://find4.org/preview-image.png">
+
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "EducationalOccupationalCredential",
+  "name": "Linux eBPF & BCC Tools",
+  "educationalLevel": "Advanced",
+  "abstract": "Covers concepts including: BCC Single-Purpose Tools, BCC Multi-Tools, BCC TCP Tools, eBPF Data Structures."
+}
+    </script>
+
+    <style>
+        body{font-family:system-ui,-apple-system,sans-serif;max-width:720px;margin:2rem auto;padding:0 1rem;background:#f5f5f3;color:#111;}
+        .f4-game{background:#fff;border:0.5px solid rgba(0,0,0,0.3);border-radius:12px;padding:1rem 1.25rem;margin-bottom:48px;box-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1);}
+        .f4-game-header{display:flex;align-items:center;gap:10px;margin-bottom:1rem;flex-wrap:wrap;}
+        .f4-game-icon{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:20px;}
+        .f4-game-title-block{flex:1;min-width:0;}
+        .f4-game-title{font-size:15px;font-weight:500;margin:0;color:#111;}
+        .f4-game-meta{font-size:12px;color:#666;margin:0;}
+        .play-btn{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;background:#0f6e56;color:#fff;border-radius:10px;text-decoration:none;font-size:13px;font-weight:500;margin-left:auto;transition:background 0.2s;}
+        .play-btn:hover{background:#085041;}
+        .f4-groups{display:flex;flex-direction:column;gap:5px;}
+        .f4-round{font-size:11px;font-weight:500;color:#888;padding:8px 0 3px;text-transform:uppercase;letter-spacing:0.05em;}
+        .f4-group{display:grid;grid-template-columns:13px 1fr 90px 2fr;align-items:start;gap:8px;padding:8px 10px;border-radius:8px;border:0.5px solid #e0e0de;background:#fafaf9;}
+        .f4-dot{width:11px;height:11px;border-radius:50%;flex-shrink:0;margin-top:3px;}
+        .f4-cat{font-size:13px;font-weight:500;line-height:1.3;}
+        .f4-skill{font-size:11px;padding:2px 7px;border-radius:20px;text-align:center;white-space:nowrap;}
+        .f4-words{font-size:11px;color:#666;line-height:1.5;word-break:break-word;}
+        .sk-b{background:#e1f5ee;color:#085041;}.sk-i{background:#e6f1fb;color:#0c447c;}.sk-a{background:#faeeda;color:#633806;}.sk-e{background:#fcebeb;color:#791f1f;}
+        .dot-red{background:#e24b4a;}.dot-green{background:#639922;}.dot-blue{background:#378add;}.dot-yellow{background:#ba7517;}
+        .dot-purple{background:#7f77dd;}.dot-teal{background:#1d9e75;}.dot-orange{background:#d85a30;}.dot-indigo{background:#534ab7;}
+    </style>
+</head>
+<body>
+<div class="f4-game">
+  <div class="f4-game-header">
+    <div class="f4-game-icon" style="background:#eeedfe;" aria-hidden="true">&#x1F9E9;</div>
+    <div class="f4-game-title-block">
+      <h1 class="f4-game-title">Linux eBPF &amp; BCC Tools</h1>
+      <p class="f4-game-meta">2 rounds &middot; 32 words &middot; Advanced level</p>
+    </div>
+    <a class="play-btn" href="https://find4.org/#game=vZh9b9s4Esa_CuEFFilgxU5SJ7H_cxSlNZrYvtgptncoDEoa2dxIoitScb1Fv_s9Q8mO89LbNIseEAQkNXz_8ZkZf2tkZGUsrWz0vjXmlFMhLcUzaRu9xmH78Nhrd7zD9rTd7rm_fzeaDaPLIiJ8X1i7NL1Wa7Va7YcF5bHM5wXN5_uRzloULpP9hc1S7lHO52R43Fxm3DNVefnVYxPPFjJS-dyzWqdm_0-jc3TIdKwS9dw6ur2Dbu_oYL_TPmh3Drerman4pxZkaQn7ROUyVX_RbHsIzYaKZ-iijC3W7kgKXS5nhixmMI3efxrH7Tg5PYJht3vUiXkFp3GXDo5RkCEdt2Xjc7MxxzZ3O4Vvk4TYhA6SsFuZuIGVpWxjFJ3IMO7AKJTHnShCIUoOD49OUTh-2z1NuNAJj0M3-2HnmLpu0rhzehTzp-RtNzxA4ShKwugtCidRO5QhD3hy1Gl3UWgnh92QjbsnUXLKLdSO2h2eK4yoG3H3Ezo5Pj1ofP7OZ4FDmsTrTwEFX94frIKZ7g8a3-_3x-v-1rALcrd6ybcq6Gx8IX4XZ74vpnynjeb9IbI9Oqx0UW05-CPwJ8PRaAyj0TgYbspng9FlfxoM_U-oXN8M_4UaH1oEOOeab6bB408ATkreuCyW2tB2ukinuoBJmJaEalmkO2zMlV2UoSNC6TtldNEKo-g3W_eNyUSFWloFDnsNP5XGqMhtxlSTLevJXIeeoK8UmVzrpWCQyYicVmJZaBQNandKOpO9N02hl5Q_ME1USlVrU4RKp9hcHq3FAvDpeSEzI8JUR7di0BqJ-mNTFGX-BZVdKxMtKC5TKvij96Wkkjb2zPqtStNZSnfEx3AGtnO8ckdOrHifMp1Vj8hdycve0G84s0otUkwe3aZYDV_QC1GosYfhFvrdh4b2-pl9b-7QMr3u-wFM-9fvzgeTKUoXN0PfH90MuTyZ9v0PVeUpKVdlapX3GBC-y_QpIn-_9edpGesVFUmZug1nbsaaEnfhIta4dBl7Cx2JeA0pBFm1_IkVsAQ3KreJZ-yawSjtsrRNIYt5jNMVpswyWSimKinziOfkb2VGuRVsUaiw5FbQxAaRLvHB_d_pEck0hYGxMrqtLCxaFAZ1TRs0U5IxL8tqIbedn8DUj-9kHlH8tzA9_-hawDtsZRJqXLRiHZmWLa0ulEz3s_hVNG2V8yU0-WN_NBwGPsODSt_3g3Fdvg7A2nBSVS4HF8EzSOHLE8WxJNNX4PTkJT0mazOfDg0VdzJUqbLrjQTZaBlpvOnIbm5P4rruSOzVzXtv3oi6WOGBHjKKaLntsGSZ4x5V83MdCoJtbjY96mqmAJdjF_hYcpapSkiYhV5hXCo8AGuYvLhEaPEcRYMc959RrDDA62QJHM1bh-2DjnfQ9o4OWvcn4m236uGcK_f_KpnaeOIXgIXRZu_7k_fsx7gIqRq9u-5f1fVxcH0xG91MxzfTuuWqP37El1vROQISMbFFGdmyoF3MNI5-_hrdgmNil5HhaT9h7AOtq5O4pSKn1DNLp1m8CLNdRE9sdodGjQZYr707CU8LiFRhxB7tz_eFVRkCPpktnQHFIlwDGbgmCNlSK75xeMQHx7MZcMkq6unEOxRhGd3SRsMq853T42UR-z-mDCxBy6qFGpatEi_FbcH1E5nEUmQBv70gUb83IUPDODthDGmh8lhADIVO2MrQr9e7ghLChSF-nZcqptfK3jY8_AGdn5u7QdeH8fXoLGBxu9mWnGsdjwbDKdfcIQcfA649A2bgznpSb_seS0BH-c9SySM-YXGKS0owvqivtZqqOoqaYQNXBgdo4bUWuO-euMWHkJ2jLmqEHzvZpih3bBgQz93sUzsnco7TyhYoh3DJ9bAsdbvW4C-ZuZVW1gx_LAzoT9mHSmA1vvLFQhbxihF0PIPOX6CE9-cKweYHpwwwMa-iaptrPKKqTnweaJ7f998HiMCmVfC-iePfBdP3o8n0PpYHcBeDy-fc6eiBa_M3rvCJi8UjVXP9K5wsC6BzqULlTiZ4WRup4DvWRcbPX2yH6IFBVJiHjcOTc_JcIwJ028qUgatkt1eF-A_Cf5YtDu2rID-mO8V6i0xUcYQ2J7vQxm6SgoykYQEW58MJlNTo1MV693kByHb5hMMOdv745mFIhzUilFNfgWbipPgfpQf_r4hum-e-AMKPwfXgYhBcM4OfpoE_OudsYdIfnp-N_kAJ4d7F4N2M3cjk08TvX14-p24TmRAI_F2MH7ygewIL5wB-Cr_lo6EeguemNdW0GUULmSuTcWAHilTu1apzRwX_JoIkj_4kdnJbIXTxV5mHkJUYt5uCMSNY4XIeFENm2J7gMMiY5o5-6mzJxMBZ8gLCtaVIxwRPCNKRQWqXAjSrpwCDj1ecX7rXgZAAqhZqhonyO1XonNOQpnh6xEiE8IpDgh1raLx5XPWu9m5CiGFZ5UYWSS1HCjElEunTm9c7YL6PaoZ9XcwZxda5jlyu5ILQVk4W3Nxigy08G-C6b7--LoPd_gDzAkIxThXzbVLZ8SWr4uXgjL3gMzBe4GStF8CDjBwtuxyuKU316mdRTHhEfP0BhjsRonCmHttCw_LbKoqDDlFPYLgqp2V_p3Py4Ong0ZyvgxIW0EM3MkdtODu2YtxS-lpLLBvGEmQCqL3xGlqXCxcWJjxqrleAAK-Gz8Mhk8g7jgcQmqUqxOzCR_y4TNduaMpCioF-y2SI37xQ5RLAw8FDn5F-NLd9nDW2GJdV0OePvOtAOHtF_9AfP6-I6Pa_DOpjfJ1_3vzg9wPwPj_8IZLT4-pnyO-fv_8X" target="_blank" rel="noopener">
+        <span>&#9654;</span> Play on find4.org
+    </a>
+  </div>
+
+  <div class="f4-groups">
+    <h2 class="f4-round">Round 1</h2>
+    <div class="f4-group">
+        <div class="f4-dot dot-blue" role="img" aria-label="Beginner Level Category"></div>
+        <div class="f4-cat">BCC Single-Purpose Tools</div>
+        <span class="f4-skill sk-b">Beginner</span>
+        <div class="f4-words">EXECSNOOP &middot; OPENSNOOP &middot; BIOLATENCY &middot; RUNQLAT</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-purple" role="img" aria-label="Advanced Level Category"></div>
+        <div class="f4-cat">BCC Multi-Tools</div>
+        <span class="f4-skill sk-a">Advanced</span>
+        <div class="f4-words">TRACE &middot; ARGDIST &middot; FUNCCOUNT &middot; STACKCOUNT</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-teal" role="img" aria-label="Intermediate Level Category"></div>
+        <div class="f4-cat">BCC TCP Tools</div>
+        <span class="f4-skill sk-i">Intermediate</span>
+        <div class="f4-words">TCPCONNECT &middot; TCPACCEPT &middot; TCPRETRANS &middot; TCPLIFE</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-orange" role="img" aria-label="Advanced Level Category"></div>
+        <div class="f4-cat">eBPF Data Structures</div>
+        <span class="f4-skill sk-a">Advanced</span>
+        <div class="f4-words">BPF_HASH &middot; BPF_HISTOGRAM &middot; BPF_PERF_OUTPUT &middot; BPF_MAP</div>
+    </div>
+    <h2 class="f4-round">Round 2</h2>
+    <div class="f4-group">
+        <div class="f4-dot dot-green" role="img" aria-label="Intermediate Level Category"></div>
+        <div class="f4-cat">eBPF Event Sources</div>
+        <span class="f4-skill sk-i">Intermediate</span>
+        <div class="f4-words">KPROBES &middot; UPROBES &middot; TRACEPOINTS &middot; PERF_EVENTS</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-indigo" role="img" aria-label="Beginner Level Category"></div>
+        <div class="f4-cat">BCC Observability Checklist Tools</div>
+        <span class="f4-skill sk-b">Beginner</span>
+        <div class="f4-words">CACHESTAT &middot; BIOSNOOP &middot; GETHOSTLATENCY &middot; PROFILE</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-red" role="img" aria-label="Advanced Level Category"></div>
+        <div class="f4-cat">eBPF Safety &amp; Prerequisites</div>
+        <span class="f4-skill sk-a">Advanced</span>
+        <div class="f4-words">VERIFIER &middot; BYTECODE &middot; SANDBOX &middot; CONFIG_BPF_SYSCALL</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-yellow" role="img" aria-label="Intermediate Level Category"></div>
+        <div class="f4-cat">eBPF Front-End Options</div>
+        <span class="f4-skill sk-i">Intermediate</span>
+        <div class="f4-words">BCC &middot; BPFTRACE &middot; PLY &middot; LIBBPF</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

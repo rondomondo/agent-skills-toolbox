@@ -1,0 +1,949 @@
+{
+  "metadata": {
+    "generated_at": "2026-09-14T17:00:05",
+    "library_version": "2026-09-14T17:00:05",
+    "trigger": "rondomondo via Publish find4 games to github - workflow call run 34872027163",
+    "source": "library/themes.json",
+    "game_set_count": 6,
+    "missing_count": 0,
+    "source_hashes": {
+      "12ac31": "df9a5e6b68638ff9c7570c4c56eddc02c8d1a1fc35a06fe361e5751766286ad6",
+      "908e82": "5c44bb51726541f622c71fb67ce17dd4993d037958b599898ac3fc7d6ae8445c",
+      "ee24aa": "c9dc98d57d64b50360baff8bc9703a16890b6f7851d5c9707d6752649e6d9f16",
+      "c4c0f4": "2b73afca519d86d32caf9fdce5556b91b74b94478ce2e82210c4736f899b16fe",
+      "fbfb98": "1a9f0c3f58cf7b26777382fa2cc4067db6368b94e4e9ef8ec3b00d8c6dd4d5da",
+      "a11883": "25662c3e5ea02428270a8e3ab0e2d62eb4f9e4dda306828d3be27e923d244689"
+    },
+    "content_hash": "e0bb2f71215822a8ca1aebcbd92eb827987ae7f20788b37bb4788106158be207",
+    "metadata_fingerprint": "4da78a1b7724e0e6"
+  },
+  "game_sets": [
+    {
+      "theme": "Generative AI System Design — Core Architecture",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "ORCHESTRATOR",
+              "RETRIEVER",
+              "EMBEDDER",
+              "POST-PROCESSOR"
+            ],
+            "category": "LLM Pipeline Components",
+            "color": "blue",
+            "url": "https://www.systemdesignhandbook.com/guides/generative-ai-system-design-interview/",
+            "description": "Core modules in a modular LLM pipeline that transform a raw user query into a grounded, safe response",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/Large_language_model"
+            ],
+            "theme": "Generative AI System Design — Core Architecture",
+            "group_item_id": "ff314e",
+            "group_set_id": "b36dee"
+          },
+          {
+            "words": [
+              "PINECONE",
+              "FAISS",
+              "QDRANT",
+              "WEAVIATE"
+            ],
+            "category": "Vector Database Options",
+            "color": "green",
+            "url": "https://en.wikipedia.org/wiki/Vector_database",
+            "description": "Purpose-built vector stores used in RAG pipelines to perform fast approximate nearest-neighbour search over dense embeddings",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.systemdesignhandbook.com/guides/generative-ai-system-design-interview/"
+            ],
+            "theme": "Generative AI System Design — Core Architecture",
+            "group_item_id": "e8161e",
+            "group_set_id": "b36dee"
+          },
+          {
+            "words": [
+              "TEMPERATURE",
+              "TOP-P",
+              "TOP-K",
+              "MAX-TOKENS"
+            ],
+            "category": "LLM Sampling Parameters",
+            "color": "orange",
+            "url": "https://help.openai.com/en/articles/4936856-what-are-tokens-and-how-to-count-them",
+            "description": "Inference-time knobs that control the randomness, diversity, and length of LLM outputs",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://www.systemdesignhandbook.com/guides/generative-ai-system-design-interview/"
+            ],
+            "theme": "Generative AI System Design — Core Architecture",
+            "group_item_id": "6c1ecd",
+            "group_set_id": "b36dee"
+          },
+          {
+            "words": [
+              "CHUNKING",
+              "RERANKING",
+              "BM25",
+              "SLIDING-WINDOW"
+            ],
+            "category": "RAG Retrieval Techniques",
+            "color": "purple",
+            "url": "https://www.systemdesignhandbook.com/guides/generative-ai-system-design-interview/",
+            "description": "Strategies for splitting documents, finding relevant passages, and improving result quality in retrieval-augmented generation",
+            "skill_level": "Advanced",
+            "additional_sources": [],
+            "theme": "Generative AI System Design — Core Architecture",
+            "group_item_id": "0d716e",
+            "group_set_id": "b36dee"
+          }
+        ],
+        [
+          {
+            "words": [
+              "DISTILLATION",
+              "QUANTIZATION",
+              "CACHING",
+              "TIERING"
+            ],
+            "category": "LLM Cost Reduction Strategies",
+            "color": "red",
+            "url": "https://www.systemdesignhandbook.com/guides/generative-ai-system-design-interview/",
+            "description": "Techniques to lower the token and compute cost of running LLMs in production without sacrificing too much quality",
+            "skill_level": "Advanced",
+            "additional_sources": [],
+            "theme": "Generative AI System Design — Core Architecture",
+            "group_item_id": "b17f00",
+            "group_set_id": "b81cfb"
+          },
+          {
+            "words": [
+              "PROMETHEUS",
+              "GRAFANA",
+              "SENTRY",
+              "OPENTELEMETRY"
+            ],
+            "category": "LLM Observability Tools",
+            "color": "teal",
+            "url": "https://www.systemdesignhandbook.com/guides/generative-ai-system-design-interview/",
+            "description": "Monitoring and tracing tools used to track token budgets, latency percentiles, retrieval hit rates, and toxic output rates in GenAI systems",
+            "skill_level": "Intermediate",
+            "additional_sources": [],
+            "theme": "Generative AI System Design — Core Architecture",
+            "group_item_id": "7d394d",
+            "group_set_id": "b81cfb"
+          },
+          {
+            "words": [
+              "HALLUCINATION",
+              "DRIFT",
+              "INJECTION",
+              "JAILBREAK"
+            ],
+            "category": "GenAI Failure Modes",
+            "color": "indigo",
+            "url": "https://www.systemdesignhandbook.com/guides/generative-ai-system-design-interview/",
+            "description": "Categories of failure unique to generative AI systems that engineers must detect, mitigate, and monitor in production",
+            "skill_level": "Expert",
+            "additional_sources": [],
+            "theme": "Generative AI System Design — Core Architecture",
+            "group_item_id": "99971a",
+            "group_set_id": "b81cfb"
+          },
+          {
+            "words": [
+              "STREAMING",
+              "WARM-POOL",
+              "BACKOFF",
+              "SHARDING"
+            ],
+            "category": "Latency & Scalability Patterns",
+            "color": "yellow",
+            "url": "https://www.systemdesignhandbook.com/guides/generative-ai-system-design-interview/",
+            "description": "Engineering techniques that manage throughput, cold-start, rate limits, and queue congestion in high-load LLM deployments",
+            "skill_level": "Advanced",
+            "additional_sources": [],
+            "theme": "Generative AI System Design — Core Architecture",
+            "group_item_id": "711887",
+            "group_set_id": "b81cfb"
+          }
+        ]
+      ],
+      "game_set_id": "12ac31"
+    },
+    {
+      "theme": "Generative AI System Design — Safety & Interview Strategy",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "RLHF",
+              "FINE-TUNING",
+              "RED-TEAMING",
+              "AUDIT-LOG"
+            ],
+            "category": "AI Governance Mechanisms",
+            "color": "indigo",
+            "url": "https://www.systemdesignhandbook.com/guides/generative-ai-system-design-interview/",
+            "description": "Processes and artefacts used to align, improve, and maintain accountability in production generative AI systems over time",
+            "skill_level": "Expert",
+            "additional_sources": [],
+            "theme": "Generative AI System Design — Safety & Interview Strategy",
+            "group_item_id": "18a9df",
+            "group_set_id": "f0d353"
+          },
+          {
+            "words": [
+              "LATENCY",
+              "SCALE",
+              "CONSISTENCY",
+              "PRIVACY"
+            ],
+            "category": "Non-Functional Requirements to Clarify",
+            "color": "blue",
+            "url": "https://www.systemdesignhandbook.com/blog/non-functional-requirements-system-design/",
+            "description": "The four critical NFR axes an interviewer expects you to probe before sketching any GenAI architecture",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://www.systemdesignhandbook.com/guides/generative-ai-system-design-interview/"
+            ],
+            "theme": "Generative AI System Design — Safety & Interview Strategy",
+            "group_item_id": "d31bcc",
+            "group_set_id": "f0d353"
+          },
+          {
+            "words": [
+              "SANITIZE",
+              "SEGREGATE",
+              "ENCRYPT",
+              "REDACT"
+            ],
+            "category": "Security Controls for GenAI",
+            "color": "red",
+            "url": "https://www.systemdesignhandbook.com/guides/generative-ai-system-design-interview/",
+            "description": "Defensive operations applied to inputs, training data, and token streams to prevent prompt injection, data leakage, and compliance violations",
+            "skill_level": "Advanced",
+            "additional_sources": [],
+            "theme": "Generative AI System Design — Safety & Interview Strategy",
+            "group_item_id": "722d75",
+            "group_set_id": "f0d353"
+          },
+          {
+            "words": [
+              "SPECULATIVE",
+              "SINGLE-TURN",
+              "MULTI-TURN",
+              "FUNCTION-CALLING"
+            ],
+            "category": "LLM Interaction Patterns",
+            "color": "green",
+            "url": "https://www.systemdesignhandbook.com/guides/generative-ai-system-design-interview/",
+            "description": "Distinct modes in which a client can interact with a language model, ranging from stateless single shots to tool-use and speculative decoding",
+            "skill_level": "Intermediate",
+            "additional_sources": [],
+            "theme": "Generative AI System Design — Safety & Interview Strategy",
+            "group_item_id": "af8fa4",
+            "group_set_id": "f0d353"
+          }
+        ],
+        [
+          {
+            "words": [
+              "CLARIFY",
+              "ESTIMATE",
+              "SKETCH",
+              "WRAP-UP"
+            ],
+            "category": "Interview Framework Steps",
+            "color": "yellow",
+            "url": "https://www.systemdesignhandbook.com/guides/generative-ai-system-design-interview/",
+            "description": "The four meta-phases of the 9-step GenAI system design interview framework: scope, size, design, and close",
+            "skill_level": "Beginner",
+            "additional_sources": [],
+            "theme": "Generative AI System Design — Safety & Interview Strategy",
+            "group_item_id": "170a6c",
+            "group_set_id": "1f027c"
+          },
+          {
+            "words": [
+              "GPT-4",
+              "LLAMA-3",
+              "MIXTRAL",
+              "MISTRAL"
+            ],
+            "category": "Model Routing Options",
+            "color": "orange",
+            "url": "https://openai.com/index/gpt-4/",
+            "description": "LLMs of varying cost and capability that a model-selector routes between based on query complexity, latency class, and privacy constraints",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://www.systemdesignhandbook.com/guides/generative-ai-system-design-interview/"
+            ],
+            "theme": "Generative AI System Design — Safety & Interview Strategy",
+            "group_item_id": "a2bf9c",
+            "group_set_id": "1f027c"
+          },
+          {
+            "words": [
+              "P50",
+              "P95",
+              "P99",
+              "TOKEN-BUDGET"
+            ],
+            "category": "GenAI Performance Metrics",
+            "color": "teal",
+            "url": "https://www.systemdesignhandbook.com/guides/generative-ai-system-design-interview/",
+            "description": "Key observability signals tracked per request or session to understand tail latency and control inference spend in production",
+            "skill_level": "Advanced",
+            "additional_sources": [],
+            "theme": "Generative AI System Design — Safety & Interview Strategy",
+            "group_item_id": "523bf9",
+            "group_set_id": "1f027c"
+          },
+          {
+            "words": [
+              "GROUNDING",
+              "CONFIDENCE",
+              "RERANKING",
+              "DISCLAIMER"
+            ],
+            "category": "Hallucination Mitigation Techniques",
+            "color": "purple",
+            "url": "https://www.systemdesignhandbook.com/guides/generative-ai-system-design-interview/",
+            "description": "Layered defences applied before, during, and after generation to detect and surface ungrounded or low-confidence LLM outputs",
+            "skill_level": "Expert",
+            "additional_sources": [],
+            "theme": "Generative AI System Design — Safety & Interview Strategy",
+            "group_item_id": "793b3a",
+            "group_set_id": "1f027c"
+          }
+        ]
+      ],
+      "game_set_id": "908e82"
+    },
+    {
+      "theme": "History of Ireland — Conquest & Conflict",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "BORU",
+              "CLONTARF",
+              "SITRIC",
+              "LONGSHIP"
+            ],
+            "category": "Viking Age Ireland",
+            "color": "blue",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_Clontarf",
+            "description": "Connected to the Viking presence in Ireland and the decisive Battle of Clontarf in 1014",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/Brian_Boru"
+            ],
+            "theme": "History of Ireland — Conquest & Conflict",
+            "group_item_id": "2a34d2",
+            "group_set_id": "794a18"
+          },
+          {
+            "words": [
+              "PEARSE",
+              "CONNOLLY",
+              "GPO",
+              "PROCLAMATION"
+            ],
+            "category": "Easter Rising 1916",
+            "color": "green",
+            "url": "https://en.wikipedia.org/wiki/Easter_Rising",
+            "description": "Key figures and locations of the 1916 Easter Rising against British rule",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/Proclamation_of_the_Irish_Republic"
+            ],
+            "theme": "History of Ireland — Conquest & Conflict",
+            "group_item_id": "c0aad1",
+            "group_set_id": "794a18"
+          },
+          {
+            "words": [
+              "DROGHEDA",
+              "KILKENNY",
+              "WEXFORD",
+              "CONFEDERATION"
+            ],
+            "category": "Cromwellian Ireland",
+            "color": "red",
+            "url": "https://en.wikipedia.org/wiki/Cromwellian_conquest_of_Ireland",
+            "description": "Places and events connected to Cromwell's brutal campaign in Ireland in the 1640s–50s",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/Confederation_of_Kilkenny"
+            ],
+            "theme": "History of Ireland — Conquest & Conflict",
+            "group_item_id": "3704db",
+            "group_set_id": "794a18"
+          },
+          {
+            "words": [
+              "BLIGHT",
+              "SKIBBEREEN",
+              "WORKHOUSE",
+              "COFFIN SHIP"
+            ],
+            "category": "The Great Famine",
+            "color": "yellow",
+            "url": "https://en.wikipedia.org/wiki/Great_Famine_(Ireland)",
+            "description": "Terms and places most closely associated with the catastrophic Irish famine of 1845–1852",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/Skibbereen"
+            ],
+            "theme": "History of Ireland — Conquest & Conflict",
+            "group_item_id": "01701b",
+            "group_set_id": "794a18"
+          }
+        ],
+        [
+          {
+            "words": [
+              "STRONGBOW",
+              "DIARMAIT",
+              "PALE",
+              "KILKENNY"
+            ],
+            "category": "Norman Invasion of Ireland",
+            "color": "orange",
+            "url": "https://en.wikipedia.org/wiki/Norman_invasion_of_Ireland",
+            "description": "Key figures and concepts from the 12th-century Norman arrival and settlement in Ireland",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/Strongbow_(medieval)"
+            ],
+            "theme": "History of Ireland — Conquest & Conflict",
+            "group_item_id": "239fee",
+            "group_set_id": "055980"
+          },
+          {
+            "words": [
+              "WOLFE TONE",
+              "VINEGAR HILL",
+              "UNITED IRISHMEN",
+              "EMMET"
+            ],
+            "category": "1798 Rebellion",
+            "color": "purple",
+            "url": "https://en.wikipedia.org/wiki/Irish_Rebellion_of_1798",
+            "description": "Leaders and places of the United Irishmen rebellion inspired by the French Revolution",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/Theobald_Wolfe_Tone"
+            ],
+            "theme": "History of Ireland — Conquest & Conflict",
+            "group_item_id": "1cf63c",
+            "group_set_id": "055980"
+          },
+          {
+            "words": [
+              "GLENDALOUGH",
+              "KELLS",
+              "ROUND TOWER",
+              "SKELLIG"
+            ],
+            "category": "Early Christian Monasticism",
+            "color": "teal",
+            "url": "https://en.wikipedia.org/wiki/Skellig_Michael",
+            "description": "Famous monastic sites and architectural symbols of Ireland's early Christian golden age",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/Glendalough"
+            ],
+            "theme": "History of Ireland — Conquest & Conflict",
+            "group_item_id": "45c93c",
+            "group_set_id": "055980"
+          },
+          {
+            "words": [
+              "PARTITION",
+              "STORMONT",
+              "B-SPECIALS",
+              "INTERNMENT"
+            ],
+            "category": "The Troubles — Northern Ireland",
+            "color": "indigo",
+            "url": "https://en.wikipedia.org/wiki/The_Troubles",
+            "description": "Political and security terms central to the conflict in Northern Ireland from partition to the 1990s",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/Partition_of_Ireland"
+            ],
+            "theme": "History of Ireland — Conquest & Conflict",
+            "group_item_id": "d393ef",
+            "group_set_id": "055980"
+          }
+        ]
+      ],
+      "game_set_id": "ee24aa"
+    },
+    {
+      "theme": "History of Ireland — Identity & Independence",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "O'NEIL",
+              "O'DONNELL",
+              "FLIGHT",
+              "EARLS"
+            ],
+            "category": "Flight of the Earls 1607",
+            "color": "red",
+            "url": "https://en.wikipedia.org/wiki/Flight_of_the_Earls",
+            "description": "The pivotal 1607 departure of Ulster Gaelic lords that opened the door to the Ulster Plantation",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/Ulster_Plantation"
+            ],
+            "theme": "History of Ireland — Identity & Independence",
+            "group_item_id": "b7ec6c",
+            "group_set_id": "a70f34"
+          },
+          {
+            "words": [
+              "BOYNE",
+              "WILLIAM",
+              "JAMES",
+              "PENAL LAWS"
+            ],
+            "category": "Williamite War & Aftermath",
+            "color": "yellow",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_the_Boyne",
+            "description": "Figures and consequences of the Williamite War in Ireland, ending in Protestant Ascendancy",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/Penal_Laws_(Ireland)"
+            ],
+            "theme": "History of Ireland — Identity & Independence",
+            "group_item_id": "eb5e52",
+            "group_set_id": "a70f34"
+          },
+          {
+            "words": [
+              "COLLINS",
+              "BLACK AND TANS",
+              "TRUCE",
+              "SOLOHEADBEG"
+            ],
+            "category": "War of Independence 1919–1921",
+            "color": "green",
+            "url": "https://en.wikipedia.org/wiki/Irish_War_of_Independence",
+            "description": "Key persons and events in Ireland's guerrilla campaign that led to the Anglo-Irish Treaty",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/Michael_Collins_(Irish_leader)"
+            ],
+            "theme": "History of Ireland — Identity & Independence",
+            "group_item_id": "1b322e",
+            "group_set_id": "a70f34"
+          },
+          {
+            "words": [
+              "NEWGRANGE",
+              "TARA",
+              "DRUIDS",
+              "OGHAM"
+            ],
+            "category": "Ancient & Celtic Ireland",
+            "color": "blue",
+            "url": "https://en.wikipedia.org/wiki/Newgrange",
+            "description": "Monuments, culture, and writing of pre-Christian Celtic Ireland",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/Hill_of_Tara"
+            ],
+            "theme": "History of Ireland — Identity & Independence",
+            "group_item_id": "251cab",
+            "group_set_id": "a70f34"
+          }
+        ],
+        [
+          {
+            "words": [
+              "PARNELL",
+              "LAND LEAGUE",
+              "FENIANS",
+              "EMANCIPATION"
+            ],
+            "category": "19th-Century Irish Nationalism",
+            "color": "purple",
+            "url": "https://en.wikipedia.org/wiki/Charles_Stewart_Parnell",
+            "description": "The key movements and figures driving Irish political and agrarian nationalism in the 1800s",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/Irish_National_Land_League"
+            ],
+            "theme": "History of Ireland — Identity & Independence",
+            "group_item_id": "426db9",
+            "group_set_id": "da5bc2"
+          },
+          {
+            "words": [
+              "YEATS",
+              "JOYCE",
+              "BECKETT",
+              "WILDE"
+            ],
+            "category": "Irish Literary Giants",
+            "color": "orange",
+            "url": "https://en.wikipedia.org/wiki/Irish_literature",
+            "description": "Four of Ireland's most celebrated writers, all with global literary reputations",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/W._B._Yeats"
+            ],
+            "theme": "History of Ireland — Identity & Independence",
+            "group_item_id": "98db1a",
+            "group_set_id": "da5bc2"
+          },
+          {
+            "words": [
+              "CELTIC TIGER",
+              "MARRIAGE EQUALITY",
+              "ROBINSON",
+              "REPEAL"
+            ],
+            "category": "Modern Ireland (1990s–2018)",
+            "color": "teal",
+            "url": "https://en.wikipedia.org/wiki/Celtic_Tiger",
+            "description": "Landmark social and economic moments that shaped Ireland's modern identity",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/Mary_Robinson"
+            ],
+            "theme": "History of Ireland — Identity & Independence",
+            "group_item_id": "f5cf03",
+            "group_set_id": "da5bc2"
+          },
+          {
+            "words": [
+              "HURLING",
+              "BODHRAN",
+              "GAELTACHT",
+              "UILLEANN PIPES"
+            ],
+            "category": "Gaelic Culture & Language",
+            "color": "indigo",
+            "url": "https://en.wikipedia.org/wiki/Culture_of_Ireland",
+            "description": "Traditional Irish sports, music, and language heritage that define Gaelic identity",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/Gaelic_games"
+            ],
+            "theme": "History of Ireland — Identity & Independence",
+            "group_item_id": "389e97",
+            "group_set_id": "da5bc2"
+          }
+        ]
+      ],
+      "game_set_id": "c4c0f4"
+    },
+    {
+      "theme": "Transformer Inference — Core Concepts & Phases",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "PREFILL",
+              "GENERATION",
+              "TTFT",
+              "SAMPLING"
+            ],
+            "category": "Phases & Goals of Inference",
+            "color": "blue",
+            "url": "https://jax-ml.github.io/scaling-book/inference/",
+            "description": "The two core phases of transformer inference (prefill and generation), plus the key latency metric (TTFT) and the fundamental operation (sampling).",
+            "skill_level": "Beginner",
+            "additional_sources": [],
+            "theme": "Transformer Inference — Core Concepts & Phases",
+            "group_item_id": "803c16",
+            "group_set_id": "4ddbed"
+          },
+          {
+            "words": [
+              "KV CACHE",
+              "FLASH ATTENTION",
+              "PAGED ATTENTION",
+              "PREFIX CACHING"
+            ],
+            "category": "Memory Efficiency Techniques",
+            "color": "green",
+            "url": "https://jax-ml.github.io/scaling-book/inference/",
+            "description": "Techniques that reduce or manage memory during inference: the KV cache avoids recomputation, Flash Attention avoids materialising the attention matrix, Paged Attention uses OS-style page tables, and prefix caching reuses KV caches for shared prompt prefixes.",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://arxiv.org/pdf/2309.06180"
+            ],
+            "theme": "Transformer Inference — Core Concepts & Phases",
+            "group_item_id": "9f0156",
+            "group_set_id": "4ddbed"
+          },
+          {
+            "words": [
+              "GMQA",
+              "LOCAL ATTENTION",
+              "QUANTIZATION",
+              "KV SHARING"
+            ],
+            "category": "KV Cache Size Reduction Strategies",
+            "color": "orange",
+            "url": "https://jax-ml.github.io/scaling-book/inference/",
+            "description": "Architectural and runtime strategies to shrink the KV cache: Grouped Multi-Query Attention reduces KV heads, local attention caps context per layer, quantization lowers bytes per element, and KV sharing reuses caches across layers.",
+            "skill_level": "Advanced",
+            "additional_sources": [],
+            "theme": "Transformer Inference — Core Concepts & Phases",
+            "group_item_id": "921322",
+            "group_set_id": "4ddbed"
+          },
+          {
+            "words": [
+              "DISAGGREGATED",
+              "INTERLEAVED",
+              "CONTINUOUS BATCHING",
+              "EDGE"
+            ],
+            "category": "Inference Serving Architectures",
+            "color": "purple",
+            "url": "https://jax-ml.github.io/scaling-book/inference/",
+            "description": "Four distinct inference serving approaches: disaggregated (separate prefill/generate servers), interleaved (prefill at BS=1 then batch generation), continuous batching (dynamic slot scheduling), and edge (single-user low-latency, e.g. llama.cpp).",
+            "skill_level": "Advanced",
+            "additional_sources": [],
+            "theme": "Transformer Inference — Core Concepts & Phases",
+            "group_item_id": "59c76a",
+            "group_set_id": "4ddbed"
+          }
+        ],
+        [
+          {
+            "words": [
+              "LATENCY",
+              "THROUGHPUT",
+              "BATCH SIZE",
+              "ARITHMETIC INTENSITY"
+            ],
+            "category": "Performance Dimensions",
+            "color": "red",
+            "url": "https://jax-ml.github.io/scaling-book/inference/",
+            "description": "The four key performance dimensions in inference: latency (how fast a single response arrives), throughput (tokens per second), batch size (concurrent requests), and arithmetic intensity (FLOPs per byte, determining compute- vs memory-bound regime).",
+            "skill_level": "Beginner",
+            "additional_sources": [],
+            "theme": "Transformer Inference — Core Concepts & Phases",
+            "group_item_id": "b9d727",
+            "group_set_id": "a2c7f7"
+          },
+          {
+            "words": [
+              "COMPUTE-BOUND",
+              "MEMORY-BOUND",
+              "B_CRIT",
+              "ROOFLINE"
+            ],
+            "category": "Hardware Utilisation Concepts",
+            "color": "teal",
+            "url": "https://jax-ml.github.io/scaling-book/inference/",
+            "description": "Concepts from the roofline model: whether a workload is limited by FLOPs (compute-bound) or memory bandwidth (memory-bound), the critical batch size B_crit above which matmuls become compute-bound, and the roofline model itself.",
+            "skill_level": "Intermediate",
+            "additional_sources": [],
+            "theme": "Transformer Inference — Core Concepts & Phases",
+            "group_item_id": "40c2c3",
+            "group_set_id": "a2c7f7"
+          },
+          {
+            "words": [
+              "ALLREDUCE",
+              "ALLGATHER",
+              "ALLTAOLL",
+              "REDUCESCATTER"
+            ],
+            "category": "Collective Communication Operations",
+            "color": "yellow",
+            "url": "https://jax-ml.github.io/scaling-book/inference/",
+            "description": "The four collective communication primitives used in distributed inference: AllReduce (sum across replicas), AllGather (collect shards), AllToAll (transpose sharding), and ReduceScatter (reduce then scatter).",
+            "skill_level": "Expert",
+            "additional_sources": [],
+            "theme": "Transformer Inference — Core Concepts & Phases",
+            "group_item_id": "a704f2",
+            "group_set_id": "a2c7f7"
+          },
+          {
+            "words": [
+              "SPECULATIVE SAMPLING",
+              "DRAFT MODEL",
+              "ACCEPTANCE RATE",
+              "METROPOLIS-HASTINGS"
+            ],
+            "category": "Latency Optimisation via Speculation",
+            "color": "indigo",
+            "url": "https://jax-ml.github.io/scaling-book/inference/",
+            "description": "Concepts underlying speculative decoding: a small draft model proposes K tokens, the large model verifies them in one forward pass, tokens are accepted based on probability ratios (Metropolis-Hastings for non-greedy), and acceptance rate determines efficiency.",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://arxiv.org/abs/2211.17192",
+              "https://arxiv.org/abs/2302.01318"
+            ],
+            "theme": "Transformer Inference — Core Concepts & Phases",
+            "group_item_id": "288f44",
+            "group_set_id": "a2c7f7"
+          }
+        ]
+      ],
+      "game_set_id": "fbfb98"
+    },
+    {
+      "theme": "Transformer Inference — Distributed Systems & Hardware",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "HBM",
+              "MXU",
+              "ICI",
+              "TPU V5E"
+            ],
+            "category": "TPU Hardware Components",
+            "color": "blue",
+            "url": "https://jax-ml.github.io/scaling-book/inference/",
+            "description": "Key hardware components of a TPU accelerator: High Bandwidth Memory (HBM) stores parameters and KV caches, the Matrix Multiply Unit (MXU) performs compute, Inter-Chip Interconnect (ICI) links chips, and TPU v5e is the example accelerator throughout the chapter.",
+            "skill_level": "Intermediate",
+            "additional_sources": [],
+            "theme": "Transformer Inference — Distributed Systems & Hardware",
+            "group_item_id": "204f8f",
+            "group_set_id": "4621ab"
+          },
+          {
+            "words": [
+              "FSDP",
+              "DATA PARALLEL",
+              "MODEL PARALLEL",
+              "SEQUENCE PARALLEL"
+            ],
+            "category": "Parallelism Strategies",
+            "color": "green",
+            "url": "https://jax-ml.github.io/scaling-book/inference/",
+            "description": "Parallelism strategies and their applicability to inference: FSDP and data parallelism are unsuitable for generation (move weights not activations), model parallelism (Megatron) is the primary generation strategy, sequence parallelism works for prefill.",
+            "skill_level": "Advanced",
+            "additional_sources": [],
+            "theme": "Transformer Inference — Distributed Systems & Hardware",
+            "group_item_id": "fedcfd",
+            "group_set_id": "4621ab"
+          },
+          {
+            "words": [
+              "MEGATRON",
+              "2D WEIGHT STATIONARY",
+              "HEAD SHARDING",
+              "BATCH SHARDING"
+            ],
+            "category": "Model Sharding Techniques",
+            "color": "red",
+            "url": "https://jax-ml.github.io/scaling-book/inference/",
+            "description": "Specific sharding schemes: Megatron (1D model parallelism over hidden dim), 2D Weight Stationary (shards both D and F axes for scale beyond 72 chips), head sharding (KV sharded over attention heads), and batch sharding (KV sharded over batch when heads exhausted).",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://arxiv.org/pdf/2211.05102"
+            ],
+            "theme": "Transformer Inference — Distributed Systems & Hardware",
+            "group_item_id": "4fc985",
+            "group_set_id": "4621ab"
+          },
+          {
+            "words": [
+              "JETSTREAM",
+              "PREFILL ENGINE",
+              "GENERATE ENGINE",
+              "TRANSFER THREAD"
+            ],
+            "category": "JetStream Inference Engine Components",
+            "color": "teal",
+            "url": "https://jax-ml.github.io/scaling-book/inference/",
+            "description": "Components of Google's open-source JetStream inference engine: prefill engines process prompts, generate engines run autoregressive decoding, and the transfer thread moves KV caches between slices.",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://github.com/google/JetStream"
+            ],
+            "theme": "Transformer Inference — Distributed Systems & Hardware",
+            "group_item_id": "a1dedc",
+            "group_set_id": "4621ab"
+          }
+        ],
+        [
+          {
+            "words": [
+              "W_HBM",
+              "W_ICI",
+              "BETA",
+              "ALPHA_HBM"
+            ],
+            "category": "Hardware Bandwidth Ratios",
+            "color": "orange",
+            "url": "https://jax-ml.github.io/scaling-book/inference/",
+            "description": "Key hardware constants in inference roofline math: W_HBM (HBM bandwidth), W_ICI (ICI bandwidth), β (bits per param / bits per activation), and α_HBM (hardware arithmetic intensity = FLOPs/s / bandwidth). These determine B_crit and ICI sharding limits.",
+            "skill_level": "Expert",
+            "additional_sources": [],
+            "theme": "Transformer Inference — Distributed Systems & Hardware",
+            "group_item_id": "0d3617",
+            "group_set_id": "5e9fdc"
+          },
+          {
+            "words": [
+              "CONTINUOUS BATCHING",
+              "AFFINITY ROUTING",
+              "LRU EVICTION",
+              "TRIE"
+            ],
+            "category": "Inference Engine Scheduling Mechanisms",
+            "color": "purple",
+            "url": "https://jax-ml.github.io/scaling-book/inference/",
+            "description": "Mechanisms for efficient request scheduling: continuous batching fills generate slots dynamically, affinity routing sends follow-up requests to the same replica for prefix cache hits, the KV trie organises cached prefixes, and LRU eviction manages cache capacity.",
+            "skill_level": "Advanced",
+            "additional_sources": [],
+            "theme": "Transformer Inference — Distributed Systems & Hardware",
+            "group_item_id": "cddea6",
+            "group_set_id": "5e9fdc"
+          },
+          {
+            "words": [
+              "LLAMA-2 13B",
+              "LLAMA-3 8B",
+              "PALM",
+              "CHINCHILLA"
+            ],
+            "category": "Models Used as Examples",
+            "color": "yellow",
+            "url": "https://jax-ml.github.io/scaling-book/inference/",
+            "description": "Real models used as concrete examples in the chapter: LLaMA-2 13B (KV cache analysis), LLaMA-3 8B (GQA optimisation: 32Q/8KV), PaLM (latency-throughput Pareto frontier), and Chinchilla 70B (speculative sampling acceptance rates).",
+            "skill_level": "Beginner",
+            "additional_sources": [],
+            "theme": "Transformer Inference — Distributed Systems & Hardware",
+            "group_item_id": "dabbdb",
+            "group_set_id": "5e9fdc"
+          },
+          {
+            "words": [
+              "INT8",
+              "FP8",
+              "BF16",
+              "INT4"
+            ],
+            "category": "Numeric Precision Formats",
+            "color": "indigo",
+            "url": "https://jax-ml.github.io/scaling-book/inference/",
+            "description": "Numeric formats used in LLM inference: int8 and fp8 reduce parameter and KV cache memory (halving B_crit for weights), bf16 is the standard activation format, and int4 enables aggressive quantization for memory-limited deployments.",
+            "skill_level": "Intermediate",
+            "additional_sources": [],
+            "theme": "Transformer Inference — Distributed Systems & Hardware",
+            "group_item_id": "7111f8",
+            "group_set_id": "5e9fdc"
+          }
+        ]
+      ],
+      "game_set_id": "a11883"
+    }
+  ]
+}

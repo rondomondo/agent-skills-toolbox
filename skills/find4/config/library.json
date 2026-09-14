@@ -1,0 +1,342 @@
+{
+  "metadata": {
+    "generated_at": "2026-09-14T01:54:12",
+    "library_version": "2026-09-14T01:54:12",
+    "trigger": "manual",
+    "source": "library/themes.json",
+    "game_set_count": 2,
+    "missing_count": 0,
+    "source_hashes": {
+      "ee24aa": "c9dc98d57d64b50360baff8bc9703a16890b6f7851d5c9707d6752649e6d9f16",
+      "c4c0f4": "2b73afca519d86d32caf9fdce5556b91b74b94478ce2e82210c4736f899b16fe"
+    },
+    "content_hash": "3819a937382a524dd3cd7a584f55dbb094fe9dbaa28a9815bc410db40e667680",
+    "metadata_fingerprint": "b451c766d1d8dccc"
+  },
+  "game_sets": [
+    {
+      "theme": "History of Ireland — Conquest & Conflict",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "BORU",
+              "CLONTARF",
+              "SITRIC",
+              "LONGSHIP"
+            ],
+            "category": "Viking Age Ireland",
+            "color": "blue",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_Clontarf",
+            "description": "Connected to the Viking presence in Ireland and the decisive Battle of Clontarf in 1014",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/Brian_Boru"
+            ],
+            "theme": "History of Ireland — Conquest & Conflict",
+            "group_item_id": "2a34d2",
+            "group_set_id": "794a18"
+          },
+          {
+            "words": [
+              "PEARSE",
+              "CONNOLLY",
+              "GPO",
+              "PROCLAMATION"
+            ],
+            "category": "Easter Rising 1916",
+            "color": "green",
+            "url": "https://en.wikipedia.org/wiki/Easter_Rising",
+            "description": "Key figures and locations of the 1916 Easter Rising against British rule",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/Proclamation_of_the_Irish_Republic"
+            ],
+            "theme": "History of Ireland — Conquest & Conflict",
+            "group_item_id": "c0aad1",
+            "group_set_id": "794a18"
+          },
+          {
+            "words": [
+              "DROGHEDA",
+              "KILKENNY",
+              "WEXFORD",
+              "CONFEDERATION"
+            ],
+            "category": "Cromwellian Ireland",
+            "color": "red",
+            "url": "https://en.wikipedia.org/wiki/Cromwellian_conquest_of_Ireland",
+            "description": "Places and events connected to Cromwell's brutal campaign in Ireland in the 1640s–50s",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/Confederation_of_Kilkenny"
+            ],
+            "theme": "History of Ireland — Conquest & Conflict",
+            "group_item_id": "3704db",
+            "group_set_id": "794a18"
+          },
+          {
+            "words": [
+              "BLIGHT",
+              "SKIBBEREEN",
+              "WORKHOUSE",
+              "COFFIN SHIP"
+            ],
+            "category": "The Great Famine",
+            "color": "yellow",
+            "url": "https://en.wikipedia.org/wiki/Great_Famine_(Ireland)",
+            "description": "Terms and places most closely associated with the catastrophic Irish famine of 1845–1852",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/Skibbereen"
+            ],
+            "theme": "History of Ireland — Conquest & Conflict",
+            "group_item_id": "01701b",
+            "group_set_id": "794a18"
+          }
+        ],
+        [
+          {
+            "words": [
+              "STRONGBOW",
+              "DIARMAIT",
+              "PALE",
+              "KILKENNY"
+            ],
+            "category": "Norman Invasion of Ireland",
+            "color": "orange",
+            "url": "https://en.wikipedia.org/wiki/Norman_invasion_of_Ireland",
+            "description": "Key figures and concepts from the 12th-century Norman arrival and settlement in Ireland",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/Strongbow_(medieval)"
+            ],
+            "theme": "History of Ireland — Conquest & Conflict",
+            "group_item_id": "239fee",
+            "group_set_id": "055980"
+          },
+          {
+            "words": [
+              "WOLFE TONE",
+              "VINEGAR HILL",
+              "UNITED IRISHMEN",
+              "EMMET"
+            ],
+            "category": "1798 Rebellion",
+            "color": "purple",
+            "url": "https://en.wikipedia.org/wiki/Irish_Rebellion_of_1798",
+            "description": "Leaders and places of the United Irishmen rebellion inspired by the French Revolution",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/Theobald_Wolfe_Tone"
+            ],
+            "theme": "History of Ireland — Conquest & Conflict",
+            "group_item_id": "1cf63c",
+            "group_set_id": "055980"
+          },
+          {
+            "words": [
+              "GLENDALOUGH",
+              "KELLS",
+              "ROUND TOWER",
+              "SKELLIG"
+            ],
+            "category": "Early Christian Monasticism",
+            "color": "teal",
+            "url": "https://en.wikipedia.org/wiki/Skellig_Michael",
+            "description": "Famous monastic sites and architectural symbols of Ireland's early Christian golden age",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/Glendalough"
+            ],
+            "theme": "History of Ireland — Conquest & Conflict",
+            "group_item_id": "45c93c",
+            "group_set_id": "055980"
+          },
+          {
+            "words": [
+              "PARTITION",
+              "STORMONT",
+              "B-SPECIALS",
+              "INTERNMENT"
+            ],
+            "category": "The Troubles — Northern Ireland",
+            "color": "indigo",
+            "url": "https://en.wikipedia.org/wiki/The_Troubles",
+            "description": "Political and security terms central to the conflict in Northern Ireland from partition to the 1990s",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/Partition_of_Ireland"
+            ],
+            "theme": "History of Ireland — Conquest & Conflict",
+            "group_item_id": "d393ef",
+            "group_set_id": "055980"
+          }
+        ]
+      ],
+      "game_set_id": "ee24aa"
+    },
+    {
+      "theme": "History of Ireland — Identity & Independence",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "O'NEIL",
+              "O'DONNELL",
+              "FLIGHT",
+              "EARLS"
+            ],
+            "category": "Flight of the Earls 1607",
+            "color": "red",
+            "url": "https://en.wikipedia.org/wiki/Flight_of_the_Earls",
+            "description": "The pivotal 1607 departure of Ulster Gaelic lords that opened the door to the Ulster Plantation",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/Ulster_Plantation"
+            ],
+            "theme": "History of Ireland — Identity & Independence",
+            "group_item_id": "b7ec6c",
+            "group_set_id": "a70f34"
+          },
+          {
+            "words": [
+              "BOYNE",
+              "WILLIAM",
+              "JAMES",
+              "PENAL LAWS"
+            ],
+            "category": "Williamite War & Aftermath",
+            "color": "yellow",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_the_Boyne",
+            "description": "Figures and consequences of the Williamite War in Ireland, ending in Protestant Ascendancy",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/Penal_Laws_(Ireland)"
+            ],
+            "theme": "History of Ireland — Identity & Independence",
+            "group_item_id": "eb5e52",
+            "group_set_id": "a70f34"
+          },
+          {
+            "words": [
+              "COLLINS",
+              "BLACK AND TANS",
+              "TRUCE",
+              "SOLOHEADBEG"
+            ],
+            "category": "War of Independence 1919–1921",
+            "color": "green",
+            "url": "https://en.wikipedia.org/wiki/Irish_War_of_Independence",
+            "description": "Key persons and events in Ireland's guerrilla campaign that led to the Anglo-Irish Treaty",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/Michael_Collins_(Irish_leader)"
+            ],
+            "theme": "History of Ireland — Identity & Independence",
+            "group_item_id": "1b322e",
+            "group_set_id": "a70f34"
+          },
+          {
+            "words": [
+              "NEWGRANGE",
+              "TARA",
+              "DRUIDS",
+              "OGHAM"
+            ],
+            "category": "Ancient & Celtic Ireland",
+            "color": "blue",
+            "url": "https://en.wikipedia.org/wiki/Newgrange",
+            "description": "Monuments, culture, and writing of pre-Christian Celtic Ireland",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/Hill_of_Tara"
+            ],
+            "theme": "History of Ireland — Identity & Independence",
+            "group_item_id": "251cab",
+            "group_set_id": "a70f34"
+          }
+        ],
+        [
+          {
+            "words": [
+              "PARNELL",
+              "LAND LEAGUE",
+              "FENIANS",
+              "EMANCIPATION"
+            ],
+            "category": "19th-Century Irish Nationalism",
+            "color": "purple",
+            "url": "https://en.wikipedia.org/wiki/Charles_Stewart_Parnell",
+            "description": "The key movements and figures driving Irish political and agrarian nationalism in the 1800s",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/Irish_National_Land_League"
+            ],
+            "theme": "History of Ireland — Identity & Independence",
+            "group_item_id": "426db9",
+            "group_set_id": "da5bc2"
+          },
+          {
+            "words": [
+              "YEATS",
+              "JOYCE",
+              "BECKETT",
+              "WILDE"
+            ],
+            "category": "Irish Literary Giants",
+            "color": "orange",
+            "url": "https://en.wikipedia.org/wiki/Irish_literature",
+            "description": "Four of Ireland's most celebrated writers, all with global literary reputations",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/W._B._Yeats"
+            ],
+            "theme": "History of Ireland — Identity & Independence",
+            "group_item_id": "98db1a",
+            "group_set_id": "da5bc2"
+          },
+          {
+            "words": [
+              "CELTIC TIGER",
+              "MARRIAGE EQUALITY",
+              "ROBINSON",
+              "REPEAL"
+            ],
+            "category": "Modern Ireland (1990s–2018)",
+            "color": "teal",
+            "url": "https://en.wikipedia.org/wiki/Celtic_Tiger",
+            "description": "Landmark social and economic moments that shaped Ireland's modern identity",
+            "skill_level": "Intermediate",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/Mary_Robinson"
+            ],
+            "theme": "History of Ireland — Identity & Independence",
+            "group_item_id": "f5cf03",
+            "group_set_id": "da5bc2"
+          },
+          {
+            "words": [
+              "HURLING",
+              "BODHRAN",
+              "GAELTACHT",
+              "UILLEANN PIPES"
+            ],
+            "category": "Gaelic Culture & Language",
+            "color": "indigo",
+            "url": "https://en.wikipedia.org/wiki/Culture_of_Ireland",
+            "description": "Traditional Irish sports, music, and language heritage that define Gaelic identity",
+            "skill_level": "Beginner",
+            "additional_sources": [
+              "https://en.wikipedia.org/wiki/Gaelic_games"
+            ],
+            "theme": "History of Ireland — Identity & Independence",
+            "group_item_id": "389e97",
+            "group_set_id": "da5bc2"
+          }
+        ]
+      ],
+      "game_set_id": "c4c0f4"
+    }
+  ]
+}

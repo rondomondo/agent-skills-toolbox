@@ -1,0 +1,191 @@
+{
+  "metadata": {
+    "generated_at": "2026-09-14T10:00:00Z",
+    "source": "https://jax-ml.github.io/scaling-book/inference/",
+    "suggested_name": "scaling-book-inference.json",
+    "modified_at": "2026-09-14T02:16:23.725045",
+    "source_id": "https://jax-ml.github.io/scaling-book/inference/",
+    "step": "finalize_metadata",
+    "id_registry": {
+      "game_set_ids": [
+        "a11883"
+      ],
+      "group_set_ids": [
+        "4621ab",
+        "5e9fdc"
+      ],
+      "group_item_ids": [
+        "204f8f",
+        "fedcfd",
+        "4fc985",
+        "a1dedc",
+        "0d3617",
+        "cddea6",
+        "dabbdb",
+        "7111f8"
+      ]
+    },
+    "id": "dINEU1s5h2JrbxDh",
+    "split_info": {
+      "role": "split",
+      "split_at": "2026-09-14T02:16:36.313817+00:00",
+      "parent_id": "dINEU1s5h2JrbxDh",
+      "parent_stem": "scaling-book-inference",
+      "parent_file": "output/games/scaling-book-inference/scaling-book-inference.json",
+      "theme": "Transformer Inference — Distributed Systems & Hardware",
+      "slug": "transformer-inference-distributed-systems-and-hardware"
+    }
+  },
+  "game_sets": [
+    {
+      "theme": "Transformer Inference — Distributed Systems & Hardware",
+      "group_sets": [
+        [
+          {
+            "words": [
+              "HBM",
+              "MXU",
+              "ICI",
+              "TPU V5E"
+            ],
+            "category": "TPU Hardware Components",
+            "color": "blue",
+            "url": "https://jax-ml.github.io/scaling-book/inference/",
+            "description": "Key hardware components of a TPU accelerator: High Bandwidth Memory (HBM) stores parameters and KV caches, the Matrix Multiply Unit (MXU) performs compute, Inter-Chip Interconnect (ICI) links chips, and TPU v5e is the example accelerator throughout the chapter.",
+            "skill_level": "Intermediate",
+            "additional_sources": [],
+            "theme": "Transformer Inference — Distributed Systems & Hardware",
+            "group_item_id": "204f8f",
+            "group_set_id": "4621ab"
+          },
+          {
+            "words": [
+              "FSDP",
+              "DATA PARALLEL",
+              "MODEL PARALLEL",
+              "SEQUENCE PARALLEL"
+            ],
+            "category": "Parallelism Strategies",
+            "color": "green",
+            "url": "https://jax-ml.github.io/scaling-book/inference/",
+            "description": "Parallelism strategies and their applicability to inference: FSDP and data parallelism are unsuitable for generation (move weights not activations), model parallelism (Megatron) is the primary generation strategy, sequence parallelism works for prefill.",
+            "skill_level": "Advanced",
+            "additional_sources": [],
+            "theme": "Transformer Inference — Distributed Systems & Hardware",
+            "group_item_id": "fedcfd",
+            "group_set_id": "4621ab"
+          },
+          {
+            "words": [
+              "MEGATRON",
+              "2D WEIGHT STATIONARY",
+              "HEAD SHARDING",
+              "BATCH SHARDING"
+            ],
+            "category": "Model Sharding Techniques",
+            "color": "red",
+            "url": "https://jax-ml.github.io/scaling-book/inference/",
+            "description": "Specific sharding schemes: Megatron (1D model parallelism over hidden dim), 2D Weight Stationary (shards both D and F axes for scale beyond 72 chips), head sharding (KV sharded over attention heads), and batch sharding (KV sharded over batch when heads exhausted).",
+            "skill_level": "Expert",
+            "additional_sources": [
+              "https://arxiv.org/pdf/2211.05102"
+            ],
+            "theme": "Transformer Inference — Distributed Systems & Hardware",
+            "group_item_id": "4fc985",
+            "group_set_id": "4621ab"
+          },
+          {
+            "words": [
+              "JETSTREAM",
+              "PREFILL ENGINE",
+              "GENERATE ENGINE",
+              "TRANSFER THREAD"
+            ],
+            "category": "JetStream Inference Engine Components",
+            "color": "teal",
+            "url": "https://jax-ml.github.io/scaling-book/inference/",
+            "description": "Components of Google's open-source JetStream inference engine: prefill engines process prompts, generate engines run autoregressive decoding, and the transfer thread moves KV caches between slices.",
+            "skill_level": "Advanced",
+            "additional_sources": [
+              "https://github.com/google/JetStream"
+            ],
+            "theme": "Transformer Inference — Distributed Systems & Hardware",
+            "group_item_id": "a1dedc",
+            "group_set_id": "4621ab"
+          }
+        ],
+        [
+          {
+            "words": [
+              "W_HBM",
+              "W_ICI",
+              "BETA",
+              "ALPHA_HBM"
+            ],
+            "category": "Hardware Bandwidth Ratios",
+            "color": "orange",
+            "url": "https://jax-ml.github.io/scaling-book/inference/",
+            "description": "Key hardware constants in inference roofline math: W_HBM (HBM bandwidth), W_ICI (ICI bandwidth), β (bits per param / bits per activation), and α_HBM (hardware arithmetic intensity = FLOPs/s / bandwidth). These determine B_crit and ICI sharding limits.",
+            "skill_level": "Expert",
+            "additional_sources": [],
+            "theme": "Transformer Inference — Distributed Systems & Hardware",
+            "group_item_id": "0d3617",
+            "group_set_id": "5e9fdc"
+          },
+          {
+            "words": [
+              "CONTINUOUS BATCHING",
+              "AFFINITY ROUTING",
+              "LRU EVICTION",
+              "TRIE"
+            ],
+            "category": "Inference Engine Scheduling Mechanisms",
+            "color": "purple",
+            "url": "https://jax-ml.github.io/scaling-book/inference/",
+            "description": "Mechanisms for efficient request scheduling: continuous batching fills generate slots dynamically, affinity routing sends follow-up requests to the same replica for prefix cache hits, the KV trie organises cached prefixes, and LRU eviction manages cache capacity.",
+            "skill_level": "Advanced",
+            "additional_sources": [],
+            "theme": "Transformer Inference — Distributed Systems & Hardware",
+            "group_item_id": "cddea6",
+            "group_set_id": "5e9fdc"
+          },
+          {
+            "words": [
+              "LLAMA-2 13B",
+              "LLAMA-3 8B",
+              "PALM",
+              "CHINCHILLA"
+            ],
+            "category": "Models Used as Examples",
+            "color": "yellow",
+            "url": "https://jax-ml.github.io/scaling-book/inference/",
+            "description": "Real models used as concrete examples in the chapter: LLaMA-2 13B (KV cache analysis), LLaMA-3 8B (GQA optimisation: 32Q/8KV), PaLM (latency-throughput Pareto frontier), and Chinchilla 70B (speculative sampling acceptance rates).",
+            "skill_level": "Beginner",
+            "additional_sources": [],
+            "theme": "Transformer Inference — Distributed Systems & Hardware",
+            "group_item_id": "dabbdb",
+            "group_set_id": "5e9fdc"
+          },
+          {
+            "words": [
+              "INT8",
+              "FP8",
+              "BF16",
+              "INT4"
+            ],
+            "category": "Numeric Precision Formats",
+            "color": "indigo",
+            "url": "https://jax-ml.github.io/scaling-book/inference/",
+            "description": "Numeric formats used in LLM inference: int8 and fp8 reduce parameter and KV cache memory (halving B_crit for weights), bf16 is the standard activation format, and int4 enables aggressive quantization for memory-limited deployments.",
+            "skill_level": "Intermediate",
+            "additional_sources": [],
+            "theme": "Transformer Inference — Distributed Systems & Hardware",
+            "group_item_id": "7111f8",
+            "group_set_id": "5e9fdc"
+          }
+        ]
+      ],
+      "game_set_id": "a11883"
+    }
+  ]
+}

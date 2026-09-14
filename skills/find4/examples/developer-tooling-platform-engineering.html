@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Find4 — Developer Tooling &amp; Platform Engineering</title>
+<style>
+.f4-wrap{padding:1rem 0;display:flex;flex-direction:column;gap:1.25rem;font-family:system-ui,sans-serif;max-width:720px;margin:0 auto}
+.f4-game{background:#fff;border:0.5px solid #ddd;border-radius:12px;padding:1rem 1.25rem;margin-bottom:24px}
+.f4-game-header{display:flex;align-items:center;gap:10px;margin-bottom:1rem;flex-wrap:wrap}
+.f4-game-icon{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:18px}
+.f4-game-title-block{flex:1;min-width:0}
+.f4-game-title{font-size:15px;font-weight:500;margin:0}
+.f4-game-meta{font-size:12px;color:#666;margin:0}
+.play-btn{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;background:#f5f5f5;border:0.5px solid #ddd;border-radius:12px;text-decoration:none;color:#333;font-size:13px;margin-left:auto}
+.play-btn:hover{background:#eee}
+.f4-groups{display:flex;flex-direction:column;gap:5px}
+.f4-round{font-size:11px;font-weight:500;color:#888;padding:8px 0 3px;text-transform:uppercase;letter-spacing:.05em}
+.f4-group{display:grid;grid-template-columns:13px 1fr 90px 2fr;align-items:start;gap:8px;padding:8px 10px;border-radius:8px;border:0.5px solid #e0e0de;background:#fafaf9}
+.f4-dot{width:11px;height:11px;border-radius:50%;flex-shrink:0;margin-top:3px}
+.f4-cat{font-size:13px;font-weight:500;line-height:1.3}
+.f4-skill{font-size:11px;padding:2px 7px;border-radius:20px;text-align:center;white-space:nowrap}
+.f4-words{font-size:11px;color:#666;line-height:1.5;word-break:break-word}
+.sk-b{background:#e1f5ee;color:#085041}
+.sk-i{background:#e6f1fb;color:#0c447c}
+.sk-a{background:#faeeda;color:#633806}
+.sk-e{background:#fcebeb;color:#791f1f}
+.dot-red{background:#e24b4a}.dot-green{background:#639922}.dot-blue{background:#378add}
+.dot-yellow{background:#ba7517}.dot-purple{background:#7f77dd}.dot-teal{background:#1d9e75}
+.dot-orange{background:#d85a30}.dot-indigo{background:#534ab7}
+</style>
+</head>
+<body>
+<div class="f4-wrap">
+<div class="f4-game">
+  <div class="f4-game-header">
+    <div class="f4-game-icon" style="background:#eeedfe">🛠️</div>
+    <div class="f4-game-title-block">
+      <p class="f4-game-title">Developer Tooling &amp; Platform Engineering</p>
+      <p class="f4-game-meta">2 rounds · 32 words</p>
+    </div>
+    <a class="play-btn" href="https://find4.org/#game=rVhtb9rKEv4rK450P2EwhJCXbw6YFBUwB2jvSa-qaLEHs43t9dldk3Cq_Pc7swbiQntb9SJFsb0vszPzPPOyfK2lYHjEDa_dfq3FkIHiBqJHbmq3tbbb7jrupdNqLVrurUt_n2r1mpaFCgHntYlERgNFHIOmbRlPaSIS2iixLHDI0VucSbWjFTS-aEnrUxmJlfjeKe3bi5vbjtvott3uzfXhrEcRVY8zkOPnSmQ8Ef_A48GCek1EjwpiOn1r7VGyyB81GBSga7f_qS0voX0T4sIOtK87Eb7w7s0V7-JLtxN1OmHtc70WoxHVTWH3st0i6eFF6_rGtUusYIGG7Re53avuhYuLlu7Nyh7RDcNrt40vKxdWl3RW2G2trpa0ptW54NwudtsdWgxtt3VJarQub1ormoqWoduiqatOy73q0Ei3fdEhp3TbnW6XplqtiLt0KLSuViG9uNF1d4VWvJIv0Emeyb04_PTlotNJ8uLiz9rrm32k99eaWYPFrA8bSGQOii2kTEQWs3-xacLNSqqU-VksMgCFw7X6m1tJAop4lqp0wsD3Fjg_GP6F_3vvgpmPz7uZ770fTu7JbyGSK5YETq0nsw1kRkhEkfVkmgrDFtscNDlKJlLhmlgBEOKFSvBrbUyub5vN5-fnRljZHdrNuiFV3ISsuWk13IbbJIeBDpXIaRVunxtVhKZQELFcwUq8gGZoHHtWwpC5KQ_XaKSTc6WBLxOos3WR8sxRgPTCb1YexFLQmsdWUf0kkuQxIdfhCXdIvQwjiGgVRaLU7rGksPXP3oJYmHWxRCPSZtUQJ1zzLEYU4mZ5FMJgUNh-mwZUx4gQNUqAa2ignKWUTw0hT-aa5O7fxnbHbNx64GM1lnB8Fzev9Qr8_aD33p-xOT2IB3fDSZ-Ngw8T-vgYjD6MiQ_BR3828h7YYH7EiL4Mn1DFuZEK3YsqTsCg7KdSsT0nlkkBJ5SIZKgbkd1vvQrWpqYuRZ1yYQzkaqHTkgJ6zcl8RlmELfFUpB1bS20YzyKEPTMcxSldZ7h4P_82fEKEYWZApRAJNO6nZPiB7khRUJCFYLmAeiR2tMiaf2xkUqRQIcaxiL3du2ekxAZUU-K_hG9X2tkNnIkih0z1CxTx-u9xoXfvTxbzqdcjPox7U_y_CIIR-zD3jzjhDZmHVcmwgcKsRWyo5oe8UHlyyoZYyjix0UFRhsHBoyeHfHRKhDexFupcSSNRekmLZSESLDlxnbDOIDT2ndZFkCdyS15CBTkpeEoCL9pwhC_6KQHs8TkPUeNScYJwSVmglExTFbCxekJC5IMXs9eXjMRcoWSEKY4sOw-yh9LzC8h-6g8HgwtcO_PvvLlvC4A_mz0402HvvR0ejILjIrD3EbvHvBrk1Hyg9lWIkcCYEk8hFsbRYWpdZZGlAXTKSsR_YB7B8MDgJFmViYZ5MU4KKgb6TkRotNla-nzLCdLFYILIxN_FrkZg_PGYXIfnIeNe2FpQbAkoaaNQ4sY6ka2UTFmKs_wJ_g9OVO2jFG8LW7uJqjl36BGqVLEzgyXXJXL_0y-YSpBN54r2fRfyA058rlc7gvtg1PcnbDoLxlOqAvOH-cIfv30P_H8783fBwtLFG06cYOAs3gUf7t8tjqgyRcfmpqocWxxAqhDGAE--2zLkVgDuiwsRQYOL77YIdKDYoR4qvrKtAdZUsesIRLx2_i6w8TRbVkos1yZI04LKlg3Pc5QELOdrJXMR7qpCiafNSc4zpjYnTHgRQbPUwoE3x9hMvxHwXCEGNgUqO7jA9kpnIsShGz0ixK6h_iZJTL2ZTQ0z_97_yz6no7IKTIL-LJgeYT4vUslGMhYh-7MAtd2lCKmqgCsbTt_ivYYkb2jcndDmt2jAxk6F690DcUSZzh65_ajcn9G0neB3WPKmFYpn5TZ22GbpgNebJGKYoRW3CdmmCfzINHnUZqYTivgvKML8lBznsa1Cjd8SaA104AVbaa0pZ5-t4dzfaX6BTsHUn8xHAeWVUcAevPGImouRP1tMg9Gw90AM8xbDwB_7i9mwd8QuJFNG--Yhas3xDoKZOTdVaoksErE8YRcalulEWk-dsKMPGJdUxzZgNWK6FC-XX7CDKNkR4fUjI68QKzaYTLDxpE9NYRsCs4zY7UA5-nepUrln7IzdPyvwy1xbsRXgE6nPhObhYvoLaI792dgb9qklxOvizBvjAH14i-koWIyGd_hh3x6OLw6Cx9jHoVYfhabcrG2AsTuOHXEWVRHdQpLI5xNEsStIuYgaX8pbpG2lTqEl68uCn4il4mpfJ7BNj8qKRJGCxttrJotKtcod9mqxqaqny14hxHrx-zfJ_RmNFI_Hl3R3A6jgi52qSbZ2NN-aNbZEZ8J291vDD7H9_O1vKTiz-wHl9fPrfwE=" target="_blank">▶ Play on find4.org</a>
+  </div>
+  <div class="f4-groups">
+    <div class="f4-round">Round 1</div>
+    <div class="f4-group"><div class="f4-dot dot-green"></div><div class="f4-cat">Conventional Commit Types</div><span class="f4-skill sk-b">Beginner</span><div class="f4-words">FEAT · FIX · CHORE · BREAKING</div></div>
+    <div class="f4-group"><div class="f4-dot dot-blue"></div><div class="f4-cat">Docker Storage &amp; Networking</div><span class="f4-skill sk-i">Intermediate</span><div class="f4-words">DOCKER SOCKET · BIND MOUNT · VOLUME · OVERLAY FS</div></div>
+    <div class="f4-group"><div class="f4-dot dot-purple"></div><div class="f4-cat">AI Agent Frameworks</div><span class="f4-skill sk-a">Advanced</span><div class="f4-words">ADK · AGENTSPACE · MCP · TOOL USE</div></div>
+    <div class="f4-group"><div class="f4-dot dot-orange"></div><div class="f4-cat">Advanced Git Operations</div><span class="f4-skill sk-a">Advanced</span><div class="f4-words">ZDIFF3 · REBASE · CHERRY-PICK · REFLOG</div></div>
+    <div class="f4-round">Round 2</div>
+    <div class="f4-group"><div class="f4-dot dot-teal"></div><div class="f4-cat">Prompt Engineering Techniques</div><span class="f4-skill sk-i">Intermediate</span><div class="f4-words">GOLDEN PROMPT · SYSTEM PROMPT · FEW-SHOT · CHAIN-OF-THOUGHT</div></div>
+    <div class="f4-group"><div class="f4-dot dot-red"></div><div class="f4-cat">Sumo Logic Query Operators</div><span class="f4-skill sk-e">Expert</span><div class="f4-words">PARSE · REGEX · REPLACE · NODROP</div></div>
+    <div class="f4-group"><div class="f4-dot dot-indigo"></div><div class="f4-cat">OpenSLO Schema Concepts</div><span class="f4-skill sk-e">Expert</span><div class="f4-words">OPENSLO · SLO YAML · ALERTPOLICY · RATIOEMETRIC</div></div>
+    <div class="f4-group"><div class="f4-dot dot-yellow"></div><div class="f4-cat">Diagram &amp; Viz Backends</div><span class="f4-skill sk-b">Beginner</span><div class="f4-words">MERMAID · MINGRAMMER · MATPLOTLIB · PLOTLY</div></div>
+  </div>
+</div>
+</div>
+</body>
+</html>

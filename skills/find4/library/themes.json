@@ -1,0 +1,313 @@
+[
+  {
+    "game_set_id": "12ac31",
+    "theme": "Generative AI System Design — Core Architecture",
+    "short_path": "games/generative-ai-system-design/generative-ai-system-design-core-architecture.json",
+    "short_link": "ff-81963c0c",
+    "games_file": "generative-ai-system-design/generative-ai-system-design-core-architecture.json",
+    "config_file": "library/generative-ai-system-design/generative-ai-system-design-core-architecture.json",
+    "last_modified": "2026-09-14T17:00:04.848597",
+    "content_hash": "df9a5e6b68638ff9c7570c4c56eddc02c8d1a1fc35a06fe361e5751766286ad6",
+    "total_words": 32,
+    "categories": [
+      "GenAI Failure Modes",
+      "LLM Cost Reduction Strategies",
+      "LLM Observability Tools",
+      "LLM Pipeline Components",
+      "LLM Sampling Parameters",
+      "Latency & Scalability Patterns",
+      "RAG Retrieval Techniques",
+      "Vector Database Options"
+    ],
+    "skill_levels": [
+      "Advanced",
+      "Beginner",
+      "Expert",
+      "Intermediate"
+    ],
+    "colors": [
+      "blue",
+      "green",
+      "indigo",
+      "orange",
+      "purple",
+      "red",
+      "teal",
+      "yellow"
+    ],
+    "group_sets_count": 2,
+    "total_groups": 8,
+    "versions_found": 1,
+    "is_latest": true,
+    "game_card": "/games/generative-ai-system-design/html/generative-ai-system-design.card.html",
+    "game_screenshot_rounds": [
+      ".round1",
+      ".round2"
+    ],
+    "game_screenshot": "/games/generative-ai-system-design/screenshots/generative-ai-system-design-core-architecture.html.png",
+    "metadata": {
+      "generated_at": "2026-09-14T12:00:00Z",
+      "source": "https://www.systemdesignhandbook.com/guides/generative-ai-system-design-interview/",
+      "suggested_name": "generative-ai-system-design.json"
+    }
+  },
+  {
+    "game_set_id": "908e82",
+    "theme": "Generative AI System Design — Safety & Interview Strategy",
+    "short_path": "games/generative-ai-system-design/generative-ai-system-design-safety-and-interview-strategy.json",
+    "short_link": "ff-72374f55",
+    "games_file": "generative-ai-system-design/generative-ai-system-design-safety-and-interview-strategy.json",
+    "config_file": "library/generative-ai-system-design/generative-ai-system-design-safety-and-interview-strategy.json",
+    "last_modified": "2026-09-14T17:00:04.895494",
+    "content_hash": "5c44bb51726541f622c71fb67ce17dd4993d037958b599898ac3fc7d6ae8445c",
+    "total_words": 32,
+    "categories": [
+      "AI Governance Mechanisms",
+      "GenAI Performance Metrics",
+      "Hallucination Mitigation Techniques",
+      "Interview Framework Steps",
+      "LLM Interaction Patterns",
+      "Model Routing Options",
+      "Non-Functional Requirements to Clarify",
+      "Security Controls for GenAI"
+    ],
+    "skill_levels": [
+      "Advanced",
+      "Beginner",
+      "Expert",
+      "Intermediate"
+    ],
+    "colors": [
+      "blue",
+      "green",
+      "indigo",
+      "orange",
+      "purple",
+      "red",
+      "teal",
+      "yellow"
+    ],
+    "group_sets_count": 2,
+    "total_groups": 8,
+    "versions_found": 1,
+    "is_latest": true,
+    "game_card": "/games/generative-ai-system-design/html/generative-ai-system-design.card.html",
+    "game_screenshot_rounds": [
+      ".round1",
+      ".round2"
+    ],
+    "game_screenshot": "/games/generative-ai-system-design/screenshots/generative-ai-system-design-safety-and-interview-strategy.html.png",
+    "metadata": {
+      "generated_at": "2026-09-14T12:00:00Z",
+      "source": "https://www.systemdesignhandbook.com/guides/generative-ai-system-design-interview/",
+      "suggested_name": "generative-ai-system-design.json"
+    }
+  },
+  {
+    "game_set_id": "ee24aa",
+    "theme": "History of Ireland — Conquest & Conflict",
+    "short_path": "games/history-of-ireland/history-of-ireland-conquest-and-conflict.json",
+    "short_link": "ff-0803e86c",
+    "games_file": "history-of-ireland/history-of-ireland-conquest-and-conflict.json",
+    "config_file": "library/history-of-ireland/history-of-ireland-conquest-and-conflict.json",
+    "last_modified": "2026-09-14T17:00:04.695777",
+    "content_hash": "c9dc98d57d64b50360baff8bc9703a16890b6f7851d5c9707d6752649e6d9f16",
+    "total_words": 32,
+    "categories": [
+      "1798 Rebellion",
+      "Cromwellian Ireland",
+      "Early Christian Monasticism",
+      "Easter Rising 1916",
+      "Norman Invasion of Ireland",
+      "The Great Famine",
+      "The Troubles — Northern Ireland",
+      "Viking Age Ireland"
+    ],
+    "skill_levels": [
+      "Advanced",
+      "Beginner",
+      "Intermediate"
+    ],
+    "colors": [
+      "blue",
+      "green",
+      "indigo",
+      "orange",
+      "purple",
+      "red",
+      "teal",
+      "yellow"
+    ],
+    "group_sets_count": 2,
+    "total_groups": 8,
+    "versions_found": 1,
+    "is_latest": true,
+    "game_card": "/games/history-of-ireland/html/history-of-ireland.card.html",
+    "game_screenshot_rounds": [
+      ".round1",
+      ".round2"
+    ],
+    "game_screenshot": "/games/history-of-ireland/screenshots/history-of-ireland-conquest-and-conflict.html.png",
+    "metadata": {
+      "generated_at": "2026-09-13T10:00:00Z",
+      "source": "stdin",
+      "suggested_name": "history-of-ireland.json"
+    }
+  },
+  {
+    "game_set_id": "c4c0f4",
+    "theme": "History of Ireland — Identity & Independence",
+    "short_path": "games/history-of-ireland/history-of-ireland-identity-and-independence.json",
+    "short_link": "ff-7291f074",
+    "games_file": "history-of-ireland/history-of-ireland-identity-and-independence.json",
+    "config_file": "library/history-of-ireland/history-of-ireland-identity-and-independence.json",
+    "last_modified": "2026-09-14T17:00:04.696190",
+    "content_hash": "2b73afca519d86d32caf9fdce5556b91b74b94478ce2e82210c4736f899b16fe",
+    "total_words": 32,
+    "categories": [
+      "19th-Century Irish Nationalism",
+      "Ancient & Celtic Ireland",
+      "Flight of the Earls 1607",
+      "Gaelic Culture & Language",
+      "Irish Literary Giants",
+      "Modern Ireland (1990s–2018)",
+      "War of Independence 1919–1921",
+      "Williamite War & Aftermath"
+    ],
+    "skill_levels": [
+      "Advanced",
+      "Beginner",
+      "Expert",
+      "Intermediate"
+    ],
+    "colors": [
+      "blue",
+      "green",
+      "indigo",
+      "orange",
+      "purple",
+      "red",
+      "teal",
+      "yellow"
+    ],
+    "group_sets_count": 2,
+    "total_groups": 8,
+    "versions_found": 1,
+    "is_latest": true,
+    "game_card": "/games/history-of-ireland/html/history-of-ireland.card.html",
+    "game_screenshot_rounds": [
+      ".round1",
+      ".round2"
+    ],
+    "game_screenshot": "/games/history-of-ireland/screenshots/history-of-ireland-identity-and-independence.html.png",
+    "metadata": {
+      "generated_at": "2026-09-13T10:00:00Z",
+      "source": "stdin",
+      "suggested_name": "history-of-ireland.json"
+    }
+  },
+  {
+    "game_set_id": "fbfb98",
+    "theme": "Transformer Inference — Core Concepts & Phases",
+    "short_path": "games/scaling-book-inference/transformer-inference-core-concepts-and-phases.json",
+    "short_link": "ff-d78318a3",
+    "games_file": "scaling-book-inference/transformer-inference-core-concepts-and-phases.json",
+    "config_file": "library/scaling-book-inference/transformer-inference-core-concepts-and-phases.json",
+    "last_modified": "2026-09-14T17:00:04.698695",
+    "content_hash": "1a9f0c3f58cf7b26777382fa2cc4067db6368b94e4e9ef8ec3b00d8c6dd4d5da",
+    "total_words": 32,
+    "categories": [
+      "Collective Communication Operations",
+      "Hardware Utilisation Concepts",
+      "Inference Serving Architectures",
+      "KV Cache Size Reduction Strategies",
+      "Latency Optimisation via Speculation",
+      "Memory Efficiency Techniques",
+      "Performance Dimensions",
+      "Phases & Goals of Inference"
+    ],
+    "skill_levels": [
+      "Advanced",
+      "Beginner",
+      "Expert",
+      "Intermediate"
+    ],
+    "colors": [
+      "blue",
+      "green",
+      "indigo",
+      "orange",
+      "purple",
+      "red",
+      "teal",
+      "yellow"
+    ],
+    "group_sets_count": 2,
+    "total_groups": 8,
+    "versions_found": 1,
+    "is_latest": true,
+    "game_card": "/games/scaling-book-inference/html/scaling-book-inference.card.html",
+    "game_screenshot_rounds": [
+      ".round1",
+      ".round2"
+    ],
+    "game_screenshot": "/games/scaling-book-inference/screenshots/transformer-inference-core-concepts-and-phases.html.png",
+    "metadata": {
+      "generated_at": "2026-09-14T10:00:00Z",
+      "source": "https://jax-ml.github.io/scaling-book/inference/",
+      "suggested_name": "scaling-book-inference.json"
+    }
+  },
+  {
+    "game_set_id": "a11883",
+    "theme": "Transformer Inference — Distributed Systems & Hardware",
+    "short_path": "games/scaling-book-inference/transformer-inference-distributed-systems-and-hardware.json",
+    "short_link": "ff-773ed4f2",
+    "games_file": "scaling-book-inference/transformer-inference-distributed-systems-and-hardware.json",
+    "config_file": "library/scaling-book-inference/transformer-inference-distributed-systems-and-hardware.json",
+    "last_modified": "2026-09-14T17:00:04.698695",
+    "content_hash": "25662c3e5ea02428270a8e3ab0e2d62eb4f9e4dda306828d3be27e923d244689",
+    "total_words": 32,
+    "categories": [
+      "Hardware Bandwidth Ratios",
+      "Inference Engine Scheduling Mechanisms",
+      "JetStream Inference Engine Components",
+      "Model Sharding Techniques",
+      "Models Used as Examples",
+      "Numeric Precision Formats",
+      "Parallelism Strategies",
+      "TPU Hardware Components"
+    ],
+    "skill_levels": [
+      "Advanced",
+      "Beginner",
+      "Expert",
+      "Intermediate"
+    ],
+    "colors": [
+      "blue",
+      "green",
+      "indigo",
+      "orange",
+      "purple",
+      "red",
+      "teal",
+      "yellow"
+    ],
+    "group_sets_count": 2,
+    "total_groups": 8,
+    "versions_found": 1,
+    "is_latest": true,
+    "game_card": "/games/scaling-book-inference/html/scaling-book-inference.card.html",
+    "game_screenshot_rounds": [
+      ".round1",
+      ".round2"
+    ],
+    "game_screenshot": "/games/scaling-book-inference/screenshots/transformer-inference-distributed-systems-and-hardware.html.png",
+    "metadata": {
+      "generated_at": "2026-09-14T10:00:00Z",
+      "source": "https://jax-ml.github.io/scaling-book/inference/",
+      "suggested_name": "scaling-book-inference.json"
+    }
+  }
+]

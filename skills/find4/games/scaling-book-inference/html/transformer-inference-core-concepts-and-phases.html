@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find4 &mdash; Transformer Inference — Core Concepts &amp; Phases</title>
+
+    <meta name="description" content="A Beginner-level Find4 word-grouping game on &#x27;Transformer Inference — Core Concepts &amp; Phases&#x27;. 2 rounds, 32 words. Find the hidden connections between groups of 4.">
+    <meta name="keywords" content="Transformer Inference — Core Concepts &amp; Phases, Phases &amp; Goals of Inference, Memory Efficiency Techniques, KV Cache Size Reduction Strategies, Inference Serving Architectures, Performance Dimensions, Hardware Utilisation Concepts, Collective Communication Operations, Latency Optimisation via Speculation">
+    <meta name="author" content="Find4">
+    <meta name="theme-color" content="#0f6e56">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://find4.org/#game=zZhtb9s4Ese_CuEXBxfn5zwbuBeKozi-c-zUdopr74KAliibG0nUklQSb9Hvfv-hZMVJk0Ovl10sUKSyNCSHMz_9Z6ivtURYHnLLa_2vtZVIheZWhLfc1vq1Xqd32OycNLv7i26n36F_X2qNmlG5DgSer63NTL_d_oU_NpO4tZJ2nS9bUrVNwGOZrppLpe7aMo2EFmkg2jQ2X62EoRVSntAcu6bNyrT1i1EpzBMVyki-4k-n1-8e9nt7raPeQWf_oPLqVoY_6ZgVGUZGMoXFb-K2CkujJsNbLVbSWL1xQYLjt0ZYLGVq_X_VomW0PDmu3TRqK63ybPfRfhguRYgpeC84io6ebKQVydbouLMXdA9hdBJ1ugfuotfd6_VwcXASHB2SC8uT8Kh3hIv9TtAL9mjGo85-RDa94-Nof792840cxQ7C0cS_7pqDde_vevl4tqa9ZbGET2mkyH-tYhd4ulk9fD2-e4etve7ecffory75sM44ImZv31qpfIxgJm_m9sksks4Tldsst22Kq2m_Pqb93zGxa-FgWmiemkjpRGg22hqxf-e9TnefDZQW-IM7mTXsL-xqzY0wFIE4X2GwfRr8tEIzwCj8KUY1eRo2s2LcNwR8iwLl8ev_6UUFD02G2R6ULvi4mvnno_EYJkN_4s-8xWg6wY_F4nyB_-be5dV4NBkSWwFe3ZUiSmvFtJh_qHhsmIqePMGgQMVKw2oZ5_Qz1_HPvTShMIGWmZXIAva9Fsw-KEYhY0WUaOGduLJqNKtnWiD_MUNIWak7mOZDg2Vxbhhiye7EhsXYUhpsGF5HLQNWp11_cGPIIsrTEClILY-ZysopWN3wJCOPP7Qou3dY5TYW94I2eYoXOcVi9AaFoSR7Ht8W2kHRvmm8SxrL9xuzVG_3rjjgfikN3xo7mf7HJzbwBhc-rM_H3vyCeYuFPynzfeUN_bPndwiMf7oh3wNwKRJcMD-KZCBdCBciWKfy19y5uSVgpYVI3xGBag3kh1umRZgjaEqzhKd8JZBH51aYa0z3hEPfpRP7D3iAC36vII4YHagE0uDS2mDnMTdr5lkQ4fJcWiXYtJbwz9CUNA-vTPBMy8cGu8La4c7QnNiczpvGbmKwSp5ZvoyFaTi2HJuPzhmaUwtnv3XPMFDBzBoiRqZw0ZYjhPmeuFEK9xIRSrj5FnVV4Ll-lPctpVftLIzavb3OSatz2D3u1N6dy6rY_ACXw8uPHizH04E3fkbgx2sPl1-2koQAzS-82fcwEtgusXOUVjYjKFwa5pa6jZV8hqTC_lbvKEueRhatCGyueSE3OgcFiWCmWp5ZhYSCybtnIPbZkKKDNF_msZXNj7kAvE8YFXg7MtaCh6AnVgEtUlkEPDMQRDDwCEiQsZhvhG6wX3MOg98KwYrVg9CGLTcWc5GRiAWpWgEjJifWdkAsKeSBVsYUM74CnhfecwQk_MOkrmpbfgCps9HcGw5n_tBb-GcYMpos_NnY9z65X4MpsJpcT6_n7NRbFPLWqPlnQ_8FWE_OzoW-pxDtZPsZVVmus_gdqTpHHFmIplCmgd2pa6b0g2dQBpenPpnxFZR2Ra01ypNA_4NLVpbA9rbtdoORSxRBSaoRC35PA6pSadnp_G9dQjRlS26D9fPKSZzJNFeon-4p-VEPN-i0UTpNrCwzcCjMXW0s4BIhpK9OyhmLJuDSBGOzrLoNJlqrFotjnvBWkGUf_gSQVS3xG5DdNHZ7pzHwmgw-U7t0MZteDy-urqlpclCx-egLlVoI1uLi0l-MBowonMxHi88vuymhyXHaKTuDcqQG-9ylS7sIvGMfFRFe1ABlO0uH1dLgY7d4bruk-lo9sIgbyzgrcgrJMBkGoChqLe8FsWXXCN1qjcLK6lbdYUonOgbVNg3xvCDLkFTXqfPNNXXrmInqujUlOVAku0ZbBrQIVvhl4cD5eHpVTEdq1mChoOonU0KxKOaiye5N2QcgFDnpMTQ4EX-Gbq06Z72gqzy_PZOwwfQSNPnN0-n1hETr0r-czj5XP09vBwALF7Pp9Bwd-kvpuuA6fEALwa6tRO9SVIKtjztoWcHj92OrCkKEvsXVOq1UhKFozVQo4j57WAvc1iAIO72LFQ-ZRJGRiSTxWm5YkeL6NpsuhR9ci1f0dkvQ8SBDu2b13Sw78ASDL0AGNXKHstNbusv4Ut0LrC9xH41bkuPgsqQWULBnizWq_v-570xaI-Lo51qwd0epOqn_AEreeDzzz64HTo7GYxTFC39WXC-8qTv7Fc_nA2q_Zi9QGqg4RsXD6w3PkiRPEWCH03R7JtoFaiNiaPzvIFfBkxvBMzcyTfSQ-lDjHZJ4UeXUcplb97MSMi-OZ8WRoW7yZNvhaIHjXMBJeWAw5I7Permca47C8tlC4Q9UjTKYKaiee_hU7orJ5wE1aJiiPJ64emqKm6-okP-IMNo_DJzqy84PgDO_8gfXKHKjTz6rvgQ0amcz73zBLqdnPqHjDQb-1cKbDHw2Qz10UrWYTa-m49G8eeHN0WoN5y-QGpcVZYosJ1t1upeczTMR5LH7vcOUTEO5Ur-DTOF1Rx-0ofJhtiuDrxCyQGntU6FLOHIeah7ZUgfQeVHy0Zezor4V0hNzvdpKBdos-rDoPjQkBKRKiWINRcaZjhsaUpRGkmgekDckf5z4dUirJV9CuFH03CsGRbwUlhaGmDcvODWGq-KkmKq0SefscLMtnW46V9Jd27ctknBHVOf1_5XDV86QfGnavV632-oedU-IqDdM9jq9Vqe71z1-_2Nm-XXyTZhvbhq7H1TpC2zxOfXbzbf_AA==">
+    <meta property="og:title" content="Transformer Inference — Core Concepts &amp; Phases">
+    <meta property="og:description" content="Test your knowledge on Transformer Inference — Core Concepts &amp; Phases. 2 rounds, 32 words.">
+    <meta property="og:image" content="https://find4.org/preview-image.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Transformer Inference — Core Concepts &amp; Phases">
+    <meta name="twitter:description" content="Beginner-level challenge covering Transformer Inference — Core Concepts &amp; Phases.">
+    <meta name="twitter:image" content="https://find4.org/preview-image.png">
+
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "EducationalOccupationalCredential",
+  "name": "Transformer Inference \u2014 Core Concepts & Phases",
+  "educationalLevel": "Beginner",
+  "abstract": "Covers concepts including: Phases & Goals of Inference, Memory Efficiency Techniques, KV Cache Size Reduction Strategies, Inference Serving Architectures."
+}
+    </script>
+
+    <style>
+        body{font-family:system-ui,-apple-system,sans-serif;max-width:720px;margin:2rem auto;padding:0 1rem;background:#f5f5f3;color:#111;}
+        .f4-game{background:#fff;border:0.5px solid rgba(0,0,0,0.15);border-radius:12px;padding:1rem 1.25rem;margin-bottom:48px;box-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1);}
+        .f4-game-header{display:flex;align-items:center;gap:10px;margin-bottom:1rem;flex-wrap:wrap;}
+        .f4-game-icon{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:20px;}
+        .f4-game-title-block{flex:1;min-width:0;}
+        .f4-game-title{font-size:15px;font-weight:500;margin:0;color:#111;}
+        .f4-game-meta{font-size:12px;color:#666;margin:0;}
+        .play-btn{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;background:#0f6e56;color:#fff;border-radius:10px;text-decoration:none;font-size:13px;font-weight:500;margin-left:auto;transition:background 0.2s;}
+        .play-btn:hover{background:#085041;}
+        .f4-groups{display:flex;flex-direction:column;gap:5px;}
+        .f4-round{font-size:11px;font-weight:500;color:#888;padding:8px 0 3px;text-transform:uppercase;letter-spacing:0.05em;}
+        .f4-group{display:grid;grid-template-columns:13px 1fr 90px 2fr;align-items:start;gap:8px;padding:8px 10px;border-radius:8px;border:0.5px solid #e0e0de;background:#fafaf9;}
+        .f4-dot{width:11px;height:11px;border-radius:50%;flex-shrink:0;margin-top:3px;}
+        .f4-cat{font-size:13px;font-weight:500;line-height:1.3;}
+        .f4-skill{font-size:11px;padding:2px 7px;border-radius:20px;text-align:center;white-space:nowrap;}
+        .f4-words{font-size:11px;color:#666;line-height:1.5;word-break:break-word;}
+        .sk-b{background:#e1f5ee;color:#085041;}.sk-i{background:#e6f1fb;color:#0c447c;}.sk-a{background:#faeeda;color:#633806;}.sk-e{background:#fcebeb;color:#791f1f;}
+        .dot-red{background:#e24b4a;}.dot-green{background:#639922;}.dot-blue{background:#378add;}.dot-yellow{background:#ba7517;}
+        .dot-purple{background:#7f77dd;}.dot-teal{background:#1d9e75;}.dot-orange{background:#d85a30;}.dot-indigo{background:#534ab7;}
+        @media(prefers-color-scheme:dark){
+          body{background:#1a1a18;color:#e8e6e1;}
+          .f4-game{background:#2c2c2a;border-color:rgba(255,255,255,0.1);box-shadow:0 4px 6px -1px rgb(0 0 0 / 0.4);}
+          .f4-game-title{color:#e8e6e1;}
+          .f4-game-meta{color:#888780;}
+          .f4-round{color:#888780;}
+          .f4-group{background:#222220;border-color:#3a3a38;}
+          .f4-cat{color:#e8e6e1;}
+          .f4-words{color:#888780;}
+          .sk-b{background:#04342c;color:#9fe1cb;}.sk-i{background:#042c53;color:#b5d4f4;}.sk-a{background:#412402;color:#fac775;}.sk-e{background:#501313;color:#f7c1c1;}
+        }
+    </style>
+</head>
+<body>
+<div class="f4-game f4-capture">
+  <div class="f4-game-header">
+    <div class="f4-game-icon" style="background:#eeedfe;" aria-hidden="true">&#x1F9E9;</div>
+    <div class="f4-game-title-block">
+      <h1 class="f4-game-title">Transformer Inference — Core Concepts &amp; Phases</h1>
+      <p class="f4-game-meta">2 rounds &middot; 32 words &middot; Beginner level</p>
+    </div>
+    <a class="play-btn" href="https://find4.org/#game=zZhtb9s4Ese_CuEXBxfn5zwbuBeKozi-c-zUdopr74KAliibG0nUklQSb9Hvfv-hZMVJk0Ovl10sUKSyNCSHMz_9Z6ivtURYHnLLa_2vtZVIheZWhLfc1vq1Xqd32OycNLv7i26n36F_X2qNmlG5DgSer63NTL_d_oU_NpO4tZJ2nS9bUrVNwGOZrppLpe7aMo2EFmkg2jQ2X62EoRVSntAcu6bNyrT1i1EpzBMVyki-4k-n1-8e9nt7raPeQWf_oPLqVoY_6ZgVGUZGMoXFb-K2CkujJsNbLVbSWL1xQYLjt0ZYLGVq_X_VomW0PDmu3TRqK63ybPfRfhguRYgpeC84io6ebKQVydbouLMXdA9hdBJ1ugfuotfd6_VwcXASHB2SC8uT8Kh3hIv9TtAL9mjGo85-RDa94-Nof792840cxQ7C0cS_7pqDde_vevl4tqa9ZbGET2mkyH-tYhd4ulk9fD2-e4etve7ecffory75sM44ImZv31qpfIxgJm_m9sksks4Tldsst22Kq2m_Pqb93zGxa-FgWmiemkjpRGg22hqxf-e9TnefDZQW-IM7mTXsL-xqzY0wFIE4X2GwfRr8tEIzwCj8KUY1eRo2s2LcNwR8iwLl8ev_6UUFD02G2R6ULvi4mvnno_EYJkN_4s-8xWg6wY_F4nyB_-be5dV4NBkSWwFe3ZUiSmvFtJh_qHhsmIqePMGgQMVKw2oZ5_Qz1_HPvTShMIGWmZXIAva9Fsw-KEYhY0WUaOGduLJqNKtnWiD_MUNIWak7mOZDg2Vxbhhiye7EhsXYUhpsGF5HLQNWp11_cGPIIsrTEClILY-ZysopWN3wJCOPP7Qou3dY5TYW94I2eYoXOcVi9AaFoSR7Ht8W2kHRvmm8SxrL9xuzVG_3rjjgfikN3xo7mf7HJzbwBhc-rM_H3vyCeYuFPynzfeUN_bPndwiMf7oh3wNwKRJcMD-KZCBdCBciWKfy19y5uSVgpYVI3xGBag3kh1umRZgjaEqzhKd8JZBH51aYa0z3hEPfpRP7D3iAC36vII4YHagE0uDS2mDnMTdr5lkQ4fJcWiXYtJbwz9CUNA-vTPBMy8cGu8La4c7QnNiczpvGbmKwSp5ZvoyFaTi2HJuPzhmaUwtnv3XPMFDBzBoiRqZw0ZYjhPmeuFEK9xIRSrj5FnVV4Ll-lPctpVftLIzavb3OSatz2D3u1N6dy6rY_ACXw8uPHizH04E3fkbgx2sPl1-2koQAzS-82fcwEtgusXOUVjYjKFwa5pa6jZV8hqTC_lbvKEueRhatCGyueSE3OgcFiWCmWp5ZhYSCybtnIPbZkKKDNF_msZXNj7kAvE8YFXg7MtaCh6AnVgEtUlkEPDMQRDDwCEiQsZhvhG6wX3MOg98KwYrVg9CGLTcWc5GRiAWpWgEjJifWdkAsKeSBVsYUM74CnhfecwQk_MOkrmpbfgCps9HcGw5n_tBb-GcYMpos_NnY9z65X4MpsJpcT6_n7NRbFPLWqPlnQ_8FWE_OzoW-pxDtZPsZVVmus_gdqTpHHFmIplCmgd2pa6b0g2dQBpenPpnxFZR2Ra01ypNA_4NLVpbA9rbtdoORSxRBSaoRC35PA6pSadnp_G9dQjRlS26D9fPKSZzJNFeon-4p-VEPN-i0UTpNrCwzcCjMXW0s4BIhpK9OyhmLJuDSBGOzrLoNJlqrFotjnvBWkGUf_gSQVS3xG5DdNHZ7pzHwmgw-U7t0MZteDy-urqlpclCx-egLlVoI1uLi0l-MBowonMxHi88vuymhyXHaKTuDcqQG-9ylS7sIvGMfFRFe1ABlO0uH1dLgY7d4bruk-lo9sIgbyzgrcgrJMBkGoChqLe8FsWXXCN1qjcLK6lbdYUonOgbVNg3xvCDLkFTXqfPNNXXrmInqujUlOVAku0ZbBrQIVvhl4cD5eHpVTEdq1mChoOonU0KxKOaiye5N2QcgFDnpMTQ4EX-Gbq06Z72gqzy_PZOwwfQSNPnN0-n1hETr0r-czj5XP09vBwALF7Pp9Bwd-kvpuuA6fEALwa6tRO9SVIKtjztoWcHj92OrCkKEvsXVOq1UhKFozVQo4j57WAvc1iAIO72LFQ-ZRJGRiSTxWm5YkeL6NpsuhR9ci1f0dkvQ8SBDu2b13Sw78ASDL0AGNXKHstNbusv4Ut0LrC9xH41bkuPgsqQWULBnizWq_v-570xaI-Lo51qwd0epOqn_AEreeDzzz64HTo7GYxTFC39WXC-8qTv7Fc_nA2q_Zi9QGqg4RsXD6w3PkiRPEWCH03R7JtoFaiNiaPzvIFfBkxvBMzcyTfSQ-lDjHZJ4UeXUcplb97MSMi-OZ8WRoW7yZNvhaIHjXMBJeWAw5I7Permca47C8tlC4Q9UjTKYKaiee_hU7orJ5wE1aJiiPJ64emqKm6-okP-IMNo_DJzqy84PgDO_8gfXKHKjTz6rvgQ0amcz73zBLqdnPqHjDQb-1cKbDHw2Qz10UrWYTa-m49G8eeHN0WoN5y-QGpcVZYosJ1t1upeczTMR5LH7vcOUTEO5Ur-DTOF1Rx-0ofJhtiuDrxCyQGntU6FLOHIeah7ZUgfQeVHy0Zezor4V0hNzvdpKBdos-rDoPjQkBKRKiWINRcaZjhsaUpRGkmgekDckf5z4dUirJV9CuFH03CsGRbwUlhaGmDcvODWGq-KkmKq0SefscLMtnW46V9Jd27ctknBHVOf1_5XDV86QfGnavV632-oedU-IqDdM9jq9Vqe71z1-_2Nm-XXyTZhvbhq7H1TpC2zxOfXbzbf_AA==" target="_blank" rel="noopener"><span>&#9654;</span> Play on find4.org</a>
+  </div>
+
+  <div class="f4-groups">
+    <h2 class="f4-round">Round 1</h2>
+    <div class="f4-group">
+        <div class="f4-dot dot-blue" role="img" aria-label="Beginner Level Category"></div>
+        <div class="f4-cat">Phases &amp; Goals of Inference</div>
+        <span class="f4-skill sk-b">Beginner</span>
+        <div class="f4-words">PREFILL &middot; GENERATION &middot; TTFT &middot; SAMPLING</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-green" role="img" aria-label="Intermediate Level Category"></div>
+        <div class="f4-cat">Memory Efficiency Techniques</div>
+        <span class="f4-skill sk-i">Intermediate</span>
+        <div class="f4-words">KV CACHE &middot; FLASH ATTENTION &middot; PAGED ATTENTION &middot; PREFIX CACHING</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-orange" role="img" aria-label="Advanced Level Category"></div>
+        <div class="f4-cat">KV Cache Size Reduction Strategies</div>
+        <span class="f4-skill sk-a">Advanced</span>
+        <div class="f4-words">GMQA &middot; LOCAL ATTENTION &middot; QUANTIZATION &middot; KV SHARING</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-purple" role="img" aria-label="Advanced Level Category"></div>
+        <div class="f4-cat">Inference Serving Architectures</div>
+        <span class="f4-skill sk-a">Advanced</span>
+        <div class="f4-words">DISAGGREGATED &middot; INTERLEAVED &middot; CONTINUOUS BATCHING &middot; EDGE</div>
+    </div>
+    <h2 class="f4-round">Round 2</h2>
+    <div class="f4-group">
+        <div class="f4-dot dot-red" role="img" aria-label="Beginner Level Category"></div>
+        <div class="f4-cat">Performance Dimensions</div>
+        <span class="f4-skill sk-b">Beginner</span>
+        <div class="f4-words">LATENCY &middot; THROUGHPUT &middot; BATCH SIZE &middot; ARITHMETIC INTENSITY</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-teal" role="img" aria-label="Intermediate Level Category"></div>
+        <div class="f4-cat">Hardware Utilisation Concepts</div>
+        <span class="f4-skill sk-i">Intermediate</span>
+        <div class="f4-words">COMPUTE-BOUND &middot; MEMORY-BOUND &middot; B_CRIT &middot; ROOFLINE</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-yellow" role="img" aria-label="Expert Level Category"></div>
+        <div class="f4-cat">Collective Communication Operations</div>
+        <span class="f4-skill sk-e">Expert</span>
+        <div class="f4-words">ALLREDUCE &middot; ALLGATHER &middot; ALLTAOLL &middot; REDUCESCATTER</div>
+    </div>
+    <div class="f4-group">
+        <div class="f4-dot dot-indigo" role="img" aria-label="Expert Level Category"></div>
+        <div class="f4-cat">Latency Optimisation via Speculation</div>
+        <span class="f4-skill sk-e">Expert</span>
+        <div class="f4-words">SPECULATIVE SAMPLING &middot; DRAFT MODEL &middot; ACCEPTANCE RATE &middot; METROPOLIS-HASTINGS</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
