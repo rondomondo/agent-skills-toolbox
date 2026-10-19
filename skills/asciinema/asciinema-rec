@@ -1,0 +1,108 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# ANSI color codes
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[0;33m'
+CYAN='\033[0;36m'
+BOLD='\033[1m'
+RESET='\033[0m'
+
+# Set DEBUG=true/1 to enable verbose logging of invocation args via the log() helper.
+USE_LOGGING="${DEBUG:-false}"
+case "${USE_LOGGING}" in
+  true|1)  USE_LOGGING=true  ;;
+  false|0) USE_LOGGING=false ;;
+  *) printf "ERROR: DEBUG must be true/false/1/0, got '%s'\n" "${USE_LOGGING}" >&2; exit 1 ;;
+esac
+SCRIPT_NAME=$(basename "$0")
+
+ok() { ${USE_LOGGING} && printf '%b[%s:%s]%b %b%s%b\n' "$BOLD" "$SCRIPT_NAME" "$HOSTNAME" "$RESET" "$GREEN" "$*" "$RESET" >&2; return 0; }
+warn() { ${USE_LOGGING} && printf '%b[%s:%s]%b %b%s%b\n' "$BOLD" "$SCRIPT_NAME" "$HOSTNAME" "$RESET" "$YELLOW" "$*" "$RESET" >&2; return 0; }
+fail() { ${USE_LOGGING} && printf '%b[%s:%s]%b %b%s%b\n' "$BOLD" "$SCRIPT_NAME" "$HOSTNAME" "$RESET" "$RED" "$*" "$RESET" >&2; return 0; }
+log()  { ${USE_LOGGING} && printf '%b[%s:%s]%b %b%s%b\n' "$BOLD" "$SCRIPT_NAME" "$HOSTNAME" "$RESET" "$CYAN" "$*" "$RESET" >&2; return 0; }
+
+log "invoked with args '$*'"
+
+if ! command -v uvx &>/dev/null; then
+  fail "uvx is required but not found in PATH (install uv: https://docs.astral.sh/uv/)"
+  exit 1
+fi
+
+usage() {
+  cat <<'EOF'
+asciinema-rec - a convenience wrapper around asciinema (via uvx).
+
+Records and replays terminal sessions as .cast files.
+
+Usage:
+  asciinema-rec                                Show this help
+  asciinema-rec -h | --help                    Show this help
+  asciinema-rec <output.cast>                  Record an interactive shell session
+  asciinema-rec <output.cast> <cmd> [args]     Record a command with arguments
+  asciinema-rec <output.cast> -- <cmd> [args]  Record a command (leading -- stripped)
+  asciinema-rec play <file.cast> [args]        Play back a recorded session
+
+Recording defaults (override via env vars):
+  ASCIINEMA_IDLE_TIME=2.5   Clamp idle gaps in seconds (set to "" to disable)
+  ASCIINEMA_YES=true        Answer yes to all prompts (set to "" to disable)
+  ASCIINEMA_OVERWRITE=true  Overwrite existing output file (set to "" to disable)
+
+Examples:
+  asciinema-rec session.cast                   # interactive shell
+  asciinema-rec session.cast bash -c 'ls -la'  # record a single command
+  asciinema-rec session.cast -- python3 demo.py # record a command (-- stripped)
+  asciinema-rec play session.cast              # replay a session
+  asciinema-rec play session.cast -s 2         # replay at 2x speed
+
+EOF
+}
+
+if [[ $# -eq 0 || "$1" == "-h" || "$1" == "--help" ]]; then
+  usage
+  exit 0
+fi
+
+# Play subcommand
+if [[ "$1" == "play" ]]; then
+  shift
+  if [[ $# -eq 0 ]]; then
+    fail "play requires a .cast file argument"
+    exit 1
+  fi
+  log "playing: $*"
+  uvx asciinema play "$@"
+  ok "playback finished: $1"
+  exit 0
+fi
+
+output="$1"
+shift
+
+# Strip leading -- separator if present
+if [[ $# -gt 0 && "$1" == "--" ]]; then
+  shift
+fi
+
+output_dir="$(dirname "$output")"
+mkdir -p "$output_dir" || { fail "could not create directory: $output_dir"; exit 1; }
+output_abs="$(cd "$output_dir" && pwd)/$(basename "$output")"
+
+rec_args=()
+[[ -n "${ASCIINEMA_IDLE_TIME:-}" ]]  && rec_args+=(-i "$ASCIINEMA_IDLE_TIME")
+[[ -n "${ASCIINEMA_YES:-}" ]]        && rec_args+=(-y)
+[[ -n "${ASCIINEMA_OVERWRITE:-}" ]]  && rec_args+=(--overwrite)
+
+if [[ $# -gt 0 ]]; then
+  log "recording command: $*"
+  log "output: $output_abs"
+  uvx asciinema rec --overwrite "${rec_args[@]}" -c "$*" "$output_abs"
+else
+  log "recording interactive session"
+  log "output: $output_abs"
+  USE_LOGGING=true warn "Type 'exit' or press Ctrl+\\ to stop recording."
+  uvx asciinema rec  --overwrite "${rec_args[@]}" "$output_abs"
+fi
+
+test -e "$output_abs" && ok "saved: $output_abs" || { fail "$output_abs not found after recording"; exit 1; }

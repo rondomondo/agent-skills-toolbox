@@ -1,0 +1,10 @@
+[project]
+name = "pdf-strip"
+version = "0.1.5"
+description = "Strip or check document-level metadata from a PDF"
+requires-python = ">=3.11"
+dependencies = ["pikepdf"]
+
+
+[dependency-groups]
+dev = []

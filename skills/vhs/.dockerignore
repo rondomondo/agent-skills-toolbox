@@ -1,0 +1,6 @@
+*
+!entrypoint.sh
+!install.sh
+!uninstall.sh
+!vhs-rec
+!vhs-demo.py
