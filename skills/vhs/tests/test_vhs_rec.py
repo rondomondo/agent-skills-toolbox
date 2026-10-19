@@ -17,6 +17,11 @@ SOCKET_PARENT = "/tmp"
 # The fake docker copies the tape it is asked to render and creates the requested output file, which is all the
 # wrapper checks, so no container is needed.
 FAKE_DOCKER = """#!/bin/bash
+printf '%s\\n' "$*" >> "$CAPTURE_ARGS"
+if [ -n "${FAKE_SETUP_FAIL:-}" ]; then
+  echo "pull access denied" > .vhs-rec-setup-failed.log
+  : > .vhs-rec-setup-failed
+fi
 prev=""
 for arg in "$@"; do
   case "$arg" in
@@ -70,12 +75,14 @@ def run_wrapper(tmp_path: Path, sock_home: Path):
     work.mkdir()
     capture = tmp_path / "captured.tape"
 
-    def run(*args: str) -> Result:
+    def run(*args: str, **extra_env: str) -> Result:
         env = {
             **os.environ,
             "PATH": f"{bin_dir}{os.pathsep}{os.environ['PATH']}",
             "HOME": str(sock_home),
             "CAPTURE_TAPE": str(capture),
+            "CAPTURE_ARGS": str(tmp_path / "docker-args.txt"),
+            **extra_env,
         }
         proc = subprocess.run(
             [BASH, str(WRAPPER), *args], check=False, cwd=work, env=env, capture_output=True, text=True
@@ -186,6 +193,20 @@ def test_demo_quotes_arguments_and_runs_follow_ups_after(run_wrapper) -> None:
     assert "export LOG_LEVEL=ERROR" in tape
     assert "docker run --rm ghcr.io/acme/tool install | sh" in tape
     assert tape.count("Wait+Line") == 2
+
+
+def test_container_gets_in_container_docker_socket_path(run_wrapper, tmp_path: Path) -> None:
+    run_wrapper("-x", "ls")
+    args = (tmp_path / "docker-args.txt").read_text(encoding="utf-8")
+    assert "--env DOCKER_SOCK=/var/run/docker.sock" in args
+
+
+def test_failed_install_exits_one_with_installer_output_and_no_gif(run_wrapper) -> None:
+    result = run_wrapper("--install", "screenshot", "-x", "url2pdf x", FAKE_SETUP_FAIL="1")
+    assert result.proc.returncode == 1
+    assert "pull access denied" in result.proc.stderr
+    assert not (result.cwd / "demo.gif").exists()
+    assert not (result.cwd / ".vhs-rec-setup-failed").exists()
 
 
 def test_snippet_command_reproduces_the_same_recording(run_wrapper) -> None:

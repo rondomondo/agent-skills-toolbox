@@ -183,7 +183,7 @@ printed command again reproduces the same recording.
 | `-- CMD ARGS...` | One command with its arguments, quoted for you. Use with `demo`. |
 | `-x, --exec CMD`, `--then CMD` | A command typed and run on screen. Repeatable, run in order, after any `-- CMD`. |
 | `-s, --setup CMD` | Command run off screen before recording starts. Repeatable. |
-| `--install TOOL`, `--with TOOL` | Off screen, install a docker-distributed tool: a toolbox name (`pdf-strip`, skipped if already on the PATH) or an image (`screenshot` or `ghcr.io/rondomondo/screenshot`). Repeatable. |
+| `--install TOOL`, `--with TOOL` | Off screen, install a docker-distributed tool: a toolbox name (`pdf-strip`, skipped if already on the PATH) or an image (`screenshot` or `ghcr.io/rondomondo/screenshot`). Repeatable. If an install fails, `vhs-rec` prints the installer output, deletes the GIF and exits 1. |
 | `--env KEY=VALUE` | Off screen, export a variable before recording. Repeatable. |
 | `-o, --output FILE` | Output file, inside the current directory. Default `demo.gif`. |
 | `--theme NAME` | VHS theme. Default `Catppuccin Mocha`. |

@@ -176,7 +176,7 @@ mermaid-render -- -i /data/examples/example1.md -o /data/examples/example1.rende
 
 ## How it works
 
-1. `mermaid-render` locates the Docker socket on your host (checking several common paths) and mounts `$PWD` at `/data` inside the container.
+1. `mermaid-render` mounts `$PWD` at `/data` inside the container.
 2. The container runs `mmdc` (from `minlag/mermaid-cli`) via the `ghcr.io/rondomondo/mermaid-render` entrypoint, which sets `HOST_PWD` so the working directory inside the container matches your host path.
 3. `mmdc` iterates over every ` ```mermaid ` block in the input file and renders each one to a numbered image file.
 4. For jpg, gif and webp, which mmdc cannot produce, the wrapper renders PNG at scale 3 (unless `--scale` is given), converts each image with ImageMagick and removes the PNG.

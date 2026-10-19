@@ -66,24 +66,6 @@ Options:
 EOF
 }
 
-find_docker_socket() {
-    local candidates=(
-        "/var/run/docker.sock"
-        "/run/docker.sock"
-        "${HOME}/.docker/run/docker.sock"
-        "/run/user/$(id -u)/docker.sock"
-    )
-    for sock in "${candidates[@]}"; do
-        if [[ -S "$sock" ]]; then
-            echo "$sock"
-            return 0
-        fi
-    done
-    return 1
-}
-
-DOCKER_SOCK=$(find_docker_socket) || { printf "${RED}Error:${RESET} Docker socket not found\n" >&2; exit 1; }
-
 # Extra docker flags shared by all container invocations:
 #   - mounts $PWD at /data (the mmdc working directory)
 #   - exposes HOST_PWD and DEBUG for the entrypoint
@@ -172,10 +154,10 @@ render_one() {
   # reprint the summary with the correct final extension after conversion.
   local mmdc_output rc
   if [[ -n "${CONVERT_FORMAT:-}" ]]; then
-    mmdc_output=$(run_mmdc_raw -i "$container_input" "${extra_args[@]}" 2>&1)
+    mmdc_output=$(run_mmdc_raw -i "$container_input" "${extra_args[@]+"${extra_args[@]}"}" 2>&1)
     rc=$?
   else
-    run_mmdc_raw -i "$container_input" "${extra_args[@]}"
+    run_mmdc_raw -i "$container_input" "${extra_args[@]+"${extra_args[@]}"}"
     rc=$?
   fi
 

@@ -25,7 +25,12 @@ log()  { ${USE_LOGGING} && printf '%b[%s:%s]%b %b%s%b\n' "$BOLD" "$SCRIPT_NAME" 
 
 log "invoked with args '$*'"
 
-readonly docker_sock="${DOCKER_SOCK:-}"
+docker_sock="${DOCKER_SOCK:-}"
+# DOCKER_SOCK may be unset (plain docker run) or a host path that does not exist in here (older vhs-rec); the
+# socket is always mounted at /var/run/docker.sock inside the container.
+if [ ! -S "$docker_sock" ]; then
+  docker_sock=/var/run/docker.sock
+fi
 
 log "invoked with args '$*'" 
 

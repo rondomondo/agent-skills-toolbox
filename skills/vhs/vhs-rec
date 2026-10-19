@@ -117,12 +117,13 @@ DOCKER_SOCK=$(find_docker_socket)
 # Extra docker flags shared by all container invocations:
 #   - mounts $PWD at the same path so absolute paths inside the container match the host
 #   - forwards the Docker socket so the container can itself run docker commands
-#   - exposes HOST_PWD and DOCKER_SOCK as env vars for entrypoint scripts inside the image
+#   - exposes HOST_PWD and DOCKER_SOCK as env vars for entrypoint scripts inside the image; DOCKER_SOCK is the
+#     path inside the container (the host path does not exist there, so the entrypoint could not fix its group)
 DOCKER_EXTRA_ARGS=(
   "--volume $PWD:$PWD"
   "--volume $DOCKER_SOCK:/var/run/docker.sock"
   "--env HOST_PWD=$PWD"
-  "--env DOCKER_SOCK=$DOCKER_SOCK"
+  "--env DOCKER_SOCK=/var/run/docker.sock"
   "--env SHELL=/bin/zsh"
 )
 
@@ -184,6 +185,9 @@ DEFAULT_WAIT=2
 DEFAULT_TIMEOUT=120
 SETUP_TIMEOUT="300s"
 TOOL_IMAGE_PREFIX="ghcr.io/rondomondo"
+# Written in the recording directory (shared with the container) when a hidden install fails.
+SETUP_FAIL_FILE=".vhs-rec-setup-failed"
+SETUP_LOG_FILE="$SETUP_FAIL_FILE.log"
 
 exec_cmds=()
 setup_cmds=()
@@ -223,20 +227,26 @@ shell_quote_word() {
   fi
 }
 
+# Run a tool's installer off screen, keeping its output and flagging failure for the wrapper to report.
+guarded_install() {
+  printf '(set -o pipefail; docker run --rm %s install | sh) >>%s 2>&1 || touch %s' \
+    "$1" "$SETUP_LOG_FILE" "$SETUP_FAIL_FILE"
+}
+
 install_command() {
   local target="$1" image
   if [[ "$target" == */* ]]; then
     if [[ ! "$target" =~ ^[a-z0-9][a-z0-9._/:@-]*$ || "$target" == *..* ]]; then
       die "--install expects a tool name like pdf-strip or an image like ghcr.io/org/tool, got '$target'"
     fi
-    printf 'docker run --rm %s install | sh >/dev/null 2>&1' "$target"
+    guarded_install "$target"
     return 0
   fi
   if [[ ! "$target" =~ ^[a-z0-9][a-z0-9-]*$ ]]; then
     die "--install expects a tool name like pdf-strip or an image like ghcr.io/org/tool, got '$target'"
   fi
   image="$TOOL_IMAGE_PREFIX/$target"
-  printf 'command -v %s >/dev/null 2>&1 || docker run --rm %s install | sh >/dev/null 2>&1' "$target" "$image"
+  printf 'command -v %s >/dev/null 2>&1 || %s' "$target" "$(guarded_install "$image")"
 }
 
 parse_record_args() {
@@ -397,6 +407,17 @@ print_snippet() {
   printf '![%s demo](%s)\n\n%sbash\n%s\n%s\n' "$(basename "${out_file%.*}")" "$out_file" "$fence" "$line" "$fence"
 }
 
+# A failed hidden install would otherwise surface only as "command not found" in the GIF.
+check_setup() {
+  if [[ -e "$SETUP_FAIL_FILE" ]]; then
+    printf 'Error: an --install step failed; installer output:\n' >&2
+    cat "$SETUP_LOG_FILE" >&2 || true
+    rm -f "$SETUP_FAIL_FILE" "$SETUP_LOG_FILE" "$out_file"
+    exit 1
+  fi
+  rm -f "$SETUP_LOG_FILE"
+}
+
 record_one_shot() {
   local i
   if [[ "${1:-}" == "demo" ]]; then
@@ -423,9 +444,11 @@ record_one_shot() {
     record_tape="$record_tape.tape"
     trap 'rm -f "$record_tape"' EXIT
   fi
+  rm -f "$SETUP_FAIL_FILE" "$SETUP_LOG_FILE"
 
   write_tape "$record_tape"
   convert_one "${record_tape#"$PWD/"}" "$out_file" >&2
+  check_setup
   printf 'Wrote %s\n' "$out_file" >&2
   if $snippet; then
     print_snippet "$@"
