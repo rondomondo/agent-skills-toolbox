@@ -1,0 +1,6 @@
+*
+!entrypoint.sh
+!install.sh
+!uninstall.sh
+!mermaid-render
+!puppeteer-config.json

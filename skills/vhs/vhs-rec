@@ -1,0 +1,511 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# ANSI color codes
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[0;33m'
+CYAN='\033[0;36m'
+BOLD='\033[1m'
+RESET='\033[0m'
+
+# Set DEBUG=true/1 to enable verbose logging of invocation args via the log() helper.
+USE_LOGGING="${DEBUG:-false}"
+case "${USE_LOGGING}" in
+  true|1)  USE_LOGGING=true  ;;
+  false|0) USE_LOGGING=false ;;
+  *) printf "ERROR: DEBUG must be true/false/1/0, got '%s'\n" "${USE_LOGGING}" >&2; exit 1 ;;
+esac
+SCRIPT_NAME=$(basename "$0")
+
+ok() { ${USE_LOGGING} && printf '%b[%s:%s]%b %b%s%b\n' "$BOLD" "$SCRIPT_NAME" "$HOSTNAME" "$RESET" "$GREEN" "$*" "$RESET" >&2; return 0; }
+warn() { ${USE_LOGGING} && printf '%b[%s:%s]%b %b%s%b\n' "$BOLD" "$SCRIPT_NAME" "$HOSTNAME" "$RESET" "$YELLOW" "$*" "$RESET" >&2; return 0; }
+fail() { ${USE_LOGGING} && printf '%b[%s:%s]%b %b%s%b\n' "$BOLD" "$SCRIPT_NAME" "$HOSTNAME" "$RESET" "$RED" "$*" "$RESET" >&2; return 0; }
+log()  { ${USE_LOGGING} && printf '%b[%s:%s]%b %b%s%b\n' "$BOLD" "$SCRIPT_NAME" "$HOSTNAME" "$RESET" "$CYAN" "$*" "$RESET" >&2; return 0; }
+
+log "invoked with args '$*'" 
+
+if ! command -v docker &>/dev/null; then
+  echo "Error: docker is required but not found in PATH" >&2
+  exit 1
+fi
+
+usage() {
+  cat <<'EOF'
+vhs_rec - a convenience wrapper around the rondomondo/vhs-rec Docker image, which
+is built upon VHS - https://github.com/charmbracelet/vhs.
+
+It adds three main capabilities to the base image functionality:
+1) You can use it to record Docker-related workflows that normally run externally.
+2) It includes extra utilities useful in container workflows: make, docker-compose,
+   system utilities, zsh and themes, etc.
+3) It includes additional fonts and themes for recordings.
+
+VHS converts .tape script files into GIF (or other) recordings. Running it
+directly as a container requires manually wiring up Docker volume mounts so the
+container can read your tape file and write output back to the host.
+
+This wrapper handles all of that automatically: it rewrites the Output line in
+your tape file to the correct filename and mounts the right directory, so you
+can pass a single .tape file, multiple .tape files, or a directory full of .tape
+files and get GIF files generated for all of them.
+
+Note: calling with '--' passes everything through directly to the vhs app.
+
+Usage:
+  vhs-rec                          Show this help, then the vhs built-in help
+  vhs-rec -h | --help              Show this help only
+  vhs-rec <input.tape>             Convert one tape file; output defaults to <input>.gif
+  vhs-rec <input.tape> <out.gif>   Convert one tape file with an explicit output name
+  vhs-rec <directory>              Convert every .tape file in a directory
+  vhs-rec <tape1> <tape2> ...      Convert multiple tape files (output defaults per file)
+  vhs-rec demo [opts] -- CMD ARGS  One shot: record a single command (and its arguments)
+  vhs-rec -x CMD [-x CMD ...]      One shot: record several commands in order
+  vhs-rec -- [args...]             Pass args directly to vhs inside Docker, with the
+                                   current directory mounted at /vhs. Use this to access
+                                   vhs sub-commands or flags not covered by this wrapper
+                                   (e.g. "vhs-rec -- validate my.tape").
+
+The Output line inside each .tape file is rewritten automatically to match the
+derived or explicit output filename before vhs runs.
+
+One shot mode (no tape file needed):
+  -- CMD ARGS...     Everything after -- is one command, quoted for you (use with 'demo')
+  -x, --exec CMD     Command to type and run on screen (repeatable, in order);
+      --then CMD     same thing, reads better after a '-- CMD'
+  -s, --setup CMD    Command to run off screen before recording (repeatable)
+      --install T    Off screen, install a docker-distributed tool (repeatable): a toolbox
+                     name (pdf-strip) or an image (ghcr.io/rondomondo/screenshot);
+                     --with is the same flag
+      --env K=V      Off screen, export K=V before recording (repeatable)
+  -o, --output FILE  Output file inside the current directory (default: demo.gif)
+      --theme NAME   VHS theme (default: Catppuccin Mocha)
+      --width N      Width in pixels (default: 1200)
+      --height N     Height in pixels (default: 700)
+      --wait SECS    Linger after each command finishes (default: 2)
+      --timeout SECS Longest wait for one command to finish (default: 120)
+      --keep-tape    Save the generated tape next to the output instead of discarding it
+      --snippet      Print markdown to stdout: the GIF link plus the vhs-rec command that
+                     made it, ready to paste into a README (progress goes to stderr)
+
+  The recording shell starts in your current directory, so relative paths in CLI
+  commands work as they do on your host. Your own shell expands globs and variables
+  before vhs-rec sees them; quote them if the recording should show them unexpanded.
+
+  vhs-rec demo -o docs/x.gif --install pdf-strip --snippet -- pdf-strip --check example.pdf
+
+EOF
+}
+
+find_docker_socket() {
+    local candidates=(
+        "/var/run/docker.sock"
+        "/run/docker.sock"
+        "${HOME}/.docker/run/docker.sock"
+        "/run/user/$(id -u)/docker.sock"
+    )
+    for sock in "${candidates[@]}"; do
+        if [[ -S "$sock" ]]; then
+            echo "$sock"
+            return 0
+        fi
+    done
+    return 1
+}
+
+DOCKER_SOCK=$(find_docker_socket)
+# Extra docker flags shared by all container invocations:
+#   - mounts $PWD at the same path so absolute paths inside the container match the host
+#   - forwards the Docker socket so the container can itself run docker commands
+#   - exposes HOST_PWD and DOCKER_SOCK as env vars for entrypoint scripts inside the image; DOCKER_SOCK is the
+#     path inside the container (the host path does not exist there, so the entrypoint could not fix its group)
+DOCKER_EXTRA_ARGS=(
+  "--volume $PWD:$PWD"
+  "--volume $DOCKER_SOCK:/var/run/docker.sock"
+  "--env HOST_PWD=$PWD"
+  "--env DOCKER_SOCK=/var/run/docker.sock"
+  "--env SHELL=/bin/zsh"
+)
+
+# Show vhs help by running the image with no tape file argument.
+show_help() {
+  cat <<'EOF'
+---- vhs built-in help follows ----
+
+EOF
+  # shellcheck disable=SC2086
+  docker run --rm \
+    ${DOCKER_EXTRA_ARGS[*]:-} \
+    ghcr.io/rondomondo/vhs-rec:latest
+}
+
+# Pass args directly to vhs inside Docker. $PWD is mounted at /vhs in the container.
+# Called both for passthrough mode (user prefixes args with --) and by convert_one.
+run_vhs_raw() {
+  # vhs record needs an attached terminal; only request one when stdin is a TTY so pipelines still work.
+  local tty_flags=""
+  if [ -t 0 ] && [ -t 1 ]; then tty_flags="-it"; fi
+  # shellcheck disable=SC2086
+  docker run --rm ${tty_flags} \
+    --volume "${PWD}:/vhs" \
+    ${DOCKER_EXTRA_ARGS[*]:-} \
+    ghcr.io/rondomondo/vhs-rec:latest \
+    "$@"
+}
+
+# Rewrite the Output line in the tape file to the resolved output path, then run vhs.
+# The sed rewrite ensures the tape file is self-consistent; -o is also passed to vhs
+# as an explicit override in case the image ignores or overwrites the tape Output line.
+convert_one() {
+  local input="$1" output="${2:-}"
+
+  if [[ ! -f "$input" ]]; then
+    fail "Error: not a file: $input" >&2
+    return 1
+  fi
+
+  if [[ -z "$output" ]]; then
+    output="${input%.tape}.gif"
+  fi
+
+  log "converting: $input -> $output"
+
+  sed "s|^Output .*|Output $output|" "$input" > "$input.tmp.$$" && mv "$input.tmp.$$" "$input"
+  run_vhs_raw "$input" "-o" "$output"
+  test -e "$output" && ok "converted:  $input -> $output" || { fail "$output not found"; return 1; }
+}
+
+# ---- one shot mode --------------------------------------------------
+
+DEFAULT_OUTPUT="demo.gif"
+DEFAULT_THEME="Catppuccin Mocha"
+DEFAULT_WIDTH=1200
+DEFAULT_HEIGHT=700
+DEFAULT_WAIT=2
+DEFAULT_TIMEOUT=120
+SETUP_TIMEOUT="300s"
+TOOL_IMAGE_PREFIX="ghcr.io/rondomondo"
+# Written in the recording directory (shared with the container) when a hidden install fails.
+SETUP_FAIL_FILE=".vhs-rec-setup-failed"
+SETUP_LOG_FILE="$SETUP_FAIL_FILE.log"
+
+exec_cmds=()
+setup_cmds=()
+out_file="$DEFAULT_OUTPUT"
+theme="$DEFAULT_THEME"
+width="$DEFAULT_WIDTH"
+height="$DEFAULT_HEIGHT"
+wait_secs="$DEFAULT_WAIT"
+command_timeout="$DEFAULT_TIMEOUT"
+snippet=false
+demo_given=false
+demo_words=()
+main_cmd=""
+keep_tape=false
+record_tape=""
+
+die() {
+  printf 'Error: %s\n' "$*" >&2
+  exit 1
+}
+
+is_record_flag() {
+  case "$1" in
+    -x|--exec|--then|-s|--setup|--with|--install|--env|-o|--output|--theme|--width|--height|--wait|--timeout) return 0 ;;
+    --keep-tape|--snippet) return 0 ;;
+  esac
+  return 1
+}
+
+# Leave plain words bare so the typed command reads naturally; quote only what the shell would otherwise split.
+shell_quote_word() {
+  local word="$1" single="'" escaped="'\\''"
+  if [[ -n "$word" && "$word" =~ ^[A-Za-z0-9_@%+=:,./-]+$ ]]; then
+    printf '%s' "$word"
+  else
+    printf "'%s'" "${word//$single/$escaped}"
+  fi
+}
+
+# Run a tool's installer off screen, keeping its output and flagging failure for the wrapper to report.
+guarded_install() {
+  printf '(set -o pipefail; docker run --rm %s install | sh) >>%s 2>&1 || touch %s' \
+    "$1" "$SETUP_LOG_FILE" "$SETUP_FAIL_FILE"
+}
+
+install_command() {
+  local target="$1" image
+  if [[ "$target" == */* ]]; then
+    if [[ ! "$target" =~ ^[a-z0-9][a-z0-9._/:@-]*$ || "$target" == *..* ]]; then
+      die "--install expects a tool name like pdf-strip or an image like ghcr.io/org/tool, got '$target'"
+    fi
+    guarded_install "$target"
+    return 0
+  fi
+  if [[ ! "$target" =~ ^[a-z0-9][a-z0-9-]*$ ]]; then
+    die "--install expects a tool name like pdf-strip or an image like ghcr.io/org/tool, got '$target'"
+  fi
+  image="$TOOL_IMAGE_PREFIX/$target"
+  printf 'command -v %s >/dev/null 2>&1 || %s' "$target" "$(guarded_install "$image")"
+}
+
+parse_record_args() {
+  local word
+  while [[ $# -gt 0 ]]; do
+    case "$1" in
+      --keep-tape) keep_tape=true; shift; continue ;;
+      --snippet)   snippet=true; shift; continue ;;
+      --)
+        shift
+        for word in "$@"; do
+          demo_words+=("$word")
+        done
+        return 0
+        ;;
+    esac
+    if ! is_record_flag "$1"; then
+      die "unexpected argument in one shot mode: $1 (see vhs-rec --help)"
+    fi
+    if [[ $# -lt 2 ]]; then
+      die "$1 requires a value"
+    fi
+    case "$1" in
+      -x|--exec|--then) exec_cmds+=("$2") ;;
+      -s|--setup)       setup_cmds+=("$2") ;;
+      --with|--install) setup_cmds+=("$(install_command "$2")") ;;
+      --env)
+        if [[ ! "$2" =~ ^[A-Za-z_][A-Za-z0-9_]*=.*$ ]]; then
+          die "--env expects KEY=VALUE, got '$2'"
+        fi
+        setup_cmds+=("export ${2%%=*}=$(shell_quote_word "${2#*=}")")
+        ;;
+      -o|--output) out_file="$2" ;;
+      --theme)     theme="$2" ;;
+      --width)     width="$2" ;;
+      --height)    height="$2" ;;
+      --wait)      wait_secs="$2" ;;
+      --timeout)   command_timeout="$2" ;;
+    esac
+    shift 2
+  done
+}
+
+validate_record_args() {
+  if [[ -z "$main_cmd" && ${#exec_cmds[@]} -eq 0 ]]; then
+    die "one shot mode needs a command: -x COMMAND, or -- COMMAND [ARGS...]"
+  fi
+  if [[ ! "$width" =~ ^[0-9]+$ || ! "$height" =~ ^[0-9]+$ ]]; then
+    die "--width and --height must be whole numbers"
+  fi
+  if [[ ! "$wait_secs" =~ ^[0-9]+(\.[0-9]+)?$ ]]; then
+    die "--wait must be a number of seconds, got '$wait_secs'"
+  fi
+  if [[ ! "$command_timeout" =~ ^[0-9]+$ ]]; then
+    die "--timeout must be a whole number of seconds, got '$command_timeout'"
+  fi
+  if [[ "$theme" == *\"* || "$theme" == *$'\n'* ]]; then
+    die "--theme must not contain double quotes or newlines"
+  fi
+  if [[ -z "$out_file" ]]; then
+    die "--output must not be empty"
+  fi
+}
+
+BACKTICK=$(printf '\140')
+
+# VHS has no escape syntax, so pick whichever of the three quote styles the text does not contain.
+tape_string() {
+  local text="$1"
+  if [[ "$text" == *$'\n'* ]]; then
+    return 1
+  fi
+  case "$text" in
+    *\'*) ;;
+    *) printf "'%s'" "$text"; return 0 ;;
+  esac
+  case "$text" in
+    *\"*) ;;
+    *) printf '"%s"' "$text"; return 0 ;;
+  esac
+  case "$text" in
+    *\`*) ;;
+    *) printf '%s%s%s' "$BACKTICK" "$text" "$BACKTICK"; return 0 ;;
+  esac
+  return 1
+}
+
+# Hidden commands are typed near-instantly so setup does not pad the recording.
+emit_hidden() {
+  local quoted
+  quoted=$(tape_string "$1") || die "cannot quote command for tape (mixed quote styles or newline): $1"
+  printf 'Type@1ms %s\nEnter\n' "$quoted"
+}
+
+emit_visible() {
+  local quoted
+  quoted=$(tape_string "$1") || die "cannot quote command for tape (mixed quote styles or newline): $1"
+  printf 'Type %s\nSleep 500ms\nEnter\n' "$quoted"
+  printf 'Wait+Line@%ss />\\s*$/\nSleep %ss\n\n' "$command_timeout" "$wait_secs"
+}
+
+write_tape() {
+  local tape="$1" i
+  {
+    printf 'Output %s\n\n' "$out_file"
+    printf 'Set Shell "zsh"\n'
+    printf 'Set FontSize 16\n'
+    printf 'Set FontFamily "JetBrains Mono"\n'
+    printf 'Set Width %s\n' "$width"
+    printf 'Set Height %s\n' "$height"
+    printf 'Set Theme "%s"\n' "$theme"
+    printf 'Set Padding 20\n'
+    printf 'Set TypingSpeed 60ms\n'
+    printf 'Set WindowBar Colorful\n\n'
+    printf 'Hide\n'
+    # shellcheck disable=SC2016
+    emit_hidden 'cd "$HOST_PWD"'
+    for ((i = 0; i < ${#setup_cmds[@]}; i++)); do
+      emit_hidden "${setup_cmds[$i]}"
+    done
+    if [[ ${#setup_cmds[@]} -gt 0 ]]; then
+      # The sum keeps the typed line from matching its own Wait pattern; only the output does.
+      # shellcheck disable=SC2016
+      emit_hidden 'echo VHSREC_$((1+1))'
+      printf 'Wait+Screen@%s /VHSREC_2/\n' "$SETUP_TIMEOUT"
+    fi
+    emit_hidden 'clear'
+    printf 'Show\n\n'
+    if [[ -n "$main_cmd" ]]; then
+      emit_visible "$main_cmd"
+    fi
+    for ((i = 0; i < ${#exec_cmds[@]}; i++)); do
+      emit_visible "${exec_cmds[$i]}"
+    done
+  } > "$tape"
+}
+
+# Rebuild the command that reproduces this recording, ready to paste into a README next to the GIF.
+print_snippet() {
+  local line="vhs-rec" arg after_dashes=false fence="$BACKTICK$BACKTICK$BACKTICK"
+  if $demo_given; then
+    line+=" demo"
+  fi
+  for arg in "$@"; do
+    if $after_dashes; then
+      line+=" $(shell_quote_word "$arg")"
+    elif [[ "$arg" == "--snippet" || "$arg" == "--keep-tape" ]]; then
+      continue
+    elif [[ "$arg" == "--" ]]; then
+      line+=$' \\\n        --'
+      after_dashes=true
+    elif is_record_flag "$arg"; then
+      line+=$' \\\n        '"$arg"
+    else
+      line+=" $(shell_quote_word "$arg")"
+    fi
+  done
+  printf '![%s demo](%s)\n\n%sbash\n%s\n%s\n' "$(basename "${out_file%.*}")" "$out_file" "$fence" "$line" "$fence"
+}
+
+# A failed hidden install would otherwise surface only as "command not found" in the GIF.
+check_setup() {
+  if [[ -e "$SETUP_FAIL_FILE" ]]; then
+    printf 'Error: an --install step failed; installer output:\n' >&2
+    cat "$SETUP_LOG_FILE" >&2 || true
+    rm -f "$SETUP_FAIL_FILE" "$SETUP_LOG_FILE" "$out_file"
+    exit 1
+  fi
+  rm -f "$SETUP_LOG_FILE"
+}
+
+record_one_shot() {
+  local i
+  if [[ "${1:-}" == "demo" ]]; then
+    demo_given=true
+    shift
+  fi
+  parse_record_args "$@"
+  for ((i = 0; i < ${#demo_words[@]}; i++)); do
+    main_cmd+="${main_cmd:+ }$(shell_quote_word "${demo_words[$i]}")"
+  done
+  validate_record_args
+
+  mkdir -p "$(dirname "$out_file")"
+
+  if $keep_tape; then
+    record_tape="${out_file%.*}.tape"
+    if [[ -e "$record_tape" ]]; then
+      die "$record_tape already exists; remove it or drop --keep-tape"
+    fi
+  else
+    # BSD mktemp needs the X's at the end of the template, and vhs wants a .tape suffix.
+    record_tape=$(mktemp "${PWD}/.vhs-rec.XXXXXX")
+    mv "$record_tape" "$record_tape.tape"
+    record_tape="$record_tape.tape"
+    trap 'rm -f "$record_tape"' EXIT
+  fi
+  rm -f "$SETUP_FAIL_FILE" "$SETUP_LOG_FILE"
+
+  write_tape "$record_tape"
+  convert_one "${record_tape#"$PWD/"}" "$out_file" >&2
+  check_setup
+  printf 'Wrote %s\n' "$out_file" >&2
+  if $snippet; then
+    print_snippet "$@"
+  fi
+}
+
+# ---- dispatch -------------------------------------------------------
+
+if [[ $# -eq 0 ]]; then
+  usage
+  show_help
+  exit 0
+fi
+
+if [[ "$1" == "--" ]]; then
+  run_vhs_raw "${@:2}"
+  exit 0
+fi
+
+if [[ "$1" == "-h" || "$1" == "--help" ]]; then
+  usage
+  exit 0
+fi
+
+if [[ "$1" == "demo" ]]; then
+  record_one_shot "$@"
+  exit 0
+fi
+
+for arg in "$@"; do
+  if is_record_flag "$arg"; then
+    record_one_shot "$@"
+    exit 0
+  fi
+done
+
+initial_pwd=$(pwd)
+
+if [[ $# -eq 2 && ! -d "$1" ]]; then
+  # Exactly two args and first is not a directory: input + explicit output
+  convert_one "$1" "$2"
+elif [[ $# -eq 1 && -d "$1" ]]; then
+  # Single directory arg: recursively convert every .tape beneath it
+  dir="$(cd "$1" && pwd)"
+  files=()
+  while IFS= read -r found; do files+=("$found"); done < <(find "$dir" -type f -name "*.tape" | sort)
+
+  if [[ ${#files[@]} -eq 0 ]]; then
+    fail "No .tape files found in $1" >&2
+    exit 1
+  fi
+  for arg in "${files[@]}"; do
+    convert_one "${arg#"$initial_pwd/"}"
+  done
+else
+  # One tape file, or three-or-more tape files: treat every arg as an input
+  for arg in "$@"; do
+    convert_one "${arg#"$initial_pwd/"}"
+  done
+fi

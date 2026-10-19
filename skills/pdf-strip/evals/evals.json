@@ -1,0 +1,166 @@
+{
+  "skill_name": "pdf-strip",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Strip the metadata from this PDF before I send it out.",
+      "expected_output": "Skill detects sandbox/non-sandbox environment, runs strip mode on the file, writes sample_dirty.stripped.pdf, and confirms it is clean.",
+      "files": ["evals/files/sample_dirty.pdf"],
+      "expectations": [
+        "The skill is triggered by this request",
+        "The environment is detected before running (IS_SANDBOX check or docker check)",
+        "A file named sample_dirty.stripped.pdf (or equivalent .stripped.pdf) is produced",
+        "The output file no longer contains the /Author, /Title, /Company or other /Info fields present in the original",
+        "The assistant confirms the output file exists, e.g. via ls or an equivalent check",
+        "The original sample_dirty.pdf is left unmodified"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "What metadata is embedded in this PDF? Don't change anything, just tell me what's in it.",
+      "expected_output": "Skill runs --check mode only, reports each /Info field and any XMP fields found, does not write any output file.",
+      "files": ["evals/files/sample_dirty.pdf"],
+      "expectations": [
+        "The skill runs in check mode (--check), not strip mode",
+        "No .stripped.pdf or other new file is created",
+        "The response lists specific metadata fields found, e.g. Author, Title, Creator, Producer, CreationDate",
+        "The original file is reported as HAS_METADATA rather than CLEAN",
+        "The assistant explains the finding in plain language rather than just dumping raw tool output"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "I'm about to share this file externally with a client. Can you make sure it's clean of any hidden info first?",
+      "expected_output": "Skill infers this is a strip request (sanitise-before-sharing intent), strips metadata, and confirms the file is safe to share.",
+      "files": ["evals/files/sample_dirty.pdf"],
+      "expectations": [
+        "The skill is triggered even though the word 'metadata' or 'PDF' strip is not used explicitly",
+        "The skill defaults to strip mode rather than only checking",
+        "A stripped output file is produced and copied to /mnt/user-data/outputs/ (in sandbox) or reported alongside the original (non-sandbox)",
+        "The assistant confirms in plain language that the file is now safe to share externally",
+        "The assistant does not silently overwrite the original file"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Check every PDF in this folder for metadata and tell me which ones are clean.",
+      "expected_output": "Skill iterates every PDF file in the given directory using --check, reporting CLEAN or HAS_METADATA per file.",
+      "files": [
+        "evals/files/batch_mixed/report_a.pdf",
+        "evals/files/batch_mixed/report_b.pdf",
+        "evals/files/batch_mixed/report_c.pdf"
+      ],
+      "expectations": [
+        "All three PDFs in the folder are checked, not just one",
+        "report_b.pdf is correctly reported as CLEAN",
+        "report_a.pdf and report_c.pdf are correctly reported as HAS_METADATA",
+        "No files are modified, since this is a check-only request",
+        "The summary distinguishes clean files from files with metadata rather than a single blended answer"
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "Strip metadata from these two reports and give me the cleaned versions.",
+      "expected_output": "Skill strips metadata from both named files individually, producing two separate .stripped.pdf outputs.",
+      "files": ["evals/files/sample_dirty2.pdf", "evals/files/sample_dirty3.pdf"],
+      "expectations": [
+        "Both files are processed, not just the first one",
+        "Two separate stripped output files are produced, one per input",
+        "Each output file is confirmed to exist and be metadata-free",
+        "Outputs are made available to the user (copied to /mnt/user-data/outputs/ in sandbox, or reported with paths outside sandbox)"
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "This PDF still shows the original download URL and quarantine flag in macOS Finder info. Can pdf-strip clean that up too, not just the PDF's internal metadata?",
+      "expected_output": "Skill explains that macOS extended attribute (xattr) stripping is a feature of the non-sandbox Docker-backed wrapper script, not of strip.py used in-sandbox, and clarifies what will and won't be handled depending on environment.",
+      "files": ["evals/files/sample_dirty.pdf"],
+      "expectations": [
+        "The assistant distinguishes between PDF-internal metadata (Info dict + XMP) and macOS xattrs",
+        "The assistant correctly notes that xattr handling is only available via the non-sandbox pdf-strip wrapper script, not the sandbox strip.py path",
+        "The assistant does not falsely claim xattrs were stripped when running strip.py directly in a sandbox with no macOS filesystem",
+        "The PDF-internal metadata is still stripped regardless of the xattr limitation"
+      ]
+    },
+    {
+      "id": 7,
+      "prompt": "Redact the SSN number that's visible on page 3 of this PDF.",
+      "expected_output": "Skill should NOT be used, since this is a request to redact visible page content, not to strip document metadata. The assistant should recognize the mismatch and either use a different capability or explain the distinction.",
+      "files": ["evals/files/sample_dirty.pdf"],
+      "expectations": [
+        "The assistant does not run pdf-strip's strip.py or the pdf-strip wrapper for this request",
+        "The assistant recognizes this is a visible-content redaction task, distinct from metadata stripping",
+        "The assistant does not claim that stripping metadata redacts the visible SSN on the page",
+        "The assistant either declines, clarifies, or points to a more appropriate approach for content redaction"
+      ]
+    },
+    {
+      "id": 8,
+      "prompt": "Combine these 3 PDFs into a single file for me.",
+      "expected_output": "Skill should NOT be triggered, since this is a PDF merge/combine request, not a metadata task.",
+      "files": [
+        "evals/files/sample_dirty.pdf",
+        "evals/files/sample_dirty2.pdf",
+        "evals/files/sample_dirty3.pdf"
+      ],
+      "expectations": [
+        "The assistant does not invoke pdf-strip's strip.py or the pdf-strip wrapper script",
+        "The assistant recognizes this as a PDF merge task and does not conflate it with metadata stripping",
+        "No .stripped.pdf files are produced as a side effect of this request"
+      ]
+    },
+    {
+      "id": 9,
+      "prompt": "Strip metadata from report.pdf",
+      "expected_output": "Since report.pdf does not exist at the referenced path, the skill should report a clear 'input not found' style error rather than failing silently or hallucinating success.",
+      "files": [],
+      "expectations": [
+        "The assistant reports that the specified file could not be found",
+        "The assistant does not claim a stripped output file was created",
+        "The assistant suggests next steps, e.g. checking the path or re-uploading the file"
+      ]
+    },
+    {
+      "id": 10,
+      "prompt": "I don't have Docker's default image working right now -- use my custom image at myregistry/pdf-strip:v2 instead to strip this file.",
+      "expected_output": "In a non-sandbox environment, the skill should use the PDF_STRIP_IMAGE environment variable to override the Docker image before running the pdf-strip wrapper.",
+      "files": ["evals/files/sample_dirty.pdf"],
+      "expectations": [
+        "The assistant sets PDF_STRIP_IMAGE=myregistry/pdf-strip:v2 (or passes it inline) before invoking the pdf-strip wrapper",
+        "The assistant does not hardcode or ignore the requested custom image",
+        "If running in-sandbox instead (where Docker/the wrapper is not used), the assistant explains that the override does not apply to the sandbox strip.py path"
+      ]
+    },
+    {
+      "id": 11,
+      "prompt": "Check these 3 PDFs -- some might already be clean.",
+      "expected_output": "Skill checks each of the 3 files individually and reports a per-file CLEAN/HAS_METADATA verdict rather than one combined verdict.",
+      "files": [
+        "evals/files/batch_mixed/report_a.pdf",
+        "evals/files/batch_mixed/report_b.pdf",
+        "evals/files/batch_mixed/report_c.pdf"
+      ],
+      "expectations": [
+        "Each of the 3 files is checked individually",
+        "report_b.pdf is identified as clean while report_a.pdf and report_c.pdf are identified as having metadata",
+        "The response clearly separates results per file rather than a single aggregate statement",
+        "No files are modified during this check-only request"
+      ]
+    },
+    {
+      "id": 12,
+      "prompt": "Does this PDF leak our internal file path, author name, or the software used to create it?",
+      "expected_output": "Skill runs --check mode and specifically surfaces the fields relevant to the question: Author (author name), Creator/Producer (software used), and any XMP or /Info fields that might reveal an internal path.",
+      "files": ["evals/files/sample_dirty.pdf"],
+      "expectations": [
+        "The skill runs in check mode",
+        "The response explicitly calls out the /Author field value",
+        "The response explicitly calls out the /Creator and/or /Producer field values as the software provenance",
+        "The response checks for and reports any field that could reveal an internal path or source URL, such as /SourceURL",
+        "The assistant offers to strip the file if the user wants these fields removed"
+      ]
+    }
+  ]
+}
+
+

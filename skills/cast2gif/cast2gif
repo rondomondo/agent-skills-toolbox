@@ -1,0 +1,205 @@
+#!/usr/bin/env bash
+set -uo pipefail
+
+# ANSI color codes
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[0;33m'
+CYAN='\033[0;36m'
+BOLD='\033[1m'
+RESET='\033[0m'
+
+# Set DEBUG=true/1 to enable verbose logging of invocation args via the log() helper.
+USE_LOGGING=${DEBUG:-false}
+case "${USE_LOGGING}" in
+  true|1)  USE_LOGGING=true  ;;
+  false|0) USE_LOGGING=false ;;
+  *) printf "ERROR: DEBUG must be true/false/1/0, got '%s'\n" "${USE_LOGGING}" >&2; exit 1 ;;
+esac
+SCRIPT_NAME=$(basename "$0")
+
+ok() { ${USE_LOGGING} && printf '%b[%s:%s]%b %b%s%b\n' "$BOLD" "$SCRIPT_NAME" "$HOSTNAME" "$RESET" "$GREEN" "$*" "$RESET" >&2; return 0; }
+warn() { ${USE_LOGGING} && printf '%b[%s:%s]%b %b%s%b\n' "$BOLD" "$SCRIPT_NAME" "$HOSTNAME" "$RESET" "$YELLOW" "$*" "$RESET" >&2; return 0; }
+fail() { ${USE_LOGGING} && printf '%b[%s:%s]%b %b%s%b\n' "$BOLD" "$SCRIPT_NAME" "$HOSTNAME" "$RESET" "$RED" "$*" "$RESET" >&2; return 0; }
+log()  { ${USE_LOGGING} && printf '%b[%s:%s]%b %b%s%b\n' "$BOLD" "$SCRIPT_NAME" "$HOSTNAME" "$RESET" "$CYAN" "$*" "$RESET" >&2; return 0; }
+
+log "invoked with args '$*'"
+
+if ! command -v docker &>/dev/null; then
+  echo "Error: docker is required but not found in PATH" >&2
+  exit 1
+fi
+
+usage() {
+  cat <<'EOF'
+cast2gif - a convenience wrapper around the ghcr.io/rondomondo/cast2gif Docker image,
+which is built upon agg (asciinema GIF generator) -- https://github.com/asciinema/agg.
+
+It converts asciinema .cast recording files into GIF animations. Running agg directly
+as a container requires manually wiring up Docker volume mounts so the container can
+read your cast file and write output back to the host.
+
+This wrapper handles all of that automatically: it resolves absolute paths, mounts the
+right directory, and derives the output filename for you, so you can pass a single
+.cast file, multiple .cast files, or a directory full of .cast files and get GIF files
+generated for all of them.
+
+Note: calling with '--' passes everything through directly to the agg app.
+
+Usage:
+  cast2gif                         Show this help
+  cast2gif -h | --help             Show this help only
+  cast2gif <input.cast>            Convert one cast file; output defaults to <input>.gif
+  cast2gif <input.cast> <out.gif>  Convert one cast file with an explicit output name
+  cast2gif <directory>             Convert every .cast file in a directory
+  cast2gif <cast1> <cast2> ...     Convert multiple cast files (output defaults per file)
+  cast2gif -- [args...]            Pass args directly to agg inside Docker, with the
+                                   current directory mounted at /data. Use this to access
+                                   agg flags not covered by this wrapper
+                                   (e.g. "cast2gif -- --help").
+
+EOF
+}
+
+# Extra docker flags shared by all container invocations:
+#   - mounts $PWD at /data (standard agg working directory)
+#   - exposes HOST_PWD as an env var for the entrypoint script inside the image if needed
+DOCKER_EXTRA_ARGS=(
+  "--volume $PWD:/data"
+  "--env HOST_PWD=/data"
+  "--env DEBUG=${USE_LOGGING}"
+)
+
+AGG_OPTIONS=(
+  --rows 32
+  --cols 110
+  --font-size 24
+  --line-height 1.6
+)
+
+# Show agg help by running the image with no arguments.
+show_help() {
+  cat <<'EOF'
+---- agg built-in help follows ----
+
+EOF
+  # shellcheck disable=SC2086
+  docker run --rm \
+    ${DOCKER_EXTRA_ARGS[*]:-} \
+    ghcr.io/rondomondo/cast2gif:latest \
+    --help 
+}
+
+# Pass args directly to agg inside Docker. $PWD is mounted at /data.
+run_agg_raw() {
+  # shellcheck disable=SC2086
+  docker run --rm \
+    ${DOCKER_EXTRA_ARGS[*]:-} \
+    ghcr.io/rondomondo/cast2gif:latest \
+    "$@" "${AGG_OPTIONS[@]}"
+
+}
+
+
+# Rewrite the Output line in the tape file to the resolved output path, then run vhs.
+# The sed rewrite ensures the tape file is self-consistent; -o is also passed to vhs
+# as an explicit override in case the image ignores or overwrites the tape Output line.
+convert_one() {
+  local input="$1" output="${2:-}"
+
+  if [[ ! -f "$input" ]]; then
+    fail "Error: not a file: $input" >&2
+    return 1
+  fi
+
+  if [[ -z "$output" ]]; then
+    output="${input%.cast}.gif"
+  fi
+
+  log "converting: $input -> $output"
+
+  run_agg_raw "$input" "$output"
+  test -e "$output" && ok "converted:  $input -> $output" || { fail "$output not found"; return 1; }
+}
+
+# ---- dispatch -------------------------------------------------------
+
+if [[ $# -eq 0 ]]; then
+  usage
+  show_help
+  exit 0
+fi
+
+if [[ "$1" == "--" ]]; then
+  log "passing ${@:2} straight thru to agg"
+  AGG_OPTIONS=()
+  run_agg_raw "${@:2}"
+  exit 0
+fi
+
+if [[ "$1" == "-h" || "$1" == "--help" ]]; then
+  usage
+  exit 0
+fi
+
+# Install command: run the image with 'install' so it copies cast2gif into $PWD locally.
+if [[ "$1" == "install" ]]; then
+  log "running install via container"
+  # shellcheck disable=SC2086
+  docker run --rm \
+    ${DOCKER_EXTRA_ARGS[*]:-} \
+    ghcr.io/rondomondo/cast2gif:latest \
+    install "${@:2}"
+  exit 0
+fi
+
+initial_pwd=$(pwd)
+
+if [[ $# -eq 2 && ! -d "$1" ]]; then
+  # Exactly two args and first is not a directory: input + explicit output
+  convert_one "$1" "$2"
+elif [[ $# -eq 1 && -d "$1" ]]; then
+  # Single directory arg: recursively convert every .cast beneath it
+  dir="$(cd "$1" && pwd)"
+  files=()
+  while IFS= read -r found; do files+=("$found"); done < <(find "$dir" -type f -name "*.cast" | sort)
+
+  if [[ ${#files[@]} -eq 0 ]]; then
+    fail "No .cast files found in $1" >&2
+    exit 1
+  fi
+  for arg in "${files[@]}"; do
+    convert_one "${arg#"$initial_pwd/"}"
+  done
+else
+  # One cast file, or three-or-more cast files: treat every arg as an input
+  # Warn early if any arg looks like an agg flag (starts with -), since those
+  # won't be interpreted as files and will fail. Suggest using -- passthrough.
+  has_flag_args=false
+  for arg in "$@"; do
+    if [[ "$arg" == -* ]]; then
+      has_flag_args=true
+      break
+    fi
+  done
+  if $has_flag_args; then
+    printf "${BOLD}Hint:${RESET} Some arguments look like agg options (e.g. %s).\n" "$arg" >&2
+    printf "      To pass flags directly to agg, use the -- passthrough form:\n" >&2
+    printf "      ${CYAN}cast2gif -- %s${RESET}\n" "$*" >&2
+    printf "      (This mounts \$PWD at /data; use relative paths from there.)\n\n" >&2
+    printf "  [c] continue as-is\n" >&2
+    printf "  [p] convert to passthru (prepend --)\n" >&2
+    printf "\nChoice [c/p]: " >&2
+    read -r _hint_choice </dev/tty
+    case "$(printf '%s' "$_hint_choice" | tr '[:upper:]' '[:lower:]')" in
+      p|passthru|passthrough)
+        AGG_OPTIONS=()
+        run_agg_raw "$@"
+        exit 0
+        ;;
+    esac
+  fi
+  for arg in "$@"; do
+    convert_one "${arg#"$initial_pwd/"}"
+  done
+fi

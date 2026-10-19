@@ -1,0 +1,274 @@
+# screenshot
+
+Full-page PDFs and screenshots from URLs or local HTML files, via a Docker-wrapped Playwright
+(Chromium). No browser installation needed on the host.
+
+## Try it now
+
+Install two lightweight wrappers `url2pdf` and `url2image` that call Docker for you:
+
+```bash
+docker run --rm ghcr.io/rondomondo/screenshot:latest install | sh
+```
+
+Then from any directory you can try:
+
+```bash
+url2image https://en.wikipedia.org/wiki/Special:Random
+url2pdf   https://jax-ml.github.io/scaling-book/gpus/
+```
+
+Output lands in `./screenshots/` and `./pdfs/` relative to your current directory.
+
+> To uninstall: `docker run --rm ghcr.io/rondomondo/screenshot:latest uninstall | sh`
+
+
+## No install needed - just Docker:
+
+This will yield a webp image of a random wikipedia topic
+```bash
+docker run --rm \
+  -v $(pwd)/screenshots:/screenshots \
+  ghcr.io/rondomondo/screenshot:latest \
+  screenshot https://en.wikipedia.org/wiki/Dash_Crofts --convert webp
+```
+
+This will yield a multi-page PDF
+```bash
+docker run --rm \
+  -v $(pwd)/pdfs:/pdfs \
+  ghcr.io/rondomondo/screenshot:latest \
+  pdf https://jax-ml.github.io/scaling-book/
+```
+
+Output lands in `./screenshots/` and `./pdfs/` relative to your current directory.
+
+
+## Common options
+
+Both `url2image` and `url2pdf` accept flags before or after the target:
+
+```bash
+# Screenshot
+url2image https://jax-ml.github.io/scaling-book/gpus/ --convert webp
+url2image https://jax-ml.github.io/scaling-book/gpus/ --no-scroll
+url2image https://jax-ml.github.io/scaling-book/gpus/ --viewport-size 1920x1080
+url2image https://jax-ml.github.io/scaling-book/gpus/ --device "iPhone 15"
+url2image https://jax-ml.github.io/scaling-book/gpus/ --user-agent "Mozilla/5.0 ..."
+
+# PDF
+url2pdf https://jax-ml.github.io/scaling-book/gpus/ --paper-format Letter
+url2pdf https://jax-ml.github.io/scaling-book/gpus/ --wait-for-timeout 5000
+```
+
+### Devices and single elements
+
+```bash
+url2image devices                      # list devices usable with --device (also works with url2pdf)
+url2image device-info 'iPhone 15'      # show one device descriptor
+url2image element --selector '.infobox' https://en.wikipedia.org/wiki/Dash_Crofts
+url2image element -s '.infobox' --hide '.ad' https://example.com --convert webp
+```
+
+`element` is image-only, so it is available on `url2image` but not `url2pdf`. `--storage-state <file>` takes a path
+on the host; the wrapper mounts it into the container for you.
+
+Set `IMAGE_TAG` to pin a specific image version:
+
+```bash
+IMAGE_TAG=0.0.21 url2pdf https://jax-ml.github.io/scaling-book/gpus/
+```
+
+## Logging
+
+Output is quiet by default (WARNING and above, plus the `[screenshot:<host>]` progress lines from the container
+entrypoint). Raise verbosity with any of these; the first match wins:
+
+| Control                     | Effect                                                                         |
+|-----------------------------|--------------------------------------------------------------------------------|
+| `--log-level <level>`       | Per run: `DEBUG`, `INFO`, `WARNING`, `ERROR` or `CRITICAL`                     |
+| `LOG_LEVEL=<level>`         | Same, via the environment (forwarded into the container by `url2pdf`/`url2image`) |
+| `DEBUG=1`                   | `LOG_LEVEL=DEBUG`, plus the `docker run` command, shell tracing and the MCP server log |
+
+```bash
+url2pdf --log-level INFO https://en.wikipedia.org/wiki/Special:Random
+LOG_LEVEL=DEBUG url2pdf https://en.wikipedia.org/wiki/Special:Random
+DEBUG=1 url2pdf https://en.wikipedia.org/wiki/Special:Random
+```
+
+The same variables work for `make pdf` / `make screenshot` (they run `ssc.py` on the host) and for `uv run ssc.py
+--log-level INFO pdf ...`. For the long-lived `make mcp-up` container, `LOG_LEVEL` is passed through, and `DEBUG` is
+handed to Playwright's own debug filter, e.g. `DEBUG=pw:mcp* make mcp-up`.
+
+## All options
+
+```
+Options:
+  --convert <fmt>             Convert image output after capture (webp, jpeg, gif, ...); ignored for pdf
+  --wait-for-timeout <ms>     Wait before capture (default: 3000)
+  --viewport-size <WxH>       Viewport dimensions (default: 1032x1376)
+  --paper-format <fmt>        Paper format for PDF (default: A4)
+  --no-unclip                 Disable scroll-container freeing before PDF render (default: on)
+  --no-scroll                 Capture viewport only, skip full-page scroll
+  --out-dir <dir>             Override output directory
+  --device-scale-factor <n>   Device pixel ratio for high-DPI output (default: 2, screenshot only)
+  --user-agent <string>       Browser user-agent string (default: desktop Chrome on macOS)
+  --device <name>             Playwright device to emulate - overrides viewport, scale, and UA
+  --storage-state <path>      Playwright storageState JSON for authenticated sessions
+  --custom-selector <sel>     CSS selector for popup dismissal (repeatable)
+
+Environment:
+  IMAGE_TAG                   Docker image tag (default: latest)
+  IMAGE_REGISTRY              Registry host (default: ghcr.io)
+  IMAGE_REPO                  Image repository (default: rondomondo/screenshot)
+  MCP_PORT                    MCP server port (default: 3000; override if Grafana is on that port)
+  LOG_LEVEL                   DEBUG, INFO, WARNING (default), ERROR, CRITICAL; also --log-level
+  DEBUG                       Set to 1 for LOG_LEVEL=DEBUG, the docker command and shell tracing
+```
+
+## Local HTML files
+
+Place HTML files in `./html/` and reference them by filename:
+
+```bash
+url2image my-page.html
+url2pdf   my-page.html
+```
+
+The directory is mounted read-only at `/html` inside the container. The output filename is derived
+from the basename, e.g. `my-page.html` -> `my-page.png`.
+
+## MCP server
+
+The image includes a long-lived [Playwright MCP](https://playwright.dev/docs/mcp) server that
+AI agents can drive over HTTP on port 3000. `make screenshot` and `make pdf` use this path
+via `ssc.py`, which adds incremental page scrolling to trigger lazy-loaded assets and automatic
+popup/overlay dismissal before capture.
+
+```bash
+make mcp-up                   # start (default session)
+make mcp-up SESSION=mysite    # start with a named session (persists cookies/storage)
+make mcp-down                 # stop
+make status                   # show running containers and health
+make mcp-shell                # open bash inside the container with /workspace mounted
+```
+
+Sessions are stored as JSON under `./workspace/sessions/`. A missing file is created as `{}` on
+first start.
+
+### Connect an MCP client
+
+Point your client at `http://localhost:3000/sse` (SSE transport) or `http://localhost:3000/mcp`
+(HTTP transport). The server runs headless Chromium in isolated mode. If you override `MCP_PORT`,
+adjust the URLs accordingly.
+
+The port defaults to `3000` but can be overridden via the `MCP_PORT` environment variable.
+This is useful when Grafana or another service is already bound to port 3000.
+
+```bash
+MCP_PORT=3001 make mcp-up
+```
+
+### List available devices
+
+```bash
+make mcp-up
+uv run ssc.py devices
+```
+
+This queries the Playwright installation inside the running container and prints a table of every
+device name, viewport, device pixel ratio, and user-agent string you can pass to `--device`.
+
+## Usage via Make
+
+```bash
+make screenshot TARGET=https://jax-ml.github.io/scaling-book/gpus/
+make screenshot TARGET=https://jax-ml.github.io/scaling-book/gpus/ ARGS="--convert webp"
+make screenshot TARGET=my-page.html
+
+make pdf TARGET=https://jax-ml.github.io/scaling-book/gpus/
+make pdf TARGET=https://jax-ml.github.io/scaling-book/gpus/ ARGS="--paper-format Letter"
+```
+
+If the MCP server is not already running, `make screenshot` and `make pdf` start it automatically
+and tear it down when done.
+
+## Usage via Docker directly
+
+```bash
+# Screenshot
+docker run --rm \
+  -v $(pwd)/screenshots:/screenshots \
+  ghcr.io/rondomondo/screenshot:latest \
+  screenshot https://jax-ml.github.io/scaling-book/gpus/
+
+# PDF
+docker run --rm \
+  -v $(pwd)/pdfs:/pdfs \
+  ghcr.io/rondomondo/screenshot:latest \
+  pdf https://jax-ml.github.io/scaling-book/gpus/
+
+# Local HTML file
+docker run --rm \
+  -v $(pwd)/screenshots:/screenshots \
+  -v $(pwd)/html:/html:ro \
+  ghcr.io/rondomondo/screenshot:latest \
+  screenshot my-page.html
+
+# DEBUG=1 traces every command inside the container; LOG_LEVEL=INFO|DEBUG or --log-level tunes ssc.py output
+docker run --rm -e DEBUG=1 \
+  -v $(pwd)/screenshots:/screenshots \
+  ghcr.io/rondomondo/screenshot:latest \
+  screenshot https://jax-ml.github.io/scaling-book/gpus/
+```
+
+## Volumes
+
+| Path           | Purpose                                    |
+|----------------|--------------------------------------------|
+| `/screenshots` | PNG output from `screenshot` command       |
+| `/pdfs`        | PDF output from `pdf` command              |
+| `/html`        | Local HTML files (mounted read-only)       |
+| `/workspace`   | MCP session state (`sessions/<name>.json`) |
+
+## Building and releasing
+
+```bash
+make build        # single-arch image for local testing
+make release      # bump patch version + multi-platform push to ghcr.io
+make push         # multi-platform push without bumping version
+make bump         # increment patch version in VERSION only
+```
+
+The current version is tracked in `VERSION`. `make inspect` shows the manifest platforms for
+the remote `:latest` image.
+
+## Requirements
+
+- Docker
+- `uv` (required for `make screenshot` / `make pdf` via the MCP client)
+- GNU Make (optional but convenient)
+- `docker buildx` with a multi-platform builder (only needed for `make release`)
+
+## Make targets
+
+Run `make help` for the full list. Key targets:
+
+```
+make install        Install url2pdf and url2image to /usr/local/bin (or ~/.local/bin)
+make uninstall      Remove url2pdf, url2image, and url2capture
+make test           Run the unit test suite (uv run pytest)
+make clean-all      Remove image tags, builder, generated output, and caches
+```
+
+## Image details
+
+- Base: `node:22-slim`
+- Playwright Chromium bundled via `npm ci`
+- ImageMagick for post-capture format conversion
+- Python 3.12 + `uv` for `ssc.py`
+- Default viewport: 1032x1376 at 2x device pixel ratio
+- Default user-agent: desktop Chrome 131 on macOS (prevents headless detection)
+- Default wait before capture: 3000 ms
+- MCP server port: 3000 (override via `MCP_PORT`; conflicts with Grafana's default)
+- Published to `ghcr.io/rondomondo/screenshot` for `linux/amd64`

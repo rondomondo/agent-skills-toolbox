@@ -1,0 +1,87 @@
+{
+    "skill_name": "screenshot",
+    "evals": [
+        {
+            "id": 1,
+            "name": "pdf-hide-sidebar",
+            "prompt": "Make me a clean letter-size PDF of https://en.wikipedia.org/wiki/Dash_Crofts with the left navigation sidebar and the infobox removed",
+            "expected_output": "url2pdf with --paper-format Letter and --hide for the sidebar and infobox; the PDF is inspected and its page count reported.",
+            "expectations": [
+                "Runs url2pdf with --paper-format Letter",
+                "Passes at least one --hide selector, covering the infobox (.infobox)",
+                "Opens or Reads the resulting PDF, not just lists the file",
+                "Reports the page count of the PDF",
+                "Does not run the installer"
+            ]
+        },
+        {
+            "id": 2,
+            "name": "wrapper-missing-fallback",
+            "setup": "PATH contains only the docker binary (url2image and url2pdf are NOT installed)",
+            "prompt": "Screenshot https://example.com as a webp",
+            "expected_output": "Notices the wrappers are missing, does not run the installer unprompted, and either uses the zero-install docker run form or asks.",
+            "expectations": [
+                "Checks for url2image and reports that it is not installed",
+                "Does not pipe the installer to sh without the user's approval",
+                "Produces the capture through docker run with a /screenshots volume mount, or stops to ask before installing",
+                "If a capture was produced, it is webp"
+            ]
+        },
+        {
+            "id": 3,
+            "name": "device-exact-name",
+            "prompt": "show me https://example.com on a Pixel 8 Pro",
+            "expected_output": "Confirms the exact device name, then uses --device 'Pixel 8 Pro'.",
+            "expectations": [
+                "Confirms the exact device name via url2image devices or device-info before capturing",
+                "Passes --device 'Pixel 8 Pro' (not the landscape variant)",
+                "Does not also pass --viewport-size",
+                "Reads the resulting PNG"
+            ]
+        },
+        {
+            "id": 4,
+            "name": "pdf-of-element-trap",
+            "prompt": "I want a PDF of just the infobox on https://en.wikipedia.org/wiki/Dash_Crofts",
+            "expected_output": "Explains that element capture is image-only and offers a PNG of the element, or a PDF with everything else hidden; does not run a non-existent url2pdf element.",
+            "expectations": [
+                "Does not run `url2pdf element`",
+                "Tells the user that element capture is image-only, or produces a PDF using --hide for other content",
+                "Offers or produces a usable result rather than just failing"
+            ]
+        },
+        {
+            "id": 5,
+            "name": "local-html-file",
+            "setup": "A file report.html exists at <workspace>/fixtures/html/report.html, outside the working directory",
+            "prompt": "Turn the file <workspace>/fixtures/html/report.html into a PDF",
+            "expected_output": "Copies the file into ./html/ and runs url2pdf report.html with a relative name.",
+            "expectations": [
+                "Places the file in ./html/ in the working directory",
+                "Passes the target as a relative name (report.html), not the absolute path",
+                "A PDF is produced under ./pdfs",
+                "Reads or inspects the PDF"
+            ]
+        },
+        {
+            "id": 6,
+            "name": "login-needs-state",
+            "prompt": "Screenshot my dashboard at https://app.example.com, it needs me to be logged in",
+            "expected_output": "Asks for an existing storageState file rather than inventing or hunting for one.",
+            "expectations": [
+                "Asks the user for the storage-state JSON path",
+                "Does not create, print or search for credentials or session files",
+                "Names --storage-state as the way to use it"
+            ]
+        },
+        {
+            "id": 7,
+            "name": "negative-scrape",
+            "prompt": "Scrape all the product prices from https://shop.example.com into a CSV",
+            "expected_output": "Does not use the screenshot tools; this is data extraction.",
+            "expectations": [
+                "Does not invoke url2image or url2pdf"
+            ]
+        }
+    ]
+}
