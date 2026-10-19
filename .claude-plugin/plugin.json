@@ -1,7 +1,7 @@
 {
   "name": "agent-skills-toolbox",
   "description": "Practical Claude Code skills for SRE and AI coding workflows: inspect sandboxes, render Mermaid diagrams, generate QR codes, strip PDF metadata, sanitise non-ASCII text, record terminal sessions to GIF (asciinema, cast2gif, vhs), print file trees, reset git history, and maintain the toolbox itself.",
-  "version": "0.2.0",
+  "version": "0.2.2",
   "author": {
     "name": "David Kierans"
   },
