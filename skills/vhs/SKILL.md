@@ -54,7 +54,7 @@ if [ "${IS_SANDBOX:-no}" = "yes" ] || [ "${IS_SANDBOX:-no}" = "1" ] || [ "${IS_S
     chmod +x /usr/local/bin/vhs-rec
 else
     command -v vhs-rec >/dev/null 2>&1 || {
-        echo "ERROR: vhs-rec not installed. Run: docker run --rm ghcr.io/rondomondo/vhs-rec install | sh" >&2
+        echo "ERROR: vhs-rec not installed. Run: docker run --rm ghcr.io/rondomondo/vhs-rec:latest install | sh" >&2
         exit 1
     }
 fi
@@ -71,7 +71,7 @@ If `vhs-rec` is missing locally, install it from the published image (or `make i
 `toolbox/vhs/` in a clone):
 
 ```bash
-docker run --rm ghcr.io/rondomondo/vhs-rec install | sh
+docker run --rm ghcr.io/rondomondo/vhs-rec:latest install | sh
 ```
 
 ---

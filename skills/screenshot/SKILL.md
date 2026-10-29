@@ -74,7 +74,7 @@ Full flag list: `references/options.md`, or run `url2image help` / `url2pdf help
 - `--convert` is ignored for PDFs. `--device-scale-factor` is screenshot-only.
 - Popup dismissal is on by default, but off for `element`; add `--dismiss-popups` if a banner is in the way.
 - Local files must live in `./html/` and be passed as a path relative to it, not an absolute path.
-- Pin a version with `IMAGE_TAG=0.0.21 url2pdf ...`. Pre-release tags never move `:latest`.
+- Pin a version with `IMAGE_TAG=<version> url2pdf ...`. Pre-release tags never move `:latest`.
 - Diagnose with `LOG_LEVEL=INFO` or `DEBUG=1` (DEBUG prints the underlying `docker run` command).
 
 ## Authenticated pages

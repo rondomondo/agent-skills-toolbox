@@ -112,8 +112,8 @@ def test_one_shot_starts_in_host_directory_off_screen(run_wrapper) -> None:
 def test_with_installs_tool_off_screen_and_waits(run_wrapper) -> None:
     result = run_wrapper("--with", "pdf-strip", "-x", "pdf-strip --check a.pdf")
     tape = result.tape
-    assert "docker run --rm ghcr.io/rondomondo/pdf-strip install | sh" in tape
-    assert tape.index("Hide") < tape.index("pdf-strip install") < tape.index("Wait+Screen") < tape.index("Show")
+    assert "docker run --rm ghcr.io/rondomondo/pdf-strip:latest install | sh" in tape
+    assert tape.index("Hide") < tape.index("pdf-strip:latest install") < tape.index("Wait+Screen") < tape.index("Show")
     assert tape.index("Show") < tape.index("Type 'pdf-strip --check a.pdf'")
 
 

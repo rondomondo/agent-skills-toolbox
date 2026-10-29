@@ -69,11 +69,16 @@ RUN chmod +x /entrypoint.sh /install.sh /uninstall.sh \
 VOLUME ["/screenshots", "/pdfs", "/html"]
 
 # Declared last: an ARG/ENV change busts the cache of every later layer, so only this tiny RUN reruns per release.
-# Bake the image version into url2capture.sh so installed copies default to the correct tag.
+# Bake the image version into the scripts that name the image so installed copies default to the correct tag.
+# The ENV below shadows the ARG inside RUN, so a build without the arg shows up here as "unknown" and must not be baked.
 ARG SCREENSHOT_VERSION
 ENV SCREENSHOT_VERSION=${SCREENSHOT_VERSION:-unknown}
-RUN if [ -n "$SCREENSHOT_VERSION" ]; then \
-      sed -i "s/IMAGE_TAG:-latest/IMAGE_TAG:-${SCREENSHOT_VERSION}/" /usr/local/lib/screenshot/url2capture.sh; \
+RUN if [ "$SCREENSHOT_VERSION" != "unknown" ]; then \
+      sed -i "s/IMAGE_TAG:-latest/IMAGE_TAG:-${SCREENSHOT_VERSION}/" /install.sh /uninstall.sh \
+      && sed -i "s/DEFAULT_IMAGE_TAG=latest/DEFAULT_IMAGE_TAG=${SCREENSHOT_VERSION}/" \
+        /usr/local/lib/screenshot/url2capture.sh \
+      && sed -i "s|rondomondo/screenshot:latest|rondomondo/screenshot:${SCREENSHOT_VERSION}|g" \
+        /app/ssc.py /entrypoint.sh; \
     fi
 
 ENTRYPOINT ["/entrypoint.sh"]

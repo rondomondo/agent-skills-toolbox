@@ -37,11 +37,12 @@ COPY --chown=root:root uninstall.sh /uninstall.sh
 COPY --chown=root:root cast2gif      /usr/local/bin/cast2gif
 RUN chmod +x /entrypoint.sh /install.sh /uninstall.sh /usr/local/bin/cast2gif
 
-# Bake the image version into the wrapper so installed copies default to this tag.
+# Bake the image version into the wrapper and the install/uninstall scripts so installed copies default to this tag.
 ARG CAST2GIF_VERSION
 RUN if [ -n "$CAST2GIF_VERSION" ]; then \
       sed "s|rondomondo/cast2gif:latest|rondomondo/cast2gif:$CAST2GIF_VERSION|g" /usr/local/bin/cast2gif > /tmp/wrapper.pinned \
-      && cat /tmp/wrapper.pinned > /usr/local/bin/cast2gif && rm -f /tmp/wrapper.pinned; \
+      && cat /tmp/wrapper.pinned > /usr/local/bin/cast2gif && rm -f /tmp/wrapper.pinned \
+      && sed -i "s/IMAGE_TAG:-latest/IMAGE_TAG:-$CAST2GIF_VERSION/" /install.sh /uninstall.sh; \
     fi
 
 WORKDIR /data

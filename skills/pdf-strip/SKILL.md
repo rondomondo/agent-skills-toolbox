@@ -263,7 +263,7 @@ the `HAS_METADATA` / `CLEAN` lines it prints rather than relying on its exit sta
 
 | Symptom                          | Likely cause                  | Fix                                                                          |
 |----------------------------------|-------------------------------|------------------------------------------------------------------------------|
-| `pdf-strip not found`            | Not installed                 | `docker run --rm ghcr.io/rondomondo/pdf-strip install \| sh`, or `make install` from `toolbox/pdf-strip/` |
+| `pdf-strip not found`            | Not installed                 | `docker run --rm ghcr.io/rondomondo/pdf-strip:latest install \| sh`, or `make install` from `toolbox/pdf-strip/` |
 | `Docker not running`             | Docker Desktop stopped        | Start Docker Desktop                                                         |
 | `Pull failed`                    | No network or auth            | Run `make build` to build locally                                     |
 | `strip.py not found`             | Skill not mounted             | Check `/mnt/skills/user/pdf-strip/` is present in the sandbox                |

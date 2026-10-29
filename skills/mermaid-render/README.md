@@ -12,7 +12,7 @@ Point it at a local file, a whole directory, or a remote URL and it outputs numb
 Install the lightweight `mermaid-render` wrapper, which calls Docker for you:
 
 ```bash
-docker run --rm ghcr.io/rondomondo/mermaid-render install | sh
+docker run --rm ghcr.io/rondomondo/mermaid-render:latest install | sh
 ```
 
 Then from any directory:
@@ -25,7 +25,7 @@ mermaid-render examples/example1.md --format png
 mermaid-render "https://alertstack.io/mermaid/examples/example1.md"
 ```
 
-> To uninstall: `docker run --rm ghcr.io/rondomondo/mermaid-render uninstall | sh`
+> To uninstall: `docker run --rm ghcr.io/rondomondo/mermaid-render:latest uninstall | sh`
 
 The installer is a self-contained `sh` script streamed from the image. It installs `mermaid-render` to
 `/usr/local/bin` if that is writable, otherwise retries with `sudo`, and finally falls back to
@@ -314,7 +314,7 @@ cp -R SKILL.md mermaid-render references .claude/skills/mermaid-render/
 make build                     # Bump VERSION, build a single-arch image for local testing
 make push                      # Build multi-platform (see PLATFORMS) and push :VERSION and :latest
 make release                   # Bump patch version, then push
-make release-rc                # Push VERSION-rc.1 without bumping VERSION or moving :latest
+make release-rc                # Push the next version as X.Y.Z-rc.1 (RC=n for later ones) without bumping VERSION or moving :latest
 make retag FROM=latest TAG=v0.1.1   # Re-tag an existing remote image
 make docker-shell              # Drop into a shell in the container
 make inspect                   # Show the platforms in the remote :latest manifest

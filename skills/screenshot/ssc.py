@@ -121,7 +121,7 @@ DEFAULT_WORKSPACE_DIR = Path(os.getenv("WORKSPACE_DIR", "./workspace"))
 CONNECT_RETRIES = 5
 CONNECT_RETRY_DELAY_S = 2.0
 
-DOCKER_IMAGE = "ghcr.io/rondomondo/screenshot"
+DOCKER_IMAGE = "ghcr.io/rondomondo/screenshot:latest"
 
 
 # Embedded JS Engine: Imports @duckduckgo/autoconsent, initializes rules runner, and runs fallback DOM cleaner

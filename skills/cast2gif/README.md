@@ -12,7 +12,7 @@ which in turn incorporates [agg](https://github.com/asciinema/agg)
 Install the lightweight `cast2gif` wrapper, which calls Docker for you:
 
 ```bash
-docker run --rm ghcr.io/rondomondo/cast2gif install | sh
+docker run --rm ghcr.io/rondomondo/cast2gif:latest install | sh
 ```
 
 Then from any directory:
@@ -22,7 +22,7 @@ cast2gif demo.cast    # -> demo.gif
 file demo.gif
 ```
 
-> To uninstall: `docker run --rm ghcr.io/rondomondo/cast2gif uninstall | sh`
+> To uninstall: `docker run --rm ghcr.io/rondomondo/cast2gif:latest uninstall | sh`
 
 The installer is a self-contained `sh` script streamed from the image. It installs `cast2gif` to
 `/usr/local/bin` if that is writable, otherwise retries with `sudo`, and finally falls back to
@@ -67,8 +67,8 @@ cast2gif demo.cast
 file demo.gif
 ```
 
-No Docker pull needed upfront; `cast2gif` pulls `ghcr.io/rondomondo/cast2gif:latest`
-automatically on first run.
+No Docker pull needed upfront; `cast2gif` pulls the image tag it was released with (the version baked in at build time;
+`:latest` when run from a source checkout) automatically on first run.
 
 ---
 
@@ -160,7 +160,7 @@ Built on `ghcr.io/asciinema/agg:latest` with:
 make build                     # Bump VERSION, build a single-arch image for local testing
 make push                      # Build multi-platform (see PLATFORMS) and push :VERSION and :latest
 make release                   # Bump patch version, then push
-make release-rc                # Push VERSION-rc.1 without bumping VERSION or moving :latest
+make release-rc                # Push the next version as X.Y.Z-rc.1 (RC=n for later ones) without bumping VERSION or moving :latest
 make retag FROM=latest TAG=v0.1.1   # Re-tag an existing remote image
 make docker-shell              # Drop into a shell in the container
 make inspect                   # Show the platforms in the remote :latest manifest

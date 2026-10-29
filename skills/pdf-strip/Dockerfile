@@ -13,11 +13,12 @@ COPY --chown=root:root uninstall.sh /uninstall.sh
 COPY --chown=root:root pdf-strip     /usr/local/bin/pdf-strip
 RUN chmod +x /entrypoint.sh /install.sh /uninstall.sh /usr/local/bin/pdf-strip
 
-# Bake the image version into the wrapper so installed copies default to this tag.
+# Bake the image version into the wrapper and the install/uninstall scripts so installed copies default to this tag.
 ARG PDF_STRIP_VERSION
 RUN if [ -n "$PDF_STRIP_VERSION" ]; then \
       sed "s|rondomondo/pdf-strip:latest|rondomondo/pdf-strip:$PDF_STRIP_VERSION|g" /usr/local/bin/pdf-strip > /tmp/wrapper.pinned \
-      && cat /tmp/wrapper.pinned > /usr/local/bin/pdf-strip && rm -f /tmp/wrapper.pinned; \
+      && cat /tmp/wrapper.pinned > /usr/local/bin/pdf-strip && rm -f /tmp/wrapper.pinned \
+      && sed -i "s/IMAGE_TAG:-latest/IMAGE_TAG:-$PDF_STRIP_VERSION/" /install.sh /uninstall.sh; \
     fi
 
 WORKDIR /data

@@ -16,7 +16,7 @@ Install two lightweight wrappers, `vhs-rec` and [`vhs-demo`](#generate-the-comma
 Docker for you:
 
 ```bash
-docker run --rm ghcr.io/rondomondo/vhs-rec install | sh
+docker run --rm ghcr.io/rondomondo/vhs-rec:latest install | sh
 ```
 
 Then from any directory:
@@ -27,7 +27,7 @@ vhs-rec test.tape                       # -> test.gif
 vhs-rec demo -o ls.gif -- ls -l         # or skip the tape: record one command
 ```
 
-> To uninstall: `docker run --rm ghcr.io/rondomondo/vhs-rec uninstall | sh`
+> To uninstall: `docker run --rm ghcr.io/rondomondo/vhs-rec:latest uninstall | sh`
 
 The installer is a self-contained `sh` script streamed from the image. It installs `vhs-rec` and `vhs-demo`
 (which needs `uv`) to `/usr/local/bin` if that is writable, otherwise retries with `sudo`, and finally falls back
@@ -75,7 +75,7 @@ vhs-rec test/test.tape
 file test/test.gif
 ```
 
-No Docker pull needed upfront; `vhs-rec` pulls `ghcr.io/rondomondo/vhs-rec:latest` automatically on first run.
+No Docker pull needed upfront; `vhs-rec` pulls the image tag it was released with (the version baked in at build time; `:latest` when run from a source checkout) automatically on first run.
 
 ---
 
@@ -280,7 +280,7 @@ The container user (`vhs`) has passwordless sudo and is added to the `docker` gr
 make build                     # Bump VERSION, build a single-arch image for local testing
 make push                      # Build multi-platform (see PLATFORMS) and push :VERSION and :latest
 make release                   # Bump patch version, then push
-make release-rc                # Push VERSION-rc.1 without bumping VERSION or moving :latest
+make release-rc                # Push the next version as X.Y.Z-rc.1 (RC=n for later ones) without bumping VERSION or moving :latest
 make retag FROM=latest TAG=v0.1.1   # Re-tag an existing remote image
 make docker-shell              # Drop into a shell in the container
 make inspect                   # Show the platforms in the remote :latest manifest

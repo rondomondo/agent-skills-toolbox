@@ -245,7 +245,7 @@ install_command() {
   if [[ ! "$target" =~ ^[a-z0-9][a-z0-9-]*$ ]]; then
     die "--install expects a tool name like pdf-strip or an image like ghcr.io/org/tool, got '$target'"
   fi
-  image="$TOOL_IMAGE_PREFIX/$target"
+  image="$TOOL_IMAGE_PREFIX/$target:latest"
   printf 'command -v %s >/dev/null 2>&1 || %s' "$target" "$(guarded_install "$image")"
 }
 

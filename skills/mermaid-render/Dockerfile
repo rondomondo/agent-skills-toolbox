@@ -25,10 +25,11 @@ COPY --chmod=755 mermaid-render /usr/local/bin/mermaid-render
 
 # Declared this late on purpose: an ARG changes the cache key of every RUN after it, so a new tag would rebuild the apk layer.
 ARG MERMAID_RENDER_VERSION
-# Pin the wrapper to this image tag so installed copies stay in step with it.
+# Pin the wrapper and the install/uninstall scripts to this image tag so installed copies stay in step with it.
 RUN ln -s /opt/mermaid-cli/bin/mmdc /usr/local/bin/mmdc \
     && if [ -n "$MERMAID_RENDER_VERSION" ]; then \
-         sed -i "s|rondomondo/mermaid-render:latest|rondomondo/mermaid-render:$MERMAID_RENDER_VERSION|g" /usr/local/bin/mermaid-render; \
+         sed -i "s|rondomondo/mermaid-render:latest|rondomondo/mermaid-render:$MERMAID_RENDER_VERSION|g" /usr/local/bin/mermaid-render \
+         && sed -i "s/IMAGE_TAG:-latest/IMAGE_TAG:-$MERMAID_RENDER_VERSION/" /install.sh /uninstall.sh; \
        fi
 
 USER mermaidcli

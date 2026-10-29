@@ -6,6 +6,7 @@
 |---|---|
 | [scaffold-tool.sh](scaffold-tool.sh) | Bootstraps a new skill-aware tool (Makefile, SKILL.md, README.md, main script, and a Dockerfile for docker-type tools). Also behind `make new-tool` in the repo root. |
 | [ghcr-pkg.sh](ghcr-pkg.sh) | Lists and deletes package versions on ghcr.io through the `gh` CLI. |
+| [check-image-versions.sh](check-image-versions.sh) | Static check that every docker tool bakes its `VERSION` into each shipped file that names its own image (wrapper, install/uninstall scripts). Run it with `make check-versions`; `make docker-push` and `make docker-release` run it first. |
 | [git-orphan-reset.sh](git-orphan-reset.sh) | Older copy of the history-reset tool. The maintained version, with its own README and SKILL.md, is in [../git-orphan-reset](../git-orphan-reset). |
 
 > **Also available as an [Agent Skill](#claude-code-skill)** -- install it to scaffold tools and prune ghcr.io versions directly from Claude Code.

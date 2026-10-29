@@ -47,7 +47,7 @@ if [ "${IS_SANDBOX:-no}" = "yes" ] || [ "${IS_SANDBOX:-no}" = "1" ] || [ "${IS_S
     chmod +x /usr/local/bin/cast2gif
 else
     command -v cast2gif >/dev/null 2>&1 || {
-        echo "ERROR: cast2gif not installed. Run: docker run --rm ghcr.io/rondomondo/cast2gif install | sh" >&2
+        echo "ERROR: cast2gif not installed. Run: docker run --rm ghcr.io/rondomondo/cast2gif:latest install | sh" >&2
         exit 1
     }
 fi
@@ -64,7 +64,7 @@ If `cast2gif` is missing locally, install it from the published image (or `make 
 `toolbox/cast2gif/` in a clone):
 
 ```bash
-docker run --rm ghcr.io/rondomondo/cast2gif install | sh
+docker run --rm ghcr.io/rondomondo/cast2gif:latest install | sh
 ```
 
 ---

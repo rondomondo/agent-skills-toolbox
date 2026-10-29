@@ -11,7 +11,7 @@ Running `pdf-strip <file>` strips metadata by default and writes `<base>.strippe
 Install the lightweight `pdf-strip` wrapper, which calls Docker for you:
 
 ```bash
-docker run --rm ghcr.io/rondomondo/pdf-strip install | sh
+docker run --rm ghcr.io/rondomondo/pdf-strip:latest install | sh
 ```
 
 Then from any directory (there is a [`test PDF file`] below if you need one):
@@ -23,7 +23,7 @@ pdf-strip test/example.pdf           # -> test/example.stripped.pdf
 
 Output is written alongside each original. Originals are never modified.
 
-> To uninstall: `docker run --rm ghcr.io/rondomondo/pdf-strip uninstall | sh`
+> To uninstall: `docker run --rm ghcr.io/rondomondo/pdf-strip:latest uninstall | sh`
 
 The installer is a self-contained `sh` script streamed from the image. It installs `pdf-strip` to
 `/usr/local/bin` if that is writable, otherwise retries with `sudo`, and finally falls back to
@@ -192,7 +192,7 @@ pdf-strip report.pdf
 pdf-strip --check report.pdf
 
 # override image
-PDF_STRIP_IMAGE=ghcr.io/rondomondo/pdf-strip:0.1.5 pdf-strip report.pdf
+PDF_STRIP_IMAGE=ghcr.io/rondomondo/pdf-strip:<version> pdf-strip report.pdf
 ```
 
 ---
@@ -220,7 +220,7 @@ make build               Bump VERSION, build a single-arch image for local testi
 make builder-init        Create/reuse the multi-platform buildx builder
 make push                Build linux/amd64 + linux/arm64 and push to ghcr.io (:VERSION and :latest)
 make release             Bump patch version, then push
-make release-rc          Push VERSION-rc.1 without bumping VERSION or moving :latest
+make release-rc          Push the next version as X.Y.Z-rc.1 (RC=n for later ones) without bumping VERSION or moving :latest
 make retag FROM=latest TAG=v0.1.1   Re-tag an existing remote image
 make bump                Increment the patch version in VERSION
 

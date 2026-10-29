@@ -7,7 +7,8 @@ RESET='\033[0m'
 
 IMAGE_REGISTRY="${IMAGE_REGISTRY:-ghcr.io}"
 IMAGE_REPO="${IMAGE_REPO:-rondomondo/screenshot}"
-IMAGE_TAG="${IMAGE_TAG:-latest}"
+DEFAULT_IMAGE_TAG=latest
+IMAGE_TAG="${IMAGE_TAG:-$DEFAULT_IMAGE_TAG}"
 IMAGE="${IMAGE_REGISTRY}/${IMAGE_REPO}:${IMAGE_TAG}"
 
 EXAMPLE_URL="${EXAMPLE_URL:-https://jax-ml.github.io/scaling-book/index}"
@@ -95,7 +96,7 @@ usage() {
     printf "\nTarget: a URL, or a local HTML file inside ./html (given as a path relative to ./html).\n" >&2
     printf "Output is written to ./pdfs/ or ./screenshots/ in the current directory.\n" >&2
     printf "\n${BOLD}Environment:${RESET}\n" >&2
-    printf "  IMAGE_TAG               Docker image tag (default: latest)\n" >&2
+    printf "  IMAGE_TAG               Docker image tag (default: %s)\n" "$DEFAULT_IMAGE_TAG" >&2
     printf "  IMAGE_REGISTRY          Registry host (default: ghcr.io)\n" >&2
     printf "  IMAGE_REPO              Image repository (default: rondomondo/screenshot)\n" >&2
     printf "                          e.g. IMAGE_TAG=latest url2pdf ${EXAMPLE_URL}\n" >&2

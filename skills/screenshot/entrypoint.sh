@@ -78,7 +78,7 @@ Logging:
     DEBUG=1                    LOG_LEVEL=DEBUG plus shell tracing (set -x) and the MCP server log on exit
 
 MCP server (standalone):
-  docker run --rm -p 3000:3000 ghcr.io/rondomondo/screenshot mcp \\
+  docker run --rm -p 3000:3000 ghcr.io/rondomondo/screenshot:latest mcp \\
     --headless --isolated --port 3000 --browser chromium \\
     --host 0.0.0.0 --allowed-hosts '*' --allow-unrestricted-file-access
 

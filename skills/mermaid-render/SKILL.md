@@ -255,7 +255,7 @@ elif [[ -x "$(dirname "$0")/mermaid-render" ]]; then
 elif command -v mermaid-render &>/dev/null; then
   MERMAID_RENDER="mermaid-render"
 else
-  echo "ERROR: mermaid-render not found. Install it via: docker run --rm ghcr.io/rondomondo/mermaid-render install | sh" >&2
+  echo "ERROR: mermaid-render not found. Install it via: docker run --rm ghcr.io/rondomondo/mermaid-render:latest install | sh" >&2
   exit 1
 fi
 
@@ -374,7 +374,7 @@ Always share these tips with the user after a successful render:
 | No companion `.md` after a Docker render                   | Wrapper passes no `-o`           | Expected -- use `mermaid-render -- -i /data/x.md -o /data/x.rendered.md` (see _Output location_)  |
 | `web_fetch` returns HTML or unparseable JSON on GitHub URL | API rate limit or redirect       | Show raw response to user; ask them to download and upload the file directly                      |
 | `web_fetch` fails with 403/network error on GitHub URL     | Domain blocked by egress proxy   | Inform user; ask them to upload the file directly                                                 |
-| `mermaid-render` not found (non-sandbox)                   | Not installed or not in PATH     | `docker run --rm ghcr.io/rondomondo/mermaid-render install \| sh`, or `make install` from `toolbox/mermaid-render/` |
+| `mermaid-render` not found (non-sandbox)                   | Not installed or not in PATH     | `docker run --rm ghcr.io/rondomondo/mermaid-render:latest install \| sh`, or `make install` from `toolbox/mermaid-render/` |
 | Docker not running (non-sandbox)                           | Docker Desktop stopped           | Tell user to start Docker Desktop                                                                 |
 | File not found                                             | Wrong path or working directory  | Report the exact path tried; suggest `pwd` to check working directory                             |
 | PNG looks low-res                                          | Scale factor not set             | Use `--scale 2` or `--scale 3` for retina-quality PNG output                                      |

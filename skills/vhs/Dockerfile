@@ -91,11 +91,12 @@ COPY --chown=root:root vhs-rec      /usr/local/bin/vhs-rec
 COPY --chown=root:root vhs-demo.py  /usr/local/bin/vhs-demo
 RUN chmod +x /entrypoint.sh /install.sh /uninstall.sh /usr/local/bin/vhs-rec /usr/local/bin/vhs-demo
 
-# Bake the image version into the wrapper so installed copies default to this tag.
+# Bake the image version into the wrapper and the install/uninstall scripts so installed copies default to this tag.
 ARG VHS_REC_VERSION
 RUN if [ -n "$VHS_REC_VERSION" ]; then \
       sed "s|rondomondo/vhs-rec:latest|rondomondo/vhs-rec:$VHS_REC_VERSION|g" /usr/local/bin/vhs-rec > /tmp/wrapper.pinned \
-      && cat /tmp/wrapper.pinned > /usr/local/bin/vhs-rec && rm -f /tmp/wrapper.pinned; \
+      && cat /tmp/wrapper.pinned > /usr/local/bin/vhs-rec && rm -f /tmp/wrapper.pinned \
+      && sed -i "s/IMAGE_TAG:-latest/IMAGE_TAG:-$VHS_REC_VERSION/" /install.sh /uninstall.sh; \
     fi
 
 USER vhs
